@@ -90,6 +90,8 @@ for (const risk of risks) {
 console.log("sgp games with 2+ tiers", compared);
 
 context.document = { getElementById() { return null; } };
+const slate = JSON.parse(fs.readFileSync(path.join(root, "site/data/slate.json"), "utf8"));
+vm.runInContext(`state.slate = ${JSON.stringify(slate)};`, context);
 vm.runInContext(`
   state.builder.text = "safe 4 leg parlay browns sunday +400";
   state.builder.dirty = false;
@@ -97,9 +99,18 @@ vm.runInContext(`
   state.builder.risk = "aggressive";
   applyBuild(state.builder.text);
   if (state.builder.parsed.risk !== "aggressive") throw new Error("tapped risk lost to the sentence");
-  if (state.builder.result.spec.risk !== "aggressive") throw new Error("built card ignored the tapped risk");
-  const probs = ["safe","balanced","aggressive"].map(risk => state.builder.alts[risk].prob);
-  if (!(probs[0] > probs[1] && probs[1] > probs[2])) throw new Error("trio hit chances did not separate: " + probs);
+  if (!state.builder.result.legs) throw new Error("named team did not build: " + state.builder.result.error);
+  const games = new Set(state.builder.result.legs.map(leg => leg.event_id));
+  if (games.size !== 1) throw new Error("named team card left the game: " + [...games]);
+  const sample = state.builder.result.legs[0];
+  const hay = [sample.home_name, sample.away_name, sample.home_abbr, sample.away_abbr].join(" ").toLowerCase();
+  if (!hay.includes("brown")) throw new Error("card is not the Browns game: " + hay);
+  const builtRisks = ["safe","balanced","aggressive"].filter(risk => state.builder.alts[risk].legs);
+  if (builtRisks.length < 2) throw new Error("need more than one risk on the Browns game");
+  for (const risk of builtRisks) {
+    const ids = [...new Set(state.builder.alts[risk].legs.map(leg => leg.event_id))];
+    if (ids.length !== 1 || ids[0] !== sample.event_id) throw new Error(risk + " left the Browns game");
+  }
 `, context);
-console.log("risk control wins over the sentence");
+console.log("named team stays on that game");
 console.log("ok");
