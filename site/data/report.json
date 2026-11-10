@@ -1,0 +1,33 @@
+{
+  "warning": "Small sample: 0 graded plays (under 50). Record, hit rate and ROI are mostly noise at this size. CLV is the faster check.",
+  "overall": {
+    "n": 0,
+    "w": 0,
+    "l": 0,
+    "p": 0,
+    "record": "0-0-0",
+    "hit_rate": null,
+    "roi_pct": null,
+    "clv_avg_pct": null,
+    "clv_n": 0,
+    "model": {
+      "n": 0,
+      "avg_model_prob": null,
+      "actual_win_rate": null,
+      "brier": null,
+      "direction_hit": null
+    }
+  },
+  "pending": 11,
+  "by": {
+    "sport": {},
+    "market": {},
+    "tier": {}
+  },
+  "definitions": {
+    "hit_rate": "Wins divided by wins plus losses. Pushes are left out.",
+    "roi_pct": "Return at the listed American odds if every graded play risked the same stake. Not dollars and not a suggested bet.",
+    "clv_avg_pct": "Average of (bet decimal odds \u00d7 closing no-vig probability \u2212 1), only when the closing line matches the logged line. Positive means the price beat the close.",
+    "model": "Average model probability on graded sides, versus how often those sides won. Direction hit is how often a model probability of at least 50% won and under 50% lost. Brier score: lower is better, 0.25 is a coin flip."
+  }
+}
