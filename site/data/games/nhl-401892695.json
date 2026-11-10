@@ -23,36 +23,120 @@
     "id": "16"
   },
   "score": null,
-  "analyzed": false,
-  "odds_feed": "espn",
+  "analyzed": true,
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betonlineag",
+    "betrivers",
+    "draftkings",
+    "lowvig"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/34992013"
+    "draftkings": "https://sportsbook.draftkings.com/event/34992013",
+    "betrivers": "https://oh.betrivers.com/?page=sportsbook#event/1028410194"
   },
   "lines": {
     "draftkings": {
-      "ml_home": 105.0,
-      "ml_away": -125.0,
       "spread_home": 1.5,
       "spread_home_odds": -230.0,
       "spread_away": -1.5,
       "spread_away_odds": 190.0,
       "total": 6.5,
       "over_odds": -135.0,
-      "under_odds": 114.0
+      "under_odds": 114.0,
+      "ml_home": 105.0,
+      "ml_away": -125.0
+    },
+    "betrivers": {
+      "spread_home": 1.5,
+      "spread_home_odds": -235.0,
+      "spread_away": -1.5,
+      "spread_away_odds": 185.0,
+      "total": 6.5,
+      "over_odds": -136.0,
+      "under_odds": 110.0,
+      "ml_home": 108.0,
+      "ml_away": -127.0
+    },
+    "lowvig": {
+      "total": 6.5,
+      "over_odds": -120.0,
+      "under_odds": 104.0,
+      "ml_home": 110.0,
+      "ml_away": -125.0
+    },
+    "betonlineag": {
+      "total": 6.5,
+      "over_odds": -120.0,
+      "under_odds": 104.0,
+      "ml_home": 110.0,
+      "ml_away": -125.0
     }
   },
   "badge": null,
-  "model_summary": null,
+  "model_summary": "Margin SJ -0.3 \u00b7 total 6.3",
   "flags": [],
-  "notes": [],
+  "notes": [
+    "v2 ratings: margin SJ -0.3, total 6.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
-    "home": [],
-    "away": []
+    "home": [
+      {
+        "name": "Igor Chernyshov",
+        "status": "Injured Reserve",
+        "pos": "LW",
+        "key": false
+      },
+      {
+        "name": "Quentin Musty",
+        "status": "Injured Reserve",
+        "pos": "LW",
+        "key": false
+      },
+      {
+        "name": "Kyle Keyser",
+        "status": "Injured Reserve",
+        "pos": "G",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Ville Koivunen",
+        "status": "Day-To-Day",
+        "pos": "RW",
+        "key": false
+      },
+      {
+        "name": "Elmer Soderblom",
+        "status": "Injured Reserve",
+        "pos": "LW",
+        "key": false
+      },
+      {
+        "name": "Bryan Rust",
+        "status": "Injured Reserve",
+        "pos": "RW",
+        "key": false
+      },
+      {
+        "name": "Trevor van Riemsdyk",
+        "status": "Injured Reserve",
+        "pos": "D",
+        "key": false
+      },
+      {
+        "name": "Ryan Graves",
+        "status": "Injured Reserve",
+        "pos": "D",
+        "key": false
+      }
+    ]
   },
-  "form": {},
+  "form": {
+    "home": "L5 LLLLW",
+    "away": "L5 LLLWL"
+  },
   "markets": [
     {
       "market": "ML",
@@ -66,26 +150,103 @@
               "side": "home",
               "line": null,
               "odds": 105.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4489,
+              "model_prob": 0.4675,
+              "market_prob": 0.4675,
+              "fair_odds": 114,
+              "edge": -0.0,
+              "edge_at_price": -0.0203,
+              "ev": -0.0416,
+              "tier": "Low",
+              "data_quality": "High",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Raw model SJ ML: 44.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "flags": [
-                "!not modeled this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +118 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "SJ ML",
+              "side": "home",
+              "line": null,
+              "odds": 108.0,
+              "model_raw": 0.4489,
+              "model_prob": 0.4622,
+              "market_prob": 0.4622,
+              "fair_odds": 116,
+              "edge": 0.0,
+              "edge_at_price": -0.0186,
+              "ev": -0.0387,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model SJ ML: 44.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "caution": [
-                "no model on this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +121 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "SJ ML",
+              "side": "home",
+              "line": null,
+              "odds": 110.0,
+              "model_raw": 0.4489,
+              "model_prob": 0.4615,
+              "market_prob": 0.4615,
+              "fair_odds": 117,
+              "edge": 0.0,
+              "edge_at_price": -0.0147,
+              "ev": -0.0308,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model SJ ML: 44.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +121 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "SJ ML",
+              "side": "home",
+              "line": null,
+              "odds": 110.0,
+              "model_raw": 0.4489,
+              "model_prob": 0.4615,
+              "market_prob": 0.4615,
+              "fair_odds": 117,
+              "edge": 0.0,
+              "edge_at_price": -0.0147,
+              "ev": -0.0308,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model SJ ML: 44.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +121 or better.",
+              "proven": false
             }
           }
         },
@@ -98,26 +259,103 @@
               "side": "away",
               "line": null,
               "odds": -125.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5511,
+              "model_prob": 0.5325,
+              "market_prob": 0.5325,
+              "fair_odds": -114,
+              "edge": 0.0,
+              "edge_at_price": -0.0231,
+              "ev": -0.0416,
+              "tier": "Low",
+              "data_quality": "High",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Raw model PIT ML: 55.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "flags": [
-                "!not modeled this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -109 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "away",
+              "line": null,
+              "odds": -127.0,
+              "model_raw": 0.5511,
+              "model_prob": 0.5378,
+              "market_prob": 0.5378,
+              "fair_odds": -116,
+              "edge": 0.0,
+              "edge_at_price": -0.0216,
+              "ev": -0.0387,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 55.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "caution": [
-                "no model on this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -112 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "away",
+              "line": null,
+              "odds": -125.0,
+              "model_raw": 0.5511,
+              "model_prob": 0.5385,
+              "market_prob": 0.5385,
+              "fair_odds": -117,
+              "edge": 0.0,
+              "edge_at_price": -0.0171,
+              "ev": -0.0308,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 55.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -112 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "away",
+              "line": null,
+              "odds": -125.0,
+              "model_raw": 0.5511,
+              "model_prob": 0.5385,
+              "market_prob": 0.5385,
+              "fair_odds": -117,
+              "edge": 0.0,
+              "edge_at_price": -0.0171,
+              "ev": -0.0308,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 55.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -112 or better.",
+              "proven": false
             }
           }
         }
@@ -135,26 +373,51 @@
               "side": "home",
               "line": 1.5,
               "odds": -230.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.6853,
+              "model_prob": 0.6734,
+              "market_prob": 0.669,
+              "fair_odds": -206,
+              "edge": 0.0044,
+              "edge_at_price": -0.0235,
+              "ev": -0.0337,
+              "tier": "Low",
+              "data_quality": "High",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Raw model SJ +1.5: 68.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "flags": [
-                "!not modeled this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -194 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "SJ +1.5",
+              "side": "home",
+              "line": 1.5,
+              "odds": -235.0,
+              "model_raw": 0.6853,
+              "model_prob": 0.6717,
+              "market_prob": 0.6666,
+              "fair_odds": -205,
+              "edge": 0.0051,
+              "edge_at_price": -0.0298,
+              "ev": -0.0425,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model SJ +1.5: 68.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -193 or better.",
+              "proven": true
             }
           }
         },
@@ -167,26 +430,51 @@
               "side": "away",
               "line": -1.5,
               "odds": 190.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.3147,
+              "model_prob": 0.3266,
+              "market_prob": 0.331,
+              "fair_odds": 206,
+              "edge": -0.0044,
+              "edge_at_price": -0.0183,
+              "ev": -0.053,
+              "tier": "Low",
+              "data_quality": "High",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Raw model PIT -1.5: 31.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "flags": [
-                "!not modeled this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +212 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "PIT -1.5",
+              "side": "away",
+              "line": -1.5,
+              "odds": 185.0,
+              "model_raw": 0.3147,
+              "model_prob": 0.3283,
+              "market_prob": 0.3334,
+              "fair_odds": 205,
+              "edge": -0.0051,
+              "edge_at_price": -0.0226,
+              "ev": -0.0643,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT -1.5: 31.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +211 or better.",
+              "proven": true
             }
           }
         }
@@ -204,26 +492,103 @@
               "side": "over",
               "line": 6.5,
               "odds": -135.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4404,
+              "model_prob": 0.5514,
+              "market_prob": 0.5514,
+              "fair_odds": -123,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "High",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Raw model Over 6.5: 44.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "flags": [
-                "!not modeled this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -118 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -136.0,
+              "model_raw": 0.4404,
+              "model_prob": 0.5475,
+              "market_prob": 0.5475,
+              "fair_odds": -121,
+              "edge": 0.0,
+              "edge_at_price": -0.0287,
+              "ev": -0.0498,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "caution": [
-                "no model on this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -116 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -120.0,
+              "model_raw": 0.4404,
+              "model_prob": 0.5267,
+              "market_prob": 0.5267,
+              "fair_odds": -111,
+              "edge": 0.0,
+              "edge_at_price": -0.0188,
+              "ev": -0.0344,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -107 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -120.0,
+              "model_raw": 0.4404,
+              "model_prob": 0.5267,
+              "market_prob": 0.5267,
+              "fair_odds": -111,
+              "edge": 0.0,
+              "edge_at_price": -0.0188,
+              "ev": -0.0344,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -107 or better.",
+              "proven": false
             }
           }
         },
@@ -236,26 +601,103 @@
               "side": "under",
               "line": 6.5,
               "odds": 114.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5596,
+              "model_prob": 0.4486,
+              "market_prob": 0.4486,
+              "fair_odds": 123,
+              "edge": -0.0,
+              "edge_at_price": -0.0187,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "High",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Raw model Under 6.5: 56.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "flags": [
-                "!not modeled this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +127 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": 110.0,
+              "model_raw": 0.5596,
+              "model_prob": 0.4525,
+              "market_prob": 0.4525,
+              "fair_odds": 121,
+              "edge": 0.0,
+              "edge_at_price": -0.0237,
+              "ev": -0.0498,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 56.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "caution": [
-                "no model on this refresh"
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +125 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": 104.0,
+              "model_raw": 0.5596,
+              "model_prob": 0.4733,
+              "market_prob": 0.4733,
+              "fair_odds": 111,
+              "edge": 0.0,
+              "edge_at_price": -0.0169,
+              "ev": -0.0344,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 56.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +116 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": 104.0,
+              "model_raw": 0.5596,
+              "model_prob": 0.4733,
+              "market_prob": 0.4733,
+              "fair_odds": 111,
+              "edge": 0.0,
+              "edge_at_price": -0.0169,
+              "ev": -0.0344,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 56.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin SJ -0.3, total 6.29."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +116 or better.",
+              "proven": false
             }
           }
         }
