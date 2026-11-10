@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build the static EdgeLab data files from the research engine.
 
-Odds API credits: this script does not call the featured-odds endpoint. It reads
-site/data/odds-snapshot.json written by verify_odds.py. Player props are a separate
-call, and only when ODDS_API_PROPS=1 and the saved quota is above the reserve.
+Odds API credits: featured odds are read from site/data/odds-snapshots.json
+(written by verify_odds.py, one sport per day). Player props are bought from the
+free-tier budget in scripts/odds_budget.py when ODDS_API_PROPS=1, then cached.
 """
 import json
 import os
@@ -20,6 +20,7 @@ from betlib import analysis, espn, tracker  # noqa: E402
 from betlib.leagues import LEAGUES  # noqa: E402
 from betlib.models import am_to_dec, make_pick, no_vig  # noqa: E402
 from books import catalog  # noqa: E402
+from props_feed import refresh_props  # noqa: E402
 
 DATA = ROOT / "site" / "data"
 KEEP = ("market", "selection", "side", "line", "odds", "model_raw", "model_prob", "market_prob",
@@ -33,11 +34,7 @@ SPORT_TO_LEAGUE = {
     "icehockey_nhl": "nhl", "baseball_mlb": "mlb",
     "soccer_epl": "epl", "soccer_uefa_champs_league": "ucl", "soccer_usa_mls": "mls",
 }
-PROP_BY_SPORT = {
-    "basketball_nba": [("player_points", "pts", "Points"), ("player_rebounds", "reb", "Rebounds")],
-    "americanfootball_nfl": [("player_pass_yds", "pass_yds", "Pass yds"), ("player_rush_yds", "rush_yds", "Rush yds")],
-    "icehockey_nhl": [("player_points", "pts", "Points"), ("player_shots_on_goal", "sog", "Shots on goal")],
-}
+LEAGUE_TO_SPORT = {league: sport for sport, league in SPORT_TO_LEAGUE.items()}
 QUICK_LIST = ["nba", "nhl", "nfl", "cfb", "ncaab", "mlb", "wnba", "atp", "wta"]
 FULL_LIST = ["nfl", "cfb", "nba", "wnba", "ncaab", "ncaaw", "mlb", "nhl", "epl", "ucl", "uel",
              "mls", "laliga", "seriea", "bundesliga", "ligue1", "atp", "wta", "pga", "lpga", "ufc"]
@@ -484,68 +481,19 @@ def redact(text, key):
     return re.sub(r"apiKey=[^&\s\"']+", "apiKey=[redacted]", text)
 
 
-def maybe_fetch_props(snapshot, api_key):
-    """One event-odds call for props, or nothing. Returns {odds_api_event_id: payload}."""
-    if os.environ.get("ODDS_API_PROPS") != "1":
-        print("props: off for this run")
-        return {}
-    if not api_key or not snapshot or not snapshot.get("events"):
-        print("props: no snapshot to attach to")
-        return {}
-    sport = snapshot.get("sport_key")
-    markets = PROP_BY_SPORT.get(sport)
-    if not markets:
-        print("props: no market map for", sport)
-        return {}
-    remaining = (snapshot.get("headers") or {}).get("x_requests_remaining")
-    try:
-        remaining_n = int(remaining) if remaining is not None else None
-    except ValueError:
-        remaining_n = None
-    if remaining_n is not None and remaining_n < 80:
-        print(f"props: skipped, {remaining_n} credits left (reserve 80)")
-        return {}
-    now = dt.datetime.now(dt.timezone.utc)
-    upcoming = []
-    for event in snapshot["events"]:
-        commence = espn.parse_iso(event.get("commence_time"))
-        if commence and now <= commence <= now + dt.timedelta(hours=36):
-            upcoming.append((commence, event))
-    if not upcoming:
-        print("props: no event starting within 36h in the snapshot")
-        return {}
-    event = sorted(upcoming, key=lambda item: item[0])[0][1]
-    market_keys = ",".join(key for key, _stat, _label in markets)
-    import requests
-    try:
-        response = requests.get(
-            f"https://api.the-odds-api.com/v4/sports/{sport}/events/{event['id']}/odds",
-            params={
-                "apiKey": api_key,
-                "regions": "us",
-                "markets": market_keys,
-                "oddsFormat": "american",
-                "includeLinks": "true",
-            },
-            timeout=30,
-            headers={"User-Agent": "EdgeLab research (low volume)"},
-        )
-    except requests.RequestException as exc:
-        print("props: request failed:", redact(exc, api_key))
-        return {}
-    quota = {
-        "x_requests_remaining": response.headers.get("x-requests-remaining"),
-        "x_requests_used": response.headers.get("x-requests-used"),
-        "x_requests_last": response.headers.get("x-requests-last"),
-    }
-    print("props status", response.status_code, "event", event.get("id"), "quota", json.dumps(quota))
-    if response.status_code != 200:
-        print("props body:", redact(response.text[:300], api_key))
-        return {}
-    payload = response.json()
-    payload["_markets"] = markets
-    payload["_quota"] = quota
-    return {event["id"]: payload}
+def load_snapshots():
+    """Every fresh featured sport, plus the legacy single-sport file."""
+    sports = {}
+    bundle = DATA / "odds-snapshots.json"
+    if bundle.exists():
+        try:
+            sports = json.loads(bundle.read_text()).get("sports") or {}
+        except json.JSONDecodeError:
+            sports = {}
+    single = load_snapshot()
+    if single and single.get("sport_key") and single["sport_key"] not in sports:
+        sports[single["sport_key"]] = single
+    return sports
 
 
 def props_for_game(league, res, payload):
@@ -562,22 +510,51 @@ def props_for_game(league, res, payload):
                 continue
             stat, label = mapped
             for outcome in market.get("outcomes") or []:
-                player = outcome.get("description") or outcome.get("name")
-                side = (outcome.get("name") or "").lower()
+                raw_name = (outcome.get("name") or "").strip()
+                side_name = raw_name.lower()
                 price = american(outcome.get("price"))
-                if not player or side not in ("over", "under") or price is None or outcome.get("point") is None:
+                if price is None or not book_key:
                     continue
-                slot = grouped.setdefault((player, stat, float(outcome["point"])), {"label": label, "books": {}})
+                if side_name in ("over", "under") and outcome.get("point") is not None:
+                    player = outcome.get("description") or raw_name
+                    side = side_name
+                    line = float(outcome["point"])
+                elif side_name in ("yes", "no") and outcome.get("description"):
+                    # Anytime TD and other yes/no props. The price is the posted one.
+                    player = outcome.get("description")
+                    side = "over" if side_name == "yes" else "under"
+                    line = 0.5
+                else:
+                    continue
+                if not player:
+                    continue
+                slot = grouped.setdefault((player, stat, line), {"label": label, "books": {}})
                 slot["books"].setdefault(book_key, {})[side] = price
-    # Evaluate at most 6 players, using a book that posted both prices when possible.
-    players = []
+    # One main line per player and stat (closest to -110), then the players who
+    # show up in the most markets. Cap the ESPN lookups.
+    by_player_stat = {}
     for (player, stat, line), slot in grouped.items():
         both = [key for key, sides in slot["books"].items() if "over" in sides and "under" in sides]
-        if not both:
+        one = [key for key, sides in slot["books"].items() if sides]
+        if not one:
             continue
-        players.append((player, stat, line, slot, "draftkings" if "draftkings" in both else both[0]))
+        book = "draftkings" if "draftkings" in (both or one) else (both or one)[0]
+        over = slot["books"][book].get("over")
+        juice = abs(am_to_dec(over) - 1.909) if over is not None else 99
+        current = by_player_stat.get((player, stat))
+        if current is None or juice < current[0]:
+            by_player_stat[(player, stat)] = (juice, player, stat, line, slot, book)
+    coverage = {}
+    for (_player, stat) in by_player_stat:
+        coverage.setdefault(_player, set()).add(stat)
+    ranked_players = sorted(coverage, key=lambda name: (-len(coverage[name]), name))[:4]
+    chosen = []
+    for name in ranked_players:
+        for stat in coverage[name]:
+            _juice, player, stat, line, slot, book = by_player_stat[(name, stat)]
+            chosen.append((player, stat, line, slot, book))
     built = []
-    for player, stat, line, slot, ref_book in players[:6]:
+    for player, stat, line, slot, ref_book in chosen[:16]:
         sides = slot["books"][ref_book]
         try:
             prop = analysis.evaluate_prop(league, player, stat, line, sides.get("over"), sides.get("under"))
@@ -595,7 +572,13 @@ def props_for_game(league, res, payload):
                 nv, _ = no_vig([prices["over"], prices["under"]])
                 probs = {"over": nv[0], "under": nv[1]} if nv else {}
             else:
+                # One posted side only. Use the model's no-vig estimate and the real price.
+                # Do not invent the missing side's price.
                 probs = {}
+                for side in have:
+                    source = ref.get(side) or {}
+                    if source.get("market_prob") is not None:
+                        probs[side] = source["market_prob"]
             for side in have:
                 if side not in probs:
                     continue
@@ -680,10 +663,21 @@ def main():
     leagues = QUICK_LIST if quick else FULL_LIST
     cap = 30 if quick else 40
     print(f"publish {'quick' if quick else 'full'} today={today} cap={cap}")
-    snapshot = load_snapshot()
-    api_events = (snapshot or {}).get("events") or []
-    snapshot_league = SPORT_TO_LEAGUE.get((snapshot or {}).get("sport_key"))
-    prop_payloads = maybe_fetch_props(snapshot, os.environ.get("ODDS_API_KEY") or "")
+    snapshots = load_snapshots()
+    snapshot = None
+    for sport in ("basketball_nba", "americanfootball_nfl", "icehockey_nhl", "baseball_mlb"):
+        if snapshots.get(sport):
+            snapshot = snapshots[sport]
+            break
+    if snapshot is None and snapshots:
+        snapshot = next(iter(snapshots.values()))
+    api_events = []
+    for snap in snapshots.values():
+        api_events.extend(snap.get("events") or [])
+    prop_payloads, prop_budget = refresh_props(
+        os.environ.get("ODDS_API_KEY") or "",
+        enabled=os.environ.get("ODDS_API_PROPS") == "1",
+    )
     seen_books = set()
     for event in api_events:
         for book in event.get("bookmakers") or []:
@@ -787,7 +781,9 @@ def main():
             print("    failed", exc)
             continue
         analyzed_n += 1
-        api_event = match_api_event(game, api_events) if snapshot_league == league else None
+        sport_key = LEAGUE_TO_SPORT.get(league)
+        sport_events = (snapshots.get(sport_key) or {}).get("events") or []
+        api_event = match_api_event(game, sport_events) if sport_events else None
         markets = {}
         event_urls = {}
         if (res.get("odds") or {}).get("event_url"):
@@ -797,8 +793,9 @@ def main():
         if api_event:
             apply_api(markets, league, res, api_event, event_urls)
         props = []
-        if api_event and api_event.get("id") in prop_payloads:
-            props = props_for_game(league, res, prop_payloads[api_event["id"]])
+        prop_payload = match_api_event(game, [row for row in prop_payloads if SPORT_TO_LEAGUE.get(row.get("sport_key")) == league])
+        if prop_payload:
+            props = props_for_game(league, res, prop_payload)
         full = _full_game(row, res, markets, event_urls, props, odds_feed="oddsapi" if api_event else "espn")
         write_json(f"games/{league}-{row['event_id']}.json", full)
         row["_full"] = full
@@ -808,7 +805,33 @@ def main():
                 if leg:
                     legs.append(leg)
         for prop in props:
-            legs.extend(prop_legs(full, prop))
+            new_legs = prop_legs(full, prop)
+            legs.extend(new_legs)
+            for side, offers in (prop.get("sides") or {}).items():
+                primary_key = "draftkings" if "draftkings" in offers else next(iter(offers), None)
+                primary = offers.get(primary_key) if primary_key else None
+                if not primary or primary.get("model_prob") is None:
+                    continue
+                edges.append({
+                    "league": full["league"],
+                    "event_id": full["event_id"],
+                    "game": full["name"],
+                    "start_local": full["start_local"],
+                    "date_et": full["date_et"],
+                    "book": primary_key,
+                    "selection": primary.get("selection"),
+                    "market": "Prop",
+                    "side": side,
+                    "odds": primary.get("odds"),
+                    "line": prop.get("line"),
+                    "edge": primary.get("edge"),
+                    "edge_at_price": primary.get("edge_at_price"),
+                    "tier": "Prop",
+                    "proven": False,
+                    "caution": primary.get("caution") or [],
+                    "model_prob": primary.get("model_prob"),
+                    "leg": next((leg for leg in new_legs if leg.get("side") == side), None),
+                })
 
     # Line-only files for games we listed but did not model, when they have a price.
     for event_id in order:
@@ -848,12 +871,26 @@ def main():
                 "model_prob": offer.get("model_prob"),
                 "leg": leg,
             })
-    edges.sort(key=lambda row: (TORD.get(row["tier"], 9), -(row["edge"] or 0)))
+    rest = [row for row in edges if row.get("tier") != "Prop"]
+    kept_props = {}
+    for row in edges:
+        if row.get("tier") != "Prop":
+            continue
+        leg = row.get("leg") or {}
+        key = (row.get("event_id"), leg.get("prop_key") or row.get("selection"))
+        prev = kept_props.get(key)
+        if prev is None or (row.get("model_prob") or 0) > (prev.get("model_prob") or 0):
+            kept_props[key] = row
+    props_only = sorted(kept_props.values(), key=lambda row: -(row.get("model_prob") or 0))[:12]
+    edges = rest + props_only
+    edges.sort(key=lambda row: (TORD.get(row["tier"], 9), -(row.get("edge") or 0)))
 
     # Log the best modeled edge per game. Flat 1-stake internally; the UI never shows it.
     logged = []
     seen_games = set()
     for edge in edges:
+        if edge.get("tier") not in ("High", "Medium") or edge.get("market") == "Prop":
+            continue
         if edge["event_id"] in seen_games:
             continue
         seen_games.add(edge["event_id"])
@@ -890,7 +927,7 @@ def main():
         "edges": len(edges),
         "legs": len(legs),
         "books": catalog(seen_books),
-        "odds_api": _odds_meta(snapshot, check, prop_payloads),
+        "odds_api": _odds_meta(snapshot, check, prop_payloads, prop_budget, snapshots),
         "schema": "edgelab.data/v1",
     }
     write_json("meta.json", meta)
@@ -1082,11 +1119,13 @@ def _report():
     return {"report": report, "plays": plays}
 
 
-def _odds_meta(snapshot, check, prop_payloads):
+def _odds_meta(snapshot, check, prop_payloads, prop_budget=None, snapshots=None):
     odds = (check or {}).get("odds") or {}
+    budget = prop_budget or {}
     meta = {
         "snapshot": bool(snapshot),
         "sport_key": (snapshot or {}).get("sport_key"),
+        "sports": sorted((snapshots or {}).keys()),
         "regions": (snapshot or {}).get("regions"),
         "markets": (snapshot or {}).get("markets"),
         "fetched_at": (snapshot or {}).get("fetched_at"),
@@ -1096,7 +1135,9 @@ def _odds_meta(snapshot, check, prop_payloads):
         "x_requests_last": odds.get("x_requests_last") or ((snapshot or {}).get("headers") or {}).get("x_requests_last"),
         "ohio_present": odds.get("ohio_present"),
         "ohio_absent": odds.get("ohio_absent"),
-        "props_fetched": len(prop_payloads),
+        "props_fetched": budget.get("fetched", 0),
+        "props_cached": budget.get("cached", len(prop_payloads)),
+        "props_budget": budget,
         "note": None,
     }
     if not snapshot:

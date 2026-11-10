@@ -16,13 +16,11 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from books import BOOKS, find_book  # noqa: E402
+from odds_budget import FEATURED_TTL_HOURS, PRIORITY, RESERVE, featured_cost, plan_credits, days_left  # noqa: E402
 
 DATA = ROOT / "site" / "data"
 API = "https://api.the-odds-api.com/v4"
-PREFERRED = (
-    "basketball_nba",
-    "icehockey_nhl",
-    "americanfootball_nfl",
+PREFERRED = PRIORITY + (
     "basketball_ncaab",
     "americanfootball_ncaaf",
 )
@@ -30,7 +28,7 @@ OHIO_KEYS = []
 for book in BOOKS:
     OHIO_KEYS.append(book["key"])
     OHIO_KEYS.extend(book.get("also") or [])
-TTL_HOURS = float(os.environ.get("ODDS_SNAPSHOT_TTL_HOURS", "12"))
+TTL_HOURS = float(os.environ.get("ODDS_SNAPSHOT_TTL_HOURS", str(FEATURED_TTL_HOURS)))
 MARKETS = "h2h,spreads,totals"
 
 
@@ -142,83 +140,92 @@ def main():
         **sports_headers,
     }
 
-    snapshot_path = DATA / "odds-snapshot.json"
+    bundle = _load_bundle()
     force = os.environ.get("ODDS_API_FORCE") == "1"
-    fresh = False
-    if snapshot_path.exists() and not force:
-        age_h = (dt.datetime.now(dt.timezone.utc).timestamp() - snapshot_path.stat().st_mtime) / 3600
-        fresh = age_h < TTL_HOURS
-        if fresh:
+    active = [sport for sport in PRIORITY if sport in active]
+    due = []
+    for sport in active:
+        snap = bundle.get(sport) or {}
+        age_h = _age_hours(snap.get("fetched_at"))
+        if force or age_h is None or age_h >= TTL_HOURS:
+            due.append(sport)
+    remaining = sports_headers.get("x_requests_remaining")
+    try:
+        remaining_n = int(remaining) if remaining is not None else 0
+    except ValueError:
+        remaining_n = 0
+    today = dt.datetime.now(dt.timezone.utc).date()
+    plan = plan_credits(remaining_n, active, days_left(today), due, [])
+    report["budget"] = {
+        "active": plan["active"],
+        "featured_due": due,
+        "featured_buying": plan["featured"],
+        "featured_cost_each": featured_cost(),
+        "reserve": RESERVE,
+        "days_left": plan["days_left"],
+        "prop_today": plan["prop_today"],
+    }
+    print("featured budget", json.dumps(report["budget"]))
+    bought = []
+    odds_headers = sports_headers
+    for sport in plan["featured"]:
+        if remaining_n < RESERVE + featured_cost():
+            print("featured: stopping, reserve", remaining_n)
+            break
+        try:
+            odds_response = get(
+                session,
+                f"/sports/{sport}/odds",
+                key,
+                regions="us",
+                markets=MARKETS,
+                oddsFormat="american",
+                includeLinks="true",
+            )
+        except RuntimeError as exc:
+            report["odds"] = {"status": 0, "error": str(exc), "sport_key": sport, "regions": "us", "markets": MARKETS}
+            _write(report)
+            print(json.dumps(report, indent=2))
+            return 1
+        odds_headers = headers_of(odds_response)
+        print("odds status", odds_response.status_code, "sport", sport, "quota", json.dumps(odds_headers))
+        try:
+            remaining_n = int(odds_headers.get("x_requests_remaining") or remaining_n)
+        except ValueError:
+            pass
+        if odds_response.status_code != 200:
             report["odds"] = {
-                "skipped": True,
-                "reason": f"snapshot is {age_h:.1f}h old (ttl {TTL_HOURS:g}h); skipped the paid call",
-                **sports_headers,
+                "status": odds_response.status_code,
+                "sport_key": sport,
+                "regions": "us",
+                "markets": MARKETS,
+                "body": clean(odds_response.text[:400], key),
+                **odds_headers,
             }
             _write(report)
             print(json.dumps(report, indent=2))
-            print("key_valid: true")
-            return 0
-
-    remaining = sports_headers.get("x_requests_remaining")
-    try:
-        remaining_n = int(remaining) if remaining is not None else None
-    except ValueError:
-        remaining_n = None
-    if remaining_n is not None and remaining_n < 40:
-        report["odds"] = {
-            "skipped": True,
-            "reason": f"only {remaining_n} credits remaining; refused the paid call (reserve 40)",
-            **sports_headers,
-        }
-        _write(report)
-        print(json.dumps(report, indent=2))
-        return 0
-
-    if not chosen:
-        report["odds"] = {"skipped": True, "reason": "no active sport returned by /sports", **sports_headers}
-        _write(report)
-        print(json.dumps(report, indent=2))
-        return 1
-
-    try:
-        odds_response = get(
-            session,
-            f"/sports/{chosen}/odds",
-            key,
-            regions="us",
-            markets=MARKETS,
-            oddsFormat="american",
-            includeLinks="true",
-        )
-    except RuntimeError as exc:
-        report["odds"] = {"status": 0, "error": str(exc), "sport_key": chosen, "regions": "us", "markets": MARKETS}
-        _write(report)
-        print(json.dumps(report, indent=2))
-        return 1
-
-    odds_headers = headers_of(odds_response)
-    print("odds status", odds_response.status_code, "sport", chosen, "quota", json.dumps(odds_headers))
-    if odds_response.status_code != 200:
-        report["odds"] = {
-            "status": odds_response.status_code,
-            "sport_key": chosen,
+            return 1
+        events = odds_response.json()
+        if not isinstance(events, list):
+            events = []
+        bundle[sport] = {
+            "fetched_at": now,
+            "sport_key": sport,
             "regions": "us",
-            "markets": MARKETS,
-            "body": clean(odds_response.text[:400], key),
-            **odds_headers,
+            "markets": MARKETS.split(","),
+            "headers": odds_headers,
+            "events": [slim_event(event) for event in events],
         }
-        _write(report)
-        print(json.dumps(report, indent=2))
-        return 1
+        bought.append(sport)
 
-    events = odds_response.json()
-    if not isinstance(events, list):
-        events = []
+    _write_bundle(bundle)
+    primary = _primary_snapshot(bundle, chosen)
     seen = {}
-    for event in events:
-        for book in event.get("bookmakers") or []:
-            if book.get("key"):
-                seen[book["key"]] = book.get("title") or book["key"]
+    for snap in bundle.values():
+        for event in snap.get("events") or []:
+            for book in event.get("bookmakers") or []:
+                if book.get("key"):
+                    seen[book["key"]] = book.get("title") or book["key"]
     present, absent = [], []
     for book in BOOKS:
         names = [book["key"]] + list(book.get("also") or [])
@@ -228,34 +235,80 @@ def main():
         else:
             absent.append(title)
     others = sorted(title for key_name, title in seen.items() if find_book(key_name) is None)
+    if not bought and not due:
+        reason = f"featured snapshots are under {TTL_HOURS:g}h old; skipped the paid calls"
+    elif not bought:
+        reason = f"only {remaining_n} credits remaining; refused featured calls (reserve {RESERVE})"
+    else:
+        reason = None
     report["odds"] = {
-        "skipped": False,
-        "status": 200,
-        "sport_key": chosen,
+        "skipped": not bought,
+        "reason": reason,
+        "status": 200 if primary else None,
+        "sport_key": (primary or {}).get("sport_key") or chosen,
+        "sports": sorted(bundle),
+        "bought": bought,
         "regions": "us",
         "markets": MARKETS,
-        "events": len(events),
+        "events": sum(len(snap.get("events") or []) for snap in bundle.values()),
         "bookmakers": [{"key": key_name, "title": title} for key_name, title in sorted(seen.items())],
         "ohio_present": present,
         "ohio_absent": absent,
         "other_bookmakers": others,
         **odds_headers,
     }
-    snapshot = {
-        "fetched_at": now,
-        "sport_key": chosen,
-        "regions": "us",
-        "markets": MARKETS.split(","),
-        "headers": odds_headers,
-        "events": [slim_event(event) for event in events],
-    }
-    snapshot_path.write_text(json.dumps(snapshot))
     _write(report)
     print(json.dumps(report, indent=2))
     print("key_valid: true")
     print("ohio_present:", ", ".join(present) or "(none)")
     print("ohio_absent:", ", ".join(absent) or "(none)")
     return 0
+
+
+def _age_hours(stamp):
+    if not stamp:
+        return None
+    try:
+        parsed = dt.datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return (dt.datetime.now(dt.timezone.utc) - parsed).total_seconds() / 3600
+
+
+def _load_bundle():
+    path = DATA / "odds-snapshots.json"
+    sports = {}
+    if path.exists():
+        try:
+            sports = json.loads(path.read_text()).get("sports") or {}
+        except json.JSONDecodeError:
+            sports = {}
+    single = DATA / "odds-snapshot.json"
+    if single.exists():
+        try:
+            one = json.loads(single.read_text())
+        except json.JSONDecodeError:
+            one = None
+        if one and one.get("sport_key") and one["sport_key"] not in sports:
+            sports[one["sport_key"]] = one
+    return sports
+
+
+def _primary_snapshot(bundle, chosen):
+    if chosen and bundle.get(chosen):
+        return bundle[chosen]
+    for sport in PRIORITY:
+        if bundle.get(sport):
+            return bundle[sport]
+    return next(iter(bundle.values()), None)
+
+
+def _write_bundle(bundle):
+    path = DATA / "odds-snapshots.json"
+    path.write_text(json.dumps({"sports": bundle}))
+    primary = _primary_snapshot(bundle, "basketball_nba")
+    if primary:
+        (DATA / "odds-snapshot.json").write_text(json.dumps(primary))
 
 
 def _write(report):

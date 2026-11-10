@@ -492,7 +492,8 @@ STAT_ALIASES = {
     "tb": ["totalBases"], "runs": ["runs"], "sot": ["shotsOnTarget"],
 }
 COMBOS = {"pra": ["pts", "reb", "ast"], "pr": ["pts", "reb"], "pa": ["pts", "ast"], "ra": ["reb", "ast"], "sb": ["stl", "blk"],
-          "pass_rush_yds": ["pass_yds", "rush_yds"], "rush_rec_yds": ["rush_yds", "rec_yds"]}
+          "pass_rush_yds": ["pass_yds", "rush_yds"], "rush_rec_yds": ["rush_yds", "rec_yds"],
+          "anytime_td": ["rush_td", "rec_td"]}
 
 
 def _num(v):

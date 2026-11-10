@@ -43,10 +43,12 @@ def capture(page, suffix):
 
     page.goto(BASE + "#builder", wait_until="networkidle")
     page.fill("#sentence", "safe 4 leg parlay browns sunday +400")
-    page.click("button[data-act='build']")
-    page.wait_for_selector("#build-result .legline")
-    page.wait_for_timeout(200)
-    shot(page, f"builder{suffix}.png")
+        page.click("button[data-act='build']")
+        page.wait_for_selector("#build-result .legline")
+        page.evaluate("() => document.getElementById('build-result')?.scrollIntoView({block:'start'})")
+        page.wait_for_timeout(250)
+        page.screenshot(path=str(OUT / f"builder{suffix}.png"), full_page=False)
+        print("wrote", OUT / f"builder{suffix}.png")
 
     page.click("button[data-act='use-build']")
     page.wait_for_selector(".book")

@@ -37,7 +37,7 @@ The game page. Includes `model_summary`, `flags`, `notes`, `injuries`, `form`, `
 
 `model_prob` is the engine's market-shrunk probability. `ev` is expected return at that American price as a fraction of a 1-stake mathematical unit. The UI shows it only as a percent. If `model_prob` is null, the row is a posted line with no model. That happens when the refresh listed the game but did not run the model.
 
-`props[]` exists only when The Odds API returned a real prop price. Each prop has the player, stat, line, projection, `hit_rates` (`L5`, `L10`, `L20`, `all`), recent game-log values, a `ladder` of model fair prices (explicitly not book prices), and per-side `offers`.
+`props[]` exists only when The Odds API returned a real prop price for that game. An empty list means props were not loaded for it. The credit budget is in the README. Each prop has the player, stat, line, projection, `hit_rates` (`L5`, `L10`, `L20`, `all`), recent game-log values, a `ladder` of model fair prices (explicitly not book prices), and per-side `offers`.
 
 ## `legs.json`
 

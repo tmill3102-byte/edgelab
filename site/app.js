@@ -1,12 +1,14 @@
 "use strict";
 
 const RISK = {
-  safe: { tol: 0.3, wP: 1, wEv: 0.5, lowPen: 0.6, maxLegDec: 2.2 },
-  balanced: { tol: 0.25, wP: 0.6, wEv: 1, lowPen: 0.35, maxLegDec: 3.5 },
-  aggressive: { tol: 0.2, wP: 0.3, wEv: 1.5, lowPen: 0.15, maxLegDec: 99 },
+  // Decimal price bands. Safe is the short favorite. Balanced is around -200 to -125.
+  // Aggressive is plus money, the other number on the board.
+  safe: { minDec: 1.01, maxDec: 1.35, widenMin: 1.01, widenMax: 1.55, rank: "prob" },
+  balanced: { minDec: 1.35, maxDec: 1.8, widenMin: 1.2, widenMax: 2.05, rank: "target" },
+  aggressive: { minDec: 2, maxDec: 8, widenMin: 1.7, widenMax: 8, rank: "plus" },
 };
 
-const state = {
+var state = {
   meta: null,
   slate: null,
   edges: [],
@@ -23,7 +25,7 @@ const state = {
   bookPinned: localStorage.getItem("edgelab.bookPinned") === "1",
   slip: [],
   myPlays: [],
-  builder: { text: "", risk: "balanced", legs: 4, target: 400, team: "", date: "", dirty: false, parsed: null, result: null },
+  builder: { text: "", risk: "balanced", riskLocked: false, legs: 4, target: 400, team: "", date: "", dirty: false, parsed: null, result: null, alts: null },
   sgpMode: "sgp",
   sgpx: [],
   sheet: null,
@@ -375,6 +377,15 @@ function renderEdges() {
   const max = rank[state.edgeTier] ?? 1;
   const rows = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   const chips = ["High", "Medium"].map((tier) => `<button type="button" class="chip ${state.edgeTier === tier ? "on" : ""}" data-act="tier" data-tier="${tier}">${tier === "Medium" ? "High + Medium" : "High only"}</button>`);
+  const propRows = state.edges.filter((edge) => edge.market === "Prop" || edge.tier === "Prop");
+  const propBody = propRows.length ? `<h3>Props</h3><p class="meta">Not in the backtest. Hit chance is the game-log model.</p><div class="list">${propRows.map((edge, index) => {
+    const when = String(edge.start_local || "").match(/(\d{1,2}:\d{2} [AP]M)/);
+    const meta = `${edge.leg?.matchup || edge.game}${when ? " · " + when[1] : ""} · ${fmtPct(edge.model_prob)}`;
+    return `<button type="button" class="edge-row" data-act="edge" data-index="${index}" data-prop="1">
+      <span class="who"><span><b>${esc(edge.selection)}</b><div class="meta">${esc(meta)}</div></span></span>
+      <span class="pill">${esc(fmtAm(edge.odds))}</span>
+    </button>`;
+  }).join("")}</div>` : `<h3>Props</h3><p class="meta">Props not loaded yet.</p>`;
   const body = rows.length ? `<div class="list">${rows.map((edge, index) => {
     const flag = (edge.caution || []).length ? ` · caution` : "";
     const when = String(edge.start_local || "").match(/(\d{1,2}:\d{2} [AP]M)/);
@@ -387,9 +398,10 @@ function renderEdges() {
       <span class="pill ${edge.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(edge.edge))}</span>
     </button>`;
   }).join("")}</div>` : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges. Only backtested markets can leave the price.</div>`;
-  const visible = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
+  const visible = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max && edge.market !== "Prop" && edge.tier !== "Prop");
   state._visibleEdges = visible;
-  return `<h1 class="largetitle" id="largetitle">Edges</h1><p class="subhead">NBA moneyline, NBA total, NHL puck line.</p><div class="row">${chips.join("")}</div>${body}`;
+  state._propEdges = propRows;
+  return `<h1 class="largetitle" id="largetitle">Edges</h1><p class="subhead">NBA moneyline, NBA total, NHL puck line.</p><div class="row">${chips.join("")}</div>${body}${propBody}`;
 }
 
 function activeBook(game) {
@@ -464,7 +476,7 @@ function renderGame() {
     ${flags ? `<p>${flags}</p>` : ""}
     ${injuries}
     <div class="markets">${markets || `<div class="empty">No odds posted.</div>`}</div>
-    ${props || `<p class="meta">No player props in this feed.</p>`}`;
+    ${props || `<p class="meta">Props not loaded for this game yet.</p>`}`;
 }
 
 function parseRequest(text) {
@@ -753,7 +765,10 @@ function renderSgpCard(card) {
   if (card.empty) return `<article class="parlay"><div class="parlay-top"><b>${esc(card.label)}</b></div><p class="note">No card in this band.</p></article>`;
   const band = card.key === "longshot" ? "longshot" : card.key;
   const price = card.price ? `${esc(card.price.book.short || card.price.book.name)} ${fmtAm(card.price.summary.american)} est.` : "No full price";
-  const legs = card.legs.map((leg) => `<div class="legline"><span>${esc(leg.selection)}</span><span class="num">${fmtAm(offerPrimary(leg).odds)}</span></div>`).join("");
+  const legs = card.legs.map((leg) => {
+    const offer = offerPrimary(leg);
+    return `<div class="legline"><span>${esc(leg.selection)}</span><span class="num">${fmtPct(offer?.model_prob)} · ${fmtAm(offer?.odds)}</span></div>`;
+  }).join("");
   const on = state.sgpx.includes(card.id);
   const action = state.sgpMode === "sgpx"
     ? `<button type="button" class="btn" data-act="toggle-sgpx" data-id="${esc(card.id)}">${on ? "Remove" : "Use"}</button>`
@@ -806,9 +821,7 @@ function renderSgp() {
     ${body}`;
 }
 
-function runBuild(spec) {
-  const notes = [];
-  const profile = RISK[spec.risk] || RISK.balanced;
+function scopeLegs(spec, notes) {
   let universe = state.legs.slice();
   if (spec.date) {
     const dated = universe.filter((leg) => matchDate(leg, spec.date));
@@ -828,88 +841,125 @@ function runBuild(spec) {
     const sameLeague = universe.filter((leg) => leg.league === league);
     if (sameLeague.length >= spec.legs) {
       pool = sameLeague;
-      notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets in that game. The other legs are from the same sport on that date. No prop price was invented to fill the card.`);
+      notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets in that game. The other legs are from the same sport on that date.`);
     } else {
-      notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets, and the same sport does not have enough priced legs. Other legs are from the rest of that date. No prop price was invented.`);
+      notes.push(`${spec.team} does not have enough priced legs, so the rest of that date is included.`);
     }
   }
-  const scoreOf = (leg) => offerPrimary(leg)?.model_prob || 0;
-  const rankedTeam = [...teamLegs].sort((a, b) => scoreOf(b) - scoreOf(a));
-  const rest = pool.filter((leg) => !rankedTeam.includes(leg)).sort((a, b) => scoreOf(b) - scoreOf(a));
-  pool = [...rankedTeam, ...rest].slice(0, 12);
-  const priced = pool.filter((leg) => {
+  return { pool, teamIds: new Set(teamLegs.map((leg) => leg.id)), expanded };
+}
+
+function inBand(leg, minDec, maxDec) {
+  const offer = offerPrimary(leg);
+  if (!offer || offer.odds == null || !(offer.model_prob > 0)) return false;
+  const dec = amToDec(offer.odds);
+  return dec >= minDec && dec <= maxDec;
+}
+
+function takePool(rows, rank, targetDec) {
+  const scored = rows.slice();
+  const legScore = (leg) => {
     const offer = offerPrimary(leg);
-    return offer && amToDec(offer.odds) <= profile.maxLegDec;
-  });
-  const usable = priced.length >= 2 ? priced : pool;
-  if (usable.length < 2) return { error: "Not enough priced legs in the published data for that request.", notes, spec };
-  const n = Math.min(spec.legs, usable.length);
-  if (n < spec.legs) notes.push(`Only ${usable.length} priced candidate legs were available, so this is a ${n}-leg card.`);
-  const targetDec = amToDec(spec.target);
-  const must = new Set(rankedTeam.map((leg) => leg.id));
-  let scored = [];
-  for (const combo of combinations(usable, n)) {
-    if (combo.some((a, i) => combo.slice(i + 1).some((b) => conflict(a, b)))) continue;
-    if (must.size && !combo.some((leg) => must.has(leg.id))) continue;
-    const prob = combo.reduce((product, leg) => product * (offerPrimary(leg).model_prob || 0), 1);
-    const dec = combo.reduce((product, leg) => product * amToDec(offerPrimary(leg).odds), 1);
-    if (!(prob > 0) || !(dec > 1)) continue;
-    const dist = Math.abs(Math.log(dec) - Math.log(targetDec));
-    const ev = prob * dec - 1;
-    const lows = combo.filter((leg) => offerPrimary(leg).tier === "Low").length;
-    const score = -2 * dist + profile.wP * Math.log(prob) + profile.wEv * ev - profile.lowPen * lows;
-    scored.push({ combo, prob, dec, ev, dist, score, within: dist <= Math.log(1 + profile.tol) });
+    const dec = amToDec(offer.odds);
+    if (rank === "prob") return offer.model_prob;
+    if (rank === "plus") return offer.model_prob;
+    const want = Math.pow(targetDec, 1 / 4);
+    return -Math.abs(Math.log(dec) - Math.log(want)) + 0.05 * offer.model_prob;
+  };
+  scored.sort((a, b) => legScore(b) - legScore(a));
+  const out = [];
+  const seen = new Set();
+  for (const leg of scored) {
+    if (seen.has(leg.event_id)) continue;
+    seen.add(leg.event_id);
+    out.push(leg);
+    if (out.length >= 8) break;
   }
-  if (!scored.length && must.size) {
-    notes.push("No combo could keep the named team without a conflict, so the team requirement was dropped.");
-    for (const combo of combinations(usable, n)) {
-      if (combo.some((a, i) => combo.slice(i + 1).some((b) => conflict(a, b)))) continue;
-      const prob = combo.reduce((product, leg) => product * (offerPrimary(leg).model_prob || 0), 1);
-      const dec = combo.reduce((product, leg) => product * amToDec(offerPrimary(leg).odds), 1);
-      if (!(prob > 0) || !(dec > 1)) continue;
-      const dist = Math.abs(Math.log(dec) - Math.log(targetDec));
-      const ev = prob * dec - 1;
-      const lows = combo.filter((leg) => offerPrimary(leg).tier === "Low").length;
-      const score = -2 * dist + profile.wP * Math.log(prob) + profile.wEv * ev - profile.lowPen * lows;
-      scored.push({ combo, prob, dec, ev, dist, score, within: dist <= Math.log(1 + profile.tol) });
+  return out;
+}
+
+function priceCombo(combo, profile, targetDec) {
+  const prob = combo.reduce((product, leg) => product * (offerPrimary(leg).model_prob || 0), 1);
+  const dec = combo.reduce((product, leg) => product * amToDec(offerPrimary(leg).odds), 1);
+  if (!(prob > 0) || !(dec > 1)) return null;
+  const dist = Math.log(dec) - Math.log(targetDec);
+  let score;
+  if (profile.rank === "prob") score = Math.log(prob) - 2 * Math.max(0, dist);
+  else if (profile.rank === "plus") score = -Math.abs(dist) + 0.05 * Math.log(prob);
+  else score = -Math.abs(dist) + 0.15 * Math.log(prob);
+  return { combo, prob, dec, dist, score, ev: prob * dec - 1 };
+}
+
+function runBuild(spec) {
+  const notes = [];
+  const profile = RISK[spec.risk] || RISK.balanced;
+  const scoped = scopeLegs(spec, notes);
+  let band = scoped.pool.filter((leg) => inBand(leg, profile.minDec, profile.maxDec));
+  if (band.length < spec.legs) {
+    const wider = scoped.pool.filter((leg) => inBand(leg, profile.widenMin, profile.widenMax));
+    if (wider.length > band.length) {
+      band = wider;
+      notes.push(`${spec.risk} widened the price band so the card could fill ${spec.legs} legs.`);
     }
+  }
+  const targetDec = amToDec(spec.target);
+  let usable = takePool(band, profile.rank, targetDec);
+  if (usable.length < 2) return { error: "Not enough priced legs in that risk band.", notes, spec };
+  const n = Math.min(spec.legs, usable.length);
+  if (n < spec.legs) notes.push(`Only ${usable.length} legs fit ${spec.risk}, so this is a ${n}-leg card.`);
+  const must = scoped.teamIds;
+  let scored = [];
+  const consider = (requireTeam) => {
+    const found = [];
+    for (const combo of combinations(usable, n)) {
+      if (new Set(combo.map((leg) => leg.event_id)).size !== combo.length) continue;
+      if (combo.some((a, i) => combo.slice(i + 1).some((b) => conflict(a, b)))) continue;
+      if (requireTeam && must.size && !combo.some((leg) => must.has(leg.id))) continue;
+      const row = priceCombo(combo, profile, targetDec);
+      if (row) found.push(row);
+    }
+    return found;
+  };
+  scored = consider(true);
+  if (!scored.length && must.size) {
+    notes.push("No combo in this risk band could keep the named team, so that requirement was dropped.");
+    scored = consider(false);
   }
   if (!scored.length) return { error: "No non-conflicting combination of priced legs matched.", notes, spec };
-  const anyWithin = scored.some((row) => row.within);
-  scored.sort((a, b) => {
-    if (anyWithin && a.within !== b.within) return a.within ? -1 : 1;
-    if (!anyWithin && Math.round(a.dist * 100) !== Math.round(b.dist * 100)) return Math.round(a.dist * 100) - Math.round(b.dist * 100);
-    return b.score - a.score;
-  });
+  scored.sort((a, b) => b.score - a.score);
   const best = scored[0];
   const honest = [];
-  if (!best.within) honest.push(`No combo lands within ${Math.round(profile.tol * 100)}% of ${fmtAm(spec.target)}. Closest estimated price is ${fmtAm(decToAm(best.dec))}.`);
+  if (profile.rank === "prob" && best.dec < targetDec) {
+    honest.push(`Safe keeps the highest hit chance. Estimated price ${fmtAm(decToAm(best.dec))} is under the ${fmtAm(spec.target)} target instead of adding longshots.`);
+  } else if (profile.rank === "plus") {
+    honest.push("Aggressive uses plus-money prices, including the other side of a favorite. It can land well past the target.");
+  } else if (Math.abs(best.dist) > Math.log(1.35)) {
+    honest.push(`Balanced aims at ${fmtAm(spec.target)}. Closest estimated price in this band is ${fmtAm(decToAm(best.dec))}.`);
+  }
   const negative = best.combo.filter((leg) => (offerPrimary(leg).edge || 0) < 0);
   if (negative.length) {
-    honest.push(`Hitting ${fmtAm(spec.target)} with ${n} legs uses ${negative.length} leg(s) with no model edge (${negative.map((leg) => leg.selection).join(", ")}). The model would not take those as singles. They are filler to reach the price.`);
+    honest.push(`${negative.length} leg(s) have no model edge (${negative.map((leg) => leg.selection).join(", ")}).`);
   }
-  if (best.ev < 0) honest.push(`Expected return at the estimated price is ${fmtSignedPct(best.ev)} before same-game pricing. That is not a value bet.`);
   const weak = [];
-  for (const leg of [...best.combo].sort((a, b) => (offerPrimary(a).edge || 0) - (offerPrimary(b).edge || 0))) {
+  for (const leg of [...best.combo].sort((a, b) => (offerPrimary(a).model_prob || 0) - (offerPrimary(b).model_prob || 0))) {
     const offer = offerPrimary(leg);
     const why = [];
     if ((offer.edge || 0) < 0) why.push(`negative edge ${fmtEdge(offer.edge)}`);
-    if (offer.tier === "Low") why.push("Low tier");
-    if ((offer.model_prob || 1) < 0.4) why.push(`low hit probability ${fmtPct(offer.model_prob)}`);
+    if ((offer.model_prob || 1) < 0.4) why.push(`hit chance ${fmtPct(offer.model_prob)}`);
     if ((offer.caution || []).length) why.push("caution: " + offer.caution.join("; "));
     if (why.length) weak.push({ id: leg.id, why });
   }
   return {
-    spec, notes, honest, expanded,
+    spec, notes, honest, expanded: scoped.expanded,
     legs: best.combo,
     weak,
-    correlation: corrNotes(best.combo),
+    correlation: ["One leg per game. Same-game cards are on the SGP tab.", ...corrNotes(best.combo)],
     prob: best.prob,
     fair: decToAm(1 / best.prob),
     payout: decToAm(best.dec),
     ev: best.ev,
-    within: best.within,
-    priceBasis: "Product of each leg's listed price at the modeled line. A book's parlay price, especially same-game, will be different.",
+    within: Math.abs(best.dist) <= Math.log(1.35),
+    priceBasis: "Product of each leg's listed price. A book's parlay price will be different.",
     alternatives: scored.slice(1, 3).map((row) => ({
       label: row.combo.map((leg) => leg.selection).join(" + "),
       price: decToAm(row.dec),
@@ -918,29 +968,48 @@ function runBuild(spec) {
   };
 }
 
+function buildTrio(spec) {
+  const alts = {};
+  for (const risk of ["safe", "balanced", "aggressive"]) {
+    alts[risk] = runBuild({ ...spec, risk });
+  }
+  return alts;
+}
+
 function renderBuilder() {
   const b = state.builder;
   const days = (state.slate?.days || []).map((day) => `<option value="${esc(day.weekday)}" ${b.date === day.weekday ? "selected" : ""}>${esc(day.label)}</option>`).join("");
   let result = "";
-  if (b.result?.error) {
-    result = `<div class="empty">${esc(b.result.error)}</div>${(b.result.notes || []).map((note) => `<p class="note">${esc(note)}</p>`).join("")}`;
-  } else if (b.result?.legs) {
-    const res = b.result;
-    const weakIds = new Set((res.weak || []).map((row) => row.id));
-    const band = hitBand(res.prob);
-    const legs = res.legs.map((leg) => {
-      const offer = offerPrimary(leg);
-      const weak = weakIds.has(leg.id) ? " · weak" : "";
-      return `<div class="legline"><span>${esc(leg.selection)}${weak}</span><span class="num">${fmtAm(offer.odds)}</span></div>`;
+  if (b.alts) {
+    const cards = ["safe", "balanced", "aggressive"].map((risk) => {
+      const res = b.alts[risk];
+      const on = risk === b.risk;
+      const hit = res?.legs ? fmtPct(res.prob) : "—";
+      const names = res?.legs ? res.legs.map((leg) => esc(leg.selection)).join(" · ") : esc(res?.error || "");
+      return `<button type="button" class="triocard ${on ? "on" : ""}" data-act="risk" data-risk="${risk}"><b>${risk}</b><span class="hit num">${hit}</span><span class="meta">${names}</span></button>`;
     }).join("");
-    result = `
-      <div id="build-result" class="parlay">
-        <div class="parlay-top"><b>${esc(res.spec.legs)} legs</b><span class="pill ${band}">${fmtPct(res.prob)}</span></div>
-        ${meter(res.prob, band)}
-        ${legs}
-        <p class="note">${fmtAm(res.payout)} est. · fair ${fmtAm(res.fair)}</p>
-        <div class="row-actions"><button type="button" class="btn" data-act="why-build">Why</button><button type="button" class="cta" data-act="use-build">Add</button></div>
-      </div>`;
+    const res = b.result;
+    let detail = "";
+    if (res?.error) {
+      detail = `<div class="empty">${esc(res.error)}</div>`;
+    } else if (res?.legs) {
+      const weakIds = new Set((res.weak || []).map((row) => row.id));
+      const band = hitBand(res.prob);
+      const legs = res.legs.map((leg) => {
+        const offer = offerPrimary(leg);
+        const weak = weakIds.has(leg.id) ? " · weak" : "";
+        return `<div class="legline"><span>${esc(leg.selection)}${weak}</span><span class="num">${fmtPct(offer.model_prob)} · ${fmtAm(offer.odds)}</span></div>`;
+      }).join("");
+      detail = `
+        <div class="parlay">
+          <div class="parlay-top"><b>${esc(res.spec.risk)} · ${esc(res.spec.legs)} legs</b><span class="pill ${band}">${fmtPct(res.prob)}</span></div>
+          ${meter(res.prob, band)}
+          ${legs}
+          <p class="note">${fmtAm(res.payout)} est. · fair ${fmtAm(res.fair)}</p>
+          <div class="row-actions"><button type="button" class="btn" data-act="why-build">Why</button><button type="button" class="cta" data-act="use-build">Add</button></div>
+        </div>`;
+    }
+    result = `<div id="build-result"><div class="trio">${cards}</div>${detail}</div>`;
   }
   const parsed = b.parsed ? `<p class="note">Read as ${esc(b.parsed.risk)} · ${esc(b.parsed.legs)} legs · ${esc(b.parsed.team || "any team")} · ${esc(b.parsed.date || "any date")} · target ${fmtAm(b.parsed.target)}.</p>` : "";
   return `
@@ -1401,7 +1470,8 @@ function onClick(event) {
   if (act === "tier") { state.edgeTier = el.dataset.tier; render(); return; }
   if (act === "game") { go(`#game/${el.dataset.league}/${el.dataset.id}`); return; }
   if (act === "edge") {
-    const edge = state._visibleEdges?.[Number(el.dataset.index)];
+    const list = el.dataset.prop ? state._propEdges : state._visibleEdges;
+    const edge = list?.[Number(el.dataset.index)];
     if (edge?.leg) openSheet(edge.leg, edge.book);
     return;
   }
@@ -1450,31 +1520,21 @@ function onClick(event) {
   if (act === "build") {
     const text = document.getElementById("sentence")?.value ?? state.builder.text;
     state.builder.text = text;
-    let spec;
-    if (!state.builder.dirty && text.trim()) spec = parseRequest(text);
-    else {
-      spec = {
-        risk: state.builder.risk,
-        legs: Number(state.builder.legs) || 3,
-        target: Number(state.builder.target) || 400,
-        team: document.getElementById("team")?.value || state.builder.team,
-        date: document.getElementById("date")?.value || state.builder.date,
-      };
-    }
-    state.builder.team = spec.team || "";
-    state.builder.date = spec.date || "";
-    state.builder.legs = spec.legs;
-    state.builder.target = spec.target;
-    state.builder.risk = spec.risk;
-    state.builder.parsed = spec;
-    state.builder.dirty = false;
-    state.builder.result = runBuild(spec);
+    applyBuild(text);
     render();
-    document.getElementById("build-result")?.scrollIntoView({ block: "start" });
+    document.getElementById("build-result")?.scrollIntoView({ block: "nearest" });
     return;
   }
   if (act === "legs") { state.builder.legs = Number(el.dataset.n); state.builder.dirty = true; render(); return; }
-  if (act === "risk") { state.builder.risk = el.dataset.risk; state.builder.dirty = true; render(); return; }
+  if (act === "risk") {
+    state.builder.risk = el.dataset.risk;
+    state.builder.riskLocked = true;
+    if (state.builder.parsed || state.builder.text.trim() || state.builder.alts) {
+      applyBuild(state.builder.text);
+    }
+    render();
+    return;
+  }
   if (act === "use-build" && state.builder.result?.legs) {
     state.slip = state.builder.result.legs.slice();
     state.bookPinned = false;
@@ -1511,6 +1571,30 @@ function onClick(event) {
     persistPlays();
     render();
   }
+}
+
+function applyBuild(text) {
+  let spec;
+  if (!state.builder.dirty && String(text || "").trim()) spec = parseRequest(text);
+  else {
+    spec = {
+      risk: state.builder.risk,
+      legs: Number(state.builder.legs) || 3,
+      target: Number(state.builder.target) || 400,
+      team: document.getElementById("team")?.value || state.builder.team,
+      date: document.getElementById("date")?.value || state.builder.date,
+    };
+  }
+  if (state.builder.riskLocked) spec.risk = state.builder.risk;
+  state.builder.team = spec.team || "";
+  state.builder.date = spec.date || "";
+  state.builder.legs = spec.legs;
+  state.builder.target = spec.target;
+  state.builder.risk = spec.risk;
+  state.builder.parsed = spec;
+  state.builder.dirty = false;
+  state.builder.alts = buildTrio(spec);
+  state.builder.result = state.builder.alts[spec.risk] || state.builder.alts.balanced;
 }
 
 function onInput(event) {
@@ -1555,4 +1639,4 @@ async function boot() {
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 }
 
-boot();
+if (typeof document !== "undefined") boot();
