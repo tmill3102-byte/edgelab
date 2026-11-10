@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-10T10:16:15-05:00",
-  "generated_at_et": "Tue Nov 10 10:16 AM ET",
+  "generated_at": "2026-11-10T10:23:08-05:00",
+  "generated_at_et": "Tue Nov 10 10:23 AM ET",
   "disclaimer": "Research only. No guarantees. EdgeLab does not place bets. If gambling is a problem, call 1-800-GAMBLER.",
   "research_only": true,
-  "games_listed": 246,
-  "games_analyzed": 30,
-  "edges": 8,
-  "legs": 180,
+  "games_listed": 924,
+  "games_analyzed": 40,
+  "edges": 12,
+  "legs": 238,
   "books": [
     {
       "key": "draftkings",
@@ -15,7 +15,7 @@
       "short": "DK",
       "home": "https://sportsbook.draftkings.com/",
       "region": "us",
-      "in_feed": false
+      "in_feed": true
     },
     {
       "key": "fanduel",
@@ -24,7 +24,7 @@
       "short": "FD",
       "home": "https://sportsbook.fanduel.com/",
       "region": "us",
-      "in_feed": false
+      "in_feed": true
     },
     {
       "key": "betmgm",
@@ -33,7 +33,7 @@
       "short": "MGM",
       "home": "https://www.oh.betmgm.com/en/sports",
       "region": "us",
-      "in_feed": false
+      "in_feed": true
     },
     {
       "key": "williamhill_us",
@@ -96,7 +96,7 @@
       "short": "BR",
       "home": "https://oh.betrivers.com/",
       "region": "us",
-      "in_feed": false
+      "in_feed": true
     },
     {
       "key": "ballybet",
@@ -110,19 +110,35 @@
     }
   ],
   "odds_api": {
-    "snapshot": false,
-    "sport_key": null,
-    "regions": null,
-    "markets": null,
-    "fetched_at": null,
-    "events": 0,
-    "x_requests_remaining": null,
-    "x_requests_used": null,
-    "x_requests_last": null,
-    "ohio_present": null,
-    "ohio_absent": null,
+    "snapshot": true,
+    "sport_key": "basketball_nba",
+    "regions": "us",
+    "markets": [
+      "h2h",
+      "spreads",
+      "totals"
+    ],
+    "fetched_at": "2026-11-10T15:22:17+00:00",
+    "events": 10,
+    "x_requests_remaining": "497",
+    "x_requests_used": "3",
+    "x_requests_last": "3",
+    "ohio_present": [
+      "DraftKings",
+      "FanDuel",
+      "BetMGM",
+      "BetRivers"
+    ],
+    "ohio_absent": [
+      "Caesars",
+      "bet365",
+      "Fanatics",
+      "theScore",
+      "Hard Rock",
+      "Bally Bet"
+    ],
     "props_fetched": 0,
-    "note": "No Odds API snapshot. Lines are DraftKings via the free ESPN feed only, and the book list is DraftKings until a snapshot is published."
+    "note": "Featured moneylines, spreads and totals for one sport came from The Odds API regions=us. Other sports stay on ESPN/DraftKings. Combined parlay prices in the app are the product of leg prices, not a book's parlay quote."
   },
   "schema": "edgelab.data/v1"
 }

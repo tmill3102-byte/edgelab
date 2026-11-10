@@ -23,7 +23,7 @@
     "id": "113"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,62 +33,37 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -625.0,
       "ml_away": 455.0,
-      "spread_home": -14.5,
-      "spread_home_odds": -108.0,
+      "ml_home": -625.0,
       "spread_away": 14.5,
       "spread_away_odds": -112.0,
+      "spread_home": -14.5,
+      "spread_home_odds": -108.0,
       "total": 52.5,
       "over_odds": -105.0,
       "under_odds": -115.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Projected margin TOL +12.4 \u00b7 total 53.6",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: TOL 84.3% (implied margin +16.1); blended 50/50 with own rating."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WLWWW",
+    "away": "L5 LLLLW"
+  },
   "markets": [
     {
       "market": "ML",
       "sides": [
-        {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "TOL ML",
-              "side": "home",
-              "line": null,
-              "odds": -625.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
         {
           "side": "away",
           "offers": {
@@ -98,26 +73,58 @@
               "side": "away",
               "line": null,
               "odds": 455.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.2183,
+              "model_prob": 0.191,
+              "market_prob": 0.1729,
+              "fair_odds": 423,
+              "edge": 0.0182,
+              "edge_at_price": 0.0109,
+              "ev": 0.0603,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model MASS win 21.8% vs market no-vig 17.3%.",
+                "Projected margin TOL +12.4 (ratings TOL +6.6, MASS +0.3, HFA 2.5).",
+                "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
+              "caution": [],
+              "case_against": "Market makes MASS 17%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +434 or better and re-check injuries near start."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "TOL ML",
+              "side": "home",
+              "line": null,
+              "odds": -625.0,
+              "model_raw": 0.7817,
+              "model_prob": 0.809,
+              "market_prob": 0.8271,
+              "fair_odds": -423,
+              "edge": -0.0182,
+              "edge_at_price": -0.0531,
+              "ev": -0.0616,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model TOL win 78.2% vs market no-vig 82.7%.",
+                "Projected margin TOL +12.4 (ratings TOL +6.6, MASS +0.3, HFA 2.5).",
+                "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Market makes TOL 83%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -383 or better."
             }
           }
         }
@@ -127,38 +134,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "TOL -14.5",
-              "side": "home",
-              "line": -14.5,
-              "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
-        {
           "side": "away",
           "offers": {
             "draftkings": {
@@ -167,26 +142,58 @@
               "side": "away",
               "line": 14.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.551,
+              "model_prob": 0.523,
+              "market_prob": 0.5043,
+              "fair_odds": -110,
+              "edge": 0.0187,
+              "edge_at_price": -0.0053,
+              "ev": -0.0101,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model MASS +14.5 covers 55.1% vs market 50.4%.",
+                "Projected margin TOL +12.4 vs line TOL -14.5.",
+                "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -105 or better."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "TOL -14.5",
+              "side": "home",
+              "line": -14.5,
+              "odds": -108.0,
+              "model_raw": 0.449,
+              "model_prob": 0.477,
+              "market_prob": 0.4957,
+              "fair_odds": 110,
+              "edge": -0.0187,
+              "edge_at_price": -0.0422,
+              "ev": -0.0813,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model TOL -14.5 covers 44.9% vs market 49.6%.",
+                "Projected margin TOL +12.4 vs line TOL -14.5.",
+                "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +114 or better."
             }
           }
         }
@@ -204,26 +211,28 @@
               "side": "over",
               "line": 52.5,
               "odds": -105.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5274,
+              "model_prob": 0.5014,
+              "market_prob": 0.4892,
+              "fair_odds": -101,
+              "edge": 0.0122,
+              "edge_at_price": -0.0108,
+              "ev": -0.0211,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 52.5: 52.7% vs market 48.9%.",
+                "Projected total 53.6 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 53.5 -> 52.5.",
+                "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (53.5 -> 52.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +103 or better."
             }
           }
         },
@@ -236,26 +245,28 @@
               "side": "under",
               "line": 52.5,
               "odds": -115.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4726,
+              "model_prob": 0.4986,
+              "market_prob": 0.5108,
+              "fair_odds": 101,
+              "edge": -0.0122,
+              "edge_at_price": -0.0363,
+              "ev": -0.0678,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 52.5: 47.3% vs market 51.1%.",
+                "Projected total 53.6 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 53.5 -> 52.5.",
+                "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (53.5 -> 52.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +105 or better."
             }
           }
         }

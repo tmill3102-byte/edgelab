@@ -24,12 +24,23 @@
   },
   "score": null,
   "analyzed": true,
-  "odds_feed": "espn",
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betmgm",
+    "betonlineag",
+    "betrivers",
+    "betus",
+    "bovada",
+    "draftkings",
+    "fanduel",
+    "lowvig",
+    "mybookieag"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/34983859"
+    "draftkings": "https://sportsbook.draftkings.com/event/34983859",
+    "fanduel": "https://sportsbook.fanduel.com/basketball/nba/orlando-magic-%40-sacramento-kings-36295138",
+    "betrivers": "https://{state}.betrivers.com/",
+    "betmgm": "https://sports.{state}.betmgm.com/en/sports/events/orlando-magic-at-sacramento-kings-20050391"
   },
   "lines": {
     "draftkings": {
@@ -42,6 +53,94 @@
       "total": 222.5,
       "over_odds": -115.0,
       "under_odds": -106.0
+    },
+    "fanduel": {
+      "ml_home": 190.0,
+      "ml_away": -230.0,
+      "spread_home": 6.5,
+      "spread_home_odds": -115.0,
+      "spread_away": -6.5,
+      "spread_away_odds": -105.0,
+      "total": 222.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "betrivers": {
+      "ml_home": 180.0,
+      "ml_away": -225.0,
+      "spread_home": 5.5,
+      "spread_home_odds": -107.0,
+      "spread_away": -5.5,
+      "spread_away_odds": -115.0,
+      "total": 223.5,
+      "over_odds": -114.0,
+      "under_odds": -108.0
+    },
+    "betonlineag": {
+      "ml_home": 192.0,
+      "ml_away": -230.0,
+      "spread_home": 6.0,
+      "spread_home_odds": -105.0,
+      "spread_away": -6.0,
+      "spread_away_odds": -115.0,
+      "total": 222.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "lowvig": {
+      "ml_home": 195.0,
+      "ml_away": -228.0,
+      "spread_home": 6.0,
+      "spread_home_odds": -101.0,
+      "spread_away": -6.0,
+      "spread_away_odds": -111.0,
+      "total": 222.5,
+      "over_odds": -107.0,
+      "under_odds": -107.0
+    },
+    "betmgm": {
+      "ml_home": 195.0,
+      "ml_away": -235.0,
+      "spread_home": 6.5,
+      "spread_home_odds": -115.0,
+      "spread_away": -6.5,
+      "spread_away_odds": -105.0,
+      "total": 223.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0
+    },
+    "betus": {
+      "ml_home": 200.0,
+      "ml_away": -235.0,
+      "spread_home": 6.0,
+      "spread_home_odds": -110.0,
+      "spread_away": -6.0,
+      "spread_away_odds": -110.0,
+      "total": 223.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "bovada": {
+      "ml_home": 190.0,
+      "ml_away": -230.0,
+      "spread_home": 6.0,
+      "spread_home_odds": -110.0,
+      "spread_away": -6.0,
+      "spread_away_odds": -110.0,
+      "total": 223.0,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "mybookieag": {
+      "ml_home": 186.0,
+      "ml_away": -234.0,
+      "spread_home": 6.0,
+      "spread_home_odds": -110.0,
+      "spread_away": -6.0,
+      "spread_away_odds": -110.0,
+      "total": 223.0,
+      "over_odds": -110.0,
+      "under_odds": -110.0
     }
   },
   "badge": null,
@@ -148,6 +247,230 @@
               ],
               "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
               "next_step": "Monitor only; if anything, wait for +191 or better and re-check injuries near start."
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 190.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3508,
+              "market_prob": 0.331,
+              "fair_odds": 185,
+              "edge": 0.0199,
+              "edge_at_price": 0.006,
+              "ev": 0.0175,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +191 or better and re-check injuries near start."
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 180.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3555,
+              "market_prob": 0.3403,
+              "fair_odds": 181,
+              "edge": 0.0152,
+              "edge_at_price": -0.0016,
+              "ev": -0.0046,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +187 or better."
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 192.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3501,
+              "market_prob": 0.3295,
+              "fair_odds": 186,
+              "edge": 0.0206,
+              "edge_at_price": 0.0076,
+              "ev": 0.0223,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Playable at +191 or better (current +192); re-check injuries/line 60 min before start."
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 195.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3493,
+              "market_prob": 0.3278,
+              "fair_odds": 186,
+              "edge": 0.0214,
+              "edge_at_price": 0.0103,
+              "ev": 0.0303,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Playable at +192 or better (current +195); re-check injuries/line 60 min before start."
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 195.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3482,
+              "market_prob": 0.3258,
+              "fair_odds": 187,
+              "edge": 0.0225,
+              "edge_at_price": 0.0093,
+              "ev": 0.0273,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Playable at +193 or better (current +195); re-check injuries/line 60 min before start."
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 200.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3464,
+              "market_prob": 0.3221,
+              "fair_odds": 189,
+              "edge": 0.0243,
+              "edge_at_price": 0.0131,
+              "ev": 0.0392,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Playable at +194 or better (current +200); re-check injuries/line 60 min before start."
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 190.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3508,
+              "market_prob": 0.331,
+              "fair_odds": 185,
+              "edge": 0.0199,
+              "edge_at_price": 0.006,
+              "ev": 0.0175,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +191 or better and re-check injuries near start."
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "SAC ML",
+              "side": "home",
+              "line": null,
+              "odds": 186.0,
+              "model_raw": 0.3707,
+              "model_prob": 0.3518,
+              "market_prob": 0.3329,
+              "fair_odds": 184,
+              "edge": 0.0189,
+              "edge_at_price": 0.0022,
+              "ev": 0.0062,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC win 37.1% vs market no-vig 33.1%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)",
+                "line move: price drifted against this side (+157 -> +190)"
+              ],
+              "case_against": "Market makes SAC 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +190 or better and re-check injuries near start."
             }
           }
         },
@@ -178,6 +501,206 @@
               "caution": [],
               "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
               "next_step": "Pass. Only interesting at -175 or better."
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -230.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6492,
+              "market_prob": 0.669,
+              "fair_odds": -185,
+              "edge": -0.0199,
+              "edge_at_price": -0.0478,
+              "ev": -0.0686,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -175 or better."
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -225.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6445,
+              "market_prob": 0.6597,
+              "fair_odds": -181,
+              "edge": -0.0152,
+              "edge_at_price": -0.0478,
+              "ev": -0.0691,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -172 or better."
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -230.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6499,
+              "market_prob": 0.6705,
+              "fair_odds": -186,
+              "edge": -0.0206,
+              "edge_at_price": -0.0471,
+              "ev": -0.0675,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -176 or better."
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -228.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6507,
+              "market_prob": 0.6722,
+              "fair_odds": -186,
+              "edge": -0.0214,
+              "edge_at_price": -0.0444,
+              "ev": -0.0638,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -176 or better."
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -235.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6518,
+              "market_prob": 0.6742,
+              "fair_odds": -187,
+              "edge": -0.0225,
+              "edge_at_price": -0.0497,
+              "ev": -0.0709,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -177 or better."
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -235.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6536,
+              "market_prob": 0.6779,
+              "fair_odds": -189,
+              "edge": -0.0243,
+              "edge_at_price": -0.0479,
+              "ev": -0.0683,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -178 or better."
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -230.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6492,
+              "market_prob": 0.669,
+              "fair_odds": -185,
+              "edge": -0.0199,
+              "edge_at_price": -0.0478,
+              "ev": -0.0686,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -175 or better."
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "ORL ML",
+              "side": "away",
+              "line": null,
+              "odds": -234.0,
+              "model_raw": 0.6293,
+              "model_prob": 0.6482,
+              "market_prob": 0.6671,
+              "fair_odds": -184,
+              "edge": -0.0189,
+              "edge_at_price": -0.0524,
+              "ev": -0.0748,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL win 62.9% vs market no-vig 66.9%.",
+                "Projected margin SAC -4.1 (ratings SAC -6.2, ORL -4.0, HFA 2.3).",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ORL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -174 or better."
             }
           }
         }
@@ -215,6 +738,210 @@
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
               "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start."
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "SAC +6.5",
+              "side": "home",
+              "line": 6.5,
+              "odds": -115.0,
+              "model_raw": 0.5752,
+              "model_prob": 0.543,
+              "market_prob": 0.5108,
+              "fair_odds": -119,
+              "edge": 0.0322,
+              "edge_at_price": 0.0081,
+              "ev": 0.0152,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6.5 covers 57.5% vs market 51.2%.",
+                "Projected margin SAC -4.1 vs line SAC +6.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start."
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "SAC +5.5",
+              "side": "home",
+              "line": 5.5,
+              "odds": -107.0,
+              "model_raw": 0.5436,
+              "model_prob": 0.5175,
+              "market_prob": 0.4915,
+              "fair_odds": -107,
+              "edge": 0.0261,
+              "edge_at_price": 0.0006,
+              "ev": 0.0012,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +5.5: 54.4% before shrink, this book's no-vig 49.1%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -103 or better and re-check injuries near start."
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "SAC +6",
+              "side": "home",
+              "line": 6.0,
+              "odds": -105.0,
+              "model_raw": 0.5613,
+              "model_prob": 0.5253,
+              "market_prob": 0.4892,
+              "fair_odds": -111,
+              "edge": 0.0361,
+              "edge_at_price": 0.0131,
+              "ev": 0.0247,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6: 56.1% before shrink, this book's no-vig 48.9%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Playable at -106 or better (current -105); re-check injuries/line 60 min before start."
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "SAC +6",
+              "side": "home",
+              "line": 6.0,
+              "odds": -101.0,
+              "model_raw": 0.5613,
+              "model_prob": 0.5249,
+              "market_prob": 0.4885,
+              "fair_odds": -111,
+              "edge": 0.0364,
+              "edge_at_price": 0.0225,
+              "ev": 0.0433,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6: 56.1% before shrink, this book's no-vig 48.9%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Playable at -106 or better (current -101); re-check injuries/line 60 min before start."
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "SAC +6.5",
+              "side": "home",
+              "line": 6.5,
+              "odds": -115.0,
+              "model_raw": 0.5752,
+              "model_prob": 0.543,
+              "market_prob": 0.5108,
+              "fair_odds": -119,
+              "edge": 0.0322,
+              "edge_at_price": 0.0081,
+              "ev": 0.0152,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6.5 covers 57.5% vs market 51.2%.",
+                "Projected margin SAC -4.1 vs line SAC +6.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Domantas Sabonis (Day-To-Day)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start."
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "SAC +6",
+              "side": "home",
+              "line": 6.0,
+              "odds": -110.0,
+              "model_raw": 0.5613,
+              "model_prob": 0.5307,
+              "market_prob": 0.5,
+              "fair_odds": -113,
+              "edge": 0.0307,
+              "edge_at_price": 0.0069,
+              "ev": 0.0127,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6: 56.1% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start."
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "SAC +6",
+              "side": "home",
+              "line": 6.0,
+              "odds": -110.0,
+              "model_raw": 0.5613,
+              "model_prob": 0.5307,
+              "market_prob": 0.5,
+              "fair_odds": -113,
+              "edge": 0.0307,
+              "edge_at_price": 0.0069,
+              "ev": 0.0127,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6: 56.1% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start."
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "SAC +6",
+              "side": "home",
+              "line": 6.0,
+              "odds": -110.0,
+              "model_raw": 0.5613,
+              "model_prob": 0.5307,
+              "market_prob": 0.5,
+              "fair_odds": -113,
+              "edge": 0.0307,
+              "edge_at_price": 0.0069,
+              "ev": 0.0127,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SAC +6: 56.1% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start."
             }
           }
         },
@@ -247,6 +974,210 @@
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
               "next_step": "Pass. Only interesting at +123 or better."
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "ORL -6.5",
+              "side": "away",
+              "line": -6.5,
+              "odds": -105.0,
+              "model_raw": 0.4248,
+              "model_prob": 0.457,
+              "market_prob": 0.4892,
+              "fair_odds": 119,
+              "edge": -0.0322,
+              "edge_at_price": -0.0552,
+              "ev": -0.1078,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6.5 covers 42.5% vs market 48.8%.",
+                "Projected margin SAC -4.1 vs line SAC +6.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (-5.5 -> -6.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +123 or better."
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "ORL -5.5",
+              "side": "away",
+              "line": -5.5,
+              "odds": -115.0,
+              "model_raw": 0.4564,
+              "model_prob": 0.4825,
+              "market_prob": 0.5085,
+              "fair_odds": 107,
+              "edge": -0.0261,
+              "edge_at_price": -0.0524,
+              "ev": -0.098,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -5.5: 45.6% before shrink, this book's no-vig 50.9%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +111 or better."
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "ORL -6",
+              "side": "away",
+              "line": -6.0,
+              "odds": -115.0,
+              "model_raw": 0.4387,
+              "model_prob": 0.4747,
+              "market_prob": 0.5108,
+              "fair_odds": 111,
+              "edge": -0.0361,
+              "edge_at_price": -0.0601,
+              "ev": -0.1089,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6: 43.9% before shrink, this book's no-vig 51.1%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +115 or better."
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "ORL -6",
+              "side": "away",
+              "line": -6.0,
+              "odds": -111.0,
+              "model_raw": 0.4387,
+              "model_prob": 0.4751,
+              "market_prob": 0.5115,
+              "fair_odds": 111,
+              "edge": -0.0364,
+              "edge_at_price": -0.051,
+              "ev": -0.0939,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6: 43.9% before shrink, this book's no-vig 51.1%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +115 or better."
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "ORL -6.5",
+              "side": "away",
+              "line": -6.5,
+              "odds": -105.0,
+              "model_raw": 0.4248,
+              "model_prob": 0.457,
+              "market_prob": 0.4892,
+              "fair_odds": 119,
+              "edge": -0.0322,
+              "edge_at_price": -0.0552,
+              "ev": -0.1078,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6.5 covers 42.5% vs market 48.8%.",
+                "Projected margin SAC -4.1 vs line SAC +6.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (-5.5 -> -6.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +123 or better."
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "ORL -6",
+              "side": "away",
+              "line": -6.0,
+              "odds": -110.0,
+              "model_raw": 0.4387,
+              "model_prob": 0.4693,
+              "market_prob": 0.5,
+              "fair_odds": 113,
+              "edge": -0.0307,
+              "edge_at_price": -0.0545,
+              "ev": -0.1007,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6: 43.9% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +117 or better."
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "ORL -6",
+              "side": "away",
+              "line": -6.0,
+              "odds": -110.0,
+              "model_raw": 0.4387,
+              "model_prob": 0.4693,
+              "market_prob": 0.5,
+              "fair_odds": 113,
+              "edge": -0.0307,
+              "edge_at_price": -0.0545,
+              "ev": -0.1007,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6: 43.9% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +117 or better."
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "ORL -6",
+              "side": "away",
+              "line": -6.0,
+              "odds": -110.0,
+              "model_raw": 0.4387,
+              "model_prob": 0.4693,
+              "market_prob": 0.5,
+              "fair_odds": 113,
+              "edge": -0.0307,
+              "edge_at_price": -0.0545,
+              "ev": -0.1007,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ORL -6: 43.9% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +117 or better."
             }
           }
         }
@@ -284,6 +1215,212 @@
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Monitor only; if anything, wait for -112 or better and re-check injuries near start."
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Over 222.5",
+              "side": "over",
+              "line": 222.5,
+              "odds": -110.0,
+              "model_raw": 0.5836,
+              "model_prob": 0.5334,
+              "market_prob": 0.5,
+              "fair_odds": -114,
+              "edge": 0.0334,
+              "edge_at_price": 0.0096,
+              "ev": 0.0184,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 222.5: 58.4% vs market 51.0%.",
+                "Projected total 226.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 221.5 -> 222.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward over (221.5 -> 222.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Monitor only; if anything, wait for -110 or better and re-check injuries near start."
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -114.0,
+              "model_raw": 0.5618,
+              "model_prob": 0.5286,
+              "market_prob": 0.5064,
+              "fair_odds": -112,
+              "edge": 0.0222,
+              "edge_at_price": -0.0041,
+              "ev": -0.0078,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Over 223.5: 56.2% before shrink, this book's no-vig 50.6%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at -108 or better."
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 222.5",
+              "side": "over",
+              "line": 222.5,
+              "odds": -110.0,
+              "model_raw": 0.5836,
+              "model_prob": 0.5334,
+              "market_prob": 0.5,
+              "fair_odds": -114,
+              "edge": 0.0334,
+              "edge_at_price": 0.0096,
+              "ev": 0.0184,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 222.5: 58.4% vs market 51.0%.",
+                "Projected total 226.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 221.5 -> 222.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward over (221.5 -> 222.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Monitor only; if anything, wait for -110 or better and re-check injuries near start."
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 222.5",
+              "side": "over",
+              "line": 222.5,
+              "odds": -107.0,
+              "model_raw": 0.5836,
+              "model_prob": 0.5334,
+              "market_prob": 0.5,
+              "fair_odds": -114,
+              "edge": 0.0334,
+              "edge_at_price": 0.0165,
+              "ev": 0.032,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 222.5: 58.4% vs market 51.0%.",
+                "Projected total 226.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 221.5 -> 222.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward over (221.5 -> 222.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Playable at -110 or better (current -107); re-check injuries/line 60 min before start."
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -105.0,
+              "model_raw": 0.5618,
+              "model_prob": 0.5182,
+              "market_prob": 0.4892,
+              "fair_odds": -108,
+              "edge": 0.0291,
+              "edge_at_price": 0.006,
+              "ev": 0.0118,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Over 223.5: 56.2% before shrink, this book's no-vig 48.9%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -103 or better and re-check injuries near start."
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -110.0,
+              "model_raw": 0.5618,
+              "model_prob": 0.5247,
+              "market_prob": 0.5,
+              "fair_odds": -110,
+              "edge": 0.0247,
+              "edge_at_price": 0.0009,
+              "ev": 0.0017,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Over 223.5: 56.2% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -106 or better and re-check injuries near start."
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Over 223",
+              "side": "over",
+              "line": 223.0,
+              "odds": -110.0,
+              "model_raw": 0.5743,
+              "model_prob": 0.5297,
+              "market_prob": 0.5,
+              "fair_odds": -113,
+              "edge": 0.0297,
+              "edge_at_price": 0.0059,
+              "ev": 0.0111,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Over 223: 57.4% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start."
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Over 223",
+              "side": "over",
+              "line": 223.0,
+              "odds": -110.0,
+              "model_raw": 0.5743,
+              "model_prob": 0.5297,
+              "market_prob": 0.5,
+              "fair_odds": -113,
+              "edge": 0.0297,
+              "edge_at_price": 0.0059,
+              "ev": 0.0111,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Over 223: 57.4% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start."
             }
           }
         },
@@ -316,6 +1453,212 @@
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +121 or better."
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 222.5",
+              "side": "under",
+              "line": 222.5,
+              "odds": -110.0,
+              "model_raw": 0.4164,
+              "model_prob": 0.4666,
+              "market_prob": 0.5,
+              "fair_odds": 114,
+              "edge": -0.0334,
+              "edge_at_price": -0.0572,
+              "ev": -0.1093,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 222.5: 41.6% vs market 49.0%.",
+                "Projected total 226.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 221.5 -> 222.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the under (221.5 -> 222.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +119 or better."
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -108.0,
+              "model_raw": 0.4382,
+              "model_prob": 0.4714,
+              "market_prob": 0.4936,
+              "fair_odds": 112,
+              "edge": -0.0222,
+              "edge_at_price": -0.0478,
+              "ev": -0.0921,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Under 223.5: 43.8% before shrink, this book's no-vig 49.4%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +116 or better."
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 222.5",
+              "side": "under",
+              "line": 222.5,
+              "odds": -110.0,
+              "model_raw": 0.4164,
+              "model_prob": 0.4666,
+              "market_prob": 0.5,
+              "fair_odds": 114,
+              "edge": -0.0334,
+              "edge_at_price": -0.0572,
+              "ev": -0.1093,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 222.5: 41.6% vs market 49.0%.",
+                "Projected total 226.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 221.5 -> 222.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the under (221.5 -> 222.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +119 or better."
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 222.5",
+              "side": "under",
+              "line": 222.5,
+              "odds": -107.0,
+              "model_raw": 0.4164,
+              "model_prob": 0.4666,
+              "market_prob": 0.5,
+              "fair_odds": 114,
+              "edge": -0.0334,
+              "edge_at_price": -0.0503,
+              "ev": -0.0974,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 222.5: 41.6% vs market 49.0%.",
+                "Projected total 226.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 221.5 -> 222.5.",
+                "ORL L5 WLLLL (MOV -9.2), SAC L5 LWLLL (MOV -13.3)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the under (221.5 -> 222.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +119 or better."
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -115.0,
+              "model_raw": 0.4382,
+              "model_prob": 0.4818,
+              "market_prob": 0.5108,
+              "fair_odds": 108,
+              "edge": -0.0291,
+              "edge_at_price": -0.0531,
+              "ev": -0.0993,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Under 223.5: 43.8% before shrink, this book's no-vig 51.1%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +112 or better."
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -110.0,
+              "model_raw": 0.4382,
+              "model_prob": 0.4753,
+              "market_prob": 0.5,
+              "fair_odds": 110,
+              "edge": -0.0247,
+              "edge_at_price": -0.0485,
+              "ev": -0.0927,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Under 223.5: 43.8% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +115 or better."
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Under 223",
+              "side": "under",
+              "line": 223.0,
+              "odds": -110.0,
+              "model_raw": 0.4257,
+              "model_prob": 0.4703,
+              "market_prob": 0.5,
+              "fair_odds": 113,
+              "edge": -0.0297,
+              "edge_at_price": -0.0535,
+              "ev": -0.1,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Under 223: 42.6% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +117 or better."
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Under 223",
+              "side": "under",
+              "line": 223.0,
+              "odds": -110.0,
+              "model_raw": 0.4257,
+              "model_prob": 0.4703,
+              "market_prob": 0.5,
+              "fair_odds": 113,
+              "edge": -0.0297,
+              "edge_at_price": -0.0535,
+              "ev": -0.1,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model Under 223: 42.6% before shrink, this book's no-vig 50.0%.",
+                "Projected margin SAC -4.1, total 226.3.",
+                "ORL L5 WLLLL, SAC L5 LWLLL."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
+              "next_step": "Pass. Only interesting at +117 or better."
             }
           }
         }

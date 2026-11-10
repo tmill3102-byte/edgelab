@@ -23,7 +23,7 @@
     "id": "248"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,62 +33,43 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": 310.0,
-      "ml_away": -395.0,
-      "spread_home": 10.5,
-      "spread_home_odds": -112.0,
       "spread_away": -10.5,
       "spread_away_odds": -108.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -112.0,
+      "ml_away": -395.0,
+      "ml_home": 310.0,
       "total": 50.5,
       "over_odds": -118.0,
       "under_odds": -102.0
     }
   },
-  "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "badge": {
+    "tier": "Medium",
+    "edge": 0.0351,
+    "selection": "HOU -10.5",
+    "market": "Spread",
+    "book": "draftkings"
+  },
+  "model_summary": "Projected margin COLO -13.9 \u00b7 total 51.8",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: COLO 17.0% (implied margin -15.3); blended 50/50 with own rating."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 LLLWL",
+    "away": "L5 WWWLW"
+  },
   "markets": [
     {
       "market": "ML",
       "sides": [
-        {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "COLO ML",
-              "side": "home",
-              "line": null,
-              "odds": 310.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
         {
           "side": "away",
           "offers": {
@@ -98,26 +79,58 @@
               "side": "away",
               "line": null,
               "odds": -395.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.807,
+              "model_prob": 0.7823,
+              "market_prob": 0.7659,
+              "fair_odds": -359,
+              "edge": 0.0164,
+              "edge_at_price": -0.0156,
+              "ev": -0.0196,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model HOU win 80.7% vs market no-vig 76.6%.",
+                "Projected margin COLO -13.9 (ratings COLO -6.8, HOU +8.1, HFA 2.5).",
+                "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
+              "caution": [],
+              "case_against": "Market makes HOU 77%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -329 or better."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "COLO ML",
+              "side": "home",
+              "line": null,
+              "odds": 310.0,
+              "model_raw": 0.193,
+              "model_prob": 0.2177,
+              "market_prob": 0.2341,
+              "fair_odds": 359,
+              "edge": -0.0164,
+              "edge_at_price": -0.0262,
+              "ev": -0.1076,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model COLO win 19.3% vs market no-vig 23.4%.",
+                "Projected margin COLO -13.9 (ratings COLO -6.8, HOU +8.1, HFA 2.5).",
+                "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Market makes COLO 23%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +369 or better."
             }
           }
         }
@@ -127,38 +140,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "COLO +10.5",
-              "side": "home",
-              "line": 10.5,
-              "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
-        {
           "side": "away",
           "offers": {
             "draftkings": {
@@ -167,26 +148,58 @@
               "side": "away",
               "line": -10.5,
               "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5834,
+              "model_prob": 0.5308,
+              "market_prob": 0.4957,
+              "fair_odds": -113,
+              "edge": 0.0351,
+              "edge_at_price": 0.0115,
+              "ev": 0.0222,
+              "tier": "Medium",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model HOU -10.5 covers 58.3% vs market 49.6%.",
+                "Projected margin COLO -13.9 vs line COLO +10.5.",
+                "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Playable at -109 or better (current -108); re-check injuries/line 60 min before start."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "COLO +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -112.0,
+              "model_raw": 0.4166,
+              "model_prob": 0.4692,
+              "market_prob": 0.5043,
+              "fair_odds": 113,
+              "edge": -0.0351,
+              "edge_at_price": -0.0591,
+              "ev": -0.1118,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model COLO +10.5 covers 41.7% vs market 50.4%.",
+                "Projected margin COLO -13.9 vs line COLO +10.5.",
+                "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +117 or better."
             }
           }
         }
@@ -204,26 +217,28 @@
               "side": "over",
               "line": 50.5,
               "odds": -118.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5324,
+              "model_prob": 0.5222,
+              "market_prob": 0.5174,
+              "fair_odds": -109,
+              "edge": 0.0048,
+              "edge_at_price": -0.0191,
+              "ev": -0.0353,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 50.5: 53.2% vs market 51.7%.",
+                "Projected total 51.8 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 47.5 -> 50.5.",
+                "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward over (47.5 -> 50.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -105 or better."
             }
           }
         },
@@ -236,26 +251,28 @@
               "side": "under",
               "line": 50.5,
               "odds": -102.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4676,
+              "model_prob": 0.4778,
+              "market_prob": 0.4826,
+              "fair_odds": 109,
+              "edge": -0.0048,
+              "edge_at_price": -0.0271,
+              "ev": -0.0537,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 50.5: 46.8% vs market 48.3%.",
+                "Projected total 51.8 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 47.5 -> 50.5.",
+                "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the under (47.5 -> 50.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +113 or better."
             }
           }
         }

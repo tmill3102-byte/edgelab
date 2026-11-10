@@ -23,7 +23,7 @@
     "id": "16"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,62 +33,37 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -1050.0,
       "ml_away": 675.0,
-      "spread_home": -18.5,
-      "spread_home_odds": -105.0,
-      "spread_away": 18.5,
-      "spread_away_odds": -115.0,
+      "ml_home": -1050.0,
       "total": 43.5,
       "over_odds": -115.0,
-      "under_odds": -105.0
+      "under_odds": -105.0,
+      "spread_away": 18.5,
+      "spread_away_odds": -115.0,
+      "spread_home": -18.5,
+      "spread_home_odds": -105.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Projected margin CMU +17.1 \u00b7 total 45.4",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: CMU 92.8% (implied margin +23.4); blended 50/50 with own rating."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WLLLW",
+    "away": "L5 LLLWL"
+  },
   "markets": [
     {
       "market": "ML",
       "sides": [
-        {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "CMU ML",
-              "side": "home",
-              "line": null,
-              "odds": -1050.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
         {
           "side": "away",
           "offers": {
@@ -98,26 +73,60 @@
               "side": "away",
               "line": null,
               "odds": 675.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.1431,
+              "model_prob": 0.1315,
+              "market_prob": 0.1238,
+              "fair_odds": 660,
+              "edge": 0.0077,
+              "edge_at_price": 0.0025,
+              "ev": 0.0194,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model SAC win 14.3% vs market no-vig 12.4%.",
+                "Projected margin CMU +17.1 (ratings CMU -0.8, SAC -9.1, HFA 2.5).",
+                "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: price drifted against this side (+525 -> +675)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Market makes SAC 12%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +676 or better and re-check injuries near start."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "CMU ML",
+              "side": "home",
+              "line": null,
+              "odds": -1050.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8685,
+              "market_prob": 0.8762,
+              "fair_odds": -660,
+              "edge": -0.0077,
+              "edge_at_price": -0.0446,
+              "ev": -0.0488,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model CMU win 85.7% vs market no-vig 87.6%.",
+                "Projected margin CMU +17.1 (ratings CMU -0.8, SAC -9.1, HFA 2.5).",
+                "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)"
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Market makes CMU 88%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -573 or better."
             }
           }
         }
@@ -127,38 +136,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "CMU -18.5",
-              "side": "home",
-              "line": -18.5,
-              "odds": -105.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
-        {
           "side": "away",
           "offers": {
             "draftkings": {
@@ -167,26 +144,60 @@
               "side": "away",
               "line": 18.5,
               "odds": -115.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5359,
+              "model_prob": 0.5208,
+              "market_prob": 0.5108,
+              "fair_odds": -109,
+              "edge": 0.01,
+              "edge_at_price": -0.014,
+              "ev": -0.0262,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model SAC +18.5 covers 53.6% vs market 51.1%.",
+                "Projected margin CMU +17.1 vs line CMU -18.5.",
+                "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -104 or better."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CMU -18.5",
+              "side": "home",
+              "line": -18.5,
+              "odds": -105.0,
+              "model_raw": 0.4641,
+              "model_prob": 0.4792,
+              "market_prob": 0.4892,
+              "fair_odds": 109,
+              "edge": -0.01,
+              "edge_at_price": -0.033,
+              "ev": -0.0645,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model CMU -18.5 covers 46.4% vs market 48.9%.",
+                "Projected margin CMU +17.1 vs line CMU -18.5.",
+                "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)"
+              ],
+              "flags": [
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-15.5 -> -18.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +113 or better."
             }
           }
         }
@@ -204,26 +215,28 @@
               "side": "over",
               "line": 43.5,
               "odds": -115.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5473,
+              "model_prob": 0.5225,
+              "market_prob": 0.5108,
+              "fair_odds": -109,
+              "edge": 0.0117,
+              "edge_at_price": -0.0124,
+              "ev": -0.0232,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 43.5: 54.7% vs market 51.1%.",
+                "Projected total 45.4 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 44.5 -> 43.5.",
+                "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (44.5 -> 43.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -105 or better."
             }
           }
         },
@@ -236,26 +249,28 @@
               "side": "under",
               "line": 43.5,
               "odds": -105.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4527,
+              "model_prob": 0.4775,
+              "market_prob": 0.4892,
+              "fair_odds": 109,
+              "edge": -0.0117,
+              "edge_at_price": -0.0347,
+              "ev": -0.0677,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 43.5: 45.3% vs market 48.9%.",
+                "Projected total 45.4 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 44.5 -> 43.5.",
+                "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (44.5 -> 43.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +114 or better."
             }
           }
         }

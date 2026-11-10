@@ -23,7 +23,7 @@
     "id": "77"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,62 +33,37 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -470.0,
-      "ml_away": 360.0,
-      "spread_home": -12.5,
-      "spread_home_odds": -108.0,
-      "spread_away": 12.5,
-      "spread_away_odds": -112.0,
       "total": 45.5,
       "over_odds": -110.0,
-      "under_odds": -110.0
+      "under_odds": -110.0,
+      "ml_away": 360.0,
+      "ml_home": -470.0,
+      "spread_away": 12.5,
+      "spread_away_odds": -112.0,
+      "spread_home": -12.5,
+      "spread_home_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Projected margin OSU +10.8 \u00b7 total 51.9",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: OSU 85.5% (implied margin +16.9); blended 50/50 with own rating."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WWWLL",
+    "away": "L5 WWWLL"
+  },
   "markets": [
     {
       "market": "ML",
       "sides": [
-        {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "OSU ML",
-              "side": "home",
-              "line": null,
-              "odds": -470.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
         {
           "side": "away",
           "offers": {
@@ -98,26 +73,60 @@
               "side": "away",
               "line": null,
               "odds": 360.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.2503,
+              "model_prob": 0.2253,
+              "market_prob": 0.2086,
+              "fair_odds": 344,
+              "edge": 0.0167,
+              "edge_at_price": 0.0079,
+              "ev": 0.0364,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model NU win 25.0% vs market no-vig 20.9%.",
+                "Projected margin OSU +10.8 (ratings OSU +9.4, NU +7.3, HFA 2.5).",
+                "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: price drifted against this side (+295 -> +360)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Market makes NU 21%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +353 or better and re-check injuries near start."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "OSU ML",
+              "side": "home",
+              "line": null,
+              "odds": -470.0,
+              "model_raw": 0.7497,
+              "model_prob": 0.7747,
+              "market_prob": 0.7914,
+              "fair_odds": -344,
+              "edge": -0.0167,
+              "edge_at_price": -0.0499,
+              "ev": -0.0605,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model OSU win 75.0% vs market no-vig 79.1%.",
+                "Projected margin OSU +10.8 (ratings OSU +9.4, NU +7.3, HFA 2.5).",
+                "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)"
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Market makes OSU 79%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -316 or better."
             }
           }
         }
@@ -127,38 +136,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "OSU -12.5",
-              "side": "home",
-              "line": -12.5,
-              "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
-              "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
-              ],
-              "flags": [
-                "!not modeled this refresh"
-              ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
-            }
-          }
-        },
-        {
           "side": "away",
           "offers": {
             "draftkings": {
@@ -167,26 +144,60 @@
               "side": "away",
               "line": 12.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5428,
+              "model_prob": 0.5197,
+              "market_prob": 0.5043,
+              "fair_odds": -108,
+              "edge": 0.0154,
+              "edge_at_price": -0.0086,
+              "ev": -0.0162,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model NU +12.5 covers 54.3% vs market 50.4%.",
+                "Projected margin OSU +10.8 vs line OSU -12.5.",
+                "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -104 or better."
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "OSU -12.5",
+              "side": "home",
+              "line": -12.5,
+              "odds": -108.0,
+              "model_raw": 0.4572,
+              "model_prob": 0.4803,
+              "market_prob": 0.4957,
+              "fair_odds": 108,
+              "edge": -0.0154,
+              "edge_at_price": -0.039,
+              "ev": -0.075,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model OSU -12.5 covers 45.7% vs market 49.6%.",
+                "Projected margin OSU +10.8 vs line OSU -12.5.",
+                "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)"
+              ],
+              "flags": [
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-9.5 -> -12.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +112 or better."
             }
           }
         }
@@ -204,26 +215,30 @@
               "side": "over",
               "line": 45.5,
               "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.6554,
+              "model_prob": 0.5497,
+              "market_prob": 0.5,
+              "fair_odds": -122,
+              "edge": 0.0497,
+              "edge_at_price": 0.0259,
+              "ev": 0.0495,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 45.5: 65.5% vs market 50.0%.",
+                "Projected total 51.9 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 48.5 -> 45.5.",
+                "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (48.5 -> 45.5)",
+                "model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+                "downgraded Medium -> Low"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Monitor only; if anything, wait for -117 or better and re-check injuries near start."
             }
           }
         },
@@ -236,26 +251,29 @@
               "side": "under",
               "line": 45.5,
               "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.3446,
+              "model_prob": 0.4503,
+              "market_prob": 0.5,
+              "fair_odds": 122,
+              "edge": -0.0497,
+              "edge_at_price": -0.0735,
+              "ev": -0.1404,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 45.5: 34.5% vs market 50.0%.",
+                "Projected total 51.9 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 48.5 -> 45.5.",
+                "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)"
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (48.5 -> 45.5); value may be gone",
+                "model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +127 or better."
             }
           }
         }
