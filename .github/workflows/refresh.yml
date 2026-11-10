@@ -1,0 +1,76 @@
+name: refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 8am, 11am, 2pm, 5pm, 8pm, 11pm Eastern Standard Time (UTC-5).
+    # In summer (EDT, UTC-4) this shifts one hour later. GitHub cron is UTC
+    # and only runs from the default branch.
+    - cron: "0 1,4,13,16,19,22 * * *"
+  push:
+    branches:
+      - "cursor/**"
+      - main
+    paths-ignore:
+      - "site/data/**"
+      - "betting/tracker.db"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: edgelab-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Verify Odds API key
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/verify_odds.py
+      - name: Publish data
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          # Props spend extra credits. Scheduled runs may take one event.
+          # Push and manual runs keep the single featured-odds call from verify.
+          ODDS_API_PROPS: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: python scripts/publish.py
+      - name: Commit data
+        run: |
+          git config user.name "EdgeLab refresh"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data betting/tracker.db
+          if git diff --staged --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "Refresh EdgeLab data"
+            git push
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: refresh
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
