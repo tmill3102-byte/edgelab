@@ -286,29 +286,29 @@
         "selection": "Over 41.5",
         "side": "over",
         "line": 41.5,
-        "odds": -110.0,
+        "odds": -105.0,
         "model_raw": 0.6222,
-        "model_prob": 0.5,
-        "market_prob": 0.5,
-        "fair_odds": 100,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
         "edge": 0.0,
-        "edge_at_price": -0.0238,
-        "ev": -0.0455,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
         "tier": "Low",
         "data_quality": "High",
         "reasons": [
-          "Model over 41.5: 62.2% vs market 50.0%.",
+          "Model over 41.5: 62.2% vs market 48.9%.",
           "Projected total 45.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 41.5.",
           "WSH L5 LDLWL (MOV -3.8), NYG L5 WDLWW (MOV 1.2)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-          "Note: model far from market (62% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+          "Note: model far from market (62% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
         ],
         "flags": [],
         "caution": [
           "line move: market moved against the over (47.5 -> 41.5)"
         ],
         "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-        "next_step": "Pass. Only interesting at +104 or better.",
+        "next_step": "Pass. Only interesting at +109 or better.",
         "proven": false
       }
     },
@@ -351,29 +351,29 @@
         "selection": "Under 41.5",
         "side": "under",
         "line": 41.5,
-        "odds": -110.0,
+        "odds": -115.0,
         "model_raw": 0.3778,
-        "model_prob": 0.5,
-        "market_prob": 0.5,
-        "fair_odds": 100,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
         "edge": 0.0,
-        "edge_at_price": -0.0238,
-        "ev": -0.0455,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
         "tier": "Low",
         "data_quality": "High",
         "reasons": [
-          "Model under 41.5: 37.8% vs market 50.0%.",
+          "Model under 41.5: 37.8% vs market 51.1%.",
           "Projected total 45.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 41.5.",
           "WSH L5 LDLWL (MOV -3.8), NYG L5 WDLWW (MOV 1.2)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-          "Note: model far from market (38% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+          "Note: model far from market (38% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
         ],
         "flags": [],
         "caution": [
           "line move: total already moved toward under (47.5 -> 41.5); value may be gone"
         ],
         "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-        "next_step": "Pass. Only interesting at +104 or better.",
+        "next_step": "Pass. Only interesting at -100 or better.",
         "proven": false
       }
     },
@@ -430,6 +430,7 @@
           "Model DET win 52.0% vs market no-vig 57.2%.",
           "v2 projected margin DET +0.7 (ratings DET +2.9, NE +2.2, home edge 0.0); raw model 52.0%.",
           "NE L5 WWLWL (MOV 0.4), DET L5 LWWWW (MOV 4.1)",
+          "NE key player(s) out: Rhamondre Stevenson (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
@@ -494,12 +495,14 @@
           "Model NE win 48.0% vs market no-vig 42.8%.",
           "v2 projected margin DET +0.7 (ratings DET +2.9, NE +2.2, home edge 0.0); raw model 48.0%.",
           "NE L5 WWLWL (MOV 0.4), DET L5 LWWWW (MOV 4.1)",
+          "NE key player(s) out: Rhamondre Stevenson (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
         "caution": [
-          "injury news: key player status uncertain - Rhamondre Stevenson (Questionable)",
-          "line move: price drifted against this side (+105 -> +124)"
+          "injury news: key player status uncertain - Rhamondre Stevenson (Doubtful)",
+          "line move: price drifted against this side (+105 -> +124)",
+          "injury: Rhamondre Stevenson out for this side and the rating doesn't know it"
         ],
         "case_against": "Market makes NE 43%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
         "next_step": "Pass. Only interesting at +138 or better.",
@@ -559,6 +562,7 @@
           "Model DET -2.5 covers 44.6% vs market 52.2%.",
           "Projected margin DET +0.7 vs line DET -2.5.",
           "NE L5 WWLWL (MOV 0.4), DET L5 LWWWW (MOV 4.1)",
+          "NE key player(s) out: Rhamondre Stevenson (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
@@ -624,11 +628,13 @@
           "Model NE +2.5 covers 55.4% vs market 47.8%.",
           "Projected margin DET +0.7 vs line DET -2.5.",
           "NE L5 WWLWL (MOV 0.4), DET L5 LWWWW (MOV 4.1)",
+          "NE key player(s) out: Rhamondre Stevenson (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
         "caution": [
-          "injury news: key player status uncertain - Rhamondre Stevenson (Questionable)"
+          "injury news: key player status uncertain - Rhamondre Stevenson (Doubtful)",
+          "injury: Rhamondre Stevenson out for this side and the rating doesn't know it"
         ],
         "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
         "next_step": "Pass. Only interesting at +113 or better.",
@@ -1959,13 +1965,12 @@
           "Model TEN win 14.3% vs market no-vig 17.3%.",
           "v2 projected margin TEN -14.4 (ratings TEN -7.0, JAX +8.9, home edge 1.5); raw model 14.3%.",
           "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-          "TEN key player(s) out: Carnell Tate (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
         "caution": [
-          "line move: price drifted against this side (+114 -> +455)",
-          "injury: Carnell Tate out for this side and the rating doesn't know it"
+          "injury news: key player status uncertain - Carnell Tate (Questionable)",
+          "line move: price drifted against this side (+114 -> +455)"
         ],
         "case_against": "Market makes TEN 17%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
         "next_step": "Pass. Only interesting at +490 or better.",
@@ -2025,7 +2030,6 @@
           "Model JAX win 85.7% vs market no-vig 82.7%.",
           "v2 projected margin TEN -14.4 (ratings TEN -7.0, JAX +8.9, home edge 1.5); raw model 85.7%.",
           "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-          "TEN key player(s) out: Carnell Tate (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
@@ -2088,12 +2092,11 @@
           "Model TEN +10.5 covers 38.6% vs market 50.4%.",
           "Projected margin TEN -14.4 vs line TEN +10.5.",
           "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-          "TEN key player(s) out: Carnell Tate (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
         "caution": [
-          "injury: Carnell Tate out for this side and the rating doesn't know it"
+          "injury news: key player status uncertain - Carnell Tate (Questionable)"
         ],
         "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
         "next_step": "Pass. Only interesting at +102 or better.",
@@ -2153,7 +2156,6 @@
           "Model JAX -10.5 covers 61.4% vs market 49.6%.",
           "Projected margin TEN -14.4 vs line TEN +10.5.",
           "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-          "TEN key player(s) out: Carnell Tate (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
@@ -2346,13 +2348,12 @@
           "Model IND win 60.4% vs market no-vig 55.1%.",
           "v2 projected margin IND +3.6 (ratings IND -4.1, MIA -6.2, home edge 1.5); raw model 60.4%.",
           "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-          "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
         "caution": [
-          "line move: price drifted against this side (-290 -> -135)",
-          "injury: Akeem Davis-Gaither out for this side and the rating doesn't know it"
+          "injury news: key player status uncertain - Akeem Davis-Gaither (Questionable)",
+          "line move: price drifted against this side (-290 -> -135)"
         ],
         "case_against": "Market makes IND 55%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
         "next_step": "Pass. Only interesting at -118 or better.",
@@ -2412,7 +2413,6 @@
           "Model MIA win 39.6% vs market no-vig 44.9%.",
           "v2 projected margin IND +3.6 (ratings IND -4.1, MIA -6.2, home edge 1.5); raw model 39.6%.",
           "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-          "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
@@ -2477,12 +2477,11 @@
           "Model IND -2.5 covers 53.1% vs market 50.0%.",
           "Projected margin IND +3.6 vs line IND -2.5.",
           "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-          "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
         "caution": [
-          "injury: Akeem Davis-Gaither out for this side and the rating doesn't know it"
+          "injury news: key player status uncertain - Akeem Davis-Gaither (Questionable)"
         ],
         "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
         "next_step": "Pass. Only interesting at +104 or better.",
@@ -2542,7 +2541,6 @@
           "Model MIA +2.5 covers 46.9% vs market 50.0%.",
           "Projected margin IND +3.6 vs line IND -2.5.",
           "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-          "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
           "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
         ],
         "flags": [],
@@ -12670,18 +12668,18 @@
         "selection": "TOR +1.5",
         "side": "home",
         "line": 1.5,
-        "odds": -180.0,
+        "odds": -175.0,
         "model_raw": 0.6418,
-        "model_prob": 0.6234,
-        "market_prob": 0.6164,
-        "fair_odds": -166,
-        "edge": 0.0069,
-        "edge_at_price": -0.0195,
-        "ev": -0.0303,
+        "model_prob": 0.6181,
+        "market_prob": 0.6092,
+        "fair_odds": -162,
+        "edge": 0.0089,
+        "edge_at_price": -0.0182,
+        "ev": -0.0286,
         "tier": "Low",
         "data_quality": "High",
         "reasons": [
-          "Model TOR +1.5 covers 64.2% vs market 61.6%.",
+          "Model TOR +1.5 covers 64.2% vs market 60.9%.",
           "Projected margin TOR -0.6 vs line TOR +1.5.",
           "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
           "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
@@ -12689,7 +12687,7 @@
         "flags": [],
         "caution": [],
         "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-        "next_step": "Pass. Only interesting at -157 or better.",
+        "next_step": "Pass. Only interesting at -154 or better.",
         "proven": true
       }
     },
@@ -12732,18 +12730,18 @@
         "selection": "COL -1.5",
         "side": "away",
         "line": -1.5,
-        "odds": 150.0,
+        "odds": 145.0,
         "model_raw": 0.3582,
-        "model_prob": 0.3766,
-        "market_prob": 0.3836,
-        "fair_odds": 166,
-        "edge": -0.0069,
-        "edge_at_price": -0.0234,
-        "ev": -0.0584,
+        "model_prob": 0.3819,
+        "market_prob": 0.3908,
+        "fair_odds": 162,
+        "edge": -0.0089,
+        "edge_at_price": -0.0263,
+        "ev": -0.0644,
         "tier": "Low",
         "data_quality": "High",
         "reasons": [
-          "Model COL -1.5 covers 35.8% vs market 38.4%.",
+          "Model COL -1.5 covers 35.8% vs market 39.1%.",
           "Projected margin TOR -0.6 vs line TOR +1.5.",
           "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
           "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
@@ -12751,7 +12749,7 @@
         "flags": [],
         "caution": [],
         "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-        "next_step": "Pass. Only interesting at +171 or better.",
+        "next_step": "Pass. Only interesting at +167 or better.",
         "proven": true
       }
     },
@@ -12794,18 +12792,18 @@
         "selection": "Over 6.5",
         "side": "over",
         "line": 6.5,
-        "odds": -115.0,
+        "odds": -118.0,
         "model_raw": 0.4457,
-        "model_prob": 0.5108,
-        "market_prob": 0.5108,
-        "fair_odds": -104,
-        "edge": 0.0,
-        "edge_at_price": -0.024,
-        "ev": -0.045,
+        "model_prob": 0.5174,
+        "market_prob": 0.5174,
+        "fair_odds": -107,
+        "edge": -0.0,
+        "edge_at_price": -0.0239,
+        "ev": -0.0442,
         "tier": "Low",
         "data_quality": "High",
         "reasons": [
-          "Model over 6.5: 44.6% vs market 51.1%.",
+          "Model over 6.5: 44.6% vs market 51.7%.",
           "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
           "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
           "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -12813,7 +12811,7 @@
         "flags": [],
         "caution": [],
         "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-        "next_step": "Pass. Only interesting at -100 or better.",
+        "next_step": "Pass. Only interesting at -103 or better.",
         "proven": false
       }
     },
@@ -12856,18 +12854,18 @@
         "selection": "Under 6.5",
         "side": "under",
         "line": 6.5,
-        "odds": -105.0,
+        "odds": -102.0,
         "model_raw": 0.5543,
-        "model_prob": 0.4892,
-        "market_prob": 0.4892,
-        "fair_odds": 104,
+        "model_prob": 0.4826,
+        "market_prob": 0.4826,
+        "fair_odds": 107,
         "edge": 0.0,
-        "edge_at_price": -0.023,
-        "ev": -0.045,
+        "edge_at_price": -0.0223,
+        "ev": -0.0442,
         "tier": "Low",
         "data_quality": "High",
         "reasons": [
-          "Model under 6.5: 55.4% vs market 48.9%.",
+          "Model under 6.5: 55.4% vs market 48.3%.",
           "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
           "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
           "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -12875,7 +12873,7 @@
         "flags": [],
         "caution": [],
         "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-        "next_step": "Pass. Only interesting at +109 or better.",
+        "next_step": "Pass. Only interesting at +111 or better.",
         "proven": false
       }
     },
@@ -15282,18 +15280,18 @@
         "selection": "AKR +15.5",
         "side": "home",
         "line": 15.5,
-        "odds": -112.0,
+        "odds": -108.0,
         "model_raw": 0.4684,
-        "model_prob": 0.5043,
-        "market_prob": 0.5043,
-        "fair_odds": -102,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
         "edge": 0.0,
-        "edge_at_price": -0.024,
+        "edge_at_price": -0.0236,
         "ev": -0.0454,
         "tier": "Low",
         "data_quality": "Medium",
         "reasons": [
-          "Model AKR +15.5 covers 46.8% vs market 50.4%.",
+          "Model AKR +15.5 covers 46.8% vs market 49.6%.",
           "Projected margin AKR -16.7 vs line AKR +15.5.",
           "WMU L5 WWWLW (MOV 7.0), AKR L5 LLLLL (MOV -13.1)",
           "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -15303,7 +15301,7 @@
         ],
         "caution": [],
         "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-        "next_step": "Pass. Only interesting at +102 or better.",
+        "next_step": "Pass. Only interesting at +106 or better.",
         "proven": false
       }
     },
@@ -15346,18 +15344,18 @@
         "selection": "WMU -15.5",
         "side": "away",
         "line": -15.5,
-        "odds": -108.0,
+        "odds": -112.0,
         "model_raw": 0.5316,
-        "model_prob": 0.4957,
-        "market_prob": 0.4957,
-        "fair_odds": 102,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
         "edge": 0.0,
-        "edge_at_price": -0.0236,
+        "edge_at_price": -0.024,
         "ev": -0.0454,
         "tier": "Low",
         "data_quality": "Medium",
         "reasons": [
-          "Model WMU -15.5 covers 53.2% vs market 49.6%.",
+          "Model WMU -15.5 covers 53.2% vs market 50.4%.",
           "Projected margin AKR -16.7 vs line AKR +15.5.",
           "WMU L5 WWWLW (MOV 7.0), AKR L5 LLLLL (MOV -13.1)",
           "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -15369,7 +15367,7 @@
           "line move: spread moved against this side (-13.5 -> -15.5)"
         ],
         "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-        "next_step": "Pass. Only interesting at +106 or better.",
+        "next_step": "Pass. Only interesting at +102 or better.",
         "proven": false
       }
     },
@@ -15544,29 +15542,29 @@
         "selection": "BGSU ML",
         "side": "home",
         "line": null,
-        "odds": -218.0,
+        "odds": -205.0,
         "model_raw": 0.8243,
-        "model_prob": 0.6575,
-        "market_prob": 0.6575,
-        "fair_odds": -192,
+        "model_prob": 0.6447,
+        "market_prob": 0.6447,
+        "fair_odds": -181,
         "edge": 0.0,
-        "edge_at_price": -0.0281,
-        "ev": -0.0409,
+        "edge_at_price": -0.0274,
+        "ev": -0.0408,
         "tier": "Low",
         "data_quality": "Medium",
         "reasons": [
-          "Model BGSU win 82.4% vs market no-vig 65.7%.",
+          "Model BGSU win 82.4% vs market no-vig 64.5%.",
           "v2 projected margin BGSU +14.4 (ratings BGSU -29.6, KENT -40.7, home edge 3.33); raw model 82.4%.",
           "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
           "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-          "Note: model far from market (82% vs 66%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+          "Note: model far from market (82% vs 64%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
         ],
         "flags": [
           "injury report not available for this league"
         ],
         "caution": [],
-        "case_against": "Market makes BGSU 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-        "next_step": "Pass. Only interesting at -181 or better.",
+        "case_against": "Market makes BGSU 64%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -172 or better.",
         "proven": false
       }
     },
@@ -15609,29 +15607,29 @@
         "selection": "KENT ML",
         "side": "away",
         "line": null,
-        "odds": 180.0,
+        "odds": 170.0,
         "model_raw": 0.1757,
-        "model_prob": 0.3425,
-        "market_prob": 0.3425,
-        "fair_odds": 192,
+        "model_prob": 0.3553,
+        "market_prob": 0.3553,
+        "fair_odds": 181,
         "edge": 0.0,
-        "edge_at_price": -0.0146,
-        "ev": -0.0409,
+        "edge_at_price": -0.0151,
+        "ev": -0.0408,
         "tier": "Low",
         "data_quality": "Medium",
         "reasons": [
-          "Model KENT win 17.6% vs market no-vig 34.3%.",
+          "Model KENT win 17.6% vs market no-vig 35.5%.",
           "v2 projected margin BGSU +14.4 (ratings BGSU -29.6, KENT -40.7, home edge 3.33); raw model 17.6%.",
           "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
           "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-          "Note: model far from market (18% vs 34%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+          "Note: model far from market (18% vs 36%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
         ],
         "flags": [
           "injury report not available for this league"
         ],
         "caution": [],
-        "case_against": "Market makes KENT 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-        "next_step": "Pass. Only interesting at +198 or better.",
+        "case_against": "Market makes KENT 36%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +187 or better.",
         "proven": false
       }
     },
@@ -16288,6 +16286,3774 @@
     "team_abbr": null,
     "team_name": null,
     "opponent": "OHIO @ M-OH",
+    "form": null
+  },
+  {
+    "id": "cfb:401866461:ML:home:na",
+    "event_id": "401866461",
+    "league": "cfb",
+    "name": "Buffalo Bulls at Ball State Cardinals",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "BUFF @ BALL",
+    "home_abbr": "BALL",
+    "away_abbr": "BUFF",
+    "home_name": "Ball State Cardinals",
+    "away_name": "Buffalo Bulls",
+    "market": "ML",
+    "side": "home",
+    "selection": "BALL ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964154"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "BALL ML",
+        "side": "home",
+        "line": null,
+        "odds": 114.0,
+        "model_raw": 0.3827,
+        "model_prob": 0.4486,
+        "market_prob": 0.4486,
+        "fair_odds": 123,
+        "edge": -0.0,
+        "edge_at_price": -0.0187,
+        "ev": -0.0401,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model BALL win 38.3% vs market no-vig 44.9%.",
+          "v2 projected margin BALL -4.6 (ratings BALL -32.0, BUFF -24.1, home edge 3.33); raw model 38.3%.",
+          "BUFF L5 LWWWW (MOV -2.1), BALL L5 LLWWL (MOV -11.9)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes BALL 45%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +127 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "BALL",
+    "team_name": "Ball State Cardinals",
+    "opponent": "vs BUFF",
+    "form": "L5 LLWWL"
+  },
+  {
+    "id": "cfb:401866461:ML:away:na",
+    "event_id": "401866461",
+    "league": "cfb",
+    "name": "Buffalo Bulls at Ball State Cardinals",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "BUFF @ BALL",
+    "home_abbr": "BALL",
+    "away_abbr": "BUFF",
+    "home_name": "Ball State Cardinals",
+    "away_name": "Buffalo Bulls",
+    "market": "ML",
+    "side": "away",
+    "selection": "BUFF ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964154"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "BUFF ML",
+        "side": "away",
+        "line": null,
+        "odds": -135.0,
+        "model_raw": 0.6173,
+        "model_prob": 0.5514,
+        "market_prob": 0.5514,
+        "fair_odds": -123,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.0401,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model BUFF win 61.7% vs market no-vig 55.1%.",
+          "v2 projected margin BALL -4.6 (ratings BALL -32.0, BUFF -24.1, home edge 3.33); raw model 61.7%.",
+          "BUFF L5 LWWWW (MOV -2.1), BALL L5 LLWWL (MOV -11.9)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes BUFF 55%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+        "next_step": "Pass. Only interesting at -118 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "BUFF",
+    "team_name": "Buffalo Bulls",
+    "opponent": "@ BALL",
+    "form": "L5 LWWWW"
+  },
+  {
+    "id": "cfb:401866461:Spread:home:2.5",
+    "event_id": "401866461",
+    "league": "cfb",
+    "name": "Buffalo Bulls at Ball State Cardinals",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "BUFF @ BALL",
+    "home_abbr": "BALL",
+    "away_abbr": "BUFF",
+    "home_name": "Ball State Cardinals",
+    "away_name": "Buffalo Bulls",
+    "market": "Spread",
+    "side": "home",
+    "selection": "BALL +2.5",
+    "line": 2.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964154"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "BALL +2.5",
+        "side": "home",
+        "line": 2.5,
+        "odds": -108.0,
+        "model_raw": 0.4455,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model BALL +2.5 covers 44.6% vs market 49.6%.",
+          "Projected margin BALL -4.6 vs line BALL +2.5.",
+          "BUFF L5 LWWWW (MOV -2.1), BALL L5 LLWWL (MOV -11.9)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "BALL",
+    "team_name": "Ball State Cardinals",
+    "opponent": "vs BUFF",
+    "form": "L5 LLWWL"
+  },
+  {
+    "id": "cfb:401866461:Spread:away:-2.5",
+    "event_id": "401866461",
+    "league": "cfb",
+    "name": "Buffalo Bulls at Ball State Cardinals",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "BUFF @ BALL",
+    "home_abbr": "BALL",
+    "away_abbr": "BUFF",
+    "home_name": "Ball State Cardinals",
+    "away_name": "Buffalo Bulls",
+    "market": "Spread",
+    "side": "away",
+    "selection": "BUFF -2.5",
+    "line": -2.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964154"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "BUFF -2.5",
+        "side": "away",
+        "line": -2.5,
+        "odds": -112.0,
+        "model_raw": 0.5545,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model BUFF -2.5 covers 55.4% vs market 50.4%.",
+          "Projected margin BALL -4.6 vs line BALL +2.5.",
+          "BUFF L5 LWWWW (MOV -2.1), BALL L5 LLWWL (MOV -11.9)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "BUFF",
+    "team_name": "Buffalo Bulls",
+    "opponent": "@ BALL",
+    "form": "L5 LWWWW"
+  },
+  {
+    "id": "cfb:401866461:Total:over:51.5",
+    "event_id": "401866461",
+    "league": "cfb",
+    "name": "Buffalo Bulls at Ball State Cardinals",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "BUFF @ BALL",
+    "home_abbr": "BALL",
+    "away_abbr": "BUFF",
+    "home_name": "Ball State Cardinals",
+    "away_name": "Buffalo Bulls",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 51.5",
+    "line": 51.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964154"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 51.5",
+        "side": "over",
+        "line": 51.5,
+        "odds": -105.0,
+        "model_raw": 0.5393,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 51.5: 53.9% vs market 48.9%.",
+          "Projected total 53.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+          "BUFF L5 LWWWW (MOV -2.1), BALL L5 LLWWL (MOV -11.9)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "BUFF @ BALL",
+    "form": null
+  },
+  {
+    "id": "cfb:401866461:Total:under:51.5",
+    "event_id": "401866461",
+    "league": "cfb",
+    "name": "Buffalo Bulls at Ball State Cardinals",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "BUFF @ BALL",
+    "home_abbr": "BALL",
+    "away_abbr": "BUFF",
+    "home_name": "Ball State Cardinals",
+    "away_name": "Buffalo Bulls",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 51.5",
+    "line": 51.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964154"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 51.5",
+        "side": "under",
+        "line": 51.5,
+        "odds": -115.0,
+        "model_raw": 0.4607,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 51.5: 46.1% vs market 51.1%.",
+          "Projected total 53.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+          "BUFF L5 LWWWW (MOV -2.1), BALL L5 LLWWL (MOV -11.9)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "BUFF @ BALL",
+    "form": null
+  },
+  {
+    "id": "cfb:401866462:ML:home:na",
+    "event_id": "401866462",
+    "league": "cfb",
+    "name": "Sacramento State Hornets at Central Michigan Chippewas",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "SAC @ CMU",
+    "home_abbr": "CMU",
+    "away_abbr": "SAC",
+    "home_name": "Central Michigan Chippewas",
+    "away_name": "Sacramento State Hornets",
+    "market": "ML",
+    "side": "home",
+    "selection": "CMU ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964155"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "CMU ML",
+        "side": "home",
+        "line": null,
+        "odds": -1050.0,
+        "model_raw": 0.8594,
+        "model_prob": 0.8762,
+        "market_prob": 0.8762,
+        "fair_odds": -708,
+        "edge": 0.0,
+        "edge_at_price": -0.0369,
+        "ev": -0.0404,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model CMU win 85.9% vs market no-vig 87.6%.",
+          "v2 projected margin CMU +16.7 (ratings CMU -24.0, SAC -37.4, home edge 3.33); raw model 85.9%.",
+          "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes CMU 88%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -609 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "CMU",
+    "team_name": "Central Michigan Chippewas",
+    "opponent": "vs SAC",
+    "form": "L5 WLLLW"
+  },
+  {
+    "id": "cfb:401866462:ML:away:na",
+    "event_id": "401866462",
+    "league": "cfb",
+    "name": "Sacramento State Hornets at Central Michigan Chippewas",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "SAC @ CMU",
+    "home_abbr": "CMU",
+    "away_abbr": "SAC",
+    "home_name": "Central Michigan Chippewas",
+    "away_name": "Sacramento State Hornets",
+    "market": "ML",
+    "side": "away",
+    "selection": "SAC ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964155"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "SAC ML",
+        "side": "away",
+        "line": null,
+        "odds": 675.0,
+        "model_raw": 0.1406,
+        "model_prob": 0.1238,
+        "market_prob": 0.1238,
+        "fair_odds": 708,
+        "edge": 0.0,
+        "edge_at_price": -0.0052,
+        "ev": -0.0404,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model SAC win 14.1% vs market no-vig 12.4%.",
+          "v2 projected margin CMU +16.7 (ratings CMU -24.0, SAC -37.4, home edge 3.33); raw model 14.1%.",
+          "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: price drifted against this side (+525 -> +675)"
+        ],
+        "case_against": "Market makes SAC 12%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +724 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "SAC",
+    "team_name": "Sacramento State Hornets",
+    "opponent": "@ CMU",
+    "form": "L5 LLLWL"
+  },
+  {
+    "id": "cfb:401866462:Spread:home:-18.5",
+    "event_id": "401866462",
+    "league": "cfb",
+    "name": "Sacramento State Hornets at Central Michigan Chippewas",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "SAC @ CMU",
+    "home_abbr": "CMU",
+    "away_abbr": "SAC",
+    "home_name": "Central Michigan Chippewas",
+    "away_name": "Sacramento State Hornets",
+    "market": "Spread",
+    "side": "home",
+    "selection": "CMU -18.5",
+    "line": -18.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964155"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "CMU -18.5",
+        "side": "home",
+        "line": -18.5,
+        "odds": -105.0,
+        "model_raw": 0.4538,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model CMU -18.5 covers 45.4% vs market 48.9%.",
+          "Projected margin CMU +16.7 vs line CMU -18.5.",
+          "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: spread moved against this side (-15.5 -> -18.5)"
+        ],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "CMU",
+    "team_name": "Central Michigan Chippewas",
+    "opponent": "vs SAC",
+    "form": "L5 WLLLW"
+  },
+  {
+    "id": "cfb:401866462:Spread:away:18.5",
+    "event_id": "401866462",
+    "league": "cfb",
+    "name": "Sacramento State Hornets at Central Michigan Chippewas",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "SAC @ CMU",
+    "home_abbr": "CMU",
+    "away_abbr": "SAC",
+    "home_name": "Central Michigan Chippewas",
+    "away_name": "Sacramento State Hornets",
+    "market": "Spread",
+    "side": "away",
+    "selection": "SAC +18.5",
+    "line": 18.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964155"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "SAC +18.5",
+        "side": "away",
+        "line": 18.5,
+        "odds": -115.0,
+        "model_raw": 0.5462,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model SAC +18.5 covers 54.6% vs market 51.1%.",
+          "Projected margin CMU +16.7 vs line CMU -18.5.",
+          "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "SAC",
+    "team_name": "Sacramento State Hornets",
+    "opponent": "@ CMU",
+    "form": "L5 LLLWL"
+  },
+  {
+    "id": "cfb:401866462:Total:over:43.5",
+    "event_id": "401866462",
+    "league": "cfb",
+    "name": "Sacramento State Hornets at Central Michigan Chippewas",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "SAC @ CMU",
+    "home_abbr": "CMU",
+    "away_abbr": "SAC",
+    "home_name": "Central Michigan Chippewas",
+    "away_name": "Sacramento State Hornets",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 43.5",
+    "line": 43.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964155"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 43.5",
+        "side": "over",
+        "line": 43.5,
+        "odds": -115.0,
+        "model_raw": 0.5994,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 43.5: 59.9% vs market 51.1%.",
+          "Projected total 47.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 44.5 -> 43.5.",
+          "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the over (44.5 -> 43.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "SAC @ CMU",
+    "form": null
+  },
+  {
+    "id": "cfb:401866462:Total:under:43.5",
+    "event_id": "401866462",
+    "league": "cfb",
+    "name": "Sacramento State Hornets at Central Michigan Chippewas",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "SAC @ CMU",
+    "home_abbr": "CMU",
+    "away_abbr": "SAC",
+    "home_name": "Central Michigan Chippewas",
+    "away_name": "Sacramento State Hornets",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 43.5",
+    "line": 43.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964155"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 43.5",
+        "side": "under",
+        "line": 43.5,
+        "odds": -105.0,
+        "model_raw": 0.4006,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 43.5: 40.1% vs market 48.9%.",
+          "Projected total 47.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 44.5 -> 43.5.",
+          "SAC L5 LLLWL (MOV -12.3), CMU L5 WLLLW (MOV -4.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward under (44.5 -> 43.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "SAC @ CMU",
+    "form": null
+  },
+  {
+    "id": "cfb:401866463:ML:home:na",
+    "event_id": "401866463",
+    "league": "cfb",
+    "name": "Massachusetts Minutemen at Toledo Rockets",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "MASS @ TOL",
+    "home_abbr": "TOL",
+    "away_abbr": "MASS",
+    "home_name": "Toledo Rockets",
+    "away_name": "Massachusetts Minutemen",
+    "market": "ML",
+    "side": "home",
+    "selection": "TOL ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964156"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "TOL ML",
+        "side": "home",
+        "line": null,
+        "odds": -625.0,
+        "model_raw": 0.8044,
+        "model_prob": 0.8271,
+        "market_prob": 0.8271,
+        "fair_odds": -478,
+        "edge": 0.0,
+        "edge_at_price": -0.0349,
+        "ev": -0.0405,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model TOL win 80.4% vs market no-vig 82.7%.",
+          "v2 projected margin TOL +13.3 (ratings TOL -20.5, MASS -30.5, home edge 3.33); raw model 80.4%.",
+          "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes TOL 83%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -429 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "TOL",
+    "team_name": "Toledo Rockets",
+    "opponent": "vs MASS",
+    "form": "L5 WLWWW"
+  },
+  {
+    "id": "cfb:401866463:ML:away:na",
+    "event_id": "401866463",
+    "league": "cfb",
+    "name": "Massachusetts Minutemen at Toledo Rockets",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "MASS @ TOL",
+    "home_abbr": "TOL",
+    "away_abbr": "MASS",
+    "home_name": "Toledo Rockets",
+    "away_name": "Massachusetts Minutemen",
+    "market": "ML",
+    "side": "away",
+    "selection": "MASS ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964156"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "MASS ML",
+        "side": "away",
+        "line": null,
+        "odds": 455.0,
+        "model_raw": 0.1956,
+        "model_prob": 0.1729,
+        "market_prob": 0.1729,
+        "fair_odds": 478,
+        "edge": 0.0,
+        "edge_at_price": -0.0073,
+        "ev": -0.0405,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model MASS win 19.6% vs market no-vig 17.3%.",
+          "v2 projected margin TOL +13.3 (ratings TOL -20.5, MASS -30.5, home edge 3.33); raw model 19.6%.",
+          "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes MASS 17%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +490 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "MASS",
+    "team_name": "Massachusetts Minutemen",
+    "opponent": "@ TOL",
+    "form": "L5 LLLLW"
+  },
+  {
+    "id": "cfb:401866463:Spread:home:-14.5",
+    "event_id": "401866463",
+    "league": "cfb",
+    "name": "Massachusetts Minutemen at Toledo Rockets",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "MASS @ TOL",
+    "home_abbr": "TOL",
+    "away_abbr": "MASS",
+    "home_name": "Toledo Rockets",
+    "away_name": "Massachusetts Minutemen",
+    "market": "Spread",
+    "side": "home",
+    "selection": "TOL -14.5",
+    "line": -14.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964156"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "TOL -14.5",
+        "side": "home",
+        "line": -14.5,
+        "odds": -108.0,
+        "model_raw": 0.4689,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model TOL -14.5 covers 46.9% vs market 49.6%.",
+          "Projected margin TOL +13.3 vs line TOL -14.5.",
+          "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "TOL",
+    "team_name": "Toledo Rockets",
+    "opponent": "vs MASS",
+    "form": "L5 WLWWW"
+  },
+  {
+    "id": "cfb:401866463:Spread:away:14.5",
+    "event_id": "401866463",
+    "league": "cfb",
+    "name": "Massachusetts Minutemen at Toledo Rockets",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "MASS @ TOL",
+    "home_abbr": "TOL",
+    "away_abbr": "MASS",
+    "home_name": "Toledo Rockets",
+    "away_name": "Massachusetts Minutemen",
+    "market": "Spread",
+    "side": "away",
+    "selection": "MASS +14.5",
+    "line": 14.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964156"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "MASS +14.5",
+        "side": "away",
+        "line": 14.5,
+        "odds": -112.0,
+        "model_raw": 0.5311,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model MASS +14.5 covers 53.1% vs market 50.4%.",
+          "Projected margin TOL +13.3 vs line TOL -14.5.",
+          "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "MASS",
+    "team_name": "Massachusetts Minutemen",
+    "opponent": "@ TOL",
+    "form": "L5 LLLLW"
+  },
+  {
+    "id": "cfb:401866463:Total:over:52.5",
+    "event_id": "401866463",
+    "league": "cfb",
+    "name": "Massachusetts Minutemen at Toledo Rockets",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "MASS @ TOL",
+    "home_abbr": "TOL",
+    "away_abbr": "MASS",
+    "home_name": "Toledo Rockets",
+    "away_name": "Massachusetts Minutemen",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 52.5",
+    "line": 52.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964156"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 52.5",
+        "side": "over",
+        "line": 52.5,
+        "odds": -105.0,
+        "model_raw": 0.5177,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 52.5: 51.8% vs market 48.9%.",
+          "Projected total 53.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 52.5.",
+          "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the over (53.5 -> 52.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "MASS @ TOL",
+    "form": null
+  },
+  {
+    "id": "cfb:401866463:Total:under:52.5",
+    "event_id": "401866463",
+    "league": "cfb",
+    "name": "Massachusetts Minutemen at Toledo Rockets",
+    "start": "2026-11-12T00:30Z",
+    "start_local": "Wed Nov 11 7:30 PM ET",
+    "date_et": "2026-11-11",
+    "weekday": "wednesday",
+    "matchup": "MASS @ TOL",
+    "home_abbr": "TOL",
+    "away_abbr": "MASS",
+    "home_name": "Toledo Rockets",
+    "away_name": "Massachusetts Minutemen",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 52.5",
+    "line": 52.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964156"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 52.5",
+        "side": "under",
+        "line": 52.5,
+        "odds": -115.0,
+        "model_raw": 0.4823,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 52.5: 48.2% vs market 51.1%.",
+          "Projected total 53.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 52.5.",
+          "MASS L5 LLLLW (MOV 4.9), TOL L5 WLWWW (MOV 11.0)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward under (53.5 -> 52.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "MASS @ TOL",
+    "form": null
+  },
+  {
+    "id": "cfb:401862824:ML:home:na",
+    "event_id": "401862824",
+    "league": "cfb",
+    "name": "Memphis Tigers at South Florida Bulls",
+    "start": "2026-11-13T01:00Z",
+    "start_local": "Thu Nov 12 8:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "MEM @ USF",
+    "home_abbr": "USF",
+    "away_abbr": "MEM",
+    "home_name": "South Florida Bulls",
+    "away_name": "Memphis Tigers",
+    "market": "ML",
+    "side": "home",
+    "selection": "USF ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964158"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "USF ML",
+        "side": "home",
+        "line": null,
+        "odds": 150.0,
+        "model_raw": 0.436,
+        "model_prob": 0.3836,
+        "market_prob": 0.3836,
+        "fair_odds": 161,
+        "edge": -0.0,
+        "edge_at_price": -0.0164,
+        "ev": -0.0411,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model USF win 43.6% vs market no-vig 38.4%.",
+          "v2 projected margin USF -2.5 (ratings USF -14.8, MEM -9.0, home edge 3.33); raw model 43.6%.",
+          "MEM L5 WWLWW (MOV 14.0), USF L5 LLWWL (MOV 10.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes USF 38%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +166 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "USF",
+    "team_name": "South Florida Bulls",
+    "opponent": "vs MEM",
+    "form": "L5 LLWWL"
+  },
+  {
+    "id": "cfb:401862824:ML:away:na",
+    "event_id": "401862824",
+    "league": "cfb",
+    "name": "Memphis Tigers at South Florida Bulls",
+    "start": "2026-11-13T01:00Z",
+    "start_local": "Thu Nov 12 8:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "MEM @ USF",
+    "home_abbr": "USF",
+    "away_abbr": "MEM",
+    "home_name": "South Florida Bulls",
+    "away_name": "Memphis Tigers",
+    "market": "ML",
+    "side": "away",
+    "selection": "MEM ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964158"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "MEM ML",
+        "side": "away",
+        "line": null,
+        "odds": -180.0,
+        "model_raw": 0.564,
+        "model_prob": 0.6164,
+        "market_prob": 0.6164,
+        "fair_odds": -161,
+        "edge": 0.0,
+        "edge_at_price": -0.0264,
+        "ev": -0.0411,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model MEM win 56.4% vs market no-vig 61.6%.",
+          "v2 projected margin USF -2.5 (ratings USF -14.8, MEM -9.0, home edge 3.33); raw model 56.4%.",
+          "MEM L5 WWLWW (MOV 14.0), USF L5 LLWWL (MOV 10.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: price drifted against this side (-230 -> -180)"
+        ],
+        "case_against": "Market makes MEM 62%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+        "next_step": "Pass. Only interesting at -153 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "MEM",
+    "team_name": "Memphis Tigers",
+    "opponent": "@ USF",
+    "form": "L5 WWLWW"
+  },
+  {
+    "id": "cfb:401862824:Spread:home:3.5",
+    "event_id": "401862824",
+    "league": "cfb",
+    "name": "Memphis Tigers at South Florida Bulls",
+    "start": "2026-11-13T01:00Z",
+    "start_local": "Thu Nov 12 8:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "MEM @ USF",
+    "home_abbr": "USF",
+    "away_abbr": "MEM",
+    "home_name": "South Florida Bulls",
+    "away_name": "Memphis Tigers",
+    "market": "Spread",
+    "side": "home",
+    "selection": "USF +3.5",
+    "line": 3.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964158"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "USF +3.5",
+        "side": "home",
+        "line": 3.5,
+        "odds": -110.0,
+        "model_raw": 0.5258,
+        "model_prob": 0.5,
+        "market_prob": 0.5,
+        "fair_odds": 100,
+        "edge": 0.0,
+        "edge_at_price": -0.0238,
+        "ev": -0.0455,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model USF +3.5 covers 52.6% vs market 50.0%.",
+          "Projected margin USF -2.5 vs line USF +3.5.",
+          "MEM L5 WWLWW (MOV 14.0), USF L5 LLWWL (MOV 10.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: spread moved against this side (+6 -> +3.5)"
+        ],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +104 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "USF",
+    "team_name": "South Florida Bulls",
+    "opponent": "vs MEM",
+    "form": "L5 LLWWL"
+  },
+  {
+    "id": "cfb:401862824:Spread:away:-3.5",
+    "event_id": "401862824",
+    "league": "cfb",
+    "name": "Memphis Tigers at South Florida Bulls",
+    "start": "2026-11-13T01:00Z",
+    "start_local": "Thu Nov 12 8:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "MEM @ USF",
+    "home_abbr": "USF",
+    "away_abbr": "MEM",
+    "home_name": "South Florida Bulls",
+    "away_name": "Memphis Tigers",
+    "market": "Spread",
+    "side": "away",
+    "selection": "MEM -3.5",
+    "line": -3.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964158"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "MEM -3.5",
+        "side": "away",
+        "line": -3.5,
+        "odds": -110.0,
+        "model_raw": 0.4742,
+        "model_prob": 0.5,
+        "market_prob": 0.5,
+        "fair_odds": 100,
+        "edge": 0.0,
+        "edge_at_price": -0.0238,
+        "ev": -0.0455,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model MEM -3.5 covers 47.4% vs market 50.0%.",
+          "Projected margin USF -2.5 vs line USF +3.5.",
+          "MEM L5 WWLWW (MOV 14.0), USF L5 LLWWL (MOV 10.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +104 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "MEM",
+    "team_name": "Memphis Tigers",
+    "opponent": "@ USF",
+    "form": "L5 WWLWW"
+  },
+  {
+    "id": "cfb:401862824:Total:over:49.5",
+    "event_id": "401862824",
+    "league": "cfb",
+    "name": "Memphis Tigers at South Florida Bulls",
+    "start": "2026-11-13T01:00Z",
+    "start_local": "Thu Nov 12 8:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "MEM @ USF",
+    "home_abbr": "USF",
+    "away_abbr": "MEM",
+    "home_name": "South Florida Bulls",
+    "away_name": "Memphis Tigers",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 49.5",
+    "line": 49.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964158"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 49.5",
+        "side": "over",
+        "line": 49.5,
+        "odds": -115.0,
+        "model_raw": 0.6058,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 49.5: 60.6% vs market 51.1%.",
+          "Projected total 53.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+          "MEM L5 WWLWW (MOV 14.0), USF L5 LLWWL (MOV 10.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "MEM @ USF",
+    "form": null
+  },
+  {
+    "id": "cfb:401862824:Total:under:49.5",
+    "event_id": "401862824",
+    "league": "cfb",
+    "name": "Memphis Tigers at South Florida Bulls",
+    "start": "2026-11-13T01:00Z",
+    "start_local": "Thu Nov 12 8:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "MEM @ USF",
+    "home_abbr": "USF",
+    "away_abbr": "MEM",
+    "home_name": "South Florida Bulls",
+    "away_name": "Memphis Tigers",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 49.5",
+    "line": 49.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964158"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 49.5",
+        "side": "under",
+        "line": 49.5,
+        "odds": -105.0,
+        "model_raw": 0.3942,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 49.5: 39.4% vs market 48.9%.",
+          "Projected total 53.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+          "MEM L5 WWLWW (MOV 14.0), USF L5 LLWWL (MOV 10.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "MEM @ USF",
+    "form": null
+  },
+  {
+    "id": "cfb:401869969:ML:home:na",
+    "event_id": "401869969",
+    "league": "cfb",
+    "name": "Louisiana Ragin' Cajuns at UL Monroe Warhawks",
+    "start": "2026-11-13T02:00Z",
+    "start_local": "Thu Nov 12 9:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "UL @ ULM",
+    "home_abbr": "ULM",
+    "away_abbr": "UL",
+    "home_name": "UL Monroe Warhawks",
+    "away_name": "Louisiana Ragin' Cajuns",
+    "market": "ML",
+    "side": "home",
+    "selection": "ULM ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964159"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "ULM ML",
+        "side": "home",
+        "line": null,
+        "odds": 320.0,
+        "model_raw": 0.215,
+        "model_prob": 0.2285,
+        "market_prob": 0.2285,
+        "fair_odds": 338,
+        "edge": 0.0,
+        "edge_at_price": -0.0096,
+        "ev": -0.0403,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model ULM win 21.5% vs market no-vig 22.8%.",
+          "v2 projected margin ULM -12.2 (ratings ULM -35.9, UL -20.3, home edge 3.33); raw model 21.5%.",
+          "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes ULM 23%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +346 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "ULM",
+    "team_name": "UL Monroe Warhawks",
+    "opponent": "vs UL",
+    "form": "L5 LLWLW"
+  },
+  {
+    "id": "cfb:401869969:ML:away:na",
+    "event_id": "401869969",
+    "league": "cfb",
+    "name": "Louisiana Ragin' Cajuns at UL Monroe Warhawks",
+    "start": "2026-11-13T02:00Z",
+    "start_local": "Thu Nov 12 9:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "UL @ ULM",
+    "home_abbr": "ULM",
+    "away_abbr": "UL",
+    "home_name": "UL Monroe Warhawks",
+    "away_name": "Louisiana Ragin' Cajuns",
+    "market": "ML",
+    "side": "away",
+    "selection": "UL ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964159"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "UL ML",
+        "side": "away",
+        "line": null,
+        "odds": -410.0,
+        "model_raw": 0.785,
+        "model_prob": 0.7715,
+        "market_prob": 0.7715,
+        "fair_odds": -338,
+        "edge": 0.0,
+        "edge_at_price": -0.0324,
+        "ev": -0.0403,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model UL win 78.5% vs market no-vig 77.2%.",
+          "v2 projected margin ULM -12.2 (ratings ULM -35.9, UL -20.3, home edge 3.33); raw model 78.5%.",
+          "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes UL 77%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -310 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "UL",
+    "team_name": "Louisiana Ragin' Cajuns",
+    "opponent": "@ ULM",
+    "form": "L5 WLWLW"
+  },
+  {
+    "id": "cfb:401869969:Total:over:49.5",
+    "event_id": "401869969",
+    "league": "cfb",
+    "name": "Louisiana Ragin' Cajuns at UL Monroe Warhawks",
+    "start": "2026-11-13T02:00Z",
+    "start_local": "Thu Nov 12 9:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "UL @ ULM",
+    "home_abbr": "ULM",
+    "away_abbr": "UL",
+    "home_name": "UL Monroe Warhawks",
+    "away_name": "Louisiana Ragin' Cajuns",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 49.5",
+    "line": 49.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964159"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 49.5",
+        "side": "over",
+        "line": 49.5,
+        "odds": -108.0,
+        "model_raw": 0.5347,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 49.5: 53.5% vs market 49.6%.",
+          "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 49.5.",
+          "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward over (48.5 -> 49.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "UL @ ULM",
+    "form": null
+  },
+  {
+    "id": "cfb:401869969:Total:under:49.5",
+    "event_id": "401869969",
+    "league": "cfb",
+    "name": "Louisiana Ragin' Cajuns at UL Monroe Warhawks",
+    "start": "2026-11-13T02:00Z",
+    "start_local": "Thu Nov 12 9:00 PM ET",
+    "date_et": "2026-11-12",
+    "weekday": "thursday",
+    "matchup": "UL @ ULM",
+    "home_abbr": "ULM",
+    "away_abbr": "UL",
+    "home_name": "UL Monroe Warhawks",
+    "away_name": "Louisiana Ragin' Cajuns",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 49.5",
+    "line": 49.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964159"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 49.5",
+        "side": "under",
+        "line": 49.5,
+        "odds": -112.0,
+        "model_raw": 0.4653,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 49.5: 46.5% vs market 50.4%.",
+          "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 49.5.",
+          "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the under (48.5 -> 49.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "UL @ ULM",
+    "form": null
+  },
+  {
+    "id": "cfb:401858293:ML:home:na",
+    "event_id": "401858293",
+    "league": "cfb",
+    "name": "Florida State Seminoles at Pittsburgh Panthers",
+    "start": "2026-11-14T00:00Z",
+    "start_local": "Fri Nov 13 7:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "FSU @ PITT",
+    "home_abbr": "PITT",
+    "away_abbr": "FSU",
+    "home_name": "Pittsburgh Panthers",
+    "away_name": "Florida State Seminoles",
+    "market": "ML",
+    "side": "home",
+    "selection": "PITT ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964162"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "PITT ML",
+        "side": "home",
+        "line": null,
+        "odds": -170.0,
+        "model_raw": 0.5851,
+        "model_prob": 0.6038,
+        "market_prob": 0.6038,
+        "fair_odds": -152,
+        "edge": 0.0,
+        "edge_at_price": -0.0259,
+        "ev": -0.0411,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model PITT win 58.5% vs market no-vig 60.4%.",
+          "v2 projected margin PITT +3.3 (ratings PITT -10.3, FSU -10.3, home edge 3.33); raw model 58.5%.",
+          "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes PITT 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+        "next_step": "Pass. Only interesting at -145 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "PITT",
+    "team_name": "Pittsburgh Panthers",
+    "opponent": "vs FSU",
+    "form": "L5 WLLLW"
+  },
+  {
+    "id": "cfb:401858293:ML:away:na",
+    "event_id": "401858293",
+    "league": "cfb",
+    "name": "Florida State Seminoles at Pittsburgh Panthers",
+    "start": "2026-11-14T00:00Z",
+    "start_local": "Fri Nov 13 7:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "FSU @ PITT",
+    "home_abbr": "PITT",
+    "away_abbr": "FSU",
+    "home_name": "Pittsburgh Panthers",
+    "away_name": "Florida State Seminoles",
+    "market": "ML",
+    "side": "away",
+    "selection": "FSU ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964162"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "FSU ML",
+        "side": "away",
+        "line": null,
+        "odds": 142.0,
+        "model_raw": 0.4149,
+        "model_prob": 0.3962,
+        "market_prob": 0.3962,
+        "fair_odds": 152,
+        "edge": 0.0,
+        "edge_at_price": -0.017,
+        "ev": -0.0411,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model FSU win 41.5% vs market no-vig 39.6%.",
+          "v2 projected margin PITT +3.3 (ratings PITT -10.3, FSU -10.3, home edge 3.33); raw model 41.5%.",
+          "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: price drifted against this side (+120 -> +142)"
+        ],
+        "case_against": "Market makes FSU 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +157 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "FSU",
+    "team_name": "Florida State Seminoles",
+    "opponent": "@ PITT",
+    "form": "L5 WLLLW"
+  },
+  {
+    "id": "cfb:401858293:Spread:home:-3.5",
+    "event_id": "401858293",
+    "league": "cfb",
+    "name": "Florida State Seminoles at Pittsburgh Panthers",
+    "start": "2026-11-14T00:00Z",
+    "start_local": "Fri Nov 13 7:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "FSU @ PITT",
+    "home_abbr": "PITT",
+    "away_abbr": "FSU",
+    "home_name": "Pittsburgh Panthers",
+    "away_name": "Florida State Seminoles",
+    "market": "Spread",
+    "side": "home",
+    "selection": "PITT -3.5",
+    "line": -3.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964162"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "PITT -3.5",
+        "side": "home",
+        "line": -3.5,
+        "odds": -108.0,
+        "model_raw": 0.4956,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model PITT -3.5 covers 49.6% vs market 49.6%.",
+          "Projected margin PITT +3.3 vs line PITT -3.5.",
+          "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "PITT",
+    "team_name": "Pittsburgh Panthers",
+    "opponent": "vs FSU",
+    "form": "L5 WLLLW"
+  },
+  {
+    "id": "cfb:401858293:Spread:away:3.5",
+    "event_id": "401858293",
+    "league": "cfb",
+    "name": "Florida State Seminoles at Pittsburgh Panthers",
+    "start": "2026-11-14T00:00Z",
+    "start_local": "Fri Nov 13 7:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "FSU @ PITT",
+    "home_abbr": "PITT",
+    "away_abbr": "FSU",
+    "home_name": "Pittsburgh Panthers",
+    "away_name": "Florida State Seminoles",
+    "market": "Spread",
+    "side": "away",
+    "selection": "FSU +3.5",
+    "line": 3.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964162"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "FSU +3.5",
+        "side": "away",
+        "line": 3.5,
+        "odds": -112.0,
+        "model_raw": 0.5044,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model FSU +3.5 covers 50.4% vs market 50.4%.",
+          "Projected margin PITT +3.3 vs line PITT -3.5.",
+          "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "FSU",
+    "team_name": "Florida State Seminoles",
+    "opponent": "@ PITT",
+    "form": "L5 WLLLW"
+  },
+  {
+    "id": "cfb:401858293:Total:over:54.5",
+    "event_id": "401858293",
+    "league": "cfb",
+    "name": "Florida State Seminoles at Pittsburgh Panthers",
+    "start": "2026-11-14T00:00Z",
+    "start_local": "Fri Nov 13 7:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "FSU @ PITT",
+    "home_abbr": "PITT",
+    "away_abbr": "FSU",
+    "home_name": "Pittsburgh Panthers",
+    "away_name": "Florida State Seminoles",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 54.5",
+    "line": 54.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964162"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 54.5",
+        "side": "over",
+        "line": 54.5,
+        "odds": -105.0,
+        "model_raw": 0.5278,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 54.5: 52.8% vs market 48.9%.",
+          "Projected total 55.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 54.5.",
+          "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward over (53.5 -> 54.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "FSU @ PITT",
+    "form": null
+  },
+  {
+    "id": "cfb:401858293:Total:under:54.5",
+    "event_id": "401858293",
+    "league": "cfb",
+    "name": "Florida State Seminoles at Pittsburgh Panthers",
+    "start": "2026-11-14T00:00Z",
+    "start_local": "Fri Nov 13 7:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "FSU @ PITT",
+    "home_abbr": "PITT",
+    "away_abbr": "FSU",
+    "home_name": "Pittsburgh Panthers",
+    "away_name": "Florida State Seminoles",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 54.5",
+    "line": 54.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964162"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 54.5",
+        "side": "under",
+        "line": 54.5,
+        "odds": -115.0,
+        "model_raw": 0.4722,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 54.5: 47.2% vs market 51.1%.",
+          "Projected total 55.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 54.5.",
+          "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the under (53.5 -> 54.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "FSU @ PITT",
+    "form": null
+  },
+  {
+    "id": "cfb:401858526:ML:home:na",
+    "event_id": "401858526",
+    "league": "cfb",
+    "name": "Illinois Fighting Illini at UCLA Bruins",
+    "start": "2026-11-14T02:00Z",
+    "start_local": "Fri Nov 13 9:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "ILL @ UCLA",
+    "home_abbr": "UCLA",
+    "away_abbr": "ILL",
+    "home_name": "UCLA Bruins",
+    "away_name": "Illinois Fighting Illini",
+    "market": "ML",
+    "side": "home",
+    "selection": "UCLA ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964163"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "UCLA ML",
+        "side": "home",
+        "line": null,
+        "odds": -380.0,
+        "model_raw": 0.8296,
+        "model_prob": 0.76,
+        "market_prob": 0.76,
+        "fair_odds": -317,
+        "edge": -0.0,
+        "edge_at_price": -0.0317,
+        "ev": -0.04,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model UCLA win 83.0% vs market no-vig 76.0%.",
+          "v2 projected margin UCLA +14.8 (ratings UCLA +3.5, ILL -7.9, home edge 3.33); raw model 83.0%.",
+          "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: price drifted against this side (-500 -> -380)"
+        ],
+        "case_against": "Market makes UCLA 76%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -292 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "UCLA",
+    "team_name": "UCLA Bruins",
+    "opponent": "vs ILL",
+    "form": "L5 WWWWW"
+  },
+  {
+    "id": "cfb:401858526:ML:away:na",
+    "event_id": "401858526",
+    "league": "cfb",
+    "name": "Illinois Fighting Illini at UCLA Bruins",
+    "start": "2026-11-14T02:00Z",
+    "start_local": "Fri Nov 13 9:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "ILL @ UCLA",
+    "home_abbr": "UCLA",
+    "away_abbr": "ILL",
+    "home_name": "UCLA Bruins",
+    "away_name": "Illinois Fighting Illini",
+    "market": "ML",
+    "side": "away",
+    "selection": "ILL ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964163"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "ILL ML",
+        "side": "away",
+        "line": null,
+        "odds": 300.0,
+        "model_raw": 0.1704,
+        "model_prob": 0.24,
+        "market_prob": 0.24,
+        "fair_odds": 317,
+        "edge": 0.0,
+        "edge_at_price": -0.01,
+        "ev": -0.04,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model ILL win 17.0% vs market no-vig 24.0%.",
+          "v2 projected margin UCLA +14.8 (ratings UCLA +3.5, ILL -7.9, home edge 3.33); raw model 17.0%.",
+          "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes ILL 24%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +325 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "ILL",
+    "team_name": "Illinois Fighting Illini",
+    "opponent": "@ UCLA",
+    "form": "L5 LWWWW"
+  },
+  {
+    "id": "cfb:401858526:Spread:home:-10.0",
+    "event_id": "401858526",
+    "league": "cfb",
+    "name": "Illinois Fighting Illini at UCLA Bruins",
+    "start": "2026-11-14T02:00Z",
+    "start_local": "Fri Nov 13 9:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "ILL @ UCLA",
+    "home_abbr": "UCLA",
+    "away_abbr": "ILL",
+    "home_name": "UCLA Bruins",
+    "away_name": "Illinois Fighting Illini",
+    "market": "Spread",
+    "side": "home",
+    "selection": "UCLA -10",
+    "line": -10.0,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964163"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "UCLA -10",
+        "side": "home",
+        "line": -10.0,
+        "odds": -108.0,
+        "model_raw": 0.6207,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model UCLA -10 covers 62.1% vs market 49.6%.",
+          "Projected margin UCLA +14.8 vs line UCLA -10.",
+          "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+          "Note: model far from market (62% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "UCLA",
+    "team_name": "UCLA Bruins",
+    "opponent": "vs ILL",
+    "form": "L5 WWWWW"
+  },
+  {
+    "id": "cfb:401858526:Spread:away:10.0",
+    "event_id": "401858526",
+    "league": "cfb",
+    "name": "Illinois Fighting Illini at UCLA Bruins",
+    "start": "2026-11-14T02:00Z",
+    "start_local": "Fri Nov 13 9:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "ILL @ UCLA",
+    "home_abbr": "UCLA",
+    "away_abbr": "ILL",
+    "home_name": "UCLA Bruins",
+    "away_name": "Illinois Fighting Illini",
+    "market": "Spread",
+    "side": "away",
+    "selection": "ILL +10",
+    "line": 10.0,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964163"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "ILL +10",
+        "side": "away",
+        "line": 10.0,
+        "odds": -112.0,
+        "model_raw": 0.3793,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model ILL +10 covers 37.9% vs market 50.4%.",
+          "Projected margin UCLA +14.8 vs line UCLA -10.",
+          "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+          "Note: model far from market (38% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: spread moved against this side (+12.5 -> +10)"
+        ],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "ILL",
+    "team_name": "Illinois Fighting Illini",
+    "opponent": "@ UCLA",
+    "form": "L5 LWWWW"
+  },
+  {
+    "id": "cfb:401858526:Total:over:47.5",
+    "event_id": "401858526",
+    "league": "cfb",
+    "name": "Illinois Fighting Illini at UCLA Bruins",
+    "start": "2026-11-14T02:00Z",
+    "start_local": "Fri Nov 13 9:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "ILL @ UCLA",
+    "home_abbr": "UCLA",
+    "away_abbr": "ILL",
+    "home_name": "UCLA Bruins",
+    "away_name": "Illinois Fighting Illini",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 47.5",
+    "line": 47.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964163"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 47.5",
+        "side": "over",
+        "line": 47.5,
+        "odds": -112.0,
+        "model_raw": 0.5514,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 47.5: 55.1% vs market 50.4%.",
+          "Projected total 49.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+          "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "ILL @ UCLA",
+    "form": null
+  },
+  {
+    "id": "cfb:401858526:Total:under:47.5",
+    "event_id": "401858526",
+    "league": "cfb",
+    "name": "Illinois Fighting Illini at UCLA Bruins",
+    "start": "2026-11-14T02:00Z",
+    "start_local": "Fri Nov 13 9:00 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "ILL @ UCLA",
+    "home_abbr": "UCLA",
+    "away_abbr": "ILL",
+    "home_name": "UCLA Bruins",
+    "away_name": "Illinois Fighting Illini",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 47.5",
+    "line": 47.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964163"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 47.5",
+        "side": "under",
+        "line": 47.5,
+        "odds": -108.0,
+        "model_raw": 0.4486,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 47.5: 44.9% vs market 49.6%.",
+          "Projected total 49.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+          "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "ILL @ UCLA",
+    "form": null
+  },
+  {
+    "id": "cfb:401856860:ML:home:na",
+    "event_id": "401856860",
+    "league": "cfb",
+    "name": "Houston Cougars at Colorado Buffaloes",
+    "start": "2026-11-14T03:15Z",
+    "start_local": "Fri Nov 13 10:15 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "HOU @ COLO",
+    "home_abbr": "COLO",
+    "away_abbr": "HOU",
+    "home_name": "Colorado Buffaloes",
+    "away_name": "Houston Cougars",
+    "market": "ML",
+    "side": "home",
+    "selection": "COLO ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964164"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "COLO ML",
+        "side": "home",
+        "line": null,
+        "odds": 310.0,
+        "model_raw": 0.2048,
+        "model_prob": 0.2341,
+        "market_prob": 0.2341,
+        "fair_odds": 327,
+        "edge": 0.0,
+        "edge_at_price": -0.0098,
+        "ev": -0.0402,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model COLO win 20.5% vs market no-vig 23.4%.",
+          "v2 projected margin COLO -12.8 (ratings COLO -19.3, HOU -3.2, home edge 3.33); raw model 20.5%.",
+          "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes COLO 23%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +336 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "COLO",
+    "team_name": "Colorado Buffaloes",
+    "opponent": "vs HOU",
+    "form": "L5 LLLWL"
+  },
+  {
+    "id": "cfb:401856860:ML:away:na",
+    "event_id": "401856860",
+    "league": "cfb",
+    "name": "Houston Cougars at Colorado Buffaloes",
+    "start": "2026-11-14T03:15Z",
+    "start_local": "Fri Nov 13 10:15 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "HOU @ COLO",
+    "home_abbr": "COLO",
+    "away_abbr": "HOU",
+    "home_name": "Colorado Buffaloes",
+    "away_name": "Houston Cougars",
+    "market": "ML",
+    "side": "away",
+    "selection": "HOU ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964164"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "HOU ML",
+        "side": "away",
+        "line": null,
+        "odds": -395.0,
+        "model_raw": 0.7952,
+        "model_prob": 0.7659,
+        "market_prob": 0.7659,
+        "fair_odds": -327,
+        "edge": 0.0,
+        "edge_at_price": -0.0321,
+        "ev": -0.0402,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model HOU win 79.5% vs market no-vig 76.6%.",
+          "v2 projected margin COLO -12.8 (ratings COLO -19.3, HOU -3.2, home edge 3.33); raw model 79.5%.",
+          "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes HOU 77%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -301 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "HOU",
+    "team_name": "Houston Cougars",
+    "opponent": "@ COLO",
+    "form": "L5 WWWLW"
+  },
+  {
+    "id": "cfb:401856860:Spread:home:10.5",
+    "event_id": "401856860",
+    "league": "cfb",
+    "name": "Houston Cougars at Colorado Buffaloes",
+    "start": "2026-11-14T03:15Z",
+    "start_local": "Fri Nov 13 10:15 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "HOU @ COLO",
+    "home_abbr": "COLO",
+    "away_abbr": "HOU",
+    "home_name": "Colorado Buffaloes",
+    "away_name": "Houston Cougars",
+    "market": "Spread",
+    "side": "home",
+    "selection": "COLO +10.5",
+    "line": 10.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964164"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "COLO +10.5",
+        "side": "home",
+        "line": 10.5,
+        "odds": -112.0,
+        "model_raw": 0.4415,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model COLO +10.5 covers 44.2% vs market 50.4%.",
+          "Projected margin COLO -12.8 vs line COLO +10.5.",
+          "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "COLO",
+    "team_name": "Colorado Buffaloes",
+    "opponent": "vs HOU",
+    "form": "L5 LLLWL"
+  },
+  {
+    "id": "cfb:401856860:Spread:away:-10.5",
+    "event_id": "401856860",
+    "league": "cfb",
+    "name": "Houston Cougars at Colorado Buffaloes",
+    "start": "2026-11-14T03:15Z",
+    "start_local": "Fri Nov 13 10:15 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "HOU @ COLO",
+    "home_abbr": "COLO",
+    "away_abbr": "HOU",
+    "home_name": "Colorado Buffaloes",
+    "away_name": "Houston Cougars",
+    "market": "Spread",
+    "side": "away",
+    "selection": "HOU -10.5",
+    "line": -10.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964164"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "HOU -10.5",
+        "side": "away",
+        "line": -10.5,
+        "odds": -108.0,
+        "model_raw": 0.5585,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model HOU -10.5 covers 55.8% vs market 49.6%.",
+          "Projected margin COLO -12.8 vs line COLO +10.5.",
+          "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "HOU",
+    "team_name": "Houston Cougars",
+    "opponent": "@ COLO",
+    "form": "L5 WWWLW"
+  },
+  {
+    "id": "cfb:401856860:Total:over:50.5",
+    "event_id": "401856860",
+    "league": "cfb",
+    "name": "Houston Cougars at Colorado Buffaloes",
+    "start": "2026-11-14T03:15Z",
+    "start_local": "Fri Nov 13 10:15 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "HOU @ COLO",
+    "home_abbr": "COLO",
+    "away_abbr": "HOU",
+    "home_name": "Colorado Buffaloes",
+    "away_name": "Houston Cougars",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 50.5",
+    "line": 50.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964164"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 50.5",
+        "side": "over",
+        "line": 50.5,
+        "odds": -118.0,
+        "model_raw": 0.501,
+        "model_prob": 0.5174,
+        "market_prob": 0.5174,
+        "fair_odds": -107,
+        "edge": -0.0,
+        "edge_at_price": -0.0239,
+        "ev": -0.0442,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 50.5: 50.1% vs market 51.7%.",
+          "Projected total 50.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 50.5.",
+          "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward over (47.5 -> 50.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -103 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "HOU @ COLO",
+    "form": null
+  },
+  {
+    "id": "cfb:401856860:Total:under:50.5",
+    "event_id": "401856860",
+    "league": "cfb",
+    "name": "Houston Cougars at Colorado Buffaloes",
+    "start": "2026-11-14T03:15Z",
+    "start_local": "Fri Nov 13 10:15 PM ET",
+    "date_et": "2026-11-13",
+    "weekday": "friday",
+    "matchup": "HOU @ COLO",
+    "home_abbr": "COLO",
+    "away_abbr": "HOU",
+    "home_name": "Colorado Buffaloes",
+    "away_name": "Houston Cougars",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 50.5",
+    "line": 50.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964164"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 50.5",
+        "side": "under",
+        "line": 50.5,
+        "odds": -102.0,
+        "model_raw": 0.499,
+        "model_prob": 0.4826,
+        "market_prob": 0.4826,
+        "fair_odds": 107,
+        "edge": 0.0,
+        "edge_at_price": -0.0223,
+        "ev": -0.0442,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 50.5: 49.9% vs market 48.3%.",
+          "Projected total 50.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 50.5.",
+          "HOU L5 WWWLW (MOV 14.1), COLO L5 LLLWL (MOV -8.6)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the under (47.5 -> 50.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +111 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "HOU @ COLO",
+    "form": null
+  },
+  {
+    "id": "cfb:401858296:ML:home:na",
+    "event_id": "401858296",
+    "league": "cfb",
+    "name": "Duke Blue Devils at Miami Hurricanes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "DUKE @ MIA",
+    "home_abbr": "MIA",
+    "away_abbr": "DUKE",
+    "home_name": "Miami Hurricanes",
+    "away_name": "Duke Blue Devils",
+    "market": "ML",
+    "side": "home",
+    "selection": "MIA ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34226138"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "MIA ML",
+        "side": "home",
+        "line": null,
+        "odds": -550.0,
+        "model_raw": 0.6029,
+        "model_prob": 0.8119,
+        "market_prob": 0.8119,
+        "fair_odds": -432,
+        "edge": 0.0,
+        "edge_at_price": -0.0343,
+        "ev": -0.0405,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model MIA win 60.3% vs market no-vig 81.2%.",
+          "v2 projected margin MIA +4.0 (ratings MIA +6.7, DUKE +6.0, home edge 3.33); raw model 60.3%.",
+          "DUKE L5 LLWWW (MOV 20.0), MIA L5 WWWWL (MOV 25.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+          "Note: model far from market (60% vs 81%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: price drifted against this side (-1650 -> -550)"
+        ],
+        "case_against": "Market makes MIA 81%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -390 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "MIA",
+    "team_name": "Miami Hurricanes",
+    "opponent": "vs DUKE",
+    "form": "L5 WWWWL"
+  },
+  {
+    "id": "cfb:401858296:ML:away:na",
+    "event_id": "401858296",
+    "league": "cfb",
+    "name": "Duke Blue Devils at Miami Hurricanes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "DUKE @ MIA",
+    "home_abbr": "MIA",
+    "away_abbr": "DUKE",
+    "home_name": "Miami Hurricanes",
+    "away_name": "Duke Blue Devils",
+    "market": "ML",
+    "side": "away",
+    "selection": "DUKE ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34226138"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "DUKE ML",
+        "side": "away",
+        "line": null,
+        "odds": 410.0,
+        "model_raw": 0.3971,
+        "model_prob": 0.1881,
+        "market_prob": 0.1881,
+        "fair_odds": 432,
+        "edge": 0.0,
+        "edge_at_price": -0.0079,
+        "ev": -0.0405,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model DUKE win 39.7% vs market no-vig 18.8%.",
+          "v2 projected margin MIA +4.0 (ratings MIA +6.7, DUKE +6.0, home edge 3.33); raw model 39.7%.",
+          "DUKE L5 LLWWW (MOV 20.0), MIA L5 WWWWL (MOV 25.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+          "Note: model far from market (40% vs 19%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes DUKE 19%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +442 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "DUKE",
+    "team_name": "Duke Blue Devils",
+    "opponent": "@ MIA",
+    "form": "L5 LLWWW"
+  },
+  {
+    "id": "cfb:401858296:Spread:home:-13.5",
+    "event_id": "401858296",
+    "league": "cfb",
+    "name": "Duke Blue Devils at Miami Hurricanes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "DUKE @ MIA",
+    "home_abbr": "MIA",
+    "away_abbr": "DUKE",
+    "home_name": "Miami Hurricanes",
+    "away_name": "Duke Blue Devils",
+    "market": "Spread",
+    "side": "home",
+    "selection": "MIA -13.5",
+    "line": -13.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34226138"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "MIA -13.5",
+        "side": "home",
+        "line": -13.5,
+        "odds": -108.0,
+        "model_raw": 0.2709,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model MIA -13.5 covers 27.1% vs market 49.6%.",
+          "Projected margin MIA +4.0 vs line MIA -13.5.",
+          "DUKE L5 LLWWW (MOV 20.0), MIA L5 WWWWL (MOV 25.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+          "Note: model far from market (27% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "MIA",
+    "team_name": "Miami Hurricanes",
+    "opponent": "vs DUKE",
+    "form": "L5 WWWWL"
+  },
+  {
+    "id": "cfb:401858296:Spread:away:13.5",
+    "event_id": "401858296",
+    "league": "cfb",
+    "name": "Duke Blue Devils at Miami Hurricanes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "DUKE @ MIA",
+    "home_abbr": "MIA",
+    "away_abbr": "DUKE",
+    "home_name": "Miami Hurricanes",
+    "away_name": "Duke Blue Devils",
+    "market": "Spread",
+    "side": "away",
+    "selection": "DUKE +13.5",
+    "line": 13.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34226138"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "DUKE +13.5",
+        "side": "away",
+        "line": 13.5,
+        "odds": -112.0,
+        "model_raw": 0.7291,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model DUKE +13.5 covers 72.9% vs market 50.4%.",
+          "Projected margin MIA +4.0 vs line MIA -13.5.",
+          "DUKE L5 LLWWW (MOV 20.0), MIA L5 WWWWL (MOV 25.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+          "Note: model far from market (73% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: spread moved against this side (+20.5 -> +13.5)"
+        ],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "DUKE",
+    "team_name": "Duke Blue Devils",
+    "opponent": "@ MIA",
+    "form": "L5 LLWWW"
+  },
+  {
+    "id": "cfb:401858296:Total:over:54.5",
+    "event_id": "401858296",
+    "league": "cfb",
+    "name": "Duke Blue Devils at Miami Hurricanes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "DUKE @ MIA",
+    "home_abbr": "MIA",
+    "away_abbr": "DUKE",
+    "home_name": "Miami Hurricanes",
+    "away_name": "Duke Blue Devils",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 54.5",
+    "line": 54.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34226138"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 54.5",
+        "side": "over",
+        "line": 54.5,
+        "odds": -105.0,
+        "model_raw": 0.5296,
+        "model_prob": 0.4892,
+        "market_prob": 0.4892,
+        "fair_odds": 104,
+        "edge": 0.0,
+        "edge_at_price": -0.023,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 54.5: 53.0% vs market 48.9%.",
+          "Projected total 55.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 55.5 -> 54.5.",
+          "DUKE L5 LLWWW (MOV 20.0), MIA L5 WWWWL (MOV 25.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the over (55.5 -> 54.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +109 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "DUKE @ MIA",
+    "form": null
+  },
+  {
+    "id": "cfb:401858296:Total:under:54.5",
+    "event_id": "401858296",
+    "league": "cfb",
+    "name": "Duke Blue Devils at Miami Hurricanes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "DUKE @ MIA",
+    "home_abbr": "MIA",
+    "away_abbr": "DUKE",
+    "home_name": "Miami Hurricanes",
+    "away_name": "Duke Blue Devils",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 54.5",
+    "line": 54.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34226138"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 54.5",
+        "side": "under",
+        "line": 54.5,
+        "odds": -115.0,
+        "model_raw": 0.4704,
+        "model_prob": 0.5108,
+        "market_prob": 0.5108,
+        "fair_odds": -104,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.045,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 54.5: 47.0% vs market 51.1%.",
+          "Projected total 55.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 55.5 -> 54.5.",
+          "DUKE L5 LLWWW (MOV 20.0), MIA L5 WWWWL (MOV 25.8)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward under (55.5 -> 54.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at -100 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "DUKE @ MIA",
+    "form": null
+  },
+  {
+    "id": "cfb:401858522:ML:home:na",
+    "event_id": "401858522",
+    "league": "cfb",
+    "name": "Northwestern Wildcats at Ohio State Buckeyes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "NU @ OSU",
+    "home_abbr": "OSU",
+    "away_abbr": "NU",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Northwestern Wildcats",
+    "market": "ML",
+    "side": "home",
+    "selection": "OSU ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964171"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "OSU ML",
+        "side": "home",
+        "line": null,
+        "odds": -470.0,
+        "model_raw": 0.723,
+        "model_prob": 0.7914,
+        "market_prob": 0.7914,
+        "fair_odds": -379,
+        "edge": 0.0,
+        "edge_at_price": -0.0332,
+        "ev": -0.0403,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model OSU win 72.3% vs market no-vig 79.1%.",
+          "v2 projected margin OSU +9.2 (ratings OSU +0.7, NU -5.1, home edge 3.33); raw model 72.3%.",
+          "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Market makes OSU 79%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+        "next_step": "Pass. Only interesting at -346 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "OSU",
+    "team_name": "Ohio State Buckeyes",
+    "opponent": "vs NU",
+    "form": "L5 WWWLL"
+  },
+  {
+    "id": "cfb:401858522:ML:away:na",
+    "event_id": "401858522",
+    "league": "cfb",
+    "name": "Northwestern Wildcats at Ohio State Buckeyes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "NU @ OSU",
+    "home_abbr": "OSU",
+    "away_abbr": "NU",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Northwestern Wildcats",
+    "market": "ML",
+    "side": "away",
+    "selection": "NU ML",
+    "line": null,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964171"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "ML",
+        "selection": "NU ML",
+        "side": "away",
+        "line": null,
+        "odds": 360.0,
+        "model_raw": 0.277,
+        "model_prob": 0.2086,
+        "market_prob": 0.2086,
+        "fair_odds": 379,
+        "edge": 0.0,
+        "edge_at_price": -0.0088,
+        "ev": -0.0403,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model NU win 27.7% vs market no-vig 20.9%.",
+          "v2 projected margin OSU +9.2 (ratings OSU +0.7, NU -5.1, home edge 3.33); raw model 27.7%.",
+          "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: price drifted against this side (+295 -> +360)"
+        ],
+        "case_against": "Market makes NU 21%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+        "next_step": "Pass. Only interesting at +389 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "NU",
+    "team_name": "Northwestern Wildcats",
+    "opponent": "@ OSU",
+    "form": "L5 WWWLL"
+  },
+  {
+    "id": "cfb:401858522:Spread:home:-12.5",
+    "event_id": "401858522",
+    "league": "cfb",
+    "name": "Northwestern Wildcats at Ohio State Buckeyes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "NU @ OSU",
+    "home_abbr": "OSU",
+    "away_abbr": "NU",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Northwestern Wildcats",
+    "market": "Spread",
+    "side": "home",
+    "selection": "OSU -12.5",
+    "line": -12.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964171"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "OSU -12.5",
+        "side": "home",
+        "line": -12.5,
+        "odds": -108.0,
+        "model_raw": 0.4151,
+        "model_prob": 0.4957,
+        "market_prob": 0.4957,
+        "fair_odds": 102,
+        "edge": 0.0,
+        "edge_at_price": -0.0236,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model OSU -12.5 covers 41.5% vs market 49.6%.",
+          "Projected margin OSU +9.2 vs line OSU -12.5.",
+          "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: spread moved against this side (-9.5 -> -12.5)"
+        ],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +106 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "OSU",
+    "team_name": "Ohio State Buckeyes",
+    "opponent": "vs NU",
+    "form": "L5 WWWLL"
+  },
+  {
+    "id": "cfb:401858522:Spread:away:12.5",
+    "event_id": "401858522",
+    "league": "cfb",
+    "name": "Northwestern Wildcats at Ohio State Buckeyes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "NU @ OSU",
+    "home_abbr": "OSU",
+    "away_abbr": "NU",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Northwestern Wildcats",
+    "market": "Spread",
+    "side": "away",
+    "selection": "NU +12.5",
+    "line": 12.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964171"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Spread",
+        "selection": "NU +12.5",
+        "side": "away",
+        "line": 12.5,
+        "odds": -112.0,
+        "model_raw": 0.5849,
+        "model_prob": 0.5043,
+        "market_prob": 0.5043,
+        "fair_odds": -102,
+        "edge": 0.0,
+        "edge_at_price": -0.024,
+        "ev": -0.0454,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model NU +12.5 covers 58.5% vs market 50.4%.",
+          "Projected margin OSU +9.2 vs line OSU -12.5.",
+          "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [],
+        "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+        "next_step": "Pass. Only interesting at +102 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": "NU",
+    "team_name": "Northwestern Wildcats",
+    "opponent": "@ OSU",
+    "form": "L5 WWWLL"
+  },
+  {
+    "id": "cfb:401858522:Total:over:45.5",
+    "event_id": "401858522",
+    "league": "cfb",
+    "name": "Northwestern Wildcats at Ohio State Buckeyes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "NU @ OSU",
+    "home_abbr": "OSU",
+    "away_abbr": "NU",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Northwestern Wildcats",
+    "market": "Total",
+    "side": "over",
+    "selection": "Over 45.5",
+    "line": 45.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964171"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Over 45.5",
+        "side": "over",
+        "line": 45.5,
+        "odds": -110.0,
+        "model_raw": 0.5623,
+        "model_prob": 0.5,
+        "market_prob": 0.5,
+        "fair_odds": 100,
+        "edge": 0.0,
+        "edge_at_price": -0.0238,
+        "ev": -0.0455,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model over 45.5: 56.2% vs market 50.0%.",
+          "Projected total 48.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 45.5.",
+          "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: market moved against the over (48.5 -> 45.5)"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +104 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "NU @ OSU",
+    "form": null
+  },
+  {
+    "id": "cfb:401858522:Total:under:45.5",
+    "event_id": "401858522",
+    "league": "cfb",
+    "name": "Northwestern Wildcats at Ohio State Buckeyes",
+    "start": "2026-11-14T17:00Z",
+    "start_local": "Sat Nov 14 12:00 PM ET",
+    "date_et": "2026-11-14",
+    "weekday": "saturday",
+    "matchup": "NU @ OSU",
+    "home_abbr": "OSU",
+    "away_abbr": "NU",
+    "home_name": "Ohio State Buckeyes",
+    "away_name": "Northwestern Wildcats",
+    "market": "Total",
+    "side": "under",
+    "selection": "Under 45.5",
+    "line": 45.5,
+    "primary_book": "draftkings",
+    "position": null,
+    "player": null,
+    "prop_key": null,
+    "hit_rate": null,
+    "hit_rates": null,
+    "event_urls": {
+      "draftkings": "https://sportsbook.draftkings.com/event/34964171"
+    },
+    "odds_feed": "espn",
+    "offers": {
+      "draftkings": {
+        "market": "Total",
+        "selection": "Under 45.5",
+        "side": "under",
+        "line": 45.5,
+        "odds": -110.0,
+        "model_raw": 0.4377,
+        "model_prob": 0.5,
+        "market_prob": 0.5,
+        "fair_odds": 100,
+        "edge": 0.0,
+        "edge_at_price": -0.0238,
+        "ev": -0.0455,
+        "tier": "Low",
+        "data_quality": "Medium",
+        "reasons": [
+          "Model under 45.5: 43.8% vs market 50.0%.",
+          "Projected total 48.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 45.5.",
+          "NU L5 WWWLL (MOV 11.7), OSU L5 WWWLL (MOV 17.3)",
+          "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+        ],
+        "flags": [
+          "injury report not available for this league"
+        ],
+        "caution": [
+          "line move: total already moved toward under (48.5 -> 45.5); value may be gone"
+        ],
+        "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+        "next_step": "Pass. Only interesting at +104 or better.",
+        "proven": false
+      }
+    },
+    "team_abbr": null,
+    "team_name": null,
+    "opponent": "NU @ OSU",
     "form": null
   }
 ]
