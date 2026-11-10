@@ -674,10 +674,16 @@ def main():
     api_events = []
     for snap in snapshots.values():
         api_events.extend(snap.get("events") or [])
+    once_flag = DATA / "props-once"
+    props_on = os.environ.get("ODDS_API_PROPS") == "1" or once_flag.exists()
+    if once_flag.exists():
+        print("props: one-shot flag set; this run will buy the day's prop budget")
     prop_payloads, prop_budget = refresh_props(
         os.environ.get("ODDS_API_KEY") or "",
-        enabled=os.environ.get("ODDS_API_PROPS") == "1",
+        enabled=props_on,
     )
+    if once_flag.exists():
+        once_flag.unlink()
     seen_books = set()
     for event in api_events:
         for book in event.get("bookmakers") or []:
