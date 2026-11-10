@@ -27,6 +27,7 @@ const state = {
   sgpMode: "sgp",
   sgpx: [],
   sheet: null,
+  slipOpen: false,
   game: null,
   gameError: null,
   offline: false,
@@ -141,27 +142,104 @@ function footer() {
   return `<p class="fine">EdgeLab is not a sportsbook and does not place or accept bets. Research only — no guarantees. Problem gambling help: <a href="tel:18004262537">1-800-GAMBLER</a>.</p>`;
 }
 
+function logoUrl(league, team) {
+  if (!team) return "";
+  if (team.logo) return team.logo;
+  const abbr = String(team.abbr || "").toLowerCase();
+  if ((league === "cfb" || league === "ncaab" || league === "ncaaw") && team.id) {
+    return `https://a.espncdn.com/i/teamlogos/ncaa/500/${team.id}.png`;
+  }
+  const sport = { nba: "nba", nfl: "nfl", nhl: "nhl", mlb: "mlb", wnba: "wnba", epl: "soccer", mls: "soccer", ucl: "soccer" }[league];
+  return sport && abbr ? `https://a.espncdn.com/i/teamlogos/${sport}/500/${abbr}.png` : "";
+}
+
+function logoHtml(league, team) {
+  const letters = esc((team?.abbr || "?").slice(0, 3));
+  const src = logoUrl(league, team);
+  return `<span class="logo-wrap"><span class="logo ph">${letters}</span>${src ? `<img class="logo" alt="" src="${esc(src)}" onerror="this.remove()">` : ""}</span>`;
+}
+
+function sportGlyph(key) {
+  const paths = {
+    all: `<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>`,
+    nba: `<circle cx="12" cy="12" r="8"/><path d="M12 4c2.2 2.8 2.2 13.2 0 16M4 12h16M7 7c3 1.6 7 1.6 10 0M7 17c3-1.6 7-1.6 10 0"/>`,
+    nfl: `<ellipse cx="12" cy="12" rx="9" ry="5.5"/><path d="M12 6.5v11M9.5 12h5"/>`,
+    nhl: `<path d="M3 16c2.5-7 15.5-7 18 0"/><path d="M8 16h8"/>`,
+    mlb: `<circle cx="12" cy="12" r="8"/><path d="M4.5 12c2.2 2 12.8 2 15 0"/>`,
+  };
+  const path = paths[key] || paths[key === "cfb" ? "nfl" : key === "ncaab" || key === "ncaaw" ? "nba" : "all"];
+  return `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">${path}</svg>`;
+}
+
+function bookMark(book) {
+  const colors = {
+    draftkings: "#146c43", fanduel: "#0b6bcb", betmgm: "#8a6a32", williamhill_us: "#1e4d38",
+    bet365: "#0d6b52", fanatics: "#16308f", espnbet: "#8d2a2a", hardrockbet_oh: "#6d2a2a",
+    betrivers: "#14586f", ballybet: "#9a2450",
+  };
+  return `<span class="marktile" style="background:${colors[book.key] || "#2c3544"}">${esc(book.short || book.name.slice(0, 2))}</span>`;
+}
+
+function shortWhen(game) {
+  if (game.state && game.state !== "pre" && game.score) return `${game.away.abbr} ${game.score.away}–${game.home.abbr} ${game.score.home}`;
+  const match = String(game.start_local || "").match(/(\d{1,2}:\d{2} [AP]M)/);
+  return match ? match[1] : (game.start_local || "");
+}
+
+function legFor(game, market, side) {
+  return state.legs.find((leg) => String(leg.event_id) === String(game.event_id) && leg.market === market && leg.side === side);
+}
+
+function onSlip(leg) {
+  return !!(leg && state.slip.some((item) => item.id === leg.id));
+}
+
+function meter(prob, band) {
+  const width = Math.max(6, Math.min(100, Math.round((prob || 0) * 100)));
+  return `<div class="meter ${band}"><span style="width:${width}%"></span></div>`;
+}
+
+function hitBand(prob) {
+  if (prob >= 0.35) return "safer";
+  if (prob >= 0.15) return "balanced";
+  if (prob >= 0.03) return "longshot";
+  return "lotto";
+}
+
 function shell(body) {
   const stamp = state.meta?.generated_at_et || "";
-  const offline = state.offline ? `<p class="banner offline-banner">Showing the last data saved on this phone. A live refresh didn't load.</p>` : "";
+  const offline = state.offline ? `<p class="banner">Offline. Showing the last saved slate.</p>` : "";
   return `
     <div class="phone">
       <header class="top">
-        <div class="brand"><span class="mark" aria-hidden="true"></span> EdgeLab</div>
+        <div class="brand"><img src="icons/icon-192.png" alt=""> EdgeLab</div>
         <div class="stamp">${esc(stamp)}</div>
+        <button type="button" class="iconbtn" data-act="settings" aria-label="Settings">⚙</button>
       </header>
       ${offline}
       <main id="screen">${body}</main>
-      ${tabs()}
+      <div class="dock">
+        ${state.slip.length ? slipBar() : ""}
+        ${tabs()}
+      </div>
+      ${state.slipOpen ? slipSheet() : ""}
       ${state.sheet ? sheetHtml() : ""}
     </div>`;
+}
+
+function slipBar() {
+  const best = bestBook(state.slip);
+  const price = best ? `${fmtAm(best.summary.american)} est.` : "—";
+  const n = state.slip.length;
+  return `<button type="button" class="slipbar" data-act="open-slip"><span class="count">${n}</span><span>${n} pick${n === 1 ? "" : "s"}</span><span class="grow num">${price}</span><span>View slip</span></button>`;
 }
 
 function tabs() {
   const items = [["today", "Today"], ["edges", "Edges"], ["builder", "Build"], ["sgp", "SGP"], ["slip", "Slip"], ["tracker", "Track"]];
   return `<nav class="tabs">${items.map(([id, label]) => {
     const badge = id === "slip" && state.slip.length ? `<span class="dot">${state.slip.length}</span>` : "";
-    return `<button type="button" data-act="tab" data-tab="${id}" class="${state.tab === id ? "on" : ""}" ${state.tab === id ? 'aria-current="page"' : ""}>${icon(id)}${badge}${label}</button>`;
+    const on = state.tab === id || (id === "slip" && state.slipOpen);
+    return `<button type="button" data-act="tab" data-tab="${id}" class="${on ? "on" : ""}" ${on ? 'aria-current="page"' : ""}>${icon(id)}${badge}${label}</button>`;
   }).join("")}</nav>`;
 }
 
@@ -175,18 +253,18 @@ function renderToday() {
   const days = state.slate?.days || [];
   const sports = day?.sports || [];
     const shortName = { nfl: "NFL", nba: "NBA", nhl: "NHL", cfb: "CFB", ncaab: "NCAAB", ncaaw: "NCAAW", mlb: "MLB", wnba: "WNBA", epl: "EPL", atp: "ATP", wta: "WTA", ucl: "UCL", mls: "MLS" };
-    const chips = [`<button type="button" class="chip ${state.sport === "all" ? "on" : ""}" data-act="sport" data-sport="all">All</button>`]
-    .concat(sports.map((sport) => `<button type="button" class="chip ${state.sport === sport.key ? "on" : ""}" data-act="sport" data-sport="${esc(sport.key)}">${esc(shortName[sport.key] || sport.name)}</button>`));
+    const chips = [`<button type="button" class="chip ${state.sport === "all" ? "on" : ""}" data-act="sport" data-sport="all">${sportGlyph("all")}All</button>`]
+    .concat(sports.map((sport) => `<button type="button" class="chip ${state.sport === sport.key ? "on" : ""}" data-act="sport" data-sport="${esc(sport.key)}">${sportGlyph(sport.key)}${esc(shortName[sport.key] || sport.name)}</button>`));
   const dayChips = days.map((item) => `<button type="button" class="chip ${item.key === day?.key ? "on" : ""}" data-act="day" data-day="${esc(item.key)}">${esc(item.label)}</button>`);
   const off = (state.slate?.offseason || []).slice(0, 6).map((row) => `<p class="note"><b>${esc(row.name)}.</b> ${esc(row.note)}</p>`).join("");
   return `
-    <h1>Today</h1>
-    <div class="row">${dayChips.join("")}</div>
-    <div class="row">${chips.join("")}</div>
-    <input id="team-filter" class="search" placeholder="Filter teams" value="${esc(state.teamQuery)}" autocomplete="off">
+    <div class="sticky">
+      <div class="row">${dayChips.join("")}</div>
+      <div class="row">${chips.join("")}</div>
+      <input id="team-filter" class="search" placeholder="Filter teams" value="${esc(state.teamQuery)}" autocomplete="off">
+    </div>
     <div id="game-list">${gameListHtml()}</div>
-    ${off}
-    ${footer()}`;
+    ${off}`;
 }
 
 function gameListHtml() {
@@ -216,34 +294,52 @@ function gameListHtml() {
   return blocks.join("");
 }
 
-function lineBits(game) {
+function boardLines(game) {
   const lines = game.lines || {};
-  const preferred = lines.draftkings || Object.values(lines)[0];
-  if (!preferred) return `<p class="note">No odds in the free feed.</p>`;
-  const bits = [];
-  if (preferred.spread_home != null && game.home) {
-    const n = Number(preferred.spread_home);
-    bits.push(`<span class="keep">${esc(game.home.abbr)} ${n > 0 ? "+" : ""}${n}</span>`);
-  }
-  if (preferred.total != null) bits.push(`<span class="keep">O/U ${preferred.total}</span>`);
-  if (preferred.ml_home != null && game.home) bits.push(`<span class="keep">${esc(game.home.abbr)} ML ${fmtAm(preferred.ml_home)}</span>`);
-  const bookName = (bookByKey(Object.keys(lines)[0]) || {}).name || "DraftKings";
-  return `<p class="spread"><span>${bits.join(" · ") || "Odds posted"}</span></p><p class="muted">${esc(bookName)}</p>`;
+  return lines.draftkings || Object.values(lines)[0] || null;
+}
+
+function oddCell(game, market, side, top, odds) {
+  if (odds == null && top == null) return `<span class="odd empty">—</span>`;
+  const leg = legFor(game, market, side);
+  const edge = leg ? offerPrimary(leg)?.edge : null;
+  const badge = edge == null ? "" : `<i class="badge ${edgeClass(edge)}">${esc(fmtEdge(edge).replace(" pp", ""))}</i>`;
+  return `<button type="button" class="odd ${onSlip(leg) ? "on" : ""}" data-act="toggle-board" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}" data-market="${esc(market)}" data-side="${esc(side)}">
+    <b>${esc(top || "")}</b><span class="price num">${fmtAm(odds)}</span>${badge}
+  </button>`;
+}
+
+function teamRow(game, side) {
+  const team = game[side];
+  const lines = boardLines(game);
+  const spread = lines ? (side === "home" ? lines.spread_home : lines.spread_away) : null;
+  const spreadOdds = lines ? lines["spread_" + side + "_odds"] : null;
+  const totalLabel = !lines || lines.total == null ? null : (side === "away" ? `O ${lines.total}` : `U ${lines.total}`);
+  const totalOdds = lines ? (side === "away" ? lines.over_odds : lines.under_odds) : null;
+  const ml = lines ? lines["ml_" + side] : null;
+  const spreadText = spread == null ? "" : `${Number(spread) > 0 ? "+" : ""}${spread}`;
+  return `<div class="cols">
+    <button type="button" class="teamcell" data-act="game" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}">
+      ${logoHtml(game.league, team)}
+      <span><b>${esc(team.abbr)}</b><span>${esc(team.record || "")}</span></span>
+    </button>
+    ${oddCell(game, "Spread", side, spreadText, spreadOdds)}
+    ${oddCell(game, "Total", side === "away" ? "over" : "under", totalLabel, totalOdds)}
+    ${oddCell(game, lines && lines.ml_draw != null ? "1X2" : "ML", side, "ML", ml)}
+  </div>`;
 }
 
 function gameCard(game) {
-  const badge = game.badge
-    ? `<span class="pill ${game.badge.tier === "High" ? "high" : "medium"}">${esc(game.badge.tier)} ${esc(fmtEdge(game.badge.edge))}</span>`
-    : "";
-  const score = game.score && game.state !== "pre"
-    ? `<span class="muted">${esc(game.away.abbr)} ${esc(game.score.away)} · ${esc(game.home.abbr)} ${esc(game.score.home)}</span>`
-    : `<span class="when">${esc(game.start_local || "")}</span>`;
-  return `<button type="button" class="card" data-act="game" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}">
-    <div class="card-top"><span class="match">${esc(game.away.abbr)} @ ${esc(game.home.abbr)}</span>${score}</div>
-    <div class="records">${esc(game.away.record || "—")} at ${esc(game.home.record || "—")}</div>
-    ${lineBits(game)}
-    <div class="pills">${badge}${game.analyzed ? "" : `<span class="pill">Line only</span>`}</div>
-  </button>`;
+  if (game.field) return "";
+  const edge = game.badge ? `<span class="pill ${game.badge.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(game.badge.edge))}</span>` : "";
+  const empty = boardLines(game) ? "" : `<p class="note">No odds in the free feed.</p>`;
+  return `<article class="board">
+    <div class="board-top"><span class="when">${esc(shortWhen(game))}</span>${edge}</div>
+    <div class="colhead"><span></span><span>Spread</span><span>Total</span><span>ML</span></div>
+    ${teamRow(game, "away")}
+    ${teamRow(game, "home")}
+    ${empty}
+  </article>`;
 }
 
 function renderEdges() {
@@ -252,16 +348,15 @@ function renderEdges() {
   const rows = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   const chips = ["High", "Medium"].map((tier) => `<button type="button" class="chip ${state.edgeTier === tier ? "on" : ""}" data-act="tier" data-tier="${tier}">${tier === "Medium" ? "High + Medium" : "High only"}</button>`);
   const body = rows.length ? rows.map((edge, index) => {
-    const caution = (edge.caution || []).slice(0, 2).map((item) => `<span class="pill warn">${esc(item.split(":")[0])}</span>`).join("");
-    return `<button type="button" class="card" data-act="edge" data-index="${index}">
-      <div class="card-top"><span class="match">${esc(edge.selection)}</span><span class="pill ${edge.tier === "High" ? "high" : "medium"}">${esc(edge.tier)} ${esc(fmtEdge(edge.edge))}</span></div>
-      <p class="note">${esc(edge.game)} · ${esc(edge.start_local || "")} · ${fmtAm(edge.odds)} · model ${fmtPct(edge.model_prob)}</p>
-      <div class="pills">${caution}</div>
+    const flag = (edge.caution || []).length ? " · caution" : "";
+    return `<button type="button" class="edge-row" data-act="edge" data-index="${index}">
+      <span><b>${esc(edge.selection)}</b><div class="note">${esc(edge.game)} · ${fmtAm(edge.odds)}${flag}</div></span>
+      <span class="pill ${edge.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(edge.edge))}</span>
     </button>`;
-  }).join("") : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges in this refresh. Most lines are efficient. Passing is a position.</div>`;
+  }).join("") : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges. Most prices are efficient.</div>`;
   const visible = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   state._visibleEdges = visible;
-  return `<h1>Edges</h1><div class="row">${chips.join("")}</div>${body}${footer()}`;
+  return `<h1>Edges</h1><div class="row">${chips.join("")}</div>${body}`;
 }
 
 function activeBook(game) {
@@ -296,10 +391,12 @@ function renderGame() {
       if (!offer) {
         return `<button type="button" class="pick" disabled><span class="pick-side">${esc(label)}</span><span class="pick-meta">Not offered</span></button>`;
       }
-      return `<button type="button" class="pick" data-act="pick" data-market="${esc(market.market)}" data-side="${esc(side.side)}">
-        <span class="pick-side">${esc(offer.selection)}</span>
-        <span class="pick-meta"><b class="num">${fmtAm(offer.odds)}</b><span class="${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge))}</span></span>
-      </button>`;
+      const leg = legFor(game, market.market, side.side);
+      return `<div class="oddwrap"><button type="button" class="odd big ${onSlip(leg) ? "on" : ""}" data-act="odd-tap" data-market="${esc(market.market)}" data-side="${esc(side.side)}">
+        <span>${esc(offer.selection)}</span>
+        <span class="price num">${fmtAm(offer.odds)}</span>
+        <i class="badge ${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>
+      </button><button type="button" class="info" data-act="why-side" data-market="${esc(market.market)}" data-side="${esc(side.side)}" aria-label="Why">i</button></div>`;
     }).join("");
     return `<section><div class="market-name">${esc(market.market)}</div><div class="pair">${buttons}</div></section>`;
   }).join("");
@@ -307,9 +404,10 @@ function renderGame() {
     const sides = Object.entries(prop.sides || {}).map(([side, offers]) => {
       const offer = offers[bookKey];
       if (!offer) return "";
-      return `<button type="button" class="pick" data-act="prop" data-player="${esc(prop.player_id)}" data-stat="${esc(prop.stat)}" data-line="${esc(prop.line)}" data-side="${esc(side)}">
-        <span class="pick-side">${esc(prop.player)} ${esc(side)} ${esc(prop.line)} ${esc(prop.stat_label)}</span>
-        <span class="pick-meta"><b class="num">${fmtAm(offer.odds)}</b><span class="${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge))}</span></span>
+      return `<button type="button" class="odd big" data-act="prop" data-player="${esc(prop.player_id)}" data-stat="${esc(prop.stat)}" data-line="${esc(prop.line)}" data-side="${esc(side)}">
+        <span>${esc(side)} ${esc(prop.line)}</span>
+        <span class="price num">${fmtAm(offer.odds)}</span>
+        <i class="badge ${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>
       </button>`;
     }).join("");
     const rate = prop.hit_rates ? Object.entries(prop.hit_rates).map(([k, v]) => `${esc(k)} ${esc(v)}`).join(" · ") : "";
@@ -317,21 +415,21 @@ function renderGame() {
       <p class="note">Projection ${esc(prop.projection)} · over hit ${rate}</p>
       <div class="pair">${sides || `<p class="note">Not offered at this book.</p>`}</div></section>`;
   }).join("");
-  const propEmpty = game.props?.length ? "" : `<p class="note">No player-prop prices in this refresh. ESPN's free feed does not include prop odds, and this run did not spend Odds API credits on props. No prop line is shown rather than invented.</p>`;
+  const propEmpty = game.props?.length ? "" : `<p class="note">No prop prices in this feed. None are shown.</p>`;
   const score = game.score ? `<p class="note">Score ${esc(game.away.abbr)} ${esc(game.score.away)} – ${esc(game.home.abbr)} ${esc(game.score.home)}. Picks are only for games that have not started.</p>` : "";
   return `
     <button class="back" type="button" data-act="tab" data-tab="today">Back</button>
-    <h1>${esc(game.away.abbr)} @ ${esc(game.home.abbr)}</h1>
-    <p class="note">${esc(game.start_local || "")} · ${esc(game.league_name || game.league)}</p>
-    <p class="note">${esc(game.model_summary || "No model number for this game.")}</p>
+    <div class="cols" style="margin-bottom:8px">
+      <span></span>
+    </div>
+    <h1 style="display:flex;align-items:center;gap:8px">${logoHtml(game.league, game.away)} ${esc(game.away.abbr)} <span class="note">@</span> ${logoHtml(game.league, game.home)} ${esc(game.home.abbr)}</h1>
+    <p class="note">${esc(shortWhen(game))} · ${esc(game.model_summary || "No model")}</p>
     ${score}
-    <p class="source">${esc(source)}</p>
-    <div class="pills">${flags}</div>
+    <p class="source">${esc(book?.name || "DraftKings")}${game.odds_feed === "espn" ? " · ESPN" : ""}</p>
     ${injuries}
-    <div class="markets">${markets || `<div class="empty">No markets in the free feed for this game.</div>`}</div>
+    <div class="markets">${markets || `<div class="empty">No odds in the free feed.</div>`}</div>
     <h3>Players</h3>
-    ${props}${propEmpty}
-    ${footer()}`;
+    ${props}${propEmpty}`;
 }
 
 function parseRequest(text) {
@@ -617,26 +715,20 @@ function sgpCardsFor(legs) {
 }
 
 function renderSgpCard(card) {
-  if (card.empty) {
-    return `<article class="card"><div class="card-top"><span class="match">${esc(card.label)}</span></div><p class="note">${esc(card.band)}. No non-conflicting card in this band from the priced markets. Nothing was invented to fill it.</p></article>`;
-  }
-  const price = card.price
-    ? `${esc(card.price.book.name)} ${fmtAm(card.price.summary.american)} est.`
-    : "No book in the feed priced every leg";
-  const legs = card.legs.map((leg) => `<div class="sgp-leg">${esc(leg.selection)} <span class="muted">${fmtAm(offerPrimary(leg).odds)} · ${fmtPct(offerPrimary(leg).model_prob)}</span></div>`).join("");
+  if (card.empty) return `<article class="parlay"><div class="parlay-top"><b>${esc(card.label)}</b></div><p class="note">No card in this band.</p></article>`;
+  const band = card.key === "longshot" ? "longshot" : card.key;
+  const price = card.price ? `${esc(card.price.book.short || card.price.book.name)} ${fmtAm(card.price.summary.american)} est.` : "No full price";
+  const legs = card.legs.map((leg) => `<div class="legline"><span>${esc(leg.selection)}</span><span class="num">${fmtAm(offerPrimary(leg).odds)}</span></div>`).join("");
   const on = state.sgpx.includes(card.id);
-  const pick = state.sgpMode === "sgpx"
-    ? `<button type="button" class="btn block" data-act="toggle-sgpx" data-id="${esc(card.id)}">${on ? "Remove from SGPx" : "Use in SGPx"}</button>`
-    : `<button type="button" class="cta" data-act="add-sgp" data-id="${esc(card.id)}">Add to slip</button>`;
-  return `<article class="card ${on ? "on-card" : ""}">
-    <div class="card-top"><span class="match">${esc(card.label)}</span><span class="pill ${card.prob >= 0.35 ? "high" : card.prob >= 0.15 ? "medium" : "warn"}">${fmtPct(card.prob)} hit</span></div>
-    <p class="note">${esc(card.band)}</p>
+  const action = state.sgpMode === "sgpx"
+    ? `<button type="button" class="btn" data-act="toggle-sgpx" data-id="${esc(card.id)}">${on ? "Remove" : "Use"}</button>`
+    : `<button type="button" class="cta" data-act="add-sgp" data-id="${esc(card.id)}">Add</button>`;
+  return `<article class="parlay ${on ? "on-card" : ""}">
+    <div class="parlay-top"><b>${esc(card.label)}</b><span class="pill ${band}">${fmtPct(card.prob)}</span></div>
+    ${meter(card.prob, band)}
     ${legs}
-    <p class="note">Best multiplied price: ${price}. Fair ${fmtAm(card.fair)}. Edge vs that multiplied price ${card.edge == null ? "—" : esc(fmtEdge(card.edge))}.</p>
-    <p class="note">Weakest leg: ${esc(card.weak.selection)} (${esc(fmtEdge(offerPrimary(card.weak).edge))}).</p>
-    ${(card.notes || []).map((note) => `<p class="note">${esc(note)}</p>`).join("")}
-    <p class="note">Books price same-game parlays with their own correlation. A real SGP price can differ from these multiplied leg prices, usually with more hold.</p>
-    ${pick}
+    <p class="note">${price} · edge ${card.edge == null ? "—" : esc(fmtEdge(card.edge))} · weak ${esc(card.weak.selection)}</p>
+    <div class="row-actions"><button type="button" class="btn" data-act="why-sgp" data-id="${esc(card.id)}">Why</button>${action}</div>
   </article>`;
 }
 
@@ -659,13 +751,12 @@ function renderSgp() {
       const price = cardPrice(legs);
       const implied = price ? 1 / price.summary.dec : null;
       const edge = implied == null ? null : prob - implied;
-      extra = `<article class="card">
-        <div class="match">SGPx · ${picked.length} games</div>
-        <p class="note">${picked.map((card) => `${esc(card.matchup)} ${esc(card.label)}`).join(" · ")}</p>
-        <p class="note">Combined hit chance ${fmtPct(prob)}. Each game uses its own correlation adjustment. Different games are treated as independent.</p>
-        <p class="note">Best multiplied price: ${price ? `${esc(price.book.name)} ${fmtAm(price.summary.american)} est.` : "no book priced every leg"}. Edge vs that multiplied price ${edge == null ? "—" : esc(fmtEdge(edge))}.</p>
-        <p class="note">Books still price each same-game piece with their own correlation, and an SGPx price is not the product of the leg odds.</p>
-        <button type="button" class="cta" data-act="add-sgpx">Add SGPx to slip</button>
+      extra = `<article class="parlay">
+        <div class="parlay-top"><b>SGPx · ${picked.length}</b><span class="pill ${hitBand(prob)}">${fmtPct(prob)}</span></div>
+        ${meter(prob, hitBand(prob))}
+        <p class="note">${picked.map((card) => esc(card.matchup)).join(" · ")}</p>
+        <p class="note">${price ? `${esc(price.book.short || price.book.name)} ${fmtAm(price.summary.american)} est.` : "No full price"} · edge ${edge == null ? "—" : esc(fmtEdge(edge))}</p>
+        <div class="row-actions"><button type="button" class="btn" data-act="why-sgpx">Why</button><button type="button" class="cta" data-act="add-sgpx">Add</button></div>
       </article>`;
     } else {
       extra = `<p class="note">Pick 2 or 3 same-game cards from different games. Two cards from one game are not an SGPx.</p>`;
@@ -673,12 +764,11 @@ function renderSgp() {
   }
   const body = blocks.length ? blocks.map((block) => `<h3>${esc(block.matchup)} · ${esc(block.start_local || "")}</h3>${block.tiers.map(renderSgpCard).join("")}`).join("") : `<div class="empty">No modeled games on this day. Try another date.</div>`;
   return `<h1>SGP</h1>
-    <p class="note">Same-game parlays from the published markets. Hit chance is adjusted for correlation. It is not the product of the legs, and it is not a book's SGP price.</p>
+    <p class="note">Hit chance includes correlation. It is not a book's SGP price.</p>
     ${mode}
     <div class="row">${dayChips}</div>
     ${extra}
-    ${body}
-    ${footer()}`;
+    ${body}`;
 }
 
 function runBuild(spec) {
@@ -802,31 +892,19 @@ function renderBuilder() {
   } else if (b.result?.legs) {
     const res = b.result;
     const weakIds = new Set((res.weak || []).map((row) => row.id));
-    const legs = res.legs.map((leg, index) => {
+    const band = hitBand(res.prob);
+    const legs = res.legs.map((leg) => {
       const offer = offerPrimary(leg);
-      const why = (offer.reasons || [])[0] || "";
-      return `<article class="leg ${weakIds.has(leg.id) ? "weak" : ""}">
-        <div><div class="leg-title">${index + 1}. ${esc(leg.selection)}</div>
-        <div class="leg-sub">${esc(leg.matchup)} · ${esc(leg.start_local || "")}</div></div>
-        <div class="num">${fmtAm(offer.odds)}<div class="${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge))}</div></div>
-        <div class="leg-sub">Model ${fmtPct(offer.model_prob)} · ${esc(offer.tier || "")}${leg.hit_rate ? ` · L10 over ${esc(leg.hit_rate)}` : ""}${leg.form ? ` · ${esc(leg.form)}` : ""}<br>${esc(why)}</div>
-      </article>`;
+      const weak = weakIds.has(leg.id) ? " · weak" : "";
+      return `<div class="legline"><span>${esc(leg.selection)}${weak}</span><span class="num">${fmtAm(offer.odds)}</span></div>`;
     }).join("");
-    const weak = (res.weak || []).map((row) => `<li>${esc(res.legs.find((leg) => leg.id === row.id)?.selection || "Leg")}: ${esc(row.why.join("; "))}</li>`).join("");
     result = `
-      <div id="build-result">
-        <div class="statgrid">
-          <div class="stat"><span>Model fair</span><b class="num">${fmtPct(res.prob)} · ${fmtAm(res.fair)}</b></div>
-          <div class="stat"><span>Estimated payout</span><b class="num">${fmtAm(res.payout)}</b></div>
-        </div>
-        <p class="note">${esc(res.priceBasis)} Expected return at that estimate: ${fmtSignedPct(res.ev)}.</p>
+      <div id="build-result" class="parlay">
+        <div class="parlay-top"><b>${esc(res.spec.legs)} legs</b><span class="pill ${band}">${fmtPct(res.prob)}</span></div>
+        ${meter(res.prob, band)}
         ${legs}
-        <h3>Weakest leg</h3>
-        ${weak ? `<ul>${weak}</ul>` : `<p class="note">No leg was flagged.</p>`}
-        ${(res.correlation || []).map((note) => `<p class="note">${esc(note)}</p>`).join("")}
-        ${(res.honest || []).map((note) => `<p class="warnbox">${esc(note)}</p>`).join("")}
-        ${(res.notes || []).map((note) => `<p class="note">${esc(note)}</p>`).join("")}
-        <button type="button" class="cta" data-act="use-build">Put these on the slip</button>
+        <p class="note">${fmtAm(res.payout)} est. · fair ${fmtAm(res.fair)}</p>
+        <div class="row-actions"><button type="button" class="btn" data-act="why-build">Why</button><button type="button" class="cta" data-act="use-build">Add</button></div>
       </div>`;
   }
   const parsed = b.parsed ? `<p class="note">Read as ${esc(b.parsed.risk)} · ${esc(b.parsed.legs)} legs · ${esc(b.parsed.team || "any team")} · ${esc(b.parsed.date || "any date")} · target ${fmtAm(b.parsed.target)}.</p>` : "";
@@ -899,22 +977,15 @@ function renderSlip() {
     const isBest = best && book.key === best.book.key;
     const on = selected && book.key === selected.key;
     return `<button type="button" class="book ${on ? "on" : ""} ${isBest ? "best" : ""} ${disabled ? "off" : ""}" data-act="choose-book" data-book="${esc(book.key)}" ${disabled ? "disabled" : ""}>
-      <div class="book-name">${esc(book.name)} ${isBest ? `<span class="tag">Best</span>` : ""} ${on ? `<span class="tag">Selected</span>` : ""}</div>
+      ${bookMark(book)}
+      <div class="book-name">${esc(book.name)} ${isBest ? `<span class="tag">Best</span>` : ""}</div>
       <div class="book-count">${esc(count)}</div>
       <div class="book-price num">${esc(price)}</div>
     </button>`;
   }).join("");
   const legs = state.slip.map((leg) => {
     const offer = selected ? offerOf(leg.offers, selected) : null;
-    const who = leg.player || leg.team_name || leg.selection;
-    return `<article class="leg">
-      <div>
-        <div class="leg-title">${esc(who)}</div>
-        <div class="leg-sub">${esc(leg.selection)} · ${esc(leg.matchup || "")} · ${esc(leg.start_local || "")}</div>
-        <div class="leg-sub">Model ${offer ? fmtPct(offer.model_prob) : "—"} ${leg.hit_rate ? `· L10 over ${esc(leg.hit_rate)}` : leg.form ? `· ${esc(leg.form)}` : ""}</div>
-      </div>
-      <div><b class="num">${offer ? fmtAm(offer.odds) : "—"}</b><button type="button" class="x" data-act="remove" data-id="${esc(leg.id)}" aria-label="Remove">×</button></div>
-    </article>`;
+    return `<div class="legline"><span>${esc(leg.selection)}</span><span class="num">${offer ? fmtAm(offer.odds) : "—"} <button type="button" class="mini" data-act="why-leg" data-id="${esc(leg.id)}" aria-label="Why">i</button><button type="button" class="mini" data-act="remove" data-id="${esc(leg.id)}" aria-label="Remove">×</button></span></div>`;
   }).join("");
   const model = summary?.complete ? slipModel(state.slip, selected) : null;
   const edge = model?.prob != null && summary?.complete ? model.prob - 1 / summary.dec : null;
@@ -930,27 +1001,37 @@ function renderSlip() {
     edge != null && edge < 0 ? "The model probability is below the estimated price. That is a negative edge." : "",
   ].filter(Boolean);
   const missing = catalog.filter((book) => !book.in_feed);
-  const absent = missing.length ? `<p class="note">${esc(missing.map((book) => book.name).join(", "))} ${missing.length === 1 ? "is" : "are"} not in this free odds feed, so ${missing.length === 1 ? "that card stays" : "those cards stay"} empty. No price is filled in for them.</p>` : "";
+  const absent = missing.length ? `<p class="note">${esc(missing.map((book) => book.short || book.name).join(", "))} have no lines in this feed.</p>` : "";
   const copied = state.copied === true ? `<p class="note">Slip copied. Pre-filled bets are not supported — enter the legs yourself.</p>`
     : state.copied === false ? `<p class="note">Clipboard was blocked. Select the slip text below.</p><textarea class="field copybox" readonly>${esc(state.copyText)}</textarea>` : "";
   return `
-    <h1>Slip</h1>
     <div class="books">${cards}</div>
-    <p class="note">Best price is the highest estimated payout among books that offer every leg. “est.” means the product of leg prices, not a quoted parlay.</p>
     ${absent}
     ${legs}
     <div class="statgrid">
-      <div class="stat"><span>Estimated odds</span><b class="num">${summary?.complete ? fmtAm(summary.american) : "—"}</b></div>
-      <div class="stat"><span>Model vs price</span><b class="num">${edge == null ? "—" : fmtEdge(edge)}</b></div>
+      <div class="stat"><span>Est. odds</span><b class="num">${summary?.complete ? fmtAm(summary.american) : "—"}</b></div>
+      <div class="stat"><span>Edge</span><b class="num">${edge == null ? "—" : fmtEdge(edge)}</b></div>
     </div>
-    <p class="note">Model ${model?.prob != null ? fmtPct(model.prob) : "—"}${model?.same ? " after the same-game correlation adjustment" : " if separate games are independent"}. Fair ${model?.prob ? fmtAm(decToAm(1 / model.prob)) : "—"}.</p>
-    ${risk.map((line) => `<p class="note">${esc(line)}</p>`).join("")}
-    <button type="button" class="cta" data-act="open-book" ${selected ? "" : "disabled"}>Open in ${esc(selected?.name || "book")}</button>
-    <p class="source">Opens that book's event page when every leg is the same game and the feed included a public link. Otherwise it opens the book's home. The slip is copied. EdgeLab cannot fill the bet slip for you.</p>
-    ${copied}
-    <button type="button" class="btn block" data-act="save-play">Save to my plays</button>
-    <button type="button" class="btn block" data-act="clear-slip">Clear slip</button>
-    ${footer()}`;
+    <div class="sheet-foot">
+      <button type="button" class="cta" data-act="open-book" ${selected ? "" : "disabled"}>Open in ${esc(selected?.name || "book")}</button>
+      <p class="disclaimer">Research only. EdgeLab does not place bets.</p>
+      ${copied}
+    </div>`;
+}
+
+function slipSheet() {
+  const inner = state.slip.length ? renderSlip() : `<div class="empty">No picks yet.</div>`;
+  return `<div class="sheet" data-act="close-slip"><div class="sheet-card slip-sheet" data-act="stop"><div class="grab"></div><h2 style="margin:0 0 8px">Slip</h2><div class="sheet-body">${inner}</div></div></div>`;
+}
+
+function settingsSheet() {
+  return `<div class="sheet" data-act="close-sheet"><div class="sheet-card" data-act="stop"><div class="grab"></div>
+    <h2>Settings</h2>
+    <p>EdgeLab is a research app. It does not place or accept bets, and it never suggests a stake. Prices and model numbers are estimates from public data. A small edge is often just model error. Books price parlays, and especially same-game parlays, with their own correlation, so a real price can differ from the multiplied leg prices shown here.</p>
+    <p>If gambling is a problem, call <a href="tel:18004262537">1-800-GAMBLER</a>.</p>
+    <p class="note">Updated ${esc(state.meta?.generated_at_et || "—")}.</p>
+    <button type="button" class="btn block" data-act="close-sheet">Close</button>
+  </div></div>`;
 }
 
 function renderTracker() {
@@ -980,13 +1061,16 @@ function renderTracker() {
     <h3>Waiting on a final</h3>
     ${pending || `<p class="note">No pending recommended plays. The refresh logs High and Medium edges and grades them from ESPN finals.</p>`}
     <h3>My plays</h3>
-    ${mine}
-    ${footer()}`;
+    ${mine}`;
 }
 
 function sheetHtml() {
   const sheet = state.sheet;
   if (!sheet) return "";
+  if (sheet.kind === "settings") return settingsSheet();
+  if (sheet.kind === "note") {
+    return `<div class="sheet" data-act="close-sheet"><div class="sheet-card" data-act="stop"><div class="grab"></div><h2>${esc(sheet.title)}</h2>${(sheet.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join("")}<button type="button" class="btn block" data-act="close-sheet">Close</button></div></div>`;
+  }
   const offer = sheet.offer;
   const leg = sheet.leg;
   if (!offer) {
@@ -1071,6 +1155,7 @@ function render() {
   else if (state.tab === "slip") body = renderSlip();
   else body = renderTracker();
   document.getElementById("app").innerHTML = shell(body);
+  document.getElementById("splash")?.classList.add("hide");
   document.body.dataset.ready = state.fatal ? "error" : "1";
 }
 
@@ -1100,6 +1185,12 @@ function route() {
   const raw = (location.hash || "#today").replace(/^#/, "");
   const [head, league, id] = raw.split("/");
   state.sheet = null;
+  if (head === "slip") {
+    state.slipOpen = true;
+    state.tab = "today";
+    render();
+    return;
+  }
   if (head === "game" && league && id) {
     showGame(league, decodeURIComponent(id));
     return;
@@ -1164,13 +1255,73 @@ function onClick(event) {
   if (!el) return;
   const act = el.dataset.act;
   if (act === "stop") { event.stopPropagation(); return; }
-  if (act === "tab") { go("#" + el.dataset.tab); return; }
+  if (act === "tab") {
+    if (el.dataset.tab === "slip") { state.slipOpen = true; state.sheet = null; render(); return; }
+    state.slipOpen = false;
+    go("#" + el.dataset.tab);
+    return;
+  }
+  if (act === "open-slip") { state.slipOpen = true; state.sheet = null; render(); return; }
+  if (act === "close-slip") { state.slipOpen = false; render(); return; }
+  if (act === "settings") { state.sheet = { kind: "settings" }; state.slipOpen = false; render(); return; }
+  if (act === "toggle-board") {
+    const game = (state.slate?.days || []).flatMap((day) => day.sports.flatMap((sport) => sport.games || [])).find((item) => String(item.event_id) === el.dataset.id);
+    const leg = game && legFor(game, el.dataset.market, el.dataset.side);
+    if (!leg) {
+      state.sheet = { kind: "note", title: "No model", paragraphs: ["This price is posted. It was not modeled in this refresh, so there is no edge."] };
+      render();
+      return;
+    }
+    if (onSlip(leg)) state.slip = state.slip.filter((item) => item.id !== leg.id);
+    else addLeg(leg);
+    persistSlip();
+    render();
+    return;
+  }
+  if (act === "odd-tap" && state.game) {
+    const leg = legFromGame(state.game, el.dataset.market, el.dataset.side, activeBook(state.game));
+    if (!leg) return;
+    if (onSlip(leg)) state.slip = state.slip.filter((item) => item.id !== leg.id);
+    else addLeg(leg);
+    persistSlip();
+    render();
+    return;
+  }
+  if (act === "why-leg") {
+    const leg = state.slip.find((item) => item.id === el.dataset.id);
+    if (leg) openSheet(leg, state.book);
+    return;
+  }
+  if (act === "why-side" && state.game) {
+    const leg = legFromGame(state.game, el.dataset.market, el.dataset.side, activeBook(state.game));
+    if (leg) openSheet(leg, activeBook(state.game));
+    return;
+  }
+  if (act === "why-sgp") {
+    const card = (state.sgpCards || []).find((item) => item.id === el.dataset.id);
+    if (!card) return;
+    state.sheet = { kind: "note", title: card.label, paragraphs: [...(card.notes || []), `Weakest leg: ${card.weak.selection}.`, "Books price same-game parlays with their own correlation. A real SGP price can differ from the multiplied leg prices, usually with more hold."] };
+    render();
+    return;
+  }
+  if (act === "why-sgpx") {
+    state.sheet = { kind: "note", title: "SGPx", paragraphs: ["Each game uses its own correlation adjustment. Different games are treated as independent. A book's SGPx price is not the product of the leg odds."] };
+    render();
+    return;
+  }
+  if (act === "why-build" && state.builder.result) {
+    const res = state.builder.result;
+    state.sheet = { kind: "note", title: "Why this card", paragraphs: [...(res.honest || []), ...(res.correlation || []), ...(res.notes || []), res.priceBasis].filter(Boolean) };
+    render();
+    return;
+  }
   if (act === "sgp-mode") { state.sgpMode = el.dataset.mode; render(); return; }
   if (act === "add-sgp") {
     const card = (state.sgpCards || []).find((item) => item.id === el.dataset.id);
     if (!card) return;
     for (const leg of card.legs) addLeg(leg);
-    go("#slip");
+    state.slipOpen = true;
+    render();
     return;
   }
   if (act === "toggle-sgpx") {
@@ -1184,7 +1335,8 @@ function onClick(event) {
   if (act === "add-sgpx") {
     const picked = state.sgpx.map((id) => (state.sgpCards || []).find((item) => item.id === id)).filter(Boolean);
     for (const card of picked) for (const leg of card.legs) addLeg(leg);
-    go("#slip");
+    state.slipOpen = true;
+    render();
     return;
   }
   if (act === "day") { state.day = el.dataset.day; render(); return; }
@@ -1234,7 +1386,8 @@ function onClick(event) {
   if (act === "add-sheet" && state.sheet?.leg) {
     addLeg(state.sheet.leg);
     state.sheet = null;
-    go("#slip");
+    state.slipOpen = true;
+    render();
     return;
   }
   if (act === "build") {
@@ -1270,7 +1423,8 @@ function onClick(event) {
     state.bookPinned = false;
     state.copied = null;
     persistSlip();
-    go("#slip");
+    state.slipOpen = true;
+    render();
     return;
   }
   if (act === "choose-book") {

@@ -44,13 +44,13 @@ def main():
         shot(page, "edges.png")
 
         page.goto(BASE + "#game/nba/401909960", wait_until="networkidle")
-        page.wait_for_selector(".pick")
+        page.wait_for_selector(".odd.big")
         shot(page, "game.png")
 
         page.goto(BASE + "#builder", wait_until="networkidle")
         page.fill("#sentence", "safe 4 leg parlay browns sunday +400")
         page.click("button[data-act='build']")
-        page.wait_for_selector("#build-result .leg")
+        page.wait_for_selector("#build-result .legline")
         page.wait_for_timeout(200)
         shot(page, "builder.png")
 
@@ -58,21 +58,25 @@ def main():
         page.wait_for_selector(".book")
         shot(page, "slip-browns.png")
 
+        page.mouse.click(30, 80)
+        page.wait_for_timeout(200)
         page.goto(BASE + "#builder", wait_until="networkidle")
         page.fill("#sentence", "4 leg parlay knicks today +400")
         page.click("button[data-act='build']")
-        page.wait_for_selector("#build-result .leg")
+        page.wait_for_selector("#build-result .legline")
         page.click("button[data-act='use-build']")
         page.wait_for_selector(".book")
         shot(page, "slip.png")
 
+        page.mouse.click(30, 80)
+        page.wait_for_timeout(200)
         page.click("button[data-tab='tracker']")
         page.wait_for_selector("h1")
         shot(page, "tracker.png")
 
         page.goto(BASE + "#sgp", wait_until="networkidle")
         page.wait_for_selector("h1")
-        page.wait_for_selector(".sgp-leg")
+        page.wait_for_selector(".parlay")
         shot(page, "sgp.png")
         page.click("button[data-mode='sgpx']")
         page.wait_for_timeout(200)
