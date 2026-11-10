@@ -2,6 +2,8 @@
 
 Personal sports-betting **research** app. It reads public odds and stats, explains a side, and helps build a parlay. It never takes a bet and it never suggests a stake.
 
+NBA, NHL, NFL, college football, and MLB use engine v2. An edge is shown only where the backtest earned weight: NBA moneyline, NBA total, and NHL puck line. Other markets still show the model number and sit on the market price. Details are in `betting/BACKTEST.md`.
+
 The phone app is a static PWA. A scheduled GitHub Action runs the Python engine, writes JSON into `site/data/`, and (once you turn Pages on) serves that folder. There is no subscription and no paid API except the optional free tier of [The Odds API](https://the-odds-api.com/), which you can skip.
 
 ## Install on an iPhone
