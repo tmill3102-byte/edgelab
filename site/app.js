@@ -831,19 +831,19 @@ function scopeLegs(spec, notes) {
   const teamLegs = spec.team ? universe.filter((leg) => matchTeam(leg, spec.team)) : [];
   if (spec.team && !teamLegs.length) notes.push(`No game matching “${spec.team}” in that window.`);
   const teamEvents = new Set(teamLegs.map((leg) => leg.event_id)).size;
-  const teamCapacity = teamEvents * 3 + teamLegs.filter((leg) => leg.market === "Prop").length;
   let expanded = false;
   let pool = universe;
-  if (teamLegs.length && teamLegs.length >= spec.legs && teamCapacity >= spec.legs) pool = teamLegs;
+  // One leg per game, so a card needs that many different games.
+  if (teamLegs.length && teamEvents >= spec.legs) pool = teamLegs;
   else if (teamLegs.length) {
     expanded = true;
     const league = teamLegs[0].league;
     const sameLeague = universe.filter((leg) => leg.league === league);
     if (sameLeague.length >= spec.legs) {
       pool = sameLeague;
-      notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets in that game. The other legs are from the same sport on that date.`);
+      notes.push(`${spec.team} is in ${teamEvents} game(s). This card takes one leg per game, so the other legs are from the same sport. Same-game cards are on the SGP tab.`);
     } else {
-      notes.push(`${spec.team} does not have enough priced legs, so the rest of that date is included.`);
+      notes.push(`${spec.team} does not have enough games for ${spec.legs} legs, so the rest of that date is included.`);
     }
   }
   return { pool, teamIds: new Set(teamLegs.map((leg) => leg.id)), expanded };

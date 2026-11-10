@@ -40,15 +40,23 @@ def capture(page, suffix):
     page.goto(BASE + "#game/nba/401909960", wait_until="networkidle")
     page.wait_for_selector(".odd.big")
     shot(page, f"game{suffix}.png")
+    page.evaluate("""() => {
+      const nodes = [...document.querySelectorAll('.mkt-head span')];
+      const prop = nodes.find((node) => /points|rebounds|assists|threes|pra/i.test(node.textContent || ""));
+      prop?.scrollIntoView({block: "start"});
+    }""")
+    page.wait_for_timeout(250)
+    page.screenshot(path=str(OUT / f"game-props{suffix}.png"), full_page=False)
+    print("wrote", OUT / f"game-props{suffix}.png")
 
     page.goto(BASE + "#builder", wait_until="networkidle")
     page.fill("#sentence", "safe 4 leg parlay browns sunday +400")
-        page.click("button[data-act='build']")
-        page.wait_for_selector("#build-result .legline")
-        page.evaluate("() => document.getElementById('build-result')?.scrollIntoView({block:'start'})")
-        page.wait_for_timeout(250)
-        page.screenshot(path=str(OUT / f"builder{suffix}.png"), full_page=False)
-        print("wrote", OUT / f"builder{suffix}.png")
+    page.click("button[data-act='build']")
+    page.wait_for_selector("#build-result .legline")
+    page.evaluate("() => document.getElementById('build-result')?.scrollIntoView({block:'start'})")
+    page.wait_for_timeout(250)
+    page.screenshot(path=str(OUT / f"builder{suffix}.png"), full_page=False)
+    print("wrote", OUT / f"builder{suffix}.png")
 
     page.click("button[data-act='use-build']")
     page.wait_for_selector(".book")

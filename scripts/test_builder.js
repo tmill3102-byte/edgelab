@@ -56,12 +56,16 @@ if (new Set(sets).size !== 3) fail("safe, balanced, and aggressive returned the 
 if (!(built.safe.prob > built.balanced.prob && built.balanced.prob > built.aggressive.prob)) {
   fail(`hit chances are not ordered safe > balanced > aggressive (${built.safe.prob} ${built.balanced.prob} ${built.aggressive.prob})`);
 }
+function primaryOdds(leg) {
+  const offer = leg.offers[leg.primary_book] || Object.values(leg.offers)[0];
+  return Number(offer.odds);
+}
 for (const leg of built.aggressive.legs) {
-  const odds = Object.values(leg.offers)[0].odds;
+  const odds = primaryOdds(leg);
   if (!(odds >= 100)) fail(`aggressive leg is not plus money: ${leg.selection} ${odds}`);
 }
 for (const leg of built.safe.legs) {
-  const odds = Object.values(leg.offers)[0].odds;
+  const odds = primaryOdds(leg);
   if (!(odds < 0)) fail(`safe leg is not a favorite: ${leg.selection} ${odds}`);
 }
 
