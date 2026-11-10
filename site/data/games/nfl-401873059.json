@@ -33,11 +33,11 @@
   },
   "lines": {
     "draftkings": {
+      "ml_home": -135.0,
+      "ml_away": 114.0,
       "total": 40.5,
       "over_odds": -108.0,
       "under_odds": -112.0,
-      "ml_home": -135.0,
-      "ml_away": 114.0,
       "spread_home": -2.5,
       "spread_home_odds": -110.0,
       "spread_away": 2.5,
@@ -45,10 +45,11 @@
     }
   },
   "badge": null,
-  "model_summary": "Projected margin IND +3.3 \u00b7 total 44.1",
+  "model_summary": "Margin IND +3.6 \u00b7 total 47.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: IND 71.6% (implied margin +7.7); blended 50/50 with own rating."
+    "ESPN matchup predictor: IND 71.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin IND +3.6, total 47.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -133,27 +134,30 @@
               "side": "home",
               "line": null,
               "odds": -135.0,
-              "model_raw": 0.5961,
-              "model_prob": 0.5738,
+              "model_raw": 0.6039,
+              "model_prob": 0.5514,
               "market_prob": 0.5514,
-              "fair_odds": -135,
-              "edge": 0.0223,
-              "edge_at_price": -0.0007,
-              "ev": -0.0012,
+              "fair_odds": -123,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.0401,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model IND win 59.6% vs market no-vig 55.1%.",
-                "Projected margin IND +3.3 (ratings IND -6.1, MIA -5.3, HFA 1.7).",
+                "Model IND win 60.4% vs market no-vig 55.1%.",
+                "v2 projected margin IND +3.6 (ratings IND -4.1, MIA -6.2, home edge 1.5); raw model 60.4%.",
                 "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-                "IND key player(s) out: Akeem Davis-Gaither (-2.0)"
+                "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: price drifted against this side (-290 -> -135)"
+                "line move: price drifted against this side (-290 -> -135)",
+                "injury: Akeem Davis-Gaither out for this side and the rating doesn't know it"
               ],
               "case_against": "Market makes IND 55%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -129 or better."
+              "next_step": "Pass. Only interesting at -118 or better.",
+              "proven": false
             }
           }
         },
@@ -166,27 +170,29 @@
               "side": "away",
               "line": null,
               "odds": 114.0,
-              "model_raw": 0.4039,
-              "model_prob": 0.4262,
+              "model_raw": 0.3961,
+              "model_prob": 0.4486,
               "market_prob": 0.4486,
-              "fair_odds": 135,
-              "edge": -0.0223,
-              "edge_at_price": -0.0411,
-              "ev": -0.0879,
+              "fair_odds": 123,
+              "edge": -0.0,
+              "edge_at_price": -0.0187,
+              "ev": -0.0401,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIA win 40.4% vs market no-vig 44.9%.",
-                "Projected margin IND +3.3 (ratings IND -6.1, MIA -5.3, HFA 1.7).",
+                "Model MIA win 39.6% vs market no-vig 44.9%.",
+                "v2 projected margin IND +3.6 (ratings IND -4.1, MIA -6.2, home edge 1.5); raw model 39.6%.",
                 "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-                "IND key player(s) out: Akeem Davis-Gaither (-2.0)"
+                "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "injury news: key player status uncertain - Malik Willis (Questionable)"
               ],
               "case_against": "Market makes MIA 45%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +139 or better."
+              "next_step": "Pass. Only interesting at +127 or better.",
+              "proven": false
             }
           }
         }
@@ -204,25 +210,29 @@
               "side": "home",
               "line": -2.5,
               "odds": -110.0,
-              "model_raw": 0.523,
-              "model_prob": 0.5115,
+              "model_raw": 0.5312,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": -105,
-              "edge": 0.0115,
-              "edge_at_price": -0.0123,
-              "ev": -0.0235,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model IND -2.5 covers 52.3% vs market 50.0%.",
-                "Projected margin IND +3.3 vs line IND -2.5.",
+                "Model IND -2.5 covers 53.1% vs market 50.0%.",
+                "Projected margin IND +3.6 vs line IND -2.5.",
                 "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-                "IND key player(s) out: Akeem Davis-Gaither (-2.0)"
+                "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury: Akeem Davis-Gaither out for this side and the rating doesn't know it"
+              ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -101 or better."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         },
@@ -235,20 +245,21 @@
               "side": "away",
               "line": 2.5,
               "odds": -110.0,
-              "model_raw": 0.477,
-              "model_prob": 0.4885,
+              "model_raw": 0.4688,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": 105,
-              "edge": -0.0115,
-              "edge_at_price": -0.0353,
-              "ev": -0.0674,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIA +2.5 covers 47.7% vs market 50.0%.",
-                "Projected margin IND +3.3 vs line IND -2.5.",
+                "Model MIA +2.5 covers 46.9% vs market 50.0%.",
+                "Projected margin IND +3.6 vs line IND -2.5.",
                 "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
-                "IND key player(s) out: Akeem Davis-Gaither (-2.0)"
+                "IND key player(s) out: Akeem Davis-Gaither (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
@@ -256,7 +267,8 @@
                 "line move: spread moved against this side (+6.5 -> +2.5)"
               ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +109 or better."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         }
@@ -274,27 +286,29 @@
               "side": "over",
               "line": 40.5,
               "odds": -108.0,
-              "model_raw": 0.6091,
-              "model_prob": 0.541,
+              "model_raw": 0.6819,
+              "model_prob": 0.4957,
               "market_prob": 0.4957,
-              "fair_odds": -118,
-              "edge": 0.0454,
-              "edge_at_price": 0.0218,
-              "ev": 0.042,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 40.5: 60.9% vs market 49.6%.",
-                "Projected total 44.1 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 47.5 -> 40.5.",
-                "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)"
+                "Model over 40.5: 68.2% vs market 49.6%.",
+                "Projected total 47.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 40.5.",
+                "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (68% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the over (47.5 -> 40.5)",
-                "downgraded Medium -> Low"
+                "line move: market moved against the over (47.5 -> 40.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -113 or better and re-check injuries near start."
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         },
@@ -307,26 +321,29 @@
               "side": "under",
               "line": 40.5,
               "odds": -112.0,
-              "model_raw": 0.3909,
-              "model_prob": 0.459,
+              "model_raw": 0.3181,
+              "model_prob": 0.5043,
               "market_prob": 0.5043,
-              "fair_odds": 118,
-              "edge": -0.0454,
-              "edge_at_price": -0.0693,
-              "ev": -0.1312,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 40.5: 39.1% vs market 50.4%.",
-                "Projected total 44.1 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 47.5 -> 40.5.",
-                "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)"
+                "Model under 40.5: 31.8% vs market 50.4%.",
+                "Projected total 47.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 40.5.",
+                "MIA L5 LLWLL (MOV -9.2), IND L5 LLLLL (MOV -7.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (32% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
                 "line move: total already moved toward under (47.5 -> 40.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +122 or better."
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }

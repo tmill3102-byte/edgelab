@@ -171,7 +171,10 @@ def game_text(r):
         t.append(f"  {r[side]['abbr']:5} record {r[side]['record'] or '-':7} GP {p['n']:2}  PF {p['pf'] and round(p['pf'],1)}  PA {p['pa'] and round(p['pa'],1)}  "
                  f"MOV {p['mov'] and round(p['mov'],1)}  L5 {p['last5'] or '-'}  rest {round(p['rest'],1) if p['rest'] is not None else '?'}d")
     if m:
-        if m["type"] == "margin-normal":
+        if m["type"] == "ratings-v2":
+            t.append(f"Model v2 (backtested ratings): projected margin {h['abbr']} {m['exp_margin_home']:+.1f} (ratings {h['abbr']} {m['home_rating']:+.1f} / {aw['abbr']} {m['away_rating']:+.1f}, home edge {m['hfa']}) -> {h['abbr']} win {pct(m['p_home'])} raw; "
+                     f"projected total {m['exp_total']}. Final % = market blended with this using backtested weights.")
+        elif m["type"] == "margin-normal":
             t.append(f"Model: projected margin {h['abbr']} {m['exp_margin_home']:+.1f} (own {m['own_margin']:+.1f}, source {m['source']}) -> {h['abbr']} win {pct(m['p_home'])}; "
                      f"projected total {m['exp_total']}")
         else:

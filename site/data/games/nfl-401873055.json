@@ -33,34 +33,35 @@
   },
   "lines": {
     "draftkings": {
-      "total": 48.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0,
-      "spread_away": 1.5,
-      "spread_away_odds": -115.0,
+      "ml_home": -120.0,
+      "ml_away": 100.0,
       "spread_home": -1.5,
       "spread_home_odds": -105.0,
-      "ml_away": 100.0,
-      "ml_home": -120.0
+      "spread_away": 1.5,
+      "spread_away_odds": -115.0,
+      "total": 48.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0
     }
   },
   "badge": null,
-  "model_summary": "Projected margin NO +0.5 \u00b7 total 50.5",
+  "model_summary": "Margin NO +1.2 \u00b7 total 48.5",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: NO 49.9% (implied margin -0.0); blended 50/50 with own rating."
+    "ESPN matchup predictor: NO 49.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin NO +1.2, total 48.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
         "name": "Erik McCoy",
-        "status": "Questionable",
+        "status": "Doubtful",
         "pos": "C",
         "key": false
       },
       {
         "name": "CJ Donaldson",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "RB",
         "key": false
       },
@@ -85,33 +86,33 @@
     ],
     "away": [
       {
-        "name": "Jaycee Horn",
-        "status": "Injured Reserve",
-        "pos": "CB",
-        "key": false
-      },
-      {
-        "name": "Mike Jackson",
-        "status": "Injured Reserve",
-        "pos": "CB",
-        "key": false
-      },
-      {
         "name": "Jaelan Phillips",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "LB",
         "key": false
       },
       {
         "name": "Will Lee III",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "CB",
         "key": false
       },
       {
         "name": "Damien Lewis",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Bobby Okereke",
+        "status": "Questionable",
+        "pos": "LB",
+        "key": false
+      },
+      {
+        "name": "Jaycee Horn",
+        "status": "Injured Reserve",
+        "pos": "CB",
         "key": false
       }
     ]
@@ -125,36 +126,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "CAR ML",
-              "side": "away",
-              "line": null,
-              "odds": 100.0,
-              "model_raw": 0.4866,
-              "model_prob": 0.4824,
-              "market_prob": 0.4783,
-              "fair_odds": 107,
-              "edge": 0.0042,
-              "edge_at_price": -0.0176,
-              "ev": -0.0351,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model CAR win 48.7% vs market no-vig 47.8%.",
-                "Projected margin NO +0.5 (ratings NO -3.0, CAR -2.2, HFA 1.7).",
-                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes CAR 48%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +111 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -163,24 +134,58 @@
               "side": "home",
               "line": null,
               "odds": -120.0,
-              "model_raw": 0.5134,
-              "model_prob": 0.5176,
+              "model_raw": 0.5351,
+              "model_prob": 0.5217,
               "market_prob": 0.5217,
-              "fair_odds": -107,
-              "edge": -0.0042,
-              "edge_at_price": -0.0279,
-              "ev": -0.0511,
+              "fair_odds": -109,
+              "edge": 0.0,
+              "edge_at_price": -0.0237,
+              "ev": -0.0435,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NO win 51.3% vs market no-vig 52.2%.",
-                "Projected margin NO +0.5 (ratings NO -3.0, CAR -2.2, HFA 1.7).",
-                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)"
+                "Model NO win 53.5% vs market no-vig 52.2%.",
+                "v2 projected margin NO +1.2 (ratings NO -3.6, CAR -3.3, home edge 1.5); raw model 53.5%.",
+                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes NO 52%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -103 or better."
+              "next_step": "Pass. Only interesting at -105 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "CAR ML",
+              "side": "away",
+              "line": null,
+              "odds": 100.0,
+              "model_raw": 0.4649,
+              "model_prob": 0.4783,
+              "market_prob": 0.4783,
+              "fair_odds": 109,
+              "edge": 0.0,
+              "edge_at_price": -0.0217,
+              "ev": -0.0435,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CAR win 46.5% vs market no-vig 47.8%.",
+                "v2 projected margin NO +1.2 (ratings NO -3.6, CAR -3.3, home edge 1.5); raw model 46.5%.",
+                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes CAR 48%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +113 or better.",
+              "proven": false
             }
           }
         }
@@ -190,36 +195,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "CAR +1.5",
-              "side": "away",
-              "line": 1.5,
-              "odds": -115.0,
-              "model_raw": 0.531,
-              "model_prob": 0.5209,
-              "market_prob": 0.5108,
-              "fair_odds": -109,
-              "edge": 0.0101,
-              "edge_at_price": -0.014,
-              "ev": -0.0261,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model CAR +1.5 covers 53.1% vs market 51.1%.",
-                "Projected margin NO +0.5 vs line NO -1.5.",
-                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -104 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -228,24 +203,58 @@
               "side": "home",
               "line": -1.5,
               "odds": -105.0,
-              "model_raw": 0.469,
-              "model_prob": 0.4791,
+              "model_raw": 0.4908,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 109,
-              "edge": -0.0101,
-              "edge_at_price": -0.0331,
-              "ev": -0.0646,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NO -1.5 covers 46.9% vs market 48.9%.",
-                "Projected margin NO +0.5 vs line NO -1.5.",
-                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)"
+                "Model NO -1.5 covers 49.1% vs market 48.9%.",
+                "Projected margin NO +1.2 vs line NO -1.5.",
+                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +113 or better."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CAR +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -115.0,
+              "model_raw": 0.5092,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CAR +1.5 covers 50.9% vs market 51.1%.",
+                "Projected margin NO +1.2 vs line NO -1.5.",
+                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }
@@ -263,26 +272,28 @@
               "side": "over",
               "line": 48.5,
               "odds": -105.0,
-              "model_raw": 0.5611,
-              "model_prob": 0.518,
+              "model_raw": 0.5003,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": -107,
-              "edge": 0.0288,
-              "edge_at_price": 0.0058,
-              "ev": 0.0112,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 48.5: 56.1% vs market 48.9%.",
-                "Projected total 50.5 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 43.5 -> 48.5.",
-                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)"
+                "Model over 48.5: 50.0% vs market 48.9%.",
+                "Projected total 48.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 43.5 -> 48.5.",
+                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "line move: total already moved toward over (43.5 -> 48.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -103 or better and re-check injuries near start."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         },
@@ -295,26 +306,28 @@
               "side": "under",
               "line": 48.5,
               "odds": -115.0,
-              "model_raw": 0.4389,
-              "model_prob": 0.482,
+              "model_raw": 0.4997,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": 107,
-              "edge": -0.0288,
-              "edge_at_price": -0.0528,
-              "ev": -0.0988,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 48.5: 43.9% vs market 51.1%.",
-                "Projected total 50.5 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 43.5 -> 48.5.",
-                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)"
+                "Model under 48.5: 50.0% vs market 51.1%.",
+                "Projected total 48.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 43.5 -> 48.5.",
+                "CAR L5 WWLLL (MOV -2.5), NO L5 LLWLW (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "line move: market moved against the under (43.5 -> 48.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +112 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }

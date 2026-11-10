@@ -33,24 +33,32 @@
   },
   "lines": {
     "draftkings": {
+<<<<<<< HEAD
       "total": 47.5,
       "over_odds": -112.0,
       "under_odds": -108.0,
       "ml_away": -118.0,
+=======
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
       "ml_home": -102.0,
+      "ml_away": -118.0,
+      "spread_home": 1.5,
+      "spread_home_odds": -115.0,
       "spread_away": -1.5,
       "spread_away_odds": -105.0,
-      "spread_home": 1.5,
-      "spread_home_odds": -115.0
+      "total": 47.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": "Projected margin M-OH -1.6 \u00b7 total 51.1",
+  "model_summary": "Margin M-OH -0.5 \u00b7 total 50.5",
   "flags": [
     "injury report not available for this league"
   ],
   "notes": [
-    "ESPN matchup predictor: M-OH 50.5% (implied margin +0.2); blended 50/50 with own rating."
+    "ESPN matchup predictor: M-OH 50.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin M-OH -0.5, total 50.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -65,38 +73,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "OHIO ML",
-              "side": "away",
-              "line": null,
-              "odds": -118.0,
-              "model_raw": 0.5386,
-              "model_prob": 0.5259,
-              "market_prob": 0.5174,
-              "fair_odds": -111,
-              "edge": 0.0085,
-              "edge_at_price": -0.0154,
-              "ev": -0.0285,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model OHIO win 53.9% vs market no-vig 51.7%.",
-                "Projected margin M-OH -1.6 (ratings M-OH +1.0, OHIO +6.8, HFA 2.5).",
-                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)"
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [],
-              "case_against": "Market makes OHIO 52%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -106 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -105,19 +81,20 @@
               "side": "home",
               "line": null,
               "odds": -102.0,
-              "model_raw": 0.4614,
-              "model_prob": 0.4741,
+              "model_raw": 0.488,
+              "model_prob": 0.4826,
               "market_prob": 0.4826,
-              "fair_odds": 111,
-              "edge": -0.0085,
-              "edge_at_price": -0.0308,
-              "ev": -0.061,
+              "fair_odds": 107,
+              "edge": 0.0,
+              "edge_at_price": -0.0223,
+              "ev": -0.0442,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model M-OH win 46.1% vs market no-vig 48.3%.",
-                "Projected margin M-OH -1.6 (ratings M-OH +1.0, OHIO +6.8, HFA 2.5).",
-                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)"
+                "Model M-OH win 48.8% vs market no-vig 48.3%.",
+                "v2 projected margin M-OH -0.5 (ratings M-OH -25.6, OHIO -21.9, home edge 3.33); raw model 48.8%.",
+                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -126,7 +103,42 @@
                 "line move: price drifted against this side (-118 -> -102)"
               ],
               "case_against": "Market makes M-OH 48%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at +115 or better."
+              "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "OHIO ML",
+              "side": "away",
+              "line": null,
+              "odds": -118.0,
+              "model_raw": 0.512,
+              "model_prob": 0.5174,
+              "market_prob": 0.5174,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model OHIO win 51.2% vs market no-vig 51.7%.",
+                "v2 projected margin M-OH -0.5 (ratings M-OH -25.6, OHIO -21.9, home edge 3.33); raw model 51.2%.",
+                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Market makes OHIO 52%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -103 or better.",
+              "proven": false
             }
           }
         }
@@ -136,40 +148,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "OHIO -1.5",
-              "side": "away",
-              "line": -1.5,
-              "odds": -105.0,
-              "model_raw": 0.5012,
-              "model_prob": 0.494,
-              "market_prob": 0.4892,
-              "fair_odds": 102,
-              "edge": 0.0048,
-              "edge_at_price": -0.0182,
-              "ev": -0.0355,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model OHIO -1.5 covers 50.1% vs market 48.9%.",
-                "Projected margin M-OH -1.6 vs line M-OH +1.5.",
-                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)"
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [
-                "line move: spread moved against this side (+1.5 -> -1.5)"
-              ],
-              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +106 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -178,26 +156,64 @@
               "side": "home",
               "line": 1.5,
               "odds": -115.0,
-              "model_raw": 0.4988,
-              "model_prob": 0.506,
+              "model_raw": 0.5266,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": -102,
-              "edge": -0.0048,
-              "edge_at_price": -0.0289,
-              "ev": -0.054,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model M-OH +1.5 covers 49.9% vs market 51.1%.",
-                "Projected margin M-OH -1.6 vs line M-OH +1.5.",
-                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)"
+                "Model M-OH +1.5 covers 52.7% vs market 51.1%.",
+                "Projected margin M-OH -0.5 vs line M-OH +1.5.",
+                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +102 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "OHIO -1.5",
+              "side": "away",
+              "line": -1.5,
+              "odds": -105.0,
+              "model_raw": 0.4734,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model OHIO -1.5 covers 47.3% vs market 48.9%.",
+                "Projected margin M-OH -0.5 vs line M-OH +1.5.",
+                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [
+                "line move: spread moved against this side (+1.5 -> -1.5)"
+              ],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }
@@ -215,6 +231,7 @@
               "side": "over",
               "line": 47.5,
               "odds": -112.0,
+<<<<<<< HEAD
               "model_raw": 0.589,
               "model_prob": 0.5314,
               "market_prob": 0.5043,
@@ -228,13 +245,34 @@
                 "Model over 47.5: 58.9% vs market 50.4%.",
                 "Projected total 51.1 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
                 "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)"
+=======
+              "model_raw": 0.5734,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model over 47.5: 57.3% vs market 50.4%.",
+                "Projected total 50.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+<<<<<<< HEAD
               "next_step": "Monitor only; if anything, wait for -109 or better and re-check injuries near start."
+=======
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         },
@@ -247,6 +285,7 @@
               "side": "under",
               "line": 47.5,
               "odds": -108.0,
+<<<<<<< HEAD
               "model_raw": 0.411,
               "model_prob": 0.4686,
               "market_prob": 0.4957,
@@ -260,13 +299,34 @@
                 "Model under 47.5: 41.1% vs market 49.6%.",
                 "Projected total 51.1 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
                 "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)"
+=======
+              "model_raw": 0.4266,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model under 47.5: 42.7% vs market 49.6%.",
+                "Projected total 50.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "OHIO L5 WWWWW (MOV 7.8), M-OH L5 LWWWL (MOV 0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+<<<<<<< HEAD
               "next_step": "Pass. Only interesting at +118 or better."
+=======
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         }

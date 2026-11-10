@@ -166,11 +166,13 @@ DOWN = {"High": "Medium", "Medium": "Low", "Low": "Low"}
 
 
 def make_pick(market, selection, side, line, odds, model_raw, market_p, weight, dq, reasons, flags, push=0.0,
-              caution=None, against=None):
-    """Blend model with market, compute edge/EV/Kelly/tier."""
+              caution=None, against=None, blended=None, tier_fn=None, far_downgrade=True):
+    """Blend model with market, compute edge/EV/Kelly/tier.
+    v2 callers pass `blended` (backtest-fitted market blend, betlib/ratings.py) and `tier_fn` (backtest-retuned tiers)."""
     if odds is None or market_p is None:
         return None
-    blended = weight * model_raw + (1 - weight) * market_p
+    if blended is None:
+        blended = weight * model_raw + (1 - weight) * market_p
     # EV accounting for pushes (push returns stake)
     d = am_to_dec(odds)
     p_win = blended * (1 - push)
@@ -178,15 +180,22 @@ def make_pick(market, selection, side, line, odds, model_raw, market_p, weight, 
     ev = p_win * (d - 1) - p_loss
     edge = blended - market_p
     k = kelly(blended, odds) if ev > 0 else 0.0
-    t0 = tier(edge, ev, dq, d)
+    t0 = tier_fn(edge, ev, dq, d) if tier_fn else tier(edge, ev, dq, d)
     t = t0
     caution = list(caution or [])
+    far_note = None
     if abs(model_raw - market_p) > 0.12:
-        caution.append(f"model far from market ({model_raw*100:.0f}% vs {market_p*100:.0f}%): usually means the model is missing info (lineups, motivation, SOS)")
+        msg = f"model far from market ({model_raw*100:.0f}% vs {market_p*100:.0f}%): usually means the model is missing info (lineups, motivation, SOS)"
+        if far_downgrade:
+            caution.append(msg)
+        else:   # v2: backtest showed these picks were not worse vs the closing line, so note it without a downgrade
+            far_note = "Note: " + msg + " (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
     for c in caution:            # each caution downgrades one tier
         t = DOWN[t]
     if t != t0:
         caution.append(f"downgraded {t0} -> {t}")
+    if far_note:
+        reasons = list(reasons) + [far_note]
     edge_price = blended - implied(odds)   # vs the actual price you'd pay (vig included)
     return {"market": market, "selection": selection, "side": side, "line": line, "odds": odds,
             "model_raw": round(model_raw, 4), "model_prob": round(blended, 4), "market_prob": round(market_p, 4),

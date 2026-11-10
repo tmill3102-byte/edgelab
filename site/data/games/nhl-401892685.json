@@ -33,22 +33,22 @@
   },
   "lines": {
     "draftkings": {
-      "spread_away": 1.5,
-      "spread_away_odds": -245.0,
       "spread_home": -1.5,
       "spread_home_odds": 200.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -245.0,
+      "ml_home": -125.0,
+      "ml_away": 105.0,
       "total": 6.5,
       "over_odds": 102.0,
-      "under_odds": -122.0,
-      "ml_home": -125.0,
-      "ml_away": 105.0
+      "under_odds": -122.0
     }
   },
   "badge": null,
-  "model_summary": "Expected goals OTT 3.40 \u2013 WSH 3.20 \u00b7 total 6.61",
+  "model_summary": "Margin OTT +0.5 \u00b7 total 6.3",
   "flags": [],
   "notes": [
-    "League scoring average this season (ESPN standings): 3.19 per team-game."
+    "v2 ratings: margin OTT +0.5, total 6.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -109,24 +109,26 @@
               "side": "home",
               "line": null,
               "odds": -125.0,
-              "model_raw": 0.5335,
-              "model_prob": 0.533,
+              "model_raw": 0.5748,
+              "model_prob": 0.5325,
               "market_prob": 0.5325,
               "fair_odds": -114,
-              "edge": 0.0005,
-              "edge_at_price": -0.0226,
-              "ev": -0.0406,
+              "edge": 0.0,
+              "edge_at_price": -0.0231,
+              "ev": -0.0416,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model OTT win 53.3% vs market no-vig 53.2%.",
-                "Expected goals OTT 3.40 - WSH 3.20 (Poisson).",
-                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)"
+                "Model OTT win 57.5% vs market no-vig 53.2%.",
+                "v2 projected margin OTT +0.5 (ratings OTT +0.3, WSH +0.2, home edge 0.4); raw model 57.5%.",
+                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes OTT 53%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -109 or better."
+              "next_step": "Pass. Only interesting at -109 or better.",
+              "proven": false
             }
           }
         },
@@ -139,24 +141,26 @@
               "side": "away",
               "line": null,
               "odds": 105.0,
-              "model_raw": 0.4665,
-              "model_prob": 0.467,
+              "model_raw": 0.4252,
+              "model_prob": 0.4675,
               "market_prob": 0.4675,
               "fair_odds": 114,
-              "edge": -0.0005,
-              "edge_at_price": -0.0208,
-              "ev": -0.0426,
+              "edge": -0.0,
+              "edge_at_price": -0.0203,
+              "ev": -0.0416,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model WSH win 46.7% vs market no-vig 46.8%.",
-                "Expected goals OTT 3.40 - WSH 3.20 (Poisson).",
-                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)"
+                "Model WSH win 42.5% vs market no-vig 46.8%.",
+                "v2 projected margin OTT +0.5 (ratings OTT +0.3, WSH +0.2, home edge 0.4); raw model 42.5%.",
+                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes WSH 47%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +118 or better."
+              "next_step": "Pass. Only interesting at +118 or better.",
+              "proven": false
             }
           }
         }
@@ -166,36 +170,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "WSH +1.5",
-              "side": "away",
-              "line": 1.5,
-              "odds": -245.0,
-              "model_raw": 0.6983,
-              "model_prob": 0.6894,
-              "market_prob": 0.6806,
-              "fair_odds": -222,
-              "edge": 0.0089,
-              "edge_at_price": -0.0207,
-              "ev": -0.0292,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model WSH +1.5 covers 69.8% vs market 68.1%.",
-                "Poisson xG OTT 3.40-3.20 WSH.",
-                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-              "next_step": "Pass. Only interesting at -209 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -204,24 +178,58 @@
               "side": "home",
               "line": -1.5,
               "odds": 200.0,
-              "model_raw": 0.3014,
-              "model_prob": 0.3104,
+              "model_raw": 0.3367,
+              "model_prob": 0.3241,
               "market_prob": 0.3194,
-              "fair_odds": 222,
-              "edge": -0.009,
-              "edge_at_price": -0.0229,
-              "ev": -0.0688,
+              "fair_odds": 209,
+              "edge": 0.0046,
+              "edge_at_price": -0.0093,
+              "ev": -0.0278,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model OTT -1.5 covers 30.1% vs market 31.9%.",
-                "Poisson xG OTT 3.40-3.20 WSH.",
-                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)"
+                "Model OTT -1.5 covers 33.7% vs market 31.9%.",
+                "Projected margin OTT +0.5 vs line OTT -1.5.",
+                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
               ],
               "flags": [],
               "caution": [],
               "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-              "next_step": "Pass. Only interesting at +229 or better."
+              "next_step": "Pass. Only interesting at +215 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -245.0,
+              "model_raw": 0.6633,
+              "model_prob": 0.6759,
+              "market_prob": 0.6806,
+              "fair_odds": -209,
+              "edge": -0.0046,
+              "edge_at_price": -0.0342,
+              "ev": -0.0482,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model WSH +1.5 covers 66.3% vs market 68.1%.",
+                "Projected margin OTT +0.5 vs line OTT -1.5.",
+                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
+              "next_step": "Pass. Only interesting at -196 or better.",
+              "proven": true
             }
           }
         }
@@ -239,24 +247,26 @@
               "side": "over",
               "line": 6.5,
               "odds": 102.0,
-              "model_raw": 0.49,
-              "model_prob": 0.4803,
+              "model_raw": 0.4405,
+              "model_prob": 0.4739,
               "market_prob": 0.4739,
-              "fair_odds": 108,
-              "edge": 0.0064,
-              "edge_at_price": -0.0147,
-              "ev": -0.0297,
+              "fair_odds": 111,
+              "edge": -0.0,
+              "edge_at_price": -0.0211,
+              "ev": -0.0427,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 6.5: 49.0% vs market 47.4%.",
-                "Projected total 6.6 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)"
+                "Model over 6.5: 44.0% vs market 47.4%.",
+                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +112 or better."
+              "next_step": "Pass. Only interesting at +115 or better.",
+              "proven": false
             }
           }
         },
@@ -269,24 +279,26 @@
               "side": "under",
               "line": 6.5,
               "odds": -122.0,
-              "model_raw": 0.5097,
-              "model_prob": 0.5195,
+              "model_raw": 0.5595,
+              "model_prob": 0.5261,
               "market_prob": 0.5261,
-              "fair_odds": -108,
-              "edge": -0.0066,
-              "edge_at_price": -0.03,
-              "ev": -0.0546,
+              "fair_odds": -111,
+              "edge": 0.0,
+              "edge_at_price": -0.0235,
+              "ev": -0.0427,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 6.5: 51.0% vs market 52.6%.",
-                "Projected total 6.6 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)"
+                "Model under 6.5: 56.0% vs market 52.6%.",
+                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "WSH L5 WWLLW (MOV 0.1), OTT L5 LWLWW (MOV 0.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -104 or better."
+              "next_step": "Pass. Only interesting at -107 or better.",
+              "proven": false
             }
           }
         }

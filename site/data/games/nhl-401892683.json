@@ -33,40 +33,34 @@
   },
   "lines": {
     "draftkings": {
-      "total": 6.5,
-      "over_odds": -115.0,
-      "under_odds": -105.0,
       "spread_home": 1.5,
       "spread_home_odds": -180.0,
       "spread_away": -1.5,
       "spread_away_odds": 150.0,
-      "ml_home": 130.0,
-      "ml_away": -155.0
+      "ml_home": 136.0,
+      "ml_away": -162.0,
+      "total": 6.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0
     }
   },
   "badge": null,
-  "model_summary": "Expected goals TOR 3.32 \u2013 COL 3.77 \u00b7 total 7.09",
+  "model_summary": "Margin TOR -0.6 \u00b7 total 6.3",
   "flags": [],
   "notes": [
-    "League scoring average this season (ESPN standings): 3.19 per team-game."
+    "v2 ratings: margin TOR -0.6, total 6.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
         "name": "Morgan Rielly",
-        "status": "Day-To-Day",
+        "status": "Out",
         "pos": "D",
         "key": false
       },
       {
         "name": "Colton Sissons",
-        "status": "Day-To-Day",
-        "pos": "C",
-        "key": false
-      },
-      {
-        "name": "Jack Roslovic",
-        "status": "Day-To-Day",
+        "status": "Out",
         "pos": "C",
         "key": false
       },
@@ -80,6 +74,12 @@
         "name": "Miles Wood",
         "status": "Injured Reserve",
         "pos": "LW",
+        "key": false
+      },
+      {
+        "name": "Nick Blankenburg",
+        "status": "Injured Reserve",
+        "pos": "D",
         "key": false
       }
     ],
@@ -114,25 +114,27 @@
               "selection": "TOR ML",
               "side": "home",
               "line": null,
-              "odds": 130.0,
-              "model_raw": 0.4364,
-              "model_prob": 0.4267,
-              "market_prob": 0.417,
-              "fair_odds": 134,
-              "edge": 0.0097,
-              "edge_at_price": -0.0081,
-              "ev": -0.0186,
+              "odds": 136.0,
+              "model_raw": 0.4035,
+              "model_prob": 0.4066,
+              "market_prob": 0.4066,
+              "fair_odds": 146,
+              "edge": 0.0,
+              "edge_at_price": -0.0171,
+              "ev": -0.0404,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TOR win 43.6% vs market no-vig 41.7%.",
-                "Expected goals TOR 3.32 - COL 3.77 (Poisson).",
-                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)"
+                "Model TOR win 40.4% vs market no-vig 40.7%.",
+                "v2 projected margin TOR -0.6 (ratings TOR -0.3, COL +0.8, home edge 0.4); raw model 40.4%.",
+                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes TOR 42%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +139 or better."
+              "case_against": "Market makes TOR 41%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +151 or better.",
+              "proven": false
             }
           }
         },
@@ -144,25 +146,27 @@
               "selection": "COL ML",
               "side": "away",
               "line": null,
-              "odds": -155.0,
-              "model_raw": 0.5636,
-              "model_prob": 0.5733,
-              "market_prob": 0.583,
-              "fair_odds": -134,
-              "edge": -0.0097,
-              "edge_at_price": -0.0345,
-              "ev": -0.0568,
+              "odds": -162.0,
+              "model_raw": 0.5965,
+              "model_prob": 0.5934,
+              "market_prob": 0.5934,
+              "fair_odds": -146,
+              "edge": 0.0,
+              "edge_at_price": -0.025,
+              "ev": -0.0404,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model COL win 56.4% vs market no-vig 58.3%.",
-                "Expected goals TOR 3.32 - COL 3.77 (Poisson).",
-                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)"
+                "Model COL win 59.7% vs market no-vig 59.3%.",
+                "v2 projected margin TOR -0.6 (ratings TOR -0.3, COL +0.8, home edge 0.4); raw model 59.7%.",
+                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes COL 58%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -128 or better."
+              "case_against": "Market makes COL 59%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -139 or better.",
+              "proven": false
             }
           }
         }
@@ -180,24 +184,26 @@
               "side": "home",
               "line": 1.5,
               "odds": -180.0,
-              "model_raw": 0.6575,
-              "model_prob": 0.637,
+              "model_raw": 0.6418,
+              "model_prob": 0.6234,
               "market_prob": 0.6164,
-              "fair_odds": -175,
-              "edge": 0.0205,
-              "edge_at_price": -0.0059,
-              "ev": -0.0091,
+              "fair_odds": -166,
+              "edge": 0.0069,
+              "edge_at_price": -0.0195,
+              "ev": -0.0303,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TOR +1.5 covers 65.8% vs market 61.6%.",
-                "Poisson xG TOR 3.32-3.77 COL.",
-                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)"
+                "Model TOR +1.5 covers 64.2% vs market 61.6%.",
+                "Projected margin TOR -0.6 vs line TOR +1.5.",
+                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
               ],
               "flags": [],
               "caution": [],
               "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-              "next_step": "Pass. Only interesting at -166 or better."
+              "next_step": "Pass. Only interesting at -157 or better.",
+              "proven": true
             }
           }
         },
@@ -210,24 +216,26 @@
               "side": "away",
               "line": -1.5,
               "odds": 150.0,
-              "model_raw": 0.3417,
-              "model_prob": 0.3627,
+              "model_raw": 0.3582,
+              "model_prob": 0.3766,
               "market_prob": 0.3836,
-              "fair_odds": 176,
-              "edge": -0.0209,
-              "edge_at_price": -0.0373,
-              "ev": -0.0934,
+              "fair_odds": 166,
+              "edge": -0.0069,
+              "edge_at_price": -0.0234,
+              "ev": -0.0584,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model COL -1.5 covers 34.2% vs market 38.4%.",
-                "Poisson xG TOR 3.32-3.77 COL.",
-                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)"
+                "Model COL -1.5 covers 35.8% vs market 38.4%.",
+                "Projected margin TOR -0.6 vs line TOR +1.5.",
+                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
               ],
               "flags": [],
               "caution": [],
               "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-              "next_step": "Pass. Only interesting at +181 or better."
+              "next_step": "Pass. Only interesting at +171 or better.",
+              "proven": true
             }
           }
         }
@@ -245,24 +253,26 @@
               "side": "over",
               "line": 6.5,
               "odds": -115.0,
-              "model_raw": 0.5632,
-              "model_prob": 0.5318,
+              "model_raw": 0.4457,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": -114,
-              "edge": 0.021,
-              "edge_at_price": -0.0031,
-              "ev": -0.0058,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 6.5: 56.3% vs market 51.1%.",
-                "Projected total 7.1 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)"
+                "Model over 6.5: 44.6% vs market 51.1%.",
+                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -109 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -275,24 +285,26 @@
               "side": "under",
               "line": 6.5,
               "odds": -105.0,
-              "model_raw": 0.436,
-              "model_prob": 0.4679,
+              "model_raw": 0.5543,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 114,
-              "edge": -0.0213,
-              "edge_at_price": -0.0443,
-              "ev": -0.0865,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 6.5: 43.6% vs market 48.9%.",
-                "Projected total 7.1 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)"
+                "Model under 6.5: 55.4% vs market 48.9%.",
+                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "COL L5 WWLLW (MOV 0.9), TOR L5 LWLLL (MOV 0.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +118 or better."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }

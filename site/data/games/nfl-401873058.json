@@ -33,22 +33,23 @@
   },
   "lines": {
     "draftkings": {
-      "spread_away": -3.5,
-      "spread_away_odds": -102.0,
+      "ml_home": 150.0,
+      "ml_away": -180.0,
       "spread_home": 3.5,
       "spread_home_odds": -118.0,
-      "ml_away": -180.0,
-      "ml_home": 150.0,
+      "spread_away": -3.5,
+      "spread_away_odds": -102.0,
       "total": 45.5,
-      "under_odds": -115.0,
-      "over_odds": -105.0
+      "over_odds": -105.0,
+      "under_odds": -115.0
     }
   },
   "badge": null,
-  "model_summary": "Projected margin ATL -7.9 \u00b7 total 44.0",
+  "model_summary": "Margin ATL -4.6 \u00b7 total 40.7",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: ATL 23.5% (implied margin -9.8); blended 50/50 with own rating."
+    "ESPN matchup predictor: ATL 23.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin ATL -4.6, total 40.7; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -85,21 +86,21 @@
     ],
     "away": [
       {
-        "name": "Jaylon Moore",
-        "status": "Questionable",
-        "pos": "OT",
-        "key": false
-      },
-      {
         "name": "Peter Woods",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "DT",
         "key": false
       },
       {
         "name": "Mansoor Delane",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "CB",
+        "key": false
+      },
+      {
+        "name": "Jaylon Moore",
+        "status": "Questionable",
+        "pos": "OT",
         "key": false
       },
       {
@@ -125,40 +126,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "KC ML",
-              "side": "away",
-              "line": null,
-              "odds": -180.0,
-              "model_raw": 0.7213,
-              "model_prob": 0.6689,
-              "market_prob": 0.6164,
-              "fair_odds": -202,
-              "edge": 0.0524,
-              "edge_at_price": 0.026,
-              "ev": 0.0405,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model KC win 72.1% vs market no-vig 61.6%.",
-                "Projected margin ATL -7.9 (ratings ATL -3.5, KC +4.3, HFA 1.7).",
-                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)"
-              ],
-              "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Patrick Mahomes (Questionable)",
-                "line move: price drifted against this side (-225 -> -180)",
-                "downgraded Medium -> Low"
-              ],
-              "case_against": "Market makes KC 62%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Monitor only; if anything, wait for -191 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -167,24 +134,61 @@
               "side": "home",
               "line": null,
               "odds": 150.0,
-              "model_raw": 0.2787,
-              "model_prob": 0.3311,
+              "model_raw": 0.3674,
+              "model_prob": 0.3836,
               "market_prob": 0.3836,
-              "fair_odds": 202,
-              "edge": -0.0524,
-              "edge_at_price": -0.0689,
-              "ev": -0.1722,
+              "fair_odds": 161,
+              "edge": -0.0,
+              "edge_at_price": -0.0164,
+              "ev": -0.0411,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model ATL win 27.9% vs market no-vig 38.4%.",
-                "Projected margin ATL -7.9 (ratings ATL -3.5, KC +4.3, HFA 1.7).",
-                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)"
+                "Model ATL win 36.7% vs market no-vig 38.4%.",
+                "v2 projected margin ATL -4.6 (ratings ATL -2.5, KC +3.6, home edge 1.5); raw model 36.7%.",
+                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes ATL 38%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +208 or better."
+              "next_step": "Pass. Only interesting at +166 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "KC ML",
+              "side": "away",
+              "line": null,
+              "odds": -180.0,
+              "model_raw": 0.6326,
+              "model_prob": 0.6164,
+              "market_prob": 0.6164,
+              "fair_odds": -161,
+              "edge": 0.0,
+              "edge_at_price": -0.0264,
+              "ev": -0.0411,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model KC win 63.3% vs market no-vig 61.6%.",
+                "v2 projected margin ATL -4.6 (ratings ATL -2.5, KC +3.6, home edge 1.5); raw model 63.3%.",
+                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Patrick Mahomes (Questionable)",
+                "line move: price drifted against this side (-225 -> -180)"
+              ],
+              "case_against": "Market makes KC 62%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -153 or better.",
+              "proven": false
             }
           }
         }
@@ -194,40 +198,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "KC -3.5",
-              "side": "away",
-              "line": -3.5,
-              "odds": -102.0,
-              "model_raw": 0.6283,
-              "model_prob": 0.5555,
-              "market_prob": 0.4826,
-              "fair_odds": -125,
-              "edge": 0.0728,
-              "edge_at_price": 0.0505,
-              "ev": 0.1001,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model KC -3.5 covers 62.8% vs market 48.3%.",
-                "Projected margin ATL -7.9 vs line ATL +3.5.",
-                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)"
-              ],
-              "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Patrick Mahomes (Questionable)",
-                "model far from market (63% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-                "downgraded High -> Low"
-              ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Monitor only; if anything, wait for -120 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -236,27 +206,62 @@
               "side": "home",
               "line": 3.5,
               "odds": -118.0,
-              "model_raw": 0.3717,
-              "model_prob": 0.4445,
+              "model_raw": 0.4683,
+              "model_prob": 0.5174,
               "market_prob": 0.5174,
-              "fair_odds": 125,
-              "edge": -0.0728,
-              "edge_at_price": -0.0968,
-              "ev": -0.1788,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model ATL +3.5 covers 37.2% vs market 51.7%.",
-                "Projected margin ATL -7.9 vs line ATL +3.5.",
-                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)"
+                "Model ATL +3.5 covers 46.8% vs market 51.7%.",
+                "Projected margin ATL -4.6 vs line ATL +3.5.",
+                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)",
-                "model far from market (37% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
+                "line move: spread moved against this side (+4.5 -> +3.5)"
               ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +129 or better."
+              "next_step": "Pass. Only interesting at -103 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "KC -3.5",
+              "side": "away",
+              "line": -3.5,
+              "odds": -102.0,
+              "model_raw": 0.5317,
+              "model_prob": 0.4826,
+              "market_prob": 0.4826,
+              "fair_odds": 107,
+              "edge": 0.0,
+              "edge_at_price": -0.0223,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model KC -3.5 covers 53.2% vs market 48.3%.",
+                "Projected margin ATL -4.6 vs line ATL +3.5.",
+                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Patrick Mahomes (Questionable)"
+              ],
+              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
             }
           }
         }
@@ -266,36 +271,6 @@
       "market": "Total",
       "sides": [
         {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 45.5",
-              "side": "under",
-              "line": 45.5,
-              "odds": -115.0,
-              "model_raw": 0.5459,
-              "model_prob": 0.5249,
-              "market_prob": 0.5108,
-              "fair_odds": -110,
-              "edge": 0.014,
-              "edge_at_price": -0.01,
-              "ev": -0.0187,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model under 45.5: 54.6% vs market 51.1%.",
-                "Projected total 44.0 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -106 or better."
-            }
-          }
-        },
-        {
           "side": "over",
           "offers": {
             "draftkings": {
@@ -304,24 +279,60 @@
               "side": "over",
               "line": 45.5,
               "odds": -105.0,
-              "model_raw": 0.4541,
-              "model_prob": 0.4751,
+              "model_raw": 0.3642,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 110,
-              "edge": -0.014,
-              "edge_at_price": -0.0371,
-              "ev": -0.0724,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 45.5: 45.4% vs market 48.9%.",
-                "Projected total 44.0 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)"
+                "Model over 45.5: 36.4% vs market 48.9%.",
+                "Projected total 40.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +115 or better."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 45.5",
+              "side": "under",
+              "line": 45.5,
+              "odds": -115.0,
+              "model_raw": 0.6358,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 45.5: 63.6% vs market 51.1%.",
+                "Projected total 40.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "KC L5 WWLLW (MOV 7.4), ATL L5 LLWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }

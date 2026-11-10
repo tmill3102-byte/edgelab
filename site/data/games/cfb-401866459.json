@@ -33,30 +33,34 @@
   },
   "lines": {
     "draftkings": {
+      "ml_home": -218.0,
+      "ml_away": 180.0,
+      "total": 43.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
       "spread_home": -5.5,
       "spread_home_odds": -108.0,
       "spread_away": 5.5,
+<<<<<<< HEAD
       "spread_away_odds": -112.0,
       "ml_home": -218.0,
       "ml_away": 180.0,
       "total": 43.5,
       "over_odds": -115.0,
       "under_odds": -105.0
+=======
+      "spread_away_odds": -112.0
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
     }
   },
-  "badge": {
-    "tier": "Medium",
-    "edge": 0.036,
-    "selection": "BGSU -5.5",
-    "market": "Spread",
-    "book": "draftkings"
-  },
-  "model_summary": "Projected margin BGSU +9.0 \u00b7 total 45.3",
+  "badge": null,
+  "model_summary": "Margin BGSU +14.4 \u00b7 total 47.0",
   "flags": [
     "injury report not available for this league"
   ],
   "notes": [
-    "ESPN matchup predictor: BGSU 72.9% (implied margin +9.8); blended 50/50 with own rating."
+    "ESPN matchup predictor: BGSU 72.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin BGSU +14.4, total 47.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -79,6 +83,7 @@
               "side": "home",
               "line": null,
               "odds": -218.0,
+<<<<<<< HEAD
               "model_raw": 0.7123,
               "model_prob": 0.6794,
               "market_prob": 0.6575,
@@ -92,13 +97,35 @@
                 "Model BGSU win 71.2% vs market no-vig 65.7%.",
                 "Projected margin BGSU +9.0 (ratings BGSU -5.0, KENT -10.6, HFA 2.5).",
                 "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)"
+=======
+              "model_raw": 0.8243,
+              "model_prob": 0.6575,
+              "market_prob": 0.6575,
+              "fair_odds": -192,
+              "edge": 0.0,
+              "edge_at_price": -0.0281,
+              "ev": -0.0409,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model BGSU win 82.4% vs market no-vig 65.7%.",
+                "v2 projected margin BGSU +14.4 (ratings BGSU -29.6, KENT -40.7, home edge 3.33); raw model 82.4%.",
+                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (82% vs 66%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Market makes BGSU 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+<<<<<<< HEAD
               "next_step": "Pass. Only interesting at -199 or better."
+=======
+              "next_step": "Pass. Only interesting at -181 or better.",
+              "proven": false
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         },
@@ -111,6 +138,7 @@
               "side": "away",
               "line": null,
               "odds": 180.0,
+<<<<<<< HEAD
               "model_raw": 0.2877,
               "model_prob": 0.3206,
               "market_prob": 0.3425,
@@ -124,13 +152,35 @@
                 "Model KENT win 28.8% vs market no-vig 34.3%.",
                 "Projected margin BGSU +9.0 (ratings BGSU -5.0, KENT -10.6, HFA 2.5).",
                 "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)"
+=======
+              "model_raw": 0.1757,
+              "model_prob": 0.3425,
+              "market_prob": 0.3425,
+              "fair_odds": 192,
+              "edge": 0.0,
+              "edge_at_price": -0.0146,
+              "ev": -0.0409,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model KENT win 17.6% vs market no-vig 34.3%.",
+                "v2 projected margin BGSU +14.4 (ratings BGSU -29.6, KENT -40.7, home edge 3.33); raw model 17.6%.",
+                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (18% vs 34%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Market makes KENT 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+<<<<<<< HEAD
               "next_step": "Pass. Only interesting at +218 or better."
+=======
+              "next_step": "Pass. Only interesting at +198 or better.",
+              "proven": false
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         }
@@ -148,26 +198,29 @@
               "side": "home",
               "line": -5.5,
               "odds": -108.0,
-              "model_raw": 0.5856,
-              "model_prob": 0.5316,
+              "model_raw": 0.718,
+              "model_prob": 0.4957,
               "market_prob": 0.4957,
-              "fair_odds": -114,
-              "edge": 0.036,
-              "edge_at_price": 0.0124,
-              "ev": 0.0239,
-              "tier": "Medium",
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model BGSU -5.5 covers 58.6% vs market 49.6%.",
-                "Projected margin BGSU +9.0 vs line BGSU -5.5.",
-                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)"
+                "Model BGSU -5.5 covers 71.8% vs market 49.6%.",
+                "Projected margin BGSU +14.4 vs line BGSU -5.5.",
+                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (72% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Playable at -109 or better (current -108); re-check injuries/line 60 min before start."
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         },
@@ -180,26 +233,29 @@
               "side": "away",
               "line": 5.5,
               "odds": -112.0,
-              "model_raw": 0.4144,
-              "model_prob": 0.4684,
+              "model_raw": 0.282,
+              "model_prob": 0.5043,
               "market_prob": 0.5043,
-              "fair_odds": 114,
-              "edge": -0.036,
-              "edge_at_price": -0.0599,
-              "ev": -0.1135,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model KENT +5.5 covers 41.4% vs market 50.4%.",
-                "Projected margin BGSU +9.0 vs line BGSU -5.5.",
-                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)"
+                "Model KENT +5.5 covers 28.2% vs market 50.4%.",
+                "Projected margin BGSU +14.4 vs line BGSU -5.5.",
+                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +118 or better."
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }
@@ -217,19 +273,20 @@
               "side": "over",
               "line": 43.5,
               "odds": -115.0,
-              "model_raw": 0.5448,
-              "model_prob": 0.5217,
+              "model_raw": 0.5858,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": -109,
-              "edge": 0.0109,
-              "edge_at_price": -0.0132,
-              "ev": -0.0246,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 43.5: 54.5% vs market 51.1%.",
-                "Projected total 45.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 44.5 -> 43.5.",
-                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)"
+                "Model over 43.5: 58.6% vs market 51.1%.",
+                "Projected total 47.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 44.5 -> 43.5.",
+                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -238,7 +295,8 @@
                 "line move: market moved against the over (44.5 -> 43.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -105 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -251,19 +309,20 @@
               "side": "under",
               "line": 43.5,
               "odds": -105.0,
-              "model_raw": 0.4552,
-              "model_prob": 0.4783,
+              "model_raw": 0.4142,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 109,
-              "edge": -0.0109,
-              "edge_at_price": -0.0339,
-              "ev": -0.0662,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 43.5: 45.5% vs market 48.9%.",
-                "Projected total 45.3 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 44.5 -> 43.5.",
-                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)"
+                "Model under 43.5: 41.4% vs market 48.9%.",
+                "Projected total 47.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 44.5 -> 43.5.",
+                "KENT L5 LLLWL (MOV -16.2), BGSU L5 WWLLL (MOV -11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -272,7 +331,8 @@
                 "line move: total already moved toward under (44.5 -> 43.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +113 or better."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }

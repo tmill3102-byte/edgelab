@@ -33,28 +33,23 @@
   },
   "lines": {
     "draftkings": {
+      "ml_home": 350.0,
+      "ml_away": -455.0,
       "total": 40.5,
       "over_odds": -105.0,
       "under_odds": -115.0,
-      "spread_away": -9.5,
-      "spread_away_odds": -112.0,
       "spread_home": 9.5,
       "spread_home_odds": -108.0,
-      "ml_away": -455.0,
-      "ml_home": 350.0
+      "spread_away": -9.5,
+      "spread_away_odds": -112.0
     }
   },
-  "badge": {
-    "tier": "Medium",
-    "edge": 0.0561,
-    "selection": "LAR -9.5",
-    "market": "Spread",
-    "book": "draftkings"
-  },
-  "model_summary": "Projected margin ARI -13.5 \u00b7 total 45.9",
+  "badge": null,
+  "model_summary": "Margin ARI -8.0 \u00b7 total 48.2",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: ARI 12.5% (implied margin -15.5); blended 50/50 with own rating."
+    "ESPN matchup predictor: ARI 12.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin ARI -8.0, total 48.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -91,6 +86,7 @@
     ],
     "away": [
       {
+<<<<<<< HEAD
         "name": "Puka Nacua",
         "status": "Questionable",
         "pos": "WR",
@@ -100,17 +96,28 @@
         "name": "Steve Avila",
         "status": "Questionable",
         "pos": "G",
+=======
+        "name": "Jordan Whittington",
+        "status": "Questionable",
+        "pos": "WR",
+>>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
         "key": false
       },
       {
         "name": "Trent McDuffie",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "CB",
         "key": false
       },
       {
+        "name": "Puka Nacua",
+        "status": "Doubtful",
+        "pos": "WR",
+        "key": true
+      },
+      {
         "name": "Joe Cardona",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "LS",
         "key": false
       },
@@ -131,39 +138,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "LAR ML",
-              "side": "away",
-              "line": null,
-              "odds": -455.0,
-              "model_raw": 0.8413,
-              "model_prob": 0.814,
-              "market_prob": 0.7867,
-              "fair_odds": -438,
-              "edge": 0.0273,
-              "edge_at_price": -0.0058,
-              "ev": -0.0071,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAR win 84.1% vs market no-vig 78.7%.",
-                "Projected margin ARI -13.5 (ratings ARI -6.1, LAR +3.1, HFA 1.7).",
-                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
-                "ARI key player(s) out: Gardner Minshew II (-4.0)"
-              ],
-              "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Puka Nacua (Questionable)"
-              ],
-              "case_against": "Market makes LAR 79%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -395 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -172,27 +146,68 @@
               "side": "home",
               "line": null,
               "odds": 350.0,
-              "model_raw": 0.1587,
-              "model_prob": 0.186,
+              "model_raw": 0.2758,
+              "model_prob": 0.2133,
               "market_prob": 0.2133,
-              "fair_odds": 438,
-              "edge": -0.0273,
-              "edge_at_price": -0.0362,
-              "ev": -0.1631,
+              "fair_odds": 369,
+              "edge": 0.0,
+              "edge_at_price": -0.009,
+              "ev": -0.0403,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model ARI win 15.9% vs market no-vig 21.3%.",
-                "Projected margin ARI -13.5 (ratings ARI -6.1, LAR +3.1, HFA 1.7).",
+                "Model ARI win 27.6% vs market no-vig 21.3%.",
+                "v2 projected margin ARI -8.0 (ratings ARI -5.2, LAR +4.4, home edge 1.5); raw model 27.6%.",
                 "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
-                "ARI key player(s) out: Gardner Minshew II (-4.0)"
+                "ARI key player(s) out: Gardner Minshew II (not in the rating; the market has usually priced this)",
+                "LAR key player(s) out: Puka Nacua (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "injury news: key player status uncertain - Gardner Minshew II (Doubtful)"
+                "injury news: key player status uncertain - Gardner Minshew II (Doubtful)",
+                "injury: Gardner Minshew II out for this side and the rating doesn't know it"
               ],
               "case_against": "Market makes ARI 21%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +448 or better."
+              "next_step": "Pass. Only interesting at +378 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "LAR ML",
+              "side": "away",
+              "line": null,
+              "odds": -455.0,
+              "model_raw": 0.7242,
+              "model_prob": 0.7867,
+              "market_prob": 0.7867,
+              "fair_odds": -369,
+              "edge": 0.0,
+              "edge_at_price": -0.0331,
+              "ev": -0.0403,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model LAR win 72.4% vs market no-vig 78.7%.",
+                "v2 projected margin ARI -8.0 (ratings ARI -5.2, LAR +4.4, home edge 1.5); raw model 72.4%.",
+                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
+                "ARI key player(s) out: Gardner Minshew II (not in the rating; the market has usually priced this)",
+                "LAR key player(s) out: Puka Nacua (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Puka Nacua (Doubtful)",
+                "injury: Puka Nacua out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Market makes LAR 79%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -337 or better.",
+              "proven": false
             }
           }
         }
@@ -202,40 +217,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "LAR -9.5",
-              "side": "away",
-              "line": -9.5,
-              "odds": -112.0,
-              "model_raw": 0.6165,
-              "model_prob": 0.5604,
-              "market_prob": 0.5043,
-              "fair_odds": -127,
-              "edge": 0.0561,
-              "edge_at_price": 0.0321,
-              "ev": 0.0608,
-              "tier": "Medium",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAR -9.5 covers 61.6% vs market 50.4%.",
-                "Projected margin ARI -13.5 vs line ARI +9.5.",
-                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
-                "ARI key player(s) out: Gardner Minshew II (-4.0)"
-              ],
-              "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Puka Nacua (Questionable)",
-                "downgraded High -> Medium"
-              ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Playable at -122 or better (current -112); re-check injuries/line 60 min before start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -244,28 +225,69 @@
               "side": "home",
               "line": 9.5,
               "odds": -108.0,
-              "model_raw": 0.3835,
-              "model_prob": 0.4396,
+              "model_raw": 0.5432,
+              "model_prob": 0.4957,
               "market_prob": 0.4957,
-              "fair_odds": 127,
-              "edge": -0.0561,
-              "edge_at_price": -0.0796,
-              "ev": -0.1534,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model ARI +9.5 covers 38.4% vs market 49.6%.",
-                "Projected margin ARI -13.5 vs line ARI +9.5.",
+                "Model ARI +9.5 covers 54.3% vs market 49.6%.",
+                "Projected margin ARI -8.0 vs line ARI +9.5.",
                 "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
-                "ARI key player(s) out: Gardner Minshew II (-4.0)"
+                "ARI key player(s) out: Gardner Minshew II (not in the rating; the market has usually priced this)",
+                "LAR key player(s) out: Puka Nacua (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "injury news: key player status uncertain - Gardner Minshew II (Doubtful)",
-                "line move: spread moved against this side (+10.5 -> +9.5)"
+                "line move: spread moved against this side (+10.5 -> +9.5)",
+                "injury: Gardner Minshew II out for this side and the rating doesn't know it"
               ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +132 or better."
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "LAR -9.5",
+              "side": "away",
+              "line": -9.5,
+              "odds": -112.0,
+              "model_raw": 0.4568,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model LAR -9.5 covers 45.7% vs market 50.4%.",
+                "Projected margin ARI -8.0 vs line ARI +9.5.",
+                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
+                "ARI key player(s) out: Gardner Minshew II (not in the rating; the market has usually priced this)",
+                "LAR key player(s) out: Puka Nacua (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Puka Nacua (Doubtful)",
+                "injury: Puka Nacua out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }
@@ -283,28 +305,29 @@
               "side": "over",
               "line": 40.5,
               "odds": -105.0,
-              "model_raw": 0.6611,
-              "model_prob": 0.5579,
+              "model_raw": 0.7107,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": -126,
-              "edge": 0.0688,
-              "edge_at_price": 0.0457,
-              "ev": 0.0893,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 40.5: 66.1% vs market 48.9%.",
-                "Projected total 45.9 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 47.5 -> 40.5.",
-                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)"
+                "Model over 40.5: 71.1% vs market 48.9%.",
+                "Projected total 48.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 40.5.",
+                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (71% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the over (47.5 -> 40.5)",
-                "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-                "downgraded High -> Low"
+                "line move: market moved against the over (47.5 -> 40.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -121 or better and re-check injuries near start."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         },
@@ -317,27 +340,29 @@
               "side": "under",
               "line": 40.5,
               "odds": -115.0,
-              "model_raw": 0.3389,
-              "model_prob": 0.4421,
+              "model_raw": 0.2893,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": 126,
-              "edge": -0.0688,
-              "edge_at_price": -0.0928,
-              "ev": -0.1735,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 40.5: 33.9% vs market 51.1%.",
-                "Projected total 45.9 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 47.5 -> 40.5.",
-                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)"
+                "Model under 40.5: 28.9% vs market 51.1%.",
+                "Projected total 48.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 40.5.",
+                "LAR L5 LLWWW (MOV 3.7), ARI L5 LWLWL (MOV -8.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (29% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
-                "line move: total already moved toward under (47.5 -> 40.5); value may be gone",
-                "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+                "line move: total already moved toward under (47.5 -> 40.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +131 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }

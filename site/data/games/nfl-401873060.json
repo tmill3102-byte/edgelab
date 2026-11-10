@@ -33,28 +33,23 @@
   },
   "lines": {
     "draftkings": {
+      "ml_home": -205.0,
+      "ml_away": 170.0,
+      "total": 42.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0,
       "spread_home": -4.5,
       "spread_home_odds": -110.0,
       "spread_away": 4.5,
-      "spread_away_odds": -110.0,
-      "total": 42.5,
-      "under_odds": -115.0,
-      "over_odds": -105.0,
-      "ml_home": -205.0,
-      "ml_away": 170.0
+      "spread_away_odds": -110.0
     }
   },
-  "badge": {
-    "tier": "Medium",
-    "edge": 0.0412,
-    "selection": "GB -4.5",
-    "market": "Spread",
-    "book": "draftkings"
-  },
-  "model_summary": "Projected margin GB +7.3 \u00b7 total 38.7",
+  "badge": null,
+  "model_summary": "Margin GB +2.3 \u00b7 total 33.9",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: GB 69.7% (implied margin +7.0); blended 50/50 with own rating."
+    "ESPN matchup predictor: GB 69.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin GB +2.3, total 33.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -91,10 +86,22 @@
     ],
     "away": [
       {
-        "name": "Kyle Van Noy",
+        "name": "Tyrion Ingram-Dawkins",
         "status": "Questionable",
-        "pos": "LB",
+        "pos": "DE",
         "key": false
+      },
+      {
+        "name": "Jauan Jennings",
+        "status": "Questionable",
+        "pos": "WR",
+        "key": false
+      },
+      {
+        "name": "Kyler Murray",
+        "status": "Questionable",
+        "pos": "QB",
+        "key": true
       },
       {
         "name": "Demond Claiborne",
@@ -107,18 +114,6 @@
         "status": "Questionable",
         "pos": "S",
         "key": false
-      },
-      {
-        "name": "Jakobe Thomas",
-        "status": "Out",
-        "pos": "S",
-        "key": false
-      },
-      {
-        "name": "Kyler Murray",
-        "status": "Out",
-        "pos": "QB",
-        "key": true
       }
     ]
   },
@@ -139,25 +134,26 @@
               "side": "home",
               "line": null,
               "odds": -205.0,
-              "model_raw": 0.706,
-              "model_prob": 0.6754,
+              "model_raw": 0.5679,
+              "model_prob": 0.6447,
               "market_prob": 0.6447,
-              "fair_odds": -208,
-              "edge": 0.0306,
-              "edge_at_price": 0.0032,
-              "ev": 0.0048,
+              "fair_odds": -181,
+              "edge": 0.0,
+              "edge_at_price": -0.0274,
+              "ev": -0.0408,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model GB win 70.6% vs market no-vig 64.5%.",
-                "Projected margin GB +7.3 (ratings GB +3.7, MIN +1.8, HFA 1.7).",
+                "Model GB win 56.8% vs market no-vig 64.5%.",
+                "v2 projected margin GB +2.3 (ratings GB +2.9, MIN +2.1, home edge 1.5); raw model 56.8%.",
                 "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)",
-                "MIN key player(s) out: Kyler Murray (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes GB 64%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Monitor only; if anything, wait for -196 or better and re-check injuries near start."
+              "next_step": "Pass. Only interesting at -172 or better.",
+              "proven": false
             }
           }
         },
@@ -170,25 +166,28 @@
               "side": "away",
               "line": null,
               "odds": 170.0,
-              "model_raw": 0.294,
-              "model_prob": 0.3246,
+              "model_raw": 0.4321,
+              "model_prob": 0.3553,
               "market_prob": 0.3553,
-              "fair_odds": 208,
-              "edge": -0.0306,
-              "edge_at_price": -0.0457,
-              "ev": -0.1235,
+              "fair_odds": 181,
+              "edge": 0.0,
+              "edge_at_price": -0.0151,
+              "ev": -0.0408,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIN win 29.4% vs market no-vig 35.5%.",
-                "Projected margin GB +7.3 (ratings GB +3.7, MIN +1.8, HFA 1.7).",
+                "Model MIN win 43.2% vs market no-vig 35.5%.",
+                "v2 projected margin GB +2.3 (ratings GB +2.9, MIN +2.1, home edge 1.5); raw model 43.2%.",
                 "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)",
-                "MIN key player(s) out: Kyler Murray (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury news: key player status uncertain - Kyler Murray (Questionable)"
+              ],
               "case_against": "Market makes MIN 36%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +214 or better."
+              "next_step": "Pass. Only interesting at +187 or better.",
+              "proven": false
             }
           }
         }
@@ -206,25 +205,26 @@
               "side": "home",
               "line": -4.5,
               "odds": -110.0,
-              "model_raw": 0.5824,
-              "model_prob": 0.5412,
+              "model_raw": 0.4355,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": -118,
-              "edge": 0.0412,
-              "edge_at_price": 0.0174,
-              "ev": 0.0332,
-              "tier": "Medium",
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model GB -4.5 covers 58.2% vs market 50.0%.",
-                "Projected margin GB +7.3 vs line GB -4.5.",
+                "Model GB -4.5 covers 43.5% vs market 50.0%.",
+                "Projected margin GB +2.3 vs line GB -4.5.",
                 "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)",
-                "MIN key player(s) out: Kyler Murray (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Playable at -113 or better (current -110); re-check injuries/line 60 min before start."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         },
@@ -237,25 +237,28 @@
               "side": "away",
               "line": 4.5,
               "odds": -110.0,
-              "model_raw": 0.4176,
-              "model_prob": 0.4588,
+              "model_raw": 0.5645,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": 118,
-              "edge": -0.0412,
-              "edge_at_price": -0.065,
-              "ev": -0.1242,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIN +4.5 covers 41.8% vs market 50.0%.",
-                "Projected margin GB +7.3 vs line GB -4.5.",
+                "Model MIN +4.5 covers 56.5% vs market 50.0%.",
+                "Projected margin GB +2.3 vs line GB -4.5.",
                 "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)",
-                "MIN key player(s) out: Kyler Murray (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury news: key player status uncertain - Kyler Murray (Questionable)"
+              ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +122 or better."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         }
@@ -265,39 +268,6 @@
       "market": "Total",
       "sides": [
         {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 42.5",
-              "side": "under",
-              "line": 42.5,
-              "odds": -115.0,
-              "model_raw": 0.615,
-              "model_prob": 0.5525,
-              "market_prob": 0.5108,
-              "fair_odds": -123,
-              "edge": 0.0417,
-              "edge_at_price": 0.0176,
-              "ev": 0.0329,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model under 42.5: 61.5% vs market 51.1%.",
-                "Projected total 38.7 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 45.5 -> 42.5.",
-                "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: total already moved toward under (45.5 -> 42.5); value may be gone",
-                "downgraded Medium -> Low"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -118 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "over",
           "offers": {
             "draftkings": {
@@ -306,26 +276,64 @@
               "side": "over",
               "line": 42.5,
               "odds": -105.0,
-              "model_raw": 0.385,
-              "model_prob": 0.4475,
+              "model_raw": 0.2659,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 123,
-              "edge": -0.0417,
-              "edge_at_price": -0.0647,
-              "ev": -0.1263,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 42.5: 38.5% vs market 48.9%.",
-                "Projected total 38.7 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 45.5 -> 42.5.",
-                "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)"
+                "Model over 42.5: 26.6% vs market 48.9%.",
+                "Projected total 33.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 45.5 -> 42.5.",
+                "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (27% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
                 "line move: market moved against the over (45.5 -> 42.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +128 or better."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 42.5",
+              "side": "under",
+              "line": 42.5,
+              "odds": -115.0,
+              "model_raw": 0.7341,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 42.5: 73.4% vs market 51.1%.",
+                "Projected total 33.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 45.5 -> 42.5.",
+                "MIN L5 WWWLL (MOV 3.8), GB L5 WWLWW (MOV 2.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (73% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward under (45.5 -> 42.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }

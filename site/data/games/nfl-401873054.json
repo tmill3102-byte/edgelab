@@ -33,46 +33,47 @@
   },
   "lines": {
     "draftkings": {
-      "spread_away": -8.5,
-      "spread_away_odds": -110.0,
-      "spread_home": 8.5,
-      "spread_home_odds": -110.0,
       "ml_home": 390.0,
       "ml_away": -520.0,
       "total": 50.5,
+      "over_odds": -115.0,
       "under_odds": -105.0,
-      "over_odds": -115.0
+      "spread_home": 8.5,
+      "spread_home_odds": -110.0,
+      "spread_away": -8.5,
+      "spread_away_odds": -110.0
     }
   },
   "badge": null,
-  "model_summary": "Projected margin NYJ -11.3 \u00b7 total 50.4",
+  "model_summary": "Margin NYJ -14.2 \u00b7 total 53.1",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: NYJ 17.1% (implied margin -12.8); blended 50/50 with own rating."
+    "ESPN matchup predictor: NYJ 17.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin NYJ -14.2, total 53.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
+        "name": "Trevin Wallace",
+        "status": "Questionable",
+        "pos": "LB",
+        "key": false
+      },
+      {
         "name": "Garrett Wilson",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "WR",
         "key": true
       },
       {
         "name": "Nahshon Wright",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "CB",
         "key": false
       },
       {
-        "name": "Trevin Wallace",
-        "status": "Out",
-        "pos": "LB",
-        "key": false
-      },
-      {
         "name": "Joseph Ossai",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "DE",
         "key": false
       },
@@ -133,27 +134,29 @@
               "side": "home",
               "line": null,
               "odds": 390.0,
-              "model_raw": 0.2016,
-              "model_prob": 0.1987,
+              "model_raw": 0.1458,
+              "model_prob": 0.1957,
               "market_prob": 0.1957,
-              "fair_odds": 403,
-              "edge": 0.0029,
-              "edge_at_price": -0.0054,
-              "ev": -0.0266,
+              "fair_odds": 411,
+              "edge": 0.0,
+              "edge_at_price": -0.0084,
+              "ev": -0.041,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NYJ win 20.2% vs market no-vig 19.6%.",
-                "Projected margin NYJ -11.3 (ratings NYJ -3.6, BUF +5.9, HFA 1.7).",
+                "Model NYJ win 14.6% vs market no-vig 19.6%.",
+                "v2 projected margin NYJ -14.2 (ratings NYJ -7.3, BUF +8.4, home edge 1.5); raw model 14.6%.",
                 "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
-                "NYJ key player(s) out: Garrett Wilson (-2.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
+                "injury news: key player status uncertain - Garrett Wilson (Questionable)",
                 "line move: price drifted against this side (+270 -> +390)"
               ],
               "case_against": "Market makes NYJ 20%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +413 or better."
+              "next_step": "Pass. Only interesting at +421 or better.",
+              "proven": false
             }
           }
         },
@@ -166,25 +169,26 @@
               "side": "away",
               "line": null,
               "odds": -520.0,
-              "model_raw": 0.7984,
-              "model_prob": 0.8013,
+              "model_raw": 0.8542,
+              "model_prob": 0.8043,
               "market_prob": 0.8043,
-              "fair_odds": -403,
-              "edge": -0.0029,
-              "edge_at_price": -0.0374,
-              "ev": -0.0445,
+              "fair_odds": -411,
+              "edge": 0.0,
+              "edge_at_price": -0.0344,
+              "ev": -0.041,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model BUF win 79.8% vs market no-vig 80.4%.",
-                "Projected margin NYJ -11.3 (ratings NYJ -3.6, BUF +5.9, HFA 1.7).",
+                "Model BUF win 85.4% vs market no-vig 80.4%.",
+                "v2 projected margin NYJ -14.2 (ratings NYJ -7.3, BUF +8.4, home edge 1.5); raw model 85.4%.",
                 "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
-                "NYJ key player(s) out: Garrett Wilson (-2.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes BUF 80%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -366 or better."
+              "next_step": "Pass. Only interesting at -373 or better.",
+              "proven": false
             }
           }
         }
@@ -194,40 +198,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "BUF -8.5",
-              "side": "away",
-              "line": -8.5,
-              "odds": -110.0,
-              "model_raw": 0.5819,
-              "model_prob": 0.5409,
-              "market_prob": 0.5,
-              "fair_odds": -118,
-              "edge": 0.0409,
-              "edge_at_price": 0.0171,
-              "ev": 0.0327,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model BUF -8.5 covers 58.2% vs market 50.0%.",
-                "Projected margin NYJ -11.3 vs line NYJ +8.5.",
-                "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
-                "NYJ key player(s) out: Garrett Wilson (-2.0)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (-7 -> -8.5)",
-                "downgraded Medium -> Low"
-              ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Monitor only; if anything, wait for -113 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -236,25 +206,64 @@
               "side": "home",
               "line": 8.5,
               "odds": -110.0,
-              "model_raw": 0.4181,
-              "model_prob": 0.4591,
+              "model_raw": 0.3354,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": 118,
-              "edge": -0.0409,
-              "edge_at_price": -0.0647,
-              "ev": -0.1236,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NYJ +8.5 covers 41.8% vs market 50.0%.",
-                "Projected margin NYJ -11.3 vs line NYJ +8.5.",
+                "Model NYJ +8.5 covers 33.5% vs market 50.0%.",
+                "Projected margin NYJ -14.2 vs line NYJ +8.5.",
                 "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
-                "NYJ key player(s) out: Garrett Wilson (-2.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury news: key player status uncertain - Garrett Wilson (Questionable)"
+              ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +122 or better."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "BUF -8.5",
+              "side": "away",
+              "line": -8.5,
+              "odds": -110.0,
+              "model_raw": 0.6646,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BUF -8.5 covers 66.5% vs market 50.0%.",
+                "Projected margin NYJ -14.2 vs line NYJ +8.5.",
+                "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (-7 -> -8.5)"
+              ],
+              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         }
@@ -264,38 +273,6 @@
       "market": "Total",
       "sides": [
         {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 50.5",
-              "side": "under",
-              "line": 50.5,
-              "odds": -105.0,
-              "model_raw": 0.5031,
-              "model_prob": 0.4947,
-              "market_prob": 0.4892,
-              "fair_odds": 102,
-              "edge": 0.0056,
-              "edge_at_price": -0.0175,
-              "ev": -0.0341,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model under 50.5: 50.3% vs market 48.9%.",
-                "Projected total 50.4 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 46.5 -> 50.5.",
-                "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: market moved against the under (46.5 -> 50.5)"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +106 or better."
-            }
-          }
-        },
-        {
           "side": "over",
           "offers": {
             "draftkings": {
@@ -304,26 +281,62 @@
               "side": "over",
               "line": 50.5,
               "odds": -115.0,
-              "model_raw": 0.4969,
-              "model_prob": 0.5053,
+              "model_raw": 0.5739,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": -102,
-              "edge": -0.0056,
-              "edge_at_price": -0.0296,
-              "ev": -0.0554,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 50.5: 49.7% vs market 51.1%.",
-                "Projected total 50.4 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 46.5 -> 50.5.",
-                "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)"
+                "Model over 50.5: 57.4% vs market 51.1%.",
+                "Projected total 53.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 46.5 -> 50.5.",
+                "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "line move: total already moved toward over (46.5 -> 50.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +102 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 50.5",
+              "side": "under",
+              "line": 50.5,
+              "odds": -105.0,
+              "model_raw": 0.4261,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 50.5: 42.6% vs market 48.9%.",
+                "Projected total 53.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 46.5 -> 50.5.",
+                "BUF L5 LWWWW (MOV 8.6), NYJ L5 WLLLL (MOV -4.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the under (46.5 -> 50.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }

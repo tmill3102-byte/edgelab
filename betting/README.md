@@ -40,11 +40,25 @@ Or any raw ESPN gamelog field name (an unknown stat prints the list of available
 | `site.web.api.espn.com/apis/v2/sports/.../standings` | league scoring average (Poisson baseline) |
 | `site.web.api.espn.com/apis/common/v3/sports/.../athletes/{id}/gamelog` | player game logs for props (current + prior season) |
 | `site.web.api.espn.com/apis/search/v2` | player name lookup |
-| `statsapi.mlb.com`, `api-web.nhle.com` | probed by `sources` (reachable; reserved for MLB probable pitchers / NHL extras, not yet in models) |
+| `statsapi.mlb.com`, `api-web.nhle.com` | statsapi: MLB probable pitchers + pitcher logs (v2); NHL API probed by `sources` |
 
 Not available free: player-prop prices (no free feed; you supply them), tennis/golf/UFC odds (ESPN has none), multiple sportsbooks.
 
-## Model method (simple, documented, conservative)
+## Engine v2 (NBA, NHL, NFL, CFB, MLB) - backtested, see BACKTEST.md
+
+For these five leagues `game`, `edges`, `build` and `digest` use **engine 2.0** (`"engine"` key in JSON; all v1 keys kept):
+- Ratings: margin + team-total Elo-style ratings (`betlib/ratings.py`), seeded from the last completed season
+  (`betlib/data/ratings_seed.json`) and replayed through the current season from ESPN scoreboards (`betlib/ratings_live.py`).
+  Season carryover, margin cap, home edge, back-to-back penalty, NBA pace, MLB probable starting pitchers (statsapi).
+- Market blend: `logit p = (1-b)·logit(market no-vig) + b·logit(model)`, with b fitted walk-forward per league and market
+  (`betlib/data/blend.json`). Markets that did not beat the market out of sample have b = 0 (model shown, no edge).
+  Currently enabled: NBA moneyline, NBA totals, NHL puck line. Everything else shows Low tier at market price.
+- Tiers v2: High = EV ≥ 3%, high data quality, price ≤ +400; Medium = EV ≥ 1%. Injury and line-move cautions still drop a tier;
+  "far from market" is now a note only (the backtest showed no CLV penalty for it).
+- Soccer, WNBA and NCAA basketball still use the v1 method below. If v2 errors, the engine falls back to v1.
+- Rebuild: `python3 -m backtest.fetch` → `backtest.harness` / `backtest.tune` → `backtest.evaluate` → `backtest.make_seed` (see BACKTEST.md).
+
+## Model method v1 (simple, documented, conservative)
 1. **Market**: American → implied prob; vig removed proportionally (2-way, or 3-way for soccer 1X2); fair odds = 1/no-vig prob.
 2. **Points sports** (NFL, CFB, NBA, WNBA, NCAAB/W): team rating = points margin per game (70% season / 30% last 5),
    shrunk toward 0 by k pseudo-games (NFL/CFB 4, NCAA 6, WNBA 8, NBA 10). Projected margin = rating diff + home edge
@@ -94,6 +108,6 @@ A web UI would wrap these in a thin HTTP layer (e.g. FastAPI: `GET /slate/{sport
 - Injuries: only flagged/adjusted when ESPN lists them; "key" = team statistical leader (or QB). College injuries are not available.
 - Props: no free prop prices → you supply them, otherwise -110/-110 is assumed and labelled. Game logs ignore minutes/role changes.
 - Tennis, golf, UFC, F1: schedules only (ESPN exposes no odds) → no model; use `odds` with your own probability.
-- MLB is in the registry but off-season (Nov); its model ignores starting pitchers, so treat it as Low quality when the season starts.
+- MLB is off-season (Nov). v2 uses probable starting pitchers, but no MLB market beat the close in the backtest, so MLB stays Low tier.
 - Same-game parlays: independence math is only an approximation; books' SGP prices differ.
 - Research only. Not financial advice. Gambling problem? 1-800-GAMBLER.

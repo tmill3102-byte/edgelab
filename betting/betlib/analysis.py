@@ -3,6 +3,9 @@ import math, statistics, datetime as dt
 from . import espn
 from .models import *
 from .leagues import LEAGUES
+from . import ratings as RT
+
+ENGINE_VERSION = "2.0"
 
 KEY_POS = {"nfl": {"QB"}, "cfb": {"QB"}}
 
@@ -66,15 +69,91 @@ def evaluate_game(lk, g, s=None, with_picks=True):
         flags.append("injury report not available for this league")
     pred = espn.predictor_from_summary(s)
     res["espn_predictor"] = pred
-    if L["kind"] == "pts":
+    res["engine"] = ENGINE_VERSION
+    done = False
+    if lk in RT.PARAMS and V2_ENABLED:
+        try:
+            _v2_model(lk, L, g, res, inj, when, pred)
+            done = True
+        except Exception as e:  # network trouble building ratings -> fall back to the v1 model, and say so
+            res["notes"].append(f"v2 ratings unavailable ({type(e).__name__}); fell back to the v1 season-average model.")
+    if not done and L["kind"] == "pts":
         _pts_model(lk, L, g, res, profs, inj, pred)
-    else:
+    elif not done:
         _goals_model(lk, L, g, res, profs, inj)
     if with_picks and g.get("odds") and res["state"] == "pre":
         _picks(lk, L, g, res, inj)
     elif res["state"] != "pre":
         res["notes"].append(f"Game state is '{res['state']}' - picks only generated for games not yet started.")
     return res
+
+
+V2_ENABLED = True
+
+
+def _v2_model(lk, L, g, res, inj, when, pred):
+    """v2: backtested team ratings (betlib/ratings.py) built from the shipped seed + every completed game since."""
+    from . import ratings_live as RL
+    bk = RL.book(lk, when)
+    season = RL.season_for(lk, when)
+    am = at = 0.0
+    feat = getattr(bk, "feature", None)
+    pnotes = []
+    if feat:
+        am, at, _ = feat.pre({"home": {"id": str(g["home"]["id"])}, "away": {"id": str(g["away"]["id"])}})
+    if lk == "mlb":
+        from . import mlb_pitchers
+        try:
+            am, at, pnotes = mlb_pitchers.live_adjustment(when, season, g["home"].get("name"), g["away"].get("name"))
+        except Exception as e:
+            pnotes = [f"probable-pitcher lookup failed ({type(e).__name__}); no starter adjustment"]
+    p = bk.predict(str(g["home"]["id"]), str(g["away"]["id"]), when, bool(g.get("neutral")), season, am, at)
+    hA, aA = g["home"]["abbr"], g["away"]["abbr"]
+    why = []
+    why += pnotes
+    if lk == "mlb" and any("not announced" in n or "failed" in n for n in pnotes):
+        res["flags"].append("MLB probable pitchers not available: no starter adjustment")
+    if at and lk == "nba":
+        why.append(f"pace: projected total {at:+.1f} vs these teams' rating-only total (recent shot volume)")
+    if abs(p["adj"] - am) > 1e-9:
+        why.append(f"rest/back-to-back adjustment {p['adj'] - am:+.2f} to {hA}'s margin ({', '.join(p['notes'])})" if p["notes"] else f"rest adjustment {p['adj'] - am:+.2f}")
+    for side in ("home", "away"):
+        outs = [i for i in inj[side]["key"] if (i["status"] or "").lower() in ("out", "doubtful")]
+        if outs:
+            why.append(f"{g[side]['abbr']} key player(s) out: {', '.join(i['name'] for i in outs)} (not in the rating; the market has usually priced this)")
+    pr = RT.probs(lk, p)
+    res["model"] = {"type": "ratings-v2", "home_rating": round(p["r_home"], 2), "away_rating": round(p["r_away"], 2), "hfa": round(p["hfa"], 2),
+                    "adjust": round(p["adj"], 2), "exp_margin_home": round(p["margin"], 2), "exp_total": round(p["total"], 2),
+                    "p_home": round(pr["p_home"], 4), "games_home": p["n_home"], "games_away": p["n_away"], "adj_notes": why,
+                    "sd": RT.PARAMS[lk]["sd"], "tsd": RT.PARAMS[lk]["tsd"], "_pred": {"margin": p["margin"], "total": p["total"]},
+                    "rating_games_replayed": getattr(bk, "replayed", None)}
+    res["model"].update(own_margin=round(p["margin"], 2), source="ratings-v2")    # v1-compatible keys
+    if "lam_home" in pr:
+        pd_ = pr["p_draw_reg"]; ph_reg = pr["p_home"] - pd_ * RT.PARAMS[lk].get("ot_home", 0.5)
+        res["model"].update(lam_home=round(pr["lam_home"], 3), lam_away=round(pr["lam_away"], 3),
+                            p_home_reg=round(ph_reg, 4), p_draw=round(pd_, 4), p_away_reg=round(1 - ph_reg - pd_, 4), mx=(25 if lk == "mlb" else 14))
+    if pred:
+        res["notes"].append(f"ESPN matchup predictor: {hA} {pred['home']*100:.1f}% (shown for reference only; it can't be backtested, so v2 doesn't use it).")
+    res["notes"].append(f"v2 ratings: margin {hA} {p['margin']:+.1f}, total {p['total']:.1f}; probabilities are then blended with the market using backtested weights (BACKTEST.md).")
+
+
+def _v2_tier(lk, mkey):
+    ok = RT.enabled(lk, mkey)
+    def f(edge, ev, dq, dec):
+        if not ok or dq == "Low" or ev is None:
+            return "Low"
+        if ev >= RT.TIERS["high_ev"] and dq == "High" and dec <= 5.0:
+            return "High"
+        if ev >= RT.TIERS["med_ev"]:
+            return "Medium"
+        return "Low"
+    return f
+
+
+def _v2_side_probs(lk, m, mkey, line):
+    """Raw v2 model prob for the home/over side of a market at `line`."""
+    pr = RT.probs(lk, m["_pred"], line if mkey == "sp" else None, line if mkey == "tot" else None)
+    return {"ml": pr.get("p_home"), "sp": pr.get("p_home_cover"), "tot": pr.get("p_over")}[mkey]
 
 
 def _pts_model(lk, L, g, res, profs, inj, pred):
@@ -189,6 +268,14 @@ def _total_prob(res, L, line, over=True):
     return (po, pp) if over else (pu, pp)
 
 
+def _inj_caution(m, inj, side):
+    """v2 ratings don't include injuries: a model lean ON a side missing a key player is suspect -> one-tier downgrade."""
+    if m.get("type") != "ratings-v2" or side not in ("home", "away"):
+        return []
+    outs = [i for i in inj[side]["key"] if (i["status"] or "").lower() in ("out", "doubtful")]
+    return [f"injury: {', '.join(i['name'] for i in outs)} out for this side and the rating doesn't know it"] if outs else []
+
+
 def _norm_pushless(p, push):
     return p / (1 - push) if push < 1 else p
 
@@ -233,9 +320,12 @@ def _picks(lk, L, g, res, inj):
             mp = [m["p_home"], 1 - m["p_home"]]
             sides = [("home", hA, o["ml_home"], o.get("ml_home_open")), ("away", aA, o["ml_away"], o.get("ml_away_open"))]
         res["market"] = {"ml_novig": [round(x, 4) for x in nv], "ml_overround": round(over, 4)}
+        v2 = m["type"] == "ratings-v2" and not three
         for (sk, lab, price, op), p_model, p_mkt in zip(sides, mp, nv):
             why = [f"Model {lab} win {p_model*100:.1f}% vs market no-vig {p_mkt*100:.1f}%.", form] + m.get("adj_notes", [])
-            if m["type"] == "margin-normal":
+            if m["type"] == "ratings-v2":
+                why.insert(1, f"v2 projected margin {hA} {m['exp_margin_home']:+.1f} (ratings {hA} {m['home_rating']:+.1f}, {aA} {m['away_rating']:+.1f}, home edge {m['hfa']}); raw model {p_model*100:.1f}%.")
+            elif m["type"] == "margin-normal":
                 why.insert(1, f"Projected margin {hA} {m['exp_margin_home']:+.1f} (ratings {hA} {m['home_rating']:+.1f}, {aA} {m['away_rating']:+.1f}, HFA {m['hfa']}).")
             else:
                 why.insert(1, f"Expected goals {hA} {m['lam_home']:.2f} - {aA} {m['lam_away']:.2f} (Poisson).")
@@ -243,46 +333,70 @@ def _picks(lk, L, g, res, inj):
                        ("heavy favorites risk a lot to win a little; one upset erases several wins" if price <= -200 else
                         "favorites in this range still lose often, and public money tends to inflate them" if price < 0 else
                         "an underdog price means it loses more often than not") + ".")
+            kw = {}
+            if v2:
+                fin = RT.blend(lk, "ml", p_mkt, p_model)
+                kw = {"blended": fin if fin is not None else p_mkt, "tier_fn": _v2_tier(lk, "ml"), "far_downgrade": False}
+                why.append(RT.blend_note(lk, "ml"))
             pk = make_pick("ML" if not three else "1X2", f"{lab} ML" if sk != "draw" else "Draw", sk, None, price, p_model, p_mkt, weight, dq,
-                           why, base_flags, caution=cautions(sk, "ml", cur_price=price, open_price=op), against=against)
+                           why, base_flags, caution=cautions(sk, "ml", cur_price=price, open_price=op) + _inj_caution(m, inj, sk), against=against, **kw)
             if pk: picks.append(pk)
     # ---- spread ----
     if o.get("spread_home") is not None and o.get("spread_home_odds") is not None and o.get("spread_away_odds") is not None:
         sh = o["spread_home"]
         nv, _ = no_vig([o["spread_home_odds"], o["spread_away_odds"]])
         for sk, lab, line, price, p_mkt in (("home", hA, sh, o["spread_home_odds"], nv[0]), ("away", aA, -sh, o["spread_away_odds"], nv[1])):
-            pw, pp = _cover_prob(res, L, line, home=(sk == "home"))
-            p_model = _norm_pushless(pw, pp)
+            if m["type"] == "ratings-v2":
+                ph = _v2_side_probs(lk, m, "sp", sh)
+                p_model, pp = (ph if sk == "home" else 1 - ph), 0.0
+            else:
+                pw, pp = _cover_prob(res, L, line, home=(sk == "home"))
+                p_model = _norm_pushless(pw, pp)
             opn = o.get("spread_home_open")
             opn = (opn if sk == "home" else -opn) if opn is not None else None
             why = [f"Model {lab} {line:+g} covers {p_model*100:.1f}% vs market {p_mkt*100:.1f}%.",
-                   (f"Projected margin {hA} {m['exp_margin_home']:+.1f} vs line {hA} {sh:+g}." if m["type"] == "margin-normal"
+                   (f"Projected margin {hA} {m['exp_margin_home']:+.1f} vs line {hA} {sh:+g}." if m["type"] in ("margin-normal", "ratings-v2")
                     else f"Poisson xG {hA} {m['lam_home']:.2f}-{m['lam_away']:.2f} {aA}."), form] + m.get("adj_notes", [])
             against = (f"Margin s.d. is ~{L['sd']} pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model."
                        if L["kind"] == "pts" else "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.")
+            kw = {}
+            if m["type"] == "ratings-v2":
+                fin = RT.blend(lk, "sp", p_mkt, p_model)
+                kw = {"blended": fin if fin is not None else p_mkt, "tier_fn": _v2_tier(lk, "sp"), "far_downgrade": False}
+                why.append(RT.blend_note(lk, "sp"))
             pk = make_pick("Spread", f"{lab} {line:+g}", sk, line, price, p_model, p_mkt, weight, dq, why, base_flags, push=pp,
-                           caution=cautions(sk, "spread", cur_line=line, open_line=opn), against=against)
+                           caution=cautions(sk, "spread", cur_line=line, open_line=opn) + _inj_caution(m, inj, sk), against=against, **kw)
             if pk: picks.append(pk)
     # ---- total ----
     if o.get("total") is not None and o.get("over_odds") is not None and o.get("under_odds") is not None and m.get("exp_total"):
         t = o["total"]
         nv, _ = no_vig([o["over_odds"], o["under_odds"]])
         for sk, p_mkt, price in (("over", nv[0], o["over_odds"]), ("under", nv[1], o["under_odds"])):
-            pw, pp = _total_prob(res, L, t, over=(sk == "over"))
-            if pw is None: continue
-            p_model = _norm_pushless(pw, pp)
+            if m["type"] == "ratings-v2":
+                po = _v2_side_probs(lk, m, "tot", t)
+                p_model, pp = (po if sk == "over" else 1 - po), 0.0
+            else:
+                pw, pp = _total_prob(res, L, t, over=(sk == "over"))
+                if pw is None: continue
+                p_model = _norm_pushless(pw, pp)
             mv = ""
             if o.get("total_open") is not None and o["total_open"] != t:
                 mv = f" Line moved {o['total_open']:g} -> {t:g}."
             why = [f"Model {sk} {t:g}: {p_model*100:.1f}% vs market {p_mkt*100:.1f}%.",
-                   f"Projected total {m['exp_total']:.1f} from season/recent scoring & allowing averages (no pace/weather/lineup inputs).{mv}", form]
+                   (f"Projected total {m['exp_total']:.1f} from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).{mv}" if m["type"] == "ratings-v2" else
+                    f"Projected total {m['exp_total']:.1f} from season/recent scoring & allowing averages (no pace/weather/lineup inputs).{mv}"), form]
             c = cautions(None, "total")
             if o.get("total_open") is not None and ((sk == "over" and t - o["total_open"] >= 1.0 and L["kind"] == "pts") or (sk == "under" and o["total_open"] - t >= 1.0 and L["kind"] == "pts")):
                 c.append(f"line move: total already moved toward {sk} ({o['total_open']:g} -> {t:g}); value may be gone")
             if o.get("total_open") is not None and L["kind"] == "pts" and ((sk == "over" and t - o["total_open"] <= -1.0) or (sk == "under" and t - o["total_open"] >= 1.0)):
                 c.append(f"line move: market moved against the {sk} ({o['total_open']:g} -> {t:g})")
             against = "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest."
-            pk = make_pick("Total", f"{sk.title()} {t:g}", sk, t, price, p_model, p_mkt, weight * 0.8, dq, why, base_flags, push=pp, caution=c, against=against)
+            kw = {}
+            if m["type"] == "ratings-v2":
+                fin = RT.blend(lk, "tot", p_mkt, p_model)
+                kw = {"blended": fin if fin is not None else p_mkt, "tier_fn": _v2_tier(lk, "tot"), "far_downgrade": False}
+                why.append(RT.blend_note(lk, "tot"))
+            pk = make_pick("Total", f"{sk.title()} {t:g}", sk, t, price, p_model, p_mkt, weight * 0.8, dq, why, base_flags, push=pp, caution=c, against=against, **kw)
             if pk: picks.append(pk)
     for p in picks:
         p["next_step"] = _next_step(p)
@@ -296,6 +410,71 @@ def _next_step(p):
     if p["tier"] == "Low":
         return f"Monitor only; if anything, wait for {fmt_am(mp)} or better and re-check injuries near start."
     return f"Playable at {fmt_am(mp)} or better (current {fmt_am(p['odds'])}); re-check injuries/line 60 min before start."
+
+
+def reprice_pick(lk, res, market, side, line, odds, market_p, label):
+    """Price one side at another book's real line and American odds. Uses the v2 blend when the game model is v2."""
+    if odds is None or market_p is None or not res.get("model"):
+        return None
+    m = res["model"]
+    flags = list(res.get("flags") or [])
+    dq = quality(flags)
+    hA, aA = res["home"]["abbr"], res["away"]["abbr"]
+    reasons = []
+    push = 0.0
+    weight = {"High": 0.5, "Medium": 0.4, "Low": 0.25}[dq]
+    kw = {}
+    if m.get("type") == "ratings-v2":
+        mkey = {"ML": "ml", "1X2": "ml", "Spread": "sp", "Total": "tot"}.get(market)
+        if mkey == "ml":
+            raw = m.get("p_home") if side == "home" else (None if m.get("p_home") is None else 1 - m["p_home"])
+        elif mkey == "sp" and line is not None:
+            home_line = line if side == "home" else -line
+            ph = _v2_side_probs(lk, m, "sp", home_line)
+            raw = None if ph is None else (ph if side == "home" else 1 - ph)
+        elif mkey == "tot" and line is not None:
+            po = _v2_side_probs(lk, m, "tot", line)
+            raw = None if po is None else (po if side == "over" else 1 - po)
+        else:
+            raw = None
+        if raw is None:
+            return None
+        fin = RT.blend(lk, mkey, market_p, raw)
+        reasons = [f"Raw model {label}: {raw*100:.1f}%.", RT.blend_note(lk, mkey)]
+        if m.get("exp_margin_home") is not None:
+            reasons.append(f"v2 margin {hA} {m['exp_margin_home']:+.1f}, total {m.get('exp_total')}.")
+        kw = {"blended": fin if fin is not None else market_p, "tier_fn": _v2_tier(lk, mkey), "far_downgrade": False}
+    else:
+        if market in ("ML", "1X2"):
+            if market == "1X2":
+                raw = {"home": m.get("p_home_reg"), "draw": m.get("p_draw"), "away": m.get("p_away_reg")}.get(side)
+            elif side == "home":
+                raw = m.get("p_home")
+            else:
+                raw = None if m.get("p_home") is None else 1 - m["p_home"]
+        elif market == "Spread" and line is not None:
+            pw, push = _cover_prob(res, LEAGUES[lk], line, home=(side == "home"))
+            raw = _norm_pushless(pw, push)
+        elif market == "Total" and line is not None:
+            pw, push = _total_prob(res, LEAGUES[lk], line, over=(side == "over"))
+            raw = None if pw is None else _norm_pushless(pw, push)
+            weight *= 0.8
+        else:
+            raw = None
+        if raw is None:
+            return None
+        reasons = [f"Model {label}: {raw*100:.1f}% before shrink, this book's no-vig {market_p*100:.1f}%."]
+    caution = []
+    if any(f.startswith("thin") or f.startswith("!") for f in flags):
+        caution.append("thin data: " + "; ".join(f.lstrip("!") for f in flags))
+    pk = make_pick(market, label, side, line, odds, raw, market_p, weight, dq, reasons, flags,
+                   push=push or 0.0, caution=caution,
+                   against="Where the backtest did not earn the model any weight, the final number is the market's.",
+                   **kw)
+    if not pk:
+        return None
+    pk["next_step"] = _next_step(pk)
+    return pk
 
 
 # ---------------- props ----------------
@@ -483,78 +662,3 @@ def evaluate_prop(lk, player, stat, line, over_odds=None, under_odds=None, side=
     return {"league": lk, "player": pl, "stat": stat, "line": line, "games_used": len(vals), "recent": rows[:10],
             "projection": round(pr["mu"], 2), "dist": pr["dist"], "hit_rates": hr, "status": status,
             "picks": picks, "ladder": ladder, "flags": flags, "other_matches": [c["name"] + " (" + (c.get("team") or "") + ")" for c in cands[1:4]]}
-
-
-def model_side_prob(res, L, market, side, line):
-    """Raw model win probability and push probability for one side at a line."""
-    m = res.get("model") or {}
-    if market in ("ML", "1X2"):
-        if market == "1X2":
-            table = {"home": m.get("p_home_reg"), "draw": m.get("p_draw"), "away": m.get("p_away_reg")}
-            return table.get(side), 0.0
-        if side == "home":
-            return m.get("p_home"), 0.0
-        if side == "away" and m.get("p_home") is not None:
-            return 1 - m["p_home"], 0.0
-        return None, None
-    if market == "Spread":
-        if line is None:
-            return None, None
-        pw, pp = _cover_prob(res, L, line, home=(side == "home"))
-        return _norm_pushless(pw, pp), pp
-    if market == "Total":
-        if line is None:
-            return None, None
-        pw, pp = _total_prob(res, L, line, over=(side == "over"))
-        if pw is None:
-            return None, None
-        return _norm_pushless(pw, pp), pp
-    return None, None
-
-
-def reprice_pick(lk, res, market, side, line, odds, market_p, label):
-    """Price one side at a book's line and American odds using an already-fit game model.
-
-    Does not alter evaluate_game. Used to attach other books' real prices to the same model.
-    """
-    if odds is None or market_p is None or not res.get("model"):
-        return None
-    L = LEAGUES[lk]
-    raw, push = model_side_prob(res, L, market, side, line)
-    if raw is None:
-        return None
-    flags = list(res.get("flags") or [])
-    dq = quality(flags)
-    weight = {"High": 0.5, "Medium": 0.4, "Low": 0.25}[dq]
-    if market == "Total":
-        weight *= 0.8
-    m = res["model"]
-    hA, aA = res["home"]["abbr"], res["away"]["abbr"]
-    reasons = [f"Model {label}: {raw*100:.1f}% before shrink, this book's no-vig {market_p*100:.1f}%."]
-    if m.get("type") == "margin-normal":
-        reasons.append(f"Projected margin {hA} {m['exp_margin_home']:+.1f}" + (f", total {m['exp_total']:.1f}." if m.get("exp_total") else "."))
-    else:
-        reasons.append(f"Expected goals {hA} {m['lam_home']:.2f}–{aA} {m['lam_away']:.2f}.")
-    pr = res.get("profiles") or {}
-    if pr.get("home") and pr.get("away"):
-        reasons.append(f"{aA} L5 {pr['away'].get('last5') or '-'}, {hA} L5 {pr['home'].get('last5') or '-'}.")
-    for note in m.get("adj_notes") or []:
-        reasons.append(note)
-    caution = []
-    if any(f.startswith("thin") or f.startswith("!") for f in flags):
-        caution.append("thin data: " + "; ".join(f.lstrip("!") for f in flags))
-    against = "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise."
-    pk = make_pick(market, label, side, line, odds, raw, market_p, weight, dq, reasons, flags,
-                   push=push or 0.0, caution=caution, against=against)
-    if not pk:
-        return None
-    pk["next_step"] = _next_step(pk)
-    same = next((p for p in res.get("picks") or [] if p.get("market") == pk["market"] and p.get("side") == side), None)
-    same_line = same and (line is None or same.get("line") is None or abs(float(same["line"]) - float(line)) < 0.01)
-    close_price = same_line and same.get("market_prob") is not None and abs(same["market_prob"] - market_p) < 0.015
-    if close_price:
-        pk["reasons"] = same["reasons"]
-        pk["case_against"] = same["case_against"]
-        pk["caution"] = list(same.get("caution") or [])
-        pk["next_step"] = _next_step(pk)
-    return pk

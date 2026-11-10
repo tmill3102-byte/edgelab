@@ -89,8 +89,19 @@ def american(price):
     return price
 
 
-def strip_pick(pick):
-    return {key: pick.get(key) for key in KEEP}
+def strip_pick(pick, league=None):
+    out = {key: pick.get(key) for key in KEEP}
+    market = {"ML": "ml", "1X2": "ml", "Spread": "sp", "Total": "tot"}.get(pick.get("market"))
+    proven = True
+    if league:
+        try:
+            from betlib import ratings as RT
+            if league in RT.PARAMS:
+                proven = bool(market and RT.enabled(league, market))
+        except Exception:
+            proven = True
+    out["proven"] = proven
+    return out
 
 
 def et_parts(iso, fallback):
@@ -154,8 +165,8 @@ def model_summary(res):
     model = res.get("model") or {}
     home = res["home"]["abbr"]
     away = res["away"]["abbr"]
-    if model.get("type") == "margin-normal":
-        text = f"Projected margin {home} {model['exp_margin_home']:+.1f}"
+    if model.get("type") in ("margin-normal", "ratings-v2"):
+        text = f"Margin {home} {model['exp_margin_home']:+.1f}"
         if model.get("exp_total") is not None:
             text += f" · total {model['exp_total']:.1f}"
         return text
@@ -265,7 +276,7 @@ def line_only_markets(game):
 
 def apply_engine(markets, res):
     for pick in res.get("picks") or []:
-        markets.setdefault(pick["market"], {}).setdefault(pick["side"], {})["draftkings"] = strip_pick(pick)
+        markets.setdefault(pick["market"], {}).setdefault(pick["side"], {})["draftkings"] = strip_pick(pick, res.get("league"))
 
 
 def apply_api(markets, league, res, event, event_urls):
@@ -299,7 +310,7 @@ def apply_api(markets, league, res, event, event_urls):
                         link = extract_link(sides[side])
                         if link:
                             event_urls.setdefault(key, link)
-                        markets.setdefault(market, {}).setdefault(side, {})[key] = strip_pick(pick)
+                        markets.setdefault(market, {}).setdefault(side, {})[key] = strip_pick(pick, league)
         if "spreads" in by_market:
             sides = outcomes_by_side(by_market["spreads"].get("outcomes"), home, away)
             if "home" in sides and "away" in sides:
@@ -316,7 +327,7 @@ def apply_api(markets, league, res, event, event_urls):
                         label = f"{res[side]['abbr']} {line:+g}"
                         pick = analysis.reprice_pick(league, res, "Spread", side, line, price, prob, label)
                         if pick:
-                            markets.setdefault("Spread", {}).setdefault(side, {})[key] = strip_pick(pick)
+                            markets.setdefault("Spread", {}).setdefault(side, {})[key] = strip_pick(pick, league)
         if "totals" in by_market:
             sides = outcomes_by_side(by_market["totals"].get("outcomes"), home, away)
             if "over" in sides and "under" in sides:
@@ -333,7 +344,7 @@ def apply_api(markets, league, res, event, event_urls):
                             label = f"{side.title()} {line:g}"
                             pick = analysis.reprice_pick(league, res, "Total", side, line, price, prob, label)
                             if pick:
-                                markets.setdefault("Total", {}).setdefault(side, {})[key] = strip_pick(pick)
+                                markets.setdefault("Total", {}).setdefault(side, {})[key] = strip_pick(pick, league)
 
 
 def team_bits(game, side):
@@ -604,7 +615,7 @@ def props_for_game(league, res, payload):
                 if not pick:
                     continue
                 pick["next_step"] = analysis._next_step(pick)
-                group_sides.setdefault(side, {})[book_key] = strip_pick(pick)
+                group_sides.setdefault(side, {})[book_key] = strip_pick(pick, league)
         if not group_sides:
             continue
         athlete = prop.get("player") or {}
@@ -816,7 +827,7 @@ def main():
     for leg in legs:
         offer = leg["offers"].get(leg["primary_book"]) or {}
         tier = offer.get("tier")
-        if tier in ("High", "Medium") and (offer.get("edge") or 0) >= 0 and (offer.get("ev") or 0) > 0:
+        if tier in ("High", "Medium") and offer.get("proven") is not False and (offer.get("edge") or 0) >= 0 and (offer.get("ev") or 0) > 0:
             edges.append({
                 "league": leg["league"],
                 "event_id": leg["event_id"],
@@ -832,6 +843,7 @@ def main():
                 "edge": offer.get("edge"),
                 "edge_at_price": offer.get("edge_at_price"),
                 "tier": tier,
+                "proven": True,
                 "caution": offer.get("caution") or [],
                 "model_prob": offer.get("model_prob"),
                 "leg": leg,

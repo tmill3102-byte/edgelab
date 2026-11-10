@@ -79,8 +79,6 @@ _BOOK_HOSTS = (
     "fanatics.com", "hardrock.bet", "betrivers.com", "espnbet.com", "thescore.bet",
     "ballybet.com",
 )
-
-
 _DROP_QUERY = {
     "outcomes", "coupon", "wageramount", "options", "type", "marketid", "selectionid",
     "s", "wpcid", "wpscid", "wpcn", "wpscn", "wpcrn", "wpcrid", "preurl",
@@ -88,12 +86,7 @@ _DROP_QUERY = {
 
 
 def public_event_url(href):
-    """Public sportsbook event or home URL from an ESPN/Odds API link.
-
-    Affiliate gateways are reduced to their preurl. `{state}` is filled as Ohio.
-    Bet-slip query params (outcomes, coupons, add-to-slip) are removed. A link
-    that still contains an unresolved template is dropped.
-    """
+    """Public sportsbook event or home URL. `{state}` becomes Ohio. Bet-slip queries are dropped."""
     if not href or not isinstance(href, str):
         return None
     raw = href.strip().replace("{state}", "oh")

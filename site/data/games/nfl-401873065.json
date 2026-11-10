@@ -33,41 +33,36 @@
   },
   "lines": {
     "draftkings": {
-      "ml_away": 180.0,
       "ml_home": -218.0,
-      "total": 38.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0,
+      "ml_away": 180.0,
+      "spread_home": -5.5,
+      "spread_home_odds": -108.0,
       "spread_away": 5.5,
       "spread_away_odds": -112.0,
-      "spread_home": -5.5,
-      "spread_home_odds": -108.0
+      "total": 38.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0
     }
   },
-  "badge": {
-    "tier": "Medium",
-    "edge": 0.0579,
-    "selection": "LAC +5.5",
-    "market": "Spread",
-    "book": "draftkings"
-  },
-  "model_summary": "Projected margin BAL +1.4 \u00b7 total 44.5",
+  "badge": null,
+  "model_summary": "Margin BAL +5.0 \u00b7 total 42.4",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: BAL 44.1% (implied margin -2.0); blended 50/50 with own rating."
+    "ESPN matchup predictor: BAL 44.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin BAL +5.0, total 42.4; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
-        "name": "Jaylinn Hawkins",
-        "status": "Out",
-        "pos": "S",
+        "name": "Nate Wiggins",
+        "status": "Questionable",
+        "pos": "CB",
         "key": false
       },
       {
-        "name": "Nate Wiggins",
-        "status": "Out",
-        "pos": "CB",
+        "name": "Jaylinn Hawkins",
+        "status": "Questionable",
+        "pos": "S",
         "key": false
       },
       {
@@ -91,34 +86,34 @@
     ],
     "away": [
       {
-        "name": "Ladd McConkey",
-        "status": "Questionable",
-        "pos": "WR",
-        "key": true
-      },
-      {
-        "name": "Justin Herbert",
-        "status": "Questionable",
-        "pos": "QB",
-        "key": true
-      },
-      {
         "name": "Kendall Williamson",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "S",
         "key": false
       },
       {
         "name": "Brenen Thompson",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "WR",
         "key": false
       },
       {
         "name": "Deane Leonard",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "CB",
         "key": false
+      },
+      {
+        "name": "Kayode Awosika",
+        "status": "Questionable",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Ladd McConkey",
+        "status": "Questionable",
+        "pos": "WR",
+        "key": true
       }
     ]
   },
@@ -131,40 +126,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "LAC ML",
-              "side": "away",
-              "line": null,
-              "odds": 180.0,
-              "model_raw": 0.4596,
-              "model_prob": 0.4011,
-              "market_prob": 0.3425,
-              "fair_odds": 149,
-              "edge": 0.0585,
-              "edge_at_price": 0.0439,
-              "ev": 0.123,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 46.0% vs market no-vig 34.3%.",
-                "Projected margin BAL +1.4 (ratings BAL -5.3, LAC -8.4, HFA 1.7).",
-                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)"
-              ],
-              "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Ladd McConkey (Questionable), Justin Herbert (Questionable)",
-                "line move: price drifted against this side (+120 -> +180)",
-                "downgraded High -> Low"
-              ],
-              "case_against": "Market makes LAC 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Monitor only; if anything, wait for +154 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -173,26 +134,63 @@
               "side": "home",
               "line": null,
               "odds": -218.0,
-              "model_raw": 0.5404,
-              "model_prob": 0.5989,
+              "model_raw": 0.6441,
+              "model_prob": 0.6575,
               "market_prob": 0.6575,
-              "fair_odds": -149,
-              "edge": -0.0585,
-              "edge_at_price": -0.0866,
-              "ev": -0.1263,
+              "fair_odds": -192,
+              "edge": 0.0,
+              "edge_at_price": -0.0281,
+              "ev": -0.0409,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model BAL win 54.0% vs market no-vig 65.7%.",
-                "Projected margin BAL +1.4 (ratings BAL -5.3, LAC -8.4, HFA 1.7).",
-                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)"
+                "Model BAL win 64.4% vs market no-vig 65.7%.",
+                "v2 projected margin BAL +5.0 (ratings BAL -3.1, LAC -6.6, home edge 1.5); raw model 64.4%.",
+                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "injury news: key player status uncertain - Lamar Jackson (Injured Reserve)"
               ],
               "case_against": "Market makes BAL 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -142 or better."
+              "next_step": "Pass. Only interesting at -181 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "away",
+              "line": null,
+              "odds": 180.0,
+              "model_raw": 0.3559,
+              "model_prob": 0.3425,
+              "market_prob": 0.3425,
+              "fair_odds": 192,
+              "edge": 0.0,
+              "edge_at_price": -0.0146,
+              "ev": -0.0409,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model LAC win 35.6% vs market no-vig 34.3%.",
+                "v2 projected margin BAL +5.0 (ratings BAL -3.1, LAC -6.6, home edge 1.5); raw model 35.6%.",
+                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Ladd McConkey (Questionable)",
+                "line move: price drifted against this side (+120 -> +180)"
+              ],
+              "case_against": "Market makes LAC 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +198 or better.",
+              "proven": false
             }
           }
         }
@@ -202,39 +200,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "LAC +5.5",
-              "side": "away",
-              "line": 5.5,
-              "odds": -112.0,
-              "model_raw": 0.6202,
-              "model_prob": 0.5622,
-              "market_prob": 0.5043,
-              "fair_odds": -128,
-              "edge": 0.0579,
-              "edge_at_price": 0.0339,
-              "ev": 0.0643,
-              "tier": "Medium",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +5.5 covers 62.0% vs market 50.4%.",
-                "Projected margin BAL +1.4 vs line BAL -5.5.",
-                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)"
-              ],
-              "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Ladd McConkey (Questionable), Justin Herbert (Questionable)",
-                "downgraded High -> Medium"
-              ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Playable at -123 or better (current -112); re-check injuries/line 60 min before start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -243,19 +208,20 @@
               "side": "home",
               "line": -5.5,
               "odds": -108.0,
-              "model_raw": 0.3798,
-              "model_prob": 0.4378,
+              "model_raw": 0.4849,
+              "model_prob": 0.4957,
               "market_prob": 0.4957,
-              "fair_odds": 128,
-              "edge": -0.0579,
-              "edge_at_price": -0.0815,
-              "ev": -0.1569,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model BAL -5.5 covers 38.0% vs market 49.6%.",
-                "Projected margin BAL +1.4 vs line BAL -5.5.",
-                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)"
+                "Model BAL -5.5 covers 48.5% vs market 49.6%.",
+                "Projected margin BAL +5.0 vs line BAL -5.5.",
+                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
@@ -263,7 +229,42 @@
                 "line move: spread moved against this side (-2.5 -> -5.5)"
               ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +133 or better."
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "LAC +5.5",
+              "side": "away",
+              "line": 5.5,
+              "odds": -112.0,
+              "model_raw": 0.5151,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model LAC +5.5 covers 51.5% vs market 50.4%.",
+                "Projected margin BAL +5.0 vs line BAL -5.5.",
+                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Ladd McConkey (Questionable)"
+              ],
+              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }
@@ -281,28 +282,28 @@
               "side": "over",
               "line": 38.5,
               "odds": -110.0,
-              "model_raw": 0.6778,
-              "model_prob": 0.5711,
+              "model_raw": 0.6113,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": -133,
-              "edge": 0.0711,
-              "edge_at_price": 0.0473,
-              "ev": 0.0903,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 38.5: 67.8% vs market 50.0%.",
-                "Projected total 44.5 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 48.5 -> 38.5.",
-                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)"
+                "Model over 38.5: 61.1% vs market 50.0%.",
+                "Projected total 42.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 38.5.",
+                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the over (48.5 -> 38.5)",
-                "model far from market (68% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-                "downgraded High -> Low"
+                "line move: market moved against the over (48.5 -> 38.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         },
@@ -315,27 +316,28 @@
               "side": "under",
               "line": 38.5,
               "odds": -110.0,
-              "model_raw": 0.3222,
-              "model_prob": 0.4289,
+              "model_raw": 0.3887,
+              "model_prob": 0.5,
               "market_prob": 0.5,
-              "fair_odds": 133,
-              "edge": -0.0711,
-              "edge_at_price": -0.0949,
-              "ev": -0.1812,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 38.5: 32.2% vs market 50.0%.",
-                "Projected total 44.5 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 48.5 -> 38.5.",
-                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)"
+                "Model under 38.5: 38.9% vs market 50.0%.",
+                "Projected total 42.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 38.5.",
+                "LAC L5 LLLLL (MOV -12.2), BAL L5 WLLLL (MOV -5.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: total already moved toward under (48.5 -> 38.5); value may be gone",
-                "model far from market (32% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+                "line move: total already moved toward under (48.5 -> 38.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +138 or better."
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         }

@@ -33,22 +33,22 @@
   },
   "lines": {
     "draftkings": {
-      "total": 6.5,
-      "under_odds": -125.0,
-      "over_odds": 105.0,
-      "ml_away": -125.0,
-      "ml_home": 105.0,
       "spread_home": 1.5,
       "spread_home_odds": -245.0,
       "spread_away": -1.5,
-      "spread_away_odds": 200.0
+      "spread_away_odds": 200.0,
+      "ml_home": 105.0,
+      "ml_away": -125.0,
+      "total": 6.5,
+      "over_odds": 105.0,
+      "under_odds": -125.0
     }
   },
   "badge": null,
-  "model_summary": "Expected goals MTL 2.84 \u2013 MIN 3.16 \u00b7 total 6.01",
+  "model_summary": "Margin MTL +0.2 \u00b7 total 6.3",
   "flags": [],
   "notes": [
-    "League scoring average this season (ESPN standings): 3.19 per team-game."
+    "v2 ratings: margin MTL +0.2, total 6.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -119,36 +119,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "MIN ML",
-              "side": "away",
-              "line": null,
-              "odds": -125.0,
-              "model_raw": 0.548,
-              "model_prob": 0.5402,
-              "market_prob": 0.5325,
-              "fair_odds": -118,
-              "edge": 0.0078,
-              "edge_at_price": -0.0153,
-              "ev": -0.0276,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model MIN win 54.8% vs market no-vig 53.2%.",
-                "Expected goals MTL 2.84 - MIN 3.16 (Poisson).",
-                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes MIN 53%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -113 or better."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -157,24 +127,58 @@
               "side": "home",
               "line": null,
               "odds": 105.0,
-              "model_raw": 0.452,
-              "model_prob": 0.4598,
+              "model_raw": 0.5293,
+              "model_prob": 0.4675,
               "market_prob": 0.4675,
-              "fair_odds": 118,
-              "edge": -0.0078,
-              "edge_at_price": -0.028,
-              "ev": -0.0575,
+              "fair_odds": 114,
+              "edge": -0.0,
+              "edge_at_price": -0.0203,
+              "ev": -0.0416,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MTL win 45.2% vs market no-vig 46.8%.",
-                "Expected goals MTL 2.84 - MIN 3.16 (Poisson).",
-                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)"
+                "Model MTL win 52.9% vs market no-vig 46.8%.",
+                "v2 projected margin MTL +0.2 (ratings MTL +0.3, MIN +0.5, home edge 0.4); raw model 52.9%.",
+                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes MTL 47%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +122 or better."
+              "next_step": "Pass. Only interesting at +118 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "MIN ML",
+              "side": "away",
+              "line": null,
+              "odds": -125.0,
+              "model_raw": 0.4707,
+              "model_prob": 0.5325,
+              "market_prob": 0.5325,
+              "fair_odds": -114,
+              "edge": 0.0,
+              "edge_at_price": -0.0231,
+              "ev": -0.0416,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIN win 47.1% vs market no-vig 53.2%.",
+                "v2 projected margin MTL +0.2 (ratings MTL +0.3, MIN +0.5, home edge 0.4); raw model 47.1%.",
+                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes MIN 53%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -109 or better.",
+              "proven": false
             }
           }
         }
@@ -192,24 +196,26 @@
               "side": "home",
               "line": 1.5,
               "odds": -245.0,
-              "model_raw": 0.6905,
-              "model_prob": 0.6855,
+              "model_raw": 0.755,
+              "model_prob": 0.7018,
               "market_prob": 0.6806,
-              "fair_odds": -218,
-              "edge": 0.005,
-              "edge_at_price": -0.0246,
-              "ev": -0.0347,
+              "fair_odds": -235,
+              "edge": 0.0213,
+              "edge_at_price": -0.0083,
+              "ev": -0.0117,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MTL +1.5 covers 69.0% vs market 68.1%.",
-                "Poisson xG MTL 2.84-3.16 MIN.",
-                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)"
+                "Model MTL +1.5 covers 75.5% vs market 68.1%.",
+                "Projected margin MTL +0.2 vs line MTL +1.5.",
+                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
               ],
               "flags": [],
               "caution": [],
               "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-              "next_step": "Pass. Only interesting at -205 or better."
+              "next_step": "Pass. Only interesting at -221 or better.",
+              "proven": true
             }
           }
         },
@@ -222,24 +228,26 @@
               "side": "away",
               "line": -1.5,
               "odds": 200.0,
-              "model_raw": 0.3094,
-              "model_prob": 0.3144,
+              "model_raw": 0.245,
+              "model_prob": 0.2982,
               "market_prob": 0.3194,
-              "fair_odds": 218,
-              "edge": -0.005,
-              "edge_at_price": -0.0189,
-              "ev": -0.0568,
+              "fair_odds": 235,
+              "edge": -0.0213,
+              "edge_at_price": -0.0352,
+              "ev": -0.1055,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIN -1.5 covers 30.9% vs market 31.9%.",
-                "Poisson xG MTL 2.84-3.16 MIN.",
-                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)"
+                "Model MIN -1.5 covers 24.5% vs market 31.9%.",
+                "Projected margin MTL +0.2 vs line MTL +1.5.",
+                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
               ],
               "flags": [],
               "caution": [],
               "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
-              "next_step": "Pass. Only interesting at +224 or better."
+              "next_step": "Pass. Only interesting at +242 or better.",
+              "proven": true
             }
           }
         }
@@ -249,36 +257,6 @@
       "market": "Total",
       "sides": [
         {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 6.5",
-              "side": "under",
-              "line": 6.5,
-              "odds": -125.0,
-              "model_raw": 0.6055,
-              "model_prob": 0.5617,
-              "market_prob": 0.5325,
-              "fair_odds": -128,
-              "edge": 0.0292,
-              "edge_at_price": 0.0061,
-              "ev": 0.011,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model under 6.5: 60.5% vs market 53.2%.",
-                "Projected total 6.0 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -123 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "over",
           "offers": {
             "draftkings": {
@@ -287,24 +265,58 @@
               "side": "over",
               "line": 6.5,
               "odds": 105.0,
-              "model_raw": 0.3944,
-              "model_prob": 0.4383,
+              "model_raw": 0.4359,
+              "model_prob": 0.4675,
               "market_prob": 0.4675,
-              "fair_odds": 128,
-              "edge": -0.0293,
-              "edge_at_price": -0.0495,
-              "ev": -0.1016,
+              "fair_odds": 114,
+              "edge": -0.0,
+              "edge_at_price": -0.0203,
+              "ev": -0.0416,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 6.5: 39.4% vs market 46.8%.",
-                "Projected total 6.0 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)"
+                "Model over 6.5: 43.6% vs market 46.8%.",
+                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +133 or better."
+              "next_step": "Pass. Only interesting at +118 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -125.0,
+              "model_raw": 0.5641,
+              "model_prob": 0.5325,
+              "market_prob": 0.5325,
+              "fair_odds": -114,
+              "edge": 0.0,
+              "edge_at_price": -0.0231,
+              "ev": -0.0416,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 6.5: 56.4% vs market 53.2%.",
+                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "MIN L5 LWWWL (MOV 1.1), MTL L5 WWLWW (MOV 0.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -109 or better.",
+              "proven": false
             }
           }
         }

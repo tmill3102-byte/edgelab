@@ -33,28 +33,23 @@
   },
   "lines": {
     "draftkings": {
+      "ml_home": 150.0,
+      "ml_away": -180.0,
       "total": 43.5,
       "over_odds": -102.0,
       "under_odds": -118.0,
-      "ml_home": 150.0,
-      "ml_away": -180.0,
       "spread_home": 3.5,
       "spread_home_odds": -115.0,
       "spread_away": -3.5,
       "spread_away_odds": -105.0
     }
   },
-  "badge": {
-    "tier": "Medium",
-    "edge": 0.068,
-    "selection": "Over 43.5",
-    "market": "Total",
-    "book": "draftkings"
-  },
-  "model_summary": "Projected margin LV -2.3 \u00b7 total 48.6",
+  "badge": null,
+  "model_summary": "Margin LV -9.3 \u00b7 total 45.6",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: LV 39.4% (implied margin -3.6); blended 50/50 with own rating."
+    "ESPN matchup predictor: LV 39.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin LV -9.3, total 45.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -91,33 +86,33 @@
     ],
     "away": [
       {
-        "name": "Quenton Nelson",
-        "status": "Out",
-        "pos": "G",
-        "key": false
-      },
-      {
-        "name": "Sam Darnold",
-        "status": "Out",
-        "pos": "QB",
-        "key": true
-      },
-      {
         "name": "Leonard Williams",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "DT",
         "key": false
       },
       {
         "name": "Brandon Pili",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "DT",
         "key": false
       },
       {
         "name": "Rashid Shaheed",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "WR",
+        "key": false
+      },
+      {
+        "name": "Quenton Nelson",
+        "status": "Doubtful",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Uchenna Nwosu",
+        "status": "Questionable",
+        "pos": "LB",
         "key": false
       }
     ]
@@ -139,25 +134,27 @@
               "side": "home",
               "line": null,
               "odds": 150.0,
-              "model_raw": 0.4329,
-              "model_prob": 0.4082,
+              "model_raw": 0.2459,
+              "model_prob": 0.3836,
               "market_prob": 0.3836,
-              "fair_odds": 145,
-              "edge": 0.0247,
-              "edge_at_price": 0.0082,
-              "ev": 0.0206,
-              "tier": "Medium",
+              "fair_odds": 161,
+              "edge": -0.0,
+              "edge_at_price": -0.0164,
+              "ev": -0.0411,
+              "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model LV win 43.3% vs market no-vig 38.4%.",
-                "Projected margin LV -2.3 (ratings LV -4.2, SEA +2.5, HFA 1.7).",
+                "Model LV win 24.6% vs market no-vig 38.4%.",
+                "v2 projected margin LV -9.3 (ratings LV -4.5, SEA +6.2, home edge 1.5); raw model 24.6%.",
                 "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)",
-                "SEA key player(s) out: Sam Darnold (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (25% vs 38%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Market makes LV 38%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Playable at +150 or better (current +150); re-check injuries/line 60 min before start."
+              "next_step": "Pass. Only interesting at +166 or better.",
+              "proven": false
             }
           }
         },
@@ -170,27 +167,29 @@
               "side": "away",
               "line": null,
               "odds": -180.0,
-              "model_raw": 0.5671,
-              "model_prob": 0.5918,
+              "model_raw": 0.7541,
+              "model_prob": 0.6164,
               "market_prob": 0.6164,
-              "fair_odds": -145,
-              "edge": -0.0247,
-              "edge_at_price": -0.0511,
-              "ev": -0.0795,
+              "fair_odds": -161,
+              "edge": 0.0,
+              "edge_at_price": -0.0264,
+              "ev": -0.0411,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model SEA win 56.7% vs market no-vig 61.6%.",
-                "Projected margin LV -2.3 (ratings LV -4.2, SEA +2.5, HFA 1.7).",
+                "Model SEA win 75.4% vs market no-vig 61.6%.",
+                "v2 projected margin LV -9.3 (ratings LV -4.5, SEA +6.2, home edge 1.5); raw model 75.4%.",
                 "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)",
-                "SEA key player(s) out: Sam Darnold (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (75% vs 62%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
                 "line move: price drifted against this side (-340 -> -180)"
               ],
               "case_against": "Market makes SEA 62%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -138 or better."
+              "next_step": "Pass. Only interesting at -153 or better.",
+              "proven": false
             }
           }
         }
@@ -208,27 +207,29 @@
               "side": "home",
               "line": 3.5,
               "odds": -115.0,
-              "model_raw": 0.536,
-              "model_prob": 0.5234,
+              "model_raw": 0.3343,
+              "model_prob": 0.5108,
               "market_prob": 0.5108,
-              "fair_odds": -110,
-              "edge": 0.0126,
-              "edge_at_price": -0.0115,
-              "ev": -0.0214,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model LV +3.5 covers 53.6% vs market 51.1%.",
-                "Projected margin LV -2.3 vs line LV +3.5.",
+                "Model LV +3.5 covers 33.4% vs market 51.1%.",
+                "Projected margin LV -9.3 vs line LV +3.5.",
                 "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)",
-                "SEA key player(s) out: Sam Darnold (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (33% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
                 "line move: spread moved against this side (+7 -> +3.5)"
               ],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -105 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -241,25 +242,27 @@
               "side": "away",
               "line": -3.5,
               "odds": -105.0,
-              "model_raw": 0.464,
-              "model_prob": 0.4766,
+              "model_raw": 0.6657,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 110,
-              "edge": -0.0126,
-              "edge_at_price": -0.0356,
-              "ev": -0.0695,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model SEA -3.5 covers 46.4% vs market 48.9%.",
-                "Projected margin LV -2.3 vs line LV +3.5.",
+                "Model SEA -3.5 covers 66.6% vs market 48.9%.",
+                "Projected margin LV -9.3 vs line LV +3.5.",
                 "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)",
-                "SEA key player(s) out: Sam Darnold (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (67% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +114 or better."
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }
@@ -277,27 +280,26 @@
               "side": "over",
               "line": 43.5,
               "odds": -102.0,
-              "model_raw": 0.6526,
-              "model_prob": 0.5506,
+              "model_raw": 0.5613,
+              "model_prob": 0.4826,
               "market_prob": 0.4826,
-              "fair_odds": -123,
-              "edge": 0.068,
-              "edge_at_price": 0.0457,
-              "ev": 0.0904,
-              "tier": "Medium",
+              "fair_odds": 107,
+              "edge": 0.0,
+              "edge_at_price": -0.0223,
+              "ev": -0.0442,
+              "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 43.5: 65.3% vs market 48.3%.",
-                "Projected total 48.6 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)"
+                "Model over 43.5: 56.1% vs market 48.3%.",
+                "Projected total 45.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [
-                "model far from market (65% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-                "downgraded High -> Medium"
-              ],
+              "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Playable at -117 or better (current -102); re-check injuries/line 60 min before start."
+              "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
             }
           }
         },
@@ -310,26 +312,26 @@
               "side": "under",
               "line": 43.5,
               "odds": -118.0,
-              "model_raw": 0.3474,
-              "model_prob": 0.4494,
+              "model_raw": 0.4387,
+              "model_prob": 0.5174,
               "market_prob": 0.5174,
-              "fair_odds": 123,
-              "edge": -0.068,
-              "edge_at_price": -0.0919,
-              "ev": -0.1698,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 43.5: 34.7% vs market 51.7%.",
-                "Projected total 48.6 from season/recent scoring & allowing averages (no pace/weather/lineup inputs).",
-                "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)"
+                "Model under 43.5: 43.9% vs market 51.7%.",
+                "Projected total 45.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "SEA L5 LLWLW (MOV 4.4), LV L5 LLLWL (MOV -3.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [
-                "model far from market (35% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
-              ],
+              "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +127 or better."
+              "next_step": "Pass. Only interesting at -103 or better.",
+              "proven": false
             }
           }
         }

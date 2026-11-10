@@ -33,42 +33,37 @@
   },
   "lines": {
     "draftkings": {
-      "total": 39.5,
-      "over_odds": -112.0,
-      "under_odds": -108.0,
-      "spread_away": -4.5,
-      "spread_away_odds": -115.0,
+      "ml_home": 185.0,
+      "ml_away": -225.0,
       "spread_home": 4.5,
       "spread_home_odds": -105.0,
-      "ml_away": -225.0,
-      "ml_home": 185.0
+      "spread_away": -4.5,
+      "spread_away_odds": -115.0,
+      "total": 39.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
-  "badge": {
-    "tier": "High",
-    "edge": 0.0545,
-    "selection": "HOU -4.5",
-    "market": "Spread",
-    "book": "draftkings"
-  },
-  "model_summary": "Projected margin CLE -8.6 \u00b7 total 45.0",
+  "badge": null,
+  "model_summary": "Margin CLE -6.2 \u00b7 total 39.2",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: CLE 23.7% (implied margin -9.7); blended 50/50 with own rating."
+    "ESPN matchup predictor: CLE 23.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin CLE -6.2, total 39.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
-        "name": "Maliek Collins",
-        "status": "Out",
-        "pos": "DT",
-        "key": false
-      },
-      {
         "name": "Deshaun Watson",
-        "status": "Out",
+        "status": "Questionable",
         "pos": "QB",
         "key": true
+      },
+      {
+        "name": "Maliek Collins",
+        "status": "Questionable",
+        "pos": "DT",
+        "key": false
       },
       {
         "name": "Kalia Davis",
@@ -91,15 +86,15 @@
     ],
     "away": [
       {
-        "name": "Reed Blankenship",
-        "status": "Out",
-        "pos": "S",
+        "name": "David Montgomery",
+        "status": "Questionable",
+        "pos": "RB",
         "key": false
       },
       {
-        "name": "David Montgomery",
-        "status": "Out",
-        "pos": "RB",
+        "name": "Reed Blankenship",
+        "status": "Questionable",
+        "pos": "S",
         "key": false
       },
       {
@@ -131,37 +126,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "HOU ML",
-              "side": "away",
-              "line": null,
-              "odds": -225.0,
-              "model_raw": 0.7384,
-              "model_prob": 0.701,
-              "market_prob": 0.6636,
-              "fair_odds": -234,
-              "edge": 0.0374,
-              "edge_at_price": 0.0087,
-              "ev": 0.0126,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model HOU win 73.8% vs market no-vig 66.4%.",
-                "Projected margin CLE -8.6 (ratings CLE -2.8, HOU +2.5, HFA 1.7).",
-                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
-                "CLE key player(s) out: Deshaun Watson (-4.0)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes HOU 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Monitor only; if anything, wait for -220 or better and re-check injuries near start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -170,25 +134,60 @@
               "side": "home",
               "line": null,
               "odds": 185.0,
-              "model_raw": 0.2616,
-              "model_prob": 0.299,
+              "model_raw": 0.3229,
+              "model_prob": 0.3364,
               "market_prob": 0.3364,
-              "fair_odds": 234,
-              "edge": -0.0374,
-              "edge_at_price": -0.0519,
-              "ev": -0.1479,
+              "fair_odds": 197,
+              "edge": 0.0,
+              "edge_at_price": -0.0145,
+              "ev": -0.0414,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model CLE win 26.2% vs market no-vig 33.6%.",
-                "Projected margin CLE -8.6 (ratings CLE -2.8, HOU +2.5, HFA 1.7).",
+                "Model CLE win 32.3% vs market no-vig 33.6%.",
+                "v2 projected margin CLE -6.2 (ratings CLE -4.7, HOU +3.0, home edge 1.5); raw model 32.3%.",
                 "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
-                "CLE key player(s) out: Deshaun Watson (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Deshaun Watson (Questionable)"
+              ],
+              "case_against": "Market makes CLE 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +203 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "HOU ML",
+              "side": "away",
+              "line": null,
+              "odds": -225.0,
+              "model_raw": 0.6771,
+              "model_prob": 0.6636,
+              "market_prob": 0.6636,
+              "fair_odds": -197,
+              "edge": 0.0,
+              "edge_at_price": -0.0287,
+              "ev": -0.0414,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU win 67.7% vs market no-vig 66.4%.",
+                "v2 projected margin CLE -6.2 (ratings CLE -4.7, HOU +3.0, home edge 1.5); raw model 67.7%.",
+                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes CLE 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +241 or better."
+              "case_against": "Market makes HOU 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -186 or better.",
+              "proven": false
             }
           }
         }
@@ -198,37 +197,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "HOU -4.5",
-              "side": "away",
-              "line": -4.5,
-              "odds": -115.0,
-              "model_raw": 0.6199,
-              "model_prob": 0.5654,
-              "market_prob": 0.5108,
-              "fair_odds": -130,
-              "edge": 0.0545,
-              "edge_at_price": 0.0305,
-              "ev": 0.057,
-              "tier": "High",
-              "data_quality": "High",
-              "reasons": [
-                "Model HOU -4.5 covers 62.0% vs market 51.1%.",
-                "Projected margin CLE -8.6 vs line CLE +4.5.",
-                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
-                "CLE key player(s) out: Deshaun Watson (-4.0)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Playable at -124 or better (current -115); re-check injuries/line 60 min before start."
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -237,25 +205,60 @@
               "side": "home",
               "line": 4.5,
               "odds": -105.0,
-              "model_raw": 0.3801,
-              "model_prob": 0.4346,
+              "model_raw": 0.4497,
+              "model_prob": 0.4892,
               "market_prob": 0.4892,
-              "fair_odds": 130,
-              "edge": -0.0545,
-              "edge_at_price": -0.0776,
-              "ev": -0.1514,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model CLE +4.5 covers 38.0% vs market 48.9%.",
-                "Projected margin CLE -8.6 vs line CLE +4.5.",
+                "Model CLE +4.5 covers 45.0% vs market 48.9%.",
+                "Projected margin CLE -6.2 vs line CLE +4.5.",
                 "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
-                "CLE key player(s) out: Deshaun Watson (-4.0)"
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Deshaun Watson (Questionable)"
+              ],
+              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "HOU -4.5",
+              "side": "away",
+              "line": -4.5,
+              "odds": -115.0,
+              "model_raw": 0.5503,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU -4.5 covers 55.0% vs market 51.1%.",
+                "Projected margin CLE -6.2 vs line CLE +4.5.",
+                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +135 or better."
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }
@@ -273,28 +276,28 @@
               "side": "over",
               "line": 39.5,
               "odds": -112.0,
-              "model_raw": 0.6639,
-              "model_prob": 0.5682,
+              "model_raw": 0.4928,
+              "model_prob": 0.5043,
               "market_prob": 0.5043,
-              "fair_odds": -132,
-              "edge": 0.0638,
-              "edge_at_price": 0.0398,
-              "ev": 0.0754,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 39.5: 66.4% vs market 50.4%.",
-                "Projected total 45.0 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 38.5 -> 39.5.",
-                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)"
+                "Model over 39.5: 49.3% vs market 50.4%.",
+                "Projected total 39.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 38.5 -> 39.5.",
+                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: total already moved toward over (38.5 -> 39.5); value may be gone",
-                "model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-                "downgraded High -> Low"
+                "line move: total already moved toward over (38.5 -> 39.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -126 or better and re-check injuries near start."
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         },
@@ -307,27 +310,28 @@
               "side": "under",
               "line": 39.5,
               "odds": -108.0,
-              "model_raw": 0.3361,
-              "model_prob": 0.4318,
+              "model_raw": 0.5072,
+              "model_prob": 0.4957,
               "market_prob": 0.4957,
-              "fair_odds": 132,
-              "edge": -0.0638,
-              "edge_at_price": -0.0874,
-              "ev": -0.1683,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 39.5: 33.6% vs market 49.6%.",
-                "Projected total 45.0 from season/recent scoring & allowing averages (no pace/weather/lineup inputs). Line moved 38.5 -> 39.5.",
-                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)"
+                "Model under 39.5: 50.7% vs market 49.6%.",
+                "Projected total 39.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 38.5 -> 39.5.",
+                "HOU L5 LWWLW (MOV 2.1), CLE L5 LWWLL (MOV -3.9)",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the under (38.5 -> 39.5)",
-                "model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+                "line move: market moved against the under (38.5 -> 39.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +136 or better."
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         }

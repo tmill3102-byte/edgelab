@@ -60,11 +60,30 @@ function fmtEdge(value) {
   const n = Number(value) * 100;
   return `${n > 0 ? "+" : ""}${n.toFixed(1)} pp`;
 }
-function edgeClass(value) {
-  if (value == null || Number.isNaN(Number(value))) return "edge-none";
-  if (value >= 0.02) return "edge-good";
-  if (value > 0) return "edge-flat";
-  return "edge-bad";
+function recordHtml(record) {
+  const [w, l, p] = String(record || "0-0-0").split("-");
+  return `<span class="win">${esc(w || "0")}</span>-<span class="loss">${esc(l || "0")}</span>-<span class="push">${esc(p || "0")}</span>`;
+}
+function edgeTone(value, tier, proven) {
+  if (proven === false || value == null || Number.isNaN(Number(value))) return "none";
+  if (value > 0.001 && tier === "High") return "high";
+  if (value > 0.001) return "med";
+  if (value < -0.001) return "bad";
+  return "none";
+}
+function edgeClass(value, tier, proven) {
+  const tone = edgeTone(value, tier, proven);
+  if (tone === "high") return "edge-high";
+  if (tone === "med") return "edge-med";
+  if (tone === "bad") return "edge-bad";
+  return "edge-none";
+}
+function oddTone(value, tier, proven) {
+  const tone = edgeTone(value, tier, proven);
+  if (tone === "high") return "up-high";
+  if (tone === "med") return "up-med";
+  if (tone === "bad") return "down";
+  return "";
 }
 function amToDec(value) {
   const a = Number(value);
@@ -213,6 +232,7 @@ function shell(body) {
     <div class="phone">
       <header class="top">
         <div class="brand"><img src="icons/icon-192.png" alt=""> EdgeLab</div>
+        <div class="navtitle" id="navtitle"></div>
         <div class="stamp">${esc(stamp)}</div>
         <button type="button" class="iconbtn" data-act="settings" aria-label="Settings">⚙</button>
       </header>
@@ -258,11 +278,13 @@ function renderToday() {
   const dayChips = days.map((item) => `<button type="button" class="chip ${item.key === day?.key ? "on" : ""}" data-act="day" data-day="${esc(item.key)}">${esc(item.label)}</button>`);
   const off = (state.slate?.offseason || []).slice(0, 6).map((row) => `<p class="note"><b>${esc(row.name)}.</b> ${esc(row.note)}</p>`).join("");
   return `
+    <h1 class="largetitle" id="largetitle">Today</h1>
     <div class="sticky">
       <div class="row">${dayChips.join("")}</div>
       <div class="row">${chips.join("")}</div>
       <input id="team-filter" class="search" placeholder="Filter teams" value="${esc(state.teamQuery)}" autocomplete="off">
     </div>
+    <p class="note">Green and red are edges. A blank badge means the model is not proven for that market yet.</p>
     <div id="game-list">${gameListHtml()}</div>
     ${off}`;
 }
@@ -302,9 +324,10 @@ function boardLines(game) {
 function oddCell(game, market, side, top, odds) {
   if (odds == null && top == null) return `<span class="odd empty">—</span>`;
   const leg = legFor(game, market, side);
-  const edge = leg ? offerPrimary(leg)?.edge : null;
-  const badge = edge == null ? "" : `<i class="badge ${edgeClass(edge)}">${esc(fmtEdge(edge).replace(" pp", ""))}</i>`;
-  return `<button type="button" class="odd ${onSlip(leg) ? "on" : ""}" data-act="toggle-board" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}" data-market="${esc(market)}" data-side="${esc(side)}">
+  const offer = leg ? offerPrimary(leg) : null;
+  const tone = oddTone(offer?.edge, offer?.tier, offer?.proven);
+  const badge = !tone || !offer ? "" : `<i class="badge ${edgeClass(offer.edge, offer.tier, offer.proven)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>`;
+  return `<button type="button" class="odd ${tone} ${onSlip(leg) ? "on" : ""}" data-act="toggle-board" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}" data-market="${esc(market)}" data-side="${esc(side)}">
     <b>${esc(top || "")}</b><span class="price num">${fmtAm(odds)}</span>${badge}
   </button>`;
 }
@@ -348,15 +371,15 @@ function renderEdges() {
   const rows = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   const chips = ["High", "Medium"].map((tier) => `<button type="button" class="chip ${state.edgeTier === tier ? "on" : ""}" data-act="tier" data-tier="${tier}">${tier === "Medium" ? "High + Medium" : "High only"}</button>`);
   const body = rows.length ? rows.map((edge, index) => {
-    const flag = (edge.caution || []).length ? " · caution" : "";
+    const flag = (edge.caution || []).length ? `<span class="pill caution">Caution</span>` : "";
     return `<button type="button" class="edge-row" data-act="edge" data-index="${index}">
-      <span><b>${esc(edge.selection)}</b><div class="note">${esc(edge.game)} · ${fmtAm(edge.odds)}${flag}</div></span>
+      <span><b class="${edgeClass(edge.edge, edge.tier, edge.proven)}">${esc(edge.selection)}</b><div class="note">${esc(edge.game)} · ${fmtAm(edge.odds)} ${flag}</div></span>
       <span class="pill ${edge.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(edge.edge))}</span>
     </button>`;
-  }).join("") : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges. Most prices are efficient.</div>`;
+  }).join("") : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges. Only backtested markets can leave the price.</div>`;
   const visible = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   state._visibleEdges = visible;
-  return `<h1>Edges</h1><div class="row">${chips.join("")}</div>${body}`;
+  return `<h1 class="largetitle" id="largetitle">Edges</h1><p class="note">Backtest weight is on for NBA moneyline, NBA total, and NHL puck line. Other markets stay at the price.</p><div class="row">${chips.join("")}</div>${body}`;
 }
 
 function activeBook(game) {
@@ -371,7 +394,7 @@ function activeBook(game) {
 
 function renderGame() {
   if (state.gameError) return `<button class="back" type="button" data-act="tab" data-tab="today">Back</button><div class="empty">${esc(state.gameError)}</div>`;
-  if (!state.game) return `<p class="note">Loading game…</p>`;
+  if (!state.game) return `<div class="skel"></div><div class="skel"></div><div class="skel"></div>`;
   const game = state.game;
   const bookKey = activeBook(game);
   const book = bookByKey(bookKey);
@@ -391,14 +414,18 @@ function renderGame() {
       if (!offer) {
         return `<button type="button" class="pick" disabled><span class="pick-side">${esc(label)}</span><span class="pick-meta">Not offered</span></button>`;
       }
+      const tone = oddTone(offer.edge, offer.tier, offer.proven);
       const leg = legFor(game, market.market, side.side);
-      return `<div class="oddwrap"><button type="button" class="odd big ${onSlip(leg) ? "on" : ""}" data-act="odd-tap" data-market="${esc(market.market)}" data-side="${esc(side.side)}">
-        <span>${esc(offer.selection)}</span>
+      const badge = tone ? `<i class="badge ${edgeClass(offer.edge, offer.tier, offer.proven)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>` : "";
+      return `<div class="oddwrap"><button type="button" class="odd big ${tone} ${onSlip(leg) ? "on" : ""}" data-act="odd-tap" data-market="${esc(market.market)}" data-side="${esc(side.side)}">
+        <b>${esc(offer.selection)}</b>
         <span class="price num">${fmtAm(offer.odds)}</span>
-        <i class="badge ${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>
+        ${badge}
       </button><button type="button" class="info" data-act="why-side" data-market="${esc(market.market)}" data-side="${esc(side.side)}" aria-label="Why">i</button></div>`;
     }).join("");
-    return `<section><div class="market-name">${esc(market.market)}</div><div class="pair">${buttons}</div></section>`;
+    const listed = market.sides.flatMap((side) => Object.values(side.offers || {}));
+    const unproven = listed.length > 0 && listed.every((offer) => offer.proven === false);
+    return `<section><div class="market-name">${esc(market.market)}</div>${unproven ? `<p class="note">Model not proven for this market yet.</p>` : ""}<div class="pair">${buttons}</div></section>`;
   }).join("");
   const props = (game.props || []).map((prop) => {
     const sides = Object.entries(prop.sides || {}).map(([side, offers]) => {
@@ -763,7 +790,7 @@ function renderSgp() {
     }
   }
   const body = blocks.length ? blocks.map((block) => `<h3>${esc(block.matchup)} · ${esc(block.start_local || "")}</h3>${block.tiers.map(renderSgpCard).join("")}`).join("") : `<div class="empty">No modeled games on this day. Try another date.</div>`;
-  return `<h1>SGP</h1>
+  return `<h1 class="largetitle" id="largetitle">SGP</h1>
     <p class="note">Hit chance includes correlation. It is not a book's SGP price.</p>
     ${mode}
     <div class="row">${dayChips}</div>
@@ -909,7 +936,7 @@ function renderBuilder() {
   }
   const parsed = b.parsed ? `<p class="note">Read as ${esc(b.parsed.risk)} · ${esc(b.parsed.legs)} legs · ${esc(b.parsed.team || "any team")} · ${esc(b.parsed.date || "any date")} · target ${fmtAm(b.parsed.target)}.</p>` : "";
   return `
-    <h1>Builder</h1>
+    <h1 class="largetitle" id="largetitle">Builder</h1>
     <p class="note">Type a request, or set the controls. Legs come only from published prices.</p>
     <input id="sentence" class="field" placeholder="safe 4 leg parlay browns sunday +400" value="${esc(b.text)}">
     <button type="button" class="cta" data-act="build">Build</button>
@@ -1047,10 +1074,10 @@ function renderTracker() {
   const pending = (state.plays?.pending || []).slice(-12).map((play) => `<p class="note">${esc(play.date)} · ${esc(play.sport)} · ${esc(play.selection)} ${fmtAm(play.odds)} · ${esc(play.tier || "")}</p>`).join("");
   const mine = state.myPlays.length ? state.myPlays.map((play) => `<article class="card"><div class="match">${play.legs.length} legs · ${esc(bookByKey(play.book)?.name || play.book || "")}</div><p class="note">${play.legs.map((leg) => esc(leg.selection)).join(" · ")}</p><p class="note">Saved on this phone. Not graded by the refresh.</p><button type="button" class="btn" data-act="drop-play" data-id="${esc(play.id)}">Remove</button></article>`).join("") : `<p class="note">No personal slips saved on this phone.</p>`;
   return `
-    <h1>Tracker</h1>
+    <h1 class="largetitle" id="largetitle">Tracker</h1>
     ${warning ? `<div class="warnbox">${esc(warning)}</div>` : ""}
     <div class="statgrid">
-      <div class="stat"><span>Record</span><b class="num">${esc(overall.record || "0-0-0")}</b></div>
+      <div class="stat"><span>Record</span><b class="num">${recordHtml(overall.record)}</b></div>
       <div class="stat"><span>Hit rate</span><b class="num">${fmtPct(overall.hit_rate)}</b></div>
       <div class="stat"><span>ROI at listed odds</span><b class="num">${overall.roi_pct == null ? "—" : esc(String(overall.roi_pct)) + "%"}</b></div>
       <div class="stat"><span>Average CLV</span><b class="num">${overall.clv_avg_pct == null ? "—" : esc(String(overall.clv_avg_pct)) + "%"}</b></div>
@@ -1156,6 +1183,21 @@ function render() {
   else body = renderTracker();
   document.getElementById("app").innerHTML = shell(body);
   document.getElementById("splash")?.classList.add("hide");
+  const main = document.getElementById("screen");
+  const title = document.getElementById("largetitle");
+  const nav = document.getElementById("navtitle");
+  if (main && title && nav) {
+    nav.textContent = title.textContent;
+    const header = document.querySelector(".top");
+    main.onscroll = () => {
+      const compact = main.scrollTop > 28;
+      title.style.opacity = compact ? "0" : "1";
+      title.style.height = compact ? "0" : "";
+      title.style.margin = compact ? "0" : "";
+      nav.classList.toggle("show", compact);
+      header?.classList.toggle("compact", compact);
+    };
+  }
   document.body.dataset.ready = state.fatal ? "error" : "1";
 }
 
