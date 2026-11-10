@@ -144,15 +144,17 @@ function persistPlays() {
   localStorage.setItem("edgelab.myplays", JSON.stringify(state.myPlays));
 }
 
+const GEAR = `<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a7.6 7.6 0 0 0 .05-2l1.75-1.25-1.8-3.15-2.05.65a7.8 7.8 0 0 0-1.73-1L15.2 3.2h-3.4L11.4 6.2a7.8 7.8 0 0 0-1.73 1l-2.05-.65-1.8 3.15L7.55 11a7.6 7.6 0 0 0 0 2l-1.73 1.25 1.8 3.15 2.05-.65a7.8 7.8 0 0 0 1.73 1l.4 3h3.4l.4-3a7.8 7.8 0 0 0 1.73-1l2.05.65 1.8-3.15L19.4 13z"/></svg>`;
+
 function icon(name) {
-  const common = 'width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"';
+  const common = 'width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"';
   const paths = {
-    today: `<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/>`,
-    edges: `<path d="M4 16l5-6 4 3 7-8"/><path d="M14 5h6v6"/>`,
-    builder: `<path d="M12 3l1.6 4.8L18 9.4l-4.4 1.6L12 16l-1.6-5L6 9.4l4.4-1.6L12 3z"/><path d="M18 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"/>`,
-    sgp: `<circle cx="7" cy="8" r="2.2"/><circle cx="17" cy="8" r="2.2"/><circle cx="12" cy="17" r="2.2"/><path d="M8.8 9.4l2.2 5.2M15.2 9.4l-2.2 5.2"/>`,
-    slip: `<path d="M7 4h8l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M15 4v4h4M8 12h8M8 16h6"/>`,
-    tracker: `<path d="M5 19V10M12 19V5M19 19v-7"/>`,
+    today: `<path d="M7.5 3.2v2.6M16.5 3.2v2.6"/><rect x="3.5" y="5.2" width="17" height="15.2" rx="3"/><path d="M3.5 10h17"/>`,
+    edges: `<path d="M3.5 16.8 8.4 11l3.5 3.2L20.5 5.8"/><path d="M14.2 5.8H20.5V12"/>`,
+    builder: `<path d="M12 3.1 13.4 7.2 17.6 8.6 13.4 10 12 14.1 10.6 10 6.4 8.6 10.6 7.2 12 3.1z"/><path d="M17.4 14.2l.6 1.7 1.7.6-1.7.6-.6 1.7-.6-1.7-1.7-.6 1.7-.6.6-1.7z"/>`,
+    sgp: `<circle cx="6.5" cy="7" r="2.1"/><circle cx="17.5" cy="7" r="2.1"/><circle cx="12" cy="17.2" r="2.1"/><path d="M8.3 8.4 10.5 15.3M15.7 8.4 13.5 15.3"/>`,
+    slip: `<path d="M7 3.4h7.1L19.2 8.4V19.2c0 .8-.7 1.4-1.5 1.4H7c-.8 0-1.5-.6-1.5-1.4V4.8c0-.8.7-1.4 1.5-1.4z"/><path d="M14 3.4V8.2h5.2M8 12.4h8M8 16h5.5"/>`,
+    tracker: `<path d="M5 19.2V11.2M12 19.2V4.8M19 19.2v-6.2"/>`,
   };
   return `<svg ${common}>${paths[name] || ""}</svg>`;
 }
@@ -226,15 +228,17 @@ function hitBand(prob) {
 }
 
 function shell(body) {
-  const stamp = state.meta?.generated_at_et || "";
   const offline = state.offline ? `<p class="banner">Offline. Showing the last saved slate.</p>` : "";
+  const game = state.tab === "game";
+  const lead = game
+    ? `<button type="button" class="back" data-act="tab" data-tab="today" aria-label="Back">‹</button>`
+    : `<div class="brand"><img src="icons/icon-192.png" alt=""><span>EdgeLab</span></div>`;
   return `
-    <div class="phone">
-      <header class="top">
-        <div class="brand"><img src="icons/icon-192.png" alt=""> EdgeLab</div>
+    <div class="phone${state.slip.length ? " has-slip" : ""}" id="phone">
+      <header class="top${game ? " gamehead" : ""}">
+        ${lead}
         <div class="navtitle" id="navtitle"></div>
-        <div class="stamp">${esc(stamp)}</div>
-        <button type="button" class="iconbtn" data-act="settings" aria-label="Settings">⚙</button>
+        <button type="button" class="iconbtn" data-act="settings" aria-label="Settings">${GEAR}</button>
       </header>
       ${offline}
       <main id="screen">${body}</main>
@@ -277,14 +281,15 @@ function renderToday() {
     .concat(sports.map((sport) => `<button type="button" class="chip ${state.sport === sport.key ? "on" : ""}" data-act="sport" data-sport="${esc(sport.key)}">${sportGlyph(sport.key)}${esc(shortName[sport.key] || sport.name)}</button>`));
   const dayChips = days.map((item) => `<button type="button" class="chip ${item.key === day?.key ? "on" : ""}" data-act="day" data-day="${esc(item.key)}">${esc(item.label)}</button>`);
   const off = (state.slate?.offseason || []).slice(0, 6).map((row) => `<p class="note"><b>${esc(row.name)}.</b> ${esc(row.note)}</p>`).join("");
+  const updated = state.meta?.generated_at_et ? `<p class="subhead">${esc(state.meta.generated_at_et)}</p>` : "";
   return `
     <h1 class="largetitle" id="largetitle">Today</h1>
+    ${updated}
     <div class="sticky">
       <div class="row">${dayChips.join("")}</div>
       <div class="row">${chips.join("")}</div>
-      <input id="team-filter" class="search" placeholder="Filter teams" value="${esc(state.teamQuery)}" autocomplete="off">
+      <input id="team-filter" class="search" placeholder="Teams" value="${esc(state.teamQuery)}" autocomplete="off">
     </div>
-    <p class="note">Green and red are edges. A blank badge means the model is not proven for that market yet.</p>
     <div id="game-list">${gameListHtml()}</div>
     ${off}`;
 }
@@ -326,9 +331,8 @@ function oddCell(game, market, side, top, odds) {
   const leg = legFor(game, market, side);
   const offer = leg ? offerPrimary(leg) : null;
   const tone = oddTone(offer?.edge, offer?.tier, offer?.proven);
-  const badge = !tone || !offer ? "" : `<i class="badge ${edgeClass(offer.edge, offer.tier, offer.proven)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>`;
   return `<button type="button" class="odd ${tone} ${onSlip(leg) ? "on" : ""}" data-act="toggle-board" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}" data-market="${esc(market)}" data-side="${esc(side)}">
-    <b>${esc(top || "")}</b><span class="price num">${fmtAm(odds)}</span>${badge}
+    <b>${esc(top || "")}</b><span class="price num">${fmtAm(odds)}</span>
   </button>`;
 }
 
@@ -344,7 +348,7 @@ function teamRow(game, side) {
   return `<div class="cols">
     <button type="button" class="teamcell" data-act="game" data-league="${esc(game.league)}" data-id="${esc(game.event_id)}">
       ${logoHtml(game.league, team)}
-      <span><b>${esc(team.abbr)}</b><span>${esc(team.record || "")}</span></span>
+      <span class="tmeta"><b>${esc(team.abbr)}</b><span class="rec">${esc(team.record || "")}</span></span>
     </button>
     ${oddCell(game, "Spread", side, spreadText, spreadOdds)}
     ${oddCell(game, "Total", side === "away" ? "over" : "under", totalLabel, totalOdds)}
@@ -355,9 +359,10 @@ function teamRow(game, side) {
 function gameCard(game) {
   if (game.field) return "";
   const edge = game.badge ? `<span class="pill ${game.badge.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(game.badge.edge))}</span>` : "";
-  const empty = boardLines(game) ? "" : `<p class="note">No odds in the free feed.</p>`;
+  const live = game.state === "in" ? `<span class="pill live">Live</span>` : game.state === "post" ? `<span class="pill final">Final</span>` : "";
+  const empty = boardLines(game) ? "" : `<p class="meta">No odds posted.</p>`;
   return `<article class="board">
-    <div class="board-top"><span class="when">${esc(shortWhen(game))}</span>${edge}</div>
+    <div class="board-top"><span class="when">${esc(shortWhen(game))}</span><span class="flags">${live}${edge}</span></div>
     <div class="colhead"><span></span><span>Spread</span><span>Total</span><span>ML</span></div>
     ${teamRow(game, "away")}
     ${teamRow(game, "home")}
@@ -370,16 +375,21 @@ function renderEdges() {
   const max = rank[state.edgeTier] ?? 1;
   const rows = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   const chips = ["High", "Medium"].map((tier) => `<button type="button" class="chip ${state.edgeTier === tier ? "on" : ""}" data-act="tier" data-tier="${tier}">${tier === "Medium" ? "High + Medium" : "High only"}</button>`);
-  const body = rows.length ? rows.map((edge, index) => {
-    const flag = (edge.caution || []).length ? `<span class="pill caution">Caution</span>` : "";
+  const body = rows.length ? `<div class="list">${rows.map((edge, index) => {
+    const flag = (edge.caution || []).length ? ` · caution` : "";
+    const when = String(edge.start_local || "").match(/(\d{1,2}:\d{2} [AP]M)/);
+    const team = edge.side === "home" || edge.side === "away"
+      ? { abbr: edge.leg?.[`${edge.side}_abbr`] }
+      : null;
+    const meta = `${edge.leg?.matchup || edge.game}${when ? " · " + when[1] : ""} · ${fmtAm(edge.odds)}${flag}`;
     return `<button type="button" class="edge-row" data-act="edge" data-index="${index}">
-      <span><b class="${edgeClass(edge.edge, edge.tier, edge.proven)}">${esc(edge.selection)}</b><div class="note">${esc(edge.game)} · ${fmtAm(edge.odds)} ${flag}</div></span>
+      <span class="who">${team.abbr ? logoHtml(edge.league, team) : ""}<span><b class="${edgeClass(edge.edge, edge.tier, edge.proven)}">${esc(edge.selection)}</b><div class="meta">${esc(meta)}</div></span></span>
       <span class="pill ${edge.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(edge.edge))}</span>
     </button>`;
-  }).join("") : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges. Only backtested markets can leave the price.</div>`;
+  }).join("")}</div>` : `<div class="empty">No ${state.edgeTier === "High" ? "High" : "High or Medium"} edges. Only backtested markets can leave the price.</div>`;
   const visible = state.edges.filter((edge) => (rank[edge.tier] ?? 9) <= max);
   state._visibleEdges = visible;
-  return `<h1 class="largetitle" id="largetitle">Edges</h1><p class="note">Backtest weight is on for NBA moneyline, NBA total, and NHL puck line. Other markets stay at the price.</p><div class="row">${chips.join("")}</div>${body}`;
+  return `<h1 class="largetitle" id="largetitle">Edges</h1><p class="subhead">NBA moneyline, NBA total, NHL puck line.</p><div class="row">${chips.join("")}</div>${body}`;
 }
 
 function activeBook(game) {
@@ -393,70 +403,68 @@ function activeBook(game) {
 }
 
 function renderGame() {
-  if (state.gameError) return `<button class="back" type="button" data-act="tab" data-tab="today">Back</button><div class="empty">${esc(state.gameError)}</div>`;
-  if (!state.game) return `<div class="skel"></div><div class="skel"></div><div class="skel"></div>`;
+  if (state.gameError) return `<h1 class="largetitle" id="largetitle">Game</h1><div class="empty">${esc(state.gameError)}</div>`;
+  if (!state.game) return `<h1 class="largetitle" id="largetitle">Game</h1><div class="skel"></div><div class="skel"></div><div class="skel"></div>`;
   const game = state.game;
   const bookKey = activeBook(game);
   const book = bookByKey(bookKey);
-  const source = game.odds_feed === "oddsapi"
-    ? `Prices from The Odds API where a book posted them. Showing ${book?.name || bookKey}.`
-    : `Lines from ${book?.name || "DraftKings"} via ESPN. Other books are not in this game's free feed.`;
-  const flags = (game.flags || []).map((flag) => `<span class="pill warn">${esc(String(flag).replace(/^!/, ""))}</span>`).join("");
+  const flags = (game.flags || []).map((flag) => `<span class="pill warn">${esc(String(flag).replace(/^!/, ""))}</span>`).join(" ");
   const injuries = ["away", "home"].map((side) => {
     const list = (game.injuries?.[side] || []).filter((row) => row.key || /out|doubt/i.test(row.status || ""));
     if (!list.length) return "";
-    return `<p class="note"><b>${esc(game[side].abbr)}:</b> ${list.map((row) => `${esc(row.name)} ${esc(row.status)}`).join("; ")}</p>`;
+    return `<p class="meta"><b>${esc(game[side].abbr)}</b> · ${list.map((row) => `${esc(row.name)} ${esc(row.status)}`).join(" · ")}</p>`;
   }).join("");
   const markets = (game.markets || []).map((market) => {
+    let best = null;
     const buttons = market.sides.map((side) => {
       const offer = side.offers?.[bookKey];
       const label = offer?.selection || side.side;
       if (!offer) {
-        return `<button type="button" class="pick" disabled><span class="pick-side">${esc(label)}</span><span class="pick-meta">Not offered</span></button>`;
+        return `<div class="oddwrap"><button type="button" class="odd big" disabled><b>${esc(label)}</b><span class="price">—</span></button></div>`;
       }
+      if (offer.proven !== false && offer.edge > 0.001 && (!best || offer.edge > best.edge)) best = offer;
       const tone = oddTone(offer.edge, offer.tier, offer.proven);
       const leg = legFor(game, market.market, side.side);
-      const badge = tone ? `<i class="badge ${edgeClass(offer.edge, offer.tier, offer.proven)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>` : "";
       return `<div class="oddwrap"><button type="button" class="odd big ${tone} ${onSlip(leg) ? "on" : ""}" data-act="odd-tap" data-market="${esc(market.market)}" data-side="${esc(side.side)}">
         <b>${esc(offer.selection)}</b>
         <span class="price num">${fmtAm(offer.odds)}</span>
-        ${badge}
-      </button><button type="button" class="info" data-act="why-side" data-market="${esc(market.market)}" data-side="${esc(side.side)}" aria-label="Why">i</button></div>`;
+      </button><button type="button" class="why" data-act="why-side" data-market="${esc(market.market)}" data-side="${esc(side.side)}">Why</button></div>`;
     }).join("");
     const listed = market.sides.flatMap((side) => Object.values(side.offers || {}));
     const unproven = listed.length > 0 && listed.every((offer) => offer.proven === false);
-    return `<section><div class="market-name">${esc(market.market)}</div>${unproven ? `<p class="note">Model not proven for this market yet.</p>` : ""}<div class="pair">${buttons}</div></section>`;
+    const chip = best ? `<span class="pill ${best.tier === "High" ? "high" : "medium"}">${esc(fmtEdge(best.edge))}</span>` : "";
+    return `<section class="mkt"><div class="mkt-head"><span>${esc(market.market)}</span>${chip}</div>${unproven ? `<p class="meta">Model not proven for this market yet.</p>` : ""}<div class="pair">${buttons}</div></section>`;
   }).join("");
   const props = (game.props || []).map((prop) => {
     const sides = Object.entries(prop.sides || {}).map(([side, offers]) => {
       const offer = offers[bookKey];
       if (!offer) return "";
-      return `<button type="button" class="odd big" data-act="prop" data-player="${esc(prop.player_id)}" data-stat="${esc(prop.stat)}" data-line="${esc(prop.line)}" data-side="${esc(side)}">
-        <span>${esc(side)} ${esc(prop.line)}</span>
+      return `<button type="button" class="odd big ${oddTone(offer.edge, offer.tier, offer.proven)}" data-act="prop" data-player="${esc(prop.player_id)}" data-stat="${esc(prop.stat)}" data-line="${esc(prop.line)}" data-side="${esc(side)}">
+        <b>${esc(side)} ${esc(prop.line)}</b>
         <span class="price num">${fmtAm(offer.odds)}</span>
-        <i class="badge ${edgeClass(offer.edge)}">${esc(fmtEdge(offer.edge).replace(" pp", ""))}</i>
       </button>`;
     }).join("");
     const rate = prop.hit_rates ? Object.entries(prop.hit_rates).map(([k, v]) => `${esc(k)} ${esc(v)}`).join(" · ") : "";
-    return `<section><div class="market-name">${esc(prop.player)} · ${esc(prop.stat_label)} ${esc(prop.line)}</div>
-      <p class="note">Projection ${esc(prop.projection)} · over hit ${rate}</p>
-      <div class="pair">${sides || `<p class="note">Not offered at this book.</p>`}</div></section>`;
+    return `<section class="mkt"><div class="mkt-head"><span>${esc(prop.player)} · ${esc(prop.stat_label)} ${esc(prop.line)}</span></div>
+      <p class="meta">Projection ${esc(prop.projection)}${rate ? " · " + rate : ""}</p>
+      <div class="pair">${sides || `<p class="meta">Not offered at this book.</p>`}</div></section>`;
   }).join("");
-  const propEmpty = game.props?.length ? "" : `<p class="note">No prop prices in this feed. None are shown.</p>`;
-  const score = game.score ? `<p class="note">Score ${esc(game.away.abbr)} ${esc(game.score.away)} – ${esc(game.home.abbr)} ${esc(game.score.home)}. Picks are only for games that have not started.</p>` : "";
+  const score = game.score ? `<p class="meta">${esc(game.away.abbr)} ${esc(game.score.away)} – ${esc(game.home.abbr)} ${esc(game.score.home)}</p>` : "";
+  const feed = game.odds_feed === "espn" ? "ESPN" : book?.name || "DraftKings";
   return `
-    <button class="back" type="button" data-act="tab" data-tab="today">Back</button>
-    <div class="cols" style="margin-bottom:8px">
-      <span></span>
+    <h1 class="largetitle" id="largetitle" hidden>${esc(game.away.abbr)} at ${esc(game.home.abbr)}</h1>
+    <div class="matchup">
+      <div class="side">${logoHtml(game.league, game.away)}<span class="tmeta"><b>${esc(game.away.abbr)}</b><span class="rec">${esc(game.away.record || "")}</span></span></div>
+      <div class="vs">${game.state === "in" ? "Live" : "@"}</div>
+      <div class="side">${logoHtml(game.league, game.home)}<span class="tmeta"><b>${esc(game.home.abbr)}</b><span class="rec">${esc(game.home.record || "")}</span></span></div>
     </div>
-    <h1 style="display:flex;align-items:center;gap:8px">${logoHtml(game.league, game.away)} ${esc(game.away.abbr)} <span class="note">@</span> ${logoHtml(game.league, game.home)} ${esc(game.home.abbr)}</h1>
-    <p class="note">${esc(shortWhen(game))} · ${esc(game.model_summary || "No model")}</p>
+    <p class="subhead">${esc(shortWhen(game))} · ${esc(feed)}</p>
+    <p class="meta">${esc(game.model_summary || "")}</p>
     ${score}
-    <p class="source">${esc(book?.name || "DraftKings")}${game.odds_feed === "espn" ? " · ESPN" : ""}</p>
+    ${flags ? `<p>${flags}</p>` : ""}
     ${injuries}
-    <div class="markets">${markets || `<div class="empty">No odds in the free feed.</div>`}</div>
-    <h3>Players</h3>
-    ${props}${propEmpty}`;
+    <div class="markets">${markets || `<div class="empty">No odds posted.</div>`}</div>
+    ${props || `<p class="meta">No player props in this feed.</p>`}`;
 }
 
 function parseRequest(text) {
@@ -791,7 +799,7 @@ function renderSgp() {
   }
   const body = blocks.length ? blocks.map((block) => `<h3>${esc(block.matchup)} · ${esc(block.start_local || "")}</h3>${block.tiers.map(renderSgpCard).join("")}`).join("") : `<div class="empty">No modeled games on this day. Try another date.</div>`;
   return `<h1 class="largetitle" id="largetitle">SGP</h1>
-    <p class="note">Hit chance includes correlation. It is not a book's SGP price.</p>
+    <p class="subhead">Correlation-adjusted. Not a book's price.</p>
     ${mode}
     <div class="row">${dayChips}</div>
     ${extra}
@@ -937,7 +945,7 @@ function renderBuilder() {
   const parsed = b.parsed ? `<p class="note">Read as ${esc(b.parsed.risk)} · ${esc(b.parsed.legs)} legs · ${esc(b.parsed.team || "any team")} · ${esc(b.parsed.date || "any date")} · target ${fmtAm(b.parsed.target)}.</p>` : "";
   return `
     <h1 class="largetitle" id="largetitle">Builder</h1>
-    <p class="note">Type a request, or set the controls. Legs come only from published prices.</p>
+    <p class="subhead">Priced legs only.</p>
     <input id="sentence" class="field" placeholder="safe 4 leg parlay browns sunday +400" value="${esc(b.text)}">
     <button type="button" class="cta" data-act="build">Build</button>
     ${parsed}
@@ -950,12 +958,11 @@ function renderBuilder() {
     <div class="seg">
       ${[2, 3, 4, 5, 6].map((n) => `<button type="button" data-act="legs" data-n="${n}" class="${Number(b.legs) === n ? "on" : ""}">${n}</button>`).join("")}
     </div>
-    <div class="grid-2">
-      <div><label class="lbl" for="target">Target American odds</label><input id="target" class="field" inputmode="text" value="${esc(b.target)}"></div>
-      <div><label class="lbl">Risk</label><div class="seg">${["safe", "balanced", "aggressive"].map((risk) => `<button type="button" data-act="risk" data-risk="${risk}" class="${b.risk === risk ? "on" : ""}">${risk}</button>`).join("")}</div></div>
-    </div>
-    ${result}
-    ${footer()}`;
+    <label class="lbl" for="target">Target odds</label>
+    <input id="target" class="field short" inputmode="text" value="${esc(b.target)}">
+    <label class="lbl">Risk</label>
+    <div class="seg">${["safe", "balanced", "aggressive"].map((risk) => `<button type="button" data-act="risk" data-risk="${risk}" class="${b.risk === risk ? "on" : ""}">${risk}</button>`).join("")}</div>
+    ${result}`;
 }
 
 function slipBooks(legs) {
@@ -1035,9 +1042,9 @@ function renderSlip() {
     <div class="books">${cards}</div>
     ${absent}
     ${legs}
-    <div class="statgrid">
+    <div class="stats">
       <div class="stat"><span>Est. odds</span><b class="num">${summary?.complete ? fmtAm(summary.american) : "—"}</b></div>
-      <div class="stat"><span>Edge</span><b class="num">${edge == null ? "—" : fmtEdge(edge)}</b></div>
+      <div class="stat"><span>Edge</span><b class="num ${edge == null ? "" : edge < -0.001 ? "loss" : edge > 0.001 ? "win" : ""}">${edge == null ? "—" : fmtEdge(edge)}</b></div>
     </div>
     <div class="sheet-foot">
       <button type="button" class="cta" data-act="open-book" ${selected ? "" : "disabled"}>Open in ${esc(selected?.name || "book")}</button>
@@ -1071,16 +1078,17 @@ function renderTracker() {
     const body = rows.map(([name, stats]) => `<p class="note"><b>${esc(name)}</b> ${esc(stats.record)} · hit ${fmtPct(stats.hit_rate)} · ROI ${stats.roi_pct == null ? "—" : esc(String(stats.roi_pct)) + "%"} · CLV ${stats.clv_avg_pct == null ? "—" : esc(String(stats.clv_avg_pct)) + "%"}</p>`).join("");
     return `<h3>By ${esc(key)}</h3>${body}`;
   }).join("");
-  const pending = (state.plays?.pending || []).slice(-12).map((play) => `<p class="note">${esc(play.date)} · ${esc(play.sport)} · ${esc(play.selection)} ${fmtAm(play.odds)} · ${esc(play.tier || "")}</p>`).join("");
-  const mine = state.myPlays.length ? state.myPlays.map((play) => `<article class="card"><div class="match">${play.legs.length} legs · ${esc(bookByKey(play.book)?.name || play.book || "")}</div><p class="note">${play.legs.map((leg) => esc(leg.selection)).join(" · ")}</p><p class="note">Saved on this phone. Not graded by the refresh.</p><button type="button" class="btn" data-act="drop-play" data-id="${esc(play.id)}">Remove</button></article>`).join("") : `<p class="note">No personal slips saved on this phone.</p>`;
+  const pendingRows = (state.plays?.pending || []).slice(-12).map((play) => `<div class="prow"><b>${esc(play.selection)} <span class="num">${fmtAm(play.odds)}</span></b><div class="meta">${esc(play.date)} · ${esc(play.sport)} · ${esc(play.tier || "")}</div></div>`).join("");
+  const pending = pendingRows ? `<div class="list">${pendingRows}</div>` : `<p class="meta">No pending plays. High and Medium edges are logged when the refresh runs.</p>`;
+  const mine = state.myPlays.length ? state.myPlays.map((play) => `<article class="parlay"><div class="parlay-top"><b>${play.legs.length} legs</b><span class="meta">${esc(bookByKey(play.book)?.name || play.book || "")}</span></div><p class="meta">${play.legs.map((leg) => esc(leg.selection)).join(" · ")}</p><button type="button" class="btn" data-act="drop-play" data-id="${esc(play.id)}">Remove</button></article>`).join("") : `<p class="meta">No personal slips on this phone.</p>`;
   return `
     <h1 class="largetitle" id="largetitle">Tracker</h1>
     ${warning ? `<div class="warnbox">${esc(warning)}</div>` : ""}
-    <div class="statgrid">
+    <div class="stats">
       <div class="stat"><span>Record</span><b class="num">${recordHtml(overall.record)}</b></div>
       <div class="stat"><span>Hit rate</span><b class="num">${fmtPct(overall.hit_rate)}</b></div>
-      <div class="stat"><span>ROI at listed odds</span><b class="num">${overall.roi_pct == null ? "—" : esc(String(overall.roi_pct)) + "%"}</b></div>
-      <div class="stat"><span>Average CLV</span><b class="num">${overall.clv_avg_pct == null ? "—" : esc(String(overall.clv_avg_pct)) + "%"}</b></div>
+      <div class="stat"><span>ROI</span><b class="num">${overall.roi_pct == null ? "—" : esc(String(overall.roi_pct)) + "%"}</b></div>
+      <div class="stat"><span>CLV</span><b class="num">${overall.clv_avg_pct == null ? "—" : esc(String(overall.clv_avg_pct)) + "%"}</b></div>
     </div>
     <p class="note">${model.n ? `Model called ${fmtPct(model.avg_model_prob)} on average and those sides won ${fmtPct(model.actual_win_rate)}. Direction ${fmtPct(model.direction_hit)}. Brier ${model.brier == null ? "—" : esc(String(model.brier))} (0.25 is a coin flip, lower is better).` : "Model accuracy appears after plays are graded. There is nothing to compare yet."}</p>
     <p class="note">${esc(state.report?.definitions?.roi_pct || "")}</p>
@@ -1172,6 +1180,8 @@ function legFromGame(game, marketName, sideName, bookKey) {
 }
 
 function render() {
+  const tabChanged = state._painted !== state.tab;
+  state._painted = state.tab;
   let body;
   if (state.fatal) body = `<div class="empty">${esc(state.fatal)}</div>`;
   else if (state.tab === "today") body = renderToday();
@@ -1186,17 +1196,22 @@ function render() {
   const main = document.getElementById("screen");
   const title = document.getElementById("largetitle");
   const nav = document.getElementById("navtitle");
-  if (main && title && nav) {
-    nav.textContent = title.textContent;
-    const header = document.querySelector(".top");
-    main.onscroll = () => {
-      const compact = main.scrollTop > 28;
-      title.style.opacity = compact ? "0" : "1";
-      title.style.height = compact ? "0" : "";
-      title.style.margin = compact ? "0" : "";
-      nav.classList.toggle("show", compact);
-      header?.classList.toggle("compact", compact);
+  const header = document.querySelector(".top");
+  const phone = document.getElementById("phone");
+  if (tabChanged && main) main.classList.add("enter");
+  if (main && nav) {
+    nav.textContent = title ? title.textContent : "";
+    const gameHead = header?.classList.contains("gamehead");
+    const onScroll = () => {
+      const y = main.scrollTop;
+      const word = document.querySelector(".brand span");
+      if (word) word.style.opacity = String(Math.max(0, 1 - y / 22));
+      if (!gameHead) nav.style.opacity = String(Math.min(1, Math.max(0, (y - 16) / 20)));
+      phone?.classList.toggle("scrolled", y > 8);
+      header?.classList.toggle("scrolled", y > 8);
     };
+    main.onscroll = onScroll;
+    onScroll();
   }
   document.body.dataset.ready = state.fatal ? "error" : "1";
 }
@@ -1512,7 +1527,7 @@ function onInput(event) {
 }
 
 async function boot() {
-  document.getElementById("app").innerHTML = shell(`<p class="note">Loading the latest research data…</p>`);
+  document.getElementById("app").innerHTML = shell(`<div class="skel-title"></div><div class="skel-pills"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>`);
   try {
     state.slip = JSON.parse(localStorage.getItem("edgelab.slip") || "[]");
     state.myPlays = JSON.parse(localStorage.getItem("edgelab.myplays") || "[]");

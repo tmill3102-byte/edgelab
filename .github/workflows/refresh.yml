@@ -55,7 +55,15 @@ jobs:
             echo "No data changes"
           else
             git commit -m "Refresh EdgeLab data"
-            git push
+            git fetch origin "$GITHUB_REF_NAME"
+            if ! git rebase "origin/$GITHUB_REF_NAME"; then
+              git diff --name-only --diff-filter=U | while read -r f; do
+                git checkout --theirs -- "$f" || git checkout --ours -- "$f" || git rm -f -- "$f" || true
+              done
+              git add -A
+              GIT_EDITOR=true git rebase --continue
+            fi
+            git push origin "HEAD:$GITHUB_REF_NAME"
           fi
       - uses: actions/upload-pages-artifact@v3
         with:
