@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-10T11:22:04-05:00",
-  "generated_at_et": "Tue Nov 10 11:22 AM ET",
+  "generated_at": "2026-11-10T11:40:46-05:00",
+  "generated_at_et": "Tue Nov 10 11:40 AM ET",
   "disclaimer": "Research only. No guarantees. EdgeLab does not place bets. If gambling is a problem, call 1-800-GAMBLER.",
   "research_only": true,
   "games_listed": 924,
   "games_analyzed": 40,
   "edges": 2,
-  "legs": 238,
+  "legs": 240,
   "books": [
     {
       "key": "draftkings",
@@ -112,6 +112,11 @@
   "odds_api": {
     "snapshot": true,
     "sport_key": "basketball_nba",
+    "sports": [
+      "americanfootball_nfl",
+      "basketball_nba",
+      "icehockey_nhl"
+    ],
     "regions": "us",
     "markets": [
       "h2h",
@@ -120,13 +125,32 @@
     ],
     "fetched_at": "2026-11-10T15:22:17+00:00",
     "events": 10,
-    "x_requests_remaining": "497",
-    "x_requests_used": "3",
-    "x_requests_last": "0",
-    "ohio_present": null,
-    "ohio_absent": null,
+    "x_requests_remaining": "491",
+    "x_requests_used": "9",
+    "x_requests_last": "3",
+    "ohio_present": [
+      "DraftKings",
+      "FanDuel",
+      "BetMGM",
+      "BetRivers"
+    ],
+    "ohio_absent": [
+      "Caesars",
+      "bet365",
+      "Fanatics",
+      "theScore",
+      "Hard Rock",
+      "Bally Bet"
+    ],
     "props_fetched": 0,
-    "note": "snapshot is 0.0h old (ttl 12h); skipped the paid call"
+    "props_cached": 0,
+    "props_budget": {
+      "enabled": false,
+      "cached": 0,
+      "fetched": 0,
+      "note": "Props were not bought on this run. Showing the cache."
+    },
+    "note": "Featured moneylines, spreads and totals for one sport came from The Odds API regions=us. Other sports stay on ESPN/DraftKings. Combined parlay prices in the app are the product of leg prices, not a book's parlay quote."
   },
   "schema": "edgelab.data/v1"
 }
