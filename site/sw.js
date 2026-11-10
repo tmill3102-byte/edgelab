@@ -1,4 +1,4 @@
-const CACHE = "edgelab-v7";
+const CACHE = "edgelab-v8";
 const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest",
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 

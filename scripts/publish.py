@@ -26,7 +26,7 @@ from dk_props import compare_prices, merge_prop_payload, refresh as refresh_dk  
 DATA = ROOT / "site" / "data"
 KEEP = ("market", "selection", "side", "line", "odds", "model_raw", "model_prob", "market_prob",
         "fair_odds", "edge", "edge_at_price", "ev", "tier", "data_quality", "reasons", "flags",
-        "caution", "case_against", "next_step")
+        "caution", "case_against", "next_step", "sid", "market_sid", "book_event", "link")
 MARKET_ORDER = ["ML", "1X2", "Spread", "Total", "Prop"]
 TORD = {"High": 0, "Medium": 1, "Low": 2}
 SPORT_TO_LEAGUE = {
@@ -277,6 +277,51 @@ def apply_engine(markets, res):
         markets.setdefault(pick["market"], {}).setdefault(pick["side"], {})["draftkings"] = strip_pick(pick, res.get("league"))
 
 
+def attach_ids(pick, outcome, market, book):
+    if not pick:
+        return pick
+    if outcome and outcome.get("sid"):
+        pick["sid"] = outcome.get("sid")
+    link = outcome.get("link") if isinstance(outcome, dict) and isinstance(outcome.get("link"), str) else None
+    if link:
+        pick["link"] = espn.public_event_url(link) or link
+    if market and market.get("sid"):
+        pick["market_sid"] = market.get("sid")
+    if book and book.get("sid"):
+        pick["book_event"] = book.get("sid")
+    return pick
+
+
+def stamp_dk_lines(markets, dk_payload):
+    """Put DraftKings selection ids from the Ohio feed onto the DraftKings offer."""
+    if not markets or not dk_payload or not dk_payload.get("lines"):
+        return
+    event_id = str(dk_payload.get("dk_event_id") or "")
+    lines = dk_payload["lines"]
+
+    def apply(market_name, side, row):
+        offer = ((markets.get(market_name) or {}).get(side) or {}).get("draftkings")
+        if not offer or not row or not row.get("sid"):
+            return
+        if row.get("point") is not None and offer.get("line") is not None:
+            try:
+                if abs(float(offer["line"]) - float(row["point"])) > 0.06:
+                    return
+            except (TypeError, ValueError):
+                return
+        offer["sid"] = row["sid"]
+        if event_id:
+            offer["book_event"] = event_id
+
+    for side, row in (lines.get("ml") or {}).items():
+        apply("ML", side, row)
+        apply("1X2", side, row)
+    for side, row in (lines.get("spread") or {}).items():
+        apply("Spread", side, row)
+    for side, row in (lines.get("total") or {}).items():
+        apply("Total", side, row)
+
+
 def apply_api(markets, league, res, event, event_urls):
     home, away = res["home"]["name"], res["away"]["name"]
     for book in event.get("bookmakers") or []:
@@ -308,6 +353,7 @@ def apply_api(markets, league, res, event, event_urls):
                         link = extract_link(sides[side])
                         if link:
                             event_urls.setdefault(key, link)
+                        attach_ids(pick, sides[side], by_market.get("h2h"), book)
                         markets.setdefault(market, {}).setdefault(side, {})[key] = strip_pick(pick, league)
         if "spreads" in by_market:
             sides = outcomes_by_side(by_market["spreads"].get("outcomes"), home, away)
@@ -325,6 +371,7 @@ def apply_api(markets, league, res, event, event_urls):
                         label = f"{res[side]['abbr']} {line:+g}"
                         pick = analysis.reprice_pick(league, res, "Spread", side, line, price, prob, label)
                         if pick:
+                            attach_ids(pick, sides[side], by_market.get("spreads"), book)
                             markets.setdefault("Spread", {}).setdefault(side, {})[key] = strip_pick(pick, league)
         if "totals" in by_market:
             sides = outcomes_by_side(by_market["totals"].get("outcomes"), home, away)
@@ -342,6 +389,7 @@ def apply_api(markets, league, res, event, event_urls):
                             label = f"{side.title()} {line:g}"
                             pick = analysis.reprice_pick(league, res, "Total", side, line, price, prob, label)
                             if pick:
+                                attach_ids(pick, sides[side], by_market.get("totals"), book)
                                 markets.setdefault("Total", {}).setdefault(side, {})[key] = strip_pick(pick, league)
 
 
@@ -529,8 +577,14 @@ def props_for_game(league, res, payload):
                     continue
                 if not player:
                     continue
-                slot = grouped.setdefault((player, stat, line), {"label": label, "books": {}})
+                slot = grouped.setdefault((player, stat, line), {"label": label, "books": {}, "sids": {}, "links": {}, "market_sids": {}})
                 slot["books"].setdefault(book_key, {})[side] = price
+                if outcome.get("sid"):
+                    slot["sids"].setdefault(book_key, {})[side] = outcome.get("sid")
+                if isinstance(outcome.get("link"), str):
+                    slot["links"].setdefault(book_key, {})[side] = outcome.get("link")
+                if market.get("sid"):
+                    slot["market_sids"].setdefault(book_key, market.get("sid"))
     # One main line per player and stat (closest to -110), then the players who
     # show up in the most markets. Cap the ESPN lookups.
     by_player_stat = {}
@@ -600,6 +654,21 @@ def props_for_game(league, res, payload):
                     continue
                 if stat == "anytime_td":
                     pick["selection"] = f"{player} Anytime TD"
+                sid = ((slot.get("sids") or {}).get(book_key) or {}).get(side)
+                if sid:
+                    pick["sid"] = sid
+                link = ((slot.get("links") or {}).get(book_key) or {}).get(side)
+                if link:
+                    pick["link"] = link
+                market_sid = (slot.get("market_sids") or {}).get(book_key)
+                if market_sid:
+                    pick["market_sid"] = market_sid
+                if book_key == "draftkings" and payload.get("dk_event_id"):
+                    pick["book_event"] = str(payload.get("dk_event_id"))
+                else:
+                    source_book = next((item for item in payload.get("bookmakers") or [] if item.get("key") == book_key), None)
+                    if source_book and source_book.get("sid"):
+                        pick["book_event"] = source_book.get("sid")
                 pick["next_step"] = analysis._next_step(pick)
                 group_sides.setdefault(side, {})[book_key] = strip_pick(pick, league)
         if not group_sides:
@@ -811,9 +880,10 @@ def main():
             apply_engine(markets, res)
         if api_event:
             apply_api(markets, league, res, api_event, event_urls)
+        dk_payload = match_api_event(game, [row for row in dk_events if SPORT_TO_LEAGUE.get(row.get("sport_key")) == league])
+        stamp_dk_lines(markets, dk_payload)
         props = []
         prop_payload = match_api_event(game, [row for row in prop_payloads if SPORT_TO_LEAGUE.get(row.get("sport_key")) == league])
-        dk_payload = match_api_event(game, [row for row in dk_events if SPORT_TO_LEAGUE.get(row.get("sport_key")) == league])
         prop_payload = merge_prop_payload(prop_payload, dk_payload)
         if prop_payload:
             props = props_for_game(league, res, prop_payload)
@@ -864,6 +934,8 @@ def main():
             event_urls = {}
             if row["_game"]["odds"].get("event_url"):
                 event_urls["draftkings"] = row["_game"]["odds"]["event_url"]
+            dk_payload = match_api_event(row["_game"], [item for item in dk_events if SPORT_TO_LEAGUE.get(item.get("sport_key")) == row["league"]])
+            stamp_dk_lines(markets, dk_payload)
             full = _full_game(row, None, markets, event_urls, [], odds_feed="espn" if markets else "none")
             write_json(f"games/{row['league']}-{event_id}.json", full)
             row["_full"] = full

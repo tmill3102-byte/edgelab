@@ -214,6 +214,8 @@ def parse_board(data, spec):
             continue
         slot = grouped.setdefault((event["id"], player, line), {"event": event, "player": player, "line": line, "stat": stat, "label": label})
         slot[side] = price
+        if selection.get("id"):
+            slot[f"{side}_sid"] = selection.get("id")
     kept = []
     dropped = 0
     for slot in grouped.values():
@@ -249,10 +251,10 @@ def _add_outcomes(shell, rows, spec):
     outcomes = []
     for row in rows:
         if mode == "anytime":
-            outcomes.append({"name": "Yes", "description": row["player"], "price": row["yes"], "point": 0.5})
+            outcomes.append({"name": "Yes", "description": row["player"], "price": row["yes"], "point": 0.5, "sid": row.get("yes_sid")})
         else:
-            outcomes.append({"name": "Over", "description": row["player"], "price": row["over"], "point": row["line"]})
-            outcomes.append({"name": "Under", "description": row["player"], "price": row["under"], "point": row["line"]})
+            outcomes.append({"name": "Over", "description": row["player"], "price": row["over"], "point": row["line"], "sid": row.get("over_sid")})
+            outcomes.append({"name": "Under", "description": row["player"], "price": row["under"], "point": row["line"], "sid": row.get("under_sid")})
     if not outcomes:
         return
     book = shell["bookmakers"][0]
@@ -264,6 +266,33 @@ def _add_outcomes(shell, rows, spec):
     marker = [market_key, stat, label]
     if marker not in shell["_markets"]:
         shell["_markets"].append(marker)
+
+
+def lines_from_catalog(catalog):
+    """Moneyline, spread, and total selection ids from the league board."""
+    events = {event.get("id"): event for event in catalog.get("events") or []}
+    markets = {market.get("id"): market for market in catalog.get("markets") or []}
+    found = {}
+    for selection in catalog.get("selections") or []:
+        market = markets.get(selection.get("marketId")) or {}
+        event = events.get(market.get("eventId"))
+        if not event or not selection.get("id"):
+            continue
+        kind = (market.get("name") or "").lower()
+        role = (selection.get("outcomeType") or "").lower()
+        bucket = found.setdefault(event["id"], {"event": event, "ml": {}, "spread": {}, "total": {}})
+        row = {
+            "sid": selection["id"],
+            "price": american((selection.get("displayOdds") or {}).get("american")),
+            "point": selection.get("points"),
+        }
+        if kind == "moneyline" and role in ("home", "away"):
+            bucket["ml"][role] = row
+        elif kind == "spread" and role in ("home", "away"):
+            bucket["spread"][role] = row
+        elif kind == "total" and role in ("over", "under"):
+            bucket["total"][role] = row
+    return found
 
 
 def fetch(now=None):
@@ -278,6 +307,15 @@ def fetch(now=None):
             break
         if not _upcoming(catalog.get("events"), now):
             continue
+        for event_id, info in lines_from_catalog(catalog).items():
+            if not _upcoming([info["event"]], now):
+                continue
+            shell = boards.get(event_id)
+            if shell is None:
+                shell = _event_shell(info["event"], league)
+                boards[event_id] = shell
+            shell["lines"] = {"ml": info["ml"], "spread": info["spread"], "total": info["total"]}
+            shell["dk_event_id"] = str(info["event"].get("id"))
         by_name = {(sub.get("name") or "").strip().lower(): sub for sub in catalog.get("subcategories") or []}
         for spec in MARKETS[league]:
             sub = by_name.get(spec[0].lower())
@@ -395,6 +433,8 @@ def merge_prop_payload(api_payload, dk_payload):
     merged["bookmakers"] = books
     merged["_markets"] = markets
     merged["source"] = "draftkings+oddsapi"
+    if dk_payload.get("dk_event_id"):
+        merged["dk_event_id"] = dk_payload.get("dk_event_id")
     return merged
 
 

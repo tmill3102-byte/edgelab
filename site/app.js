@@ -36,6 +36,7 @@ var state = {
   fatal: null,
   copied: null,
   copyText: "",
+  slipNote: "",
 };
 
 const $ = (html) => html;
@@ -1104,8 +1105,9 @@ function renderSlip() {
   ].filter(Boolean);
   const missing = catalog.filter((book) => !book.in_feed);
   const absent = missing.length ? `<p class="note">${esc(missing.map((book) => book.short || book.name).join(", "))} have no lines in this feed.</p>` : "";
-  const copied = state.copied === true ? `<p class="note">Slip copied. Pre-filled bets are not supported — enter the legs yourself.</p>`
-    : state.copied === false ? `<p class="note">Clipboard was blocked. Select the slip text below.</p><textarea class="field copybox" readonly>${esc(state.copyText)}</textarea>` : "";
+  const copied = state.slipNote
+    ? `<p class="note">${esc(state.slipNote)}${state.copied === false ? " Clipboard was blocked." : ""}</p>${state.copied === false ? `<textarea class="field copybox" readonly>${esc(state.copyText)}</textarea>` : ""}`
+    : "";
   return `
     <div class="books">${cards}</div>
     ${absent}
@@ -1339,6 +1341,63 @@ function openSheet(leg, bookKey) {
   render();
 }
 
+function encSid(sid) {
+  return String(sid).replace(/#/g, "%23");
+}
+
+function linkParam(url, key) {
+  if (!url) return "";
+  try {
+    return new URL(String(url).replace("{state}", "oh")).searchParams.get(key) || "";
+  } catch (err) {
+    return "";
+  }
+}
+
+function betslipFor(book, legs) {
+  const key = book?.key;
+  const offers = legs.map((leg) => offerOf(leg.offers, book)).filter(Boolean);
+  if (key === "draftkings") {
+    const ready = offers.filter((offer) => offer.sid && offer.book_event);
+    if (!ready.length) return { url: null, added: 0 };
+    const outcomes = ready.map((offer) => encSid(offer.sid)).join("+");
+    return {
+      url: `https://sportsbook.draftkings.com/event/${encodeURIComponent(ready[0].book_event)}?outcomes=${outcomes}`,
+      added: ready.length,
+    };
+  }
+  if (key === "fanduel" || key === "williamhill_us" || key === "caesars") {
+    const rows = [];
+    for (const offer of offers) {
+      const marketId = offer.market_sid || linkParam(offer.link, "marketId");
+      const selectionId = offer.sid || linkParam(offer.link, "selectionId");
+      if (marketId && selectionId) rows.push({ marketId, selectionId });
+    }
+    if (!rows.length) return { url: null, added: 0 };
+    const query = rows.map((row, index) => `marketId[${index}]=${encodeURIComponent(row.marketId)}&selectionId[${index}]=${encodeURIComponent(row.selectionId)}`).join("&");
+    const host = key === "fanduel" ? "https://sportsbook.fanduel.com/addToBetslip" : "https://sportsbook.caesars.com/addToBetslip";
+    return { url: `${host}?${query}`, added: rows.length };
+  }
+  if (key === "betmgm") {
+    const triplets = [];
+    for (const offer of offers) {
+      const options = linkParam(offer.link, "options");
+      const triplet = options ? options.split(",")[0] : "";
+      if (triplet && triplet.split("-").length >= 3) triplets.push(triplet);
+    }
+    if (!triplets.length) return { url: null, added: 0 };
+    return { url: `https://sports.oh.betmgm.com/en/sports?options=${triplets.join(",")}`, added: triplets.length };
+  }
+  if (key === "betrivers") {
+    const linked = offers.filter((offer) => offer.link);
+    if (linked.length === 1 && legs.length === 1) return { url: linked[0].link, added: 1 };
+    return { url: null, added: 0 };
+  }
+  const linked = offers.filter((offer) => offer.link);
+  if (linked.length === legs.length && legs.length === 1) return { url: linked[0].link, added: 1 };
+  return { url: null, added: 0 };
+}
+
 async function openBook() {
   const catalog = slipBooks(state.slip);
   const best = bestBook(state.slip);
@@ -1354,7 +1413,6 @@ async function openBook() {
     }),
     summary.complete ? `Estimated from leg prices: ${fmtAm(summary.american)} (the book's parlay price will differ)` : "This book does not offer every leg.",
     summary.complete ? `Model hit chance: ${fmtPct(slipModel(state.slip, selected).prob)} (same-game legs are correlation-adjusted; a book's SGP price can differ)` : "",
-    "Pre-filled slips are not supported. Enter the legs yourself.",
     "Research only. No guarantees. 1-800-GAMBLER.",
   ].filter(Boolean);
   const text = lines.join("\n");
@@ -1365,14 +1423,27 @@ async function openBook() {
   } catch (err) {
     state.copied = false;
   }
-  let url = selected.home;
-  const events = new Set(state.slip.map((leg) => leg.event_id));
-  if (events.size === 1) {
-    const urls = state.slip[0].event_urls || {};
-    for (const key of bookKeys(selected)) if (urls[key]) { url = urls[key]; break; }
+  const built = betslipFor(selected, state.slip);
+  const added = built.added || 0;
+  const total = state.slip.length;
+  state.slipNote = added === 0
+    ? "No betslip ids for this book. The slip was copied; add the legs by hand."
+    : added < total
+      ? `${added} of ${total} legs added; add the rest by hand.`
+      : `${added} of ${total} legs added.`;
+  let url = built.url;
+  if (!url) {
+    url = selected.home;
+    const events = new Set(state.slip.map((leg) => leg.event_id));
+    if (events.size === 1) {
+      const urls = state.slip[0].event_urls || {};
+      for (const key of bookKeys(selected)) if (urls[key]) { url = urls[key]; break; }
+    }
   }
   render();
-  window.open(url, "_blank", "noopener");
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+  if (ios) window.location.assign(url);
+  else window.open(url, "_blank", "noopener");
 }
 
 function onClick(event) {

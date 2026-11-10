@@ -70,6 +70,8 @@ def test_merge_prefers_draftkings_feed():
     fd_book = next(book for book in merged["bookmakers"] if book["key"] == "fanduel")
     assert dk_book["markets"][0]["outcomes"][0]["price"] == -118
     assert fd_book["markets"][0]["outcomes"][0]["price"] == -105
+    dk["dk_event_id"] = "34983855"
+    assert merge_prop_payload(api, dk)["dk_event_id"] == "34983855"
 
 
 if __name__ == "__main__":

@@ -65,20 +65,30 @@ def slim_event(event):
     for book in event.get("bookmakers") or []:
         markets = []
         for market in book.get("markets") or []:
-            outcomes = []
+            row = {"key": market.get("key"), "outcomes": []}
+            if market.get("sid"):
+                row["sid"] = market.get("sid")
             for outcome in market.get("outcomes") or []:
-                # Outcome links are bet-slip deep links. Keep the price only.
-                outcomes.append({
+                item = {
                     "name": outcome.get("name"),
                     "price": outcome.get("price"),
                     "point": outcome.get("point"),
                     "description": outcome.get("description"),
-                })
-            markets.append({"key": market.get("key"), "outcomes": outcomes})
-        row = {"key": book.get("key"), "title": book.get("title"), "markets": markets}
+                }
+                if outcome.get("sid"):
+                    item["sid"] = outcome.get("sid")
+                link = outcome.get("link") if isinstance(outcome.get("link"), str) else None
+                if link:
+                    item["link"] = public_event_url(link) or link
+                row["outcomes"].append(item)
+            markets.append(row)
+        book_row = {"key": book.get("key"), "title": book.get("title"), "markets": markets}
+        if book.get("sid"):
+            book_row["sid"] = book.get("sid")
         url = public_event_url(book["link"]) if isinstance(book.get("link"), str) else None
         if url:
-            row["link"] = url
+            book_row["link"] = url
+        row = book_row
         books.append(row)
     return {
         "id": event.get("id"),
@@ -179,8 +189,9 @@ def main():
                 key,
                 regions="us",
                 markets=MARKETS,
-                oddsFormat="american",
-                includeLinks="true",
+            oddsFormat="american",
+            includeLinks="true",
+            includeSids="true",
             )
         except RuntimeError as exc:
             report["odds"] = {"status": 0, "error": str(exc), "sport_key": sport, "regions": "us", "markets": MARKETS}
