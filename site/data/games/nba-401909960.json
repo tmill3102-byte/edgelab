@@ -147,14 +147,14 @@
   "model_summary": "Margin NY +15.5 \u00b7 total 220.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: NY 90.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: NY 92.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin NY +15.5, total 220.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
         "name": "Josh Hart",
-        "status": "Day-To-Day",
+        "status": "Out",
         "pos": "G",
         "key": false
       }
@@ -162,7 +162,7 @@
     "away": [
       {
         "name": "Tyler Herro",
-        "status": "Day-To-Day",
+        "status": "Out",
         "pos": "G",
         "key": true
       }
@@ -1628,6 +1628,407 @@
       "player": "Brayden Burries",
       "player_id": "5082206",
       "team": "Milwaukee Bucks",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 3.5,
+      "projection": 2.2,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "2/10",
+        "L20": "2/10",
+        "all": "2/10"
+      },
+      "recent": [
+        4.0,
+        6.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.595,
+          "fair_over": -147,
+          "fair_under": 147,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.494,
+          "fair_over": 102,
+          "fair_under": -102,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.391,
+          "fair_over": 156,
+          "fair_under": -156,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.251,
+          "fair_over": 298,
+          "fair_under": -298,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.205,
+          "fair_over": 388,
+          "fair_under": -388,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.116,
+          "fair_over": 759,
+          "fair_under": -759,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.105,
+          "fair_over": 848,
+          "fair_under": -848,
+          "L10": "1/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.075,
+          "fair_over": 1227,
+          "fair_under": -1227,
+          "L10": "1/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.075,
+          "fair_over": 1242,
+          "fair_under": -1242,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Brayden Burries Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": 124.0,
+            "model_raw": 0.2049,
+            "model_prob": 0.2898,
+            "market_prob": 0.417,
+            "fair_odds": 245,
+            "edge": -0.1273,
+            "edge_at_price": -0.1567,
+            "ev": -0.351,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 3.5: 20.5% before shrink, this book's no-vig 41.7%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (20% vs 42%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +252 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Brayden Burries Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": 115.0,
+            "model_raw": 0.2049,
+            "model_prob": 0.2979,
+            "market_prob": 0.4373,
+            "fair_odds": 236,
+            "edge": -0.1395,
+            "edge_at_price": -0.1672,
+            "ev": -0.3596,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 3.5: 20.5% before shrink, this book's no-vig 43.7%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (20% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +242 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brayden Burries Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": 119.0,
+            "model_raw": 0.2049,
+            "model_prob": 0.294,
+            "market_prob": 0.4277,
+            "fair_odds": 240,
+            "edge": -0.1337,
+            "edge_at_price": -0.1626,
+            "ev": -0.3561,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 3.5: 20.5% before shrink, this book's no-vig 42.8%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +247 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Brayden Burries Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": 110.0,
+            "model_raw": 0.2049,
+            "model_prob": 0.2999,
+            "market_prob": 0.4425,
+            "fair_odds": 233,
+            "edge": -0.1425,
+            "edge_at_price": -0.1763,
+            "ev": -0.3701,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 3.5: 20.5% before shrink, this book's no-vig 44.2%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (20% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +240 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Brayden Burries Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": 115.0,
+            "model_raw": 0.2049,
+            "model_prob": 0.2976,
+            "market_prob": 0.4367,
+            "fair_odds": 236,
+            "edge": -0.1391,
+            "edge_at_price": -0.1675,
+            "ev": -0.3601,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 3.5: 20.5% before shrink, this book's no-vig 43.7%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (20% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +243 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Brayden Burries Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": -166.0,
+            "model_raw": 0.7951,
+            "model_prob": 0.7102,
+            "market_prob": 0.583,
+            "fair_odds": -245,
+            "edge": 0.1273,
+            "edge_at_price": 0.0862,
+            "ev": 0.1381,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 3.5: 79.5% before shrink, this book's no-vig 58.3%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (80% vs 58%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -229 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Brayden Burries Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": -149.0,
+            "model_raw": 0.7951,
+            "model_prob": 0.7021,
+            "market_prob": 0.5627,
+            "fair_odds": -236,
+            "edge": 0.1395,
+            "edge_at_price": 0.1037,
+            "ev": 0.1733,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 3.5: 79.5% before shrink, this book's no-vig 56.3%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (80% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -221 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brayden Burries Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": -157.0,
+            "model_raw": 0.7951,
+            "model_prob": 0.706,
+            "market_prob": 0.5723,
+            "fair_odds": -240,
+            "edge": 0.1337,
+            "edge_at_price": 0.0951,
+            "ev": 0.1556,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 3.5: 79.5% before shrink, this book's no-vig 57.2%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -225 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Brayden Burries Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": -150.0,
+            "model_raw": 0.7951,
+            "model_prob": 0.7001,
+            "market_prob": 0.5575,
+            "fair_odds": -233,
+            "edge": 0.1425,
+            "edge_at_price": 0.1001,
+            "ev": 0.1668,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 3.5: 79.5% before shrink, this book's no-vig 55.8%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (80% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -219 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Brayden Burries Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": -150.0,
+            "model_raw": 0.7951,
+            "model_prob": 0.7024,
+            "market_prob": 0.5633,
+            "fair_odds": -236,
+            "edge": 0.1391,
+            "edge_at_price": 0.1024,
+            "ev": 0.1706,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 3.5: 79.5% before shrink, this book's no-vig 56.3%.",
+              "Projection 2.2 (Poisson).",
+              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (80% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -221 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brayden Burries",
+      "player_id": "5082206",
+      "team": "Milwaukee Bucks",
       "stat": "pts",
       "stat_label": "Points",
       "line": 12.5,
@@ -2029,91 +2430,84 @@
       "player": "Brayden Burries",
       "player_id": "5082206",
       "team": "Milwaukee Bucks",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "line": 3.5,
-      "projection": 2.2,
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 0.8,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "2/10",
-        "L20": "2/10",
-        "all": "2/10"
+        "L5": "0/5",
+        "L10": "1/10",
+        "L20": "1/10",
+        "all": "1/10"
       },
       "recent": [
-        4.0,
-        6.0,
-        3.0,
         1.0,
         1.0,
+        0.0,
         1.0,
         1.0,
-        2.0,
-        3.0,
-        0.0
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        2.0
       ],
       "ladder": [
         {
+          "line": 0.0,
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.591,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.311,
+          "fair_over": 222,
+          "fair_under": -222,
+          "L10": "1/10"
+        },
+        {
           "line": 1.5,
-          "p_over": 0.595,
-          "fair_over": -147,
-          "fair_under": 147,
-          "L10": "5/10"
+          "p_over": 0.183,
+          "fair_over": 448,
+          "fair_under": -448,
+          "L10": "1/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.494,
-          "fair_over": 102,
-          "fair_under": -102,
-          "L10": "4/10"
+          "p_over": 0.068,
+          "fair_over": 1375,
+          "fair_under": -1375,
+          "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.391,
-          "fair_over": 156,
-          "fair_under": -156,
-          "L10": "4/10"
+          "p_over": 0.06,
+          "fair_over": 1567,
+          "fair_under": -1567,
+          "L10": "0/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.251,
-          "fair_over": 298,
-          "fair_under": -298,
-          "L10": "2/10"
+          "p_over": 0.035,
+          "fair_over": 2733,
+          "fair_under": -2733,
+          "L10": "0/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.205,
-          "fair_over": 388,
-          "fair_under": -388,
-          "L10": "2/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.116,
-          "fair_over": 759,
-          "fair_under": -759,
-          "L10": "1/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.105,
-          "fair_over": 848,
-          "fair_under": -848,
-          "L10": "1/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.075,
-          "fair_over": 1227,
-          "fair_under": -1227,
-          "L10": "1/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.075,
-          "fair_over": 1242,
-          "fair_under": -1242,
-          "L10": "1/10"
+          "p_over": 0.035,
+          "fair_over": 2752,
+          "fair_under": -2752,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2123,144 +2517,173 @@
         "over": {
           "fanduel": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 3.5 ast",
+            "selection": "Brayden Burries Over 1.5 threes",
             "side": "over",
-            "line": 3.5,
-            "odds": 124.0,
-            "model_raw": 0.2049,
-            "model_prob": 0.2898,
-            "market_prob": 0.417,
-            "fair_odds": 245,
-            "edge": -0.1273,
-            "edge_at_price": -0.1567,
-            "ev": -0.351,
+            "line": 1.5,
+            "odds": 106.0,
+            "model_raw": 0.1826,
+            "model_prob": 0.2912,
+            "market_prob": 0.4542,
+            "fair_odds": 243,
+            "edge": -0.163,
+            "edge_at_price": -0.1942,
+            "ev": -0.4,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 20.5% before shrink, this book's no-vig 41.7%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model over 1.5: 18.3% before shrink, this book's no-vig 45.4%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (20% vs 42%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (18% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +252 or better.",
+            "next_step": "Pass. Only interesting at +250 or better.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 3.5 ast",
+            "selection": "Brayden Burries Over 1.5 threes",
             "side": "over",
-            "line": 3.5,
-            "odds": 115.0,
-            "model_raw": 0.2049,
-            "model_prob": 0.2979,
-            "market_prob": 0.4373,
-            "fair_odds": 236,
-            "edge": -0.1395,
-            "edge_at_price": -0.1672,
-            "ev": -0.3596,
+            "line": 1.5,
+            "odds": 107.0,
+            "model_raw": 0.1826,
+            "model_prob": 0.2911,
+            "market_prob": 0.4537,
+            "fair_odds": 244,
+            "edge": -0.1627,
+            "edge_at_price": -0.192,
+            "ev": -0.3975,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 20.5% before shrink, this book's no-vig 43.7%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model over 1.5: 18.3% before shrink, this book's no-vig 45.4%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (20% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (18% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +242 or better.",
+            "next_step": "Pass. Only interesting at +250 or better.",
             "proven": false
           },
           "draftkings": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 3.5 ast",
+            "selection": "Brayden Burries Over 1.5 threes",
             "side": "over",
-            "line": 3.5,
-            "odds": 119.0,
-            "model_raw": 0.2049,
-            "model_prob": 0.294,
-            "market_prob": 0.4277,
-            "fair_odds": 240,
-            "edge": -0.1337,
-            "edge_at_price": -0.1626,
-            "ev": -0.3561,
+            "line": 1.5,
+            "odds": 100.0,
+            "model_raw": 0.1826,
+            "model_prob": 0.297,
+            "market_prob": 0.4686,
+            "fair_odds": 237,
+            "edge": -0.1716,
+            "edge_at_price": -0.203,
+            "ev": -0.406,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 20.5% before shrink, this book's no-vig 42.8%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model over 1.5: 18.3% before shrink, this book's no-vig 46.9%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +247 or better.",
+            "next_step": "Pass. Only interesting at +243 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Brayden Burries Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -108.0,
+            "model_raw": 0.1826,
+            "model_prob": 0.3028,
+            "market_prob": 0.4831,
+            "fair_odds": 230,
+            "edge": -0.1803,
+            "edge_at_price": -0.2164,
+            "ev": -0.4168,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 18.3% before shrink, this book's no-vig 48.3%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (18% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +237 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 3.5 ast",
+            "selection": "Brayden Burries Over 1.5 threes",
             "side": "over",
-            "line": 3.5,
-            "odds": 110.0,
-            "model_raw": 0.2049,
-            "model_prob": 0.2999,
-            "market_prob": 0.4425,
-            "fair_odds": 233,
-            "edge": -0.1425,
-            "edge_at_price": -0.1763,
-            "ev": -0.3701,
+            "line": 1.5,
+            "odds": 105.0,
+            "model_raw": 0.1826,
+            "model_prob": 0.2917,
+            "market_prob": 0.4554,
+            "fair_odds": 243,
+            "edge": -0.1637,
+            "edge_at_price": -0.1961,
+            "ev": -0.402,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 20.5% before shrink, this book's no-vig 44.2%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model over 1.5: 18.3% before shrink, this book's no-vig 45.5%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (20% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (18% vs 46%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +240 or better.",
+            "next_step": "Pass. Only interesting at +250 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 3.5 ast",
+            "selection": "Brayden Burries Over 1.5 threes",
             "side": "over",
-            "line": 3.5,
-            "odds": 115.0,
-            "model_raw": 0.2049,
-            "model_prob": 0.2976,
-            "market_prob": 0.4367,
+            "line": 1.5,
+            "odds": 100.0,
+            "model_raw": 0.1826,
+            "model_prob": 0.2973,
+            "market_prob": 0.4694,
             "fair_odds": 236,
-            "edge": -0.1391,
-            "edge_at_price": -0.1675,
-            "ev": -0.3601,
+            "edge": -0.1721,
+            "edge_at_price": -0.2027,
+            "ev": -0.4054,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 20.5% before shrink, this book's no-vig 43.7%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model over 1.5: 18.3% before shrink, this book's no-vig 46.9%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (20% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (20% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Pass. Only interesting at +243 or better.",
@@ -2270,153 +2693,184 @@
         "under": {
           "fanduel": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 3.5 ast",
+            "selection": "Brayden Burries Under 1.5 threes",
             "side": "under",
-            "line": 3.5,
-            "odds": -166.0,
-            "model_raw": 0.7951,
-            "model_prob": 0.7102,
-            "market_prob": 0.583,
-            "fair_odds": -245,
-            "edge": 0.1273,
-            "edge_at_price": 0.0862,
-            "ev": 0.1381,
+            "line": 1.5,
+            "odds": -140.0,
+            "model_raw": 0.8174,
+            "model_prob": 0.7088,
+            "market_prob": 0.5458,
+            "fair_odds": -243,
+            "edge": 0.163,
+            "edge_at_price": 0.1254,
+            "ev": 0.215,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 79.5% before shrink, this book's no-vig 58.3%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model under 1.5: 81.7% before shrink, this book's no-vig 54.6%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Medium",
-              "model far from market (80% vs 58%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -229 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -228 or better and re-check injuries near start.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 3.5 ast",
+            "selection": "Brayden Burries Under 1.5 threes",
             "side": "under",
-            "line": 3.5,
-            "odds": -149.0,
-            "model_raw": 0.7951,
-            "model_prob": 0.7021,
-            "market_prob": 0.5627,
-            "fair_odds": -236,
-            "edge": 0.1395,
-            "edge_at_price": 0.1037,
-            "ev": 0.1733,
+            "line": 1.5,
+            "odds": -139.0,
+            "model_raw": 0.8174,
+            "model_prob": 0.7089,
+            "market_prob": 0.5463,
+            "fair_odds": -244,
+            "edge": 0.1627,
+            "edge_at_price": 0.1274,
+            "ev": 0.219,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 79.5% before shrink, this book's no-vig 56.3%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model under 1.5: 81.7% before shrink, this book's no-vig 54.6%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Medium",
-              "model far from market (80% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -221 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -228 or better and re-check injuries near start.",
             "proven": false
           },
           "draftkings": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 3.5 ast",
+            "selection": "Brayden Burries Under 1.5 threes",
             "side": "under",
-            "line": 3.5,
-            "odds": -157.0,
-            "model_raw": 0.7951,
-            "model_prob": 0.706,
-            "market_prob": 0.5723,
-            "fair_odds": -240,
-            "edge": 0.1337,
-            "edge_at_price": 0.0951,
-            "ev": 0.1556,
+            "line": 1.5,
+            "odds": -131.0,
+            "model_raw": 0.8174,
+            "model_prob": 0.703,
+            "market_prob": 0.5314,
+            "fair_odds": -237,
+            "edge": 0.1716,
+            "edge_at_price": 0.1359,
+            "ev": 0.2397,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 79.5% before shrink, this book's no-vig 57.2%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model under 1.5: 81.7% before shrink, this book's no-vig 53.1%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Medium",
-              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -225 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -222 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Brayden Burries Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -125.0,
+            "model_raw": 0.8174,
+            "model_prob": 0.6972,
+            "market_prob": 0.5169,
+            "fair_odds": -230,
+            "edge": 0.1803,
+            "edge_at_price": 0.1416,
+            "ev": 0.255,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 81.7% before shrink, this book's no-vig 51.7%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (82% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -216 or better and re-check injuries near start.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 3.5 ast",
+            "selection": "Brayden Burries Under 1.5 threes",
             "side": "under",
-            "line": 3.5,
-            "odds": -150.0,
-            "model_raw": 0.7951,
-            "model_prob": 0.7001,
-            "market_prob": 0.5575,
-            "fair_odds": -233,
-            "edge": 0.1425,
-            "edge_at_price": 0.1001,
-            "ev": 0.1668,
+            "line": 1.5,
+            "odds": -140.0,
+            "model_raw": 0.8174,
+            "model_prob": 0.7083,
+            "market_prob": 0.5446,
+            "fair_odds": -243,
+            "edge": 0.1637,
+            "edge_at_price": 0.1249,
+            "ev": 0.2142,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 79.5% before shrink, this book's no-vig 55.8%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model under 1.5: 81.7% before shrink, this book's no-vig 54.5%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Medium",
-              "model far from market (80% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 54%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -219 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -227 or better and re-check injuries near start.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 3.5 ast",
+            "selection": "Brayden Burries Under 1.5 threes",
             "side": "under",
-            "line": 3.5,
-            "odds": -150.0,
-            "model_raw": 0.7951,
-            "model_prob": 0.7024,
-            "market_prob": 0.5633,
+            "line": 1.5,
+            "odds": -130.0,
+            "model_raw": 0.8174,
+            "model_prob": 0.7027,
+            "market_prob": 0.5306,
             "fair_odds": -236,
-            "edge": 0.1391,
-            "edge_at_price": 0.1024,
-            "ev": 0.1706,
+            "edge": 0.1721,
+            "edge_at_price": 0.1375,
+            "ev": 0.2432,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 79.5% before shrink, this book's no-vig 56.3%.",
-              "Projection 2.2 (Poisson).",
-              "Hit rate over L5 2/5, L10 2/10, L20 2/10, all 2/10."
+              "Model under 1.5: 81.7% before shrink, this book's no-vig 53.1%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
             ],
             "flags": [],
             "caution": [
-              "model far from market (80% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Medium",
-              "model far from market (80% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded High -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
@@ -3241,454 +3695,343 @@
       }
     },
     {
-      "player": "Brayden Burries",
-      "player_id": "5082206",
+      "player": "Jaime Jaquez Jr.",
+      "player_id": "4432848",
       "team": "Milwaukee Bucks",
-      "stat": "threes",
-      "stat_label": "Threes",
-      "line": 1.5,
-      "projection": 0.8,
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 2.5,
+      "projection": 3.25,
       "hit_rates": {
-        "L5": "0/5",
-        "L10": "1/10",
-        "L20": "1/10",
-        "all": "1/10"
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "12/20",
+        "all": "17/25"
       },
       "recent": [
-        1.0,
-        1.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0,
         0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
+        4.0,
+        5.0,
         2.0
       ],
       "ladder": [
         {
-          "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
-        },
-        {
           "line": 0.5,
-          "p_over": 0.591,
-          "fair_over": -145,
-          "fair_under": 145,
-          "L10": "7/10"
+          "p_over": 0.917,
+          "fair_over": -1098,
+          "fair_under": 1098,
+          "L10": "9/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.311,
-          "fair_over": 222,
-          "fair_under": -222,
-          "L10": "1/10"
+          "p_over": 0.913,
+          "fair_over": -1048,
+          "fair_under": 1048,
+          "L10": "9/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.183,
-          "fair_over": 448,
-          "fair_under": -448,
-          "L10": "1/10"
+          "p_over": 0.835,
+          "fair_over": -505,
+          "fair_under": 505,
+          "L10": "9/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.068,
-          "fair_over": 1375,
-          "fair_under": -1375,
-          "L10": "0/10"
+          "p_over": 0.766,
+          "fair_over": -327,
+          "fair_under": 327,
+          "L10": "4/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.06,
-          "fair_over": 1567,
-          "fair_under": -1567,
-          "L10": "0/10"
+          "p_over": 0.556,
+          "fair_over": -125,
+          "fair_under": 125,
+          "L10": "4/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.035,
-          "fair_over": 2733,
-          "fair_under": -2733,
-          "L10": "0/10"
+          "p_over": 0.469,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "3/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.035,
-          "fair_over": 2752,
-          "fair_under": -2752,
-          "L10": "0/10"
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.277,
+          "fair_over": 261,
+          "fair_under": -261,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.236,
+          "fair_over": 323,
+          "fair_under": -323,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
       "status": null,
       "sides": {
         "over": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Brayden Burries Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 106.0,
-            "model_raw": 0.1826,
-            "model_prob": 0.2912,
-            "market_prob": 0.4542,
-            "fair_odds": 243,
-            "edge": -0.163,
-            "edge_at_price": -0.1942,
-            "ev": -0.4,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 1.5: 18.3% before shrink, this book's no-vig 45.4%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (18% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +250 or better.",
-            "proven": false
-          },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
             "side": "over",
-            "line": 1.5,
-            "odds": 107.0,
-            "model_raw": 0.1826,
-            "model_prob": 0.2911,
-            "market_prob": 0.4537,
-            "fair_odds": 244,
-            "edge": -0.1627,
-            "edge_at_price": -0.192,
-            "ev": -0.3975,
+            "line": 2.5,
+            "odds": -164.0,
+            "model_raw": 0.5559,
+            "model_prob": 0.57,
+            "market_prob": 0.584,
+            "fair_odds": -133,
+            "edge": -0.0141,
+            "edge_at_price": -0.0513,
+            "ev": -0.0825,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model over 1.5: 18.3% before shrink, this book's no-vig 45.4%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model over 2.5: 55.6% before shrink, this book's no-vig 58.4%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (18% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +250 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Brayden Burries Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 100.0,
-            "model_raw": 0.1826,
-            "model_prob": 0.297,
-            "market_prob": 0.4686,
-            "fair_odds": 237,
-            "edge": -0.1716,
-            "edge_at_price": -0.203,
-            "ev": -0.406,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 1.5: 18.3% before shrink, this book's no-vig 46.9%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +243 or better.",
+            "next_step": "Pass. Only interesting at -127 or better.",
             "proven": false
           },
           "betrivers": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
             "side": "over",
-            "line": 1.5,
-            "odds": -108.0,
-            "model_raw": 0.1826,
-            "model_prob": 0.3028,
-            "market_prob": 0.4831,
-            "fair_odds": 230,
-            "edge": -0.1803,
-            "edge_at_price": -0.2164,
-            "ev": -0.4168,
+            "line": 2.5,
+            "odds": -180.0,
+            "model_raw": 0.5559,
+            "model_prob": 0.5762,
+            "market_prob": 0.5965,
+            "fair_odds": -136,
+            "edge": -0.0203,
+            "edge_at_price": -0.0666,
+            "ev": -0.1037,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model over 1.5: 18.3% before shrink, this book's no-vig 48.3%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model over 2.5: 55.6% before shrink, this book's no-vig 59.7%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (18% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +237 or better.",
+            "next_step": "Pass. Only interesting at -130 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
             "side": "over",
-            "line": 1.5,
-            "odds": 105.0,
-            "model_raw": 0.1826,
-            "model_prob": 0.2917,
-            "market_prob": 0.4554,
-            "fair_odds": 243,
-            "edge": -0.1637,
-            "edge_at_price": -0.1961,
-            "ev": -0.402,
+            "line": 2.5,
+            "odds": -175.0,
+            "model_raw": 0.5559,
+            "model_prob": 0.575,
+            "market_prob": 0.5941,
+            "fair_odds": -135,
+            "edge": -0.0191,
+            "edge_at_price": -0.0614,
+            "ev": -0.0964,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model over 1.5: 18.3% before shrink, this book's no-vig 45.5%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model over 2.5: 55.6% before shrink, this book's no-vig 59.4%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (18% vs 46%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +250 or better.",
+            "next_step": "Pass. Only interesting at -129 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Brayden Burries Over 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
             "side": "over",
-            "line": 1.5,
-            "odds": 100.0,
-            "model_raw": 0.1826,
-            "model_prob": 0.2973,
-            "market_prob": 0.4694,
-            "fair_odds": 236,
-            "edge": -0.1721,
-            "edge_at_price": -0.2027,
-            "ev": -0.4054,
+            "line": 2.5,
+            "odds": -165.0,
+            "model_raw": 0.5559,
+            "model_prob": 0.5697,
+            "market_prob": 0.5835,
+            "fair_odds": -132,
+            "edge": -0.0138,
+            "edge_at_price": -0.0529,
+            "ev": -0.085,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model over 1.5: 18.3% before shrink, this book's no-vig 46.9%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model over 2.5: 55.6% before shrink, this book's no-vig 58.3%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (18% vs 47%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +243 or better.",
+            "next_step": "Pass. Only interesting at -127 or better.",
             "proven": false
           }
         },
         "under": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Brayden Burries Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -140.0,
-            "model_raw": 0.8174,
-            "model_prob": 0.7088,
-            "market_prob": 0.5458,
-            "fair_odds": -243,
-            "edge": 0.163,
-            "edge_at_price": 0.1254,
-            "ev": 0.215,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 1.5: 81.7% before shrink, this book's no-vig 54.6%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (82% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -228 or better and re-check injuries near start.",
-            "proven": false
-          },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
             "side": "under",
-            "line": 1.5,
-            "odds": -139.0,
-            "model_raw": 0.8174,
-            "model_prob": 0.7089,
-            "market_prob": 0.5463,
-            "fair_odds": -244,
-            "edge": 0.1627,
-            "edge_at_price": 0.1274,
-            "ev": 0.219,
+            "line": 2.5,
+            "odds": 126.0,
+            "model_raw": 0.4441,
+            "model_prob": 0.43,
+            "market_prob": 0.416,
+            "fair_odds": 133,
+            "edge": 0.0141,
+            "edge_at_price": -0.0124,
+            "ev": -0.0281,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model under 1.5: 81.7% before shrink, this book's no-vig 54.6%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model under 2.5: 44.4% before shrink, this book's no-vig 41.6%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (82% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -228 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Brayden Burries Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -131.0,
-            "model_raw": 0.8174,
-            "model_prob": 0.703,
-            "market_prob": 0.5314,
-            "fair_odds": -237,
-            "edge": 0.1716,
-            "edge_at_price": 0.1359,
-            "ev": 0.2397,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 1.5: 81.7% before shrink, this book's no-vig 53.1%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -222 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +137 or better.",
             "proven": false
           },
           "betrivers": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
             "side": "under",
-            "line": 1.5,
-            "odds": -125.0,
-            "model_raw": 0.8174,
-            "model_prob": 0.6972,
-            "market_prob": 0.5169,
-            "fair_odds": -230,
-            "edge": 0.1803,
-            "edge_at_price": 0.1416,
-            "ev": 0.255,
+            "line": 2.5,
+            "odds": 130.0,
+            "model_raw": 0.4441,
+            "model_prob": 0.4238,
+            "market_prob": 0.4035,
+            "fair_odds": 136,
+            "edge": 0.0203,
+            "edge_at_price": -0.011,
+            "ev": -0.0253,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model under 1.5: 81.7% before shrink, this book's no-vig 51.7%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model under 2.5: 44.4% before shrink, this book's no-vig 40.3%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (82% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -216 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +141 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
             "side": "under",
-            "line": 1.5,
-            "odds": -140.0,
-            "model_raw": 0.8174,
-            "model_prob": 0.7083,
-            "market_prob": 0.5446,
-            "fair_odds": -243,
-            "edge": 0.1637,
-            "edge_at_price": 0.1249,
-            "ev": 0.2142,
+            "line": 2.5,
+            "odds": 130.0,
+            "model_raw": 0.4441,
+            "model_prob": 0.425,
+            "market_prob": 0.4059,
+            "fair_odds": 135,
+            "edge": 0.0191,
+            "edge_at_price": -0.0098,
+            "ev": -0.0225,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model under 1.5: 81.7% before shrink, this book's no-vig 54.5%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model under 2.5: 44.4% before shrink, this book's no-vig 40.6%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (82% vs 54%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -227 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +140 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Brayden Burries Under 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
             "side": "under",
-            "line": 1.5,
-            "odds": -130.0,
-            "model_raw": 0.8174,
-            "model_prob": 0.7027,
-            "market_prob": 0.5306,
-            "fair_odds": -236,
-            "edge": 0.1721,
-            "edge_at_price": 0.1375,
-            "ev": 0.2432,
+            "line": 2.5,
+            "odds": 125.0,
+            "model_raw": 0.4441,
+            "model_prob": 0.4303,
+            "market_prob": 0.4165,
+            "fair_odds": 132,
+            "edge": 0.0138,
+            "edge_at_price": -0.0141,
+            "ev": -0.0318,
             "tier": "Low",
-            "data_quality": "High",
+            "data_quality": "Medium",
             "reasons": [
-              "Model under 1.5: 81.7% before shrink, this book's no-vig 53.1%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 0/5, L10 1/10, L20 1/10, all 1/10."
+              "Model under 2.5: 44.4% before shrink, this book's no-vig 41.7%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
-            "flags": [],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
             "caution": [
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (82% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -221 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +137 or better.",
             "proven": false
           }
         }
@@ -4048,91 +4391,84 @@
       "player": "Jaime Jaquez Jr.",
       "player_id": "4432848",
       "team": "Milwaukee Bucks",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "line": 2.5,
-      "projection": 3.25,
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 1.66,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "12/20",
-        "all": "17/25"
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "13/20",
+        "all": "15/25"
       },
       "recent": [
-        2.0,
-        3.0,
-        2.0,
-        2.0,
-        5.0,
-        2.0,
         0.0,
+        2.0,
         4.0,
-        5.0,
-        2.0
+        2.0,
+        1.0,
+        3.0,
+        0.0,
+        2.0,
+        2.0,
+        1.0
       ],
       "ladder": [
         {
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
           "line": 0.5,
-          "p_over": 0.917,
-          "fair_over": -1098,
-          "fair_under": 1098,
-          "L10": "9/10"
+          "p_over": 0.789,
+          "fair_over": -374,
+          "fair_under": 374,
+          "L10": "8/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.913,
-          "fair_over": -1048,
-          "fair_under": 1048,
-          "L10": "9/10"
+          "p_over": 0.714,
+          "fair_over": -250,
+          "fair_under": 250,
+          "L10": "6/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.835,
-          "fair_over": -505,
-          "fair_under": 505,
-          "L10": "9/10"
+          "p_over": 0.525,
+          "fair_over": -111,
+          "fair_under": 111,
+          "L10": "6/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.766,
-          "fair_over": -327,
-          "fair_under": 327,
-          "L10": "4/10"
+          "p_over": 0.336,
+          "fair_over": 198,
+          "fair_under": -198,
+          "L10": "2/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.556,
-          "fair_over": -125,
-          "fair_under": 125,
-          "L10": "4/10"
+          "p_over": 0.238,
+          "fair_over": 319,
+          "fair_under": -319,
+          "L10": "2/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.469,
-          "fair_over": 113,
-          "fair_under": -113,
-          "L10": "3/10"
+          "p_over": 0.13,
+          "fair_over": 669,
+          "fair_under": -669,
+          "L10": "1/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.383,
-          "fair_over": 161,
-          "fair_under": -161,
-          "L10": "3/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.277,
-          "fair_over": 261,
-          "fair_under": -261,
-          "L10": "2/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.236,
-          "fair_over": 323,
-          "fair_under": -323,
-          "L10": "2/10"
+          "p_over": 0.115,
+          "fair_over": 769,
+          "fair_under": -769,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -4142,246 +4478,334 @@
       "status": null,
       "sides": {
         "over": {
-          "betonlineag": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
             "side": "over",
-            "line": 2.5,
-            "odds": -164.0,
-            "model_raw": 0.5559,
-            "model_prob": 0.57,
-            "market_prob": 0.584,
-            "fair_odds": -133,
-            "edge": -0.0141,
-            "edge_at_price": -0.0513,
-            "ev": -0.0825,
+            "line": 1.5,
+            "odds": 134.0,
+            "model_raw": 0.5254,
+            "model_prob": 0.4624,
+            "market_prob": 0.3993,
+            "fair_odds": 116,
+            "edge": 0.063,
+            "edge_at_price": 0.035,
+            "ev": 0.0819,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 55.6% before shrink, this book's no-vig 58.4%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model over 1.5: 52.5% before shrink, this book's no-vig 39.9%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -127 or better.",
+            "next_step": "Monitor only; if anything, wait for +121 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 139.0,
+            "model_raw": 0.5254,
+            "model_prob": 0.4594,
+            "market_prob": 0.3933,
+            "fair_odds": 118,
+            "edge": 0.066,
+            "edge_at_price": 0.0409,
+            "ev": 0.0979,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 52.5% before shrink, this book's no-vig 39.3%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (53% vs 39%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +122 or better and re-check injuries near start.",
             "proven": false
           },
           "betrivers": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
             "side": "over",
-            "line": 2.5,
-            "odds": -180.0,
-            "model_raw": 0.5559,
-            "model_prob": 0.5762,
-            "market_prob": 0.5965,
-            "fair_odds": -136,
-            "edge": -0.0203,
-            "edge_at_price": -0.0666,
-            "ev": -0.1037,
+            "line": 1.5,
+            "odds": 145.0,
+            "model_raw": 0.5254,
+            "model_prob": 0.4526,
+            "market_prob": 0.3797,
+            "fair_odds": 121,
+            "edge": 0.0728,
+            "edge_at_price": 0.0444,
+            "ev": 0.1088,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 55.6% before shrink, this book's no-vig 59.7%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model over 1.5: 52.5% before shrink, this book's no-vig 38.0%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (53% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -130 or better.",
+            "next_step": "Monitor only; if anything, wait for +125 or better and re-check injuries near start.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
             "side": "over",
-            "line": 2.5,
-            "odds": -175.0,
-            "model_raw": 0.5559,
-            "model_prob": 0.575,
-            "market_prob": 0.5941,
-            "fair_odds": -135,
-            "edge": -0.0191,
-            "edge_at_price": -0.0614,
-            "ev": -0.0964,
+            "line": 1.5,
+            "odds": 150.0,
+            "model_raw": 0.5254,
+            "model_prob": 0.4502,
+            "market_prob": 0.375,
+            "fair_odds": 122,
+            "edge": 0.0752,
+            "edge_at_price": 0.0502,
+            "ev": 0.1255,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 55.6% before shrink, this book's no-vig 59.4%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model over 1.5: 52.5% before shrink, this book's no-vig 37.5%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (53% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -129 or better.",
+            "next_step": "Monitor only; if anything, wait for +127 or better and re-check injuries near start.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
             "side": "over",
-            "line": 2.5,
-            "odds": -165.0,
-            "model_raw": 0.5559,
-            "model_prob": 0.5697,
-            "market_prob": 0.5835,
-            "fair_odds": -132,
-            "edge": -0.0138,
-            "edge_at_price": -0.0529,
-            "ev": -0.085,
+            "line": 1.5,
+            "odds": 130.0,
+            "model_raw": 0.5254,
+            "model_prob": 0.4669,
+            "market_prob": 0.4085,
+            "fair_odds": 114,
+            "edge": 0.0585,
+            "edge_at_price": 0.0322,
+            "ev": 0.074,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 55.6% before shrink, this book's no-vig 58.3%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model over 1.5: 52.5% before shrink, this book's no-vig 40.8%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -127 or better.",
+            "next_step": "Monitor only; if anything, wait for +118 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
-          "betonlineag": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
             "side": "under",
-            "line": 2.5,
-            "odds": 126.0,
-            "model_raw": 0.4441,
-            "model_prob": 0.43,
-            "market_prob": 0.416,
-            "fair_odds": 133,
-            "edge": 0.0141,
-            "edge_at_price": -0.0124,
-            "ev": -0.0281,
+            "line": 1.5,
+            "odds": -180.0,
+            "model_raw": 0.4746,
+            "model_prob": 0.5376,
+            "market_prob": 0.6007,
+            "fair_odds": -116,
+            "edge": -0.063,
+            "edge_at_price": -0.1052,
+            "ev": -0.1637,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 44.4% before shrink, this book's no-vig 41.6%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model under 1.5: 47.5% before shrink, this book's no-vig 60.1%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +137 or better.",
+            "next_step": "Pass. Only interesting at -111 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -182.0,
+            "model_raw": 0.4746,
+            "model_prob": 0.5406,
+            "market_prob": 0.6067,
+            "fair_odds": -118,
+            "edge": -0.066,
+            "edge_at_price": -0.1047,
+            "ev": -0.1623,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 47.5% before shrink, this book's no-vig 60.7%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (47% vs 61%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -113 or better.",
             "proven": false
           },
           "betrivers": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
             "side": "under",
-            "line": 2.5,
-            "odds": 130.0,
-            "model_raw": 0.4441,
-            "model_prob": 0.4238,
-            "market_prob": 0.4035,
-            "fair_odds": 136,
-            "edge": 0.0203,
-            "edge_at_price": -0.011,
-            "ev": -0.0253,
+            "line": 1.5,
+            "odds": -200.0,
+            "model_raw": 0.4746,
+            "model_prob": 0.5474,
+            "market_prob": 0.6203,
+            "fair_odds": -121,
+            "edge": -0.0728,
+            "edge_at_price": -0.1192,
+            "ev": -0.1789,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 44.4% before shrink, this book's no-vig 40.3%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model under 1.5: 47.5% before shrink, this book's no-vig 62.0%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (47% vs 62%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +141 or better.",
+            "next_step": "Pass. Only interesting at -116 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
             "side": "under",
-            "line": 2.5,
-            "odds": 130.0,
-            "model_raw": 0.4441,
-            "model_prob": 0.425,
-            "market_prob": 0.4059,
-            "fair_odds": 135,
-            "edge": 0.0191,
-            "edge_at_price": -0.0098,
-            "ev": -0.0225,
+            "line": 1.5,
+            "odds": -200.0,
+            "model_raw": 0.4746,
+            "model_prob": 0.5498,
+            "market_prob": 0.625,
+            "fair_odds": -122,
+            "edge": -0.0752,
+            "edge_at_price": -0.1169,
+            "ev": -0.1753,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 44.4% before shrink, this book's no-vig 40.6%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model under 1.5: 47.5% before shrink, this book's no-vig 62.5%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (47% vs 62%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +140 or better.",
+            "next_step": "Pass. Only interesting at -117 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
             "side": "under",
-            "line": 2.5,
-            "odds": 125.0,
-            "model_raw": 0.4441,
-            "model_prob": 0.4303,
-            "market_prob": 0.4165,
-            "fair_odds": 132,
-            "edge": 0.0138,
-            "edge_at_price": -0.0141,
-            "ev": -0.0318,
+            "line": 1.5,
+            "odds": -170.0,
+            "model_raw": 0.4746,
+            "model_prob": 0.5331,
+            "market_prob": 0.5915,
+            "fair_odds": -114,
+            "edge": -0.0585,
+            "edge_at_price": -0.0966,
+            "ev": -0.1534,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 44.4% before shrink, this book's no-vig 41.7%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model under 1.5: 47.5% before shrink, this book's no-vig 59.2%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +137 or better.",
+            "next_step": "Pass. Only interesting at -109 or better.",
             "proven": false
           }
         }
@@ -5137,84 +5561,91 @@
       "player": "Jaime Jaquez Jr.",
       "player_id": "4432848",
       "team": "Milwaukee Bucks",
-      "stat": "threes",
-      "stat_label": "Threes",
-      "line": 1.5,
-      "projection": 1.66,
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 2.5,
+      "projection": 3.25,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "6/10",
-        "L20": "13/20",
-        "all": "15/25"
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "12/20",
+        "all": "17/25"
       },
       "recent": [
-        0.0,
         2.0,
-        4.0,
-        2.0,
-        1.0,
         3.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0,
         0.0,
-        2.0,
-        2.0,
-        1.0
+        4.0,
+        5.0,
+        2.0
       ],
       "ladder": [
         {
-          "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
-        },
-        {
           "line": 0.5,
-          "p_over": 0.789,
-          "fair_over": -374,
-          "fair_under": 374,
-          "L10": "8/10"
+          "p_over": 0.917,
+          "fair_over": -1098,
+          "fair_under": 1098,
+          "L10": "9/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.714,
-          "fair_over": -250,
-          "fair_under": 250,
-          "L10": "6/10"
+          "p_over": 0.913,
+          "fair_over": -1048,
+          "fair_under": 1048,
+          "L10": "9/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.525,
-          "fair_over": -111,
-          "fair_under": 111,
-          "L10": "6/10"
+          "p_over": 0.835,
+          "fair_over": -505,
+          "fair_under": 505,
+          "L10": "9/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.336,
-          "fair_over": 198,
-          "fair_under": -198,
-          "L10": "2/10"
+          "p_over": 0.766,
+          "fair_over": -327,
+          "fair_under": 327,
+          "L10": "4/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.238,
-          "fair_over": 319,
-          "fair_under": -319,
-          "L10": "2/10"
+          "p_over": 0.556,
+          "fair_over": -125,
+          "fair_under": 125,
+          "L10": "4/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.13,
-          "fair_over": 669,
-          "fair_under": -669,
-          "L10": "1/10"
+          "p_over": 0.469,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "3/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.115,
-          "fair_over": 769,
-          "fair_under": -769,
-          "L10": "1/10"
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.277,
+          "fair_over": 261,
+          "fair_under": -261,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.236,
+          "fair_over": 323,
+          "fair_under": -323,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -5224,334 +5655,66 @@
       "status": null,
       "sides": {
         "over": {
-          "fanduel": {
+          "draftkings": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
             "side": "over",
-            "line": 1.5,
-            "odds": 134.0,
-            "model_raw": 0.5254,
-            "model_prob": 0.4624,
-            "market_prob": 0.3993,
-            "fair_odds": 116,
-            "edge": 0.063,
-            "edge_at_price": 0.035,
-            "ev": 0.0819,
+            "line": 2.5,
+            "odds": -164.0,
+            "model_raw": 0.5559,
+            "model_prob": 0.5689,
+            "market_prob": 0.5819,
+            "fair_odds": -132,
+            "edge": -0.013,
+            "edge_at_price": -0.0523,
+            "ev": -0.0842,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 1.5: 52.5% before shrink, this book's no-vig 39.9%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
+              "Model over 2.5: 55.6% before shrink, this book's no-vig 58.2%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +121 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 139.0,
-            "model_raw": 0.5254,
-            "model_prob": 0.4594,
-            "market_prob": 0.3933,
-            "fair_odds": 118,
-            "edge": 0.066,
-            "edge_at_price": 0.0409,
-            "ev": 0.0979,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 1.5: 52.5% before shrink, this book's no-vig 39.3%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (53% vs 39%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +122 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "betrivers": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 145.0,
-            "model_raw": 0.5254,
-            "model_prob": 0.4526,
-            "market_prob": 0.3797,
-            "fair_odds": 121,
-            "edge": 0.0728,
-            "edge_at_price": 0.0444,
-            "ev": 0.1088,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 1.5: 52.5% before shrink, this book's no-vig 38.0%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (53% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +125 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 150.0,
-            "model_raw": 0.5254,
-            "model_prob": 0.4502,
-            "market_prob": 0.375,
-            "fair_odds": 122,
-            "edge": 0.0752,
-            "edge_at_price": 0.0502,
-            "ev": 0.1255,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 1.5: 52.5% before shrink, this book's no-vig 37.5%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (53% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +127 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 130.0,
-            "model_raw": 0.5254,
-            "model_prob": 0.4669,
-            "market_prob": 0.4085,
-            "fair_odds": 114,
-            "edge": 0.0585,
-            "edge_at_price": 0.0322,
-            "ev": 0.074,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 1.5: 52.5% before shrink, this book's no-vig 40.8%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (53% vs 40%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +118 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at -126 or better.",
             "proven": false
           }
         },
         "under": {
-          "fanduel": {
+          "draftkings": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
+            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
             "side": "under",
-            "line": 1.5,
-            "odds": -180.0,
-            "model_raw": 0.4746,
-            "model_prob": 0.5376,
-            "market_prob": 0.6007,
-            "fair_odds": -116,
-            "edge": -0.063,
-            "edge_at_price": -0.1052,
-            "ev": -0.1637,
+            "line": 2.5,
+            "odds": 124.0,
+            "model_raw": 0.4441,
+            "model_prob": 0.4311,
+            "market_prob": 0.4181,
+            "fair_odds": 132,
+            "edge": 0.013,
+            "edge_at_price": -0.0153,
+            "ev": -0.0343,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 1.5: 47.5% before shrink, this book's no-vig 60.1%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
+              "Model under 2.5: 44.4% before shrink, this book's no-vig 41.8%.",
+              "Projection 3.25 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -111 or better.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -182.0,
-            "model_raw": 0.4746,
-            "model_prob": 0.5406,
-            "market_prob": 0.6067,
-            "fair_odds": -118,
-            "edge": -0.066,
-            "edge_at_price": -0.1047,
-            "ev": -0.1623,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 1.5: 47.5% before shrink, this book's no-vig 60.7%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (47% vs 61%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -113 or better.",
-            "proven": false
-          },
-          "betrivers": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -200.0,
-            "model_raw": 0.4746,
-            "model_prob": 0.5474,
-            "market_prob": 0.6203,
-            "fair_odds": -121,
-            "edge": -0.0728,
-            "edge_at_price": -0.1192,
-            "ev": -0.1789,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 1.5: 47.5% before shrink, this book's no-vig 62.0%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (47% vs 62%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -116 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -200.0,
-            "model_raw": 0.4746,
-            "model_prob": 0.5498,
-            "market_prob": 0.625,
-            "fair_odds": -122,
-            "edge": -0.0752,
-            "edge_at_price": -0.1169,
-            "ev": -0.1753,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 1.5: 47.5% before shrink, this book's no-vig 62.5%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (47% vs 62%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -117 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -170.0,
-            "model_raw": 0.4746,
-            "model_prob": 0.5331,
-            "market_prob": 0.5915,
-            "fair_odds": -114,
-            "edge": -0.0585,
-            "edge_at_price": -0.0966,
-            "ev": -0.1534,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 1.5: 47.5% before shrink, this book's no-vig 59.2%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (47% vs 60%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -109 or better.",
+            "next_step": "Pass. Only interesting at +137 or better.",
             "proven": false
           }
         }
@@ -5726,91 +5889,84 @@
       "player": "Jaime Jaquez Jr.",
       "player_id": "4432848",
       "team": "Milwaukee Bucks",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "line": 2.5,
-      "projection": 3.25,
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 1.66,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "12/20",
-        "all": "17/25"
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "13/20",
+        "all": "15/25"
       },
       "recent": [
-        2.0,
-        3.0,
-        2.0,
-        2.0,
-        5.0,
-        2.0,
         0.0,
+        2.0,
         4.0,
-        5.0,
-        2.0
+        2.0,
+        1.0,
+        3.0,
+        0.0,
+        2.0,
+        2.0,
+        1.0
       ],
       "ladder": [
         {
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
           "line": 0.5,
-          "p_over": 0.917,
-          "fair_over": -1098,
-          "fair_under": 1098,
-          "L10": "9/10"
+          "p_over": 0.789,
+          "fair_over": -374,
+          "fair_under": 374,
+          "L10": "8/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.913,
-          "fair_over": -1048,
-          "fair_under": 1048,
-          "L10": "9/10"
+          "p_over": 0.714,
+          "fair_over": -250,
+          "fair_under": 250,
+          "L10": "6/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.835,
-          "fair_over": -505,
-          "fair_under": 505,
-          "L10": "9/10"
+          "p_over": 0.525,
+          "fair_over": -111,
+          "fair_under": 111,
+          "L10": "6/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.766,
-          "fair_over": -327,
-          "fair_under": 327,
-          "L10": "4/10"
+          "p_over": 0.336,
+          "fair_over": 198,
+          "fair_under": -198,
+          "L10": "2/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.556,
-          "fair_over": -125,
-          "fair_under": 125,
-          "L10": "4/10"
+          "p_over": 0.238,
+          "fair_over": 319,
+          "fair_under": -319,
+          "L10": "2/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.469,
-          "fair_over": 113,
-          "fair_under": -113,
-          "L10": "3/10"
+          "p_over": 0.13,
+          "fair_over": 669,
+          "fair_under": -669,
+          "L10": "1/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.383,
-          "fair_over": 161,
-          "fair_under": -161,
-          "L10": "3/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.277,
-          "fair_over": 261,
-          "fair_under": -261,
-          "L10": "2/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.236,
-          "fair_over": 323,
-          "fair_under": -323,
-          "L10": "2/10"
+          "p_over": 0.115,
+          "fair_over": 769,
+          "fair_under": -769,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -5822,55 +5978,57 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
             "side": "over",
-            "line": 2.5,
-            "odds": -164.0,
-            "model_raw": 0.5559,
-            "model_prob": 0.5689,
-            "market_prob": 0.5819,
-            "fair_odds": -132,
-            "edge": -0.013,
-            "edge_at_price": -0.0523,
-            "ev": -0.0842,
+            "line": 1.5,
+            "odds": 130.0,
+            "model_raw": 0.5254,
+            "model_prob": 0.4662,
+            "market_prob": 0.4069,
+            "fair_odds": 115,
+            "edge": 0.0592,
+            "edge_at_price": 0.0314,
+            "ev": 0.0722,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 55.6% before shrink, this book's no-vig 58.2%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model over 1.5: 52.5% before shrink, this book's no-vig 40.7%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -126 or better.",
+            "next_step": "Monitor only; if anything, wait for +119 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 2.5 ast",
+            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
             "side": "under",
-            "line": 2.5,
-            "odds": 124.0,
-            "model_raw": 0.4441,
-            "model_prob": 0.4311,
-            "market_prob": 0.4181,
-            "fair_odds": 132,
-            "edge": 0.013,
-            "edge_at_price": -0.0153,
-            "ev": -0.0343,
+            "line": 1.5,
+            "odds": -173.0,
+            "model_raw": 0.4746,
+            "model_prob": 0.5338,
+            "market_prob": 0.5931,
+            "fair_odds": -115,
+            "edge": -0.0592,
+            "edge_at_price": -0.0999,
+            "ev": -0.1576,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 44.4% before shrink, this book's no-vig 41.8%.",
-              "Projection 3.25 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 17/25."
+              "Model under 1.5: 47.5% before shrink, this book's no-vig 59.3%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
             ],
             "flags": [
               "current season only 10 games; added 15 from prior season (role/team may differ)"
@@ -5879,7 +6037,7 @@
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +137 or better.",
+            "next_step": "Pass. Only interesting at -110 or better.",
             "proven": false
           }
         }
@@ -6212,252 +6370,94 @@
       }
     },
     {
-      "player": "Jaime Jaquez Jr.",
-      "player_id": "4432848",
-      "team": "Milwaukee Bucks",
-      "stat": "threes",
-      "stat_label": "Threes",
-      "line": 1.5,
-      "projection": 1.66,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "6/10",
-        "L20": "13/20",
-        "all": "15/25"
-      },
-      "recent": [
-        0.0,
-        2.0,
-        4.0,
-        2.0,
-        1.0,
-        3.0,
-        0.0,
-        2.0,
-        2.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.789,
-          "fair_over": -374,
-          "fair_under": 374,
-          "L10": "8/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.714,
-          "fair_over": -250,
-          "fair_under": 250,
-          "L10": "6/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.525,
-          "fair_over": -111,
-          "fair_under": 111,
-          "L10": "6/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.336,
-          "fair_over": 198,
-          "fair_under": -198,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.238,
-          "fair_over": 319,
-          "fair_under": -319,
-          "L10": "2/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.13,
-          "fair_over": 669,
-          "fair_under": -669,
-          "L10": "1/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.115,
-          "fair_over": 769,
-          "fair_under": -769,
-          "L10": "1/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Over 1.5 threes",
-            "side": "over",
-            "line": 1.5,
-            "odds": 130.0,
-            "model_raw": 0.5254,
-            "model_prob": 0.4662,
-            "market_prob": 0.4069,
-            "fair_odds": 115,
-            "edge": 0.0592,
-            "edge_at_price": 0.0314,
-            "ev": 0.0722,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 1.5: 52.5% before shrink, this book's no-vig 40.7%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +119 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jaime Jaquez Jr. Under 1.5 threes",
-            "side": "under",
-            "line": 1.5,
-            "odds": -173.0,
-            "model_raw": 0.4746,
-            "model_prob": 0.5338,
-            "market_prob": 0.5931,
-            "fair_odds": -115,
-            "edge": -0.0592,
-            "edge_at_price": -0.0999,
-            "ev": -0.1576,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 1.5: 47.5% before shrink, this book's no-vig 59.3%.",
-              "Projection 1.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -110 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
       "player": "Jalen Brunson",
       "player_id": "3934672",
       "team": "New York Knicks",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 25.5,
-      "projection": 28.08,
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 6.5,
+      "projection": 5.58,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "11/20",
-        "all": "14/24"
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "6/20",
+        "all": "8/24"
       },
       "recent": [
-        31.0,
-        33.0,
-        19.0,
-        24.0,
-        38.0,
-        23.0,
-        28.0,
-        19.0,
-        21.0,
-        45.0
+        9.0,
+        4.0,
+        6.0,
+        6.0,
+        7.0,
+        7.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
       ],
       "ladder": [
         {
-          "line": 21.5,
-          "p_over": 0.746,
-          "fair_over": -293,
-          "fair_under": 293,
-          "L10": "7/10"
-        },
-        {
-          "line": 22.5,
-          "p_over": 0.722,
-          "fair_over": -259,
-          "fair_under": 259,
-          "L10": "7/10"
-        },
-        {
-          "line": 23.5,
-          "p_over": 0.666,
-          "fair_over": -200,
-          "fair_under": 200,
-          "L10": "6/10"
-        },
-        {
-          "line": 24.5,
-          "p_over": 0.609,
-          "fair_over": -156,
-          "fair_under": 156,
+          "line": 4.5,
+          "p_over": 0.601,
+          "fair_over": -150,
+          "fair_under": 150,
           "L10": "5/10"
         },
         {
-          "line": 25.5,
-          "p_over": 0.58,
-          "fair_over": -138,
-          "fair_under": 138,
+          "line": 5.0,
+          "p_over": 0.555,
+          "fair_over": -125,
+          "fair_under": 125,
           "L10": "5/10"
         },
         {
-          "line": 26.5,
-          "p_over": 0.549,
-          "fair_over": -122,
-          "fair_under": 122,
+          "line": 5.5,
+          "p_over": 0.49,
+          "fair_over": 104,
+          "fair_under": -104,
           "L10": "5/10"
         },
         {
-          "line": 27.5,
-          "p_over": 0.518,
-          "fair_over": -108,
-          "fair_under": 108,
-          "L10": "5/10"
+          "line": 6.0,
+          "p_over": 0.392,
+          "fair_over": 155,
+          "fair_under": -155,
+          "L10": "3/10"
         },
         {
-          "line": 28.5,
-          "p_over": 0.457,
-          "fair_over": 119,
-          "fair_under": -119,
-          "L10": "4/10"
+          "line": 6.5,
+          "p_over": 0.329,
+          "fair_over": 204,
+          "fair_under": -204,
+          "L10": "3/10"
         },
         {
-          "line": 29.5,
-          "p_over": 0.426,
-          "fair_over": 135,
-          "fair_under": -135,
-          "L10": "4/10"
+          "line": 7.0,
+          "p_over": 0.219,
+          "fair_over": 356,
+          "fair_under": -356,
+          "L10": "1/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.189,
+          "fair_over": 430,
+          "fair_under": -430,
+          "L10": "1/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.139,
+          "fair_over": 622,
+          "fair_under": -622,
+          "L10": "1/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.131,
+          "fair_over": 660,
+          "fair_under": -660,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -6469,306 +6469,400 @@
         "over": {
           "fanduel": {
             "market": "Prop",
-            "selection": "Jalen Brunson Over 25.5 pts",
+            "selection": "Jalen Brunson Over 6.5 ast",
             "side": "over",
-            "line": 25.5,
-            "odds": -114.0,
-            "model_raw": 0.58,
-            "model_prob": 0.54,
-            "market_prob": 0.5,
-            "fair_odds": -117,
-            "edge": 0.04,
-            "edge_at_price": 0.0073,
-            "ev": 0.0137,
+            "line": 6.5,
+            "odds": -104.0,
+            "model_raw": 0.3289,
+            "model_prob": 0.4024,
+            "market_prob": 0.4759,
+            "fair_odds": 149,
+            "edge": -0.0735,
+            "edge_at_price": -0.1074,
+            "ev": -0.2107,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 25.5: 58.0% before shrink, this book's no-vig 50.0%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model over 6.5: 32.9% before shrink, this book's no-vig 47.6%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -112 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +153 or better.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Jalen Brunson Over 25.5 pts",
+            "selection": "Jalen Brunson Over 6.5 ast",
             "side": "over",
-            "line": 25.5,
-            "odds": -106.0,
-            "model_raw": 0.58,
-            "model_prob": 0.5318,
-            "market_prob": 0.4836,
-            "fair_odds": -114,
-            "edge": 0.0482,
-            "edge_at_price": 0.0172,
-            "ev": 0.0335,
+            "line": 6.5,
+            "odds": -112.0,
+            "model_raw": 0.3289,
+            "model_prob": 0.4129,
+            "market_prob": 0.4969,
+            "fair_odds": 142,
+            "edge": -0.084,
+            "edge_at_price": -0.1154,
+            "ev": -0.2184,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 25.5: 58.0% before shrink, this book's no-vig 48.4%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model over 6.5: 32.9% before shrink, this book's no-vig 49.7%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
               "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low"
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -109 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +147 or better.",
             "proven": false
           },
           "draftkings": {
             "market": "Prop",
-            "selection": "Jalen Brunson Over 25.5 pts",
+            "selection": "Jalen Brunson Over 6.5 ast",
             "side": "over",
-            "line": 25.5,
-            "odds": -122.0,
-            "model_raw": 0.58,
-            "model_prob": 0.5494,
-            "market_prob": 0.5188,
-            "fair_odds": -122,
-            "edge": 0.0306,
-            "edge_at_price": -0.0002,
-            "ev": -0.0003,
+            "line": 6.5,
+            "odds": 101.0,
+            "model_raw": 0.3289,
+            "model_prob": 0.3973,
+            "market_prob": 0.4657,
+            "fair_odds": 152,
+            "edge": -0.0684,
+            "edge_at_price": -0.1002,
+            "ev": -0.2014,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 25.5: 58.0% before shrink, this book's no-vig 51.9%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -117 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jalen Brunson Over 25.5 pts",
-            "side": "over",
-            "line": 25.5,
-            "odds": -105.0,
-            "model_raw": 0.58,
-            "model_prob": 0.5298,
-            "market_prob": 0.4797,
-            "fair_odds": -113,
-            "edge": 0.0502,
-            "edge_at_price": 0.0177,
-            "ev": 0.0345,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 25.5: 58.0% before shrink, this book's no-vig 48.0%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model over 6.5: 32.9% before shrink, this book's no-vig 46.6%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
               "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low"
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +157 or better.",
             "proven": false
           },
-          "bovada": {
+          "betrivers": {
             "market": "Prop",
-            "selection": "Jalen Brunson Over 25.5 pts",
+            "selection": "Jalen Brunson Over 6.5 ast",
             "side": "over",
-            "line": 25.5,
+            "line": 6.5,
             "odds": -120.0,
-            "model_raw": 0.58,
-            "model_prob": 0.5451,
-            "market_prob": 0.5101,
-            "fair_odds": -120,
-            "edge": 0.0349,
-            "edge_at_price": -0.0004,
-            "ev": -0.0007,
+            "model_raw": 0.3289,
+            "model_prob": 0.4179,
+            "market_prob": 0.5069,
+            "fair_odds": 139,
+            "edge": -0.089,
+            "edge_at_price": -0.1275,
+            "ev": -0.2338,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 25.5: 58.0% before shrink, this book's no-vig 51.0%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model over 6.5: 32.9% before shrink, this book's no-vig 50.7%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -115 or better.",
+            "next_step": "Pass. Only interesting at +144 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": -120.0,
+            "model_raw": 0.3289,
+            "model_prob": 0.4195,
+            "market_prob": 0.5101,
+            "fair_odds": 138,
+            "edge": -0.0906,
+            "edge_at_price": -0.1259,
+            "ev": -0.2309,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 32.9% before shrink, this book's no-vig 51.0%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +143 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": 100.0,
+            "model_raw": 0.3289,
+            "model_prob": 0.3991,
+            "market_prob": 0.4694,
+            "fair_odds": 151,
+            "edge": -0.0702,
+            "edge_at_price": -0.1009,
+            "ev": -0.2017,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 32.9% before shrink, this book's no-vig 46.9%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 47%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +156 or better.",
             "proven": false
           }
         },
         "under": {
           "fanduel": {
             "market": "Prop",
-            "selection": "Jalen Brunson Under 25.5 pts",
+            "selection": "Jalen Brunson Under 6.5 ast",
             "side": "under",
-            "line": 25.5,
-            "odds": -114.0,
-            "model_raw": 0.42,
-            "model_prob": 0.46,
-            "market_prob": 0.5,
-            "fair_odds": 117,
-            "edge": -0.04,
-            "edge_at_price": -0.0727,
-            "ev": -0.1365,
+            "line": 6.5,
+            "odds": -128.0,
+            "model_raw": 0.6711,
+            "model_prob": 0.5976,
+            "market_prob": 0.5241,
+            "fair_odds": -149,
+            "edge": 0.0735,
+            "edge_at_price": 0.0362,
+            "ev": 0.0645,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 25.5: 42.0% before shrink, this book's no-vig 50.0%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model under 6.5: 67.1% before shrink, this book's no-vig 52.4%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +122 or better.",
+            "next_step": "Monitor only; if anything, wait for -141 or better and re-check injuries near start.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Jalen Brunson Under 25.5 pts",
+            "selection": "Jalen Brunson Under 6.5 ast",
             "side": "under",
-            "line": 25.5,
-            "odds": -122.0,
-            "model_raw": 0.42,
-            "model_prob": 0.4682,
-            "market_prob": 0.5164,
-            "fair_odds": 114,
-            "edge": -0.0482,
-            "edge_at_price": -0.0813,
-            "ev": -0.148,
+            "line": 6.5,
+            "odds": -115.0,
+            "model_raw": 0.6711,
+            "model_prob": 0.5871,
+            "market_prob": 0.5031,
+            "fair_odds": -142,
+            "edge": 0.084,
+            "edge_at_price": 0.0522,
+            "ev": 0.0976,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 25.5: 42.0% before shrink, this book's no-vig 51.6%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model under 6.5: 67.1% before shrink, this book's no-vig 50.3%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +118 or better.",
+            "next_step": "Monitor only; if anything, wait for -136 or better and re-check injuries near start.",
             "proven": false
           },
           "draftkings": {
             "market": "Prop",
-            "selection": "Jalen Brunson Under 25.5 pts",
+            "selection": "Jalen Brunson Under 6.5 ast",
             "side": "under",
-            "line": 25.5,
-            "odds": -104.0,
-            "model_raw": 0.42,
-            "model_prob": 0.4506,
-            "market_prob": 0.4812,
-            "fair_odds": 122,
-            "edge": -0.0306,
-            "edge_at_price": -0.0592,
-            "ev": -0.1161,
+            "line": 6.5,
+            "odds": -133.0,
+            "model_raw": 0.6711,
+            "model_prob": 0.6027,
+            "market_prob": 0.5343,
+            "fair_odds": -152,
+            "edge": 0.0684,
+            "edge_at_price": 0.0319,
+            "ev": 0.0559,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 25.5: 42.0% before shrink, this book's no-vig 48.1%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model under 6.5: 67.1% before shrink, this book's no-vig 53.4%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +126 or better.",
+            "next_step": "Monitor only; if anything, wait for -144 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": -113.0,
+            "model_raw": 0.6711,
+            "model_prob": 0.5821,
+            "market_prob": 0.4931,
+            "fair_odds": -139,
+            "edge": 0.089,
+            "edge_at_price": 0.0516,
+            "ev": 0.0972,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 67.1% before shrink, this book's no-vig 49.3%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -133 or better and re-check injuries near start.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Jalen Brunson Under 25.5 pts",
+            "selection": "Jalen Brunson Under 6.5 ast",
             "side": "under",
-            "line": 25.5,
-            "odds": -125.0,
-            "model_raw": 0.42,
-            "model_prob": 0.4702,
-            "market_prob": 0.5203,
-            "fair_odds": 113,
-            "edge": -0.0502,
-            "edge_at_price": -0.0854,
-            "ev": -0.1537,
+            "line": 6.5,
+            "odds": -110.0,
+            "model_raw": 0.6711,
+            "model_prob": 0.5805,
+            "market_prob": 0.4899,
+            "fair_odds": -138,
+            "edge": 0.0906,
+            "edge_at_price": 0.0567,
+            "ev": 0.1082,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 25.5: 42.0% before shrink, this book's no-vig 52.0%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model under 6.5: 67.1% before shrink, this book's no-vig 49.0%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +117 or better.",
+            "next_step": "Monitor only; if anything, wait for -132 or better and re-check injuries near start.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Jalen Brunson Under 25.5 pts",
+            "selection": "Jalen Brunson Under 6.5 ast",
             "side": "under",
-            "line": 25.5,
-            "odds": -110.0,
-            "model_raw": 0.42,
-            "model_prob": 0.4549,
-            "market_prob": 0.4899,
-            "fair_odds": 120,
-            "edge": -0.0349,
-            "edge_at_price": -0.0689,
-            "ev": -0.1315,
+            "line": 6.5,
+            "odds": -130.0,
+            "model_raw": 0.6711,
+            "model_prob": 0.6009,
+            "market_prob": 0.5306,
+            "fair_odds": -151,
+            "edge": 0.0702,
+            "edge_at_price": 0.0356,
+            "ev": 0.0631,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 25.5: 42.0% before shrink, this book's no-vig 49.0%.",
-              "Projection 28.08 (Normal(sd 8.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/24."
+              "Model under 6.5: 67.1% before shrink, this book's no-vig 53.1%.",
+              "Projection 5.58 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 8/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +124 or better.",
+            "next_step": "Monitor only; if anything, wait for -143 or better and re-check injuries near start.",
             "proven": false
           }
         }

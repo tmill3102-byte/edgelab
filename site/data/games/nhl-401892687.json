@@ -172,33 +172,21 @@
     ],
     "away": [
       {
-        "name": "John Gibson",
-        "status": "Day-To-Day",
-        "pos": "G",
-        "key": false
-      },
-      {
         "name": "Albert Johansson",
         "status": "Injured Reserve",
         "pos": "D",
         "key": false
       },
       {
-        "name": "Marco Kasper",
-        "status": "Injured Reserve",
-        "pos": "C",
-        "key": false
-      },
-      {
-        "name": "Mason Appleton",
-        "status": "Injured Reserve",
-        "pos": "C",
-        "key": false
-      },
-      {
         "name": "Dylan Larkin",
         "status": "Injured Reserve",
         "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Simon Edvinsson",
+        "status": "Injured Reserve",
+        "pos": "D",
         "key": false
       }
     ]
@@ -1663,6 +1651,159 @@
       "player": "Alex DeBrincat",
       "player_id": "4063433",
       "team": "Detroit Red Wings",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 3.5,
+      "projection": 3.63,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "10/18",
+        "all": "10/18"
+      },
+      "recent": [
+        2.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.891,
+          "fair_over": -816,
+          "fair_under": 816,
+          "L10": "10/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.868,
+          "fair_over": -658,
+          "fair_under": 658,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.719,
+          "fair_over": -256,
+          "fair_under": 256,
+          "L10": "8/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.649,
+          "fair_over": -185,
+          "fair_under": 185,
+          "L10": "6/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.523,
+          "fair_over": -110,
+          "fair_under": 110,
+          "L10": "6/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.371,
+          "fair_over": 169,
+          "fair_under": -169,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.282,
+          "fair_over": 255,
+          "fair_under": -255,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.155,
+          "fair_over": 543,
+          "fair_under": -543,
+          "L10": "0/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.133,
+          "fair_over": 653,
+          "fair_under": -653,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex DeBrincat Over 3.5 sog",
+            "side": "over",
+            "line": 3.5,
+            "odds": 125.0,
+            "model_raw": 0.523,
+            "model_prob": 0.4793,
+            "market_prob": 0.4138,
+            "fair_odds": 109,
+            "edge": 0.0655,
+            "edge_at_price": 0.0349,
+            "ev": 0.0785,
+            "tier": "High",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 3.5: 52.3% before shrink, this book's no-vig 41.4%.",
+              "Projection 3.63 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/18, all 10/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at +113 or better (current +125); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex DeBrincat Under 3.5 sog",
+            "side": "under",
+            "line": 3.5,
+            "odds": -170.0,
+            "model_raw": 0.477,
+            "model_prob": 0.5207,
+            "market_prob": 0.5862,
+            "fair_odds": -109,
+            "edge": -0.0655,
+            "edge_at_price": -0.1089,
+            "ev": -0.173,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 3.5: 47.7% before shrink, this book's no-vig 58.6%.",
+              "Projection 3.63 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/18, all 10/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex DeBrincat",
+      "player_id": "4063433",
+      "team": "Detroit Red Wings",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
@@ -1924,94 +2065,87 @@
       }
     },
     {
-      "player": "Alex DeBrincat",
-      "player_id": "4063433",
+      "player": "Andrew Copp",
+      "player_id": "3042114",
       "team": "Detroit Red Wings",
       "stat": "sog",
       "stat_label": "Shots",
-      "line": 3.5,
-      "projection": 3.63,
+      "line": 1.5,
+      "projection": 1.4,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "6/10",
-        "L20": "10/18",
-        "all": "10/18"
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "8/18",
+        "all": "8/18"
       },
       "recent": [
+        1.0,
         2.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
         5.0,
-        4.0,
-        4.0,
-        3.0,
-        4.0,
-        2.0,
-        3.0,
-        4.0,
-        5.0
+        1.0,
+        0.0
       ],
       "ladder": [
         {
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.753,
+          "fair_over": -304,
+          "fair_under": 304,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.581,
+          "fair_over": -139,
+          "fair_under": 139,
+          "L10": "2/10"
+        },
+        {
           "line": 1.5,
-          "p_over": 0.891,
-          "fair_over": -816,
-          "fair_under": 816,
-          "L10": "10/10"
+          "p_over": 0.353,
+          "fair_over": 183,
+          "fair_under": -183,
+          "L10": "2/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.868,
-          "fair_over": -658,
-          "fair_under": 658,
-          "L10": "8/10"
+          "p_over": 0.207,
+          "fair_over": 383,
+          "fair_under": -383,
+          "L10": "1/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.719,
-          "fair_over": -256,
-          "fair_under": 256,
-          "L10": "8/10"
+          "p_over": 0.167,
+          "fair_over": 499,
+          "fair_under": -499,
+          "L10": "1/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.649,
-          "fair_over": -185,
-          "fair_under": 185,
-          "L10": "6/10"
+          "p_over": 0.098,
+          "fair_over": 922,
+          "fair_under": -922,
+          "L10": "1/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.523,
-          "fair_over": -110,
-          "fair_under": 110,
-          "L10": "6/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.371,
-          "fair_over": 169,
-          "fair_under": -169,
-          "L10": "2/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.282,
-          "fair_over": 255,
-          "fair_under": -255,
-          "L10": "2/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.155,
-          "fair_over": 543,
-          "fair_under": -543,
-          "L10": "0/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.133,
-          "fair_over": 653,
-          "fair_under": -653,
-          "L10": "0/10"
+          "p_over": 0.093,
+          "fair_over": 970,
+          "fair_under": -970,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2021,56 +2155,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Alex DeBrincat Over 3.5 sog",
+            "selection": "Andrew Copp Over 1.5 sog",
             "side": "over",
-            "line": 3.5,
-            "odds": 125.0,
-            "model_raw": 0.523,
-            "model_prob": 0.4793,
-            "market_prob": 0.4138,
-            "fair_odds": 109,
-            "edge": 0.0655,
-            "edge_at_price": 0.0349,
-            "ev": 0.0785,
-            "tier": "High",
+            "line": 1.5,
+            "odds": 105.0,
+            "model_raw": 0.3533,
+            "model_prob": 0.3927,
+            "market_prob": 0.4518,
+            "fair_odds": 155,
+            "edge": -0.0591,
+            "edge_at_price": -0.0951,
+            "ev": -0.1949,
+            "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 52.3% before shrink, this book's no-vig 41.4%.",
-              "Projection 3.63 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/18, all 10/18."
+              "Model over 1.5: 35.3% before shrink, this book's no-vig 45.2%.",
+              "Projection 1.4 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 8/18, all 8/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at +113 or better (current +125); re-check injuries/line 60 min before start.",
+            "next_step": "Pass. Only interesting at +160 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Alex DeBrincat Under 3.5 sog",
+            "selection": "Andrew Copp Under 1.5 sog",
             "side": "under",
-            "line": 3.5,
-            "odds": -170.0,
-            "model_raw": 0.477,
-            "model_prob": 0.5207,
-            "market_prob": 0.5862,
-            "fair_odds": -109,
-            "edge": -0.0655,
-            "edge_at_price": -0.1089,
-            "ev": -0.173,
-            "tier": "Low",
+            "line": 1.5,
+            "odds": -145.0,
+            "model_raw": 0.6467,
+            "model_prob": 0.6073,
+            "market_prob": 0.5482,
+            "fair_odds": -155,
+            "edge": 0.0591,
+            "edge_at_price": 0.0155,
+            "ev": 0.0261,
+            "tier": "Medium",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 47.7% before shrink, this book's no-vig 58.6%.",
-              "Projection 3.63 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/18, all 10/18."
+              "Model under 1.5: 64.7% before shrink, this book's no-vig 54.8%.",
+              "Projection 1.4 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 8/18, all 8/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -104 or better.",
+            "next_step": "Playable at -147 or better (current -145); re-check injuries/line 60 min before start.",
             "proven": false
           }
         }
@@ -2341,87 +2475,87 @@
       }
     },
     {
-      "player": "Andrew Copp",
-      "player_id": "3042114",
-      "team": "Detroit Red Wings",
+      "player": "Colton Parayko",
+      "player_id": "3069341",
+      "team": "St. Louis Blues",
       "stat": "sog",
       "stat_label": "Shots",
       "line": 1.5,
-      "projection": 1.4,
+      "projection": 1.57,
       "hit_rates": {
-        "L5": "1/5",
-        "L10": "2/10",
-        "L20": "8/18",
-        "all": "8/18"
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "7/15",
+        "all": "7/15"
       },
       "recent": [
         1.0,
+        3.0,
+        1.0,
         2.0,
         1.0,
-        0.0,
+        2.0,
         1.0,
         1.0,
-        1.0,
-        5.0,
-        1.0,
-        0.0
+        3.0,
+        1.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
+          "p_over": 0.971,
+          "fair_over": -3329,
+          "fair_under": 3329,
+          "L10": "10/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.753,
-          "fair_over": -304,
-          "fair_under": 304,
-          "L10": "8/10"
+          "p_over": 0.836,
+          "fair_over": -510,
+          "fair_under": 510,
+          "L10": "10/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.581,
-          "fair_over": -139,
-          "fair_under": 139,
-          "L10": "2/10"
+          "p_over": 0.742,
+          "fair_over": -287,
+          "fair_under": 287,
+          "L10": "4/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.353,
-          "fair_over": 183,
-          "fair_under": -183,
-          "L10": "2/10"
+          "p_over": 0.449,
+          "fair_over": 123,
+          "fair_under": -123,
+          "L10": "4/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.207,
-          "fair_over": 383,
-          "fair_under": -383,
-          "L10": "1/10"
+          "p_over": 0.288,
+          "fair_over": 247,
+          "fair_under": -247,
+          "L10": "2/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.167,
-          "fair_over": 499,
-          "fair_under": -499,
-          "L10": "1/10"
+          "p_over": 0.224,
+          "fair_over": 347,
+          "fair_under": -347,
+          "L10": "2/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.098,
-          "fair_over": 922,
-          "fair_under": -922,
-          "L10": "1/10"
+          "p_over": 0.091,
+          "fair_over": 993,
+          "fair_under": -993,
+          "L10": "0/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.093,
-          "fair_over": 970,
-          "fair_under": -970,
-          "L10": "1/10"
+          "p_over": 0.078,
+          "fair_over": 1181,
+          "fair_under": -1181,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2431,56 +2565,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Andrew Copp Over 1.5 sog",
+            "selection": "Colton Parayko Over 1.5 sog",
             "side": "over",
             "line": 1.5,
-            "odds": 105.0,
-            "model_raw": 0.3533,
-            "model_prob": 0.3927,
-            "market_prob": 0.4518,
-            "fair_odds": 155,
-            "edge": -0.0591,
-            "edge_at_price": -0.0951,
-            "ev": -0.1949,
+            "odds": 110.0,
+            "model_raw": 0.449,
+            "model_prob": 0.4464,
+            "market_prob": 0.4425,
+            "fair_odds": 124,
+            "edge": 0.0039,
+            "edge_at_price": -0.0298,
+            "ev": -0.0626,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 1.5: 35.3% before shrink, this book's no-vig 45.2%.",
-              "Projection 1.4 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 8/18, all 8/18."
+              "Model over 1.5: 44.9% before shrink, this book's no-vig 44.2%.",
+              "Projection 1.57 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 7/15, all 7/15."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +160 or better.",
+            "next_step": "Pass. Only interesting at +128 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Andrew Copp Under 1.5 sog",
+            "selection": "Colton Parayko Under 1.5 sog",
             "side": "under",
             "line": 1.5,
-            "odds": -145.0,
-            "model_raw": 0.6467,
-            "model_prob": 0.6073,
-            "market_prob": 0.5482,
-            "fair_odds": -155,
-            "edge": 0.0591,
-            "edge_at_price": 0.0155,
-            "ev": 0.0261,
-            "tier": "Medium",
+            "odds": -150.0,
+            "model_raw": 0.551,
+            "model_prob": 0.5536,
+            "market_prob": 0.5575,
+            "fair_odds": -124,
+            "edge": -0.0039,
+            "edge_at_price": -0.0464,
+            "ev": -0.0773,
+            "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 1.5: 64.7% before shrink, this book's no-vig 54.8%.",
-              "Projection 1.4 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 8/18, all 8/18."
+              "Model under 1.5: 55.1% before shrink, this book's no-vig 55.8%.",
+              "Projection 1.57 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 7/15, all 7/15."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Playable at -147 or better (current -145); re-check injuries/line 60 min before start.",
+            "next_step": "Pass. Only interesting at -119 or better.",
             "proven": false
           }
         }
@@ -2751,87 +2885,87 @@
       }
     },
     {
-      "player": "Colton Parayko",
-      "player_id": "3069341",
+      "player": "Connor McMichael",
+      "player_id": "4565246",
       "team": "St. Louis Blues",
       "stat": "sog",
       "stat_label": "Shots",
       "line": 1.5,
-      "projection": 1.57,
+      "projection": 1.43,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "7/15",
-        "all": "7/15"
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "6/17",
+        "all": "6/17"
       },
       "recent": [
-        1.0,
         3.0,
-        1.0,
-        2.0,
-        1.0,
-        2.0,
+        0.0,
+        0.0,
         1.0,
         1.0,
+        5.0,
         3.0,
-        1.0
+        0.0,
+        1.0,
+        0.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.971,
-          "fair_over": -3329,
-          "fair_under": 3329,
-          "L10": "10/10"
+          "p_over": 0.956,
+          "fair_over": -2186,
+          "fair_under": 2186,
+          "L10": "6/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.836,
-          "fair_over": -510,
-          "fair_under": 510,
-          "L10": "10/10"
+          "p_over": 0.698,
+          "fair_over": -232,
+          "fair_under": 232,
+          "L10": "6/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.742,
-          "fair_over": -287,
-          "fair_under": 287,
-          "L10": "4/10"
+          "p_over": 0.569,
+          "fair_over": -132,
+          "fair_under": 132,
+          "L10": "3/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.449,
-          "fair_over": 123,
-          "fair_under": -123,
-          "L10": "4/10"
+          "p_over": 0.388,
+          "fair_over": 158,
+          "fair_under": -158,
+          "L10": "3/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.288,
-          "fair_over": 247,
-          "fair_under": -247,
-          "L10": "2/10"
+          "p_over": 0.266,
+          "fair_over": 276,
+          "fair_under": -276,
+          "L10": "3/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.224,
-          "fair_over": 347,
-          "fair_under": -347,
-          "L10": "2/10"
+          "p_over": 0.229,
+          "fair_over": 336,
+          "fair_under": -336,
+          "L10": "3/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.091,
-          "fair_over": 993,
-          "fair_under": -993,
-          "L10": "0/10"
+          "p_over": 0.112,
+          "fair_over": 794,
+          "fair_under": -794,
+          "L10": "1/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.078,
-          "fair_over": 1181,
-          "fair_under": -1181,
-          "L10": "0/10"
+          "p_over": 0.095,
+          "fair_over": 949,
+          "fair_under": -949,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2841,56 +2975,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Colton Parayko Over 1.5 sog",
+            "selection": "Connor McMichael Over 1.5 sog",
             "side": "over",
             "line": 1.5,
             "odds": 110.0,
-            "model_raw": 0.449,
-            "model_prob": 0.4464,
-            "market_prob": 0.4425,
-            "fair_odds": 124,
-            "edge": 0.0039,
-            "edge_at_price": -0.0298,
-            "ev": -0.0626,
+            "model_raw": 0.3883,
+            "model_prob": 0.4113,
+            "market_prob": 0.4459,
+            "fair_odds": 143,
+            "edge": -0.0345,
+            "edge_at_price": -0.0649,
+            "ev": -0.1362,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 1.5: 44.9% before shrink, this book's no-vig 44.2%.",
-              "Projection 1.57 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 7/15, all 7/15."
+              "Model over 1.5: 38.8% before shrink, this book's no-vig 44.6%.",
+              "Projection 1.43 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 6/17, all 6/17."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +128 or better.",
+            "next_step": "Pass. Only interesting at +148 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Colton Parayko Under 1.5 sog",
+            "selection": "Connor McMichael Under 1.5 sog",
             "side": "under",
             "line": 1.5,
-            "odds": -150.0,
-            "model_raw": 0.551,
-            "model_prob": 0.5536,
-            "market_prob": 0.5575,
-            "fair_odds": -124,
-            "edge": -0.0039,
-            "edge_at_price": -0.0464,
-            "ev": -0.0773,
+            "odds": -145.0,
+            "model_raw": 0.6117,
+            "model_prob": 0.5887,
+            "market_prob": 0.5541,
+            "fair_odds": -143,
+            "edge": 0.0345,
+            "edge_at_price": -0.0032,
+            "ev": -0.0053,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 1.5: 55.1% before shrink, this book's no-vig 55.8%.",
-              "Projection 1.57 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 7/15, all 7/15."
+              "Model under 1.5: 61.2% before shrink, this book's no-vig 55.4%.",
+              "Projection 1.43 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 6/17, all 6/17."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -119 or better.",
+            "next_step": "Pass. Only interesting at -136 or better.",
             "proven": false
           }
         }
@@ -3155,152 +3289,6 @@
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at -172 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Connor McMichael",
-      "player_id": "4565246",
-      "team": "St. Louis Blues",
-      "stat": "sog",
-      "stat_label": "Shots",
-      "line": 1.5,
-      "projection": 1.43,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "3/10",
-        "L20": "6/17",
-        "all": "6/17"
-      },
-      "recent": [
-        3.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        5.0,
-        3.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.956,
-          "fair_over": -2186,
-          "fair_under": 2186,
-          "L10": "6/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.698,
-          "fair_over": -232,
-          "fair_under": 232,
-          "L10": "6/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.569,
-          "fair_over": -132,
-          "fair_under": 132,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.388,
-          "fair_over": 158,
-          "fair_under": -158,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.266,
-          "fair_over": 276,
-          "fair_under": -276,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.229,
-          "fair_over": 336,
-          "fair_under": -336,
-          "L10": "3/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.112,
-          "fair_over": 794,
-          "fair_under": -794,
-          "L10": "1/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.095,
-          "fair_over": 949,
-          "fair_under": -949,
-          "L10": "1/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Connor McMichael Over 1.5 sog",
-            "side": "over",
-            "line": 1.5,
-            "odds": 110.0,
-            "model_raw": 0.3883,
-            "model_prob": 0.4113,
-            "market_prob": 0.4459,
-            "fair_odds": 143,
-            "edge": -0.0345,
-            "edge_at_price": -0.0649,
-            "ev": -0.1362,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 1.5: 38.8% before shrink, this book's no-vig 44.6%.",
-              "Projection 1.43 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 6/17, all 6/17."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +148 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Connor McMichael Under 1.5 sog",
-            "side": "under",
-            "line": 1.5,
-            "odds": -145.0,
-            "model_raw": 0.6117,
-            "model_prob": 0.5887,
-            "market_prob": 0.5541,
-            "fair_odds": -143,
-            "edge": 0.0345,
-            "edge_at_price": -0.0032,
-            "ev": -0.0053,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 1.5: 61.2% before shrink, this book's no-vig 55.4%.",
-              "Projection 1.43 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 6/17, all 6/17."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -136 or better.",
             "proven": false
           }
         }

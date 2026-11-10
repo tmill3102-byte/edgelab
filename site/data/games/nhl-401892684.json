@@ -152,12 +152,6 @@
   "injuries": {
     "home": [
       {
-        "name": "Jake Evans",
-        "status": "Day-To-Day",
-        "pos": "C",
-        "key": false
-      },
-      {
         "name": "Ivan Demidov",
         "status": "Injured Reserve",
         "pos": "RW",
@@ -180,25 +174,19 @@
         "status": "Injured Reserve",
         "pos": "D",
         "key": false
+      },
+      {
+        "name": "Lucas Condotta",
+        "status": "Injured Reserve",
+        "pos": "LW",
+        "key": false
       }
     ],
     "away": [
       {
-        "name": "Michael McCarron",
-        "status": "Day-To-Day",
-        "pos": "C",
-        "key": false
-      },
-      {
         "name": "Filip Gustavsson",
         "status": "Injured Reserve",
         "pos": "G",
-        "key": false
-      },
-      {
-        "name": "Jared Spurgeon",
-        "status": "Injured Reserve",
-        "pos": "D",
         "key": false
       },
       {
@@ -1669,6 +1657,152 @@
       "player": "Blake Coleman",
       "player_id": "2563026",
       "team": "Minnesota Wild",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 1.5,
+      "projection": 2.08,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "5/10",
+        "L20": "10/19",
+        "all": "10/19"
+      },
+      "recent": [
+        1.0,
+        2.0,
+        1.0,
+        1.0,
+        1.0,
+        5.0,
+        3.0,
+        5.0,
+        2.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.861,
+          "fair_over": -617,
+          "fair_under": 617,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.803,
+          "fair_over": -407,
+          "fair_under": 407,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.575,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.448,
+          "fair_over": 123,
+          "fair_under": -123,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.341,
+          "fair_over": 193,
+          "fair_under": -193,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.222,
+          "fair_over": 351,
+          "fair_under": -351,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.19,
+          "fair_over": 426,
+          "fair_under": -426,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Blake Coleman Over 1.5 sog",
+            "side": "over",
+            "line": 1.5,
+            "odds": -135.0,
+            "model_raw": 0.5751,
+            "model_prob": 0.5589,
+            "market_prob": 0.5347,
+            "fair_odds": -127,
+            "edge": 0.0243,
+            "edge_at_price": -0.0155,
+            "ev": -0.0271,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 57.5% before shrink, this book's no-vig 53.5%.",
+              "Projection 2.08 (Poisson).",
+              "Hit rate over L5 1/5, L10 5/10, L20 10/19, all 10/19."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -121 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Blake Coleman Under 1.5 sog",
+            "side": "under",
+            "line": 1.5,
+            "odds": 100.0,
+            "model_raw": 0.4249,
+            "model_prob": 0.4411,
+            "market_prob": 0.4653,
+            "fair_odds": 127,
+            "edge": -0.0243,
+            "edge_at_price": -0.0589,
+            "ev": -0.1178,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 42.5% before shrink, this book's no-vig 46.5%.",
+              "Projection 2.08 (Poisson).",
+              "Hit rate over L5 1/5, L10 5/10, L20 10/19, all 10/19."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +131 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Blake Coleman",
+      "player_id": "2563026",
+      "team": "Minnesota Wild",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
@@ -1930,87 +2064,94 @@
       }
     },
     {
-      "player": "Blake Coleman",
-      "player_id": "2563026",
-      "team": "Minnesota Wild",
+      "player": "Cole Caufield",
+      "player_id": "4565236",
+      "team": "Montreal Canadiens",
       "stat": "sog",
       "stat_label": "Shots",
-      "line": 1.5,
-      "projection": 2.08,
+      "line": 3.5,
+      "projection": 3.32,
       "hit_rates": {
-        "L5": "1/5",
-        "L10": "5/10",
-        "L20": "10/19",
-        "all": "10/19"
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "7/17",
+        "all": "7/17"
       },
       "recent": [
-        1.0,
-        2.0,
-        1.0,
-        1.0,
-        1.0,
-        5.0,
         3.0,
-        5.0,
+        6.0,
+        4.0,
         2.0,
-        0.0
+        3.0,
+        3.0,
+        0.0,
+        4.0,
+        3.0,
+        5.0
       ],
       "ladder": [
         {
-          "line": 0.0,
-          "p_over": 0.968,
-          "fair_over": -3043,
-          "fair_under": 3043,
-          "L10": "9/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.861,
-          "fair_over": -617,
-          "fair_under": 617,
-          "L10": "9/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.803,
-          "fair_over": -407,
-          "fair_under": 407,
-          "L10": "5/10"
-        },
-        {
           "line": 1.5,
-          "p_over": 0.575,
-          "fair_over": -135,
-          "fair_under": 135,
-          "L10": "5/10"
+          "p_over": 0.84,
+          "fair_over": -526,
+          "fair_under": 526,
+          "L10": "9/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.448,
-          "fair_over": 123,
-          "fair_under": -123,
-          "L10": "3/10"
+          "p_over": 0.81,
+          "fair_over": -426,
+          "fair_under": 426,
+          "L10": "8/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.341,
-          "fair_over": 193,
-          "fair_under": -193,
-          "L10": "3/10"
+          "p_over": 0.682,
+          "fair_over": -214,
+          "fair_under": 214,
+          "L10": "8/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.222,
-          "fair_over": 351,
-          "fair_under": -351,
-          "L10": "2/10"
+          "p_over": 0.573,
+          "fair_over": -134,
+          "fair_under": 134,
+          "L10": "4/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.19,
-          "fair_over": 426,
-          "fair_under": -426,
+          "p_over": 0.422,
+          "fair_over": 137,
+          "fair_under": -137,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.297,
+          "fair_over": 237,
+          "fair_under": -237,
           "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.244,
+          "fair_over": 309,
+          "fair_under": -309,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.152,
+          "fair_over": 557,
+          "fair_under": -557,
+          "L10": "1/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.136,
+          "fair_over": 635,
+          "fair_under": -635,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2020,56 +2161,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Blake Coleman Over 1.5 sog",
+            "selection": "Cole Caufield Over 3.5 sog",
             "side": "over",
-            "line": 1.5,
-            "odds": -135.0,
-            "model_raw": 0.5751,
-            "model_prob": 0.5589,
-            "market_prob": 0.5347,
-            "fair_odds": -127,
-            "edge": 0.0243,
-            "edge_at_price": -0.0155,
-            "ev": -0.0271,
+            "line": 3.5,
+            "odds": 115.0,
+            "model_raw": 0.4217,
+            "model_prob": 0.4264,
+            "market_prob": 0.4335,
+            "fair_odds": 135,
+            "edge": -0.0071,
+            "edge_at_price": -0.0387,
+            "ev": -0.0832,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 1.5: 57.5% before shrink, this book's no-vig 53.5%.",
-              "Projection 2.08 (Poisson).",
-              "Hit rate over L5 1/5, L10 5/10, L20 10/19, all 10/19."
+              "Model over 3.5: 42.2% before shrink, this book's no-vig 43.3%.",
+              "Projection 3.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 7/17, all 7/17."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -121 or better.",
+            "next_step": "Pass. Only interesting at +139 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Blake Coleman Under 1.5 sog",
+            "selection": "Cole Caufield Under 3.5 sog",
             "side": "under",
-            "line": 1.5,
-            "odds": 100.0,
-            "model_raw": 0.4249,
-            "model_prob": 0.4411,
-            "market_prob": 0.4653,
-            "fair_odds": 127,
-            "edge": -0.0243,
-            "edge_at_price": -0.0589,
-            "ev": -0.1178,
+            "line": 3.5,
+            "odds": -155.0,
+            "model_raw": 0.5783,
+            "model_prob": 0.5736,
+            "market_prob": 0.5665,
+            "fair_odds": -135,
+            "edge": 0.0071,
+            "edge_at_price": -0.0343,
+            "ev": -0.0564,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 1.5: 42.5% before shrink, this book's no-vig 46.5%.",
-              "Projection 2.08 (Poisson).",
-              "Hit rate over L5 1/5, L10 5/10, L20 10/19, all 10/19."
+              "Model under 3.5: 57.8% before shrink, this book's no-vig 56.7%.",
+              "Projection 3.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 7/17, all 7/17."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +131 or better.",
+            "next_step": "Pass. Only interesting at -128 or better.",
             "proven": false
           }
         }
@@ -2340,94 +2481,94 @@
       }
     },
     {
-      "player": "Cole Caufield",
-      "player_id": "4565236",
-      "team": "Montreal Canadiens",
+      "player": "Joel Eriksson Ek",
+      "player_id": "3904091",
+      "team": "Minnesota Wild",
       "stat": "sog",
       "stat_label": "Shots",
-      "line": 3.5,
-      "projection": 3.32,
+      "line": 2.5,
+      "projection": 3.53,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "7/17",
-        "all": "7/17"
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "13/19",
+        "all": "13/19"
       },
       "recent": [
-        3.0,
-        6.0,
-        4.0,
         2.0,
-        3.0,
-        3.0,
-        0.0,
+        2.0,
         4.0,
         3.0,
-        5.0
+        3.0,
+        4.0,
+        5.0,
+        2.0,
+        4.0,
+        8.0
       ],
       "ladder": [
         {
+          "line": 0.5,
+          "p_over": 0.952,
+          "fair_over": -1970,
+          "fair_under": 1970,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.949,
+          "fair_over": -1879,
+          "fair_under": 1879,
+          "L10": "10/10"
+        },
+        {
           "line": 1.5,
-          "p_over": 0.84,
-          "fair_over": -526,
-          "fair_under": 526,
-          "L10": "9/10"
+          "p_over": 0.884,
+          "fair_over": -764,
+          "fair_under": 764,
+          "L10": "10/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.81,
-          "fair_over": -426,
-          "fair_under": 426,
-          "L10": "8/10"
+          "p_over": 0.855,
+          "fair_over": -590,
+          "fair_under": 590,
+          "L10": "7/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.682,
-          "fair_over": -214,
-          "fair_under": 214,
-          "L10": "8/10"
+          "p_over": 0.678,
+          "fair_over": -210,
+          "fair_under": 210,
+          "L10": "7/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.573,
-          "fair_over": -134,
-          "fair_under": 134,
-          "L10": "4/10"
+          "p_over": 0.598,
+          "fair_over": -149,
+          "fair_under": 149,
+          "L10": "5/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.422,
-          "fair_over": 137,
-          "fair_under": -137,
-          "L10": "4/10"
+          "p_over": 0.48,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "5/10"
         },
         {
           "line": 4.0,
-          "p_over": 0.297,
-          "fair_over": 237,
-          "fair_under": -237,
+          "p_over": 0.341,
+          "fair_over": 194,
+          "fair_under": -194,
           "L10": "2/10"
         },
         {
           "line": 4.5,
-          "p_over": 0.244,
-          "fair_over": 309,
-          "fair_under": -309,
+          "p_over": 0.269,
+          "fair_over": 272,
+          "fair_under": -272,
           "L10": "2/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.152,
-          "fair_over": 557,
-          "fair_under": -557,
-          "L10": "1/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.136,
-          "fair_over": 635,
-          "fair_under": -635,
-          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2437,56 +2578,64 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Cole Caufield Over 3.5 sog",
+            "selection": "Joel Eriksson Ek Over 2.5 sog",
             "side": "over",
-            "line": 3.5,
-            "odds": 115.0,
-            "model_raw": 0.4217,
-            "model_prob": 0.4264,
-            "market_prob": 0.4335,
-            "fair_odds": 135,
-            "edge": -0.0071,
-            "edge_at_price": -0.0387,
-            "ev": -0.0832,
+            "line": 2.5,
+            "odds": -130.0,
+            "model_raw": 0.6778,
+            "model_prob": 0.6165,
+            "market_prob": 0.5246,
+            "fair_odds": -161,
+            "edge": 0.0919,
+            "edge_at_price": 0.0513,
+            "ev": 0.0908,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 42.2% before shrink, this book's no-vig 43.3%.",
-              "Projection 3.32 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 7/17, all 7/17."
+              "Model over 2.5: 67.8% before shrink, this book's no-vig 52.5%.",
+              "Projection 3.53 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 13/19, all 13/19."
             ],
             "flags": [],
-            "caution": [],
+            "caution": [
+              "model far from market (68% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (68% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +139 or better.",
+            "next_step": "Monitor only; if anything, wait for -153 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Cole Caufield Under 3.5 sog",
+            "selection": "Joel Eriksson Ek Under 2.5 sog",
             "side": "under",
-            "line": 3.5,
-            "odds": -155.0,
-            "model_raw": 0.5783,
-            "model_prob": 0.5736,
-            "market_prob": 0.5665,
-            "fair_odds": -135,
-            "edge": 0.0071,
-            "edge_at_price": -0.0343,
-            "ev": -0.0564,
+            "line": 2.5,
+            "odds": -105.0,
+            "model_raw": 0.3222,
+            "model_prob": 0.3835,
+            "market_prob": 0.4754,
+            "fair_odds": 161,
+            "edge": -0.0919,
+            "edge_at_price": -0.1287,
+            "ev": -0.2513,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 57.8% before shrink, this book's no-vig 56.7%.",
-              "Projection 3.32 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 7/17, all 7/17."
+              "Model under 2.5: 32.2% before shrink, this book's no-vig 47.5%.",
+              "Projection 3.53 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 13/19, all 13/19."
             ],
             "flags": [],
-            "caution": [],
+            "caution": [
+              "model far from market (32% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (32% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -128 or better.",
+            "next_step": "Pass. Only interesting at +166 or better.",
             "proven": false
           }
         }
@@ -2765,94 +2914,94 @@
       }
     },
     {
-      "player": "Joel Eriksson Ek",
-      "player_id": "3904091",
-      "team": "Minnesota Wild",
+      "player": "Juraj Slafkovsky",
+      "player_id": "4915349",
+      "team": "Montreal Canadiens",
       "stat": "sog",
       "stat_label": "Shots",
       "line": 2.5,
-      "projection": 3.53,
+      "projection": 2.1,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "7/10",
-        "L20": "13/19",
-        "all": "13/19"
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "7/17",
+        "all": "7/17"
       },
       "recent": [
         2.0,
-        2.0,
         4.0,
+        1.0,
+        2.0,
+        0.0,
+        2.0,
         3.0,
         3.0,
-        4.0,
-        5.0,
-        2.0,
-        4.0,
-        8.0
+        1.0,
+        1.0
       ],
       "ladder": [
         {
           "line": 0.5,
-          "p_over": 0.952,
-          "fair_over": -1970,
-          "fair_under": 1970,
-          "L10": "10/10"
+          "p_over": 0.862,
+          "fair_over": -627,
+          "fair_under": 627,
+          "L10": "9/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.949,
-          "fair_over": -1879,
-          "fair_under": 1879,
-          "L10": "10/10"
+          "p_over": 0.816,
+          "fair_over": -442,
+          "fair_under": 442,
+          "L10": "6/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.884,
-          "fair_over": -764,
-          "fair_under": 764,
-          "L10": "10/10"
+          "p_over": 0.608,
+          "fair_over": -155,
+          "fair_under": 155,
+          "L10": "6/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.855,
-          "fair_over": -590,
-          "fair_under": 590,
-          "L10": "7/10"
+          "p_over": 0.469,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "3/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.678,
-          "fair_over": -210,
-          "fair_under": 210,
-          "L10": "7/10"
+          "p_over": 0.345,
+          "fair_over": 190,
+          "fair_under": -190,
+          "L10": "3/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.598,
-          "fair_over": -149,
-          "fair_under": 149,
-          "L10": "5/10"
+          "p_over": 0.2,
+          "fair_over": 400,
+          "fair_under": -400,
+          "L10": "1/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.48,
-          "fair_over": 108,
-          "fair_under": -108,
-          "L10": "5/10"
+          "p_over": 0.164,
+          "fair_over": 511,
+          "fair_under": -511,
+          "L10": "1/10"
         },
         {
           "line": 4.0,
-          "p_over": 0.341,
-          "fair_over": 194,
-          "fair_under": -194,
-          "L10": "2/10"
+          "p_over": 0.077,
+          "fair_over": 1199,
+          "fair_under": -1199,
+          "L10": "0/10"
         },
         {
           "line": 4.5,
-          "p_over": 0.269,
-          "fair_over": 272,
-          "fair_under": -272,
-          "L10": "2/10"
+          "p_over": 0.07,
+          "fair_over": 1332,
+          "fair_under": -1332,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2862,64 +3011,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Joel Eriksson Ek Over 2.5 sog",
+            "selection": "Juraj Slafkovsky Over 2.5 sog",
             "side": "over",
             "line": 2.5,
-            "odds": -130.0,
-            "model_raw": 0.6778,
-            "model_prob": 0.6165,
-            "market_prob": 0.5246,
-            "fair_odds": -161,
-            "edge": 0.0919,
-            "edge_at_price": 0.0513,
-            "ev": 0.0908,
+            "odds": 105.0,
+            "model_raw": 0.3452,
+            "model_prob": 0.3878,
+            "market_prob": 0.4518,
+            "fair_odds": 158,
+            "edge": -0.064,
+            "edge_at_price": -0.1,
+            "ev": -0.2049,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 2.5: 67.8% before shrink, this book's no-vig 52.5%.",
-              "Projection 3.53 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/19, all 13/19."
+              "Model over 2.5: 34.5% before shrink, this book's no-vig 45.2%.",
+              "Projection 2.1 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 7/17, all 7/17."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (68% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (68% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
+            "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -153 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +163 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Joel Eriksson Ek Under 2.5 sog",
+            "selection": "Juraj Slafkovsky Under 2.5 sog",
             "side": "under",
             "line": 2.5,
-            "odds": -105.0,
-            "model_raw": 0.3222,
-            "model_prob": 0.3835,
-            "market_prob": 0.4754,
-            "fair_odds": 161,
-            "edge": -0.0919,
-            "edge_at_price": -0.1287,
-            "ev": -0.2513,
-            "tier": "Low",
+            "odds": -145.0,
+            "model_raw": 0.6548,
+            "model_prob": 0.6122,
+            "market_prob": 0.5482,
+            "fair_odds": -158,
+            "edge": 0.064,
+            "edge_at_price": 0.0203,
+            "ev": 0.0343,
+            "tier": "Medium",
             "data_quality": "High",
             "reasons": [
-              "Model under 2.5: 32.2% before shrink, this book's no-vig 47.5%.",
-              "Projection 3.53 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/19, all 13/19."
+              "Model under 2.5: 65.5% before shrink, this book's no-vig 54.8%.",
+              "Projection 2.1 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 7/17, all 7/17."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (32% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (32% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
+            "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +166 or better.",
+            "next_step": "Playable at -150 or better (current -145); re-check injuries/line 60 min before start.",
             "proven": false
           }
         }
@@ -3192,159 +3333,6 @@
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +134 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Juraj Slafkovsky",
-      "player_id": "4915349",
-      "team": "Montreal Canadiens",
-      "stat": "sog",
-      "stat_label": "Shots",
-      "line": 2.5,
-      "projection": 2.1,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "3/10",
-        "L20": "7/17",
-        "all": "7/17"
-      },
-      "recent": [
-        2.0,
-        4.0,
-        1.0,
-        2.0,
-        0.0,
-        2.0,
-        3.0,
-        3.0,
-        1.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.5,
-          "p_over": 0.862,
-          "fair_over": -627,
-          "fair_under": 627,
-          "L10": "9/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.816,
-          "fair_over": -442,
-          "fair_under": 442,
-          "L10": "6/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.608,
-          "fair_over": -155,
-          "fair_under": 155,
-          "L10": "6/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.469,
-          "fair_over": 113,
-          "fair_under": -113,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.345,
-          "fair_over": 190,
-          "fair_under": -190,
-          "L10": "3/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.2,
-          "fair_over": 400,
-          "fair_under": -400,
-          "L10": "1/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.164,
-          "fair_over": 511,
-          "fair_under": -511,
-          "L10": "1/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.077,
-          "fair_over": 1199,
-          "fair_under": -1199,
-          "L10": "0/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.07,
-          "fair_over": 1332,
-          "fair_under": -1332,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Juraj Slafkovsky Over 2.5 sog",
-            "side": "over",
-            "line": 2.5,
-            "odds": 105.0,
-            "model_raw": 0.3452,
-            "model_prob": 0.3878,
-            "market_prob": 0.4518,
-            "fair_odds": 158,
-            "edge": -0.064,
-            "edge_at_price": -0.1,
-            "ev": -0.2049,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 2.5: 34.5% before shrink, this book's no-vig 45.2%.",
-              "Projection 2.1 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 7/17, all 7/17."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +163 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Juraj Slafkovsky Under 2.5 sog",
-            "side": "under",
-            "line": 2.5,
-            "odds": -145.0,
-            "model_raw": 0.6548,
-            "model_prob": 0.6122,
-            "market_prob": 0.5482,
-            "fair_odds": -158,
-            "edge": 0.064,
-            "edge_at_price": 0.0203,
-            "ev": 0.0343,
-            "tier": "Medium",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 2.5: 65.5% before shrink, this book's no-vig 54.8%.",
-              "Projection 2.1 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 7/17, all 7/17."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Playable at -150 or better (current -145); re-check injuries/line 60 min before start.",
             "proven": false
           }
         }
