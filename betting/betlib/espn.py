@@ -80,13 +80,12 @@ _BOOK_HOSTS = (
     "ballybet.com",
 )
 _DROP_QUERY = {
-    "outcomes", "coupon", "wageramount", "options", "type", "marketid", "selectionid",
-    "s", "wpcid", "wpscid", "wpcn", "wpscn", "wpcrn", "wpcrid", "preurl",
+    "wageramount", "s", "wpcid", "wpscid", "wpcn", "wpscn", "wpcrn", "wpcrid", "preurl",
 }
 
 
 def public_event_url(href):
-    """Public sportsbook event or home URL. `{state}` becomes Ohio. Bet-slip queries are dropped."""
+    """Public sportsbook URL. `{state}` becomes Ohio. Betslip query params are kept."""
     if not href or not isinstance(href, str):
         return None
     raw = href.strip().replace("{state}", "oh")
@@ -103,8 +102,6 @@ def public_event_url(href):
     if parsed.scheme not in ("http", "https"):
         return None
     if not any(host == h or host.endswith("." + h) for h in _BOOK_HOSTS):
-        return None
-    if "addtobetslip" in (parsed.path or "").lower():
         return None
     kept = []
     for key, values in parse_qs(parsed.query, keep_blank_values=False).items():

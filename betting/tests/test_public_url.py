@@ -8,12 +8,15 @@ from betlib.espn import parse_odds, public_event_url
 
 
 class PublicUrlTests(unittest.TestCase):
-    def test_strips_betslip_query(self):
+    def test_keeps_betslip_query(self):
         href = (
             "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__"
             "&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34983855%3Foutcomes%3D0HC87151635N1550_1"
         )
-        self.assertEqual(public_event_url(href), "https://sportsbook.draftkings.com/event/34983855")
+        self.assertEqual(
+            public_event_url(href),
+            "https://sportsbook.draftkings.com/event/34983855?outcomes=0HC87151635N1550_1",
+        )
 
     def test_rejects_unknown_host(self):
         self.assertIsNone(public_event_url("https://example.com/event/1"))
@@ -27,10 +30,13 @@ class PublicUrlTests(unittest.TestCase):
             public_event_url("https://sports.{state}.betmgm.com/en/sports/events/bucks-at-knicks-20050890"),
             "https://sports.oh.betmgm.com/en/sports/events/bucks-at-knicks-20050890",
         )
-        self.assertIsNone(public_event_url("https://sportsbook.fanduel.com/addToBetslip?marketId=1&selectionId=2"))
+        self.assertEqual(
+            public_event_url("https://sportsbook.fanduel.com/addToBetslip?marketId=1&selectionId=2"),
+            "https://sportsbook.fanduel.com/addToBetslip?marketId=1&selectionId=2",
+        )
         self.assertEqual(
             public_event_url("https://sportsbook.draftkings.com/?outcomes=0ML87151635_3"),
-            "https://sportsbook.draftkings.com/",
+            "https://sportsbook.draftkings.com/?outcomes=0ML87151635_3",
         )
 
     def test_parse_prefixed_total_and_spread(self):
@@ -56,7 +62,10 @@ class PublicUrlTests(unittest.TestCase):
         self.assertEqual(parsed["under_odds"], -105)
         self.assertEqual(parsed["spread_home"], -15.5)
         self.assertEqual(parsed["ml_away"], 670)
-        self.assertEqual(parsed["event_url"], "https://sportsbook.draftkings.com/event/34983855")
+        self.assertEqual(
+            parsed["event_url"],
+            "https://sportsbook.draftkings.com/event/34983855?outcomes=abc",
+        )
 
 
 if __name__ == "__main__":

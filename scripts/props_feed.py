@@ -237,6 +237,7 @@ def refresh_props(api_key, enabled=True):
                 markets=markets,
                 oddsFormat="american",
                 includeLinks="true",
+                includeSids="true",
             )
         except RuntimeError as exc:
             print("props request failed:", exc)

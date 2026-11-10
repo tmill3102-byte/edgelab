@@ -41,7 +41,7 @@ The game page. Includes `model_summary`, `flags`, `notes`, `injuries`, `form`, `
 
 ## `legs.json`
 
-Builder candidates. One leg per modeled side at the primary book's line. Other books are included only when their line matches. Important fields: `id`, `event_id`, `weekday`, `date_et`, `matchup`, team names, `market`, `side`, `selection`, `primary_book`, `offers`, `odds_feed`, `event_urls`, and for props `player`, `prop_key`, `hit_rate`.
+Builder candidates. One leg per modeled side at the primary book's line. Other books are included only when their line matches. Important fields: `id`, `event_id`, `weekday`, `date_et`, `matchup`, team names, `market`, `side`, `selection`, `primary_book`, `offers`, `odds_feed`, `event_urls`, and for props `player`, `prop_key`, `hit_rate`. An offer may include `sid` (the book's selection id), `market_sid`, `book_event`, and `link` so Open in can fill that book's betslip.
 
 ## `edges.json`
 
