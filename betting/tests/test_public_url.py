@@ -18,6 +18,21 @@ class PublicUrlTests(unittest.TestCase):
     def test_rejects_unknown_host(self):
         self.assertIsNone(public_event_url("https://example.com/event/1"))
 
+    def test_ohio_state_placeholder_and_betslip_params(self):
+        self.assertEqual(
+            public_event_url("https://{state}.betrivers.com/?page=sportsbook#event/1028754081"),
+            "https://oh.betrivers.com/?page=sportsbook#event/1028754081",
+        )
+        self.assertEqual(
+            public_event_url("https://sports.{state}.betmgm.com/en/sports/events/bucks-at-knicks-20050890"),
+            "https://sports.oh.betmgm.com/en/sports/events/bucks-at-knicks-20050890",
+        )
+        self.assertIsNone(public_event_url("https://sportsbook.fanduel.com/addToBetslip?marketId=1&selectionId=2"))
+        self.assertEqual(
+            public_event_url("https://sportsbook.draftkings.com/?outcomes=0ML87151635_3"),
+            "https://sportsbook.draftkings.com/",
+        )
+
     def test_parse_prefixed_total_and_spread(self):
         parsed = parse_odds({
             "provider": {"name": "DraftKings"},

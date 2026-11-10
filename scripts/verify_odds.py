@@ -60,26 +60,27 @@ def get(session, path, key, **params):
 
 
 def slim_event(event):
+    # Imported lazily so this script still runs before the package path is needed.
+    sys.path.insert(0, str(ROOT / "betting"))
+    from betlib.espn import public_event_url
     books = []
     for book in event.get("bookmakers") or []:
         markets = []
         for market in book.get("markets") or []:
             outcomes = []
             for outcome in market.get("outcomes") or []:
-                item = {
+                # Outcome links are bet-slip deep links. Keep the price only.
+                outcomes.append({
                     "name": outcome.get("name"),
                     "price": outcome.get("price"),
                     "point": outcome.get("point"),
                     "description": outcome.get("description"),
-                }
-                link = outcome.get("link")
-                if link:
-                    item["link"] = link
-                outcomes.append(item)
+                })
             markets.append({"key": market.get("key"), "outcomes": outcomes})
         row = {"key": book.get("key"), "title": book.get("title"), "markets": markets}
-        if book.get("link"):
-            row["link"] = book["link"]
+        url = public_event_url(book["link"]) if isinstance(book.get("link"), str) else None
+        if url:
+            row["link"] = url
         books.append(row)
     return {
         "id": event.get("id"),

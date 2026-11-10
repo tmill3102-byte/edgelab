@@ -81,28 +81,55 @@ _BOOK_HOSTS = (
 )
 
 
+_DROP_QUERY = {
+    "outcomes", "coupon", "wageramount", "options", "type", "marketid", "selectionid",
+    "s", "wpcid", "wpscid", "wpcn", "wpscn", "wpcrn", "wpcrid", "preurl",
+}
+
+
 def public_event_url(href):
     """Public sportsbook event or home URL from an ESPN/Odds API link.
 
-    Affiliate gateway links are reduced to the preurl path. Query strings are
-    dropped so bet-slip deep links (outcomes=...) are never opened.
+    Affiliate gateways are reduced to their preurl. `{state}` is filled as Ohio.
+    Bet-slip query params (outcomes, coupons, add-to-slip) are removed. A link
+    that still contains an unresolved template is dropped.
     """
     if not href or not isinstance(href, str):
         return None
-    raw = href.strip()
+    raw = href.strip().replace("{state}", "oh")
     if not raw.startswith("http"):
         return None
     parsed = urlparse(raw)
-    qs = parse_qs(parsed.query)
-    pre = (qs.get("preurl") or [None])[0]
+    pre = (parse_qs(parsed.query).get("preurl") or [None])[0]
     if pre:
-        parsed = urlparse(unquote(pre))
+        raw = unquote(pre).replace("{state}", "oh")
+        parsed = urlparse(raw)
+    if "{" in raw or "}" in raw:
+        return None
     host = (parsed.hostname or "").lower()
+    if parsed.scheme not in ("http", "https"):
+        return None
     if not any(host == h or host.endswith("." + h) for h in _BOOK_HOSTS):
         return None
-    if parsed.scheme not in ("http", "https") or not parsed.path:
+    if "addtobetslip" in (parsed.path or "").lower():
         return None
-    return f"{parsed.scheme}://{host}{parsed.path}"
+    kept = []
+    for key, values in parse_qs(parsed.query, keep_blank_values=False).items():
+        if key.lower() in _DROP_QUERY:
+            continue
+        for value in values:
+            if "{" in value or "}" in value:
+                continue
+            kept.append(f"{key}={value}")
+    frag = parsed.fragment or ""
+    if "{" in frag or "}" in frag:
+        frag = ""
+    url = f"{parsed.scheme}://{host}{parsed.path or '/'}"
+    if kept:
+        url += "?" + "&".join(kept)
+    if frag:
+        url += "#" + frag
+    return url
 
 
 def parse_odds(o):

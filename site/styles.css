@@ -195,14 +195,16 @@ label.lbl { display: block; font-size: 12px; color: var(--muted); margin: 8px 0 
 }
 .grab { width: 36px; height: 4px; border-radius: 99px; background: var(--line); margin: 4px auto 10px; }
 .tabs {
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(6, 1fr);
   border-top: 1px solid var(--line);
   background: rgba(10, 12, 16, .94);
-  padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+  padding: 6px 2px calc(6px + env(safe-area-inset-bottom));
 }
 .tabs button {
-  background: none; border: 0; color: var(--dim); font-size: 10px; padding: 6px 0 4px; min-height: 48px;
+  background: none; border: 0; color: var(--dim); font-size: 9px; padding: 6px 0 4px; min-height: 48px;
 }
+.sgp-leg { font-size: 15px; font-weight: 680; margin-top: 6px; }
+.on-card { border-color: var(--accent); }
 .tabs button.on { color: var(--accent); font-weight: 700; }
 .tabs svg { display: block; margin: 0 auto 3px; }
 .dot {

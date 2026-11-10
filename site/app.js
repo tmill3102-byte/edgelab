@@ -24,6 +24,8 @@ const state = {
   slip: [],
   myPlays: [],
   builder: { text: "", risk: "balanced", legs: 4, target: 400, team: "", date: "", dirty: false, parsed: null, result: null },
+  sgpMode: "sgp",
+  sgpx: [],
   sheet: null,
   game: null,
   gameError: null,
@@ -128,6 +130,7 @@ function icon(name) {
     today: `<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/>`,
     edges: `<path d="M4 16l5-6 4 3 7-8"/><path d="M14 5h6v6"/>`,
     builder: `<path d="M12 3l1.6 4.8L18 9.4l-4.4 1.6L12 16l-1.6-5L6 9.4l4.4-1.6L12 3z"/><path d="M18 14l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2z"/>`,
+    sgp: `<circle cx="7" cy="8" r="2.2"/><circle cx="17" cy="8" r="2.2"/><circle cx="12" cy="17" r="2.2"/><path d="M8.8 9.4l2.2 5.2M15.2 9.4l-2.2 5.2"/>`,
     slip: `<path d="M7 4h8l4 4v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M15 4v4h4M8 12h8M8 16h6"/>`,
     tracker: `<path d="M5 19V10M12 19V5M19 19v-7"/>`,
   };
@@ -155,7 +158,7 @@ function shell(body) {
 }
 
 function tabs() {
-  const items = [["today", "Today"], ["edges", "Edges"], ["builder", "Builder"], ["slip", "Slip"], ["tracker", "Tracker"]];
+  const items = [["today", "Today"], ["edges", "Edges"], ["builder", "Build"], ["sgp", "SGP"], ["slip", "Slip"], ["tracker", "Track"]];
   return `<nav class="tabs">${items.map(([id, label]) => {
     const badge = id === "slip" && state.slip.length ? `<span class="dot">${state.slip.length}</span>` : "";
     return `<button type="button" data-act="tab" data-tab="${id}" class="${state.tab === id ? "on" : ""}" ${state.tab === id ? 'aria-current="page"' : ""}>${icon(id)}${badge}${label}</button>`;
@@ -415,6 +418,269 @@ function corrNotes(legs) {
   return notes;
 }
 
+function legProb(leg, book) {
+  const offer = book ? (offerOf(leg.offers, book) || offerPrimary(leg)) : offerPrimary(leg);
+  return offer?.model_prob;
+}
+
+function pairRho(a, b) {
+  if (!a || !b || a.event_id !== b.event_id) return { rho: 0, why: null };
+  const team = (leg) => leg.team_abbr || null;
+  const sameTeam = team(a) && team(a) === team(b);
+  const oppSide = (a.side === "home" && b.side === "away") || (a.side === "away" && b.side === "home");
+  const sameSide = a.side && a.side === b.side && (a.side === "home" || a.side === "away");
+  const markets = [a.market, b.market];
+  const has = (name) => markets.includes(name);
+  if ((has("ML") || has("1X2")) && has("Spread")) {
+    if (sameSide) return { rho: 0.75, why: "Same-team moneyline and spread move together. The joint chance stays near the harder leg instead of the product." };
+    if (oppSide) return { rho: -0.55, why: "A moneyline on one team and the spread on the other point opposite ways." };
+  }
+  const total = a.market === "Total" ? a : b.market === "Total" ? b : null;
+  const sideLeg = total ? (total === a ? b : a) : null;
+  if (total && sideLeg && (sideLeg.market === "Spread" || sideLeg.market === "ML" || sideLeg.market === "1X2")) {
+    const fav = sideLeg.market === "Spread" ? Number(sideLeg.line) < 0 : (offerPrimary(sideLeg)?.odds || 0) < 0;
+    if (total.side === "over" && fav) return { rho: 0.25, why: "Favorite and over are mildly positively correlated. Covers often come with more scoring." };
+    if (total.side === "under" && !fav) return { rho: 0.22, why: "Underdog and under are mildly positively correlated. Lower scoring tends to keep the game closer." };
+    if (total.side === "under" && fav) return { rho: -0.12, why: "Favorite and under pull apart, so the joint chance is a bit under the product." };
+    return { rho: 0.08, why: "This side and total have only a weak link in the adjustment." };
+  }
+  if (a.market === "Prop" || b.market === "Prop") {
+    const prop = a.market === "Prop" ? a : b;
+    const other = prop === a ? b : a;
+    const stat = (prop.stat || "").toLowerCase();
+    const otherStat = (other.stat || "").toLowerCase();
+    const pass = ["pass_yds", "pass_td", "completions"].includes(stat) || ["pass_yds", "pass_td", "completions"].includes(otherStat);
+    const rec = ["rec_yds", "rec", "receptions"].includes(stat) || ["rec_yds", "rec", "receptions"].includes(otherStat);
+    if (a.market === "Prop" && b.market === "Prop" && prop.prop_key && a.prop_key === b.prop_key) return { rho: 0, why: null };
+    if (a.market === "Prop" && b.market === "Prop" && a.player && a.player === b.player) {
+      return { rho: 0.28, why: "Two props on the same player share minutes and role." };
+    }
+    if (pass && rec && sameTeam) return { rho: 0.55, why: "A quarterback's passing and his receiver's production are strongly linked. The ball has to arrive." };
+    if ((stat === "pts" || otherStat === "pts") && (other.market === "ML" || other.market === "1X2" || other.market === "Spread") && sameTeam) {
+      return { rho: 0.30, why: "A player's points and that team's side move together." };
+    }
+    if ((stat === "pts" || stat === "pass_yds" || otherStat === "pts" || otherStat === "pass_yds") && (other.market === "Total" || a.market === "Total")) {
+      const tot = a.market === "Total" ? a : b;
+      if (tot.side === "over") return { rho: 0.35, why: "Scoring props and the game over share pace. They hit together more often than independence says." };
+    }
+    if (a.market === "Prop" && b.market === "Prop" && sameTeam) return { rho: 0.15, why: "Teammate props share pace. Usage competition is not in this adjustment." };
+  }
+  return { rho: 0, why: null };
+}
+
+function jointProb(legs, book) {
+  if (!legs.length) return { prob: 0, notes: [], rho: [] };
+  let p = legProb(legs[0], book);
+  if (!(p > 0)) return { prob: 0, notes: ["A leg has no model probability."], rho: [] };
+  const notes = [];
+  const seen = new Set();
+  for (let i = 1; i < legs.length; i++) {
+    let rho = 0;
+    let why = null;
+    for (let j = 0; j < i; j++) {
+      const pair = pairRho(legs[j], legs[i]);
+      if (Math.abs(pair.rho) > Math.abs(rho)) {
+        rho = pair.rho;
+        why = pair.why;
+      }
+    }
+    const q = legProb(legs[i], book);
+    if (!(q > 0)) return { prob: 0, notes: ["A leg has no model probability."], rho: [] };
+    const indep = p * q;
+    const bump = rho * Math.sqrt(Math.max(0, p * (1 - p) * q * (1 - q)));
+    const lo = Math.max(0, p + q - 1);
+    const hi = Math.min(p, q);
+    p = Math.min(hi, Math.max(lo, indep + bump));
+    if (why && !seen.has(why)) {
+      seen.add(why);
+      notes.push(`${why} ρ ${rho > 0 ? "+" : ""}${rho.toFixed(2)}.`);
+    }
+  }
+  if (!notes.length) notes.push("No documented correlation between these legs, so the hit chance is the straight product.");
+  return { prob: p, notes };
+}
+
+function slipModel(legs, book) {
+  const groups = {};
+  for (const leg of legs) (groups[leg.event_id] ||= []).push(leg);
+  let prob = 1;
+  let same = false;
+  for (const group of Object.values(groups)) {
+    if (group.length > 1) same = true;
+    const joint = group.length === 1 ? { prob: legProb(group[0], book) } : jointProb(group, book);
+    if (!(joint.prob > 0)) return { prob: null, same };
+    prob *= joint.prob;
+  }
+  return { prob, same };
+}
+
+function cardPrice(legs) {
+  let best = null;
+  for (const book of books()) {
+    const summary = summaryFor(legs, book);
+    if (!summary.complete) continue;
+    if (!best || summary.dec > best.summary.dec) best = { book, summary };
+  }
+  return best;
+}
+
+function sgpPool(legs) {
+  const ranked = [...legs].filter((leg) => (offerPrimary(leg)?.model_prob || 0) > 0 && offerPrimary(leg)?.odds != null);
+  ranked.sort((a, b) => offerPrimary(b).model_prob - offerPrimary(a).model_prob);
+  if (ranked.length <= 8) return ranked;
+  return [...ranked.slice(0, 5), ...ranked.slice(-3)];
+}
+
+function buildGameSgps(gameLegs) {
+  const pool = sgpPool(gameLegs);
+  const found = [];
+  for (const size of [2, 3, 4]) {
+    if (pool.length < size) continue;
+    for (const combo of combinations(pool, size)) {
+      if (combo.some((leg, index) => combo.slice(index + 1).some((other) => conflict(leg, other)))) continue;
+      const joint = jointProb(combo);
+      if (!(joint.prob > 0)) continue;
+      found.push({ legs: combo, prob: joint.prob, notes: joint.notes, size });
+    }
+  }
+  const used = new Set();
+  function take(ok, rank) {
+    const rows = found.filter((row) => ok(row) && !used.has(row.legs.map((leg) => leg.id).sort().join("|")));
+    if (!rows.length) return null;
+    rows.sort(rank);
+    const pick = rows[0];
+    used.add(pick.legs.map((leg) => leg.id).sort().join("|"));
+    return pick;
+  }
+  return {
+    safer: take((row) => row.size <= 3 && row.prob >= 0.35, (a, b) => b.prob - a.prob || a.size - b.size),
+    balanced: take((row) => row.size <= 3 && row.prob >= 0.15 && row.prob < 0.35, (a, b) => Math.abs(a.prob - 0.22) - Math.abs(b.prob - 0.22)),
+    longshot: take((row) => row.prob < 0.10 && row.prob >= 0.03, (a, b) => Math.abs(a.prob - 0.06) - Math.abs(b.prob - 0.06)),
+    lotto: take((row) => row.size >= 3 && row.prob < 0.03, (a, b) => a.prob - b.prob),
+  };
+}
+
+const SGP_BANDS = [
+  ["safer", "Safer", "2–3 legs, about 35% or better"],
+  ["balanced", "Balanced", "about 15–30%"],
+  ["longshot", "Longshot", "under 10%"],
+  ["lotto", "Lotto", "under 3%, usually 3 or more legs"],
+];
+
+function sgpCardsFor(legs) {
+  const day = currentDay();
+  const games = {};
+  for (const leg of legs) {
+    if (day && leg.date_et !== day.date) continue;
+    if (state.sport !== "all" && leg.league !== state.sport) continue;
+    (games[leg.event_id] ||= []).push(leg);
+  }
+  const cards = [];
+  const blocks = [];
+  for (const [eventId, gameLegs] of Object.entries(games)) {
+    const built = buildGameSgps(gameLegs);
+    const sample = gameLegs[0];
+    const tiers = [];
+    for (const [key, label, band] of SGP_BANDS) {
+      const row = built[key];
+      if (!row) {
+        tiers.push({ key, label, band, empty: true });
+        continue;
+      }
+      const price = cardPrice(row.legs);
+      const implied = price ? 1 / price.summary.dec : null;
+      const edge = implied == null ? null : row.prob - implied;
+      const weak = [...row.legs].sort((a, b) => (offerPrimary(a).edge || 0) - (offerPrimary(b).edge || 0))[0];
+      const card = {
+        id: `${eventId}:${key}`,
+        event_id: eventId,
+        key, label, band,
+        name: sample.name,
+        matchup: sample.matchup,
+        start_local: sample.start_local,
+        league: sample.league,
+        legs: row.legs,
+        prob: row.prob,
+        notes: row.notes,
+        price,
+        edge,
+        fair: decToAm(1 / row.prob),
+        weak,
+      };
+      cards.push(card);
+      tiers.push(card);
+    }
+    blocks.push({ eventId, name: sample.name, matchup: sample.matchup, start: sample.start, start_local: sample.start_local, tiers });
+  }
+  blocks.sort((a, b) => (a.start || "").localeCompare(b.start || ""));
+  return { blocks, cards };
+}
+
+function renderSgpCard(card) {
+  if (card.empty) {
+    return `<article class="card"><div class="card-top"><span class="match">${esc(card.label)}</span></div><p class="note">${esc(card.band)}. No non-conflicting card in this band from the priced markets. Nothing was invented to fill it.</p></article>`;
+  }
+  const price = card.price
+    ? `${esc(card.price.book.name)} ${fmtAm(card.price.summary.american)} est.`
+    : "No book in the feed priced every leg";
+  const legs = card.legs.map((leg) => `<div class="sgp-leg">${esc(leg.selection)} <span class="muted">${fmtAm(offerPrimary(leg).odds)} · ${fmtPct(offerPrimary(leg).model_prob)}</span></div>`).join("");
+  const on = state.sgpx.includes(card.id);
+  const pick = state.sgpMode === "sgpx"
+    ? `<button type="button" class="btn block" data-act="toggle-sgpx" data-id="${esc(card.id)}">${on ? "Remove from SGPx" : "Use in SGPx"}</button>`
+    : `<button type="button" class="cta" data-act="add-sgp" data-id="${esc(card.id)}">Add to slip</button>`;
+  return `<article class="card ${on ? "on-card" : ""}">
+    <div class="card-top"><span class="match">${esc(card.label)}</span><span class="pill ${card.prob >= 0.35 ? "high" : card.prob >= 0.15 ? "medium" : "warn"}">${fmtPct(card.prob)} hit</span></div>
+    <p class="note">${esc(card.band)}</p>
+    ${legs}
+    <p class="note">Best multiplied price: ${price}. Fair ${fmtAm(card.fair)}. Edge vs that multiplied price ${card.edge == null ? "—" : esc(fmtEdge(card.edge))}.</p>
+    <p class="note">Weakest leg: ${esc(card.weak.selection)} (${esc(fmtEdge(offerPrimary(card.weak).edge))}).</p>
+    ${(card.notes || []).map((note) => `<p class="note">${esc(note)}</p>`).join("")}
+    <p class="note">Books price same-game parlays with their own correlation. A real SGP price can differ from these multiplied leg prices, usually with more hold.</p>
+    ${pick}
+  </article>`;
+}
+
+function renderSgp() {
+  const { blocks, cards } = sgpCardsFor(state.legs);
+  state.sgpCards = cards;
+  const day = currentDay();
+  const days = state.slate?.days || [];
+  const dayChips = days.map((item) => `<button type="button" class="chip ${item.key === day?.key ? "on" : ""}" data-act="day" data-day="${esc(item.key)}">${esc(item.label)}</button>`).join("");
+  const mode = `<div class="seg">
+    <button type="button" data-act="sgp-mode" data-mode="sgp" class="${state.sgpMode === "sgp" ? "on" : ""}">SGP</button>
+    <button type="button" data-act="sgp-mode" data-mode="sgpx" class="${state.sgpMode === "sgpx" ? "on" : ""}">SGPx</button>
+  </div>`;
+  let extra = "";
+  if (state.sgpMode === "sgpx") {
+    const picked = state.sgpx.map((id) => cards.find((card) => card.id === id)).filter(Boolean);
+    if (picked.length >= 2) {
+      const legs = picked.flatMap((card) => card.legs);
+      const prob = picked.reduce((product, card) => product * card.prob, 1);
+      const price = cardPrice(legs);
+      const implied = price ? 1 / price.summary.dec : null;
+      const edge = implied == null ? null : prob - implied;
+      extra = `<article class="card">
+        <div class="match">SGPx · ${picked.length} games</div>
+        <p class="note">${picked.map((card) => `${esc(card.matchup)} ${esc(card.label)}`).join(" · ")}</p>
+        <p class="note">Combined hit chance ${fmtPct(prob)}. Each game uses its own correlation adjustment. Different games are treated as independent.</p>
+        <p class="note">Best multiplied price: ${price ? `${esc(price.book.name)} ${fmtAm(price.summary.american)} est.` : "no book priced every leg"}. Edge vs that multiplied price ${edge == null ? "—" : esc(fmtEdge(edge))}.</p>
+        <p class="note">Books still price each same-game piece with their own correlation, and an SGPx price is not the product of the leg odds.</p>
+        <button type="button" class="cta" data-act="add-sgpx">Add SGPx to slip</button>
+      </article>`;
+    } else {
+      extra = `<p class="note">Pick 2 or 3 same-game cards from different games. Two cards from one game are not an SGPx.</p>`;
+    }
+  }
+  const body = blocks.length ? blocks.map((block) => `<h3>${esc(block.matchup)} · ${esc(block.start_local || "")}</h3>${block.tiers.map(renderSgpCard).join("")}`).join("") : `<div class="empty">No modeled games on this day. Try another date.</div>`;
+  return `<h1>SGP</h1>
+    <p class="note">Same-game parlays from the published markets. Hit chance is adjusted for correlation. It is not the product of the legs, and it is not a book's SGP price.</p>
+    ${mode}
+    <div class="row">${dayChips}</div>
+    ${extra}
+    ${body}
+    ${footer()}`;
+}
+
 function runBuild(spec) {
   const notes = [];
   const profile = RISK[spec.risk] || RISK.balanced;
@@ -431,9 +697,16 @@ function runBuild(spec) {
   let expanded = false;
   let pool = universe;
   if (teamLegs.length && teamLegs.length >= spec.legs && teamCapacity >= spec.legs) pool = teamLegs;
-  else if (teamLegs.length && (teamLegs.length < spec.legs || teamCapacity < spec.legs)) {
+  else if (teamLegs.length) {
     expanded = true;
-    notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets from the games found. Other legs are taken from the same published slate. No prop price was invented to fill the card.`);
+    const league = teamLegs[0].league;
+    const sameLeague = universe.filter((leg) => leg.league === league);
+    if (sameLeague.length >= spec.legs) {
+      pool = sameLeague;
+      notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets in that game. The other legs are from the same sport on that date. No prop price was invented to fill the card.`);
+    } else {
+      notes.push(`${spec.team} can fill about ${teamCapacity} uncorrelated priced markets, and the same sport does not have enough priced legs. Other legs are from the rest of that date. No prop price was invented.`);
+    }
   }
   const scoreOf = (leg) => offerPrimary(leg)?.model_prob || 0;
   const rankedTeam = [...teamLegs].sort((a, b) => scoreOf(b) - scoreOf(a));
@@ -643,7 +916,8 @@ function renderSlip() {
       <div><b class="num">${offer ? fmtAm(offer.odds) : "—"}</b><button type="button" class="x" data-act="remove" data-id="${esc(leg.id)}" aria-label="Remove">×</button></div>
     </article>`;
   }).join("");
-  const edge = summary?.complete ? summary.prob - 1 / summary.dec : null;
+  const model = summary?.complete ? slipModel(state.slip, selected) : null;
+  const edge = model?.prob != null && summary?.complete ? model.prob - 1 / summary.dec : null;
   const same = corrNotes(state.slip);
   const negative = state.slip.filter((leg) => {
     const offer = selected && offerOf(leg.offers, selected);
@@ -655,7 +929,8 @@ function renderSlip() {
     negative.length ? `${negative.length} leg(s) have no model edge at this book.` : "",
     edge != null && edge < 0 ? "The model probability is below the estimated price. That is a negative edge." : "",
   ].filter(Boolean);
-  const absent = catalog.filter((book) => !book.in_feed && book.feed_note).slice(0, 3).map((book) => `<p class="note">${esc(book.name)}: ${esc(book.feed_note)}</p>`).join("");
+  const missing = catalog.filter((book) => !book.in_feed);
+  const absent = missing.length ? `<p class="note">${esc(missing.map((book) => book.name).join(", "))} ${missing.length === 1 ? "is" : "are"} not in this free odds feed, so ${missing.length === 1 ? "that card stays" : "those cards stay"} empty. No price is filled in for them.</p>` : "";
   const copied = state.copied === true ? `<p class="note">Slip copied. Pre-filled bets are not supported — enter the legs yourself.</p>`
     : state.copied === false ? `<p class="note">Clipboard was blocked. Select the slip text below.</p><textarea class="field copybox" readonly>${esc(state.copyText)}</textarea>` : "";
   return `
@@ -668,7 +943,7 @@ function renderSlip() {
       <div class="stat"><span>Estimated odds</span><b class="num">${summary?.complete ? fmtAm(summary.american) : "—"}</b></div>
       <div class="stat"><span>Model vs price</span><b class="num">${edge == null ? "—" : fmtEdge(edge)}</b></div>
     </div>
-    <p class="note">Model ${summary?.complete ? fmtPct(summary.prob) : "—"} if the legs were independent. Fair ${summary?.complete ? fmtAm(decToAm(1 / summary.prob)) : "—"}.</p>
+    <p class="note">Model ${model?.prob != null ? fmtPct(model.prob) : "—"}${model?.same ? " after the same-game correlation adjustment" : " if separate games are independent"}. Fair ${model?.prob ? fmtAm(decToAm(1 / model.prob)) : "—"}.</p>
     ${risk.map((line) => `<p class="note">${esc(line)}</p>`).join("")}
     <button type="button" class="cta" data-act="open-book" ${selected ? "" : "disabled"}>Open in ${esc(selected?.name || "book")}</button>
     <p class="source">Opens that book's event page when every leg is the same game and the feed included a public link. Otherwise it opens the book's home. The slip is copied. EdgeLab cannot fill the bet slip for you.</p>
@@ -792,6 +1067,7 @@ function render() {
   else if (state.tab === "edges") body = renderEdges();
   else if (state.tab === "game") body = renderGame();
   else if (state.tab === "builder") body = renderBuilder();
+  else if (state.tab === "sgp") body = renderSgp();
   else if (state.tab === "slip") body = renderSlip();
   else body = renderTracker();
   document.getElementById("app").innerHTML = shell(body);
@@ -828,7 +1104,7 @@ function route() {
     showGame(league, decodeURIComponent(id));
     return;
   }
-  state.tab = ["today", "edges", "builder", "slip", "tracker"].includes(head) ? head : "today";
+  state.tab = ["today", "edges", "builder", "sgp", "slip", "tracker"].includes(head) ? head : "today";
   if (head !== "game") state.game = null;
   render();
 }
@@ -861,7 +1137,7 @@ async function openBook() {
       return `${index + 1}. ${leg.selection} ${offer ? fmtAm(offer.odds) : "not offered"} — ${leg.matchup || ""} — ${leg.start_local || ""}`;
     }),
     summary.complete ? `Estimated from leg prices: ${fmtAm(summary.american)} (the book's parlay price will differ)` : "This book does not offer every leg.",
-    summary.complete ? `Model if independent: ${fmtPct(summary.prob)} · fair ${fmtAm(decToAm(1 / summary.prob))}` : "",
+    summary.complete ? `Model hit chance: ${fmtPct(slipModel(state.slip, selected).prob)} (same-game legs are correlation-adjusted; a book's SGP price can differ)` : "",
     "Pre-filled slips are not supported. Enter the legs yourself.",
     "Research only. No guarantees. 1-800-GAMBLER.",
   ].filter(Boolean);
@@ -889,6 +1165,28 @@ function onClick(event) {
   const act = el.dataset.act;
   if (act === "stop") { event.stopPropagation(); return; }
   if (act === "tab") { go("#" + el.dataset.tab); return; }
+  if (act === "sgp-mode") { state.sgpMode = el.dataset.mode; render(); return; }
+  if (act === "add-sgp") {
+    const card = (state.sgpCards || []).find((item) => item.id === el.dataset.id);
+    if (!card) return;
+    for (const leg of card.legs) addLeg(leg);
+    go("#slip");
+    return;
+  }
+  if (act === "toggle-sgpx") {
+    const card = (state.sgpCards || []).find((item) => item.id === el.dataset.id);
+    if (!card) return;
+    if (state.sgpx.includes(card.id)) state.sgpx = state.sgpx.filter((id) => id !== card.id);
+    else if (state.sgpx.length < 3 && !state.sgpx.some((id) => (state.sgpCards.find((item) => item.id === id) || {}).event_id === card.event_id)) state.sgpx.push(card.id);
+    render();
+    return;
+  }
+  if (act === "add-sgpx") {
+    const picked = state.sgpx.map((id) => (state.sgpCards || []).find((item) => item.id === id)).filter(Boolean);
+    for (const card of picked) for (const leg of card.legs) addLeg(leg);
+    go("#slip");
+    return;
+  }
   if (act === "day") { state.day = el.dataset.day; render(); return; }
   if (act === "sport") { state.sport = el.dataset.sport; render(); return; }
   if (act === "tier") { state.edgeTier = el.dataset.tier; render(); return; }

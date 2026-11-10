@@ -65,6 +65,31 @@ High and Medium sides with positive edge and positive expected return at the pri
 
 Written by `scripts/verify_odds.py`. The check file is the safe log: key present or not, HTTP status, quota headers, which Ohio books came back. It never contains the key. The snapshot is the one `regions=us` featured-odds response (h2h, spreads, totals for a single sport) with affiliate query strings removed from stored links where the publisher can parse them. `publish.py` reads the snapshot and does not call that endpoint again.
 
+## Same-game correlation
+
+The phone does this. It is not a second model on the server.
+
+For legs in one game, the hit chance is not the product of the leg probabilities. Each added leg is joined to the running parlay with the strongest documented correlation:
+
+`P(A and B) = P(A)P(B) + ρ √[P(A)(1−P(A))P(B)(1−P(B))]`
+
+clamped to the range that is mathematically possible. ρ is fixed and small:
+
+| Pair | ρ |
+|---|---|
+| Same-team moneyline and spread | +0.75 |
+| Opposite-team moneyline and spread | −0.55 |
+| Favorite and over | +0.25 |
+| Underdog and under | +0.22 |
+| Favorite and under | −0.12 |
+| Quarterback passing and a teammate's receiving | +0.55 |
+| Two props on the same player | +0.28 |
+| Player points and that team's side | +0.30 |
+| Points or passing yards and the over | +0.35 |
+| Teammate props | +0.15 |
+
+Different games are then multiplied. That treats SGPx games as independent. The number is a research adjustment, not the correlation a book uses when it prices an SGP. The card says so. If no combo falls in a tier, the tier is left empty.
+
 ## What a missing number means
 
 Empty odds, a null edge, or an absent book are data. The app is not supposed to fill them in.

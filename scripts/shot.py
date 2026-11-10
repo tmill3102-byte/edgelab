@@ -56,11 +56,27 @@ def main():
 
         page.click("button[data-act='use-build']")
         page.wait_for_selector(".book")
+        shot(page, "slip-browns.png")
+
+        page.goto(BASE + "#builder", wait_until="networkidle")
+        page.fill("#sentence", "4 leg parlay knicks today +400")
+        page.click("button[data-act='build']")
+        page.wait_for_selector("#build-result .leg")
+        page.click("button[data-act='use-build']")
+        page.wait_for_selector(".book")
         shot(page, "slip.png")
 
         page.click("button[data-tab='tracker']")
         page.wait_for_selector("h1")
         shot(page, "tracker.png")
+
+        page.goto(BASE + "#sgp", wait_until="networkidle")
+        page.wait_for_selector("h1")
+        page.wait_for_selector(".sgp-leg")
+        shot(page, "sgp.png")
+        page.click("button[data-mode='sgpx']")
+        page.wait_for_timeout(200)
+        shot(page, "sgpx.png")
         browser.close()
     if errors:
         print("PAGE ERRORS:")
