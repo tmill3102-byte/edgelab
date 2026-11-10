@@ -150,18 +150,11 @@
     "market": "ML",
     "book": "draftkings"
   },
-<<<<<<< HEAD
-  "model_summary": "Projected margin PHX +2.3 \u00b7 total 230.0",
-  "flags": [],
-  "notes": [
-    "ESPN matchup predictor: PHX 65.8% (implied margin +5.1); blended 50/50 with own rating."
-=======
   "model_summary": "Margin PHX -4.8 \u00b7 total 228.4",
   "flags": [],
   "notes": [
     "ESPN matchup predictor: PHX 65.8% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin PHX -4.7, total 228.4; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
   ],
   "injuries": {
     "home": [
@@ -228,48 +221,6 @@
               "side": "away",
               "line": null,
               "odds": 140.0,
-<<<<<<< HEAD
-              "model_raw": 0.4281,
-              "model_prob": 0.414,
-              "market_prob": 0.3998,
-              "fair_odds": 142,
-              "edge": 0.0141,
-              "edge_at_price": -0.0027,
-              "ev": -0.0065,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes LAC 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +146 or better."
-            },
-            "fanduel": {
-              "market": "ML",
-              "selection": "LAC ML",
-              "side": "away",
-              "line": null,
-              "odds": 138.0,
-              "model_raw": 0.4281,
-              "model_prob": 0.4158,
-              "market_prob": 0.4035,
-              "fair_odds": 141,
-              "edge": 0.0123,
-              "edge_at_price": -0.0044,
-              "ev": -0.0104,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-=======
               "model_raw": 0.648,
               "model_prob": 0.4344,
               "market_prob": 0.3998,
@@ -284,7 +235,6 @@
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
                 "v2 margin PHX -4.8, total 228.37.",
                 "Note: model far from market (65% vs 40%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [],
               "caution": [],
@@ -292,54 +242,11 @@
               "next_step": "Playable at +135 or better (current +140); re-check injuries/line 60 min before start.",
               "proven": true
             },
-            "betrivers": {
+            "fanduel": {
               "market": "ML",
               "selection": "LAC ML",
               "side": "away",
               "line": null,
-<<<<<<< HEAD
-              "odds": 125.0,
-              "model_raw": 0.4281,
-              "model_prob": 0.4262,
-              "market_prob": 0.4242,
-              "fair_odds": 135,
-              "edge": 0.0019,
-              "edge_at_price": -0.0183,
-              "ev": -0.0411,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC ML: 42.8% before shrink, this book's no-vig 42.4%.",
-                "Projected margin PHX +2.3, total 230.0.",
-                "LAC L5 LLLLW, PHX L5 LLWWL.",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
-              "next_step": "Pass. Only interesting at +139 or better."
-            },
-            "mybookieag": {
-              "market": "ML",
-              "selection": "LAC ML",
-              "side": "away",
-              "line": null,
-              "odds": 134.0,
-              "model_raw": 0.4281,
-              "model_prob": 0.4176,
-              "market_prob": 0.407,
-              "fair_odds": 139,
-              "edge": 0.0105,
-              "edge_at_price": -0.0098,
-              "ev": -0.0229,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-=======
               "odds": 138.0,
               "model_raw": 0.648,
               "model_prob": 0.4376,
@@ -355,7 +262,6 @@
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
                 "v2 margin PHX -4.8, total 228.37.",
                 "Note: model far from market (65% vs 40%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [],
               "caution": [],
@@ -363,8 +269,6 @@
               "next_step": "Playable at +133 or better (current +138); re-check injuries/line 60 min before start.",
               "proven": true
             },
-<<<<<<< HEAD
-=======
             "betrivers": {
               "market": "ML",
               "selection": "LAC ML",
@@ -419,55 +323,12 @@
               "next_step": "Playable at +131 or better (current +134); re-check injuries/line 60 min before start.",
               "proven": true
             },
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             "betmgm": {
               "market": "ML",
               "selection": "LAC ML",
               "side": "away",
               "line": null,
               "odds": 145.0,
-<<<<<<< HEAD
-              "model_raw": 0.4281,
-              "model_prob": 0.4094,
-              "market_prob": 0.3908,
-              "fair_odds": 144,
-              "edge": 0.0187,
-              "edge_at_price": 0.0013,
-              "ev": 0.0031,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes LAC 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Monitor only; if anything, wait for +149 or better and re-check injuries near start."
-            },
-            "betonlineag": {
-              "market": "ML",
-              "selection": "LAC ML",
-              "side": "away",
-              "line": null,
-              "odds": 145.0,
-              "model_raw": 0.4281,
-              "model_prob": 0.412,
-              "market_prob": 0.396,
-              "fair_odds": 143,
-              "edge": 0.0161,
-              "edge_at_price": 0.0039,
-              "ev": 0.0095,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-=======
               "model_raw": 0.648,
               "model_prob": 0.4264,
               "market_prob": 0.3908,
@@ -482,7 +343,6 @@
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
                 "v2 margin PHX -4.8, total 228.37.",
                 "Note: model far from market (65% vs 39%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [],
               "caution": [],
@@ -490,8 +350,6 @@
               "next_step": "Playable at +139 or better (current +145); re-check injuries/line 60 min before start.",
               "proven": true
             },
-<<<<<<< HEAD
-=======
             "betonlineag": {
               "market": "ML",
               "selection": "LAC ML",
@@ -519,34 +377,12 @@
               "next_step": "Playable at +137 or better (current +145); re-check injuries/line 60 min before start.",
               "proven": true
             },
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             "lowvig": {
               "market": "ML",
               "selection": "LAC ML",
               "side": "away",
               "line": null,
               "odds": 146.0,
-<<<<<<< HEAD
-              "model_raw": 0.4281,
-              "model_prob": 0.4115,
-              "market_prob": 0.395,
-              "fair_odds": 143,
-              "edge": 0.0166,
-              "edge_at_price": 0.005,
-              "ev": 0.0124,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes LAC 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Monitor only; if anything, wait for +148 or better and re-check injuries near start."
-=======
               "model_raw": 0.648,
               "model_prob": 0.4301,
               "market_prob": 0.395,
@@ -567,7 +403,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Playable at +137 or better (current +146); re-check injuries/line 60 min before start.",
               "proven": true
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "bovada": {
               "market": "ML",
@@ -575,27 +410,6 @@
               "side": "away",
               "line": null,
               "odds": 145.0,
-<<<<<<< HEAD
-              "model_raw": 0.4281,
-              "model_prob": 0.4107,
-              "market_prob": 0.3933,
-              "fair_odds": 143,
-              "edge": 0.0174,
-              "edge_at_price": 0.0025,
-              "ev": 0.0062,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes LAC 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Monitor only; if anything, wait for +148 or better and re-check injuries near start."
-=======
               "model_raw": 0.648,
               "model_prob": 0.4287,
               "market_prob": 0.3933,
@@ -616,7 +430,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Playable at +138 or better (current +145); re-check injuries/line 60 min before start.",
               "proven": true
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "betus": {
               "market": "ML",
@@ -624,27 +437,6 @@
               "side": "away",
               "line": null,
               "odds": 142.0,
-<<<<<<< HEAD
-              "model_raw": 0.4281,
-              "model_prob": 0.4135,
-              "market_prob": 0.3989,
-              "fair_odds": 142,
-              "edge": 0.0146,
-              "edge_at_price": 0.0003,
-              "ev": 0.0007,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC win 42.8% vs market no-vig 40.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes LAC 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Monitor only; if anything, wait for +147 or better and re-check injuries near start."
-=======
               "model_raw": 0.648,
               "model_prob": 0.4336,
               "market_prob": 0.3989,
@@ -665,7 +457,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Playable at +135 or better (current +142); re-check injuries/line 60 min before start.",
               "proven": true
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         },
@@ -678,48 +469,6 @@
               "side": "home",
               "line": null,
               "odds": -167.0,
-<<<<<<< HEAD
-              "model_raw": 0.5719,
-              "model_prob": 0.586,
-              "market_prob": 0.6002,
-              "fair_odds": -142,
-              "edge": -0.0141,
-              "edge_at_price": -0.0394,
-              "ev": -0.063,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes PHX 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -135 or better."
-            },
-            "fanduel": {
-              "market": "ML",
-              "selection": "PHX ML",
-              "side": "home",
-              "line": null,
-              "odds": -164.0,
-              "model_raw": 0.5719,
-              "model_prob": 0.5842,
-              "market_prob": 0.5965,
-              "fair_odds": -141,
-              "edge": -0.0123,
-              "edge_at_price": -0.037,
-              "ev": -0.0596,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-=======
               "model_raw": 0.352,
               "model_prob": 0.5656,
               "market_prob": 0.6002,
@@ -734,7 +483,6 @@
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
                 "v2 margin PHX -4.8, total 228.37.",
                 "Note: model far from market (35% vs 60%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [],
               "caution": [],
@@ -742,54 +490,11 @@
               "next_step": "Pass. Only interesting at -124 or better.",
               "proven": true
             },
-            "betrivers": {
+            "fanduel": {
               "market": "ML",
               "selection": "PHX ML",
               "side": "home",
               "line": null,
-<<<<<<< HEAD
-              "odds": -152.0,
-              "model_raw": 0.5719,
-              "model_prob": 0.5738,
-              "market_prob": 0.5758,
-              "fair_odds": -135,
-              "edge": -0.0019,
-              "edge_at_price": -0.0293,
-              "ev": -0.0487,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX ML: 57.2% before shrink, this book's no-vig 57.6%.",
-                "Projected margin PHX +2.3, total 230.0.",
-                "LAC L5 LLLLW, PHX L5 LLWWL.",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
-              "next_step": "Pass. Only interesting at -129 or better."
-            },
-            "mybookieag": {
-              "market": "ML",
-              "selection": "PHX ML",
-              "side": "home",
-              "line": null,
-              "odds": -165.0,
-              "model_raw": 0.5719,
-              "model_prob": 0.5824,
-              "market_prob": 0.593,
-              "fair_odds": -139,
-              "edge": -0.0105,
-              "edge_at_price": -0.0402,
-              "ev": -0.0646,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-=======
               "odds": -164.0,
               "model_raw": 0.352,
               "model_prob": 0.5624,
@@ -805,7 +510,6 @@
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
                 "v2 margin PHX -4.8, total 228.37.",
                 "Note: model far from market (35% vs 60%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [],
               "caution": [],
@@ -813,8 +517,6 @@
               "next_step": "Pass. Only interesting at -123 or better.",
               "proven": true
             },
-<<<<<<< HEAD
-=======
             "betrivers": {
               "market": "ML",
               "selection": "PHX ML",
@@ -869,34 +571,12 @@
               "next_step": "Pass. Only interesting at -121 or better.",
               "proven": true
             },
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             "betmgm": {
               "market": "ML",
               "selection": "PHX ML",
               "side": "home",
               "line": null,
               "odds": -175.0,
-<<<<<<< HEAD
-              "model_raw": 0.5719,
-              "model_prob": 0.5906,
-              "market_prob": 0.6092,
-              "fair_odds": -144,
-              "edge": -0.0187,
-              "edge_at_price": -0.0458,
-              "ev": -0.072,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes PHX 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -138 or better."
-=======
               "model_raw": 0.352,
               "model_prob": 0.5736,
               "market_prob": 0.6092,
@@ -917,7 +597,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -128 or better.",
               "proven": true
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "betonlineag": {
               "market": "ML",
@@ -925,22 +604,6 @@
               "side": "home",
               "line": null,
               "odds": -165.0,
-<<<<<<< HEAD
-              "model_raw": 0.5719,
-              "model_prob": 0.588,
-              "market_prob": 0.604,
-              "fair_odds": -143,
-              "edge": -0.0161,
-              "edge_at_price": -0.0347,
-              "ev": -0.0557,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-=======
               "model_raw": 0.352,
               "model_prob": 0.569,
               "market_prob": 0.604,
@@ -1009,7 +672,6 @@
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
                 "v2 margin PHX -4.8, total 228.37.",
                 "Note: model far from market (35% vs 61%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
               ],
               "flags": [],
               "caution": [],
@@ -1017,85 +679,12 @@
               "next_step": "Pass. Only interesting at -127 or better.",
               "proven": true
             },
-            "lowvig": {
-              "market": "ML",
-              "selection": "PHX ML",
-              "side": "home",
-              "line": null,
-              "odds": -165.0,
-<<<<<<< HEAD
-              "model_raw": 0.5719,
-              "model_prob": 0.5885,
-              "market_prob": 0.605,
-              "fair_odds": -143,
-              "edge": -0.0166,
-              "edge_at_price": -0.0342,
-              "ev": -0.0549,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes PHX 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -136 or better."
-            },
-            "bovada": {
-              "market": "ML",
-              "selection": "PHX ML",
-              "side": "home",
-              "line": null,
-              "odds": -170.0,
-              "model_raw": 0.5719,
-              "model_prob": 0.5893,
-              "market_prob": 0.6067,
-              "fair_odds": -143,
-              "edge": -0.0174,
-              "edge_at_price": -0.0403,
-              "ev": -0.0641,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes PHX 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -137 or better."
-            },
             "betus": {
               "market": "ML",
               "selection": "PHX ML",
               "side": "home",
               "line": null,
               "odds": -165.0,
-              "model_raw": 0.5719,
-              "model_prob": 0.5865,
-              "market_prob": 0.6011,
-              "fair_odds": -142,
-              "edge": -0.0146,
-              "edge_at_price": -0.0361,
-              "ev": -0.0581,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX win 57.2% vs market no-vig 60.0%.",
-                "Projected margin PHX +2.3 (ratings PHX -3.5, LAC -2.2, HFA 2.3).",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes PHX 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -135 or better."
-=======
               "model_raw": 0.352,
               "model_prob": 0.5664,
               "market_prob": 0.6011,
@@ -1116,7 +705,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -125 or better.",
               "proven": true
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         }
@@ -1126,262 +714,6 @@
       "market": "Spread",
       "sides": [
         {
-<<<<<<< HEAD
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -112.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5219,
-              "market_prob": 0.5043,
-              "fair_odds": -109,
-              "edge": 0.0176,
-              "edge_at_price": -0.0064,
-              "ev": -0.0121,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -105 or better."
-            },
-            "fanduel": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -105.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5143,
-              "market_prob": 0.4892,
-              "fair_odds": -106,
-              "edge": 0.0252,
-              "edge_at_price": 0.0021,
-              "ev": 0.0042,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5: 54.0% before shrink, this book's no-vig 48.9%.",
-                "Projected margin PHX +2.3, total 230.0.",
-                "LAC L5 LLLLW, PHX L5 LLWWL.",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
-              "next_step": "Monitor only; if anything, wait for -102 or better and re-check injuries near start."
-            },
-            "betrivers": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -117.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5256,
-              "market_prob": 0.5117,
-              "fair_odds": -111,
-              "edge": 0.0139,
-              "edge_at_price": -0.0136,
-              "ev": -0.0252,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -106 or better."
-            },
-            "mybookieag": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -110.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5198,
-              "market_prob": 0.5,
-              "fair_odds": -108,
-              "edge": 0.0198,
-              "edge_at_price": -0.0041,
-              "ev": -0.0077,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -104 or better."
-            },
-            "betmgm": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -110.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5198,
-              "market_prob": 0.5,
-              "fair_odds": -108,
-              "edge": 0.0198,
-              "edge_at_price": -0.0041,
-              "ev": -0.0077,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -104 or better."
-            },
-            "betonlineag": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -115.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5252,
-              "market_prob": 0.5108,
-              "fair_odds": -111,
-              "edge": 0.0143,
-              "edge_at_price": -0.0097,
-              "ev": -0.0182,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -106 or better."
-            },
-            "lowvig": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -111.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5255,
-              "market_prob": 0.5115,
-              "fair_odds": -111,
-              "edge": 0.014,
-              "edge_at_price": -0.0006,
-              "ev": -0.0011,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -106 or better."
-            },
-            "bovada": {
-              "market": "Spread",
-              "selection": "LAC +4",
-              "side": "away",
-              "line": 4.0,
-              "odds": -115.0,
-              "model_raw": 0.5571,
-              "model_prob": 0.534,
-              "market_prob": 0.5108,
-              "fair_odds": -115,
-              "edge": 0.0231,
-              "edge_at_price": -0.0009,
-              "ev": -0.0016,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +4: 55.7% before shrink, this book's no-vig 51.1%.",
-                "Projected margin PHX +2.3, total 230.0.",
-                "LAC L5 LLLLW, PHX L5 LLWWL.",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
-              "next_step": "Pass. Only interesting at -110 or better."
-            },
-            "betus": {
-              "market": "Spread",
-              "selection": "LAC +3.5",
-              "side": "away",
-              "line": 3.5,
-              "odds": -110.0,
-              "model_raw": 0.5395,
-              "model_prob": 0.5198,
-              "market_prob": 0.5,
-              "fair_odds": -108,
-              "edge": 0.0198,
-              "edge_at_price": -0.0041,
-              "ev": -0.0077,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model LAC +3.5 covers 54.0% vs market 50.4%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+4.5 -> +3.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -104 or better."
-            }
-          }
-        },
-        {
-=======
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
           "side": "home",
           "offers": {
             "draftkings": {
@@ -1390,27 +722,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -108.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4781,
-              "market_prob": 0.4957,
-              "fair_odds": 109,
-              "edge": -0.0176,
-              "edge_at_price": -0.0412,
-              "ev": -0.0793,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +113 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.4957,
               "market_prob": 0.4957,
@@ -1431,7 +742,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "fanduel": {
               "market": "Spread",
@@ -1439,27 +749,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -115.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4857,
-              "market_prob": 0.5108,
-              "fair_odds": 106,
-              "edge": -0.0252,
-              "edge_at_price": -0.0492,
-              "ev": -0.092,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5: 46.0% before shrink, this book's no-vig 51.1%.",
-                "Projected margin PHX +2.3, total 230.0.",
-                "LAC L5 LLLLW, PHX L5 LLWWL.",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
-              "next_step": "Pass. Only interesting at +110 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.5108,
               "market_prob": 0.5108,
@@ -1480,7 +769,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "betrivers": {
               "market": "Spread",
@@ -1488,27 +776,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -106.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4744,
-              "market_prob": 0.4883,
-              "fair_odds": 111,
-              "edge": -0.0139,
-              "edge_at_price": -0.0402,
-              "ev": -0.078,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +115 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.4883,
               "market_prob": 0.4883,
@@ -1529,7 +796,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "mybookieag": {
               "market": "Spread",
@@ -1537,27 +803,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -110.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4802,
-              "market_prob": 0.5,
-              "fair_odds": 108,
-              "edge": -0.0198,
-              "edge_at_price": -0.0436,
-              "ev": -0.0832,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +112 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.5,
               "market_prob": 0.5,
@@ -1578,7 +823,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "betmgm": {
               "market": "Spread",
@@ -1586,27 +830,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -110.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4802,
-              "market_prob": 0.5,
-              "fair_odds": 108,
-              "edge": -0.0198,
-              "edge_at_price": -0.0436,
-              "ev": -0.0832,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +112 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.5,
               "market_prob": 0.5,
@@ -1627,7 +850,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "betonlineag": {
               "market": "Spread",
@@ -1635,27 +857,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -105.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4748,
-              "market_prob": 0.4892,
-              "fair_odds": 111,
-              "edge": -0.0143,
-              "edge_at_price": -0.0374,
-              "ev": -0.073,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +115 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
@@ -1676,7 +877,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "lowvig": {
               "market": "Spread",
@@ -1684,27 +884,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -101.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4745,
-              "market_prob": 0.4885,
-              "fair_odds": 111,
-              "edge": -0.014,
-              "edge_at_price": -0.028,
-              "ev": -0.0557,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +115 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.4885,
               "market_prob": 0.4885,
@@ -1725,7 +904,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "bovada": {
               "market": "Spread",
@@ -1733,27 +911,6 @@
               "side": "home",
               "line": -4.0,
               "odds": -105.0,
-<<<<<<< HEAD
-              "model_raw": 0.4429,
-              "model_prob": 0.466,
-              "market_prob": 0.4892,
-              "fair_odds": 115,
-              "edge": -0.0231,
-              "edge_at_price": -0.0462,
-              "ev": -0.0873,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -4: 44.3% before shrink, this book's no-vig 48.9%.",
-                "Projected margin PHX +2.3, total 230.0.",
-                "LAC L5 LLLLW, PHX L5 LLWWL.",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "This book's price already reflects lineup, injury and market information the public model does not see. A small edge is often model noise.",
-              "next_step": "Pass. Only interesting at +119 or better."
-=======
               "model_raw": 0.242,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
@@ -1774,7 +931,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             },
             "betus": {
               "market": "Spread",
@@ -1782,27 +938,6 @@
               "side": "home",
               "line": -3.5,
               "odds": -110.0,
-<<<<<<< HEAD
-              "model_raw": 0.4605,
-              "model_prob": 0.4802,
-              "market_prob": 0.5,
-              "fair_odds": 108,
-              "edge": -0.0198,
-              "edge_at_price": -0.0436,
-              "ev": -0.0832,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model PHX -3.5 covers 46.0% vs market 49.6%.",
-                "Projected margin PHX +2.3 vs line PHX -3.5.",
-                "LAC L5 LLLLW (MOV -4.0), PHX L5 LLWWL (MOV -8.4)",
-                "PHX on a back-to-back (-1.5 pts)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +112 or better."
-=======
               "model_raw": 0.2547,
               "model_prob": 0.5,
               "market_prob": 0.5,
@@ -2071,7 +1206,6 @@
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
->>>>>>> 3385d13 (Ship engine v2 and a tighter scoreboard UI.)
             }
           }
         }
