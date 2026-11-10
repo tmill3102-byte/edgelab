@@ -62,6 +62,8 @@ The Odds API **$30 / month plan is 20,000 credits**. That pays for the full NBA,
 
 **What was not used.** ESPN's public DraftKings `propBets` feed does return American prices, but it does not label Over versus Under, so those rows are dropped rather than guessed. DraftKings' own website JSON is not a documented public API and is not called. No prop price is invented.
 
+DraftKings props for the DraftKings price come from the anonymous Ohio sportsbook JSON at `sportsbook-nash.draftkings.com/api/sportscontent/dkusoh/v1/leagues/...` (the feed the logged-out site loads). One league request plus one request per labelled market, at most 16 requests, cached 12 hours. Only Over/Under, and Anytime Scorer for touchdowns, are kept. Other books' prop prices still come from The Odds API when the credit plan buys them. If DraftKings refuses the request, that game says "Props not loaded for this game yet."
+
 The log prints `key_present`, `key_valid`, `x-requests-remaining`, `x-requests-used`, the sport, and the event id. It never prints the key.
 
 ## Project layout

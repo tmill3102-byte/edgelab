@@ -451,8 +451,9 @@ function renderGame() {
     const sides = Object.entries(prop.sides || {}).map(([side, offers]) => {
       const offer = offers[bookKey];
       if (!offer) return "";
+      const lineLabel = prop.stat === "anytime_td" ? "Anytime TD" : `${side} ${prop.line}`;
       return `<button type="button" class="odd big ${oddTone(offer.edge, offer.tier, offer.proven)}" data-act="prop" data-player="${esc(prop.player_id)}" data-stat="${esc(prop.stat)}" data-line="${esc(prop.line)}" data-side="${esc(side)}">
-        <b>${esc(side)} ${esc(prop.line)}</b>
+        <b>${esc(lineLabel)}</b>
         <span class="price num">${fmtAm(offer.odds)}</span>
       </button>`;
     }).join("");
@@ -831,22 +832,11 @@ function scopeLegs(spec, notes) {
   const teamLegs = spec.team ? universe.filter((leg) => matchTeam(leg, spec.team)) : [];
   if (spec.team && !teamLegs.length) notes.push(`No game matching “${spec.team}” in that window.`);
   const teamEvents = new Set(teamLegs.map((leg) => leg.event_id)).size;
-  let expanded = false;
-  let pool = universe;
-  // One leg per game, so a card needs that many different games.
-  if (teamLegs.length && teamEvents >= spec.legs) pool = teamLegs;
-  else if (teamLegs.length) {
-    expanded = true;
-    const league = teamLegs[0].league;
-    const sameLeague = universe.filter((leg) => leg.league === league);
-    if (sameLeague.length >= spec.legs) {
-      pool = sameLeague;
-      notes.push(`${spec.team} is in ${teamEvents} game(s). This card takes one leg per game, so the other legs are from the same sport. Same-game cards are on the SGP tab.`);
-    } else {
-      notes.push(`${spec.team} does not have enough games for ${spec.legs} legs, so the rest of that date is included.`);
-    }
+  if (spec.team && teamLegs.length) {
+    notes.push(`${spec.team} stays on that game. Same-game legs, and at least one of them is from this game.`);
+    return { pool: teamLegs, teamIds: new Set(teamLegs.map((leg) => leg.id)), expanded: false, sameGame: true, teamEvents };
   }
-  return { pool, teamIds: new Set(teamLegs.map((leg) => leg.id)), expanded };
+  return { pool: universe, teamIds: new Set(), expanded: false, sameGame: false, teamEvents: 0 };
 }
 
 function inBand(leg, minDec, maxDec) {
@@ -856,13 +846,13 @@ function inBand(leg, minDec, maxDec) {
   return dec >= minDec && dec <= maxDec;
 }
 
-function takePool(rows, rank, targetDec) {
+function takePool(rows, rank, targetDec, onePerEvent) {
   const scored = rows.slice();
   const legScore = (leg) => {
     const offer = offerPrimary(leg);
     const dec = amToDec(offer.odds);
     if (rank === "prob") return offer.model_prob;
-    if (rank === "plus") return offer.model_prob;
+    if (rank === "plus") return -Math.abs(Math.log(dec) - Math.log(2.4));
     const want = Math.pow(targetDec, 1 / 4);
     return -Math.abs(Math.log(dec) - Math.log(want)) + 0.05 * offer.model_prob;
   };
@@ -870,7 +860,7 @@ function takePool(rows, rank, targetDec) {
   const out = [];
   const seen = new Set();
   for (const leg of scored) {
-    if (seen.has(leg.event_id)) continue;
+    if (onePerEvent && seen.has(leg.event_id)) continue;
     seen.add(leg.event_id);
     out.push(leg);
     if (out.length >= 8) break;
@@ -878,13 +868,18 @@ function takePool(rows, rank, targetDec) {
   return out;
 }
 
-function priceCombo(combo, profile, targetDec) {
+function priceCombo(combo, profile, targetDec, sameGame) {
   const prob = combo.reduce((product, leg) => product * (offerPrimary(leg).model_prob || 0), 1);
   const dec = combo.reduce((product, leg) => product * amToDec(offerPrimary(leg).odds), 1);
   if (!(prob > 0) || !(dec > 1)) return null;
   const dist = Math.log(dec) - Math.log(targetDec);
   let score;
-  if (profile.rank === "prob") score = Math.log(prob) - 2 * Math.max(0, dist);
+  if (sameGame && profile.rank === "prob") score = Math.log(prob);
+  else if (sameGame && profile.rank === "plus") {
+    const plus = combo.filter((leg) => amToDec(offerPrimary(leg).odds) >= 1.9).length;
+    score = plus * 3 + Math.log(prob);
+  } else if (sameGame) score = -Math.abs(dist) + 0.35 * Math.log(prob);
+  else if (profile.rank === "prob") score = Math.log(prob) - 2 * Math.max(0, dist);
   else if (profile.rank === "plus") score = -Math.abs(dist) + 0.05 * Math.log(prob);
   else score = -Math.abs(dist) + 0.15 * Math.log(prob);
   return { combo, prob, dec, dist, score, ev: prob * dec - 1 };
@@ -894,38 +889,42 @@ function runBuild(spec) {
   const notes = [];
   const profile = RISK[spec.risk] || RISK.balanced;
   const scoped = scopeLegs(spec, notes);
+  const sameGame = !!scoped.sameGame;
+  const targetDec = amToDec(spec.target);
   let band = scoped.pool.filter((leg) => inBand(leg, profile.minDec, profile.maxDec));
-  if (band.length < spec.legs) {
+  if (!sameGame && band.length < spec.legs) {
     const wider = scoped.pool.filter((leg) => inBand(leg, profile.widenMin, profile.widenMax));
     if (wider.length > band.length) {
       band = wider;
       notes.push(`${spec.risk} widened the price band so the card could fill ${spec.legs} legs.`);
     }
   }
-  const targetDec = amToDec(spec.target);
-  let usable = takePool(band, profile.rank, targetDec);
+  const source = sameGame ? scoped.pool.filter((leg) => offerPrimary(leg)?.odds != null && offerPrimary(leg)?.model_prob > 0) : band;
+  let usable = takePool(source, profile.rank, targetDec, !sameGame);
   if (usable.length < 2) return { error: "Not enough priced legs in that risk band.", notes, spec };
-  const n = Math.min(spec.legs, usable.length);
-  if (n < spec.legs) notes.push(`Only ${usable.length} legs fit ${spec.risk}, so this is a ${n}-leg card.`);
   const must = scoped.teamIds;
-  let scored = [];
-  const consider = (requireTeam) => {
+  const consider = (size) => {
     const found = [];
-    for (const combo of combinations(usable, n)) {
-      if (new Set(combo.map((leg) => leg.event_id)).size !== combo.length) continue;
+    for (const combo of combinations(usable, size)) {
+      if (!sameGame && new Set(combo.map((leg) => leg.event_id)).size !== combo.length) continue;
+      if (sameGame && new Set(combo.map((leg) => leg.event_id)).size !== 1) continue;
       if (combo.some((a, i) => combo.slice(i + 1).some((b) => conflict(a, b)))) continue;
-      if (requireTeam && must.size && !combo.some((leg) => must.has(leg.id))) continue;
-      const row = priceCombo(combo, profile, targetDec);
+      if (must.size && !combo.some((leg) => must.has(leg.id))) continue;
+      const row = priceCombo(combo, profile, targetDec, sameGame);
       if (row) found.push(row);
     }
     return found;
   };
-  scored = consider(true);
-  if (!scored.length && must.size) {
-    notes.push("No combo in this risk band could keep the named team, so that requirement was dropped.");
-    scored = consider(false);
+  let n = Math.min(spec.legs, usable.length);
+  let scored = [];
+  while (n >= 2 && !scored.length) {
+    scored = consider(n);
+    if (!scored.length) n -= 1;
   }
-  if (!scored.length) return { error: "No non-conflicting combination of priced legs matched.", notes, spec };
+  if (n < spec.legs && scored.length) notes.push(`Only ${n} legs fit without a conflict, so this is a ${n}-leg card.`);
+  if (!scored.length) {
+    return { error: spec.team ? `No ${spec.risk} card stays on ${spec.team}.` : "No non-conflicting combination of priced legs matched.", notes, spec };
+  }
   scored.sort((a, b) => b.score - a.score);
   const best = scored[0];
   const honest = [];
@@ -953,7 +952,7 @@ function runBuild(spec) {
     spec, notes, honest, expanded: scoped.expanded,
     legs: best.combo,
     weak,
-    correlation: ["One leg per game. Same-game cards are on the SGP tab.", ...corrNotes(best.combo)],
+    correlation: [sameGame ? "Same-game legs from the named team. A book prices that parlay with its own correlation." : "One leg per game.", ...corrNotes(best.combo)],
     prob: best.prob,
     fair: decToAm(1 / best.prob),
     payout: decToAm(best.dec),

@@ -21,6 +21,7 @@ from betlib.leagues import LEAGUES  # noqa: E402
 from betlib.models import am_to_dec, make_pick, no_vig  # noqa: E402
 from books import catalog  # noqa: E402
 from props_feed import refresh_props  # noqa: E402
+from dk_props import compare_prices, merge_prop_payload, refresh as refresh_dk  # noqa: E402
 
 DATA = ROOT / "site" / "data"
 KEEP = ("market", "selection", "side", "line", "odds", "model_raw", "model_prob", "market_prob",
@@ -597,6 +598,8 @@ def props_for_game(league, res, payload):
                 )
                 if not pick:
                     continue
+                if stat == "anytime_td":
+                    pick["selection"] = f"{player} Anytime TD"
                 pick["next_step"] = analysis._next_step(pick)
                 group_sides.setdefault(side, {})[book_key] = strip_pick(pick, league)
         if not group_sides:
@@ -684,6 +687,16 @@ def main():
     )
     if once_flag.exists():
         once_flag.unlink()
+    dk_once = DATA / "dk-props-once"
+    dk_events, dk_info = refresh_dk(force=dk_once.exists())
+    if dk_once.exists():
+        print("dk props: one-shot flag set")
+        dk_once.unlink()
+    if dk_events and prop_payloads and not dk_info.get("from_cache"):
+        dk_info["check"] = compare_prices(dk_events, prop_payloads)
+        print("dk props check", json.dumps(dk_info["check"]))
+    elif dk_info.get("blocked"):
+        print("dk props: feed blocked, using Odds API props only where they exist")
     seen_books = set()
     for event in api_events:
         for book in event.get("bookmakers") or []:
@@ -800,6 +813,8 @@ def main():
             apply_api(markets, league, res, api_event, event_urls)
         props = []
         prop_payload = match_api_event(game, [row for row in prop_payloads if SPORT_TO_LEAGUE.get(row.get("sport_key")) == league])
+        dk_payload = match_api_event(game, [row for row in dk_events if SPORT_TO_LEAGUE.get(row.get("sport_key")) == league])
+        prop_payload = merge_prop_payload(prop_payload, dk_payload)
         if prop_payload:
             props = props_for_game(league, res, prop_payload)
         full = _full_game(row, res, markets, event_urls, props, odds_feed="oddsapi" if api_event else "espn")
@@ -933,7 +948,7 @@ def main():
         "edges": len(edges),
         "legs": len(legs),
         "books": catalog(seen_books),
-        "odds_api": _odds_meta(snapshot, check, prop_payloads, prop_budget, snapshots),
+        "odds_api": _odds_meta(snapshot, check, prop_payloads, prop_budget, snapshots, dk_info),
         "schema": "edgelab.data/v1",
     }
     write_json("meta.json", meta)
@@ -1125,7 +1140,7 @@ def _report():
     return {"report": report, "plays": plays}
 
 
-def _odds_meta(snapshot, check, prop_payloads, prop_budget=None, snapshots=None):
+def _odds_meta(snapshot, check, prop_payloads, prop_budget=None, snapshots=None, dk_info=None):
     odds = (check or {}).get("odds") or {}
     budget = prop_budget or {}
     meta = {
@@ -1144,6 +1159,7 @@ def _odds_meta(snapshot, check, prop_payloads, prop_budget=None, snapshots=None)
         "props_fetched": budget.get("fetched", 0),
         "props_cached": budget.get("cached", len(prop_payloads)),
         "props_budget": budget,
+        "draftkings_props": dk_info or None,
         "note": None,
     }
     if not snapshot:
