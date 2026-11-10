@@ -24,12 +24,23 @@
   },
   "score": null,
   "analyzed": true,
-  "odds_feed": "espn",
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betmgm",
+    "betonlineag",
+    "betrivers",
+    "betus",
+    "bovada",
+    "draftkings",
+    "fanduel",
+    "lowvig",
+    "mybookieag"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/34118232"
+    "draftkings": "https://sportsbook.draftkings.com/event/34118232",
+    "fanduel": "https://sportsbook.fanduel.com/football/nfl/jacksonville-jaguars-%40-tennessee-titans-36275762",
+    "betrivers": "https://oh.betrivers.com/?page=sportsbook#event/1028824797",
+    "betmgm": "https://sports.oh.betmgm.com/en/sports/events/jacksonville-jaguars-@-tennessee-titans-6%3A44030"
   },
   "lines": {
     "draftkings": {
@@ -42,6 +53,94 @@
       "total": 46.5,
       "over_odds": -110.0,
       "under_odds": -110.0
+    },
+    "betus": {
+      "ml_home": 390.0,
+      "ml_away": -500.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -110.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -110.0,
+      "total": 47.0,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "fanduel": {
+      "ml_home": 430.0,
+      "ml_away": -590.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -115.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -105.0,
+      "total": 46.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0
+    },
+    "betonlineag": {
+      "ml_home": 415.0,
+      "ml_away": -550.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -111.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -109.0,
+      "total": 46.5,
+      "over_odds": -108.0,
+      "under_odds": -112.0
+    },
+    "lowvig": {
+      "ml_home": 415.0,
+      "ml_away": -550.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -108.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -102.0,
+      "total": 46.5,
+      "over_odds": -105.0,
+      "under_odds": -109.0
+    },
+    "betrivers": {
+      "ml_home": 480.0,
+      "ml_away": -715.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -113.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -109.0,
+      "total": 46.5,
+      "over_odds": -114.0,
+      "under_odds": -109.0
+    },
+    "mybookieag": {
+      "ml_home": 420.0,
+      "ml_away": -599.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -110.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -110.0,
+      "total": 46.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "betmgm": {
+      "ml_home": 425.0,
+      "ml_away": -550.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -110.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -108.0,
+      "total": 46.5,
+      "over_odds": -108.0,
+      "under_odds": -110.0
+    },
+    "bovada": {
+      "ml_home": 410.0,
+      "ml_away": -550.0,
+      "spread_home": 10.5,
+      "spread_home_odds": -112.0,
+      "spread_away": -10.5,
+      "spread_away_odds": -108.0,
+      "total": 46.0,
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
   "badge": null,
@@ -144,18 +243,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TEN win 14.3% vs market no-vig 17.3%.",
-                "v2 projected margin TEN -14.4 (ratings TEN -7.0, JAX +8.9, home edge 1.5); raw model 14.3%.",
-                "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
               "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Carnell Tate (Questionable)",
-                "line move: price drifted against this side (+114 -> +455)"
-              ],
-              "case_against": "Market makes TEN 17%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +490 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 390.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1967,
+              "market_prob": 0.1967,
+              "fair_odds": 408,
+              "edge": 0.0,
+              "edge_at_price": -0.0074,
+              "ev": -0.0361,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +419 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 430.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1808,
+              "market_prob": 0.1808,
+              "fair_odds": 453,
+              "edge": 0.0,
+              "edge_at_price": -0.0079,
+              "ev": -0.0419,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +464 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 415.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1866,
+              "market_prob": 0.1866,
+              "fair_odds": 436,
+              "edge": -0.0,
+              "edge_at_price": -0.0075,
+              "ev": -0.0388,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +447 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 415.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1866,
+              "market_prob": 0.1866,
+              "fair_odds": 436,
+              "edge": -0.0,
+              "edge_at_price": -0.0075,
+              "ev": -0.0388,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +447 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 480.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1642,
+              "market_prob": 0.1642,
+              "fair_odds": 509,
+              "edge": 0.0,
+              "edge_at_price": -0.0082,
+              "ev": -0.0474,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +521 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 420.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1833,
+              "market_prob": 0.1833,
+              "fair_odds": 446,
+              "edge": 0.0,
+              "edge_at_price": -0.009,
+              "ev": -0.0469,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +456 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 425.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1837,
+              "market_prob": 0.1837,
+              "fair_odds": 444,
+              "edge": -0.0,
+              "edge_at_price": -0.0067,
+              "ev": -0.0353,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +455 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "TEN ML",
+              "side": "home",
+              "line": null,
+              "odds": 410.0,
+              "model_raw": 0.1431,
+              "model_prob": 0.1881,
+              "market_prob": 0.1881,
+              "fair_odds": 432,
+              "edge": 0.0,
+              "edge_at_price": -0.0079,
+              "ev": -0.0405,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN ML: 14.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +442 or better.",
               "proven": false
             }
           }
@@ -179,15 +482,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model JAX win 85.7% vs market no-vig 82.7%.",
-                "v2 projected margin TEN -14.4 (ratings TEN -7.0, JAX +8.9, home edge 1.5); raw model 85.7%.",
-                "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes JAX 83%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -429 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -500.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8033,
+              "market_prob": 0.8033,
+              "fair_odds": -408,
+              "edge": 0.0,
+              "edge_at_price": -0.0301,
+              "ev": -0.0361,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -371 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -590.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8192,
+              "market_prob": 0.8192,
+              "fair_odds": -453,
+              "edge": 0.0,
+              "edge_at_price": -0.0358,
+              "ev": -0.0419,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -408 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -550.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8134,
+              "market_prob": 0.8134,
+              "fair_odds": -436,
+              "edge": 0.0,
+              "edge_at_price": -0.0328,
+              "ev": -0.0388,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -394 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -550.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8134,
+              "market_prob": 0.8134,
+              "fair_odds": -436,
+              "edge": 0.0,
+              "edge_at_price": -0.0328,
+              "ev": -0.0388,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -394 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -715.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8358,
+              "market_prob": 0.8358,
+              "fair_odds": -509,
+              "edge": 0.0,
+              "edge_at_price": -0.0415,
+              "ev": -0.0474,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -454 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -599.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8167,
+              "market_prob": 0.8167,
+              "fair_odds": -446,
+              "edge": 0.0,
+              "edge_at_price": -0.0402,
+              "ev": -0.0469,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -402 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -550.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8163,
+              "market_prob": 0.8163,
+              "fair_odds": -444,
+              "edge": -0.0,
+              "edge_at_price": -0.0299,
+              "ev": -0.0353,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -401 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "JAX ML",
+              "side": "away",
+              "line": null,
+              "odds": -550.0,
+              "model_raw": 0.8569,
+              "model_prob": 0.8119,
+              "market_prob": 0.8119,
+              "fair_odds": -432,
+              "edge": 0.0,
+              "edge_at_price": -0.0343,
+              "ev": -0.0405,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX ML: 85.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -390 or better.",
               "proven": false
             }
           }
@@ -216,16 +726,223 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TEN +10.5 covers 38.6% vs market 50.4%.",
-                "Projected margin TEN -14.4 vs line TEN +10.5.",
-                "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
               "flags": [],
-              "caution": [
-                "injury news: key player status uncertain - Carnell Tate (Questionable)"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -110.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -115.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43.",
+                "Note: model far from market (39% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -111.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5022,
+              "market_prob": 0.5022,
+              "fair_odds": -101,
+              "edge": 0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -108.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.507,
+              "market_prob": 0.507,
+              "fair_odds": -103,
+              "edge": 0.0,
+              "edge_at_price": -0.0123,
+              "ev": -0.0236,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43.",
+                "Note: model far from market (39% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -113.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.0262,
+              "ev": -0.0495,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -110.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -110.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5022,
+              "market_prob": 0.5022,
+              "fair_odds": -101,
+              "edge": -0.0,
+              "edge_at_price": -0.0216,
+              "ev": -0.0413,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "TEN +10.5",
+              "side": "home",
+              "line": 10.5,
+              "odds": -112.0,
+              "model_raw": 0.3863,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TEN +10.5: 38.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
@@ -250,16 +967,223 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model JAX -10.5 covers 61.4% vs market 49.6%.",
-                "Projected margin TEN -14.4 vs line TEN +10.5.",
-                "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
               "flags": [],
-              "caution": [
-                "line move: spread moved against this side (-2.5 -> -10.5)"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -110.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -105.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43.",
+                "Note: model far from market (61% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -109.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.4978,
+              "market_prob": 0.4978,
+              "fair_odds": 101,
+              "edge": 0.0,
+              "edge_at_price": -0.0237,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -102.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.493,
+              "market_prob": 0.493,
+              "fair_odds": 103,
+              "edge": 0.0,
+              "edge_at_price": -0.0119,
+              "ev": -0.0236,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43.",
+                "Note: model far from market (61% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -109.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0258,
+              "ev": -0.0495,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -110.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -108.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.4978,
+              "market_prob": 0.4978,
+              "fair_odds": 101,
+              "edge": -0.0,
+              "edge_at_price": -0.0214,
+              "ev": -0.0413,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "JAX -10.5",
+              "side": "away",
+              "line": -10.5,
+              "odds": -108.0,
+              "model_raw": 0.6137,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model JAX -10.5: 61.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
@@ -289,17 +1213,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 46.5: 46.9% vs market 50.0%.",
-                "Projected total 45.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 45.5 -> 46.5.",
-                "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
               "flags": [],
-              "caution": [
-                "line move: total already moved toward over (45.5 -> 46.5); value may be gone"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Over 47",
+              "side": "over",
+              "line": 47.0,
+              "odds": -110.0,
+              "model_raw": 0.4547,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 47: 45.5%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Over 46.5",
+              "side": "over",
+              "line": 46.5,
+              "odds": -105.0,
+              "model_raw": 0.469,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 46.5",
+              "side": "over",
+              "line": 46.5,
+              "odds": -108.0,
+              "model_raw": 0.469,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 46.5",
+              "side": "over",
+              "line": 46.5,
+              "odds": -105.0,
+              "model_raw": 0.469,
+              "model_prob": 0.4955,
+              "market_prob": 0.4955,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0167,
+              "ev": -0.0326,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 46.5",
+              "side": "over",
+              "line": 46.5,
+              "odds": -114.0,
+              "model_raw": 0.469,
+              "model_prob": 0.5053,
+              "market_prob": 0.5053,
+              "fair_odds": -102,
+              "edge": -0.0,
+              "edge_at_price": -0.0274,
+              "ev": -0.0515,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Over 46.5",
+              "side": "over",
+              "line": 46.5,
+              "odds": -110.0,
+              "model_raw": 0.469,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Over 46.5",
+              "side": "over",
+              "line": 46.5,
+              "odds": -108.0,
+              "model_raw": 0.469,
+              "model_prob": 0.4978,
+              "market_prob": 0.4978,
+              "fair_odds": 101,
+              "edge": -0.0,
+              "edge_at_price": -0.0214,
+              "ev": -0.0413,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46.5: 46.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Over 46",
+              "side": "over",
+              "line": 46.0,
+              "odds": -112.0,
+              "model_raw": 0.4834,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 46: 48.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -323,17 +1452,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 46.5: 53.1% vs market 50.0%.",
-                "Projected total 45.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 45.5 -> 46.5.",
-                "JAX L5 WWLWW (MOV 13.5), TEN L5 LLWLL (MOV -6.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
               ],
               "flags": [],
-              "caution": [
-                "line move: market moved against the under (45.5 -> 46.5)"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Under 47",
+              "side": "under",
+              "line": 47.0,
+              "odds": -110.0,
+              "model_raw": 0.5453,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 47: 54.5%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 46.5",
+              "side": "under",
+              "line": 46.5,
+              "odds": -115.0,
+              "model_raw": 0.531,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 46.5",
+              "side": "under",
+              "line": 46.5,
+              "odds": -112.0,
+              "model_raw": 0.531,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 46.5",
+              "side": "under",
+              "line": 46.5,
+              "odds": -109.0,
+              "model_raw": 0.531,
+              "model_prob": 0.5045,
+              "market_prob": 0.5045,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.017,
+              "ev": -0.0326,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 46.5",
+              "side": "under",
+              "line": 46.5,
+              "odds": -109.0,
+              "model_raw": 0.531,
+              "model_prob": 0.4947,
+              "market_prob": 0.4947,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0268,
+              "ev": -0.0515,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Under 46.5",
+              "side": "under",
+              "line": 46.5,
+              "odds": -110.0,
+              "model_raw": 0.531,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 46.5",
+              "side": "under",
+              "line": 46.5,
+              "odds": -110.0,
+              "model_raw": 0.531,
+              "model_prob": 0.5022,
+              "market_prob": 0.5022,
+              "fair_odds": -101,
+              "edge": -0.0,
+              "edge_at_price": -0.0216,
+              "ev": -0.0413,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46.5: 53.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Under 46",
+              "side": "under",
+              "line": 46.0,
+              "odds": -108.0,
+              "model_raw": 0.5166,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 46: 51.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TEN -14.4, total 45.43."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }
@@ -341,5 +1675,452 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Bhayshul Tuten",
+      "player_id": "4882093",
+      "team": "Jacksonville Jaguars",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.72,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "10/20",
+        "all": "12/23"
+      },
+      "recent": [
+        1.0,
+        2.0,
+        2.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.956,
+          "fair_over": -2186,
+          "fair_under": 2186,
+          "L10": "6/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.539,
+          "fair_over": -117,
+          "fair_under": 117,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.295,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.194,
+          "fair_over": 415,
+          "fair_under": -415,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.063,
+          "fair_over": 1498,
+          "fair_under": -1498,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.053,
+          "fair_over": 1778,
+          "fair_under": -1778,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bhayshul Tuten Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -135.0,
+            "model_raw": 0.5389,
+            "model_prob": 0.5443,
+            "market_prob": 0.5497,
+            "fair_odds": -119,
+            "edge": -0.0054,
+            "edge_at_price": -0.0302,
+            "ev": -0.0525,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 53.9% before shrink, this book's no-vig 55.0%.",
+              "Projection 0.72 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 12/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -114 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brenton Strange",
+      "player_id": "4430539",
+      "team": "Jacksonville Jaguars",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.2,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "2/10",
+        "L20": "4/20",
+        "all": "4/21"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.203,
+          "fair_over": 392,
+          "fair_under": -392,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.048,
+          "fair_over": 1979,
+          "fair_under": -1979,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.04,
+          "fair_over": 2390,
+          "fair_under": -2390,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.03,
+          "fair_over": 3246,
+          "fair_under": -3246,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.03,
+          "fair_over": 3247,
+          "fair_under": -3247,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 13 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brenton Strange Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 205.0,
+            "model_raw": 0.2033,
+            "model_prob": 0.2586,
+            "market_prob": 0.3138,
+            "fair_odds": 287,
+            "edge": -0.0553,
+            "edge_at_price": -0.0693,
+            "ev": -0.2114,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 20.3% before shrink, this book's no-vig 31.4%.",
+              "Projection 0.2 (Poisson).",
+              "Hit rate over L5 0/5, L10 2/10, L20 4/20, all 4/21."
+            ],
+            "flags": [
+              "current season only 8 games; added 13 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 13 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +294 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Carnell Tate",
+      "player_id": "4871023",
+      "team": "Tennessee Titans",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.14,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/7",
+        "L20": "1/7",
+        "all": "1/7"
+      },
+      "recent": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/7"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.164,
+          "fair_over": 509,
+          "fair_under": -509,
+          "L10": "1/7"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.051,
+          "fair_over": 1875,
+          "fair_under": -1875,
+          "L10": "0/7"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.045,
+          "fair_over": 2126,
+          "fair_under": -2126,
+          "L10": "0/7"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.039,
+          "fair_over": 2453,
+          "fair_under": -2453,
+          "L10": "0/7"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.039,
+          "fair_over": 2453,
+          "fair_under": -2453,
+          "L10": "0/7"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (7 games)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": "Questionable: questionable",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Carnell Tate Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 265.0,
+            "model_raw": 0.1643,
+            "model_prob": 0.2132,
+            "market_prob": 0.2622,
+            "fair_odds": 369,
+            "edge": -0.0489,
+            "edge_at_price": -0.0607,
+            "ev": -0.2216,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 16.4% before shrink, this book's no-vig 26.2%.",
+              "Projection 0.14 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
+            ],
+            "flags": [
+              "thin sample (7 games)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "injury news: listed Questionable: questionable",
+              "thin data: thin sample (7 games)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +378 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jakobi Meyers",
+      "player_id": "3916433",
+      "team": "Jacksonville Jaguars",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.21,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "2/10",
+        "L20": "5/20",
+        "all": "5/23"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.209,
+          "fair_over": 378,
+          "fair_under": -378,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.05,
+          "fair_over": 1916,
+          "fair_under": -1916,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.041,
+          "fair_over": 2321,
+          "fair_under": -2321,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.03,
+          "fair_over": 3233,
+          "fair_under": -3233,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.03,
+          "fair_over": 3234,
+          "fair_under": -3234,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jakobi Meyers Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 200.0,
+            "model_raw": 0.209,
+            "model_prob": 0.264,
+            "market_prob": 0.319,
+            "fair_odds": 279,
+            "edge": -0.055,
+            "edge_at_price": -0.0693,
+            "ev": -0.208,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 20.9% before shrink, this book's no-vig 31.9%.",
+              "Projection 0.21 (Poisson).",
+              "Hit rate over L5 0/5, L10 2/10, L20 5/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +286 or better.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }

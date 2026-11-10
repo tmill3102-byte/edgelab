@@ -42,9 +42,9 @@ jobs:
       - name: Publish data
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          # Props spend extra credits. Scheduled runs may take one event.
-          # Push and manual runs keep the single featured-odds call from verify.
-          ODDS_API_PROPS: ${{ github.event_name == 'schedule' && '1' || '0' }}
+          # Props spend credits. Schedule and manual runs buy today's budget.
+          # A push does not, so a code change cannot drain the free tier.
+          ODDS_API_PROPS: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && '1' || '0' }}
         run: python scripts/publish.py
       - name: Commit data
         run: |

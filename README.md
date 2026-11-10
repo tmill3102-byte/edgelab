@@ -21,9 +21,9 @@ The data timestamp in the header is the last successful refresh, Eastern time. I
 
 - **Today** — slate by sport and day, with a team filter. A card with no price says so.
 - **Edges** — High only, or High and Medium. Tap a row for the full note: numbers, why, the case against, the next step, and caution flags.
-- **Game** — moneyline, spread, and total. Each side shows the price and the model edge. Tap a side for the explanation, then add it to the slip. Player props appear only when a real prop price was fetched. If there is no price, the screen says so and leaves the row blank.
+- **Game** — moneyline, spread, and total. Each side shows the price and the model edge. Tap a side for the explanation, then add it to the slip. Player props appear when a real prop price was fetched. If this game was not in the budget, the screen says "Props not loaded for this game yet."
 - **SGP** — same-game parlays for each game: Safer (about 35% or better), Balanced (about 15–30%), Longshot (under 10%), and Lotto (under 3%). The hit chance is adjusted for correlation instead of multiplying the legs. Each card shows the legs, that hit chance, the best book's multiplied price when every leg is listed, the edge versus that price, and the weakest leg. A missing tier means no card landed in the band. **SGPx** stacks 2–3 of those cards from different games. One tap puts the legs on the slip. Books price SGPs with their own correlation, so a real SGP price can differ from the multiplied leg prices.
-- **Builder** — type something like `safe 4 leg parlay browns sunday +400`, or use the controls. It parses the team, date, leg count, target price, and risk on the phone, then builds from the published legs. It shows model probability against the estimated payout, the weakest leg, and same-game correlation. If the target only works by including a no-edge leg, it says that.
+- **Builder** — type something like `safe 4 leg parlay browns sunday +400`, or use the controls. Safe, Balanced, and Aggressive are priced differently: Safe keeps the highest hit chance and short prices, and it may finish under the target. Balanced aims at the target with middling prices. Aggressive uses plus-money legs. The three hit chances are shown side by side, and each leg shows its own hit chance. Once you tap the risk control, that choice wins over the sentence. Same-game cards stay on the SGP tab.
 - **Slip** — one card per Ohio book that the feed can speak for. A card shows how many legs that book actually priced (`4/4 bets`) and the combined price estimated by multiplying leg prices. Books that do not offer a leg are dimmed. The best estimated price is selected. **Open in** copies the slip and opens that book's public event page when every leg is the same game and the feed included a link. Otherwise it opens the book's public home. Pre-filled bet slips are not supported.
 - **Tracker** — record (W-L-P), hit rate, model accuracy, CLV, and ROI as a percent at the listed odds. There is no unit size and no dollar figure. Under 50 graded plays it warns you. **My plays** stay on the phone and are not graded.
 
@@ -41,14 +41,30 @@ The deploy job runs only on `main`, after a refresh. Until Pages source is GitHu
 
 ## How the refresh spends credits
 
-The free Odds API plan is about 500 credits a month. This repo treats that as a hard budget.
+The free Odds API plan is 500 credits a month. A live odds call costs **markets × regions**. `/sports` and `/events` are free. This repo keeps a 40-credit reserve so a run cannot drain the account to zero. The planner is `scripts/odds_budget.py`.
 
-- `GET /v4/sports` is free. Every run uses it to see if the key works.
-- One featured-odds call (`regions=us`, markets `h2h,spreads,totals`, one sport) costs 3 credits. It is skipped when `site/data/odds-snapshot.json` is under 12 hours old, or when fewer than 40 credits remain.
-- Player props are a second call, and only on the schedule, and only if more than 80 credits remain: one event, two markets. Push and manual runs do not buy props.
-- The log prints `key_present`, `key_valid`, `x-requests-remaining`, `x-requests-used`, and which Ohio books came back. It never prints the key.
+**Featured lines.** One snapshot per in-season major sport per day: `h2h`, `spreads`, `totals`, `regions=us`. That is 3 credits per sport. NBA, NFL, and NHL together are 9 credits a day, **270 a month**. MLB adds another 3 a day when it is in season. A snapshot newer than 24 hours is reused. Other sports stay on ESPN DraftKings lines.
 
-ESPN's public scoreboard is still the source for every other sport, and for DraftKings when the snapshot does not cover that game.
+**Props.** What is left after featured odds and the reserve is the prop budget. With three majors in season that is 500 − 270 − 40 = **190 credits a month**.
+
+| Sport | Markets | Credits per game |
+|---|---|---|
+| NBA | points, rebounds, assists, threes, PRA | 5 |
+| NFL | passing, rushing, and receiving yards, anytime TD | 4 |
+| NHL | points, shots, assists | 3 |
+| MLB | hits, pitcher strikeouts, total bases | 3 |
+
+190 ÷ 5 = 38 NBA-sized games a month, about **1 to 2 games a day**. The planner buys today's share (`prop credits left ÷ days left in the month`) and skips a game it cannot afford. A cached board is reused for 12 hours, so the same game is not bought on every refresh, and it stays on the slate for 36 hours. A push does not buy props. The schedule and a manual run do.
+
+That is not a full slate. A busy day of 15 NBA games, 8 NFL games, and 10 NHL games is 15×5 + 8×4 + 10×3 = **137 credits**, about **4,110 a month** before featured odds, or about **4,380** with them. The free tier cannot cover that.
+
+The Odds API **$30 / month plan is 20,000 credits**. That pays for the full NBA, NFL, and NHL prop slate twice a day (about 8,500 credits) and the featured snapshots, with room left.
+
+**What was not used.** ESPN's public DraftKings `propBets` feed does return American prices, but it does not label Over versus Under, so those rows are dropped rather than guessed. DraftKings' own website JSON is not a documented public API and is not called. No prop price is invented.
+
+DraftKings props for the DraftKings price come from the anonymous Ohio sportsbook JSON at `sportsbook-nash.draftkings.com/api/sportscontent/dkusoh/v1/leagues/...` (the feed the logged-out site loads). One league request plus one request per labelled market, at most 16 requests, cached 12 hours. Only Over/Under, and Anytime Scorer for touchdowns, are kept. Other books' prop prices still come from The Odds API when the credit plan buys them. If DraftKings refuses the request, that game says "Props not loaded for this game yet."
+
+The log prints `key_present`, `key_valid`, `x-requests-remaining`, `x-requests-used`, the sport, and the event id. It never prints the key.
 
 ## Project layout
 
@@ -75,7 +91,7 @@ cd site && python3 -m http.server 8765
 - One free odds snapshot covers one sport at a time. Other sports stay on ESPN's DraftKings prices. The slip does not pretend FanDuel priced a game the snapshot never asked about.
 - Caesars and Fanatics are on The Odds API's paid plan. bet365 has no US book in that API. theScore (formerly ESPN BET) and Hard Rock Ohio are in region `us2`, not `us`. Until a run spends a call on `us2`, those cards are absent rather than filled with guessed numbers. The combined price on a card is the product of leg prices, not the book's parlay quote, and same-game parlays are correlated.
 - There is no line shopping history beyond the open/current numbers ESPN already sends. No weather, no confirmed goalies or pitchers, no lineup. College injury reports are not in the free feed.
-- Props have no price in the ESPN feed. They show up only after a budgeted Odds API prop call, with the hit rates from ESPN game logs. The alternate-line ladder is the model's fair price, not a book price.
+- Props show up only after a budgeted Odds API call, with hit rates from ESPN game logs. The free tier covers about 1–2 games a day. ESPN's public prop feed is not used because it does not label over versus under. The alternate-line ladder is the model's fair price, not a book price.
 - Tennis, golf, UFC, and F1 are schedules only. ESPN does not put odds on them here, so there is no model.
 - "Open in" uses a public event URL when the feed included one (query strings that would pre-fill a bet slip are stripped) or else the book's public home. It does not call a private sportsbook API.
 - Research only. No guarantees. If gambling is a problem, call 1-800-GAMBLER.

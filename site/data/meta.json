@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-10T11:22:04-05:00",
-  "generated_at_et": "Tue Nov 10 11:22 AM ET",
+  "generated_at": "2026-11-10T12:11:51-05:00",
+  "generated_at_et": "Tue Nov 10 12:11 PM ET",
   "disclaimer": "Research only. No guarantees. EdgeLab does not place bets. If gambling is a problem, call 1-800-GAMBLER.",
   "research_only": true,
   "games_listed": 924,
   "games_analyzed": 40,
-  "edges": 2,
-  "legs": 238,
+  "edges": 14,
+  "legs": 678,
   "books": [
     {
       "key": "draftkings",
@@ -112,6 +112,11 @@
   "odds_api": {
     "snapshot": true,
     "sport_key": "basketball_nba",
+    "sports": [
+      "americanfootball_nfl",
+      "basketball_nba",
+      "icehockey_nhl"
+    ],
     "regions": "us",
     "markets": [
       "h2h",
@@ -120,13 +125,111 @@
     ],
     "fetched_at": "2026-11-10T15:22:17+00:00",
     "events": 10,
-    "x_requests_remaining": "497",
-    "x_requests_used": "3",
+    "x_requests_remaining": "481",
+    "x_requests_used": "19",
     "x_requests_last": "0",
-    "ohio_present": null,
-    "ohio_absent": null,
+    "ohio_present": [
+      "DraftKings",
+      "FanDuel",
+      "BetMGM",
+      "BetRivers"
+    ],
+    "ohio_absent": [
+      "Caesars",
+      "bet365",
+      "Fanatics",
+      "theScore",
+      "Hard Rock",
+      "Bally Bet"
+    ],
     "props_fetched": 0,
-    "note": "snapshot is 0.0h old (ttl 12h); skipped the paid call"
+    "props_cached": 2,
+    "props_budget": {
+      "enabled": false,
+      "cached": 2,
+      "fetched": 0,
+      "note": "Props were not bought on this run. Showing the cache."
+    },
+    "draftkings_props": {
+      "from_cache": false,
+      "blocked": false,
+      "requests": 16,
+      "events": 25,
+      "dropped_unpriced": 0,
+      "capped": false,
+      "check": {
+        "exact": 174,
+        "close": 20,
+        "mismatch": 0,
+        "examples": [
+          {
+            "player": "Andre Drummond",
+            "stat": "pts",
+            "line": 4.5,
+            "side": "over",
+            "dk": -110,
+            "odds_api": -110
+          },
+          {
+            "player": "Andre Drummond",
+            "stat": "pts",
+            "line": 4.5,
+            "side": "under",
+            "dk": -116,
+            "odds_api": -116
+          },
+          {
+            "player": "Landry Shamet",
+            "stat": "pts",
+            "line": 8.5,
+            "side": "over",
+            "dk": -117,
+            "odds_api": -116
+          },
+          {
+            "player": "Landry Shamet",
+            "stat": "pts",
+            "line": 8.5,
+            "side": "under",
+            "dk": -109,
+            "odds_api": -110
+          },
+          {
+            "player": "Josh Hart",
+            "stat": "pts",
+            "line": 9.5,
+            "side": "over",
+            "dk": -115,
+            "odds_api": -115
+          },
+          {
+            "player": "Josh Hart",
+            "stat": "pts",
+            "line": 9.5,
+            "side": "under",
+            "dk": -111,
+            "odds_api": -111
+          },
+          {
+            "player": "Myles Turner",
+            "stat": "pts",
+            "line": 9.5,
+            "side": "over",
+            "dk": -105,
+            "odds_api": -105
+          },
+          {
+            "player": "Myles Turner",
+            "stat": "pts",
+            "line": 9.5,
+            "side": "under",
+            "dk": -121,
+            "odds_api": -121
+          }
+        ]
+      }
+    },
+    "note": "featured snapshots are under 24h old; skipped the paid calls"
   },
   "schema": "edgelab.data/v1"
 }
