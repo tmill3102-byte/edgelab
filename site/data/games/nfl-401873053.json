@@ -1678,13 +1678,13 @@
       "team": "New England Patriots",
       "stat": "rush_yds",
       "stat_label": "Rush yds",
-      "line": 24.5,
+      "line": 26.5,
       "projection": 27.18,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "12/24"
+        "L5": "0/5",
+        "L10": "3/10",
+        "L20": "7/20",
+        "all": "9/24"
       },
       "recent": [
         3.0,
@@ -1699,20 +1699,6 @@
         37.0
       ],
       "ladder": [
-        {
-          "line": 20.5,
-          "p_over": 0.636,
-          "fair_over": -175,
-          "fair_under": 175,
-          "L10": "6/10"
-        },
-        {
-          "line": 21.5,
-          "p_over": 0.621,
-          "fair_over": -164,
-          "fair_under": 164,
-          "L10": "6/10"
-        },
         {
           "line": 22.5,
           "p_over": 0.605,
@@ -1761,6 +1747,20 @@
           "fair_over": 138,
           "fair_under": -138,
           "L10": "3/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.403,
+          "fair_over": 148,
+          "fair_under": -148,
+          "L10": "3/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.387,
+          "fair_over": 158,
+          "fair_under": -158,
+          "L10": "3/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -1772,23 +1772,23 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Drake Maye Over 24.5 rush_yds",
+            "selection": "Drake Maye Over 26.5 rush_yds",
             "side": "over",
-            "line": 24.5,
-            "odds": -114.0,
-            "model_raw": 0.544,
-            "model_prob": 0.5241,
-            "market_prob": 0.5042,
-            "fair_odds": -110,
-            "edge": 0.0199,
-            "edge_at_price": -0.0086,
-            "ev": -0.0162,
+            "line": 26.5,
+            "odds": -109.0,
+            "model_raw": 0.4528,
+            "model_prob": 0.4732,
+            "market_prob": 0.4937,
+            "fair_odds": 111,
+            "edge": -0.0204,
+            "edge_at_price": -0.0483,
+            "ev": -0.0926,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 24.5: 54.4% before shrink, this book's no-vig 50.4%.",
+              "Model over 26.5: 45.3% before shrink, this book's no-vig 49.4%.",
               "Projection 27.18 (Normal(sd 15.7)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/24."
+              "Hit rate over L5 0/5, L10 3/10, L20 7/20, all 9/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
@@ -1797,30 +1797,30 @@
               "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -106 or better.",
+            "next_step": "Pass. Only interesting at +116 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Drake Maye Under 24.5 rush_yds",
+            "selection": "Drake Maye Under 26.5 rush_yds",
             "side": "under",
-            "line": 24.5,
-            "odds": -110.0,
-            "model_raw": 0.456,
-            "model_prob": 0.4759,
-            "market_prob": 0.4958,
-            "fair_odds": 110,
-            "edge": -0.0199,
-            "edge_at_price": -0.0479,
-            "ev": -0.0915,
+            "line": 26.5,
+            "odds": -115.0,
+            "model_raw": 0.5472,
+            "model_prob": 0.5268,
+            "market_prob": 0.5063,
+            "fair_odds": -111,
+            "edge": 0.0204,
+            "edge_at_price": -0.0081,
+            "ev": -0.0152,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 24.5: 45.6% before shrink, this book's no-vig 49.6%.",
+              "Model under 26.5: 54.7% before shrink, this book's no-vig 50.6%.",
               "Projection 27.18 (Normal(sd 15.7)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/24."
+              "Hit rate over L5 0/5, L10 3/10, L20 7/20, all 9/24."
             ],
             "flags": [
               "current season only 9 games; added 15 from prior season (role/team may differ)"
@@ -1829,7 +1829,7 @@
               "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +114 or better.",
+            "next_step": "Pass. Only interesting at -107 or better.",
             "proven": false
           }
         }
@@ -2002,160 +2002,109 @@
       "player": "Jahmyr Gibbs",
       "player_id": "4429795",
       "team": "Detroit Lions",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 30.5,
-      "projection": 35.42,
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 1.21,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "12/23"
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "13/20",
+        "all": "16/23"
       },
       "recent": [
+        1.0,
+        1.0,
         0.0,
-        15.0,
-        27.0,
-        56.0,
-        31.0,
-        65.0,
-        61.0,
-        30.0,
-        33.0,
-        23.0
+        2.0,
+        1.0,
+        3.0,
+        1.0,
+        2.0,
+        1.0,
+        0.0
       ],
       "ladder": [
         {
-          "line": 26.5,
-          "p_over": 0.672,
-          "fair_over": -205,
-          "fair_under": 205,
-          "L10": "7/10"
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
         },
         {
-          "line": 27.5,
-          "p_over": 0.631,
-          "fair_over": -171,
-          "fair_under": 171,
-          "L10": "6/10"
+          "line": 0.5,
+          "p_over": 0.718,
+          "fair_over": -255,
+          "fair_under": 255,
+          "L10": "8/10"
         },
         {
-          "line": 28.5,
-          "p_over": 0.618,
-          "fair_over": -162,
-          "fair_under": 162,
-          "L10": "6/10"
-        },
-        {
-          "line": 29.5,
-          "p_over": 0.606,
-          "fair_over": -154,
-          "fair_under": 154,
-          "L10": "6/10"
-        },
-        {
-          "line": 30.5,
-          "p_over": 0.564,
-          "fair_over": -129,
-          "fair_under": 129,
-          "L10": "5/10"
-        },
-        {
-          "line": 31.5,
-          "p_over": 0.522,
-          "fair_over": -109,
-          "fair_under": 109,
-          "L10": "4/10"
-        },
-        {
-          "line": 32.5,
-          "p_over": 0.509,
-          "fair_over": -104,
-          "fair_under": 104,
-          "L10": "4/10"
-        },
-        {
-          "line": 33.5,
-          "p_over": 0.467,
-          "fair_over": 114,
-          "fair_under": -114,
+          "line": 1.0,
+          "p_over": 0.546,
+          "fair_over": -120,
+          "fair_under": 120,
           "L10": "3/10"
         },
         {
-          "line": 34.5,
-          "p_over": 0.454,
-          "fair_over": 120,
-          "fair_under": -120,
+          "line": 1.5,
+          "p_over": 0.338,
+          "fair_over": 196,
+          "fair_under": -196,
           "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.171,
+          "fair_over": 483,
+          "fair_under": -483,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.138,
+          "fair_over": 626,
+          "fair_under": -626,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 8 games; added 15 from prior season (role/team may differ)"
+        "current season only 8 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jahmyr Gibbs Over 30.5 rec_yds",
+            "selection": "Jahmyr Gibbs Anytime TD",
             "side": "over",
-            "line": 30.5,
-            "odds": -110.0,
-            "model_raw": 0.564,
-            "model_prob": 0.5299,
-            "market_prob": 0.4958,
-            "fair_odds": -113,
-            "edge": 0.0341,
-            "edge_at_price": 0.0061,
-            "ev": 0.0116,
+            "line": 0.5,
+            "odds": -300.0,
+            "model_raw": 0.7181,
+            "model_prob": 0.7179,
+            "market_prob": 0.7177,
+            "fair_odds": -254,
+            "edge": 0.0002,
+            "edge_at_price": -0.0321,
+            "ev": -0.0428,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 30.5: 56.4% before shrink, this book's no-vig 49.6%.",
-              "Projection 35.42 (Normal(sd 19.7)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/23."
+              "Model over 0.5: 71.8% before shrink, this book's no-vig 71.8%.",
+              "Projection 1.21 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/23."
             ],
             "flags": [
-              "current season only 8 games; added 15 from prior season (role/team may differ)"
+              "current season only 8 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jahmyr Gibbs Under 30.5 rec_yds",
-            "side": "under",
-            "line": 30.5,
-            "odds": -114.0,
-            "model_raw": 0.436,
-            "model_prob": 0.4701,
-            "market_prob": 0.5042,
-            "fair_odds": 113,
-            "edge": -0.0341,
-            "edge_at_price": -0.0626,
-            "ev": -0.1175,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 30.5: 43.6% before shrink, this book's no-vig 50.4%.",
-              "Projection 35.42 (Normal(sd 19.7)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/23."
-            ],
-            "flags": [
-              "current season only 8 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +117 or better.",
+            "next_step": "Pass. Only interesting at -238 or better.",
             "proven": false
           }
         }
@@ -2266,16 +2215,16 @@
             "line": 98.5,
             "odds": -114.0,
             "model_raw": 0.4616,
-            "model_prob": 0.4829,
-            "market_prob": 0.5042,
+            "model_prob": 0.4824,
+            "market_prob": 0.5031,
             "fair_odds": 107,
-            "edge": -0.0213,
-            "edge_at_price": -0.0498,
-            "ev": -0.0935,
+            "edge": -0.0208,
+            "edge_at_price": -0.0503,
+            "ev": -0.0945,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 98.5: 46.2% before shrink, this book's no-vig 50.4%.",
+              "Model over 98.5: 46.2% before shrink, this book's no-vig 50.3%.",
               "Projection 92.11 (Normal(sd 43.0)).",
               "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 8/23."
             ],
@@ -2296,18 +2245,18 @@
             "selection": "Jahmyr Gibbs Under 98.5 rush_yds",
             "side": "under",
             "line": 98.5,
-            "odds": -110.0,
+            "odds": -111.0,
             "model_raw": 0.5384,
-            "model_prob": 0.5171,
-            "market_prob": 0.4958,
+            "model_prob": 0.5176,
+            "market_prob": 0.4969,
             "fair_odds": -107,
-            "edge": 0.0213,
-            "edge_at_price": -0.0067,
-            "ev": -0.0128,
+            "edge": 0.0208,
+            "edge_at_price": -0.0084,
+            "ev": -0.016,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 98.5: 53.8% before shrink, this book's no-vig 49.6%.",
+              "Model under 98.5: 53.8% before shrink, this book's no-vig 49.7%.",
               "Projection 92.11 (Normal(sd 43.0)).",
               "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 8/23."
             ],
@@ -2328,109 +2277,160 @@
       "player": "Jahmyr Gibbs",
       "player_id": "4429795",
       "team": "Detroit Lions",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 1.21,
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 30.5,
+      "projection": 35.42,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "8/10",
-        "L20": "13/20",
-        "all": "16/23"
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "10/20",
+        "all": "12/23"
       },
       "recent": [
-        1.0,
-        1.0,
         0.0,
-        2.0,
-        1.0,
-        3.0,
-        1.0,
-        2.0,
-        1.0,
-        0.0
+        15.0,
+        27.0,
+        56.0,
+        31.0,
+        65.0,
+        61.0,
+        30.0,
+        33.0,
+        23.0
       ],
       "ladder": [
         {
-          "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
+          "line": 26.5,
+          "p_over": 0.672,
+          "fair_over": -205,
+          "fair_under": 205,
+          "L10": "7/10"
         },
         {
-          "line": 0.5,
-          "p_over": 0.718,
-          "fair_over": -255,
-          "fair_under": 255,
-          "L10": "8/10"
+          "line": 27.5,
+          "p_over": 0.631,
+          "fair_over": -171,
+          "fair_under": 171,
+          "L10": "6/10"
         },
         {
-          "line": 1.0,
-          "p_over": 0.546,
-          "fair_over": -120,
-          "fair_under": 120,
+          "line": 28.5,
+          "p_over": 0.618,
+          "fair_over": -162,
+          "fair_under": 162,
+          "L10": "6/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.606,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "6/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.564,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "5/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.522,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "4/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.509,
+          "fair_over": -104,
+          "fair_under": 104,
+          "L10": "4/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.467,
+          "fair_over": 114,
+          "fair_under": -114,
           "L10": "3/10"
         },
         {
-          "line": 1.5,
-          "p_over": 0.338,
-          "fair_over": 196,
-          "fair_under": -196,
+          "line": 34.5,
+          "p_over": 0.454,
+          "fair_over": 120,
+          "fair_under": -120,
           "L10": "3/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.171,
-          "fair_over": 483,
-          "fair_under": -483,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.138,
-          "fair_over": 626,
-          "fair_under": -626,
-          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 8 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jahmyr Gibbs Anytime TD",
+            "selection": "Jahmyr Gibbs Over 30.5 rec_yds",
             "side": "over",
-            "line": 0.5,
-            "odds": -280.0,
-            "model_raw": 0.7181,
-            "model_prob": 0.7116,
-            "market_prob": 0.7051,
-            "fair_odds": -247,
-            "edge": 0.0065,
-            "edge_at_price": -0.0252,
-            "ev": -0.0343,
+            "line": 30.5,
+            "odds": -115.0,
+            "model_raw": 0.564,
+            "model_prob": 0.5352,
+            "market_prob": 0.5063,
+            "fair_odds": -115,
+            "edge": 0.0288,
+            "edge_at_price": 0.0003,
+            "ev": 0.0005,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 71.8% before shrink, this book's no-vig 70.5%.",
-              "Projection 1.21 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/23."
+              "Model over 30.5: 56.4% before shrink, this book's no-vig 50.6%.",
+              "Projection 35.42 (Normal(sd 19.7)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/23."
             ],
             "flags": [
-              "current season only 8 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -231 or better.",
+            "next_step": "Monitor only; if anything, wait for -110 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jahmyr Gibbs Under 30.5 rec_yds",
+            "side": "under",
+            "line": 30.5,
+            "odds": -109.0,
+            "model_raw": 0.436,
+            "model_prob": 0.4648,
+            "market_prob": 0.4937,
+            "fair_odds": 115,
+            "edge": -0.0288,
+            "edge_at_price": -0.0567,
+            "ev": -0.1087,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 30.5: 43.6% before shrink, this book's no-vig 49.4%.",
+              "Projection 35.42 (Normal(sd 19.7)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +119 or better.",
             "proven": false
           }
         }
@@ -2590,13 +2590,13 @@
       "team": "Detroit Lions",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 269.5,
+      "line": 267.5,
       "projection": 266.49,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "5/10",
-        "L20": "11/20",
-        "all": "11/23"
+        "L10": "6/10",
+        "L20": "12/20",
+        "all": "12/23"
       },
       "recent": [
         170.0,
@@ -2611,6 +2611,13 @@
         197.0
       ],
       "ladder": [
+        {
+          "line": 259.5,
+          "p_over": 0.553,
+          "fair_over": -124,
+          "fair_under": 124,
+          "L10": "6/10"
+        },
         {
           "line": 261.5,
           "p_over": 0.546,
@@ -2666,13 +2673,6 @@
           "fair_over": 127,
           "fair_under": -127,
           "L10": "4/10"
-        },
-        {
-          "line": 277.5,
-          "p_over": 0.433,
-          "fair_over": 131,
-          "fair_under": -131,
-          "L10": "4/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2684,23 +2684,23 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jared Goff Over 269.5 pass_yds",
+            "selection": "Jared Goff Over 267.5 pass_yds",
             "side": "over",
-            "line": 269.5,
+            "line": 267.5,
             "odds": -113.0,
-            "model_raw": 0.4896,
-            "model_prob": 0.4959,
+            "model_raw": 0.5257,
+            "model_prob": 0.5139,
             "market_prob": 0.5021,
-            "fair_odds": 102,
-            "edge": -0.0063,
-            "edge_at_price": -0.0347,
-            "ev": -0.0653,
+            "fair_odds": -106,
+            "edge": 0.0118,
+            "edge_at_price": -0.0166,
+            "ev": -0.0313,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 269.5: 49.0% before shrink, this book's no-vig 50.2%.",
+              "Model over 267.5: 52.6% before shrink, this book's no-vig 50.2%.",
               "Projection 266.49 (Normal(sd 75.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 11/23."
+              "Hit rate over L5 3/5, L10 6/10, L20 12/20, all 12/23."
             ],
             "flags": [
               "current season only 8 games; added 15 from prior season (role/team may differ)"
@@ -2709,30 +2709,30 @@
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +106 or better.",
+            "next_step": "Pass. Only interesting at -102 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jared Goff Under 269.5 pass_yds",
+            "selection": "Jared Goff Under 267.5 pass_yds",
             "side": "under",
-            "line": 269.5,
+            "line": 267.5,
             "odds": -111.0,
-            "model_raw": 0.5104,
-            "model_prob": 0.5041,
+            "model_raw": 0.4743,
+            "model_prob": 0.4861,
             "market_prob": 0.4979,
-            "fair_odds": -102,
-            "edge": 0.0063,
-            "edge_at_price": -0.0219,
-            "ev": -0.0417,
+            "fair_odds": 106,
+            "edge": -0.0118,
+            "edge_at_price": -0.04,
+            "ev": -0.076,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 269.5: 51.0% before shrink, this book's no-vig 49.8%.",
+              "Model under 267.5: 47.4% before shrink, this book's no-vig 49.8%.",
               "Projection 266.49 (Normal(sd 75.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 11/23."
+              "Hit rate over L5 3/5, L10 6/10, L20 12/20, all 12/23."
             ],
             "flags": [
               "current season only 8 games; added 15 from prior season (role/team may differ)"
@@ -2741,7 +2741,119 @@
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +102 or better.",
+            "next_step": "Pass. Only interesting at +110 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "player_id": "4374302",
+      "team": "Detroit Lions",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.53,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "3/10",
+        "L20": "7/20",
+        "all": "9/23"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.188,
+          "fair_over": 432,
+          "fair_under": -432,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.151,
+          "fair_over": 561,
+          "fair_under": -561,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.047,
+          "fair_over": 2044,
+          "fair_under": -2044,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.04,
+          "fair_over": 2409,
+          "fair_under": -2409,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Amon-Ra St. Brown Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -105.0,
+            "model_raw": 0.3826,
+            "model_prob": 0.4364,
+            "market_prob": 0.4901,
+            "fair_odds": 129,
+            "edge": -0.0537,
+            "edge_at_price": -0.0758,
+            "ev": -0.1481,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 38.3% before shrink, this book's no-vig 49.0%.",
+              "Projection 0.53 (Poisson).",
+              "Hit rate over L5 0/5, L10 3/10, L20 7/20, all 9/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +134 or better.",
             "proven": false
           }
         }
@@ -2905,118 +3017,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +108 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Amon-Ra St. Brown",
-      "player_id": "4374302",
-      "team": "Detroit Lions",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.53,
-      "hit_rates": {
-        "L5": "0/5",
-        "L10": "3/10",
-        "L20": "7/20",
-        "all": "9/23"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        2.0,
-        2.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.383,
-          "fair_over": 161,
-          "fair_under": -161,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.188,
-          "fair_over": 432,
-          "fair_under": -432,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.151,
-          "fair_over": 561,
-          "fair_under": -561,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.047,
-          "fair_over": 2044,
-          "fair_under": -2044,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.04,
-          "fair_over": 2409,
-          "fair_under": -2409,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 8 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Amon-Ra St. Brown Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": -105.0,
-            "model_raw": 0.3826,
-            "model_prob": 0.4364,
-            "market_prob": 0.4901,
-            "fair_odds": 129,
-            "edge": -0.0537,
-            "edge_at_price": -0.0758,
-            "ev": -0.1481,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 38.3% before shrink, this book's no-vig 49.0%.",
-              "Projection 0.53 (Poisson).",
-              "Hit rate over L5 0/5, L10 3/10, L20 7/20, all 9/23."
-            ],
-            "flags": [
-              "current season only 8 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +134 or better.",
             "proven": false
           }
         }

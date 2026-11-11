@@ -1,28 +1,175 @@
 {
-  "warning": "Small sample: 0 graded plays (under 50). Record, hit rate and ROI are mostly noise at this size. CLV is the faster check.",
+  "warning": "Small sample: 6 graded plays (under 50). Record, hit rate and ROI are mostly noise at this size. CLV is the faster check.",
   "overall": {
-    "n": 0,
-    "w": 0,
-    "l": 0,
+    "n": 6,
+    "w": 3,
+    "l": 3,
     "p": 0,
-    "record": "0-0-0",
-    "hit_rate": null,
-    "roi_pct": null,
-    "clv_avg_pct": null,
-    "clv_n": 0,
+    "record": "3-3-0",
+    "hit_rate": 0.5,
+    "roi_pct": -12.4,
+    "clv_avg_pct": -4.0,
+    "clv_n": 5,
     "model": {
-      "n": 0,
-      "avg_model_prob": null,
-      "actual_win_rate": null,
-      "brier": null,
-      "direction_hit": null
+      "n": 6,
+      "avg_model_prob": 0.5115,
+      "actual_win_rate": 0.5,
+      "brier": 0.1675,
+      "direction_hit": 0.8333
     }
   },
-  "pending": 11,
+  "pending": 5,
   "by": {
-    "sport": {},
-    "market": {},
-    "tier": {}
+    "sport": {
+      "cfb": {
+        "n": 1,
+        "w": 0,
+        "l": 1,
+        "p": 0,
+        "record": "0-1-0",
+        "hit_rate": 0.0,
+        "roi_pct": -100.0,
+        "clv_avg_pct": null,
+        "clv_n": 0,
+        "model": {
+          "n": 1,
+          "avg_model_prob": 0.5316,
+          "actual_win_rate": 0.0,
+          "brier": 0.2826,
+          "direction_hit": 0.0
+        }
+      },
+      "nba": {
+        "n": 4,
+        "w": 2,
+        "l": 2,
+        "p": 0,
+        "record": "2-2-0",
+        "hit_rate": 0.5,
+        "roi_pct": -5.1,
+        "clv_avg_pct": -4.61,
+        "clv_n": 4,
+        "model": {
+          "n": 4,
+          "avg_model_prob": 0.4577,
+          "actual_win_rate": 0.5,
+          "brier": 0.159,
+          "direction_hit": 1.0
+        }
+      },
+      "nhl": {
+        "n": 1,
+        "w": 1,
+        "l": 0,
+        "p": 0,
+        "record": "1-0-0",
+        "hit_rate": 1.0,
+        "roi_pct": 45.9,
+        "clv_avg_pct": -1.53,
+        "clv_n": 1,
+        "model": {
+          "n": 1,
+          "avg_model_prob": 0.7065,
+          "actual_win_rate": 1.0,
+          "brier": 0.0861,
+          "direction_hit": 1.0
+        }
+      }
+    },
+    "market": {
+      "ML": {
+        "n": 2,
+        "w": 0,
+        "l": 2,
+        "p": 0,
+        "record": "0-2-0",
+        "hit_rate": 0.0,
+        "roi_pct": -100.0,
+        "clv_avg_pct": -4.59,
+        "clv_n": 2,
+        "model": {
+          "n": 2,
+          "avg_model_prob": 0.3494,
+          "actual_win_rate": 0.0,
+          "brier": 0.1293,
+          "direction_hit": 1.0
+        }
+      },
+      "Spread": {
+        "n": 3,
+        "w": 2,
+        "l": 1,
+        "p": 0,
+        "record": "2-1-0",
+        "hit_rate": 0.6667,
+        "roi_pct": 10.9,
+        "clv_avg_pct": -2.92,
+        "clv_n": 2,
+        "model": {
+          "n": 3,
+          "avg_model_prob": 0.6082,
+          "actual_win_rate": 0.6667,
+          "brier": 0.1799,
+          "direction_hit": 0.6667
+        }
+      },
+      "Total": {
+        "n": 1,
+        "w": 1,
+        "l": 0,
+        "p": 0,
+        "record": "1-0-0",
+        "hit_rate": 1.0,
+        "roi_pct": 92.6,
+        "clv_avg_pct": -4.95,
+        "clv_n": 1,
+        "model": {
+          "n": 1,
+          "avg_model_prob": 0.5454,
+          "actual_win_rate": 1.0,
+          "brier": 0.2067,
+          "direction_hit": 1.0
+        }
+      }
+    },
+    "tier": {
+      "High": {
+        "n": 1,
+        "w": 0,
+        "l": 1,
+        "p": 0,
+        "record": "0-1-0",
+        "hit_rate": 0.0,
+        "roi_pct": -100.0,
+        "clv_avg_pct": -7.83,
+        "clv_n": 1,
+        "model": {
+          "n": 1,
+          "avg_model_prob": 0.4344,
+          "actual_win_rate": 0.0,
+          "brier": 0.1887,
+          "direction_hit": 1.0
+        }
+      },
+      "Medium": {
+        "n": 5,
+        "w": 3,
+        "l": 2,
+        "p": 0,
+        "record": "3-2-0",
+        "hit_rate": 0.6,
+        "roi_pct": 5.1,
+        "clv_avg_pct": -3.04,
+        "clv_n": 4,
+        "model": {
+          "n": 5,
+          "avg_model_prob": 0.5269,
+          "actual_win_rate": 0.6,
+          "brier": 0.1632,
+          "direction_hit": 0.8
+        }
+      }
+    }
   },
   "definitions": {
     "hit_rate": "Wins divided by wins plus losses. Pushes are left out.",

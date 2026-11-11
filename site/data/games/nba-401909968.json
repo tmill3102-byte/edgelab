@@ -1,0 +1,4523 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909968",
+  "name": "Boston Celtics at Toronto Raptors",
+  "matchup": "BOS @ TOR",
+  "start": "2026-11-12T00:00Z",
+  "start_local": "Wed Nov 11 7:00 PM ET",
+  "date_et": "2026-11-11",
+  "weekday": "wednesday",
+  "state": "pre",
+  "status": "11/11 - 7:00 PM EST",
+  "home": {
+    "abbr": "TOR",
+    "name": "Toronto Raptors",
+    "record": "5-5",
+    "id": "28"
+  },
+  "away": {
+    "abbr": "BOS",
+    "name": "Boston Celtics",
+    "record": "9-2",
+    "id": "2"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/34988944"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_home": 228.0,
+      "ml_away": -279.0,
+      "total": 215.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
+      "spread_home": 7.5,
+      "spread_home_odds": -112.0,
+      "spread_away": -7.5,
+      "spread_away_odds": -108.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin TOR -0.2 \u00b7 total 221.2",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: TOR 22.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin TOR -0.2, total 221.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Trayce Jackson-Davis",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Collin Murray-Boyles",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Immanuel Quickley",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Scottie Barnes",
+        "status": "Out",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Kawhi Leonard",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      }
+    ],
+    "away": []
+  },
+  "form": {
+    "home": "L5 LWLWL",
+    "away": "L5 LWWWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "TOR ML",
+              "side": "home",
+              "line": null,
+              "odds": 228.0,
+              "model_raw": 0.4945,
+              "model_prob": 0.3184,
+              "market_prob": 0.2929,
+              "fair_odds": 214,
+              "edge": 0.0255,
+              "edge_at_price": 0.0135,
+              "ev": 0.0443,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model TOR win 49.5% vs market no-vig 29.3%.",
+                "v2 projected margin TOR -0.2 (ratings TOR +1.1, BOS +6.3, home edge 1.5); raw model 49.5%.",
+                "BOS L5 LWWWW (MOV 11.7), TOR L5 LWLWL (MOV 3.3)",
+                "pace: projected total -1.5 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to TOR's margin (away b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (49% vs 29%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: price drifted against this side (+182 -> +228)",
+                "injury: Scottie Barnes out for this side and the rating doesn't know it",
+                "downgraded High -> Low"
+              ],
+              "case_against": "Market makes TOR 29%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +220 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "BOS ML",
+              "side": "away",
+              "line": null,
+              "odds": -279.0,
+              "model_raw": 0.5055,
+              "model_prob": 0.6816,
+              "market_prob": 0.7071,
+              "fair_odds": -214,
+              "edge": -0.0255,
+              "edge_at_price": -0.0545,
+              "ev": -0.0741,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BOS win 50.6% vs market no-vig 70.7%.",
+                "v2 projected margin TOR -0.2 (ratings TOR +1.1, BOS +6.3, home edge 1.5); raw model 50.6%.",
+                "BOS L5 LWWWW (MOV 11.7), TOR L5 LWLWL (MOV 3.3)",
+                "pace: projected total -1.5 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to TOR's margin (away b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (51% vs 71%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes BOS 71%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -201 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "TOR +7.5",
+              "side": "home",
+              "line": 7.5,
+              "odds": -112.0,
+              "model_raw": 0.7211,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model TOR +7.5 covers 72.1% vs market 50.4%.",
+                "Projected margin TOR -0.2 vs line TOR +7.5.",
+                "BOS L5 LWWWW (MOV 11.7), TOR L5 LWLWL (MOV 3.3)",
+                "pace: projected total -1.5 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to TOR's margin (away b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (72% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury: Scottie Barnes out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "BOS -7.5",
+              "side": "away",
+              "line": -7.5,
+              "odds": -108.0,
+              "model_raw": 0.2789,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BOS -7.5 covers 27.9% vs market 49.6%.",
+                "Projected margin TOR -0.2 vs line TOR +7.5.",
+                "BOS L5 LWWWW (MOV 11.7), TOR L5 LWLWL (MOV 3.3)",
+                "pace: projected total -1.5 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to TOR's margin (away b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (-6.5 -> -7.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 215.5",
+              "side": "over",
+              "line": 215.5,
+              "odds": -115.0,
+              "model_raw": 0.6161,
+              "model_prob": 0.5291,
+              "market_prob": 0.5108,
+              "fair_odds": -112,
+              "edge": 0.0182,
+              "edge_at_price": -0.0058,
+              "ev": -0.0109,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 215.5: 61.6% vs market 51.1%.",
+                "Projected total 221.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "BOS L5 LWWWW (MOV 11.7), TOR L5 LWLWL (MOV 3.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -108 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 215.5",
+              "side": "under",
+              "line": 215.5,
+              "odds": -105.0,
+              "model_raw": 0.3839,
+              "model_prob": 0.4709,
+              "market_prob": 0.4892,
+              "fair_odds": 112,
+              "edge": -0.0182,
+              "edge_at_price": -0.0413,
+              "ev": -0.0806,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 215.5: 38.4% vs market 48.9%.",
+                "Projected total 221.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "BOS L5 LWWWW (MOV 11.7), TOR L5 LWLWL (MOV 3.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +117 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": [
+    {
+      "player": "Immanuel Quickley",
+      "player_id": "4395724",
+      "team": "Toronto Raptors",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 3.5,
+      "projection": 3.28,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "10/23"
+      },
+      "recent": [
+        1.0,
+        4.0,
+        6.0,
+        6.0,
+        3.0,
+        3.0,
+        1.0,
+        4.0,
+        2.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.808,
+          "fair_over": -421,
+          "fair_under": 421,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.774,
+          "fair_over": -342,
+          "fair_under": 342,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.648,
+          "fair_over": -184,
+          "fair_under": 184,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.542,
+          "fair_over": -118,
+          "fair_under": 118,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.416,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.291,
+          "fair_over": 243,
+          "fair_under": -243,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.24,
+          "fair_over": 317,
+          "fair_under": -317,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.173,
+          "fair_over": 480,
+          "fair_under": -480,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.162,
+          "fair_over": 516,
+          "fair_under": -516,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": "Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 3.5 reb",
+            "side": "over",
+            "line": 3.5,
+            "odds": -130.0,
+            "model_raw": 0.4164,
+            "model_prob": 0.4723,
+            "market_prob": 0.5282,
+            "fair_odds": 112,
+            "edge": -0.0559,
+            "edge_at_price": -0.0929,
+            "ev": -0.1644,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 41.6% before shrink, this book's no-vig 52.8%.",
+              "Projection 3.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 10/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 3.5 reb",
+            "side": "over",
+            "line": 3.5,
+            "odds": -131.0,
+            "model_raw": 0.4164,
+            "model_prob": 0.4733,
+            "market_prob": 0.5302,
+            "fair_odds": 111,
+            "edge": -0.0569,
+            "edge_at_price": -0.0938,
+            "ev": -0.1654,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 41.6% before shrink, this book's no-vig 53.0%.",
+              "Projection 3.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 10/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 3.5 reb",
+            "side": "over",
+            "line": 3.5,
+            "odds": -125.0,
+            "model_raw": 0.4164,
+            "model_prob": 0.4695,
+            "market_prob": 0.5227,
+            "fair_odds": 113,
+            "edge": -0.0531,
+            "edge_at_price": -0.086,
+            "ev": -0.1548,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 41.6% before shrink, this book's no-vig 52.3%.",
+              "Projection 3.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 10/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +117 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 3.5 reb",
+            "side": "under",
+            "line": 3.5,
+            "odds": -102.0,
+            "model_raw": 0.5836,
+            "model_prob": 0.5277,
+            "market_prob": 0.4718,
+            "fair_odds": -112,
+            "edge": 0.0559,
+            "edge_at_price": 0.0228,
+            "ev": 0.0451,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 58.4% before shrink, this book's no-vig 47.2%.",
+              "Projection 3.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 10/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -107 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 3.5 reb",
+            "side": "under",
+            "line": 3.5,
+            "odds": -101.0,
+            "model_raw": 0.5836,
+            "model_prob": 0.5267,
+            "market_prob": 0.4698,
+            "fair_odds": -111,
+            "edge": 0.0569,
+            "edge_at_price": 0.0242,
+            "ev": 0.0482,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 58.4% before shrink, this book's no-vig 47.0%.",
+              "Projection 3.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 10/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -107 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 3.5 reb",
+            "side": "under",
+            "line": 3.5,
+            "odds": -103.0,
+            "model_raw": 0.5836,
+            "model_prob": 0.5305,
+            "market_prob": 0.4773,
+            "fair_odds": -113,
+            "edge": 0.0531,
+            "edge_at_price": 0.0231,
+            "ev": 0.0455,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 58.4% before shrink, this book's no-vig 47.7%.",
+              "Projection 3.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 10/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Immanuel Quickley",
+      "player_id": "4395724",
+      "team": "Toronto Raptors",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 18.5,
+      "projection": 15.17,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "4/20",
+        "all": "6/23"
+      },
+      "recent": [
+        13.0,
+        27.0,
+        12.0,
+        17.0,
+        16.0,
+        19.0,
+        12.0,
+        23.0,
+        4.0,
+        11.0
+      ],
+      "ladder": [
+        {
+          "line": 14.5,
+          "p_over": 0.528,
+          "fair_over": -112,
+          "fair_under": 112,
+          "L10": "5/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.486,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "5/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.416,
+          "fair_over": 141,
+          "fair_under": -141,
+          "L10": "4/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.347,
+          "fair_over": 188,
+          "fair_under": -188,
+          "L10": "3/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.309,
+          "fair_over": 223,
+          "fair_under": -223,
+          "L10": "3/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.245,
+          "fair_over": 307,
+          "fair_under": -307,
+          "L10": "2/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.215,
+          "fair_over": 366,
+          "fair_under": -366,
+          "L10": "2/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.188,
+          "fair_over": 433,
+          "fair_under": -433,
+          "L10": "2/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.165,
+          "fair_over": 506,
+          "fair_under": -506,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": "Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 18.5 pts",
+            "side": "over",
+            "line": 18.5,
+            "odds": -106.0,
+            "model_raw": 0.3091,
+            "model_prob": 0.395,
+            "market_prob": 0.4808,
+            "fair_odds": 153,
+            "edge": -0.0859,
+            "edge_at_price": -0.1196,
+            "ev": -0.2324,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 18.5: 30.9% before shrink, this book's no-vig 48.1%.",
+              "Projection 15.17 (Normal(sd 6.2)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/20, all 6/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +158 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 18.5 pts",
+            "side": "over",
+            "line": 18.5,
+            "odds": -109.0,
+            "model_raw": 0.3091,
+            "model_prob": 0.4004,
+            "market_prob": 0.4917,
+            "fair_odds": 150,
+            "edge": -0.0913,
+            "edge_at_price": -0.1211,
+            "ev": -0.2323,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 18.5: 30.9% before shrink, this book's no-vig 49.2%.",
+              "Projection 15.17 (Normal(sd 6.2)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/20, all 6/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +155 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 18.5 pts",
+            "side": "over",
+            "line": 18.5,
+            "odds": -108.0,
+            "model_raw": 0.3091,
+            "model_prob": 0.3984,
+            "market_prob": 0.4877,
+            "fair_odds": 151,
+            "edge": -0.0893,
+            "edge_at_price": -0.1208,
+            "ev": -0.2327,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 18.5: 30.9% before shrink, this book's no-vig 48.8%.",
+              "Projection 15.17 (Normal(sd 6.2)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/20, all 6/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +156 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 18.5 pts",
+            "side": "under",
+            "line": 18.5,
+            "odds": -125.0,
+            "model_raw": 0.6909,
+            "model_prob": 0.605,
+            "market_prob": 0.5192,
+            "fair_odds": -153,
+            "edge": 0.0859,
+            "edge_at_price": 0.0495,
+            "ev": 0.089,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 18.5: 69.1% before shrink, this book's no-vig 51.9%.",
+              "Projection 15.17 (Normal(sd 6.2)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/20, all 6/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -146 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 18.5 pts",
+            "side": "under",
+            "line": 18.5,
+            "odds": -117.0,
+            "model_raw": 0.6909,
+            "model_prob": 0.5996,
+            "market_prob": 0.5083,
+            "fair_odds": -150,
+            "edge": 0.0913,
+            "edge_at_price": 0.0604,
+            "ev": 0.1121,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 18.5: 69.1% before shrink, this book's no-vig 50.8%.",
+              "Projection 15.17 (Normal(sd 6.2)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/20, all 6/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -143 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 18.5 pts",
+            "side": "under",
+            "line": 18.5,
+            "odds": -120.0,
+            "model_raw": 0.6909,
+            "model_prob": 0.6016,
+            "market_prob": 0.5123,
+            "fair_odds": -151,
+            "edge": 0.0893,
+            "edge_at_price": 0.0562,
+            "ev": 0.1029,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 18.5: 69.1% before shrink, this book's no-vig 51.2%.",
+              "Projection 15.17 (Normal(sd 6.2)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/20, all 6/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -144 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Immanuel Quickley",
+      "player_id": "4395724",
+      "team": "Toronto Raptors",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 28.5,
+      "projection": 24.02,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "4/20",
+        "all": "5/23"
+      },
+      "recent": [
+        21.0,
+        33.0,
+        25.0,
+        31.0,
+        26.0,
+        24.0,
+        19.0,
+        34.0,
+        11.0,
+        18.0
+      ],
+      "ladder": [
+        {
+          "line": 24.5,
+          "p_over": 0.482,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "5/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.415,
+          "fair_over": 141,
+          "fair_under": -141,
+          "L10": "4/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.35,
+          "fair_over": 186,
+          "fair_under": -186,
+          "L10": "3/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.316,
+          "fair_over": 217,
+          "fair_under": -217,
+          "L10": "3/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.284,
+          "fair_over": 252,
+          "fair_under": -252,
+          "L10": "3/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.255,
+          "fair_over": 292,
+          "fair_under": -292,
+          "L10": "3/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.229,
+          "fair_over": 336,
+          "fair_under": -336,
+          "L10": "3/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.177,
+          "fair_over": 464,
+          "fair_under": -464,
+          "L10": "2/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.158,
+          "fair_over": 532,
+          "fair_under": -532,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": "Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 28.5 pra",
+            "side": "over",
+            "line": 28.5,
+            "odds": -106.0,
+            "model_raw": 0.2839,
+            "model_prob": 0.3824,
+            "market_prob": 0.4808,
+            "fair_odds": 162,
+            "edge": -0.0985,
+            "edge_at_price": -0.1322,
+            "ev": -0.2569,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 28.5: 28.4% before shrink, this book's no-vig 48.1%.",
+              "Projection 24.02 (Normal(sd 6.9)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (28% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +167 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 28.5 pra",
+            "side": "over",
+            "line": 28.5,
+            "odds": -116.0,
+            "model_raw": 0.2839,
+            "model_prob": 0.3935,
+            "market_prob": 0.5031,
+            "fair_odds": 154,
+            "edge": -0.1096,
+            "edge_at_price": -0.1436,
+            "ev": -0.2673,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 28.5: 28.4% before shrink, this book's no-vig 50.3%.",
+              "Projection 24.02 (Normal(sd 6.9)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +159 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 28.5 pra",
+            "side": "over",
+            "line": 28.5,
+            "odds": -108.0,
+            "model_raw": 0.2839,
+            "model_prob": 0.3858,
+            "market_prob": 0.4877,
+            "fair_odds": 159,
+            "edge": -0.1019,
+            "edge_at_price": -0.1334,
+            "ev": -0.257,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 28.5: 28.4% before shrink, this book's no-vig 48.8%.",
+              "Projection 24.02 (Normal(sd 6.9)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (28% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +164 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 28.5 pra",
+            "side": "under",
+            "line": 28.5,
+            "odds": -125.0,
+            "model_raw": 0.7161,
+            "model_prob": 0.6176,
+            "market_prob": 0.5192,
+            "fair_odds": -162,
+            "edge": 0.0985,
+            "edge_at_price": 0.0621,
+            "ev": 0.1117,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 28.5: 71.6% before shrink, this book's no-vig 51.9%.",
+              "Projection 24.02 (Normal(sd 6.9)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (72% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (72% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -153 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 28.5 pra",
+            "side": "under",
+            "line": 28.5,
+            "odds": -113.0,
+            "model_raw": 0.7161,
+            "model_prob": 0.6065,
+            "market_prob": 0.4969,
+            "fair_odds": -154,
+            "edge": 0.1096,
+            "edge_at_price": 0.076,
+            "ev": 0.1433,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 28.5: 71.6% before shrink, this book's no-vig 49.7%.",
+              "Projection 24.02 (Normal(sd 6.9)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (72% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (72% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -147 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 28.5 pra",
+            "side": "under",
+            "line": 28.5,
+            "odds": -120.0,
+            "model_raw": 0.7161,
+            "model_prob": 0.6142,
+            "market_prob": 0.5123,
+            "fair_odds": -159,
+            "edge": 0.1019,
+            "edge_at_price": 0.0688,
+            "ev": 0.126,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 28.5: 71.6% before shrink, this book's no-vig 51.2%.",
+              "Projection 24.02 (Normal(sd 6.9)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/20, all 5/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (72% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (72% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -151 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Immanuel Quickley",
+      "player_id": "4395724",
+      "team": "Toronto Raptors",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 5.5,
+      "projection": 5.56,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "6/10",
+        "L20": "12/20",
+        "all": "14/23"
+      },
+      "recent": [
+        7.0,
+        2.0,
+        7.0,
+        8.0,
+        7.0,
+        2.0,
+        6.0,
+        7.0,
+        5.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.786,
+          "fair_over": -367,
+          "fair_under": 367,
+          "L10": "8/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.755,
+          "fair_over": -308,
+          "fair_under": 308,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.657,
+          "fair_over": -192,
+          "fair_under": 192,
+          "L10": "7/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.6,
+          "fair_over": -150,
+          "fair_under": 150,
+          "L10": "6/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.517,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "6/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.441,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.385,
+          "fair_over": 160,
+          "fair_under": -160,
+          "L10": "5/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.235,
+          "fair_over": 326,
+          "fair_under": -326,
+          "L10": "1/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.187,
+          "fair_over": 434,
+          "fair_under": -434,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": "Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 5.5 ast",
+            "side": "over",
+            "line": 5.5,
+            "odds": -138.0,
+            "model_raw": 0.5171,
+            "model_prob": 0.5295,
+            "market_prob": 0.5419,
+            "fair_odds": -113,
+            "edge": -0.0124,
+            "edge_at_price": -0.0503,
+            "ev": -0.0868,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 51.7% before shrink, this book's no-vig 54.2%.",
+              "Projection 5.56 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 12/20, all 14/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -108 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 5.5 ast",
+            "side": "over",
+            "line": 5.5,
+            "odds": -143.0,
+            "model_raw": 0.5171,
+            "model_prob": 0.5337,
+            "market_prob": 0.5504,
+            "fair_odds": -114,
+            "edge": -0.0166,
+            "edge_at_price": -0.0547,
+            "ev": -0.093,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 51.7% before shrink, this book's no-vig 55.0%.",
+              "Projection 5.56 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 12/20, all 14/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -110 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 5.5 ast",
+            "side": "over",
+            "line": 5.5,
+            "odds": -141.0,
+            "model_raw": 0.5171,
+            "model_prob": 0.5336,
+            "market_prob": 0.5501,
+            "fair_odds": -114,
+            "edge": -0.0165,
+            "edge_at_price": -0.0515,
+            "ev": -0.0879,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 51.7% before shrink, this book's no-vig 55.0%.",
+              "Projection 5.56 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 12/20, all 14/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -110 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 5.5 ast",
+            "side": "under",
+            "line": 5.5,
+            "odds": 104.0,
+            "model_raw": 0.4829,
+            "model_prob": 0.4705,
+            "market_prob": 0.4581,
+            "fair_odds": 113,
+            "edge": 0.0124,
+            "edge_at_price": -0.0197,
+            "ev": -0.0402,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 48.3% before shrink, this book's no-vig 45.8%.",
+              "Projection 5.56 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 12/20, all 14/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +117 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 5.5 ast",
+            "side": "under",
+            "line": 5.5,
+            "odds": 108.0,
+            "model_raw": 0.4829,
+            "model_prob": 0.4663,
+            "market_prob": 0.4496,
+            "fair_odds": 114,
+            "edge": 0.0166,
+            "edge_at_price": -0.0145,
+            "ev": -0.0302,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 48.3% before shrink, this book's no-vig 45.0%.",
+              "Projection 5.56 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 12/20, all 14/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +119 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 5.5 ast",
+            "side": "under",
+            "line": 5.5,
+            "odds": 109.0,
+            "model_raw": 0.4829,
+            "model_prob": 0.4664,
+            "market_prob": 0.4499,
+            "fair_odds": 114,
+            "edge": 0.0165,
+            "edge_at_price": -0.0121,
+            "ev": -0.0252,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 48.3% before shrink, this book's no-vig 45.0%.",
+              "Projection 5.56 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 12/20, all 14/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +119 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Immanuel Quickley",
+      "player_id": "4395724",
+      "team": "Toronto Raptors",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 2.33,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "9/20",
+        "all": "11/23"
+      },
+      "recent": [
+        2.0,
+        1.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        0.0,
+        4.0,
+        0.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.849,
+          "fair_over": -563,
+          "fair_under": 563,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.822,
+          "fair_over": -463,
+          "fair_under": 463,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.672,
+          "fair_over": -205,
+          "fair_under": 205,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.586,
+          "fair_over": -141,
+          "fair_under": 141,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.471,
+          "fair_over": 112,
+          "fair_under": -112,
+          "L10": "6/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.324,
+          "fair_over": 209,
+          "fair_under": -209,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.251,
+          "fair_over": 299,
+          "fair_under": -299,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.103,
+          "fair_over": 870,
+          "fair_under": -870,
+          "L10": "0/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.086,
+          "fair_over": 1067,
+          "fair_under": -1067,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": "Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -144.0,
+            "model_raw": 0.4714,
+            "model_prob": 0.5112,
+            "market_prob": 0.5511,
+            "fair_odds": -105,
+            "edge": -0.0398,
+            "edge_at_price": -0.0789,
+            "ev": -0.1337,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 47.1% before shrink, this book's no-vig 55.1%.",
+              "Projection 2.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/20, all 11/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -100 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -145.0,
+            "model_raw": 0.4714,
+            "model_prob": 0.5128,
+            "market_prob": 0.5541,
+            "fair_odds": -105,
+            "edge": -0.0414,
+            "edge_at_price": -0.0791,
+            "ev": -0.1336,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 47.1% before shrink, this book's no-vig 55.4%.",
+              "Projection 2.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/20, all 11/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -141.0,
+            "model_raw": 0.4714,
+            "model_prob": 0.5102,
+            "market_prob": 0.5489,
+            "fair_odds": -104,
+            "edge": -0.0388,
+            "edge_at_price": -0.0749,
+            "ev": -0.128,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 47.1% before shrink, this book's no-vig 54.9%.",
+              "Projection 2.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/20, all 11/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -100 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": 108.0,
+            "model_raw": 0.5286,
+            "model_prob": 0.4888,
+            "market_prob": 0.4489,
+            "fair_odds": 105,
+            "edge": 0.0398,
+            "edge_at_price": 0.008,
+            "ev": 0.0166,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 52.9% before shrink, this book's no-vig 44.9%.",
+              "Projection 2.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/20, all 11/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +109 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": 110.0,
+            "model_raw": 0.5286,
+            "model_prob": 0.4872,
+            "market_prob": 0.4459,
+            "fair_odds": 105,
+            "edge": 0.0414,
+            "edge_at_price": 0.011,
+            "ev": 0.0232,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 52.9% before shrink, this book's no-vig 44.6%.",
+              "Projection 2.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/20, all 11/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +109 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": 108.0,
+            "model_raw": 0.5286,
+            "model_prob": 0.4898,
+            "market_prob": 0.4511,
+            "fair_odds": 104,
+            "edge": 0.0388,
+            "edge_at_price": 0.0091,
+            "ev": 0.0189,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 52.9% before shrink, this book's no-vig 45.1%.",
+              "Projection 2.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/20, all 11/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Quickley (hamstring) is questionable for Wednesday's game against Boston.",
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +108 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ja'Kobe Walter",
+      "player_id": "4684272",
+      "team": "Toronto Raptors",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 4.5,
+      "projection": 4.02,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "8/25"
+      },
+      "recent": [
+        6.0,
+        6.0,
+        1.0,
+        6.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 2.5,
+          "p_over": 0.789,
+          "fair_over": -374,
+          "fair_under": 374,
+          "L10": "9/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.741,
+          "fair_over": -286,
+          "fair_under": 286,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.605,
+          "fair_over": -153,
+          "fair_under": 153,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.39,
+          "fair_over": 156,
+          "fair_under": -156,
+          "L10": "4/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.296,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "3/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.259,
+          "fair_over": 286,
+          "fair_under": -286,
+          "L10": "3/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.121,
+          "fair_over": 726,
+          "fair_under": -726,
+          "L10": "0/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.103,
+          "fair_over": 873,
+          "fair_under": -873,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 4.5 reb",
+            "side": "over",
+            "line": 4.5,
+            "odds": 110.0,
+            "model_raw": 0.3901,
+            "model_prob": 0.4176,
+            "market_prob": 0.4452,
+            "fair_odds": 139,
+            "edge": -0.0275,
+            "edge_at_price": -0.0586,
+            "ev": -0.123,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 39.0% before shrink, this book's no-vig 44.5%.",
+              "Projection 4.02 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +144 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 4.5 reb",
+            "side": "over",
+            "line": 4.5,
+            "odds": 121.0,
+            "model_raw": 0.3901,
+            "model_prob": 0.4072,
+            "market_prob": 0.4243,
+            "fair_odds": 146,
+            "edge": -0.0171,
+            "edge_at_price": -0.0453,
+            "ev": -0.1001,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 39.0% before shrink, this book's no-vig 42.4%.",
+              "Projection 4.02 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +150 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 4.5 reb",
+            "side": "over",
+            "line": 4.5,
+            "odds": 117.0,
+            "model_raw": 0.3901,
+            "model_prob": 0.4116,
+            "market_prob": 0.4331,
+            "fair_odds": 143,
+            "edge": -0.0215,
+            "edge_at_price": -0.0492,
+            "ev": -0.1068,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 39.0% before shrink, this book's no-vig 43.3%.",
+              "Projection 4.02 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +148 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 4.5 reb",
+            "side": "under",
+            "line": 4.5,
+            "odds": -146.0,
+            "model_raw": 0.6099,
+            "model_prob": 0.5824,
+            "market_prob": 0.5548,
+            "fair_odds": -139,
+            "edge": 0.0275,
+            "edge_at_price": -0.0111,
+            "ev": -0.0188,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 61.0% before shrink, this book's no-vig 55.5%.",
+              "Projection 4.02 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -133 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 4.5 reb",
+            "side": "under",
+            "line": 4.5,
+            "odds": -159.0,
+            "model_raw": 0.6099,
+            "model_prob": 0.5928,
+            "market_prob": 0.5757,
+            "fair_odds": -146,
+            "edge": 0.0171,
+            "edge_at_price": -0.0211,
+            "ev": -0.0344,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 61.0% before shrink, this book's no-vig 57.6%.",
+              "Projection 4.02 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -139 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 4.5 reb",
+            "side": "under",
+            "line": 4.5,
+            "odds": -152.0,
+            "model_raw": 0.6099,
+            "model_prob": 0.5884,
+            "market_prob": 0.5669,
+            "fair_odds": -143,
+            "edge": 0.0215,
+            "edge_at_price": -0.0148,
+            "ev": -0.0245,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 61.0% before shrink, this book's no-vig 56.7%.",
+              "Projection 4.02 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -136 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ja'Kobe Walter",
+      "player_id": "4684272",
+      "team": "Toronto Raptors",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 12.5,
+      "projection": 10.82,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "2/10",
+        "L20": "7/20",
+        "all": "8/25"
+      },
+      "recent": [
+        12.0,
+        7.0,
+        8.0,
+        10.0,
+        11.0,
+        9.0,
+        14.0,
+        22.0,
+        7.0,
+        10.0
+      ],
+      "ladder": [
+        {
+          "line": 10.5,
+          "p_over": 0.491,
+          "fair_over": 104,
+          "fair_under": -104,
+          "L10": "4/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.44,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "3/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.4,
+          "fair_over": 150,
+          "fair_under": -150,
+          "L10": "3/10"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.343,
+          "fair_over": 192,
+          "fair_under": -192,
+          "L10": "2/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.312,
+          "fair_over": 220,
+          "fair_under": -220,
+          "L10": "2/10"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.274,
+          "fair_over": 265,
+          "fair_under": -265,
+          "L10": "2/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.258,
+          "fair_over": 287,
+          "fair_under": -287,
+          "L10": "2/10"
+        },
+        {
+          "line": 14.0,
+          "p_over": 0.198,
+          "fair_over": 405,
+          "fair_under": -405,
+          "L10": "1/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.183,
+          "fair_over": 446,
+          "fair_under": -446,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 12.5 pts",
+            "side": "over",
+            "line": 12.5,
+            "odds": -132.0,
+            "model_raw": 0.3121,
+            "model_prob": 0.4222,
+            "market_prob": 0.5323,
+            "fair_odds": 137,
+            "edge": -0.1101,
+            "edge_at_price": -0.1468,
+            "ev": -0.258,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 31.2% before shrink, this book's no-vig 53.2%.",
+              "Projection 10.82 (Normal(sd 4.2)).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 53%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +142 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 12.5 pts",
+            "side": "over",
+            "line": 12.5,
+            "odds": -114.0,
+            "model_raw": 0.3121,
+            "model_prob": 0.4071,
+            "market_prob": 0.5021,
+            "fair_odds": 146,
+            "edge": -0.095,
+            "edge_at_price": -0.1256,
+            "ev": -0.2358,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 31.2% before shrink, this book's no-vig 50.2%.",
+              "Projection 10.82 (Normal(sd 4.2)).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +151 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 12.5 pts",
+            "side": "over",
+            "line": 12.5,
+            "odds": -122.0,
+            "model_raw": 0.3121,
+            "model_prob": 0.4143,
+            "market_prob": 0.5164,
+            "fair_odds": 141,
+            "edge": -0.1022,
+            "edge_at_price": -0.1353,
+            "ev": -0.2462,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 31.2% before shrink, this book's no-vig 51.6%.",
+              "Projection 10.82 (Normal(sd 4.2)).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +146 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 12.5 pts",
+            "side": "under",
+            "line": 12.5,
+            "odds": 100.0,
+            "model_raw": 0.6879,
+            "model_prob": 0.5778,
+            "market_prob": 0.4677,
+            "fair_odds": -137,
+            "edge": 0.1101,
+            "edge_at_price": 0.0778,
+            "ev": 0.1556,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 68.8% before shrink, this book's no-vig 46.8%.",
+              "Projection 10.82 (Normal(sd 4.2)).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -131 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 12.5 pts",
+            "side": "under",
+            "line": 12.5,
+            "odds": -112.0,
+            "model_raw": 0.6879,
+            "model_prob": 0.5929,
+            "market_prob": 0.4979,
+            "fair_odds": -146,
+            "edge": 0.095,
+            "edge_at_price": 0.0646,
+            "ev": 0.1223,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 68.8% before shrink, this book's no-vig 49.8%.",
+              "Projection 10.82 (Normal(sd 4.2)).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -139 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 12.5 pts",
+            "side": "under",
+            "line": 12.5,
+            "odds": -106.0,
+            "model_raw": 0.6879,
+            "model_prob": 0.5857,
+            "market_prob": 0.4836,
+            "fair_odds": -141,
+            "edge": 0.1022,
+            "edge_at_price": 0.0712,
+            "ev": 0.1383,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 68.8% before shrink, this book's no-vig 48.4%.",
+              "Projection 10.82 (Normal(sd 4.2)).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -135 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ja'Kobe Walter",
+      "player_id": "4684272",
+      "team": "Toronto Raptors",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 19.5,
+      "projection": 16.94,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "5/20",
+        "all": "5/25"
+      },
+      "recent": [
+        18.0,
+        15.0,
+        11.0,
+        21.0,
+        17.0,
+        13.0,
+        21.0,
+        28.0,
+        13.0,
+        17.0
+      ],
+      "ladder": [
+        {
+          "line": 15.5,
+          "p_over": 0.607,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "6/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.553,
+          "fair_over": -124,
+          "fair_under": 124,
+          "L10": "6/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.44,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "4/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.358,
+          "fair_over": 180,
+          "fair_under": -180,
+          "L10": "3/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.308,
+          "fair_over": 225,
+          "fair_under": -225,
+          "L10": "3/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.264,
+          "fair_over": 279,
+          "fair_under": -279,
+          "L10": "3/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.167,
+          "fair_over": 498,
+          "fair_under": -498,
+          "L10": "1/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.136,
+          "fair_over": 633,
+          "fair_under": -633,
+          "L10": "1/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.112,
+          "fair_over": 791,
+          "fair_under": -791,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 19.5 pra",
+            "side": "over",
+            "line": 19.5,
+            "odds": -118.0,
+            "model_raw": 0.3079,
+            "model_prob": 0.407,
+            "market_prob": 0.5061,
+            "fair_odds": 146,
+            "edge": -0.0991,
+            "edge_at_price": -0.1343,
+            "ev": -0.2481,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 19.5: 30.8% before shrink, this book's no-vig 50.6%.",
+              "Projection 16.94 (Normal(sd 4.7)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/20, all 5/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +151 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 19.5 pra",
+            "side": "over",
+            "line": 19.5,
+            "odds": -104.0,
+            "model_raw": 0.3079,
+            "model_prob": 0.3923,
+            "market_prob": 0.4768,
+            "fair_odds": 155,
+            "edge": -0.0844,
+            "edge_at_price": -0.1175,
+            "ev": -0.2304,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 19.5: 30.8% before shrink, this book's no-vig 47.7%.",
+              "Projection 16.94 (Normal(sd 4.7)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/20, all 5/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +160 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 19.5 pra",
+            "side": "over",
+            "line": 19.5,
+            "odds": -109.0,
+            "model_raw": 0.3079,
+            "model_prob": 0.3988,
+            "market_prob": 0.4897,
+            "fair_odds": 151,
+            "edge": -0.0909,
+            "edge_at_price": -0.1227,
+            "ev": -0.2353,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 19.5: 30.8% before shrink, this book's no-vig 49.0%.",
+              "Projection 16.94 (Normal(sd 4.7)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/20, all 5/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +156 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 19.5 pra",
+            "side": "under",
+            "line": 19.5,
+            "odds": -112.0,
+            "model_raw": 0.6921,
+            "model_prob": 0.593,
+            "market_prob": 0.4939,
+            "fair_odds": -146,
+            "edge": 0.0991,
+            "edge_at_price": 0.0647,
+            "ev": 0.1225,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 19.5: 69.2% before shrink, this book's no-vig 49.4%.",
+              "Projection 16.94 (Normal(sd 4.7)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/20, all 5/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -139 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 19.5 pra",
+            "side": "under",
+            "line": 19.5,
+            "odds": -127.0,
+            "model_raw": 0.6921,
+            "model_prob": 0.6077,
+            "market_prob": 0.5232,
+            "fair_odds": -155,
+            "edge": 0.0844,
+            "edge_at_price": 0.0482,
+            "ev": 0.0861,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 19.5: 69.2% before shrink, this book's no-vig 52.3%.",
+              "Projection 16.94 (Normal(sd 4.7)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/20, all 5/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -147 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 19.5 pra",
+            "side": "under",
+            "line": 19.5,
+            "odds": -119.0,
+            "model_raw": 0.6921,
+            "model_prob": 0.6012,
+            "market_prob": 0.5103,
+            "fair_odds": -151,
+            "edge": 0.0909,
+            "edge_at_price": 0.0578,
+            "ev": 0.1064,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 19.5: 69.2% before shrink, this book's no-vig 51.0%.",
+              "Projection 16.94 (Normal(sd 4.7)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/20, all 5/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -144 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ja'Kobe Walter",
+      "player_id": "4684272",
+      "team": "Toronto Raptors",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 1.5,
+      "projection": 2.09,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "13/20",
+        "all": "16/25"
+      },
+      "recent": [
+        0.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0,
+        1.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.861,
+          "fair_over": -620,
+          "fair_under": 620,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.828,
+          "fair_over": -480,
+          "fair_under": 480,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.664,
+          "fair_over": -197,
+          "fair_under": 197,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.484,
+          "fair_over": 107,
+          "fair_under": -107,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.313,
+          "fair_over": 219,
+          "fair_under": -219,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.215,
+          "fair_over": 365,
+          "fair_under": -365,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.191,
+          "fair_over": 424,
+          "fair_under": -424,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 1.5 ast",
+            "side": "over",
+            "line": 1.5,
+            "odds": -192.0,
+            "model_raw": 0.6637,
+            "model_prob": 0.6389,
+            "market_prob": 0.6141,
+            "fair_odds": -177,
+            "edge": 0.0248,
+            "edge_at_price": -0.0186,
+            "ev": -0.0284,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 66.4% before shrink, this book's no-vig 61.4%.",
+              "Projection 2.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -168 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 1.5 ast",
+            "side": "over",
+            "line": 1.5,
+            "odds": -191.0,
+            "model_raw": 0.6637,
+            "model_prob": 0.6397,
+            "market_prob": 0.6156,
+            "fair_odds": -178,
+            "edge": 0.024,
+            "edge_at_price": -0.0167,
+            "ev": -0.0254,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 66.4% before shrink, this book's no-vig 61.6%.",
+              "Projection 2.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -168 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 1.5 ast",
+            "side": "over",
+            "line": 1.5,
+            "odds": -185.0,
+            "model_raw": 0.6637,
+            "model_prob": 0.6374,
+            "market_prob": 0.611,
+            "fair_odds": -176,
+            "edge": 0.0263,
+            "edge_at_price": -0.0118,
+            "ev": -0.0181,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 66.4% before shrink, this book's no-vig 61.1%.",
+              "Projection 2.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -167 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 1.5 ast",
+            "side": "under",
+            "line": 1.5,
+            "odds": 142.0,
+            "model_raw": 0.3363,
+            "model_prob": 0.3611,
+            "market_prob": 0.3859,
+            "fair_odds": 177,
+            "edge": -0.0248,
+            "edge_at_price": -0.0521,
+            "ev": -0.1261,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 33.6% before shrink, this book's no-vig 38.6%.",
+              "Projection 2.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +182 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 1.5 ast",
+            "side": "under",
+            "line": 1.5,
+            "odds": 144.0,
+            "model_raw": 0.3363,
+            "model_prob": 0.3603,
+            "market_prob": 0.3844,
+            "fair_odds": 178,
+            "edge": -0.024,
+            "edge_at_price": -0.0495,
+            "ev": -0.1208,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 33.6% before shrink, this book's no-vig 38.4%.",
+              "Projection 2.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +183 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 1.5 ast",
+            "side": "under",
+            "line": 1.5,
+            "odds": 142.0,
+            "model_raw": 0.3363,
+            "model_prob": 0.3626,
+            "market_prob": 0.389,
+            "fair_odds": 176,
+            "edge": -0.0263,
+            "edge_at_price": -0.0506,
+            "ev": -0.1224,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 33.6% before shrink, this book's no-vig 38.9%.",
+              "Projection 2.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +181 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ja'Kobe Walter",
+      "player_id": "4684272",
+      "team": "Toronto Raptors",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 2.17,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "10/20",
+        "all": "12/25"
+      },
+      "recent": [
+        2.0,
+        1.0,
+        1.0,
+        0.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        2.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.868,
+          "fair_over": -655,
+          "fair_under": 655,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.824,
+          "fair_over": -468,
+          "fair_under": 468,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.619,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.504,
+          "fair_over": -101,
+          "fair_under": 101,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.386,
+          "fair_over": 159,
+          "fair_under": -159,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.219,
+          "fair_over": 356,
+          "fair_under": -356,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.172,
+          "fair_over": 481,
+          "fair_under": -481,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.109,
+          "fair_over": 819,
+          "fair_under": -819,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.104,
+          "fair_over": 866,
+          "fair_under": -866,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -130.0,
+            "model_raw": 0.3862,
+            "model_prob": 0.4572,
+            "market_prob": 0.5282,
+            "fair_odds": 119,
+            "edge": -0.071,
+            "edge_at_price": -0.108,
+            "ev": -0.1911,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 38.6% before shrink, this book's no-vig 52.8%.",
+              "Projection 2.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (39% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 53%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +123 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -128.0,
+            "model_raw": 0.3862,
+            "model_prob": 0.4557,
+            "market_prob": 0.5253,
+            "fair_odds": 119,
+            "edge": -0.0695,
+            "edge_at_price": -0.1057,
+            "ev": -0.1882,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 38.6% before shrink, this book's no-vig 52.5%.",
+              "Projection 2.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (39% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 53%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +124 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -123.0,
+            "model_raw": 0.3862,
+            "model_prob": 0.4524,
+            "market_prob": 0.5185,
+            "fair_odds": 121,
+            "edge": -0.0662,
+            "edge_at_price": -0.0992,
+            "ev": -0.1799,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 38.6% before shrink, this book's no-vig 51.9%.",
+              "Projection 2.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (39% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -102.0,
+            "model_raw": 0.6138,
+            "model_prob": 0.5428,
+            "market_prob": 0.4718,
+            "fair_odds": -119,
+            "edge": 0.071,
+            "edge_at_price": 0.0379,
+            "ev": 0.075,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 61.4% before shrink, this book's no-vig 47.2%.",
+              "Projection 2.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (61% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (61% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -103.0,
+            "model_raw": 0.6138,
+            "model_prob": 0.5443,
+            "market_prob": 0.4747,
+            "fair_odds": -119,
+            "edge": 0.0695,
+            "edge_at_price": 0.0369,
+            "ev": 0.0727,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 61.4% before shrink, this book's no-vig 47.5%.",
+              "Projection 2.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (61% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (61% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ja'Kobe Walter Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -105.0,
+            "model_raw": 0.6138,
+            "model_prob": 0.5476,
+            "market_prob": 0.4815,
+            "fair_odds": -121,
+            "edge": 0.0662,
+            "edge_at_price": 0.0355,
+            "ev": 0.0692,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 61.4% before shrink, this book's no-vig 48.1%.",
+              "Projection 2.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (61% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (61% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -116 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "RJ Barrett",
+      "player_id": "4395625",
+      "team": "Toronto Raptors",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 5.5,
+      "projection": 5.82,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "12/25"
+      },
+      "recent": [
+        3.0,
+        7.0,
+        5.0,
+        6.0,
+        10.0,
+        3.0,
+        9.0,
+        2.0,
+        9.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.774,
+          "fair_over": -342,
+          "fair_under": 342,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.745,
+          "fair_over": -292,
+          "fair_under": 292,
+          "L10": "6/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.652,
+          "fair_over": -188,
+          "fair_under": 188,
+          "L10": "6/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.599,
+          "fair_over": -149,
+          "fair_under": 149,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.516,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.441,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.301,
+          "fair_over": 233,
+          "fair_under": -233,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.267,
+          "fair_over": 275,
+          "fair_under": -275,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 5.5 reb",
+            "side": "over",
+            "line": 5.5,
+            "odds": -136.0,
+            "model_raw": 0.5158,
+            "model_prob": 0.5269,
+            "market_prob": 0.5379,
+            "fair_odds": -111,
+            "edge": -0.0111,
+            "edge_at_price": -0.0494,
+            "ev": -0.0858,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 51.6% before shrink, this book's no-vig 53.8%.",
+              "Projection 5.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -107 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 5.5 reb",
+            "side": "over",
+            "line": 5.5,
+            "odds": -132.0,
+            "model_raw": 0.5158,
+            "model_prob": 0.5253,
+            "market_prob": 0.5347,
+            "fair_odds": -111,
+            "edge": -0.0095,
+            "edge_at_price": -0.0437,
+            "ev": -0.0768,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 51.6% before shrink, this book's no-vig 53.5%.",
+              "Projection 5.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -106 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 5.5 reb",
+            "side": "under",
+            "line": 5.5,
+            "odds": 102.0,
+            "model_raw": 0.4842,
+            "model_prob": 0.4731,
+            "market_prob": 0.4621,
+            "fair_odds": 111,
+            "edge": 0.0111,
+            "edge_at_price": -0.0219,
+            "ev": -0.0442,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 48.4% before shrink, this book's no-vig 46.2%.",
+              "Projection 5.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 5.5 reb",
+            "side": "under",
+            "line": 5.5,
+            "odds": 102.0,
+            "model_raw": 0.4842,
+            "model_prob": 0.4747,
+            "market_prob": 0.4653,
+            "fair_odds": 111,
+            "edge": 0.0095,
+            "edge_at_price": -0.0203,
+            "ev": -0.041,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 48.4% before shrink, this book's no-vig 46.5%.",
+              "Projection 5.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +115 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "RJ Barrett",
+      "player_id": "4395625",
+      "team": "Toronto Raptors",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 23.5,
+      "projection": 21.64,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "8/20",
+        "all": "11/25"
+      },
+      "recent": [
+        19.0,
+        27.0,
+        22.0,
+        26.0,
+        22.0,
+        9.0,
+        25.0,
+        20.0,
+        23.0,
+        20.0
+      ],
+      "ladder": [
+        {
+          "line": 19.5,
+          "p_over": 0.699,
+          "fair_over": -232,
+          "fair_under": 232,
+          "L10": "8/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.59,
+          "fair_over": -144,
+          "fair_under": 144,
+          "L10": "6/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.537,
+          "fair_over": -116,
+          "fair_under": 116,
+          "L10": "6/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.425,
+          "fair_over": 135,
+          "fair_under": -135,
+          "L10": "4/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.344,
+          "fair_over": 191,
+          "fair_under": -191,
+          "L10": "3/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.296,
+          "fair_over": 237,
+          "fair_under": -237,
+          "L10": "3/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.225,
+          "fair_over": 344,
+          "fair_under": -344,
+          "L10": "2/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.16,
+          "fair_over": 524,
+          "fair_under": -524,
+          "L10": "1/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.102,
+          "fair_over": 880,
+          "fair_under": -880,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 23.5 pts",
+            "side": "over",
+            "line": 23.5,
+            "odds": -122.0,
+            "model_raw": 0.3442,
+            "model_prob": 0.4292,
+            "market_prob": 0.5142,
+            "fair_odds": 133,
+            "edge": -0.085,
+            "edge_at_price": -0.1204,
+            "ev": -0.219,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 23.5: 34.4% before shrink, this book's no-vig 51.4%.",
+              "Projection 21.64 (Normal(sd 4.8)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 23.5 pts",
+            "side": "over",
+            "line": 23.5,
+            "odds": -120.0,
+            "model_raw": 0.3442,
+            "model_prob": 0.4283,
+            "market_prob": 0.5123,
+            "fair_odds": 134,
+            "edge": -0.0841,
+            "edge_at_price": -0.1172,
+            "ev": -0.2149,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 23.5: 34.4% before shrink, this book's no-vig 51.2%.",
+              "Projection 21.64 (Normal(sd 4.8)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 23.5 pts",
+            "side": "under",
+            "line": 23.5,
+            "odds": -108.0,
+            "model_raw": 0.6558,
+            "model_prob": 0.5708,
+            "market_prob": 0.4858,
+            "fair_odds": -133,
+            "edge": 0.085,
+            "edge_at_price": 0.0516,
+            "ev": 0.0993,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 65.6% before shrink, this book's no-vig 48.6%.",
+              "Projection 21.64 (Normal(sd 4.8)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 23.5 pts",
+            "side": "under",
+            "line": 23.5,
+            "odds": -108.0,
+            "model_raw": 0.6558,
+            "model_prob": 0.5717,
+            "market_prob": 0.4877,
+            "fair_odds": -134,
+            "edge": 0.0841,
+            "edge_at_price": 0.0525,
+            "ev": 0.1011,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 65.6% before shrink, this book's no-vig 48.8%.",
+              "Projection 21.64 (Normal(sd 4.8)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -128 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "RJ Barrett",
+      "player_id": "4395625",
+      "team": "Toronto Raptors",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 34.5,
+      "projection": 31.14,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "9/25"
+      },
+      "recent": [
+        24.0,
+        38.0,
+        30.0,
+        35.0,
+        37.0,
+        17.0,
+        40.0,
+        24.0,
+        36.0,
+        27.0
+      ],
+      "ladder": [
+        {
+          "line": 30.5,
+          "p_over": 0.523,
+          "fair_over": -110,
+          "fair_under": 110,
+          "L10": "5/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.487,
+          "fair_over": 105,
+          "fair_under": -105,
+          "L10": "5/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.451,
+          "fair_over": 122,
+          "fair_under": -122,
+          "L10": "5/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.416,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "5/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "5/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.323,
+          "fair_over": 210,
+          "fair_under": -210,
+          "L10": "4/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.265,
+          "fair_over": 278,
+          "fair_under": -278,
+          "L10": "3/10"
+        },
+        {
+          "line": 37.5,
+          "p_over": 0.21,
+          "fair_over": 377,
+          "fair_under": -377,
+          "L10": "2/10"
+        },
+        {
+          "line": 38.5,
+          "p_over": 0.158,
+          "fair_over": 534,
+          "fair_under": -534,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 34.5 pra",
+            "side": "over",
+            "line": 34.5,
+            "odds": -102.0,
+            "model_raw": 0.383,
+            "model_prob": 0.4287,
+            "market_prob": 0.4744,
+            "fair_odds": 133,
+            "edge": -0.0457,
+            "edge_at_price": -0.0763,
+            "ev": -0.151,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 34.5: 38.3% before shrink, this book's no-vig 47.4%.",
+              "Projection 31.14 (Normal(sd 7.2)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 34.5 pra",
+            "side": "under",
+            "line": 34.5,
+            "odds": -127.0,
+            "model_raw": 0.617,
+            "model_prob": 0.5713,
+            "market_prob": 0.5256,
+            "fair_odds": -133,
+            "edge": 0.0457,
+            "edge_at_price": 0.0118,
+            "ev": 0.0212,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 34.5: 61.7% before shrink, this book's no-vig 52.6%.",
+              "Projection 31.14 (Normal(sd 7.2)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "RJ Barrett",
+      "player_id": "4395625",
+      "team": "Toronto Raptors",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 3.5,
+      "projection": 3.68,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "12/25"
+      },
+      "recent": [
+        2.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        5.0,
+        6.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.894,
+          "fair_over": -842,
+          "fair_under": 842,
+          "L10": "10/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.872,
+          "fair_over": -682,
+          "fair_under": 682,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.724,
+          "fair_over": -263,
+          "fair_under": 263,
+          "L10": "8/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.645,
+          "fair_over": -182,
+          "fair_under": 182,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.501,
+          "fair_over": -100,
+          "fair_under": 100,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.388,
+          "fair_over": 158,
+          "fair_under": -158,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.317,
+          "fair_over": 215,
+          "fair_under": -215,
+          "L10": "3/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.196,
+          "fair_over": 410,
+          "fair_under": -410,
+          "L10": "1/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.167,
+          "fair_over": 500,
+          "fair_under": -500,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": -162.0,
+            "model_raw": 0.5005,
+            "model_prob": 0.5395,
+            "market_prob": 0.5785,
+            "fair_odds": -117,
+            "edge": -0.039,
+            "edge_at_price": -0.0788,
+            "ev": -0.1274,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 50.0% before shrink, this book's no-vig 57.9%.",
+              "Projection 3.68 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -112 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 3.5 ast",
+            "side": "over",
+            "line": 3.5,
+            "odds": -159.0,
+            "model_raw": 0.5005,
+            "model_prob": 0.5386,
+            "market_prob": 0.5768,
+            "fair_odds": -117,
+            "edge": -0.0381,
+            "edge_at_price": -0.0753,
+            "ev": -0.1226,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 50.0% before shrink, this book's no-vig 57.7%.",
+              "Projection 3.68 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -112 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": 122.0,
+            "model_raw": 0.4995,
+            "model_prob": 0.4605,
+            "market_prob": 0.4215,
+            "fair_odds": 117,
+            "edge": 0.039,
+            "edge_at_price": 0.01,
+            "ev": 0.0223,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 50.0% before shrink, this book's no-vig 42.1%.",
+              "Projection 3.68 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +121 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 3.5 ast",
+            "side": "under",
+            "line": 3.5,
+            "odds": 122.0,
+            "model_raw": 0.4995,
+            "model_prob": 0.4614,
+            "market_prob": 0.4232,
+            "fair_odds": 117,
+            "edge": 0.0381,
+            "edge_at_price": 0.0109,
+            "ev": 0.0242,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 50.0% before shrink, this book's no-vig 42.3%.",
+              "Projection 3.68 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +121 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "RJ Barrett",
+      "player_id": "4395625",
+      "team": "Toronto Raptors",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 1.59,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "6/20",
+        "all": "7/25"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        3.0,
+        2.0,
+        4.0,
+        1.0,
+        3.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.751,
+          "fair_over": -301,
+          "fair_under": 301,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.648,
+          "fair_over": -184,
+          "fair_under": 184,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.452,
+          "fair_over": 121,
+          "fair_under": -121,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.314,
+          "fair_over": 218,
+          "fair_under": -218,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.255,
+          "fair_over": 291,
+          "fair_under": -291,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.128,
+          "fair_over": 681,
+          "fair_under": -681,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.108,
+          "fair_over": 822,
+          "fair_under": -822,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.048,
+          "fair_over": 1999,
+          "fair_under": -1999,
+          "L10": "0/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.044,
+          "fair_over": 2166,
+          "fair_under": -2166,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": 152.0,
+            "model_raw": 0.2555,
+            "model_prob": 0.3134,
+            "market_prob": 0.3712,
+            "fair_odds": 219,
+            "edge": -0.0579,
+            "edge_at_price": -0.0835,
+            "ev": -0.2103,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 25.6% before shrink, this book's no-vig 37.1%.",
+              "Projection 1.59 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 7/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +225 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": 149.0,
+            "model_raw": 0.2555,
+            "model_prob": 0.3165,
+            "market_prob": 0.3775,
+            "fair_odds": 216,
+            "edge": -0.061,
+            "edge_at_price": -0.0851,
+            "ev": -0.2119,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 25.6% before shrink, this book's no-vig 37.8%.",
+              "Projection 1.59 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 7/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (26% vs 38%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +222 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -205.0,
+            "model_raw": 0.7445,
+            "model_prob": 0.6866,
+            "market_prob": 0.6288,
+            "fair_odds": -219,
+            "edge": 0.0579,
+            "edge_at_price": 0.0145,
+            "ev": 0.0216,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 74.5% before shrink, this book's no-vig 62.9%.",
+              "Projection 1.59 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 7/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -206 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -196.0,
+            "model_raw": 0.7445,
+            "model_prob": 0.6835,
+            "market_prob": 0.6225,
+            "fair_odds": -216,
+            "edge": 0.061,
+            "edge_at_price": 0.0213,
+            "ev": 0.0322,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 74.5% before shrink, this book's no-vig 62.2%.",
+              "Projection 1.59 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 7/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "model far from market (74% vs 62%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -203 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "RJ Barrett",
+      "player_id": "4395625",
+      "team": "Toronto Raptors",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 5.5,
+      "projection": 5.82,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "12/25"
+      },
+      "recent": [
+        3.0,
+        7.0,
+        5.0,
+        6.0,
+        10.0,
+        3.0,
+        9.0,
+        2.0,
+        9.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.774,
+          "fair_over": -342,
+          "fair_under": 342,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.745,
+          "fair_over": -292,
+          "fair_under": 292,
+          "L10": "6/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.652,
+          "fair_over": -188,
+          "fair_under": 188,
+          "L10": "6/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.599,
+          "fair_over": -149,
+          "fair_under": 149,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.516,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.441,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.301,
+          "fair_over": 233,
+          "fair_under": -233,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.267,
+          "fair_over": 275,
+          "fair_under": -275,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "RJ Barrett Over 5.5 reb",
+            "side": "over",
+            "line": 5.5,
+            "odds": -139.0,
+            "model_raw": 0.5158,
+            "model_prob": 0.5298,
+            "market_prob": 0.5438,
+            "fair_odds": -113,
+            "edge": -0.014,
+            "edge_at_price": -0.0518,
+            "ev": -0.089,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 51.6% before shrink, this book's no-vig 54.4%.",
+              "Projection 5.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -108 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "RJ Barrett Under 5.5 reb",
+            "side": "under",
+            "line": 5.5,
+            "odds": 105.0,
+            "model_raw": 0.4842,
+            "model_prob": 0.4702,
+            "market_prob": 0.4562,
+            "fair_odds": 113,
+            "edge": 0.014,
+            "edge_at_price": -0.0176,
+            "ev": -0.0361,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 48.4% before shrink, this book's no-vig 45.6%.",
+              "Projection 5.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 12/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +117 or better.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
+}

@@ -33,23 +33,23 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -189.0,
-      "ml_away": 158.0,
-      "total": 222.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0,
-      "spread_home": -5.5,
-      "spread_home_odds": -110.0,
-      "spread_away": 5.5,
-      "spread_away_odds": -110.0
+      "total": 221.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
+      "ml_home": -237.0,
+      "ml_away": 196.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -107.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -113.0
     }
   },
   "badge": null,
-  "model_summary": "Margin HOU +6.3 \u00b7 total 224.0",
+  "model_summary": "Margin HOU +6.3 \u00b7 total 224.1",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: HOU 68.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin HOU +6.3, total 224.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "ESPN matchup predictor: HOU 67.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin HOU +6.3, total 224.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -115,27 +115,27 @@
               "selection": "HOU ML",
               "side": "home",
               "line": null,
-              "odds": -189.0,
+              "odds": -237.0,
               "model_raw": 0.6942,
-              "model_prob": 0.6375,
-              "market_prob": 0.6279,
-              "fair_odds": -176,
-              "edge": 0.0097,
-              "edge_at_price": -0.0165,
-              "ev": -0.0252,
+              "model_prob": 0.6782,
+              "market_prob": 0.6755,
+              "fair_odds": -211,
+              "edge": 0.0027,
+              "edge_at_price": -0.0251,
+              "ev": -0.0357,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model HOU win 69.4% vs market no-vig 62.8%.",
+                "Model HOU win 69.4% vs market no-vig 67.5%.",
                 "v2 projected margin HOU +6.3 (ratings HOU +6.7, GS +1.8, home edge 1.5); raw model 69.4%.",
                 "GS L5 WWWWW (MOV 9.2), HOU L5 WWLLW (MOV 9.1)",
-                "pace: projected total -1.8 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total -1.6 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes HOU 63%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -167 or better.",
+              "case_against": "Market makes HOU 68%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -198 or better.",
               "proven": true
             }
           }
@@ -148,27 +148,29 @@
               "selection": "GS ML",
               "side": "away",
               "line": null,
-              "odds": 158.0,
+              "odds": 196.0,
               "model_raw": 0.3058,
-              "model_prob": 0.3625,
-              "market_prob": 0.3721,
-              "fair_odds": 176,
-              "edge": -0.0097,
-              "edge_at_price": -0.0251,
-              "ev": -0.0648,
+              "model_prob": 0.3218,
+              "market_prob": 0.3245,
+              "fair_odds": 211,
+              "edge": -0.0027,
+              "edge_at_price": -0.016,
+              "ev": -0.0473,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model GS win 30.6% vs market no-vig 37.2%.",
+                "Model GS win 30.6% vs market no-vig 32.5%.",
                 "v2 projected margin HOU +6.3 (ratings HOU +6.7, GS +1.8, home edge 1.5); raw model 30.6%.",
                 "GS L5 WWWWW (MOV 9.2), HOU L5 WWLLW (MOV 9.1)",
-                "pace: projected total -1.8 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total -1.6 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
-              "caution": [],
-              "case_against": "Market makes GS 37%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +181 or better.",
+              "caution": [
+                "line move: price drifted against this side (+158 -> +196)"
+              ],
+              "case_against": "Market makes GS 32%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +217 or better.",
               "proven": true
             }
           }
@@ -183,30 +185,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "HOU -5.5",
+              "selection": "HOU -6.5",
               "side": "home",
-              "line": -5.5,
-              "odds": -110.0,
-              "model_raw": 0.527,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": -6.5,
+              "odds": -107.0,
+              "model_raw": 0.4951,
+              "model_prob": 0.4935,
+              "market_prob": 0.4935,
+              "fair_odds": 103,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.0234,
+              "ev": -0.0453,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model HOU -5.5 covers 52.7% vs market 50.0%.",
-                "Projected margin HOU +6.3 vs line HOU -5.5.",
+                "Model HOU -6.5 covers 49.5% vs market 49.4%.",
+                "Projected margin HOU +6.3 vs line HOU -6.5.",
                 "GS L5 WWWWW (MOV 9.2), HOU L5 WWLLW (MOV 9.1)",
-                "pace: projected total -1.8 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total -1.6 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: spread moved against this side (-5.5 -> -6.5)"
+              ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +107 or better.",
               "proven": false
             }
           }
@@ -216,30 +220,30 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "GS +5.5",
+              "selection": "GS +6.5",
               "side": "away",
-              "line": 5.5,
-              "odds": -110.0,
-              "model_raw": 0.473,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 6.5,
+              "odds": -113.0,
+              "model_raw": 0.5049,
+              "model_prob": 0.5065,
+              "market_prob": 0.5065,
+              "fair_odds": -103,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.0453,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model GS +5.5 covers 47.3% vs market 50.0%.",
-                "Projected margin HOU +6.3 vs line HOU -5.5.",
+                "Model GS +6.5 covers 50.5% vs market 50.6%.",
+                "Projected margin HOU +6.3 vs line HOU -6.5.",
                 "GS L5 WWWWW (MOV 9.2), HOU L5 WWLLW (MOV 9.1)",
-                "pace: projected total -1.8 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total -1.6 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +101 or better.",
               "proven": false
             }
           }
@@ -254,29 +258,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 222.5",
+              "selection": "Over 221.5",
               "side": "over",
-              "line": 222.5,
-              "odds": -110.0,
-              "model_raw": 0.5305,
-              "model_prob": 0.5052,
-              "market_prob": 0.5,
-              "fair_odds": -102,
-              "edge": 0.0052,
-              "edge_at_price": -0.0186,
-              "ev": -0.0355,
+              "line": 221.5,
+              "odds": -115.0,
+              "model_raw": 0.5533,
+              "model_prob": 0.5181,
+              "market_prob": 0.5108,
+              "fair_odds": -108,
+              "edge": 0.0072,
+              "edge_at_price": -0.0168,
+              "ev": -0.0314,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 222.5: 53.0% vs market 50.0%.",
-                "Projected total 224.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 221.5: 55.3% vs market 51.1%.",
+                "Projected total 224.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 222.5 -> 221.5.",
                 "GS L5 WWWWW (MOV 9.2), HOU L5 WWLLW (MOV 9.1)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the over (222.5 -> 221.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +102 or better.",
+              "next_step": "Pass. Only interesting at -103 or better.",
               "proven": true
             }
           }
@@ -286,29 +292,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 222.5",
+              "selection": "Under 221.5",
               "side": "under",
-              "line": 222.5,
-              "odds": -110.0,
-              "model_raw": 0.4695,
-              "model_prob": 0.4948,
-              "market_prob": 0.5,
-              "fair_odds": 102,
-              "edge": -0.0052,
-              "edge_at_price": -0.029,
-              "ev": -0.0554,
+              "line": 221.5,
+              "odds": -105.0,
+              "model_raw": 0.4467,
+              "model_prob": 0.4819,
+              "market_prob": 0.4892,
+              "fair_odds": 108,
+              "edge": -0.0072,
+              "edge_at_price": -0.0303,
+              "ev": -0.0591,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 222.5: 47.0% vs market 50.0%.",
-                "Projected total 224.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 221.5: 44.7% vs market 48.9%.",
+                "Projected total 224.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 222.5 -> 221.5.",
                 "GS L5 WWWWW (MOV 9.2), HOU L5 WWLLW (MOV 9.1)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward under (222.5 -> 221.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +106 or better.",
+              "next_step": "Pass. Only interesting at +112 or better.",
               "proven": true
             }
           }
