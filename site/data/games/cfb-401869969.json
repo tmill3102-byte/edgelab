@@ -35,13 +35,13 @@
     "draftkings": {
       "ml_home": 310.0,
       "ml_away": -395.0,
+      "total": 47.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
       "spread_home": 10.5,
-      "spread_home_odds": -118.0,
+      "spread_home_odds": -112.0,
       "spread_away": -10.5,
-      "spread_away_odds": -102.0,
-      "total": 49.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0
+      "spread_away_odds": -108.0
     }
   },
   "badge": null,
@@ -146,18 +146,18 @@
               "selection": "ULM +10.5",
               "side": "home",
               "line": 10.5,
-              "odds": -118.0,
+              "odds": -112.0,
               "model_raw": 0.4555,
-              "model_prob": 0.5174,
-              "market_prob": 0.5174,
-              "fair_odds": -107,
-              "edge": -0.0,
-              "edge_at_price": -0.0239,
-              "ev": -0.0442,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model ULM +10.5 covers 45.6% vs market 51.7%.",
+                "Model ULM +10.5 covers 45.6% vs market 50.4%.",
                 "Projected margin ULM -12.2 vs line ULM +10.5.",
                 "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -167,7 +167,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -103 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -180,18 +180,18 @@
               "selection": "UL -10.5",
               "side": "away",
               "line": -10.5,
-              "odds": -102.0,
+              "odds": -108.0,
               "model_raw": 0.5445,
-              "model_prob": 0.4826,
-              "market_prob": 0.4826,
-              "fair_odds": 107,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.0223,
-              "ev": -0.0442,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model UL -10.5 covers 54.4% vs market 48.3%.",
+                "Model UL -10.5 covers 54.4% vs market 49.6%.",
                 "Projected margin ULM -12.2 vs line ULM +10.5.",
                 "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -201,7 +201,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +111 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }
@@ -216,47 +216,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 49.5",
+              "selection": "Over 47.5",
               "side": "over",
-              "line": 49.5,
-              "odds": -105.0,
-              "model_raw": 0.5312,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
-              "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model over 49.5: 53.1% vs market 48.9%.",
-                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 49.5.",
-                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [
-                "line move: total already moved toward over (48.5 -> 49.5); value may be gone"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +109 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 49.5",
-              "side": "under",
-              "line": 49.5,
+              "line": 47.5,
               "odds": -115.0,
-              "model_raw": 0.4688,
+              "model_raw": 0.5802,
               "model_prob": 0.5108,
               "market_prob": 0.5108,
               "fair_odds": -104,
@@ -266,8 +230,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 49.5: 46.9% vs market 51.1%.",
-                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 49.5.",
+                "Model over 47.5: 58.0% vs market 51.1%.",
+                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 47.5.",
                 "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -275,10 +239,46 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: market moved against the under (48.5 -> 49.5)"
+                "line move: market moved against the over (48.5 -> 47.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 47.5",
+              "side": "under",
+              "line": 47.5,
+              "odds": -105.0,
+              "model_raw": 0.4198,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model under 47.5: 42.0% vs market 48.9%.",
+                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 48.5 -> 47.5.",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [
+                "line move: total already moved toward under (48.5 -> 47.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }
