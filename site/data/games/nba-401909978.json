@@ -1,0 +1,320 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909978",
+  "name": "Dallas Mavericks at Minnesota Timberwolves",
+  "matchup": "DAL @ MIN",
+  "start": "2026-11-13T01:00Z",
+  "start_local": "Thu Nov 12 8:00 PM ET",
+  "date_et": "2026-11-12",
+  "weekday": "thursday",
+  "state": "pre",
+  "status": "11/12 - 8:00 PM EST",
+  "home": {
+    "abbr": "MIN",
+    "name": "Minnesota Timberwolves",
+    "record": "8-3",
+    "id": "16"
+  },
+  "away": {
+    "abbr": "DAL",
+    "name": "Dallas Mavericks",
+    "record": "7-4",
+    "id": "6"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35003214"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_home": -196.0,
+      "ml_away": 164.0,
+      "total": 226.5,
+      "under_odds": -110.0,
+      "over_odds": -110.0,
+      "spread_home": -5.5,
+      "spread_home_odds": -106.0,
+      "spread_away": 5.5,
+      "spread_away_odds": -114.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin MIN +9.6 \u00b7 total 225.2",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: MIN 71.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin MIN +9.6, total 225.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Anthony Edwards",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Donte DiVincenzo",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Dereck Lively II",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Tarik Biberovic",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Sergio de Larrea",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Morez Johnson Jr.",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LWWWW",
+    "away": "L5 LLWWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "MIN ML",
+              "side": "home",
+              "line": null,
+              "odds": -196.0,
+              "model_raw": 0.7779,
+              "model_prob": 0.6583,
+              "market_prob": 0.6361,
+              "fair_odds": -193,
+              "edge": 0.0222,
+              "edge_at_price": -0.0038,
+              "ev": -0.0058,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIN win 77.8% vs market no-vig 63.6%.",
+                "v2 projected margin MIN +9.6 (ratings MIN +7.6, DAL -0.5, home edge 1.5); raw model 77.8%.",
+                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
+                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (78% vs 64%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes MIN 64%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -182 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 164.0,
+              "model_raw": 0.2221,
+              "model_prob": 0.3417,
+              "market_prob": 0.3639,
+              "fair_odds": 193,
+              "edge": -0.0222,
+              "edge_at_price": -0.0371,
+              "ev": -0.098,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DAL win 22.2% vs market no-vig 36.4%.",
+                "v2 projected margin MIN +9.6 (ratings MIN +7.6, DAL -0.5, home edge 1.5); raw model 22.2%.",
+                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
+                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (22% vs 36%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes DAL 36%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +199 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "MIN -5.5",
+              "side": "home",
+              "line": -5.5,
+              "odds": -106.0,
+              "model_raw": 0.6275,
+              "model_prob": 0.4913,
+              "market_prob": 0.4913,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.0232,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIN -5.5 covers 62.7% vs market 49.1%.",
+                "Projected margin MIN +9.6 vs line MIN -5.5.",
+                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
+                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (-4.5 -> -5.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "DAL +5.5",
+              "side": "away",
+              "line": 5.5,
+              "odds": -114.0,
+              "model_raw": 0.3725,
+              "model_prob": 0.5087,
+              "market_prob": 0.5087,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DAL +5.5 covers 37.3% vs market 50.9%.",
+                "Projected margin MIN +9.6 vs line MIN -5.5.",
+                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
+                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 226.5",
+              "side": "under",
+              "line": 226.5,
+              "odds": -110.0,
+              "model_raw": 0.5264,
+              "model_prob": 0.5045,
+              "market_prob": 0.5,
+              "fair_odds": -102,
+              "edge": 0.0045,
+              "edge_at_price": -0.0193,
+              "ev": -0.0369,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 226.5: 52.6% vs market 50.0%.",
+                "Projected total 225.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 226.5",
+              "side": "over",
+              "line": 226.5,
+              "odds": -110.0,
+              "model_raw": 0.4736,
+              "model_prob": 0.4955,
+              "market_prob": 0.5,
+              "fair_odds": 102,
+              "edge": -0.0045,
+              "edge_at_price": -0.0283,
+              "ev": -0.054,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 226.5: 47.4% vs market 50.0%.",
+                "Projected total 225.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

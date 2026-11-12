@@ -1,0 +1,326 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909979",
+  "name": "Charlotte Hornets at Phoenix Suns",
+  "matchup": "CHA @ PHX",
+  "start": "2026-11-13T02:00Z",
+  "start_local": "Thu Nov 12 9:00 PM ET",
+  "date_et": "2026-11-12",
+  "weekday": "thursday",
+  "state": "pre",
+  "status": "11/12 - 9:00 PM EST",
+  "home": {
+    "abbr": "PHX",
+    "name": "Phoenix Suns",
+    "record": "4-6",
+    "id": "21"
+  },
+  "away": {
+    "abbr": "CHA",
+    "name": "Charlotte Hornets",
+    "record": "4-7",
+    "id": "30"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35003219"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 206.0,
+      "ml_home": -250.0,
+      "total": 213.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -7.5,
+      "spread_home_odds": -110.0,
+      "spread_away": 7.5,
+      "spread_away_odds": -110.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin PHX +2.6 \u00b7 total 217.8",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: PHX 73.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin PHX +2.6, total 217.8; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Mark Williams",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Grant Williams",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Moussa Diabate",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Brandon Miller",
+        "status": "Out",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Kon Knueppel",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Dennis Schroder",
+        "status": "Out",
+        "pos": "G",
+        "key": true
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LWWLW",
+    "away": "L5 LLLLW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "CHA ML",
+              "side": "away",
+              "line": null,
+              "odds": 206.0,
+              "model_raw": 0.4181,
+              "model_prob": 0.3277,
+              "market_prob": 0.3139,
+              "fair_odds": 205,
+              "edge": 0.0138,
+              "edge_at_price": 0.0009,
+              "ev": 0.0027,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CHA win 41.8% vs market no-vig 31.4%.",
+                "v2 projected margin PHX +2.6 (ratings PHX -1.5, CHA -2.5, home edge 1.5); raw model 41.8%.",
+                "CHA L5 LLLLW (MOV -11.5), PHX L5 LWWLW (MOV -5.3)",
+                "pace: projected total -2.2 vs these teams' rating-only total (recent shot volume)",
+                "CHA key player(s) out: Brandon Miller, Dennis Schroder (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Moussa Diabate (Day-To-Day)",
+                "injury: Brandon Miller, Dennis Schroder out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Market makes CHA 31%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +211 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "PHX ML",
+              "side": "home",
+              "line": null,
+              "odds": -250.0,
+              "model_raw": 0.5819,
+              "model_prob": 0.6723,
+              "market_prob": 0.6861,
+              "fair_odds": -205,
+              "edge": -0.0138,
+              "edge_at_price": -0.042,
+              "ev": -0.0587,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model PHX win 58.2% vs market no-vig 68.6%.",
+                "v2 projected margin PHX +2.6 (ratings PHX -1.5, CHA -2.5, home edge 1.5); raw model 58.2%.",
+                "CHA L5 LLLLW (MOV -11.5), PHX L5 LWWLW (MOV -5.3)",
+                "pace: projected total -2.2 vs these teams' rating-only total (recent shot volume)",
+                "CHA key player(s) out: Brandon Miller, Dennis Schroder (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes PHX 69%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -193 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "PHX -7.5",
+              "side": "home",
+              "line": -7.5,
+              "odds": -110.0,
+              "model_raw": 0.3471,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model PHX -7.5 covers 34.7% vs market 50.0%.",
+                "Projected margin PHX +2.6 vs line PHX -7.5.",
+                "CHA L5 LLLLW (MOV -11.5), PHX L5 LWWLW (MOV -5.3)",
+                "pace: projected total -2.2 vs these teams' rating-only total (recent shot volume)",
+                "CHA key player(s) out: Brandon Miller, Dennis Schroder (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (35% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CHA +7.5",
+              "side": "away",
+              "line": 7.5,
+              "odds": -110.0,
+              "model_raw": 0.6529,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CHA +7.5 covers 65.3% vs market 50.0%.",
+                "Projected margin PHX +2.6 vs line PHX -7.5.",
+                "CHA L5 LLLLW (MOV -11.5), PHX L5 LWWLW (MOV -5.3)",
+                "pace: projected total -2.2 vs these teams' rating-only total (recent shot volume)",
+                "CHA key player(s) out: Brandon Miller, Dennis Schroder (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (65% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Moussa Diabate (Day-To-Day)",
+                "injury: Brandon Miller, Dennis Schroder out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 213.5",
+              "side": "over",
+              "line": 213.5,
+              "odds": -110.0,
+              "model_raw": 0.5879,
+              "model_prob": 0.5151,
+              "market_prob": 0.5,
+              "fair_odds": -106,
+              "edge": 0.0151,
+              "edge_at_price": -0.0087,
+              "ev": -0.0166,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 213.5: 58.8% vs market 50.0%.",
+                "Projected total 217.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "CHA L5 LLLLW (MOV -11.5), PHX L5 LWWLW (MOV -5.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -102 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 213.5",
+              "side": "under",
+              "line": 213.5,
+              "odds": -110.0,
+              "model_raw": 0.4121,
+              "model_prob": 0.4849,
+              "market_prob": 0.5,
+              "fair_odds": 106,
+              "edge": -0.0151,
+              "edge_at_price": -0.0389,
+              "ev": -0.0743,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 213.5: 41.2% vs market 50.0%.",
+                "Projected total 217.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "CHA L5 LLLLW (MOV -11.5), PHX L5 LWWLW (MOV -5.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +110 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

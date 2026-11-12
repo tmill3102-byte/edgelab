@@ -23,7 +23,7 @@
     "id": "309"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -35,24 +35,32 @@
     "draftkings": {
       "ml_home": 310.0,
       "ml_away": -395.0,
+      "total": 48.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
       "spread_home": 10.5,
       "spread_home_odds": -112.0,
       "spread_away": -10.5,
-      "spread_away_odds": -108.0,
-      "total": 49.5,
-      "over_odds": -108.0,
-      "under_odds": -112.0
+      "spread_away_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin ULM -12.2 \u00b7 total 50.9",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: ULM 9.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin ULM -12.2, total 50.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 LLWLW",
+    "away": "L5 WLWLW"
+  },
   "markets": [
     {
       "market": "ML",
@@ -66,26 +74,28 @@
               "side": "home",
               "line": null,
               "odds": 310.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.215,
+              "model_prob": 0.2341,
+              "market_prob": 0.2341,
+              "fair_odds": 327,
+              "edge": 0.0,
+              "edge_at_price": -0.0098,
+              "ev": -0.0402,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model ULM win 21.5% vs market no-vig 23.4%.",
+                "v2 projected margin ULM -12.2 (ratings ULM -35.9, UL -20.3, home edge 3.33); raw model 21.5%.",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes ULM 23%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +336 or better.",
+              "proven": false
             }
           }
         },
@@ -98,26 +108,28 @@
               "side": "away",
               "line": null,
               "odds": -395.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.785,
+              "model_prob": 0.7659,
+              "market_prob": 0.7659,
+              "fair_odds": -327,
+              "edge": 0.0,
+              "edge_at_price": -0.0321,
+              "ev": -0.0402,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model UL win 78.5% vs market no-vig 76.6%.",
+                "v2 projected margin ULM -12.2 (ratings ULM -35.9, UL -20.3, home edge 3.33); raw model 78.5%.",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes UL 77%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -301 or better.",
+              "proven": false
             }
           }
         }
@@ -135,26 +147,28 @@
               "side": "home",
               "line": 10.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4555,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model ULM +10.5 covers 45.6% vs market 50.4%.",
+                "Projected margin ULM -12.2 vs line ULM +10.5.",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         },
@@ -167,26 +181,28 @@
               "side": "away",
               "line": -10.5,
               "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5445,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model UL -10.5 covers 54.4% vs market 49.6%.",
+                "Projected margin ULM -12.2 vs line ULM +10.5.",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         }
@@ -200,30 +216,32 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 49.5",
+              "selection": "Over 48.5",
               "side": "over",
-              "line": 49.5,
-              "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 48.5,
+              "odds": -115.0,
+              "model_raw": 0.5598,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 48.5: 56.0% vs market 51.1%.",
+                "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -232,30 +250,32 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 49.5",
+              "selection": "Under 48.5",
               "side": "under",
-              "line": 49.5,
-              "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 48.5,
+              "odds": -105.0,
+              "model_raw": 0.4402,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 48.5: 44.0% vs market 48.9%.",
+                "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "UL L5 WLWLW (MOV 8.1), ULM L5 LLWLW (MOV -14.7)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }
