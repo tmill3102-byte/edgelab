@@ -23,7 +23,7 @@
     "id": "183"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,26 +33,34 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": 120.0,
-      "ml_away": -142.0,
-      "spread_home": 3.0,
-      "spread_home_odds": -118.0,
-      "spread_away": -3.0,
-      "spread_away_odds": -102.0,
+      "ml_home": 114.0,
+      "ml_away": -135.0,
+      "spread_home": 2.5,
+      "spread_home_odds": -102.0,
+      "spread_away": -2.5,
+      "spread_away_odds": -118.0,
       "total": 53.5,
       "over_odds": -108.0,
       "under_odds": -112.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin NCSU -3.7 \u00b7 total 55.7",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: NCSU 46.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin NCSU -3.7, total 55.7; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WLLWL",
+    "away": "L5 LLWWL"
+  },
   "markets": [
     {
       "market": "ML",
@@ -65,27 +73,31 @@
               "selection": "NCSU ML",
               "side": "home",
               "line": null,
-              "odds": 120.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": 114.0,
+              "model_raw": 0.4068,
+              "model_prob": 0.4486,
+              "market_prob": 0.4486,
+              "fair_odds": 123,
+              "edge": -0.0,
+              "edge_at_price": -0.0187,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model NCSU win 40.7% vs market no-vig 44.9%.",
+                "v2 projected margin NCSU -3.7 (ratings NCSU -19.2, SYR -12.2, home edge 3.33); raw model 40.7%.",
+                "SYR L5 LLWWL (MOV 3.9), NCSU L5 WLLWL (MOV 1.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: price drifted against this side (-102 -> +114)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Market makes NCSU 45%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +127 or better.",
+              "proven": false
             }
           }
         },
@@ -97,27 +109,29 @@
               "selection": "SYR ML",
               "side": "away",
               "line": null,
-              "odds": -142.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -135.0,
+              "model_raw": 0.5932,
+              "model_prob": 0.5514,
+              "market_prob": 0.5514,
+              "fair_odds": -123,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model SYR win 59.3% vs market no-vig 55.1%.",
+                "v2 projected margin NCSU -3.7 (ratings NCSU -19.2, SYR -12.2, home edge 3.33); raw model 59.3%.",
+                "SYR L5 LLWWL (MOV 3.9), NCSU L5 WLLWL (MOV 1.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes SYR 55%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -118 or better.",
+              "proven": false
             }
           }
         }
@@ -131,30 +145,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "NCSU +3",
+              "selection": "NCSU +2.5",
               "side": "home",
-              "line": 3.0,
-              "odds": -118.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 2.5,
+              "odds": -102.0,
+              "model_raw": 0.4703,
+              "model_prob": 0.4826,
+              "market_prob": 0.4826,
+              "fair_odds": 107,
+              "edge": 0.0,
+              "edge_at_price": -0.0223,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model NCSU +2.5 covers 47.0% vs market 48.3%.",
+                "Projected margin NCSU -3.7 vs line NCSU +2.5.",
+                "SYR L5 LLWWL (MOV 3.9), NCSU L5 WLLWL (MOV 1.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
             }
           }
         },
@@ -163,30 +179,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "SYR -3",
+              "selection": "SYR -2.5",
               "side": "away",
-              "line": -3.0,
-              "odds": -102.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": -2.5,
+              "odds": -118.0,
+              "model_raw": 0.5297,
+              "model_prob": 0.5174,
+              "market_prob": 0.5174,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model SYR -2.5 covers 53.0% vs market 51.7%.",
+                "Projected margin NCSU -3.7 vs line NCSU +2.5.",
+                "SYR L5 LLWWL (MOV 3.9), NCSU L5 WLLWL (MOV 1.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-1.5 -> -2.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -103 or better.",
+              "proven": false
             }
           }
         }
@@ -204,26 +224,30 @@
               "side": "over",
               "line": 53.5,
               "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5548,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 53.5: 55.5% vs market 49.6%.",
+                "Projected total 55.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 56.5 -> 53.5.",
+                "SYR L5 LLWWL (MOV 3.9), NCSU L5 WLLWL (MOV 1.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (56.5 -> 53.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         },
@@ -236,26 +260,30 @@
               "side": "under",
               "line": 53.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4452,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 53.5: 44.5% vs market 50.4%.",
+                "Projected total 55.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 56.5 -> 53.5.",
+                "SYR L5 LLWWL (MOV 3.9), NCSU L5 WLLWL (MOV 1.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (56.5 -> 53.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }

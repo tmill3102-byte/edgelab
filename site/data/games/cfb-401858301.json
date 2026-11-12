@@ -39,19 +39,19 @@
       "spread_home_odds": -105.0,
       "spread_away": 1.5,
       "spread_away_odds": -115.0,
-      "total": 61.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0
+      "total": 60.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0
     }
   },
   "badge": null,
-  "model_summary": "Margin SMU -8.2 \u00b7 total 57.4",
+  "model_summary": "Margin SMU -8.2 \u00b7 total 57.2",
   "flags": [
     "injury report not available for this league"
   ],
   "notes": [
     "ESPN matchup predictor: SMU 40.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin SMU -8.2, total 57.4; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "v2 ratings: margin SMU -8.2, total 57.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -224,47 +224,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 61.5",
+              "selection": "Over 60.5",
               "side": "over",
-              "line": 61.5,
-              "odds": -105.0,
-              "model_raw": 0.3987,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
-              "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model over 61.5: 39.9% vs market 48.9%.",
-                "Projected total 57.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 55.5 -> 61.5.",
-                "WAKE L5 WWWWW (MOV 27.4), SMU L5 WWWLW (MOV 14.1)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [
-                "line move: total already moved toward over (55.5 -> 61.5); value may be gone"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +109 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 61.5",
-              "side": "under",
-              "line": 61.5,
+              "line": 60.5,
               "odds": -115.0,
-              "model_raw": 0.6013,
+              "model_raw": 0.4188,
               "model_prob": 0.5108,
               "market_prob": 0.5108,
               "fair_odds": -104,
@@ -274,8 +238,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 61.5: 60.1% vs market 51.1%.",
-                "Projected total 57.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 55.5 -> 61.5.",
+                "Model over 60.5: 41.9% vs market 51.1%.",
+                "Projected total 57.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 55.5 -> 60.5.",
                 "WAKE L5 WWWWW (MOV 27.4), SMU L5 WWWLW (MOV 14.1)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -283,10 +247,46 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: market moved against the under (55.5 -> 61.5)"
+                "line move: total already moved toward over (55.5 -> 60.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 60.5",
+              "side": "under",
+              "line": 60.5,
+              "odds": -105.0,
+              "model_raw": 0.5812,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model under 60.5: 58.1% vs market 48.9%.",
+                "Projected total 57.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 55.5 -> 60.5.",
+                "WAKE L5 WWWWW (MOV 27.4), SMU L5 WWWLW (MOV 14.1)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [
+                "line move: market moved against the under (55.5 -> 60.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }

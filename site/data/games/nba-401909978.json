@@ -33,23 +33,20 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -196.0,
-      "ml_away": 164.0,
-      "total": 226.5,
-      "under_odds": -110.0,
-      "over_odds": -110.0,
+      "ml_home": -222.0,
+      "ml_away": 184.0,
       "spread_home": -5.5,
-      "spread_home_odds": -106.0,
+      "spread_home_odds": -114.0,
       "spread_away": 5.5,
-      "spread_away_odds": -114.0
+      "spread_away_odds": -106.0
     }
   },
   "badge": null,
-  "model_summary": "Margin MIN +9.6 \u00b7 total 225.2",
+  "model_summary": "Margin MIN +9.6 \u00b7 total 225.3",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: MIN 71.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin MIN +9.6, total 225.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "ESPN matchup predictor: MIN 71.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin MIN +9.6, total 225.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -109,28 +106,27 @@
               "selection": "MIN ML",
               "side": "home",
               "line": null,
-              "odds": -196.0,
+              "odds": -222.0,
               "model_raw": 0.7779,
-              "model_prob": 0.6583,
-              "market_prob": 0.6361,
-              "fair_odds": -193,
-              "edge": 0.0222,
-              "edge_at_price": -0.0038,
-              "ev": -0.0058,
+              "model_prob": 0.6799,
+              "market_prob": 0.6619,
+              "fair_odds": -212,
+              "edge": 0.018,
+              "edge_at_price": -0.0095,
+              "ev": -0.0138,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIN win 77.8% vs market no-vig 63.6%.",
+                "Model MIN win 77.8% vs market no-vig 66.2%.",
                 "v2 projected margin MIN +9.6 (ratings MIN +7.6, DAL -0.5, home edge 1.5); raw model 77.8%.",
                 "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
-                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "Note: model far from market (78% vs 64%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "pace: projected total +2.5 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes MIN 64%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -182 or better.",
+              "case_against": "Market makes MIN 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -200 or better.",
               "proven": true
             }
           }
@@ -143,28 +139,29 @@
               "selection": "DAL ML",
               "side": "away",
               "line": null,
-              "odds": 164.0,
+              "odds": 184.0,
               "model_raw": 0.2221,
-              "model_prob": 0.3417,
-              "market_prob": 0.3639,
-              "fair_odds": 193,
-              "edge": -0.0222,
-              "edge_at_price": -0.0371,
-              "ev": -0.098,
+              "model_prob": 0.3201,
+              "market_prob": 0.3381,
+              "fair_odds": 212,
+              "edge": -0.018,
+              "edge_at_price": -0.032,
+              "ev": -0.0909,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model DAL win 22.2% vs market no-vig 36.4%.",
+                "Model DAL win 22.2% vs market no-vig 33.8%.",
                 "v2 projected margin MIN +9.6 (ratings MIN +7.6, DAL -0.5, home edge 1.5); raw model 22.2%.",
                 "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
-                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "Note: model far from market (22% vs 36%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "pace: projected total +2.5 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
-              "caution": [],
-              "case_against": "Market makes DAL 36%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +199 or better.",
+              "caution": [
+                "line move: price drifted against this side (+155 -> +184)"
+              ],
+              "case_against": "Market makes DAL 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +219 or better.",
               "proven": true
             }
           }
@@ -182,30 +179,29 @@
               "selection": "MIN -5.5",
               "side": "home",
               "line": -5.5,
-              "odds": -106.0,
+              "odds": -114.0,
               "model_raw": 0.6275,
-              "model_prob": 0.4913,
-              "market_prob": 0.4913,
-              "fair_odds": 104,
+              "model_prob": 0.5087,
+              "market_prob": 0.5087,
+              "fair_odds": -104,
               "edge": 0.0,
-              "edge_at_price": -0.0232,
+              "edge_at_price": -0.024,
               "ev": -0.0451,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIN -5.5 covers 62.7% vs market 49.1%.",
+                "Model MIN -5.5 covers 62.7% vs market 50.9%.",
                 "Projected margin MIN +9.6 vs line MIN -5.5.",
                 "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
-                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "pace: projected total +2.5 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
                 "line move: spread moved against this side (-4.5 -> -5.5)"
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +108 or better.",
+              "next_step": "Pass. Only interesting at +101 or better.",
               "proven": false
             }
           }
@@ -218,103 +214,4853 @@
               "selection": "DAL +5.5",
               "side": "away",
               "line": 5.5,
-              "odds": -114.0,
+              "odds": -106.0,
               "model_raw": 0.3725,
-              "model_prob": 0.5087,
-              "market_prob": 0.5087,
-              "fair_odds": -104,
+              "model_prob": 0.4913,
+              "market_prob": 0.4913,
+              "fair_odds": 104,
               "edge": 0.0,
-              "edge_at_price": -0.024,
+              "edge_at_price": -0.0232,
               "ev": -0.0451,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model DAL +5.5 covers 37.3% vs market 50.9%.",
+                "Model DAL +5.5 covers 37.3% vs market 49.1%.",
                 "Projected margin MIN +9.6 vs line MIN -5.5.",
                 "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
-                "pace: projected total +2.4 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "pace: projected total +2.5 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +101 or better.",
+              "next_step": "Pass. Only interesting at +108 or better.",
               "proven": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "market": "Total",
-      "sides": [
-        {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 226.5",
-              "side": "under",
-              "line": 226.5,
-              "odds": -110.0,
-              "model_raw": 0.5264,
-              "model_prob": 0.5045,
-              "market_prob": 0.5,
-              "fair_odds": -102,
-              "edge": 0.0045,
-              "edge_at_price": -0.0193,
-              "ev": -0.0369,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model under 226.5: 52.6% vs market 50.0%.",
-                "Projected total 225.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
-                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +102 or better.",
-              "proven": true
-            }
-          }
-        },
-        {
-          "side": "over",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Over 226.5",
-              "side": "over",
-              "line": 226.5,
-              "odds": -110.0,
-              "model_raw": 0.4736,
-              "model_prob": 0.4955,
-              "market_prob": 0.5,
-              "fair_odds": 102,
-              "edge": -0.0045,
-              "edge_at_price": -0.0283,
-              "ev": -0.054,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model over 226.5: 47.4% vs market 50.0%.",
-                "Projected total 225.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
-                "DAL L5 LLWWW (MOV 4.6), MIN L5 LWWWW (MOV 11.1)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +106 or better.",
-              "proven": true
             }
           }
         }
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Ayo Dosunmu",
+      "player_id": "4397002",
+      "team": "Minnesota Timberwolves",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 17.5,
+      "projection": 17.81,
+      "hit_rates": {
+        "L5": "5/5",
+        "L10": "5/10",
+        "L20": "8/20",
+        "all": "11/26"
+      },
+      "recent": [
+        26.0,
+        26.0,
+        21.0,
+        19.0,
+        27.0,
+        15.0,
+        17.0,
+        9.0,
+        9.0,
+        14.0
+      ],
+      "ladder": [
+        {
+          "line": 13.5,
+          "p_over": 0.75,
+          "fair_over": -301,
+          "fair_under": 301,
+          "L10": "8/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.687,
+          "fair_over": -220,
+          "fair_under": 220,
+          "L10": "7/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.621,
+          "fair_over": -164,
+          "fair_under": 164,
+          "L10": "6/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.582,
+          "fair_over": -139,
+          "fair_under": 139,
+          "L10": "6/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.513,
+          "fair_over": -105,
+          "fair_under": 105,
+          "L10": "5/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.472,
+          "fair_over": 112,
+          "fair_under": -112,
+          "L10": "5/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.403,
+          "fair_over": 148,
+          "fair_under": -148,
+          "L10": "4/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.365,
+          "fair_over": 174,
+          "fair_under": -174,
+          "L10": "4/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.3,
+          "fair_over": 234,
+          "fair_under": -234,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 17.5 pts",
+            "side": "over",
+            "line": 17.5,
+            "odds": -128.0,
+            "model_raw": 0.5126,
+            "model_prob": 0.5183,
+            "market_prob": 0.5241,
+            "fair_odds": -108,
+            "edge": -0.0057,
+            "edge_at_price": -0.0431,
+            "ev": -0.0767,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 17.5: 51.3% before shrink, this book's no-vig 52.4%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -103 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 17.5 pts",
+            "side": "over",
+            "line": 17.5,
+            "odds": -119.0,
+            "model_raw": 0.5126,
+            "model_prob": 0.5114,
+            "market_prob": 0.5103,
+            "fair_odds": -105,
+            "edge": 0.0012,
+            "edge_at_price": -0.0319,
+            "ev": -0.0588,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 17.5: 51.3% before shrink, this book's no-vig 51.0%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 17.5 pts",
+            "side": "over",
+            "line": 17.5,
+            "odds": -111.0,
+            "model_raw": 0.5126,
+            "model_prob": 0.5042,
+            "market_prob": 0.4958,
+            "fair_odds": -102,
+            "edge": 0.0084,
+            "edge_at_price": -0.0218,
+            "ev": -0.0415,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 17.5: 51.3% before shrink, this book's no-vig 49.6%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 17.5 pts",
+            "side": "over",
+            "line": 17.5,
+            "odds": -110.0,
+            "model_raw": 0.5126,
+            "model_prob": 0.5012,
+            "market_prob": 0.4899,
+            "fair_odds": -100,
+            "edge": 0.0114,
+            "edge_at_price": -0.0226,
+            "ev": -0.0431,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 17.5: 51.3% before shrink, this book's no-vig 49.0%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +104 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 17.5 pts",
+            "side": "under",
+            "line": 17.5,
+            "odds": -104.0,
+            "model_raw": 0.4874,
+            "model_prob": 0.4817,
+            "market_prob": 0.4759,
+            "fair_odds": 108,
+            "edge": 0.0057,
+            "edge_at_price": -0.0281,
+            "ev": -0.0552,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 17.5: 48.7% before shrink, this book's no-vig 47.6%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 17.5 pts",
+            "side": "under",
+            "line": 17.5,
+            "odds": -109.0,
+            "model_raw": 0.4874,
+            "model_prob": 0.4886,
+            "market_prob": 0.4897,
+            "fair_odds": 105,
+            "edge": -0.0012,
+            "edge_at_price": -0.033,
+            "ev": -0.0632,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 17.5: 48.7% before shrink, this book's no-vig 49.0%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 17.5 pts",
+            "side": "under",
+            "line": 17.5,
+            "odds": -115.0,
+            "model_raw": 0.4874,
+            "model_prob": 0.4958,
+            "market_prob": 0.5042,
+            "fair_odds": 102,
+            "edge": -0.0084,
+            "edge_at_price": -0.0391,
+            "ev": -0.0731,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 17.5: 48.7% before shrink, this book's no-vig 50.4%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 17.5 pts",
+            "side": "under",
+            "line": 17.5,
+            "odds": -120.0,
+            "model_raw": 0.4874,
+            "model_prob": 0.4988,
+            "market_prob": 0.5101,
+            "fair_odds": 100,
+            "edge": -0.0114,
+            "edge_at_price": -0.0467,
+            "ev": -0.0856,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 17.5: 48.7% before shrink, this book's no-vig 51.0%.",
+              "Projection 17.81 (Normal(sd 6.4)).",
+              "Hit rate over L5 5/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +104 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ayo Dosunmu",
+      "player_id": "4397002",
+      "team": "Minnesota Timberwolves",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 26.5,
+      "projection": 26.41,
+      "hit_rates": {
+        "L5": "5/5",
+        "L10": "6/10",
+        "L20": "9/20",
+        "all": "12/26"
+      },
+      "recent": [
+        31.0,
+        32.0,
+        28.0,
+        39.0,
+        39.0,
+        24.0,
+        24.0,
+        10.0,
+        15.0,
+        31.0
+      ],
+      "ladder": [
+        {
+          "line": 22.5,
+          "p_over": 0.698,
+          "fair_over": -231,
+          "fair_under": 231,
+          "L10": "8/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.671,
+          "fair_over": -204,
+          "fair_under": 204,
+          "L10": "8/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.584,
+          "fair_over": -141,
+          "fair_under": 141,
+          "L10": "6/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.556,
+          "fair_over": -125,
+          "fair_under": 125,
+          "L10": "6/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.527,
+          "fair_over": -111,
+          "fair_under": 111,
+          "L10": "6/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "6/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.44,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "5/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.412,
+          "fair_over": 143,
+          "fair_under": -143,
+          "L10": "5/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.385,
+          "fair_over": 160,
+          "fair_under": -160,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 26.5 pra",
+            "side": "over",
+            "line": 26.5,
+            "odds": -122.0,
+            "model_raw": 0.5266,
+            "model_prob": 0.5204,
+            "market_prob": 0.5142,
+            "fair_odds": -109,
+            "edge": 0.0062,
+            "edge_at_price": -0.0292,
+            "ev": -0.0531,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 26.5: 52.7% before shrink, this book's no-vig 51.4%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 26.5 pra",
+            "side": "over",
+            "line": 26.5,
+            "odds": -110.0,
+            "model_raw": 0.5266,
+            "model_prob": 0.5092,
+            "market_prob": 0.4918,
+            "fair_odds": -104,
+            "edge": 0.0174,
+            "edge_at_price": -0.0146,
+            "ev": -0.0279,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 26.5: 52.7% before shrink, this book's no-vig 49.2%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +100 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 26.5 pra",
+            "side": "over",
+            "line": 26.5,
+            "odds": -107.0,
+            "model_raw": 0.5266,
+            "model_prob": 0.5052,
+            "market_prob": 0.4838,
+            "fair_odds": -102,
+            "edge": 0.0214,
+            "edge_at_price": -0.0117,
+            "ev": -0.0227,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 26.5: 52.7% before shrink, this book's no-vig 48.4%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 26.5 pra",
+            "side": "over",
+            "line": 26.5,
+            "odds": -105.0,
+            "model_raw": 0.5266,
+            "model_prob": 0.5031,
+            "market_prob": 0.4797,
+            "fair_odds": -101,
+            "edge": 0.0235,
+            "edge_at_price": -0.009,
+            "ev": -0.0177,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 26.5: 52.7% before shrink, this book's no-vig 48.0%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +103 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 26.5 pra",
+            "side": "under",
+            "line": 26.5,
+            "odds": -108.0,
+            "model_raw": 0.4734,
+            "model_prob": 0.4796,
+            "market_prob": 0.4858,
+            "fair_odds": 109,
+            "edge": -0.0062,
+            "edge_at_price": -0.0396,
+            "ev": -0.0763,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 26.5: 47.3% before shrink, this book's no-vig 48.6%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 26.5 pra",
+            "side": "under",
+            "line": 26.5,
+            "odds": -118.0,
+            "model_raw": 0.4734,
+            "model_prob": 0.4908,
+            "market_prob": 0.5082,
+            "fair_odds": 104,
+            "edge": -0.0174,
+            "edge_at_price": -0.0505,
+            "ev": -0.0933,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 26.5: 47.3% before shrink, this book's no-vig 50.8%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +108 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 26.5 pra",
+            "side": "under",
+            "line": 26.5,
+            "odds": -123.0,
+            "model_raw": 0.4734,
+            "model_prob": 0.4948,
+            "market_prob": 0.5162,
+            "fair_odds": 102,
+            "edge": -0.0214,
+            "edge_at_price": -0.0568,
+            "ev": -0.1029,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 26.5: 47.3% before shrink, this book's no-vig 51.6%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 26.5 pra",
+            "side": "under",
+            "line": 26.5,
+            "odds": -125.0,
+            "model_raw": 0.4734,
+            "model_prob": 0.4969,
+            "market_prob": 0.5203,
+            "fair_odds": 101,
+            "edge": -0.0235,
+            "edge_at_price": -0.0587,
+            "ev": -0.1057,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 26.5: 47.3% before shrink, this book's no-vig 52.0%.",
+              "Projection 26.41 (Normal(sd 8.9)).",
+              "Hit rate over L5 5/5, L10 6/10, L20 9/20, all 12/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +105 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ayo Dosunmu",
+      "player_id": "4397002",
+      "team": "Minnesota Timberwolves",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 3.5,
+      "projection": 4.62,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "15/26"
+      },
+      "recent": [
+        4.0,
+        2.0,
+        1.0,
+        12.0,
+        9.0,
+        7.0,
+        3.0,
+        1.0,
+        3.0,
+        7.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.876,
+          "fair_over": -709,
+          "fair_under": 709,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.864,
+          "fair_over": -636,
+          "fair_under": 636,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.779,
+          "fair_over": -352,
+          "fair_under": 352,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.735,
+          "fair_over": -278,
+          "fair_under": 278,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.615,
+          "fair_over": -160,
+          "fair_under": 160,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.551,
+          "fair_over": -123,
+          "fair_under": 123,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.464,
+          "fair_over": 115,
+          "fair_under": -115,
+          "L10": "4/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.395,
+          "fair_over": 153,
+          "fair_under": -153,
+          "L10": "4/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.352,
+          "fair_over": 184,
+          "fair_under": -184,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 3.5 reb",
+            "side": "over",
+            "line": 3.5,
+            "odds": -150.0,
+            "model_raw": 0.6151,
+            "model_prob": 0.5886,
+            "market_prob": 0.5622,
+            "fair_odds": -143,
+            "edge": 0.0265,
+            "edge_at_price": -0.0114,
+            "ev": -0.0189,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 61.5% before shrink, this book's no-vig 56.2%.",
+              "Projection 4.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 15/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -136 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 3.5 reb",
+            "side": "over",
+            "line": 3.5,
+            "odds": -150.0,
+            "model_raw": 0.6151,
+            "model_prob": 0.5892,
+            "market_prob": 0.5633,
+            "fair_odds": -143,
+            "edge": 0.0259,
+            "edge_at_price": -0.0108,
+            "ev": -0.018,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 61.5% before shrink, this book's no-vig 56.3%.",
+              "Projection 4.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 15/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -137 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 3.5 reb",
+            "side": "under",
+            "line": 3.5,
+            "odds": 114.0,
+            "model_raw": 0.3849,
+            "model_prob": 0.4114,
+            "market_prob": 0.4378,
+            "fair_odds": 143,
+            "edge": -0.0265,
+            "edge_at_price": -0.0559,
+            "ev": -0.1197,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 38.5% before shrink, this book's no-vig 43.8%.",
+              "Projection 4.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 15/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +148 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 3.5 reb",
+            "side": "under",
+            "line": 3.5,
+            "odds": 115.0,
+            "model_raw": 0.3849,
+            "model_prob": 0.4108,
+            "market_prob": 0.4367,
+            "fair_odds": 143,
+            "edge": -0.0259,
+            "edge_at_price": -0.0543,
+            "ev": -0.1168,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 38.5% before shrink, this book's no-vig 43.7%.",
+              "Projection 4.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 15/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +148 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ayo Dosunmu",
+      "player_id": "4397002",
+      "team": "Minnesota Timberwolves",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 1.91,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "8/20",
+        "all": "11/26"
+      },
+      "recent": [
+        4.0,
+        4.0,
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        3.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.845,
+          "fair_over": -546,
+          "fair_under": 546,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.778,
+          "fair_over": -350,
+          "fair_under": 350,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.544,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.425,
+          "fair_over": 135,
+          "fair_under": -135,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.34,
+          "fair_over": 194,
+          "fair_under": -194,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.204,
+          "fair_over": 389,
+          "fair_under": -389,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.17,
+          "fair_over": 489,
+          "fair_under": -489,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -136.0,
+            "model_raw": 0.5445,
+            "model_prob": 0.5412,
+            "market_prob": 0.5379,
+            "fair_odds": -118,
+            "edge": 0.0033,
+            "edge_at_price": -0.0351,
+            "ev": -0.0609,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 54.4% before shrink, this book's no-vig 53.8%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -113 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -143.0,
+            "model_raw": 0.5445,
+            "model_prob": 0.5486,
+            "market_prob": 0.5527,
+            "fair_odds": -122,
+            "edge": -0.0041,
+            "edge_at_price": -0.0399,
+            "ev": -0.0677,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 54.4% before shrink, this book's no-vig 55.3%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -116 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -145.0,
+            "model_raw": 0.5445,
+            "model_prob": 0.5493,
+            "market_prob": 0.5541,
+            "fair_odds": -122,
+            "edge": -0.0048,
+            "edge_at_price": -0.0425,
+            "ev": -0.0718,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 54.4% before shrink, this book's no-vig 55.4%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -117 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -185.0,
+            "model_raw": 0.5445,
+            "model_prob": 0.5743,
+            "market_prob": 0.604,
+            "fair_odds": -135,
+            "edge": -0.0298,
+            "edge_at_price": -0.0749,
+            "ev": -0.1153,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 54.4% before shrink, this book's no-vig 60.4%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -129 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -145.0,
+            "model_raw": 0.5445,
+            "model_prob": 0.5493,
+            "market_prob": 0.5541,
+            "fair_odds": -122,
+            "edge": -0.0048,
+            "edge_at_price": -0.0425,
+            "ev": -0.0718,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 54.4% before shrink, this book's no-vig 55.4%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -117 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 102.0,
+            "model_raw": 0.4555,
+            "model_prob": 0.4588,
+            "market_prob": 0.4621,
+            "fair_odds": 118,
+            "edge": -0.0033,
+            "edge_at_price": -0.0363,
+            "ev": -0.0732,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 45.6% before shrink, this book's no-vig 46.2%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +122 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.4555,
+            "model_prob": 0.4514,
+            "market_prob": 0.4473,
+            "fair_odds": 122,
+            "edge": 0.0041,
+            "edge_at_price": -0.0248,
+            "ev": -0.0521,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 45.6% before shrink, this book's no-vig 44.7%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +126 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.4555,
+            "model_prob": 0.4507,
+            "market_prob": 0.4459,
+            "fair_odds": 122,
+            "edge": 0.0048,
+            "edge_at_price": -0.0255,
+            "ev": -0.0536,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 45.6% before shrink, this book's no-vig 44.6%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +126 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 135.0,
+            "model_raw": 0.4555,
+            "model_prob": 0.4257,
+            "market_prob": 0.396,
+            "fair_odds": 135,
+            "edge": 0.0298,
+            "edge_at_price": 0.0002,
+            "ev": 0.0005,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 45.6% before shrink, this book's no-vig 39.6%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +140 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.4555,
+            "model_prob": 0.4507,
+            "market_prob": 0.4459,
+            "fair_odds": 122,
+            "edge": 0.0048,
+            "edge_at_price": -0.0255,
+            "ev": -0.0536,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 45.6% before shrink, this book's no-vig 44.6%.",
+              "Projection 1.91 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +126 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ayo Dosunmu",
+      "player_id": "4397002",
+      "team": "Minnesota Timberwolves",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 4.5,
+      "projection": 3.98,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "7/20",
+        "all": "7/26"
+      },
+      "recent": [
+        1.0,
+        4.0,
+        6.0,
+        8.0,
+        3.0,
+        2.0,
+        4.0,
+        0.0,
+        3.0,
+        10.0
+      ],
+      "ladder": [
+        {
+          "line": 2.5,
+          "p_over": 0.727,
+          "fair_over": -266,
+          "fair_under": 266,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.665,
+          "fair_over": -199,
+          "fair_under": 199,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.541,
+          "fair_over": -118,
+          "fair_under": 118,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.437,
+          "fair_over": 129,
+          "fair_under": -129,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.356,
+          "fair_over": 181,
+          "fair_under": -181,
+          "L10": "3/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.28,
+          "fair_over": 257,
+          "fair_under": -257,
+          "L10": "3/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.255,
+          "fair_over": 293,
+          "fair_under": -293,
+          "L10": "3/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.174,
+          "fair_over": 473,
+          "fair_under": -473,
+          "L10": "2/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.158,
+          "fair_over": 532,
+          "fair_under": -532,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 4.5 ast",
+            "side": "over",
+            "line": 4.5,
+            "odds": -102.0,
+            "model_raw": 0.3558,
+            "model_prob": 0.4138,
+            "market_prob": 0.4718,
+            "fair_odds": 142,
+            "edge": -0.058,
+            "edge_at_price": -0.0911,
+            "ev": -0.1805,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 35.6% before shrink, this book's no-vig 47.2%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +146 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 4.5 ast",
+            "side": "over",
+            "line": 4.5,
+            "odds": -103.0,
+            "model_raw": 0.3558,
+            "model_prob": 0.4166,
+            "market_prob": 0.4773,
+            "fair_odds": 140,
+            "edge": -0.0608,
+            "edge_at_price": -0.0908,
+            "ev": -0.179,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 35.6% before shrink, this book's no-vig 47.7%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "model far from market (36% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +145 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 4.5 ast",
+            "side": "over",
+            "line": 4.5,
+            "odds": -102.0,
+            "model_raw": 0.3558,
+            "model_prob": 0.4142,
+            "market_prob": 0.4727,
+            "fair_odds": 141,
+            "edge": -0.0584,
+            "edge_at_price": -0.0907,
+            "ev": -0.1796,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 35.6% before shrink, this book's no-vig 47.3%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +146 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 4.5 ast",
+            "side": "over",
+            "line": 4.5,
+            "odds": -105.0,
+            "model_raw": 0.3558,
+            "model_prob": 0.4177,
+            "market_prob": 0.4797,
+            "fair_odds": 139,
+            "edge": -0.0619,
+            "edge_at_price": -0.0944,
+            "ev": -0.1844,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 35.6% before shrink, this book's no-vig 48.0%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "model far from market (36% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +144 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Over 4.5 ast",
+            "side": "over",
+            "line": 4.5,
+            "odds": 100.0,
+            "model_raw": 0.3558,
+            "model_prob": 0.4126,
+            "market_prob": 0.4694,
+            "fair_odds": 142,
+            "edge": -0.0568,
+            "edge_at_price": -0.0874,
+            "ev": -0.1748,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 35.6% before shrink, this book's no-vig 46.9%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +147 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 4.5 ast",
+            "side": "under",
+            "line": 4.5,
+            "odds": -130.0,
+            "model_raw": 0.6442,
+            "model_prob": 0.5862,
+            "market_prob": 0.5282,
+            "fair_odds": -142,
+            "edge": 0.058,
+            "edge_at_price": 0.021,
+            "ev": 0.0371,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 64.4% before shrink, this book's no-vig 52.8%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -135 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 4.5 ast",
+            "side": "under",
+            "line": 4.5,
+            "odds": -125.0,
+            "model_raw": 0.6442,
+            "model_prob": 0.5834,
+            "market_prob": 0.5227,
+            "fair_odds": -140,
+            "edge": 0.0608,
+            "edge_at_price": 0.0279,
+            "ev": 0.0502,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 64.4% before shrink, this book's no-vig 52.3%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -134 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 4.5 ast",
+            "side": "under",
+            "line": 4.5,
+            "odds": -129.0,
+            "model_raw": 0.6442,
+            "model_prob": 0.5858,
+            "market_prob": 0.5273,
+            "fair_odds": -141,
+            "edge": 0.0584,
+            "edge_at_price": 0.0224,
+            "ev": 0.0398,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 64.4% before shrink, this book's no-vig 52.7%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -135 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 4.5 ast",
+            "side": "under",
+            "line": 4.5,
+            "odds": -125.0,
+            "model_raw": 0.6442,
+            "model_prob": 0.5823,
+            "market_prob": 0.5203,
+            "fair_odds": -139,
+            "edge": 0.0619,
+            "edge_at_price": 0.0267,
+            "ev": 0.0481,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 64.4% before shrink, this book's no-vig 52.0%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -133 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Ayo Dosunmu Under 4.5 ast",
+            "side": "under",
+            "line": 4.5,
+            "odds": -130.0,
+            "model_raw": 0.6442,
+            "model_prob": 0.5874,
+            "market_prob": 0.5306,
+            "fair_odds": -142,
+            "edge": 0.0568,
+            "edge_at_price": 0.0222,
+            "ev": 0.0393,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 64.4% before shrink, this book's no-vig 53.1%.",
+              "Projection 3.98 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 7/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -136 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Caleb Martin",
+      "player_id": "3138160",
+      "team": "Dallas Mavericks",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 3.5,
+      "projection": 4.25,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "13/22"
+      },
+      "recent": [
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        5.0,
+        8.0,
+        10.0,
+        5.0,
+        4.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.835,
+          "fair_over": -505,
+          "fair_under": 505,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.804,
+          "fair_over": -411,
+          "fair_under": 411,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.693,
+          "fair_over": -225,
+          "fair_under": 225,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.663,
+          "fair_over": -197,
+          "fair_under": 197,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.574,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.419,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "4/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.304,
+          "fair_over": 229,
+          "fair_under": -229,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.253,
+          "fair_over": 295,
+          "fair_under": -295,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 3.5 pts",
+            "side": "over",
+            "line": 3.5,
+            "odds": -127.0,
+            "model_raw": 0.5741,
+            "model_prob": 0.5499,
+            "market_prob": 0.5256,
+            "fair_odds": -122,
+            "edge": 0.0242,
+            "edge_at_price": -0.0096,
+            "ev": -0.0172,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 57.4% before shrink, this book's no-vig 52.6%.",
+              "Projection 4.25 (Poisson).",
+              "Hit rate over L5 1/5, L10 5/10, L20 11/20, all 13/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -117 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 3.5 pts",
+            "side": "under",
+            "line": 3.5,
+            "odds": -102.0,
+            "model_raw": 0.4259,
+            "model_prob": 0.4501,
+            "market_prob": 0.4744,
+            "fair_odds": 122,
+            "edge": -0.0242,
+            "edge_at_price": -0.0548,
+            "ev": -0.1085,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 42.6% before shrink, this book's no-vig 47.4%.",
+              "Projection 4.25 (Poisson).",
+              "Hit rate over L5 1/5, L10 5/10, L20 11/20, all 13/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +127 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Caleb Martin",
+      "player_id": "3138160",
+      "team": "Dallas Mavericks",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 7.5,
+      "projection": 7.63,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "11/22"
+      },
+      "recent": [
+        8.0,
+        6.0,
+        0.0,
+        5.0,
+        11.0,
+        8.0,
+        12.0,
+        6.0,
+        7.0,
+        6.0
+      ],
+      "ladder": [
+        {
+          "line": 5.5,
+          "p_over": 0.765,
+          "fair_over": -325,
+          "fair_under": 325,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.713,
+          "fair_over": -248,
+          "fair_under": 248,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.591,
+          "fair_over": -144,
+          "fair_under": 144,
+          "L10": "5/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.535,
+          "fair_over": -115,
+          "fair_under": 115,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.467,
+          "fair_over": 114,
+          "fair_under": -114,
+          "L10": "4/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.374,
+          "fair_over": 168,
+          "fair_under": -168,
+          "L10": "2/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.319,
+          "fair_over": 214,
+          "fair_under": -214,
+          "L10": "2/10"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.263,
+          "fair_over": 280,
+          "fair_under": -280,
+          "L10": "2/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.243,
+          "fair_over": 312,
+          "fair_under": -312,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 7.5 pra",
+            "side": "over",
+            "line": 7.5,
+            "odds": -111.0,
+            "model_raw": 0.4672,
+            "model_prob": 0.481,
+            "market_prob": 0.4948,
+            "fair_odds": 108,
+            "edge": -0.0138,
+            "edge_at_price": -0.045,
+            "ev": -0.0856,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 46.7% before shrink, this book's no-vig 49.5%.",
+              "Projection 7.63 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 7.5 pra",
+            "side": "over",
+            "line": 7.5,
+            "odds": -128.0,
+            "model_raw": 0.4672,
+            "model_prob": 0.4962,
+            "market_prob": 0.5253,
+            "fair_odds": 102,
+            "edge": -0.029,
+            "edge_at_price": -0.0652,
+            "ev": -0.1161,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 46.7% before shrink, this book's no-vig 52.5%.",
+              "Projection 7.63 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 7.5 pra",
+            "side": "over",
+            "line": 7.5,
+            "odds": -125.0,
+            "model_raw": 0.4672,
+            "model_prob": 0.4938,
+            "market_prob": 0.5203,
+            "fair_odds": 103,
+            "edge": -0.0266,
+            "edge_at_price": -0.0618,
+            "ev": -0.1112,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 46.7% before shrink, this book's no-vig 52.0%.",
+              "Projection 7.63 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +107 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 7.5 pra",
+            "side": "under",
+            "line": 7.5,
+            "odds": -116.0,
+            "model_raw": 0.5328,
+            "model_prob": 0.519,
+            "market_prob": 0.5052,
+            "fair_odds": -108,
+            "edge": 0.0138,
+            "edge_at_price": -0.0181,
+            "ev": -0.0336,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 53.3% before shrink, this book's no-vig 50.5%.",
+              "Projection 7.63 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 7.5 pra",
+            "side": "under",
+            "line": 7.5,
+            "odds": -103.0,
+            "model_raw": 0.5328,
+            "model_prob": 0.5038,
+            "market_prob": 0.4747,
+            "fair_odds": -102,
+            "edge": 0.029,
+            "edge_at_price": -0.0036,
+            "ev": -0.0071,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 53.3% before shrink, this book's no-vig 47.5%.",
+              "Projection 7.63 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 7.5 pra",
+            "side": "under",
+            "line": 7.5,
+            "odds": -105.0,
+            "model_raw": 0.5328,
+            "model_prob": 0.5062,
+            "market_prob": 0.4797,
+            "fair_odds": -103,
+            "edge": 0.0266,
+            "edge_at_price": -0.0059,
+            "ev": -0.0116,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 53.3% before shrink, this book's no-vig 48.0%.",
+              "Projection 7.63 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Caleb Martin",
+      "player_id": "3138160",
+      "team": "Dallas Mavericks",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 2.5,
+      "projection": 2.28,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "11/22"
+      },
+      "recent": [
+        3.0,
+        2.0,
+        0.0,
+        3.0,
+        6.0,
+        0.0,
+        2.0,
+        1.0,
+        1.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.846,
+          "fair_over": -549,
+          "fair_under": 549,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.808,
+          "fair_over": -421,
+          "fair_under": 421,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.636,
+          "fair_over": -175,
+          "fair_under": 175,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.528,
+          "fair_over": -112,
+          "fair_under": 112,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.405,
+          "fair_over": 147,
+          "fair_under": -147,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.238,
+          "fair_over": 321,
+          "fair_under": -321,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.186,
+          "fair_over": 438,
+          "fair_under": -438,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.118,
+          "fair_over": 748,
+          "fair_under": -748,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.111,
+          "fair_over": 800,
+          "fair_under": -800,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": 106.0,
+            "model_raw": 0.4046,
+            "model_prob": 0.4294,
+            "market_prob": 0.4542,
+            "fair_odds": 133,
+            "edge": -0.0248,
+            "edge_at_price": -0.056,
+            "ev": -0.1154,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 40.5% before shrink, this book's no-vig 45.4%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": 107.0,
+            "model_raw": 0.4046,
+            "model_prob": 0.4292,
+            "market_prob": 0.4537,
+            "fair_odds": 133,
+            "edge": -0.0246,
+            "edge_at_price": -0.0539,
+            "ev": -0.1116,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 40.5% before shrink, this book's no-vig 45.4%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": 111.0,
+            "model_raw": 0.4046,
+            "model_prob": 0.4243,
+            "market_prob": 0.444,
+            "fair_odds": 136,
+            "edge": -0.0197,
+            "edge_at_price": -0.0496,
+            "ev": -0.1047,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 40.5% before shrink, this book's no-vig 44.4%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +140 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": 110.0,
+            "model_raw": 0.4046,
+            "model_prob": 0.4252,
+            "market_prob": 0.4459,
+            "fair_odds": 135,
+            "edge": -0.0206,
+            "edge_at_price": -0.051,
+            "ev": -0.107,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 40.5% before shrink, this book's no-vig 44.6%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +140 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -140.0,
+            "model_raw": 0.5954,
+            "model_prob": 0.5706,
+            "market_prob": 0.5458,
+            "fair_odds": -133,
+            "edge": 0.0248,
+            "edge_at_price": -0.0127,
+            "ev": -0.0218,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 59.5% before shrink, this book's no-vig 54.6%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -127 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -139.0,
+            "model_raw": 0.5954,
+            "model_prob": 0.5708,
+            "market_prob": 0.5463,
+            "fair_odds": -133,
+            "edge": 0.0246,
+            "edge_at_price": -0.0108,
+            "ev": -0.0185,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 59.5% before shrink, this book's no-vig 54.6%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -127 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -146.0,
+            "model_raw": 0.5954,
+            "model_prob": 0.5757,
+            "market_prob": 0.556,
+            "fair_odds": -136,
+            "edge": 0.0197,
+            "edge_at_price": -0.0178,
+            "ev": -0.03,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 59.5% before shrink, this book's no-vig 55.6%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -130 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -145.0,
+            "model_raw": 0.5954,
+            "model_prob": 0.5748,
+            "market_prob": 0.5541,
+            "fair_odds": -135,
+            "edge": 0.0206,
+            "edge_at_price": -0.0171,
+            "ev": -0.0288,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 59.5% before shrink, this book's no-vig 55.4%.",
+              "Projection 2.28 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -129 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Caleb Martin",
+      "player_id": "3138160",
+      "team": "Dallas Mavericks",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 0.5,
+      "projection": 0.6,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "7/20",
+        "all": "9/22"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.438,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.222,
+          "fair_over": 351,
+          "fair_under": -351,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.166,
+          "fair_over": 503,
+          "fair_under": -503,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.051,
+          "fair_over": 1846,
+          "fair_under": -1846,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.044,
+          "fair_over": 2175,
+          "fair_under": -2175,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 0.5 threes",
+            "side": "over",
+            "line": 0.5,
+            "odds": 100.0,
+            "model_raw": 0.4378,
+            "model_prob": 0.4536,
+            "market_prob": 0.4694,
+            "fair_odds": 120,
+            "edge": -0.0158,
+            "edge_at_price": -0.0464,
+            "ev": -0.0928,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 43.8% before shrink, this book's no-vig 46.9%.",
+              "Projection 0.6 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 9/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 0.5 threes",
+            "side": "under",
+            "line": 0.5,
+            "odds": -130.0,
+            "model_raw": 0.5622,
+            "model_prob": 0.5464,
+            "market_prob": 0.5306,
+            "fair_odds": -120,
+            "edge": 0.0158,
+            "edge_at_price": -0.0188,
+            "ev": -0.0333,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 0.5: 56.2% before shrink, this book's no-vig 53.1%.",
+              "Projection 0.6 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 9/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -115 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Caleb Martin",
+      "player_id": "3138160",
+      "team": "Dallas Mavericks",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 1.5,
+      "projection": 1.1,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "7/22"
+      },
+      "recent": [
+        5.0,
+        2.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.95,
+          "fair_over": -1900,
+          "fair_under": 1900,
+          "L10": "5/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.609,
+          "fair_over": -156,
+          "fair_under": 156,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.468,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.342,
+          "fair_over": 192,
+          "fair_under": -192,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.159,
+          "fair_over": 528,
+          "fair_under": -528,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.123,
+          "fair_over": 711,
+          "fair_under": -711,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.076,
+          "fair_over": 1207,
+          "fair_under": -1207,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.075,
+          "fair_over": 1231,
+          "fair_under": -1231,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Over 1.5 ast",
+            "side": "over",
+            "line": 1.5,
+            "odds": 109.0,
+            "model_raw": 0.3419,
+            "model_prob": 0.3959,
+            "market_prob": 0.4499,
+            "fair_odds": 153,
+            "edge": -0.054,
+            "edge_at_price": -0.0826,
+            "ev": -0.1726,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 34.2% before shrink, this book's no-vig 45.0%.",
+              "Projection 1.1 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +158 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Caleb Martin Under 1.5 ast",
+            "side": "under",
+            "line": 1.5,
+            "odds": -141.0,
+            "model_raw": 0.6581,
+            "model_prob": 0.6041,
+            "market_prob": 0.5501,
+            "fair_odds": -153,
+            "edge": 0.054,
+            "edge_at_price": 0.019,
+            "ev": 0.0326,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 65.8% before shrink, this book's no-vig 55.0%.",
+              "Projection 1.1 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -145 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cooper Flagg",
+      "player_id": "5041939",
+      "team": "Dallas Mavericks",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 24.5,
+      "projection": 25.62,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "6/10",
+        "L20": "11/20",
+        "all": "13/25"
+      },
+      "recent": [
+        43.0,
+        25.0,
+        21.0,
+        19.0,
+        17.0,
+        33.0,
+        26.0,
+        29.0,
+        14.0,
+        32.0
+      ],
+      "ladder": [
+        {
+          "line": 20.5,
+          "p_over": 0.709,
+          "fair_over": -244,
+          "fair_under": 244,
+          "L10": "7/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.653,
+          "fair_over": -188,
+          "fair_under": 188,
+          "L10": "6/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.625,
+          "fair_over": -167,
+          "fair_under": 167,
+          "L10": "6/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.595,
+          "fair_over": -147,
+          "fair_under": 147,
+          "L10": "6/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.564,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "6/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.504,
+          "fair_over": -102,
+          "fair_under": 102,
+          "L10": "5/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.443,
+          "fair_over": 126,
+          "fair_under": -126,
+          "L10": "4/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.412,
+          "fair_over": 143,
+          "fair_under": -143,
+          "L10": "4/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.382,
+          "fair_over": 162,
+          "fair_under": -162,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 24.5 pts",
+            "side": "over",
+            "line": 24.5,
+            "odds": -108.0,
+            "model_raw": 0.5642,
+            "model_prob": 0.525,
+            "market_prob": 0.4858,
+            "fair_odds": -111,
+            "edge": 0.0392,
+            "edge_at_price": 0.0058,
+            "ev": 0.0111,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 24.5: 56.4% before shrink, this book's no-vig 48.6%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -106 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 24.5 pts",
+            "side": "over",
+            "line": 24.5,
+            "odds": -108.0,
+            "model_raw": 0.5642,
+            "model_prob": 0.5259,
+            "market_prob": 0.4877,
+            "fair_odds": -111,
+            "edge": 0.0383,
+            "edge_at_price": 0.0067,
+            "ev": 0.0129,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 24.5: 56.4% before shrink, this book's no-vig 48.8%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -106 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 24.5 pts",
+            "side": "over",
+            "line": 24.5,
+            "odds": -104.0,
+            "model_raw": 0.5642,
+            "model_prob": 0.5223,
+            "market_prob": 0.4803,
+            "fair_odds": -109,
+            "edge": 0.0419,
+            "edge_at_price": 0.0125,
+            "ev": 0.0244,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 24.5: 56.4% before shrink, this book's no-vig 48.0%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -105 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 24.5 pts",
+            "side": "over",
+            "line": 24.5,
+            "odds": -105.0,
+            "model_raw": 0.5642,
+            "model_prob": 0.5219,
+            "market_prob": 0.4797,
+            "fair_odds": -109,
+            "edge": 0.0423,
+            "edge_at_price": 0.0098,
+            "ev": 0.019,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 24.5: 56.4% before shrink, this book's no-vig 48.0%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -105 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 24.5 pts",
+            "side": "under",
+            "line": 24.5,
+            "odds": -122.0,
+            "model_raw": 0.4358,
+            "model_prob": 0.475,
+            "market_prob": 0.5142,
+            "fair_odds": 111,
+            "edge": -0.0392,
+            "edge_at_price": -0.0746,
+            "ev": -0.1357,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 24.5: 43.6% before shrink, this book's no-vig 51.4%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +115 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 24.5 pts",
+            "side": "under",
+            "line": 24.5,
+            "odds": -120.0,
+            "model_raw": 0.4358,
+            "model_prob": 0.4741,
+            "market_prob": 0.5123,
+            "fair_odds": 111,
+            "edge": -0.0383,
+            "edge_at_price": -0.0714,
+            "ev": -0.1309,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 24.5: 43.6% before shrink, this book's no-vig 51.2%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +115 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 24.5 pts",
+            "side": "under",
+            "line": 24.5,
+            "odds": -123.0,
+            "model_raw": 0.4358,
+            "model_prob": 0.4777,
+            "market_prob": 0.5197,
+            "fair_odds": 109,
+            "edge": -0.0419,
+            "edge_at_price": -0.0738,
+            "ev": -0.1339,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 24.5: 43.6% before shrink, this book's no-vig 52.0%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +114 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 24.5 pts",
+            "side": "under",
+            "line": 24.5,
+            "odds": -125.0,
+            "model_raw": 0.4358,
+            "model_prob": 0.4781,
+            "market_prob": 0.5203,
+            "fair_odds": 109,
+            "edge": -0.0423,
+            "edge_at_price": -0.0775,
+            "ev": -0.1395,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 24.5: 43.6% before shrink, this book's no-vig 52.0%.",
+              "Projection 25.62 (Normal(sd 8.3)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cooper Flagg",
+      "player_id": "5041939",
+      "team": "Dallas Mavericks",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 37.5,
+      "projection": 39.0,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "11/20",
+        "all": "13/25"
+      },
+      "recent": [
+        59.0,
+        42.0,
+        38.0,
+        34.0,
+        27.0,
+        48.0,
+        39.0,
+        46.0,
+        25.0,
+        39.0
+      ],
+      "ladder": [
+        {
+          "line": 33.5,
+          "p_over": 0.73,
+          "fair_over": -270,
+          "fair_under": 270,
+          "L10": "8/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.677,
+          "fair_over": -210,
+          "fair_under": 210,
+          "L10": "7/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.652,
+          "fair_over": -187,
+          "fair_under": 187,
+          "L10": "7/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.626,
+          "fair_over": -167,
+          "fair_under": 167,
+          "L10": "7/10"
+        },
+        {
+          "line": 37.5,
+          "p_over": 0.599,
+          "fair_over": -150,
+          "fair_under": 150,
+          "L10": "7/10"
+        },
+        {
+          "line": 38.5,
+          "p_over": 0.543,
+          "fair_over": -119,
+          "fair_under": 119,
+          "L10": "6/10"
+        },
+        {
+          "line": 39.5,
+          "p_over": 0.457,
+          "fair_over": 119,
+          "fair_under": -119,
+          "L10": "4/10"
+        },
+        {
+          "line": 40.5,
+          "p_over": 0.43,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "4/10"
+        },
+        {
+          "line": 41.5,
+          "p_over": 0.403,
+          "fair_over": 148,
+          "fair_under": -148,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 37.5 pra",
+            "side": "over",
+            "line": 37.5,
+            "odds": -112.0,
+            "model_raw": 0.5993,
+            "model_prob": 0.5466,
+            "market_prob": 0.4939,
+            "fair_odds": -121,
+            "edge": 0.0527,
+            "edge_at_price": 0.0183,
+            "ev": 0.0347,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 37.5: 59.9% before shrink, this book's no-vig 49.4%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -115 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 37.5 pra",
+            "side": "over",
+            "line": 37.5,
+            "odds": -103.0,
+            "model_raw": 0.5993,
+            "model_prob": 0.5383,
+            "market_prob": 0.4773,
+            "fair_odds": -117,
+            "edge": 0.061,
+            "edge_at_price": 0.0309,
+            "ev": 0.061,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 37.5: 59.9% before shrink, this book's no-vig 47.7%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "model far from market (60% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -112 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 37.5 pra",
+            "side": "over",
+            "line": 37.5,
+            "odds": -105.0,
+            "model_raw": 0.5993,
+            "model_prob": 0.5395,
+            "market_prob": 0.4797,
+            "fair_odds": -117,
+            "edge": 0.0598,
+            "edge_at_price": 0.0273,
+            "ev": 0.0533,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 37.5: 59.9% before shrink, this book's no-vig 48.0%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -112 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 37.5 pra",
+            "side": "over",
+            "line": 37.5,
+            "odds": 100.0,
+            "model_raw": 0.5993,
+            "model_prob": 0.5343,
+            "market_prob": 0.4694,
+            "fair_odds": -115,
+            "edge": 0.065,
+            "edge_at_price": 0.0343,
+            "ev": 0.0687,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 37.5: 59.9% before shrink, this book's no-vig 46.9%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "model far from market (60% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -110 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 37.5 pra",
+            "side": "under",
+            "line": 37.5,
+            "odds": -118.0,
+            "model_raw": 0.4007,
+            "model_prob": 0.4534,
+            "market_prob": 0.5061,
+            "fair_odds": 121,
+            "edge": -0.0527,
+            "edge_at_price": -0.0879,
+            "ev": -0.1624,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 37.5: 40.1% before shrink, this book's no-vig 50.6%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 37.5 pra",
+            "side": "under",
+            "line": 37.5,
+            "odds": -125.0,
+            "model_raw": 0.4007,
+            "model_prob": 0.4617,
+            "market_prob": 0.5227,
+            "fair_odds": 117,
+            "edge": -0.061,
+            "edge_at_price": -0.0939,
+            "ev": -0.169,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 37.5: 40.1% before shrink, this book's no-vig 52.3%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (40% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +121 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 37.5 pra",
+            "side": "under",
+            "line": 37.5,
+            "odds": -125.0,
+            "model_raw": 0.4007,
+            "model_prob": 0.4605,
+            "market_prob": 0.5203,
+            "fair_odds": 117,
+            "edge": -0.0598,
+            "edge_at_price": -0.0951,
+            "ev": -0.1711,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 37.5: 40.1% before shrink, this book's no-vig 52.0%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +121 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 37.5 pra",
+            "side": "under",
+            "line": 37.5,
+            "odds": -130.0,
+            "model_raw": 0.4007,
+            "model_prob": 0.4657,
+            "market_prob": 0.5306,
+            "fair_odds": 115,
+            "edge": -0.065,
+            "edge_at_price": -0.0996,
+            "ev": -0.1761,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 37.5: 40.1% before shrink, this book's no-vig 53.1%.",
+              "Projection 39.0 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (40% vs 53%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +119 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cooper Flagg",
+      "player_id": "5041939",
+      "team": "Dallas Mavericks",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 6.5,
+      "projection": 6.88,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "11/25"
+      },
+      "recent": [
+        10.0,
+        5.0,
+        10.0,
+        10.0,
+        4.0,
+        9.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "ladder": [
+        {
+          "line": 4.5,
+          "p_over": 0.822,
+          "fair_over": -461,
+          "fair_under": 461,
+          "L10": "9/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.774,
+          "fair_over": -343,
+          "fair_under": 343,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.619,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.566,
+          "fair_over": -131,
+          "fair_under": 131,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.491,
+          "fair_over": 103,
+          "fair_under": -103,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.438,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.395,
+          "fair_over": 153,
+          "fair_under": -153,
+          "L10": "4/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.336,
+          "fair_over": 198,
+          "fair_under": -198,
+          "L10": "4/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.312,
+          "fair_over": 221,
+          "fair_under": -221,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": 106.0,
+            "model_raw": 0.4914,
+            "model_prob": 0.4728,
+            "market_prob": 0.4542,
+            "fair_odds": 112,
+            "edge": 0.0186,
+            "edge_at_price": -0.0126,
+            "ev": -0.026,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 49.1% before shrink, this book's no-vig 45.4%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": 102.0,
+            "model_raw": 0.4914,
+            "model_prob": 0.4783,
+            "market_prob": 0.4653,
+            "fair_odds": 109,
+            "edge": 0.0131,
+            "edge_at_price": -0.0167,
+            "ev": -0.0338,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 49.1% before shrink, this book's no-vig 46.5%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": 100.0,
+            "model_raw": 0.4914,
+            "model_prob": 0.48,
+            "market_prob": 0.4686,
+            "fair_odds": 108,
+            "edge": 0.0114,
+            "edge_at_price": -0.02,
+            "ev": -0.04,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 49.1% before shrink, this book's no-vig 46.9%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": -115.0,
+            "model_raw": 0.4914,
+            "model_prob": 0.4957,
+            "market_prob": 0.5,
+            "fair_odds": 102,
+            "edge": -0.0043,
+            "edge_at_price": -0.0392,
+            "ev": -0.0733,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 49.1% before shrink, this book's no-vig 50.0%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": 100.0,
+            "model_raw": 0.4914,
+            "model_prob": 0.4804,
+            "market_prob": 0.4694,
+            "fair_odds": 108,
+            "edge": 0.011,
+            "edge_at_price": -0.0196,
+            "ev": -0.0392,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 49.1% before shrink, this book's no-vig 46.9%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": -140.0,
+            "model_raw": 0.5086,
+            "model_prob": 0.5272,
+            "market_prob": 0.5458,
+            "fair_odds": -112,
+            "edge": -0.0186,
+            "edge_at_price": -0.0561,
+            "ev": -0.0962,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 50.9% before shrink, this book's no-vig 54.6%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -107 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": -132.0,
+            "model_raw": 0.5086,
+            "model_prob": 0.5217,
+            "market_prob": 0.5347,
+            "fair_odds": -109,
+            "edge": -0.0131,
+            "edge_at_price": -0.0473,
+            "ev": -0.0831,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 50.9% before shrink, this book's no-vig 53.5%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -105 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": -131.0,
+            "model_raw": 0.5086,
+            "model_prob": 0.52,
+            "market_prob": 0.5314,
+            "fair_odds": -108,
+            "edge": -0.0114,
+            "edge_at_price": -0.0471,
+            "ev": -0.083,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 50.9% before shrink, this book's no-vig 53.1%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": -115.0,
+            "model_raw": 0.5086,
+            "model_prob": 0.5043,
+            "market_prob": 0.5,
+            "fair_odds": -102,
+            "edge": 0.0043,
+            "edge_at_price": -0.0306,
+            "ev": -0.0572,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 50.9% before shrink, this book's no-vig 50.0%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": -130.0,
+            "model_raw": 0.5086,
+            "model_prob": 0.5196,
+            "market_prob": 0.5306,
+            "fair_odds": -108,
+            "edge": -0.011,
+            "edge_at_price": -0.0456,
+            "ev": -0.0807,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 50.9% before shrink, this book's no-vig 53.1%.",
+              "Projection 6.88 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cooper Flagg",
+      "player_id": "5041939",
+      "team": "Dallas Mavericks",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 1.32,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "8/20",
+        "all": "9/25"
+      },
+      "recent": [
+        3.0,
+        3.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.71,
+          "fair_over": -244,
+          "fair_under": 244,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.592,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.422,
+          "fair_over": 137,
+          "fair_under": -137,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.242,
+          "fair_over": 314,
+          "fair_under": -314,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.183,
+          "fair_over": 445,
+          "fair_under": -445,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.068,
+          "fair_over": 1378,
+          "fair_under": -1378,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.058,
+          "fair_over": 1610,
+          "fair_under": -1610,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.4222,
+            "model_prob": 0.4337,
+            "market_prob": 0.4452,
+            "fair_odds": 131,
+            "edge": -0.0115,
+            "edge_at_price": -0.0425,
+            "ev": -0.0893,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 42.2% before shrink, this book's no-vig 44.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +135 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 118.0,
+            "model_raw": 0.4222,
+            "model_prob": 0.4265,
+            "market_prob": 0.4307,
+            "fair_odds": 134,
+            "edge": -0.0043,
+            "edge_at_price": -0.0323,
+            "ev": -0.0703,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 42.2% before shrink, this book's no-vig 43.1%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +139 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 120.0,
+            "model_raw": 0.4222,
+            "model_prob": 0.4238,
+            "market_prob": 0.4254,
+            "fair_odds": 136,
+            "edge": -0.0016,
+            "edge_at_price": -0.0307,
+            "ev": -0.0676,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 42.2% before shrink, this book's no-vig 42.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +141 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 100.0,
+            "model_raw": 0.4222,
+            "model_prob": 0.4438,
+            "market_prob": 0.4653,
+            "fair_odds": 125,
+            "edge": -0.0216,
+            "edge_at_price": -0.0562,
+            "ev": -0.1125,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 42.2% before shrink, this book's no-vig 46.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +130 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 120.0,
+            "model_raw": 0.4222,
+            "model_prob": 0.4235,
+            "market_prob": 0.4248,
+            "fair_odds": 136,
+            "edge": -0.0013,
+            "edge_at_price": -0.031,
+            "ev": -0.0683,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 42.2% before shrink, this book's no-vig 42.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +141 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -146.0,
+            "model_raw": 0.5778,
+            "model_prob": 0.5663,
+            "market_prob": 0.5548,
+            "fair_odds": -131,
+            "edge": 0.0115,
+            "edge_at_price": -0.0272,
+            "ev": -0.0458,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 57.8% before shrink, this book's no-vig 55.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -125 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -154.0,
+            "model_raw": 0.5778,
+            "model_prob": 0.5735,
+            "market_prob": 0.5693,
+            "fair_odds": -134,
+            "edge": 0.0043,
+            "edge_at_price": -0.0328,
+            "ev": -0.054,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 57.8% before shrink, this book's no-vig 56.9%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -128 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -159.0,
+            "model_raw": 0.5778,
+            "model_prob": 0.5762,
+            "market_prob": 0.5746,
+            "fair_odds": -136,
+            "edge": 0.0016,
+            "edge_at_price": -0.0377,
+            "ev": -0.0614,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 57.8% before shrink, this book's no-vig 57.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -130 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -135.0,
+            "model_raw": 0.5778,
+            "model_prob": 0.5562,
+            "market_prob": 0.5347,
+            "fair_odds": -125,
+            "edge": 0.0216,
+            "edge_at_price": -0.0182,
+            "ev": -0.0318,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 57.8% before shrink, this book's no-vig 53.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -120 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -160.0,
+            "model_raw": 0.5778,
+            "model_prob": 0.5765,
+            "market_prob": 0.5752,
+            "fair_odds": -136,
+            "edge": 0.0013,
+            "edge_at_price": -0.0389,
+            "ev": -0.0632,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 57.8% before shrink, this book's no-vig 57.5%.",
+              "Projection 1.32 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -130 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cooper Flagg",
+      "player_id": "5041939",
+      "team": "Dallas Mavericks",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 6.5,
+      "projection": 6.51,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "10/25"
+      },
+      "recent": [
+        6.0,
+        12.0,
+        7.0,
+        5.0,
+        6.0,
+        6.0,
+        8.0,
+        11.0,
+        6.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 4.5,
+          "p_over": 0.797,
+          "fair_over": -392,
+          "fair_under": 392,
+          "L10": "9/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.767,
+          "fair_over": -329,
+          "fair_under": 329,
+          "L10": "8/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.673,
+          "fair_over": -206,
+          "fair_under": 206,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.585,
+          "fair_over": -141,
+          "fair_under": 141,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.454,
+          "fair_over": 120,
+          "fair_under": -120,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.377,
+          "fair_over": 165,
+          "fair_under": -165,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.33,
+          "fair_over": 203,
+          "fair_under": -203,
+          "L10": "3/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.25,
+          "fair_over": 300,
+          "fair_under": -300,
+          "L10": "2/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.224,
+          "fair_over": 347,
+          "fair_under": -347,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": 100.0,
+            "model_raw": 0.4544,
+            "model_prob": 0.4611,
+            "market_prob": 0.4677,
+            "fair_odds": 117,
+            "edge": -0.0067,
+            "edge_at_price": -0.0389,
+            "ev": -0.0779,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 45.4% before shrink, this book's no-vig 46.8%.",
+              "Projection 6.51 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +121 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": 113.0,
+            "model_raw": 0.4544,
+            "model_prob": 0.4477,
+            "market_prob": 0.441,
+            "fair_odds": 123,
+            "edge": 0.0067,
+            "edge_at_price": -0.0218,
+            "ev": -0.0464,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 45.4% before shrink, this book's no-vig 44.1%.",
+              "Projection 6.51 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +128 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": 135.0,
+            "model_raw": 0.4544,
+            "model_prob": 0.4263,
+            "market_prob": 0.3983,
+            "fair_odds": 135,
+            "edge": 0.0281,
+            "edge_at_price": 0.0008,
+            "ev": 0.0019,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 45.4% before shrink, this book's no-vig 39.8%.",
+              "Projection 6.51 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +139 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": -132.0,
+            "model_raw": 0.5456,
+            "model_prob": 0.5389,
+            "market_prob": 0.5323,
+            "fair_odds": -117,
+            "edge": 0.0067,
+            "edge_at_price": -0.03,
+            "ev": -0.0528,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 54.6% before shrink, this book's no-vig 53.2%.",
+              "Projection 6.51 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -112 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": -147.0,
+            "model_raw": 0.5456,
+            "model_prob": 0.5523,
+            "market_prob": 0.559,
+            "fair_odds": -123,
+            "edge": -0.0067,
+            "edge_at_price": -0.0428,
+            "ev": -0.072,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 54.6% before shrink, this book's no-vig 55.9%.",
+              "Projection 6.51 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -118 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": -180.0,
+            "model_raw": 0.5456,
+            "model_prob": 0.5737,
+            "market_prob": 0.6017,
+            "fair_odds": -135,
+            "edge": -0.0281,
+            "edge_at_price": -0.0692,
+            "ev": -0.1077,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 54.6% before shrink, this book's no-vig 60.2%.",
+              "Projection 6.51 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -129 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jaden McDaniels",
+      "player_id": "4431671",
+      "team": "Minnesota Timberwolves",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 16.5,
+      "projection": 17.0,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "8/20",
+        "all": "11/26"
+      },
+      "recent": [
+        16.0,
+        23.0,
+        14.0,
+        13.0,
+        19.0,
+        23.0,
+        19.0,
+        14.0,
+        14.0,
+        15.0
+      ],
+      "ladder": [
+        {
+          "line": 12.5,
+          "p_over": 0.903,
+          "fair_over": -932,
+          "fair_under": 932,
+          "L10": "10/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.835,
+          "fair_over": -506,
+          "fair_under": 506,
+          "L10": "9/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.697,
+          "fair_over": -230,
+          "fair_under": 230,
+          "L10": "6/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.606,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "5/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.507,
+          "fair_over": -103,
+          "fair_under": 103,
+          "L10": "4/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.435,
+          "fair_over": 130,
+          "fair_under": -130,
+          "L10": "4/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.365,
+          "fair_over": 174,
+          "fair_under": -174,
+          "L10": "4/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.245,
+          "fair_over": 308,
+          "fair_under": -308,
+          "L10": "2/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.194,
+          "fair_over": 415,
+          "fair_under": -415,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Jaden McDaniels Over 16.5 pts",
+            "side": "over",
+            "line": 16.5,
+            "odds": -115.0,
+            "model_raw": 0.507,
+            "model_prob": 0.5035,
+            "market_prob": 0.5,
+            "fair_odds": -101,
+            "edge": 0.0035,
+            "edge_at_price": -0.0314,
+            "ev": -0.0587,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 16.5: 50.7% before shrink, this book's no-vig 50.0%.",
+              "Projection 17.0 (Normal(sd 3.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +103 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Jaden McDaniels Over 16.5 pts",
+            "side": "over",
+            "line": 16.5,
+            "odds": -130.0,
+            "model_raw": 0.507,
+            "model_prob": 0.5188,
+            "market_prob": 0.5306,
+            "fair_odds": -108,
+            "edge": -0.0118,
+            "edge_at_price": -0.0464,
+            "ev": -0.0821,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 16.5: 50.7% before shrink, this book's no-vig 53.1%.",
+              "Projection 17.0 (Normal(sd 3.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Jaden McDaniels Under 16.5 pts",
+            "side": "under",
+            "line": 16.5,
+            "odds": -115.0,
+            "model_raw": 0.493,
+            "model_prob": 0.4965,
+            "market_prob": 0.5,
+            "fair_odds": 101,
+            "edge": -0.0035,
+            "edge_at_price": -0.0384,
+            "ev": -0.0718,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 16.5: 49.3% before shrink, this book's no-vig 50.0%.",
+              "Projection 17.0 (Normal(sd 3.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +105 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Jaden McDaniels Under 16.5 pts",
+            "side": "under",
+            "line": 16.5,
+            "odds": 100.0,
+            "model_raw": 0.493,
+            "model_prob": 0.4812,
+            "market_prob": 0.4694,
+            "fair_odds": 108,
+            "edge": 0.0118,
+            "edge_at_price": -0.0188,
+            "ev": -0.0376,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 16.5: 49.3% before shrink, this book's no-vig 46.9%.",
+              "Projection 17.0 (Normal(sd 3.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 11/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }
