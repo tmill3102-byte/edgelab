@@ -153,6 +153,12 @@
   "injuries": {
     "home": [
       {
+        "name": "Chris Collier",
+        "status": "Questionable",
+        "pos": "RB",
+        "key": false
+      },
+      {
         "name": "Trey Zuhn III",
         "status": "Questionable",
         "pos": "C",
@@ -174,12 +180,6 @@
         "name": "Keyron Crawford",
         "status": "Injured Reserve",
         "pos": "DE",
-        "key": false
-      },
-      {
-        "name": "Chigozie Anusiem",
-        "status": "Injured Reserve",
-        "pos": "CB",
         "key": false
       }
     ],
@@ -1694,6 +1694,171 @@
       "player": "Ashton Jeanty",
       "player_id": "4890973",
       "team": "Las Vegas Raiders",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 34.5,
+      "projection": 47.87,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "15/24"
+      },
+      "recent": [
+        25.0,
+        9.0,
+        15.0,
+        22.0,
+        27.0,
+        58.0,
+        56.0,
+        48.0,
+        102.0,
+        87.0
+      ],
+      "ladder": [
+        {
+          "line": 26.5,
+          "p_over": 0.701,
+          "fair_over": -235,
+          "fair_under": 235,
+          "L10": "6/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.658,
+          "fair_over": -193,
+          "fair_under": 193,
+          "L10": "5/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.644,
+          "fair_over": -181,
+          "fair_under": 181,
+          "L10": "5/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.629,
+          "fair_over": -169,
+          "fair_under": 169,
+          "L10": "5/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.613,
+          "fair_over": -159,
+          "fair_under": 159,
+          "L10": "5/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.597,
+          "fair_over": -148,
+          "fair_under": 148,
+          "L10": "5/10"
+        },
+        {
+          "line": 38.5,
+          "p_over": 0.581,
+          "fair_over": -139,
+          "fair_under": 139,
+          "L10": "5/10"
+        },
+        {
+          "line": 40.5,
+          "p_over": 0.564,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "5/10"
+        },
+        {
+          "line": 42.5,
+          "p_over": 0.547,
+          "fair_over": -121,
+          "fair_under": 121,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ashton Jeanty Over 34.5 rush_yds",
+            "side": "over",
+            "line": 34.5,
+            "odds": -112.0,
+            "model_raw": 0.6133,
+            "model_prob": 0.5566,
+            "market_prob": 0.5,
+            "fair_odds": -126,
+            "edge": 0.0566,
+            "edge_at_price": 0.0283,
+            "ev": 0.0537,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 34.5: 61.3% before shrink, this book's no-vig 50.0%.",
+              "Projection 47.87 (Normal(sd 29.6)).",
+              "Hit rate over L5 0/5, L10 5/10, L20 11/20, all 15/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -120 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ashton Jeanty Under 34.5 rush_yds",
+            "side": "under",
+            "line": 34.5,
+            "odds": -112.0,
+            "model_raw": 0.3867,
+            "model_prob": 0.4434,
+            "market_prob": 0.5,
+            "fair_odds": 126,
+            "edge": -0.0566,
+            "edge_at_price": -0.085,
+            "ev": -0.1608,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 34.5: 38.7% before shrink, this book's no-vig 50.0%.",
+              "Projection 47.87 (Normal(sd 29.6)).",
+              "Hit rate over L5 0/5, L10 5/10, L20 11/20, all 15/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +130 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ashton Jeanty",
+      "player_id": "4890973",
+      "team": "Las Vegas Raiders",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 25.5,
@@ -1854,171 +2019,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +141 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Ashton Jeanty",
-      "player_id": "4890973",
-      "team": "Las Vegas Raiders",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 34.5,
-      "projection": 47.87,
-      "hit_rates": {
-        "L5": "0/5",
-        "L10": "5/10",
-        "L20": "11/20",
-        "all": "15/24"
-      },
-      "recent": [
-        25.0,
-        9.0,
-        15.0,
-        22.0,
-        27.0,
-        58.0,
-        56.0,
-        48.0,
-        102.0,
-        87.0
-      ],
-      "ladder": [
-        {
-          "line": 26.5,
-          "p_over": 0.701,
-          "fair_over": -235,
-          "fair_under": 235,
-          "L10": "6/10"
-        },
-        {
-          "line": 28.5,
-          "p_over": 0.658,
-          "fair_over": -193,
-          "fair_under": 193,
-          "L10": "5/10"
-        },
-        {
-          "line": 30.5,
-          "p_over": 0.644,
-          "fair_over": -181,
-          "fair_under": 181,
-          "L10": "5/10"
-        },
-        {
-          "line": 32.5,
-          "p_over": 0.629,
-          "fair_over": -169,
-          "fair_under": 169,
-          "L10": "5/10"
-        },
-        {
-          "line": 34.5,
-          "p_over": 0.613,
-          "fair_over": -159,
-          "fair_under": 159,
-          "L10": "5/10"
-        },
-        {
-          "line": 36.5,
-          "p_over": 0.597,
-          "fair_over": -148,
-          "fair_under": 148,
-          "L10": "5/10"
-        },
-        {
-          "line": 38.5,
-          "p_over": 0.581,
-          "fair_over": -139,
-          "fair_under": 139,
-          "L10": "5/10"
-        },
-        {
-          "line": 40.5,
-          "p_over": 0.564,
-          "fair_over": -129,
-          "fair_under": 129,
-          "L10": "5/10"
-        },
-        {
-          "line": 42.5,
-          "p_over": 0.547,
-          "fair_over": -121,
-          "fair_under": 121,
-          "L10": "5/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 9 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ashton Jeanty Over 34.5 rush_yds",
-            "side": "over",
-            "line": 34.5,
-            "odds": -116.0,
-            "model_raw": 0.6133,
-            "model_prob": 0.5609,
-            "market_prob": 0.5084,
-            "fair_odds": -128,
-            "edge": 0.0524,
-            "edge_at_price": 0.0238,
-            "ev": 0.0444,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 34.5: 61.3% before shrink, this book's no-vig 50.8%.",
-              "Projection 47.87 (Normal(sd 29.6)).",
-              "Hit rate over L5 0/5, L10 5/10, L20 11/20, all 15/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -122 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ashton Jeanty Under 34.5 rush_yds",
-            "side": "under",
-            "line": 34.5,
-            "odds": -108.0,
-            "model_raw": 0.3867,
-            "model_prob": 0.4391,
-            "market_prob": 0.4916,
-            "fair_odds": 128,
-            "edge": -0.0524,
-            "edge_at_price": -0.0801,
-            "ev": -0.1543,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 34.5: 38.7% before shrink, this book's no-vig 49.2%.",
-              "Projection 47.87 (Normal(sd 29.6)).",
-              "Hit rate over L5 0/5, L10 5/10, L20 11/20, all 15/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +132 or better.",
             "proven": false
           }
         }
@@ -2239,18 +2239,18 @@
             "selection": "Drew Lock Over 6.5 rush_yds",
             "side": "over",
             "line": 6.5,
-            "odds": -105.0,
+            "odds": -106.0,
             "model_raw": 0.0946,
-            "model_prob": 0.2894,
-            "market_prob": 0.4843,
-            "fair_odds": 245,
-            "edge": -0.1948,
-            "edge_at_price": -0.2228,
-            "ev": -0.4349,
+            "model_prob": 0.291,
+            "market_prob": 0.4873,
+            "fair_odds": 244,
+            "edge": -0.1964,
+            "edge_at_price": -0.2236,
+            "ev": -0.4345,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 6.5: 9.5% before shrink, this book's no-vig 48.4%.",
+              "Model over 6.5: 9.5% before shrink, this book's no-vig 48.7%.",
               "Projection 2.37 (Poisson).",
               "Hit rate over L5 2/5, L10 2/10, L20 2/11, all 2/11."
             ],
@@ -2260,11 +2260,11 @@
             "caution": [
               "injury news: listed Questionable: Lock (right elbow/oblique) practiced in a limited capacity Thursday, John Boyle of the Seahawks' official site reports.",
               "thin data: current season only 5 games; added 6 from prior season (role/team may differ)",
-              "model far from market (9% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (9% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (9% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (9% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +252 or better.",
+            "next_step": "Pass. Only interesting at +251 or better.",
             "proven": false
           }
         },
@@ -2274,18 +2274,18 @@
             "selection": "Drew Lock Under 6.5 rush_yds",
             "side": "under",
             "line": 6.5,
-            "odds": -120.0,
+            "odds": -118.0,
             "model_raw": 0.9054,
-            "model_prob": 0.7106,
-            "market_prob": 0.5157,
-            "fair_odds": -245,
-            "edge": 0.1948,
-            "edge_at_price": 0.1651,
-            "ev": 0.3027,
+            "model_prob": 0.709,
+            "market_prob": 0.5127,
+            "fair_odds": -244,
+            "edge": 0.1964,
+            "edge_at_price": 0.1677,
+            "ev": 0.3099,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 6.5: 90.5% before shrink, this book's no-vig 51.6%.",
+              "Model under 6.5: 90.5% before shrink, this book's no-vig 51.3%.",
               "Projection 2.37 (Poisson).",
               "Hit rate over L5 2/5, L10 2/10, L20 2/11, all 2/11."
             ],
@@ -2295,13 +2295,13 @@
             "caution": [
               "injury news: listed Questionable: Lock (right elbow/oblique) practiced in a limited capacity Thursday, John Boyle of the Seahawks' official site reports.",
               "thin data: current season only 5 games; added 6 from prior season (role/team may differ)",
-              "model far from market (91% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (91% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (91% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (91% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -230 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -228 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2313,7 +2313,7 @@
       "team": "Seattle Seahawks",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 203.5,
+      "line": 202.5,
       "projection": 58.07,
       "hit_rates": {
         "L5": "1/5",
@@ -2335,66 +2335,66 @@
       ],
       "ladder": [
         {
-          "line": 195.5,
-          "p_over": 0.103,
-          "fair_over": 874,
-          "fair_under": -874,
+          "line": 194.5,
+          "p_over": 0.104,
+          "fair_over": 865,
+          "fair_under": -865,
           "L10": "1/10"
         },
         {
-          "line": 197.5,
-          "p_over": 0.101,
-          "fair_over": 891,
-          "fair_under": -891,
+          "line": 196.5,
+          "p_over": 0.102,
+          "fair_over": 883,
+          "fair_under": -883,
           "L10": "1/10"
         },
         {
-          "line": 199.5,
-          "p_over": 0.099,
-          "fair_over": 909,
-          "fair_under": -909,
+          "line": 198.5,
+          "p_over": 0.1,
+          "fair_over": 900,
+          "fair_under": -900,
           "L10": "1/10"
         },
         {
-          "line": 201.5,
+          "line": 200.5,
+          "p_over": 0.098,
+          "fair_over": 918,
+          "fair_under": -918,
+          "L10": "1/10"
+        },
+        {
+          "line": 202.5,
           "p_over": 0.097,
-          "fair_over": 927,
-          "fair_under": -927,
+          "fair_over": 936,
+          "fair_under": -936,
           "L10": "1/10"
         },
         {
-          "line": 203.5,
-          "p_over": 0.096,
-          "fair_over": 945,
-          "fair_under": -945,
+          "line": 204.5,
+          "p_over": 0.095,
+          "fair_over": 953,
+          "fair_under": -953,
           "L10": "1/10"
         },
         {
-          "line": 205.5,
-          "p_over": 0.094,
-          "fair_over": 962,
-          "fair_under": -962,
-          "L10": "1/10"
-        },
-        {
-          "line": 207.5,
+          "line": 206.5,
           "p_over": 0.093,
-          "fair_over": 980,
-          "fair_under": -980,
+          "fair_over": 971,
+          "fair_under": -971,
           "L10": "1/10"
         },
         {
-          "line": 209.5,
-          "p_over": 0.091,
-          "fair_over": 998,
-          "fair_under": -998,
+          "line": 208.5,
+          "p_over": 0.092,
+          "fair_over": 989,
+          "fair_under": -989,
           "L10": "1/10"
         },
         {
-          "line": 211.5,
+          "line": 210.5,
           "p_over": 0.09,
-          "fair_over": 1015,
-          "fair_under": -1015,
+          "fair_over": 1006,
+          "fair_under": -1006,
           "L10": "1/10"
         }
       ],
@@ -2407,21 +2407,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Drew Lock Over 203.5 pass_yds",
+            "selection": "Drew Lock Over 202.5 pass_yds",
             "side": "over",
-            "line": 203.5,
+            "line": 202.5,
             "odds": -112.0,
-            "model_raw": 0.0957,
-            "model_prob": 0.2979,
+            "model_raw": 0.0966,
+            "model_prob": 0.2983,
             "market_prob": 0.5,
-            "fair_odds": 236,
-            "edge": -0.2021,
-            "edge_at_price": -0.2305,
-            "ev": -0.4362,
+            "fair_odds": 235,
+            "edge": -0.2017,
+            "edge_at_price": -0.23,
+            "ev": -0.4354,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 203.5: 9.6% before shrink, this book's no-vig 50.0%.",
+              "Model over 202.5: 9.7% before shrink, this book's no-vig 50.0%.",
               "Projection 58.07 (Normal(sd 92.3)).",
               "Hit rate over L5 1/5, L10 1/10, L20 1/11, all 1/11."
             ],
@@ -2442,21 +2442,21 @@
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Drew Lock Under 203.5 pass_yds",
+            "selection": "Drew Lock Under 202.5 pass_yds",
             "side": "under",
-            "line": 203.5,
+            "line": 202.5,
             "odds": -112.0,
-            "model_raw": 0.9043,
-            "model_prob": 0.7022,
+            "model_raw": 0.9034,
+            "model_prob": 0.7017,
             "market_prob": 0.5,
-            "fair_odds": -236,
-            "edge": 0.2022,
-            "edge_at_price": 0.1738,
-            "ev": 0.3291,
+            "fair_odds": -235,
+            "edge": 0.2017,
+            "edge_at_price": 0.1734,
+            "ev": 0.3282,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 203.5: 90.4% before shrink, this book's no-vig 50.0%.",
+              "Model under 202.5: 90.3% before shrink, this book's no-vig 50.0%.",
               "Projection 58.07 (Normal(sd 92.3)).",
               "Hit rate over L5 1/5, L10 1/10, L20 1/11, all 1/11."
             ],
@@ -2472,7 +2472,7 @@
               "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -221 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -220 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2574,18 +2574,18 @@
             "selection": "Fernando Mendoza Over 12.5 rush_yds",
             "side": "over",
             "line": 12.5,
-            "odds": -116.0,
+            "odds": -112.0,
             "model_raw": 0.07,
-            "model_prob": 0.3769,
-            "market_prob": 0.5084,
-            "fair_odds": 165,
-            "edge": -0.1315,
-            "edge_at_price": -0.1601,
-            "ev": -0.2982,
+            "model_prob": 0.371,
+            "market_prob": 0.5,
+            "fair_odds": 170,
+            "edge": -0.129,
+            "edge_at_price": -0.1573,
+            "ev": -0.2978,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model over 12.5: 7.0% before shrink, this book's no-vig 50.8%.",
+              "Model over 12.5: 7.0% before shrink, this book's no-vig 50.0%.",
               "Projection 1.0 (Poisson).",
               "Hit rate over L5 0/3, L10 0/3, L20 0/3, all 0/3."
             ],
@@ -2594,11 +2594,11 @@
             ],
             "caution": [
               "thin data: fewer than 5 games of data",
-              "model far from market (7% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (7% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (7% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (7% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +171 or better.",
+            "next_step": "Pass. Only interesting at +175 or better.",
             "proven": false
           }
         },
@@ -2608,18 +2608,18 @@
             "selection": "Fernando Mendoza Under 12.5 rush_yds",
             "side": "under",
             "line": 12.5,
-            "odds": -108.0,
+            "odds": -112.0,
             "model_raw": 0.93,
-            "model_prob": 0.6231,
-            "market_prob": 0.4916,
-            "fair_odds": -165,
-            "edge": 0.1315,
-            "edge_at_price": 0.1039,
-            "ev": 0.2,
+            "model_prob": 0.629,
+            "market_prob": 0.5,
+            "fair_odds": -170,
+            "edge": 0.129,
+            "edge_at_price": 0.1007,
+            "ev": 0.1906,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model under 12.5: 93.0% before shrink, this book's no-vig 49.2%.",
+              "Model under 12.5: 93.0% before shrink, this book's no-vig 50.0%.",
               "Projection 1.0 (Poisson).",
               "Hit rate over L5 0/3, L10 0/3, L20 0/3, all 0/3."
             ],
@@ -2628,11 +2628,11 @@
             ],
             "caution": [
               "thin data: fewer than 5 games of data",
-              "model far from market (93% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (93% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (93% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (93% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -157 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -161 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2644,7 +2644,7 @@
       "team": "Las Vegas Raiders",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 180.5,
+      "line": 179.5,
       "projection": 16.0,
       "hit_rates": {
         "L5": "0/3",
@@ -2658,6 +2658,13 @@
         0.0
       ],
       "ladder": [
+        {
+          "line": 175.5,
+          "p_over": 0.07,
+          "fair_over": 1329,
+          "fair_under": -1329,
+          "L10": "0/3"
+        },
         {
           "line": 176.5,
           "p_over": 0.07,
@@ -2713,13 +2720,6 @@
           "fair_over": 1329,
           "fair_under": -1329,
           "L10": "0/3"
-        },
-        {
-          "line": 184.5,
-          "p_over": 0.07,
-          "fair_over": 1329,
-          "fair_under": -1329,
-          "L10": "0/3"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2731,21 +2731,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Fernando Mendoza Over 180.5 pass_yds",
+            "selection": "Fernando Mendoza Over 179.5 pass_yds",
             "side": "over",
-            "line": 180.5,
-            "odds": -113.0,
+            "line": 179.5,
+            "odds": -112.0,
             "model_raw": 0.07,
-            "model_prob": 0.3725,
-            "market_prob": 0.5021,
-            "fair_odds": 168,
-            "edge": -0.1296,
-            "edge_at_price": -0.158,
-            "ev": -0.2979,
+            "model_prob": 0.371,
+            "market_prob": 0.5,
+            "fair_odds": 170,
+            "edge": -0.129,
+            "edge_at_price": -0.1573,
+            "ev": -0.2978,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model over 180.5: 7.0% before shrink, this book's no-vig 50.2%.",
+              "Model over 179.5: 7.0% before shrink, this book's no-vig 50.0%.",
               "Projection 16.0 (Normal(sd 22.6)).",
               "Hit rate over L5 0/3, L10 0/3, L20 0/3, all 0/3."
             ],
@@ -2758,28 +2758,28 @@
               "model far from market (7% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +174 or better.",
+            "next_step": "Pass. Only interesting at +175 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Fernando Mendoza Under 180.5 pass_yds",
+            "selection": "Fernando Mendoza Under 179.5 pass_yds",
             "side": "under",
-            "line": 180.5,
-            "odds": -111.0,
+            "line": 179.5,
+            "odds": -112.0,
             "model_raw": 0.93,
-            "model_prob": 0.6275,
-            "market_prob": 0.4979,
-            "fair_odds": -168,
-            "edge": 0.1296,
-            "edge_at_price": 0.1015,
-            "ev": 0.1929,
+            "model_prob": 0.629,
+            "market_prob": 0.5,
+            "fair_odds": -170,
+            "edge": 0.129,
+            "edge_at_price": 0.1007,
+            "ev": 0.1906,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model under 180.5: 93.0% before shrink, this book's no-vig 49.8%.",
+              "Model under 179.5: 93.0% before shrink, this book's no-vig 50.0%.",
               "Projection 16.0 (Normal(sd 22.6)).",
               "Hit rate over L5 0/3, L10 0/3, L20 0/3, all 0/3."
             ],
@@ -2792,166 +2792,7 @@
               "model far from market (93% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -160 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jadarian Price",
-      "player_id": "4685512",
-      "team": "Seattle Seahawks",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 9.5,
-      "projection": 13.83,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "1/6",
-        "L20": "1/6",
-        "all": "1/6"
-      },
-      "recent": [
-        54.0,
-        8.0,
-        0.0,
-        7.0,
-        8.0,
-        6.0
-      ],
-      "ladder": [
-        {
-          "line": 7.5,
-          "p_over": 0.589,
-          "fair_over": -143,
-          "fair_under": 143,
-          "L10": "3/6"
-        },
-        {
-          "line": 8.0,
-          "p_over": 0.525,
-          "fair_over": -111,
-          "fair_under": 111,
-          "L10": "1/6"
-        },
-        {
-          "line": 8.5,
-          "p_over": 0.488,
-          "fair_over": 105,
-          "fair_under": -105,
-          "L10": "1/6"
-        },
-        {
-          "line": 9.0,
-          "p_over": 0.482,
-          "fair_over": 107,
-          "fair_under": -107,
-          "L10": "1/6"
-        },
-        {
-          "line": 9.5,
-          "p_over": 0.474,
-          "fair_over": 111,
-          "fair_under": -111,
-          "L10": "1/6"
-        },
-        {
-          "line": 10.0,
-          "p_over": 0.468,
-          "fair_over": 114,
-          "fair_under": -114,
-          "L10": "1/6"
-        },
-        {
-          "line": 10.5,
-          "p_over": 0.46,
-          "fair_over": 117,
-          "fair_under": -117,
-          "L10": "1/6"
-        },
-        {
-          "line": 11.0,
-          "p_over": 0.454,
-          "fair_over": 120,
-          "fair_under": -120,
-          "L10": "1/6"
-        },
-        {
-          "line": 11.5,
-          "p_over": 0.446,
-          "fair_over": 124,
-          "fair_under": -124,
-          "L10": "1/6"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "thin sample (6 games)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jadarian Price Over 9.5 rec_yds",
-            "side": "over",
-            "line": 9.5,
-            "odds": -113.0,
-            "model_raw": 0.4738,
-            "model_prob": 0.488,
-            "market_prob": 0.5021,
-            "fair_odds": 105,
-            "edge": -0.0142,
-            "edge_at_price": -0.0426,
-            "ev": -0.0802,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 9.5: 47.4% before shrink, this book's no-vig 50.2%.",
-              "Projection 13.83 (Normal(sd 18.2)).",
-              "Hit rate over L5 1/5, L10 1/6, L20 1/6, all 1/6."
-            ],
-            "flags": [
-              "thin sample (6 games)"
-            ],
-            "caution": [
-              "thin data: thin sample (6 games)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +109 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jadarian Price Under 9.5 rec_yds",
-            "side": "under",
-            "line": 9.5,
-            "odds": -111.0,
-            "model_raw": 0.5262,
-            "model_prob": 0.512,
-            "market_prob": 0.4979,
-            "fair_odds": -105,
-            "edge": 0.0142,
-            "edge_at_price": -0.014,
-            "ev": -0.0266,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 9.5: 52.6% before shrink, this book's no-vig 49.8%.",
-              "Projection 13.83 (Normal(sd 18.2)).",
-              "Hit rate over L5 1/5, L10 1/6, L20 1/6, all 1/6."
-            ],
-            "flags": [
-              "thin sample (6 games)"
-            ],
-            "caution": [
-              "thin data: thin sample (6 games)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -101 or better.",
+            "next_step": "Monitor only; if anything, wait for -161 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -3056,18 +2897,18 @@
             "selection": "Jadarian Price Over 42.5 rush_yds",
             "side": "over",
             "line": 42.5,
-            "odds": -112.0,
+            "odds": -113.0,
             "model_raw": 0.2813,
-            "model_prob": 0.3906,
-            "market_prob": 0.5,
-            "fair_odds": 156,
-            "edge": -0.1094,
-            "edge_at_price": -0.1377,
-            "ev": -0.2606,
+            "model_prob": 0.3917,
+            "market_prob": 0.5021,
+            "fair_odds": 155,
+            "edge": -0.1104,
+            "edge_at_price": -0.1388,
+            "ev": -0.2617,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 42.5: 28.1% before shrink, this book's no-vig 50.0%.",
+              "Model over 42.5: 28.1% before shrink, this book's no-vig 50.2%.",
               "Projection 28.67 (Normal(sd 18.8)).",
               "Hit rate over L5 1/5, L10 2/6, L20 2/6, all 2/6."
             ],
@@ -3080,7 +2921,7 @@
               "model far from market (28% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +161 or better.",
+            "next_step": "Pass. Only interesting at +160 or better.",
             "proven": false
           }
         },
@@ -3090,18 +2931,18 @@
             "selection": "Jadarian Price Under 42.5 rush_yds",
             "side": "under",
             "line": 42.5,
-            "odds": -112.0,
+            "odds": -111.0,
             "model_raw": 0.7187,
-            "model_prob": 0.6094,
-            "market_prob": 0.5,
-            "fair_odds": -156,
-            "edge": 0.1094,
-            "edge_at_price": 0.081,
-            "ev": 0.1534,
+            "model_prob": 0.6083,
+            "market_prob": 0.4979,
+            "fair_odds": -155,
+            "edge": 0.1104,
+            "edge_at_price": 0.0822,
+            "ev": 0.1563,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 42.5: 71.9% before shrink, this book's no-vig 50.0%.",
+              "Model under 42.5: 71.9% before shrink, this book's no-vig 49.8%.",
               "Projection 28.67 (Normal(sd 18.8)).",
               "Hit rate over L5 1/5, L10 2/6, L20 2/6, all 2/6."
             ],
@@ -3117,6 +2958,165 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for -148 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jadarian Price",
+      "player_id": "4685512",
+      "team": "Seattle Seahawks",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 11.5,
+      "projection": 13.83,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/6",
+        "L20": "1/6",
+        "all": "1/6"
+      },
+      "recent": [
+        54.0,
+        8.0,
+        0.0,
+        7.0,
+        8.0,
+        6.0
+      ],
+      "ladder": [
+        {
+          "line": 9.5,
+          "p_over": 0.474,
+          "fair_over": 111,
+          "fair_under": -111,
+          "L10": "1/6"
+        },
+        {
+          "line": 10.0,
+          "p_over": 0.468,
+          "fair_over": 114,
+          "fair_under": -114,
+          "L10": "1/6"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.46,
+          "fair_over": 117,
+          "fair_under": -117,
+          "L10": "1/6"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.454,
+          "fair_over": 120,
+          "fair_under": -120,
+          "L10": "1/6"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.446,
+          "fair_over": 124,
+          "fair_under": -124,
+          "L10": "1/6"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.439,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "1/6"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.432,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "1/6"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.425,
+          "fair_over": 135,
+          "fair_under": -135,
+          "L10": "1/6"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.417,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "1/6"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (6 games)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jadarian Price Over 11.5 rec_yds",
+            "side": "over",
+            "line": 11.5,
+            "odds": -109.0,
+            "model_raw": 0.4457,
+            "model_prob": 0.4697,
+            "market_prob": 0.4937,
+            "fair_odds": 113,
+            "edge": -0.024,
+            "edge_at_price": -0.0518,
+            "ev": -0.0994,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 11.5: 44.6% before shrink, this book's no-vig 49.4%.",
+              "Projection 13.83 (Normal(sd 18.2)).",
+              "Hit rate over L5 1/5, L10 1/6, L20 1/6, all 1/6."
+            ],
+            "flags": [
+              "thin sample (6 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (6 games)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +117 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jadarian Price Under 11.5 rec_yds",
+            "side": "under",
+            "line": 11.5,
+            "odds": -115.0,
+            "model_raw": 0.5543,
+            "model_prob": 0.5303,
+            "market_prob": 0.5063,
+            "fair_odds": -113,
+            "edge": 0.024,
+            "edge_at_price": -0.0046,
+            "ev": -0.0086,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 11.5: 55.4% before shrink, this book's no-vig 50.6%.",
+              "Projection 13.83 (Normal(sd 18.2)).",
+              "Hit rate over L5 1/5, L10 1/6, L20 1/6, all 1/6."
+            ],
+            "flags": [
+              "thin sample (6 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (6 games)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -108 or better.",
             "proven": false
           }
         }

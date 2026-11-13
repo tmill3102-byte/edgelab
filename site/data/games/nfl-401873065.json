@@ -153,6 +153,12 @@
   "injuries": {
     "home": [
       {
+        "name": "Lamar Jackson",
+        "status": "Injured Reserve",
+        "pos": "QB",
+        "key": true
+      },
+      {
         "name": "Jaylinn Hawkins",
         "status": "Questionable",
         "pos": "S",
@@ -169,12 +175,6 @@
         "status": "Questionable",
         "pos": "G",
         "key": false
-      },
-      {
-        "name": "Lamar Jackson",
-        "status": "Injured Reserve",
-        "pos": "QB",
-        "key": true
       },
       {
         "name": "Adisa Isaac",
@@ -1676,6 +1676,169 @@
       "player": "Derrick Henry",
       "player_id": "3043078",
       "team": "Baltimore Ravens",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 78.5,
+      "projection": 83.77,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "10/20",
+        "all": "11/24"
+      },
+      "recent": [
+        57.0,
+        53.0,
+        45.0,
+        58.0,
+        102.0,
+        73.0,
+        89.0,
+        68.0,
+        144.0,
+        126.0
+      ],
+      "ladder": [
+        {
+          "line": 70.5,
+          "p_over": 0.606,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "5/10"
+        },
+        {
+          "line": 72.5,
+          "p_over": 0.591,
+          "fair_over": -144,
+          "fair_under": 144,
+          "L10": "5/10"
+        },
+        {
+          "line": 74.5,
+          "p_over": 0.546,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "4/10"
+        },
+        {
+          "line": 76.5,
+          "p_over": 0.53,
+          "fair_over": -113,
+          "fair_under": 113,
+          "L10": "4/10"
+        },
+        {
+          "line": 78.5,
+          "p_over": 0.514,
+          "fair_over": -106,
+          "fair_under": 106,
+          "L10": "4/10"
+        },
+        {
+          "line": 80.5,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "4/10"
+        },
+        {
+          "line": 82.5,
+          "p_over": 0.481,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "4/10"
+        },
+        {
+          "line": 84.5,
+          "p_over": 0.465,
+          "fair_over": 115,
+          "fair_under": -115,
+          "L10": "4/10"
+        },
+        {
+          "line": 86.5,
+          "p_over": 0.448,
+          "fair_over": 123,
+          "fair_under": -123,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Derrick Henry Over 78.5 rush_yds",
+            "side": "over",
+            "line": 78.5,
+            "odds": -110.0,
+            "model_raw": 0.514,
+            "model_prob": 0.5049,
+            "market_prob": 0.4958,
+            "fair_odds": -102,
+            "edge": 0.0091,
+            "edge_at_price": -0.0189,
+            "ev": -0.0361,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 78.5: 51.4% before shrink, this book's no-vig 49.6%.",
+              "Projection 83.77 (Normal(sd 31.5)).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 11/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Derrick Henry Under 78.5 rush_yds",
+            "side": "under",
+            "line": 78.5,
+            "odds": -114.0,
+            "model_raw": 0.486,
+            "model_prob": 0.4951,
+            "market_prob": 0.5042,
+            "fair_odds": 102,
+            "edge": -0.0091,
+            "edge_at_price": -0.0376,
+            "ev": -0.0706,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 78.5: 48.6% before shrink, this book's no-vig 50.4%.",
+              "Projection 83.77 (Normal(sd 31.5)).",
+              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 11/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Derrick Henry",
+      "player_id": "3043078",
+      "team": "Baltimore Ravens",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 5.5,
@@ -1830,169 +1993,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +124 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Derrick Henry",
-      "player_id": "3043078",
-      "team": "Baltimore Ravens",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 76.5,
-      "projection": 83.77,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "4/10",
-        "L20": "10/20",
-        "all": "11/24"
-      },
-      "recent": [
-        57.0,
-        53.0,
-        45.0,
-        58.0,
-        102.0,
-        73.0,
-        89.0,
-        68.0,
-        144.0,
-        126.0
-      ],
-      "ladder": [
-        {
-          "line": 68.5,
-          "p_over": 0.621,
-          "fair_over": -164,
-          "fair_under": 164,
-          "L10": "5/10"
-        },
-        {
-          "line": 70.5,
-          "p_over": 0.606,
-          "fair_over": -154,
-          "fair_under": 154,
-          "L10": "5/10"
-        },
-        {
-          "line": 72.5,
-          "p_over": 0.591,
-          "fair_over": -144,
-          "fair_under": 144,
-          "L10": "5/10"
-        },
-        {
-          "line": 74.5,
-          "p_over": 0.546,
-          "fair_over": -120,
-          "fair_under": 120,
-          "L10": "4/10"
-        },
-        {
-          "line": 76.5,
-          "p_over": 0.53,
-          "fair_over": -113,
-          "fair_under": 113,
-          "L10": "4/10"
-        },
-        {
-          "line": 78.5,
-          "p_over": 0.514,
-          "fair_over": -106,
-          "fair_under": 106,
-          "L10": "4/10"
-        },
-        {
-          "line": 80.5,
-          "p_over": 0.498,
-          "fair_over": 101,
-          "fair_under": -101,
-          "L10": "4/10"
-        },
-        {
-          "line": 82.5,
-          "p_over": 0.481,
-          "fair_over": 108,
-          "fair_under": -108,
-          "L10": "4/10"
-        },
-        {
-          "line": 84.5,
-          "p_over": 0.465,
-          "fair_over": 115,
-          "fair_under": -115,
-          "L10": "4/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 9 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Derrick Henry Over 76.5 rush_yds",
-            "side": "over",
-            "line": 76.5,
-            "odds": -113.0,
-            "model_raw": 0.5302,
-            "model_prob": 0.5162,
-            "market_prob": 0.5021,
-            "fair_odds": -107,
-            "edge": 0.014,
-            "edge_at_price": -0.0144,
-            "ev": -0.0271,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 76.5: 53.0% before shrink, this book's no-vig 50.2%.",
-              "Projection 83.77 (Normal(sd 31.5)).",
-              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 11/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -102 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Derrick Henry Under 76.5 rush_yds",
-            "side": "under",
-            "line": 76.5,
-            "odds": -111.0,
-            "model_raw": 0.4698,
-            "model_prob": 0.4838,
-            "market_prob": 0.4979,
-            "fair_odds": 107,
-            "edge": -0.014,
-            "edge_at_price": -0.0422,
-            "ev": -0.0803,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 76.5: 47.0% before shrink, this book's no-vig 49.8%.",
-              "Projection 83.77 (Normal(sd 31.5)).",
-              "Hit rate over L5 1/5, L10 4/10, L20 10/20, all 11/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +111 or better.",
             "proven": false
           }
         }
@@ -2285,7 +2285,7 @@
       "team": "Baltimore Ravens",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 214.5,
+      "line": 215.5,
       "projection": 222.89,
       "hit_rates": {
         "L5": "3/5",
@@ -2307,66 +2307,66 @@
       ],
       "ladder": [
         {
-          "line": 206.5,
-          "p_over": 0.622,
-          "fair_over": -164,
-          "fair_under": 164,
+          "line": 207.5,
+          "p_over": 0.618,
+          "fair_over": -162,
+          "fair_under": 162,
           "L10": "7/10"
         },
         {
-          "line": 208.5,
-          "p_over": 0.614,
-          "fair_over": -159,
-          "fair_under": 159,
+          "line": 209.5,
+          "p_over": 0.61,
+          "fair_over": -157,
+          "fair_under": 157,
           "L10": "7/10"
         },
         {
-          "line": 210.5,
-          "p_over": 0.607,
-          "fair_over": -154,
-          "fair_under": 154,
+          "line": 211.5,
+          "p_over": 0.603,
+          "fair_over": -152,
+          "fair_under": 152,
           "L10": "7/10"
         },
         {
-          "line": 212.5,
-          "p_over": 0.57,
-          "fair_over": -132,
-          "fair_under": 132,
+          "line": 213.5,
+          "p_over": 0.566,
+          "fair_over": -130,
+          "fair_under": 130,
           "L10": "6/10"
         },
         {
-          "line": 214.5,
-          "p_over": 0.562,
-          "fair_over": -128,
-          "fair_under": 128,
+          "line": 215.5,
+          "p_over": 0.558,
+          "fair_over": -126,
+          "fair_under": 126,
           "L10": "6/10"
         },
         {
-          "line": 216.5,
-          "p_over": 0.554,
-          "fair_over": -124,
-          "fair_under": 124,
+          "line": 217.5,
+          "p_over": 0.55,
+          "fair_over": -122,
+          "fair_under": 122,
           "L10": "6/10"
         },
         {
-          "line": 218.5,
-          "p_over": 0.517,
-          "fair_over": -107,
-          "fair_under": 107,
+          "line": 219.5,
+          "p_over": 0.513,
+          "fair_over": -105,
+          "fair_under": 105,
           "L10": "5/10"
         },
         {
-          "line": 220.5,
-          "p_over": 0.509,
-          "fair_over": -104,
-          "fair_under": 104,
+          "line": 221.5,
+          "p_over": 0.505,
+          "fair_over": -102,
+          "fair_under": 102,
           "L10": "5/10"
         },
         {
-          "line": 222.5,
-          "p_over": 0.502,
-          "fair_over": -101,
-          "fair_under": 101,
+          "line": 223.5,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
           "L10": "5/10"
         }
       ],
@@ -2379,21 +2379,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jacoby Brissett Over 214.5 pass_yds",
+            "selection": "Jacoby Brissett Over 215.5 pass_yds",
             "side": "over",
-            "line": 214.5,
+            "line": 215.5,
             "odds": -111.0,
-            "model_raw": 0.5619,
-            "model_prob": 0.5299,
+            "model_raw": 0.558,
+            "model_prob": 0.5279,
             "market_prob": 0.4979,
-            "fair_odds": -113,
-            "edge": 0.032,
-            "edge_at_price": 0.0038,
-            "ev": 0.0073,
+            "fair_odds": -112,
+            "edge": 0.0301,
+            "edge_at_price": 0.0019,
+            "ev": 0.0036,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 214.5: 56.2% before shrink, this book's no-vig 49.8%.",
+              "Model over 215.5: 55.8% before shrink, this book's no-vig 49.8%.",
               "Projection 222.89 (Normal(sd 66.3)).",
               "Hit rate over L5 3/5, L10 6/10, L20 15/20, all 15/22."
             ],
@@ -2404,28 +2404,28 @@
               "thin data: current season only 8 games; added 14 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -107 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jacoby Brissett Under 214.5 pass_yds",
+            "selection": "Jacoby Brissett Under 215.5 pass_yds",
             "side": "under",
-            "line": 214.5,
+            "line": 215.5,
             "odds": -113.0,
-            "model_raw": 0.4381,
-            "model_prob": 0.4701,
+            "model_raw": 0.442,
+            "model_prob": 0.4721,
             "market_prob": 0.5021,
-            "fair_odds": 113,
-            "edge": -0.032,
-            "edge_at_price": -0.0604,
-            "ev": -0.1139,
+            "fair_odds": 112,
+            "edge": -0.0301,
+            "edge_at_price": -0.0585,
+            "ev": -0.1102,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 214.5: 43.8% before shrink, this book's no-vig 50.2%.",
+              "Model under 215.5: 44.2% before shrink, this book's no-vig 50.2%.",
               "Projection 222.89 (Normal(sd 66.3)).",
               "Hit rate over L5 3/5, L10 6/10, L20 15/20, all 15/22."
             ],
@@ -2436,170 +2436,7 @@
               "thin data: current season only 8 games; added 14 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +117 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Justice Hill",
-      "player_id": "4038441",
-      "team": "Baltimore Ravens",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 12.5,
-      "projection": 12.55,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "3/10",
-        "L20": "8/19",
-        "all": "8/19"
-      },
-      "recent": [
-        7.0,
-        20.0,
-        26.0,
-        9.0,
-        5.0,
-        22.0,
-        0.0,
-        12.0,
-        10.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 10.5,
-          "p_over": 0.533,
-          "fair_over": -114,
-          "fair_under": 114,
-          "L10": "4/10"
-        },
-        {
-          "line": 11.0,
-          "p_over": 0.52,
-          "fair_over": -108,
-          "fair_under": 108,
-          "L10": "4/10"
-        },
-        {
-          "line": 11.5,
-          "p_over": 0.503,
-          "fair_over": -101,
-          "fair_under": 101,
-          "L10": "4/10"
-        },
-        {
-          "line": 12.0,
-          "p_over": 0.47,
-          "fair_over": 113,
-          "fair_under": -113,
-          "L10": "3/10"
-        },
-        {
-          "line": 12.5,
-          "p_over": 0.443,
-          "fair_over": 126,
-          "fair_under": -126,
-          "L10": "3/10"
-        },
-        {
-          "line": 13.0,
-          "p_over": 0.427,
-          "fair_over": 134,
-          "fair_under": -134,
-          "L10": "3/10"
-        },
-        {
-          "line": 13.5,
-          "p_over": 0.413,
-          "fair_over": 142,
-          "fair_under": -142,
-          "L10": "3/10"
-        },
-        {
-          "line": 14.0,
-          "p_over": 0.396,
-          "fair_over": 153,
-          "fair_under": -153,
-          "L10": "3/10"
-        },
-        {
-          "line": 14.5,
-          "p_over": 0.383,
-          "fair_over": 161,
-          "fair_under": -161,
-          "L10": "3/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 9 games; added 10 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Justice Hill Over 12.5 rec_yds",
-            "side": "over",
-            "line": 12.5,
-            "odds": -107.0,
-            "model_raw": 0.4433,
-            "model_prob": 0.4664,
-            "market_prob": 0.4895,
-            "fair_odds": 114,
-            "edge": -0.0231,
-            "edge_at_price": -0.0505,
-            "ev": -0.0978,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 12.5: 44.3% before shrink, this book's no-vig 48.9%.",
-              "Projection 12.55 (Normal(sd 8.5)).",
-              "Hit rate over L5 2/5, L10 3/10, L20 8/19, all 8/19."
-            ],
-            "flags": [
-              "current season only 9 games; added 10 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 10 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +119 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Justice Hill Under 12.5 rec_yds",
-            "side": "under",
-            "line": 12.5,
-            "odds": -117.0,
-            "model_raw": 0.5567,
-            "model_prob": 0.5336,
-            "market_prob": 0.5105,
-            "fair_odds": -114,
-            "edge": 0.0231,
-            "edge_at_price": -0.0056,
-            "ev": -0.0103,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 12.5: 55.7% before shrink, this book's no-vig 51.1%.",
-              "Projection 12.55 (Normal(sd 8.5)).",
-              "Hit rate over L5 2/5, L10 3/10, L20 8/19, all 8/19."
-            ],
-            "flags": [
-              "current season only 9 games; added 10 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 10 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -110 or better.",
+            "next_step": "Pass. Only interesting at +116 or better.",
             "proven": false
           }
         }
@@ -2772,6 +2609,169 @@
       "player": "Justice Hill",
       "player_id": "4038441",
       "team": "Baltimore Ravens",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 12.5,
+      "projection": 12.55,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "8/19",
+        "all": "8/19"
+      },
+      "recent": [
+        7.0,
+        20.0,
+        26.0,
+        9.0,
+        5.0,
+        22.0,
+        0.0,
+        12.0,
+        10.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 10.5,
+          "p_over": 0.533,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "4/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.52,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "4/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.503,
+          "fair_over": -101,
+          "fair_under": 101,
+          "L10": "4/10"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.47,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "3/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.443,
+          "fair_over": 126,
+          "fair_under": -126,
+          "L10": "3/10"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.427,
+          "fair_over": 134,
+          "fair_under": -134,
+          "L10": "3/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.413,
+          "fair_over": 142,
+          "fair_under": -142,
+          "L10": "3/10"
+        },
+        {
+          "line": 14.0,
+          "p_over": 0.396,
+          "fair_over": 153,
+          "fair_under": -153,
+          "L10": "3/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.383,
+          "fair_over": 161,
+          "fair_under": -161,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 10 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Justice Hill Over 12.5 rec_yds",
+            "side": "over",
+            "line": 12.5,
+            "odds": -111.0,
+            "model_raw": 0.4433,
+            "model_prob": 0.4706,
+            "market_prob": 0.4979,
+            "fair_odds": 112,
+            "edge": -0.0273,
+            "edge_at_price": -0.0555,
+            "ev": -0.1054,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 44.3% before shrink, this book's no-vig 49.8%.",
+              "Projection 12.55 (Normal(sd 8.5)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/19, all 8/19."
+            ],
+            "flags": [
+              "current season only 9 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +117 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Justice Hill Under 12.5 rec_yds",
+            "side": "under",
+            "line": 12.5,
+            "odds": -113.0,
+            "model_raw": 0.5567,
+            "model_prob": 0.5294,
+            "market_prob": 0.5021,
+            "fair_odds": -112,
+            "edge": 0.0273,
+            "edge_at_price": -0.0011,
+            "ev": -0.0021,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 55.7% before shrink, this book's no-vig 50.2%.",
+              "Projection 12.55 (Normal(sd 8.5)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/19, all 8/19."
+            ],
+            "flags": [
+              "current season only 9 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -108 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Justice Hill",
+      "player_id": "4038441",
+      "team": "Baltimore Ravens",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
@@ -2886,13 +2886,13 @@
       "team": "Los Angeles Chargers",
       "stat": "rush_yds",
       "stat_label": "Rush yds",
-      "line": 20.5,
+      "line": 21.5,
       "projection": 28.9,
       "hit_rates": {
         "L5": "3/5",
         "L10": "6/10",
-        "L20": "12/20",
-        "all": "14/23"
+        "L20": "11/20",
+        "all": "13/23"
       },
       "recent": [
         7.0,
@@ -2907,13 +2907,6 @@
         37.0
       ],
       "ladder": [
-        {
-          "line": 16.5,
-          "p_over": 0.726,
-          "fair_over": -265,
-          "fair_under": 265,
-          "L10": "7/10"
-        },
         {
           "line": 17.5,
           "p_over": 0.685,
@@ -2969,6 +2962,13 @@
           "fair_over": -146,
           "fair_under": 146,
           "L10": "6/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.579,
+          "fair_over": -137,
+          "fair_under": 137,
+          "L10": "6/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2980,70 +2980,70 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Justin Herbert Over 20.5 rush_yds",
+            "selection": "Justin Herbert Over 21.5 rush_yds",
             "side": "over",
-            "line": 20.5,
-            "odds": -115.0,
-            "model_raw": 0.6474,
-            "model_prob": 0.5769,
-            "market_prob": 0.5063,
-            "fair_odds": -136,
-            "edge": 0.0705,
-            "edge_at_price": 0.042,
-            "ev": 0.0785,
+            "line": 21.5,
+            "odds": -109.0,
+            "model_raw": 0.6342,
+            "model_prob": 0.5639,
+            "market_prob": 0.4937,
+            "fair_odds": -129,
+            "edge": 0.0703,
+            "edge_at_price": 0.0424,
+            "ev": 0.0813,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 20.5: 64.7% before shrink, this book's no-vig 50.6%.",
+              "Model over 21.5: 63.4% before shrink, this book's no-vig 49.4%.",
               "Projection 28.9 (Normal(sd 17.8)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 12/20, all 14/23."
+              "Hit rate over L5 3/5, L10 6/10, L20 11/20, all 13/23."
             ],
             "flags": [
               "current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
-              "model far from market (65% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (65% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -130 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -124 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Justin Herbert Under 20.5 rush_yds",
+            "selection": "Justin Herbert Under 21.5 rush_yds",
             "side": "under",
-            "line": 20.5,
-            "odds": -109.0,
-            "model_raw": 0.3526,
-            "model_prob": 0.4231,
-            "market_prob": 0.4937,
-            "fair_odds": 136,
-            "edge": -0.0705,
-            "edge_at_price": -0.0984,
-            "ev": -0.1887,
+            "line": 21.5,
+            "odds": -115.0,
+            "model_raw": 0.3658,
+            "model_prob": 0.4361,
+            "market_prob": 0.5063,
+            "fair_odds": 129,
+            "edge": -0.0703,
+            "edge_at_price": -0.0988,
+            "ev": -0.1848,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 20.5: 35.3% before shrink, this book's no-vig 49.4%.",
+              "Model under 21.5: 36.6% before shrink, this book's no-vig 50.6%.",
               "Projection 28.9 (Normal(sd 17.8)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 12/20, all 14/23."
+              "Hit rate over L5 3/5, L10 6/10, L20 11/20, all 13/23."
             ],
             "flags": [
               "current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
-              "model far from market (35% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (35% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +141 or better.",
+            "next_step": "Pass. Only interesting at +134 or better.",
             "proven": false
           }
         }
@@ -3055,7 +3055,7 @@
       "team": "Los Angeles Chargers",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 205.5,
+      "line": 206.5,
       "projection": 204.67,
       "hit_rates": {
         "L5": "1/5",
@@ -3077,66 +3077,66 @@
       ],
       "ladder": [
         {
-          "line": 197.5,
-          "p_over": 0.55,
-          "fair_over": -122,
-          "fair_under": 122,
+          "line": 198.5,
+          "p_over": 0.543,
+          "fair_over": -119,
+          "fair_under": 119,
           "L10": "5/10"
         },
         {
-          "line": 199.5,
-          "p_over": 0.536,
-          "fair_over": -116,
-          "fair_under": 116,
+          "line": 200.5,
+          "p_over": 0.529,
+          "fair_over": -113,
+          "fair_under": 113,
           "L10": "5/10"
         },
         {
-          "line": 201.5,
-          "p_over": 0.522,
-          "fair_over": -109,
-          "fair_under": 109,
+          "line": 202.5,
+          "p_over": 0.515,
+          "fair_over": -106,
+          "fair_under": 106,
           "L10": "5/10"
         },
         {
-          "line": 203.5,
-          "p_over": 0.508,
-          "fair_over": -103,
-          "fair_under": 103,
-          "L10": "5/10"
-        },
-        {
-          "line": 205.5,
-          "p_over": 0.465,
-          "fair_over": 115,
-          "fair_under": -115,
+          "line": 204.5,
+          "p_over": 0.472,
+          "fair_over": 112,
+          "fair_under": -112,
           "L10": "4/10"
         },
         {
-          "line": 207.5,
-          "p_over": 0.451,
-          "fair_over": 122,
-          "fair_under": -122,
+          "line": 206.5,
+          "p_over": 0.458,
+          "fair_over": 118,
+          "fair_under": -118,
           "L10": "4/10"
         },
         {
-          "line": 209.5,
-          "p_over": 0.408,
-          "fair_over": 145,
-          "fair_under": -145,
+          "line": 208.5,
+          "p_over": 0.444,
+          "fair_over": 125,
+          "fair_under": -125,
+          "L10": "4/10"
+        },
+        {
+          "line": 210.5,
+          "p_over": 0.401,
+          "fair_over": 150,
+          "fair_under": -150,
           "L10": "3/10"
         },
         {
-          "line": 211.5,
-          "p_over": 0.394,
-          "fair_over": 154,
-          "fair_under": -154,
+          "line": 212.5,
+          "p_over": 0.387,
+          "fair_over": 159,
+          "fair_under": -159,
           "L10": "3/10"
         },
         {
-          "line": 213.5,
-          "p_over": 0.38,
-          "fair_over": 163,
-          "fair_under": -163,
+          "line": 214.5,
+          "p_over": 0.373,
+          "fair_over": 168,
+          "fair_under": -168,
           "L10": "3/10"
         }
       ],
@@ -3149,21 +3149,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Justin Herbert Over 205.5 pass_yds",
+            "selection": "Justin Herbert Over 206.5 pass_yds",
             "side": "over",
-            "line": 205.5,
-            "odds": -112.0,
-            "model_raw": 0.465,
-            "model_prob": 0.4825,
-            "market_prob": 0.5,
-            "fair_odds": 107,
-            "edge": -0.0175,
-            "edge_at_price": -0.0458,
-            "ev": -0.0867,
+            "line": 206.5,
+            "odds": -113.0,
+            "model_raw": 0.4579,
+            "model_prob": 0.48,
+            "market_prob": 0.5021,
+            "fair_odds": 108,
+            "edge": -0.0221,
+            "edge_at_price": -0.0505,
+            "ev": -0.0952,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 205.5: 46.5% before shrink, this book's no-vig 50.0%.",
+              "Model over 206.5: 45.8% before shrink, this book's no-vig 50.2%.",
               "Projection 204.67 (Normal(sd 36.7)).",
               "Hit rate over L5 1/5, L10 4/10, L20 11/20, all 12/23."
             ],
@@ -3174,28 +3174,28 @@
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +111 or better.",
+            "next_step": "Pass. Only interesting at +112 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Justin Herbert Under 205.5 pass_yds",
+            "selection": "Justin Herbert Under 206.5 pass_yds",
             "side": "under",
-            "line": 205.5,
-            "odds": -112.0,
-            "model_raw": 0.535,
-            "model_prob": 0.5175,
-            "market_prob": 0.5,
-            "fair_odds": -107,
-            "edge": 0.0175,
-            "edge_at_price": -0.0108,
-            "ev": -0.0204,
+            "line": 206.5,
+            "odds": -111.0,
+            "model_raw": 0.5421,
+            "model_prob": 0.52,
+            "market_prob": 0.4979,
+            "fair_odds": -108,
+            "edge": 0.0221,
+            "edge_at_price": -0.0061,
+            "ev": -0.0115,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 205.5: 53.5% before shrink, this book's no-vig 50.0%.",
+              "Model under 206.5: 54.2% before shrink, this book's no-vig 49.8%.",
               "Projection 204.67 (Normal(sd 36.7)).",
               "Hit rate over L5 1/5, L10 4/10, L20 11/20, all 12/23."
             ],
@@ -3206,7 +3206,7 @@
               "thin data: current season only 8 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -103 or better.",
+            "next_step": "Pass. Only interesting at -104 or better.",
             "proven": false
           }
         }
