@@ -35,23 +35,23 @@
     "draftkings": {
       "ml_home": -170.0,
       "ml_away": 142.0,
-      "total": 52.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0,
       "spread_home": -3.5,
       "spread_home_odds": -108.0,
       "spread_away": 3.5,
-      "spread_away_odds": -112.0
+      "spread_away_odds": -112.0,
+      "total": 52.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": "Margin PITT +3.3 \u00b7 total 55.5",
+  "model_summary": "Margin PITT +3.3 \u00b7 total 55.6",
   "flags": [
     "injury report not available for this league"
   ],
   "notes": [
     "ESPN matchup predictor: PITT 62.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin PITT +3.3, total 55.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "v2 ratings: margin PITT +3.3, total 55.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -221,19 +221,19 @@
               "selection": "Over 52.5",
               "side": "over",
               "line": 52.5,
-              "odds": -105.0,
-              "model_raw": 0.5734,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
+              "odds": -112.0,
+              "model_raw": 0.5764,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 52.5: 57.3% vs market 48.9%.",
-                "Projected total 55.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 52.5.",
+                "Model over 52.5: 57.6% vs market 50.4%.",
+                "Projected total 55.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 52.5.",
                 "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -244,7 +244,7 @@
                 "line move: market moved against the over (53.5 -> 52.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +109 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -257,19 +257,19 @@
               "selection": "Under 52.5",
               "side": "under",
               "line": 52.5,
-              "odds": -115.0,
-              "model_raw": 0.4266,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
+              "odds": -108.0,
+              "model_raw": 0.4236,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.045,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 52.5: 42.7% vs market 51.1%.",
-                "Projected total 55.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 52.5.",
+                "Model under 52.5: 42.4% vs market 49.6%.",
+                "Projected total 55.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 52.5.",
                 "FSU L5 WLLLW (MOV 2.3), PITT L5 WLLLW (MOV 12.1)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -280,7 +280,7 @@
                 "line move: total already moved toward under (53.5 -> 52.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -100 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }

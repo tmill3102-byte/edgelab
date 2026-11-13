@@ -33,11 +33,11 @@
   },
   "lines": {
     "draftkings": {
-      "total": 234.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0,
-      "ml_home": 133.0,
-      "ml_away": -158.0,
+      "ml_home": 140.0,
+      "ml_away": -166.0,
+      "total": 235.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0,
       "spread_home": 3.5,
       "spread_home_odds": -110.0,
       "spread_away": -3.5,
@@ -45,11 +45,11 @@
     }
   },
   "badge": null,
-  "model_summary": "Margin NO -2.0 \u00b7 total 237.7",
+  "model_summary": "Margin NO -2.0 \u00b7 total 237.6",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: NO 41.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin NO -2.0, total 237.7; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "ESPN matchup predictor: NO 42.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin NO -2.0, total 237.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -127,27 +127,29 @@
               "selection": "NO ML",
               "side": "home",
               "line": null,
-              "odds": 133.0,
+              "odds": 140.0,
               "model_raw": 0.4352,
-              "model_prob": 0.4153,
-              "market_prob": 0.412,
-              "fair_odds": 141,
-              "edge": 0.0032,
-              "edge_at_price": -0.0139,
-              "ev": -0.0324,
+              "model_prob": 0.4052,
+              "market_prob": 0.4004,
+              "fair_odds": 147,
+              "edge": 0.0048,
+              "edge_at_price": -0.0115,
+              "ev": -0.0276,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NO win 43.5% vs market no-vig 41.2%.",
+                "Model NO win 43.5% vs market no-vig 40.0%.",
                 "v2 projected margin NO -2.0 (ratings NO -4.5, MEM -1.0, home edge 1.5); raw model 43.5%.",
                 "MEM L5 LLLWL (MOV 6.0), NO L5 WLLLL (MOV -7.3)",
-                "pace: projected total +2.9 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total +2.8 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
-              "caution": [],
-              "case_against": "Market makes NO 41%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +146 or better.",
+              "caution": [
+                "line move: price drifted against this side (+119 -> +140)"
+              ],
+              "case_against": "Market makes NO 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +152 or better.",
               "proven": true
             }
           }
@@ -160,27 +162,27 @@
               "selection": "MEM ML",
               "side": "away",
               "line": null,
-              "odds": -158.0,
+              "odds": -166.0,
               "model_raw": 0.5648,
-              "model_prob": 0.5847,
-              "market_prob": 0.588,
-              "fair_odds": -141,
-              "edge": -0.0032,
-              "edge_at_price": -0.0277,
-              "ev": -0.0452,
+              "model_prob": 0.5948,
+              "market_prob": 0.5996,
+              "fair_odds": -147,
+              "edge": -0.0048,
+              "edge_at_price": -0.0292,
+              "ev": -0.0469,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MEM win 56.5% vs market no-vig 58.8%.",
+                "Model MEM win 56.5% vs market no-vig 60.0%.",
                 "v2 projected margin NO -2.0 (ratings NO -4.5, MEM -1.0, home edge 1.5); raw model 56.5%.",
                 "MEM L5 LLLWL (MOV 6.0), NO L5 WLLLL (MOV -7.3)",
-                "pace: projected total +2.9 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total +2.8 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes MEM 59%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -134 or better.",
+              "case_against": "Market makes MEM 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -140 or better.",
               "proven": true
             }
           }
@@ -212,7 +214,7 @@
                 "Model NO +3.5 covers 54.7% vs market 50.0%.",
                 "Projected margin NO -2.0 vs line NO +3.5.",
                 "MEM L5 LLLWL (MOV 6.0), NO L5 WLLLL (MOV -7.3)",
-                "pace: projected total +2.9 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total +2.8 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
@@ -247,7 +249,7 @@
                 "Model MEM -3.5 covers 45.3% vs market 50.0%.",
                 "Projected margin NO -2.0 vs line NO +3.5.",
                 "MEM L5 LLLWL (MOV 6.0), NO L5 WLLLL (MOV -7.3)",
-                "pace: projected total +2.9 vs these teams' rating-only total (recent shot volume)",
+                "pace: projected total +2.8 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
@@ -268,29 +270,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 234.5",
+              "selection": "Over 235.5",
               "side": "over",
-              "line": 234.5,
-              "odds": -110.0,
-              "model_raw": 0.5665,
-              "model_prob": 0.5114,
-              "market_prob": 0.5,
+              "line": 235.5,
+              "odds": -112.0,
+              "model_raw": 0.5436,
+              "model_prob": 0.511,
+              "market_prob": 0.5043,
               "fair_odds": -105,
-              "edge": 0.0114,
-              "edge_at_price": -0.0124,
-              "ev": -0.0238,
+              "edge": 0.0067,
+              "edge_at_price": -0.0173,
+              "ev": -0.0327,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 234.5: 56.6% vs market 50.0%.",
-                "Projected total 237.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 235.5: 54.4% vs market 50.4%.",
+                "Projected total 237.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 234.5 -> 235.5.",
                 "MEM L5 LLLWL (MOV 6.0), NO L5 WLLLL (MOV -7.3)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward over (234.5 -> 235.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -101 or better.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": true
             }
           }
@@ -300,27 +304,29 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 234.5",
+              "selection": "Under 235.5",
               "side": "under",
-              "line": 234.5,
-              "odds": -110.0,
-              "model_raw": 0.4335,
-              "model_prob": 0.4886,
-              "market_prob": 0.5,
+              "line": 235.5,
+              "odds": -108.0,
+              "model_raw": 0.4564,
+              "model_prob": 0.489,
+              "market_prob": 0.4957,
               "fair_odds": 105,
-              "edge": -0.0114,
-              "edge_at_price": -0.0352,
-              "ev": -0.0672,
+              "edge": -0.0067,
+              "edge_at_price": -0.0302,
+              "ev": -0.0583,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 234.5: 43.4% vs market 50.0%.",
-                "Projected total 237.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 235.5: 45.6% vs market 49.6%.",
+                "Projected total 237.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 234.5 -> 235.5.",
                 "MEM L5 LLLWL (MOV 6.0), NO L5 WLLLL (MOV -7.3)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the under (234.5 -> 235.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +109 or better.",
               "proven": true
