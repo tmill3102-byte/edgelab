@@ -1,0 +1,328 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909301",
+  "name": "Utah Jazz at Houston Rockets",
+  "matchup": "UTAH @ HOU",
+  "start": "2026-11-14T01:30Z",
+  "start_local": "Fri Nov 13 8:30 PM ET",
+  "date_et": "2026-11-13",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "11/13 - 8:30 PM EST",
+  "home": {
+    "abbr": "HOU",
+    "name": "Houston Rockets",
+    "record": "9-3",
+    "id": "10"
+  },
+  "away": {
+    "abbr": "UTAH",
+    "name": "Utah Jazz",
+    "record": "1-11",
+    "id": "26"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35010447"
+  },
+  "lines": {
+    "draftkings": {
+      "total": 217.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "ml_home": -1580.0,
+      "ml_away": 900.0,
+      "spread_home": -17.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 17.5,
+      "spread_away_odds": -105.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin HOU +17.5 \u00b7 total 220.9",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: HOU 88.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin HOU +17.5, total 220.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Marcus Smart",
+        "status": "Suspension",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Clint Capela",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Steven Adams",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Trey Alexander",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Lauri Markkanen",
+        "status": "Out",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Jusuf Nurkic",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Jaren Jackson Jr.",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 WLLWW",
+    "away": "L5 LLLLL"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "HOU ML",
+              "side": "home",
+              "line": null,
+              "odds": -1580.0,
+              "model_raw": 0.9193,
+              "model_prob": 0.9062,
+              "market_prob": 0.9039,
+              "fair_odds": -966,
+              "edge": 0.0023,
+              "edge_at_price": -0.0343,
+              "ev": -0.0364,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU win 91.9% vs market no-vig 90.4%.",
+                "v2 projected margin HOU +17.5 (ratings HOU +6.7, UTAH -9.3, home edge 1.5); raw model 91.9%.",
+                "UTAH L5 LLLLL (MOV -11.5), HOU L5 WLLWW (MOV 8.9)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "UTAH key player(s) out: Lauri Markkanen (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes HOU 90%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -796 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 900.0,
+              "model_raw": 0.0807,
+              "model_prob": 0.0938,
+              "market_prob": 0.0961,
+              "fair_odds": 966,
+              "edge": -0.0023,
+              "edge_at_price": -0.0062,
+              "ev": -0.062,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model UTAH win 8.1% vs market no-vig 9.6%.",
+                "v2 projected margin HOU +17.5 (ratings HOU +6.7, UTAH -9.3, home edge 1.5); raw model 8.1%.",
+                "UTAH L5 LLLLL (MOV -11.5), HOU L5 WLLWW (MOV 8.9)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "UTAH key player(s) out: Lauri Markkanen (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury: Lauri Markkanen out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Market makes UTAH 10%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +987 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "HOU -17.5",
+              "side": "home",
+              "line": -17.5,
+              "odds": -115.0,
+              "model_raw": 0.5001,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU -17.5 covers 50.0% vs market 51.1%.",
+                "Projected margin HOU +17.5 vs line HOU -17.5.",
+                "UTAH L5 LLLLL (MOV -11.5), HOU L5 WLLWW (MOV 8.9)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "UTAH key player(s) out: Lauri Markkanen (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "UTAH +17.5",
+              "side": "away",
+              "line": 17.5,
+              "odds": -105.0,
+              "model_raw": 0.4999,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model UTAH +17.5 covers 50.0% vs market 48.9%.",
+                "Projected margin HOU +17.5 vs line HOU -17.5.",
+                "UTAH L5 LLLLL (MOV -11.5), HOU L5 WLLWW (MOV 8.9)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "UTAH key player(s) out: Lauri Markkanen (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury: Lauri Markkanen out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 217.5",
+              "side": "over",
+              "line": 217.5,
+              "odds": -110.0,
+              "model_raw": 0.5697,
+              "model_prob": 0.5119,
+              "market_prob": 0.5,
+              "fair_odds": -105,
+              "edge": 0.0119,
+              "edge_at_price": -0.0119,
+              "ev": -0.0227,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 217.5: 57.0% vs market 50.0%.",
+                "Projected total 220.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "UTAH L5 LLLLL (MOV -11.5), HOU L5 WLLWW (MOV 8.9)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -101 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 217.5",
+              "side": "under",
+              "line": 217.5,
+              "odds": -110.0,
+              "model_raw": 0.4303,
+              "model_prob": 0.4881,
+              "market_prob": 0.5,
+              "fair_odds": 105,
+              "edge": -0.0119,
+              "edge_at_price": -0.0357,
+              "ev": -0.0682,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 217.5: 43.0% vs market 50.0%.",
+                "Projected total 220.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "UTAH L5 LLLLL (MOV -11.5), HOU L5 WLLWW (MOV 8.9)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

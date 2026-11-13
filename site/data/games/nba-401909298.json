@@ -1,0 +1,321 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909298",
+  "name": "Cleveland Cavaliers at Miami Heat",
+  "matchup": "CLE @ MIA",
+  "start": "2026-11-14T01:00Z",
+  "start_local": "Fri Nov 13 8:00 PM ET",
+  "date_et": "2026-11-13",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "11/13 - 8:00 PM EST",
+  "home": {
+    "abbr": "MIA",
+    "name": "Miami Heat",
+    "record": "5-6",
+    "id": "14"
+  },
+  "away": {
+    "abbr": "CLE",
+    "name": "Cleveland Cavaliers",
+    "record": "6-6",
+    "id": "5"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35010444"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 105.0,
+      "ml_home": -124.0,
+      "total": 236.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -2.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 2.5,
+      "spread_away_odds": -115.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin MIA -3.8 \u00b7 total 238.0",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: MIA 35.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin MIA -3.8, total 238.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Klay Thompson",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Pelle Larsson",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Evan Mobley",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Sam Merrill",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LWLWW",
+    "away": "L5 LWLLW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "CLE ML",
+              "side": "away",
+              "line": null,
+              "odds": 105.0,
+              "model_raw": 0.6184,
+              "model_prob": 0.4897,
+              "market_prob": 0.4684,
+              "fair_odds": 104,
+              "edge": 0.0213,
+              "edge_at_price": 0.0019,
+              "ev": 0.0039,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CLE win 61.8% vs market no-vig 46.8%.",
+                "v2 projected margin MIA -3.8 (ratings MIA -3.0, CLE +2.3, home edge 1.5); raw model 61.8%.",
+                "CLE L5 LWLLW (MOV 2.1), MIA L5 LWLWW (MOV -4.3)",
+                "pace: projected total +1.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (62% vs 47%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes CLE 47%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +108 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "home",
+              "line": null,
+              "odds": -124.0,
+              "model_raw": 0.3816,
+              "model_prob": 0.5103,
+              "market_prob": 0.5316,
+              "fair_odds": -104,
+              "edge": -0.0213,
+              "edge_at_price": -0.0433,
+              "ev": -0.0782,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIA win 38.2% vs market no-vig 53.2%.",
+                "v2 projected margin MIA -3.8 (ratings MIA -3.0, CLE +2.3, home edge 1.5); raw model 38.2%.",
+                "CLE L5 LWLLW (MOV 2.1), MIA L5 LWLWW (MOV -4.3)",
+                "pace: projected total +1.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (38% vs 53%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Giannis Antetokounmpo (Day-To-Day)"
+              ],
+              "case_against": "Market makes MIA 53%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "MIA -2.5",
+              "side": "home",
+              "line": -2.5,
+              "odds": -105.0,
+              "model_raw": 0.3081,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIA -2.5 covers 30.8% vs market 48.9%.",
+                "Projected margin MIA -3.8 vs line MIA -2.5.",
+                "CLE L5 LWLLW (MOV 2.1), MIA L5 LWLWW (MOV -4.3)",
+                "pace: projected total +1.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (31% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Giannis Antetokounmpo (Day-To-Day)",
+                "line move: spread moved against this side (-1.5 -> -2.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CLE +2.5",
+              "side": "away",
+              "line": 2.5,
+              "odds": -115.0,
+              "model_raw": 0.6919,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CLE +2.5 covers 69.2% vs market 51.1%.",
+                "Projected margin MIA -3.8 vs line MIA -2.5.",
+                "CLE L5 LWLLW (MOV 2.1), MIA L5 LWLWW (MOV -4.3)",
+                "pace: projected total +1.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (69% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 236.5",
+              "side": "over",
+              "line": 236.5,
+              "odds": -110.0,
+              "model_raw": 0.5313,
+              "model_prob": 0.5053,
+              "market_prob": 0.5,
+              "fair_odds": -102,
+              "edge": 0.0053,
+              "edge_at_price": -0.0185,
+              "ev": -0.0353,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 236.5: 53.1% vs market 50.0%.",
+                "Projected total 238.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 237.5 -> 236.5.",
+                "CLE L5 LWLLW (MOV 2.1), MIA L5 LWLWW (MOV -4.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the over (237.5 -> 236.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 236.5",
+              "side": "under",
+              "line": 236.5,
+              "odds": -110.0,
+              "model_raw": 0.4687,
+              "model_prob": 0.4947,
+              "market_prob": 0.5,
+              "fair_odds": 102,
+              "edge": -0.0053,
+              "edge_at_price": -0.0291,
+              "ev": -0.0556,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 236.5: 46.9% vs market 50.0%.",
+                "Projected total 238.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 237.5 -> 236.5.",
+                "CLE L5 LWLLW (MOV 2.1), MIA L5 LWLWW (MOV -4.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward under (237.5 -> 236.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}
