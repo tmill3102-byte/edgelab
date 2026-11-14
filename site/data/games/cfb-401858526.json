@@ -23,7 +23,7 @@
     "id": "356"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,26 +33,34 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -395.0,
-      "ml_away": 310.0,
+      "ml_home": -440.0,
+      "ml_away": 340.0,
       "spread_home": -10.5,
-      "spread_home_odds": -108.0,
+      "spread_home_odds": -105.0,
       "spread_away": 10.5,
-      "spread_away_odds": -112.0,
-      "total": 47.5,
-      "over_odds": -118.0,
-      "under_odds": -102.0
+      "spread_away_odds": -115.0,
+      "total": 48.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin UCLA +14.8 \u00b7 total 49.6",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: UCLA 73.8% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin UCLA +14.8, total 49.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WWWWW",
+    "away": "L5 LWWWW"
+  },
   "markets": [
     {
       "market": "ML",
@@ -65,27 +73,29 @@
               "selection": "UCLA ML",
               "side": "home",
               "line": null,
-              "odds": -395.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -440.0,
+              "model_raw": 0.8296,
+              "model_prob": 0.7819,
+              "market_prob": 0.7819,
+              "fair_odds": -359,
+              "edge": 0.0,
+              "edge_at_price": -0.0329,
+              "ev": -0.0404,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model UCLA win 83.0% vs market no-vig 78.2%.",
+                "v2 projected margin UCLA +14.8 (ratings UCLA +3.5, ILL -7.9, home edge 3.33); raw model 83.0%.",
+                "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes UCLA 78%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -328 or better.",
+              "proven": false
             }
           }
         },
@@ -97,27 +107,29 @@
               "selection": "ILL ML",
               "side": "away",
               "line": null,
-              "odds": 310.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": 340.0,
+              "model_raw": 0.1704,
+              "model_prob": 0.2181,
+              "market_prob": 0.2181,
+              "fair_odds": 359,
+              "edge": -0.0,
+              "edge_at_price": -0.0092,
+              "ev": -0.0404,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model ILL win 17.0% vs market no-vig 21.8%.",
+                "v2 projected margin UCLA +14.8 (ratings UCLA +3.5, ILL -7.9, home edge 3.33); raw model 17.0%.",
+                "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes ILL 22%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +368 or better.",
+              "proven": false
             }
           }
         }
@@ -134,27 +146,29 @@
               "selection": "UCLA -10.5",
               "side": "home",
               "line": -10.5,
-              "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -105.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model UCLA -10.5 covers 60.8% vs market 48.9%.",
+                "Projected margin UCLA +14.8 vs line UCLA -10.5.",
+                "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         },
@@ -166,27 +180,31 @@
               "selection": "ILL +10.5",
               "side": "away",
               "line": 10.5,
-              "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -115.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model ILL +10.5 covers 39.2% vs market 51.1%.",
+                "Projected margin UCLA +14.8 vs line UCLA -10.5.",
+                "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (+12.5 -> +10.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         }
@@ -200,30 +218,34 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 47.5",
+              "selection": "Over 48.5",
               "side": "over",
-              "line": 47.5,
-              "odds": -118.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 48.5,
+              "odds": -110.0,
+              "model_raw": 0.5264,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 48.5: 52.6% vs market 50.0%.",
+                "Projected total 49.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 48.5.",
+                "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward over (47.5 -> 48.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         },
@@ -232,30 +254,34 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 47.5",
+              "selection": "Under 48.5",
               "side": "under",
-              "line": 47.5,
-              "odds": -102.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 48.5,
+              "odds": -110.0,
+              "model_raw": 0.4736,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 48.5: 47.4% vs market 50.0%.",
+                "Projected total 49.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 48.5.",
+                "ILL L5 LWWWW (MOV 5.4), UCLA L5 WWWWW (MOV 19.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the under (47.5 -> 48.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         }
