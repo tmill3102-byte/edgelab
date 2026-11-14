@@ -152,12 +152,6 @@
   "injuries": {
     "home": [
       {
-        "name": "Lian Bichsel",
-        "status": "Out",
-        "pos": "D",
-        "key": false
-      },
-      {
         "name": "Miro Heiskanen",
         "status": "Out",
         "pos": "D",
@@ -165,6 +159,12 @@
       },
       {
         "name": "Kyle Capobianco",
+        "status": "Injured Reserve",
+        "pos": "D",
+        "key": false
+      },
+      {
+        "name": "Lian Bichsel",
         "status": "Injured Reserve",
         "pos": "D",
         "key": false
@@ -1663,69 +1663,69 @@
       "player": "Jack Quinn",
       "player_id": "4697389",
       "team": "Buffalo Sabres",
-      "stat": "pts",
-      "stat_label": "Points",
+      "stat": "ast",
+      "stat_label": "Assists",
       "line": 0.5,
-      "projection": 1.0,
+      "projection": 0.57,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "7/10",
-        "L20": "12/19",
-        "all": "12/19"
+        "L10": "5/10",
+        "L20": "7/19",
+        "all": "7/19"
       },
       "recent": [
         2.0,
         1.0,
         0.0,
-        2.0,
-        0.0,
-        2.0,
         1.0,
         0.0,
         1.0,
+        0.0,
+        0.0,
+        0.0,
         1.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
+          "p_over": 0.95,
+          "fair_over": -1900,
+          "fair_under": 1900,
+          "L10": "5/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.644,
-          "fair_over": -181,
-          "fair_under": 181,
-          "L10": "7/10"
+          "p_over": 0.458,
+          "fair_over": 119,
+          "fair_under": -119,
+          "L10": "5/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.447,
-          "fair_over": 124,
-          "fair_under": -124,
-          "L10": "3/10"
+          "p_over": 0.195,
+          "fair_over": 412,
+          "fair_under": -412,
+          "L10": "1/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.288,
-          "fair_over": 247,
-          "fair_under": -247,
-          "L10": "3/10"
+          "p_over": 0.131,
+          "fair_over": 661,
+          "fair_under": -661,
+          "L10": "1/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.103,
-          "fair_over": 872,
-          "fair_under": -872,
+          "p_over": 0.046,
+          "fair_over": 2057,
+          "fair_under": -2057,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.081,
-          "fair_over": 1129,
-          "fair_under": -1129,
+          "p_over": 0.042,
+          "fair_over": 2260,
+          "fair_under": -2260,
           "L10": "0/10"
         }
       ],
@@ -1736,64 +1736,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jack Quinn Over 0.5 pts",
+            "selection": "Jack Quinn Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": -125.0,
-            "model_raw": 0.6442,
-            "model_prob": 0.5946,
-            "market_prob": 0.5203,
-            "fair_odds": -147,
-            "edge": 0.0743,
-            "edge_at_price": 0.0391,
-            "ev": 0.0704,
-            "tier": "Low",
+            "odds": 175.0,
+            "model_raw": 0.4576,
+            "model_prob": 0.4106,
+            "market_prob": 0.34,
+            "fair_odds": 144,
+            "edge": 0.0706,
+            "edge_at_price": 0.0469,
+            "ev": 0.129,
+            "tier": "High",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 64.4% before shrink, this book's no-vig 52.0%.",
-              "Projection 1.0 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 12/19, all 12/19."
+              "Model over 0.5: 45.8% before shrink, this book's no-vig 34.0%.",
+              "Projection 0.57 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/19, all 7/19."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (64% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (64% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
+            "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -140 or better and re-check injuries near start.",
+            "next_step": "Playable at +148 or better (current +175); re-check injuries/line 60 min before start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jack Quinn Under 0.5 pts",
+            "selection": "Jack Quinn Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": -105.0,
-            "model_raw": 0.3558,
-            "model_prob": 0.4054,
-            "market_prob": 0.4797,
-            "fair_odds": 147,
-            "edge": -0.0743,
-            "edge_at_price": -0.1068,
-            "ev": -0.2086,
+            "odds": -240.0,
+            "model_raw": 0.5424,
+            "model_prob": 0.5894,
+            "market_prob": 0.66,
+            "fair_odds": -144,
+            "edge": -0.0706,
+            "edge_at_price": -0.1164,
+            "ev": -0.165,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 35.6% before shrink, this book's no-vig 48.0%.",
-              "Projection 1.0 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 12/19, all 12/19."
+              "Model under 0.5: 54.2% before shrink, this book's no-vig 66.0%.",
+              "Projection 0.57 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/19, all 7/19."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (36% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (36% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
+            "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +152 or better.",
+            "next_step": "Pass. Only interesting at -137 or better.",
             "proven": false
           }
         }
@@ -1964,69 +1956,69 @@
       "player": "Jack Quinn",
       "player_id": "4697389",
       "team": "Buffalo Sabres",
-      "stat": "ast",
-      "stat_label": "Assists",
+      "stat": "pts",
+      "stat_label": "Points",
       "line": 0.5,
-      "projection": 0.57,
+      "projection": 1.0,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "5/10",
-        "L20": "7/19",
-        "all": "7/19"
+        "L10": "7/10",
+        "L20": "12/19",
+        "all": "12/19"
       },
       "recent": [
         2.0,
         1.0,
         0.0,
+        2.0,
+        0.0,
+        2.0,
         1.0,
         0.0,
         1.0,
-        0.0,
-        0.0,
-        0.0,
         1.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.95,
-          "fair_over": -1900,
-          "fair_under": 1900,
-          "L10": "5/10"
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.458,
-          "fair_over": 119,
-          "fair_under": -119,
-          "L10": "5/10"
+          "p_over": 0.644,
+          "fair_over": -181,
+          "fair_under": 181,
+          "L10": "7/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.195,
-          "fair_over": 412,
-          "fair_under": -412,
-          "L10": "1/10"
+          "p_over": 0.447,
+          "fair_over": 124,
+          "fair_under": -124,
+          "L10": "3/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.131,
-          "fair_over": 661,
-          "fair_under": -661,
-          "L10": "1/10"
+          "p_over": 0.288,
+          "fair_over": 247,
+          "fair_under": -247,
+          "L10": "3/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.046,
-          "fair_over": 2057,
-          "fair_under": -2057,
+          "p_over": 0.103,
+          "fair_over": 872,
+          "fair_under": -872,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.042,
-          "fair_over": 2260,
-          "fair_under": -2260,
+          "p_over": 0.081,
+          "fair_over": 1129,
+          "fair_under": -1129,
           "L10": "0/10"
         }
       ],
@@ -2037,56 +2029,64 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jack Quinn Over 0.5 ast",
+            "selection": "Jack Quinn Over 0.5 pts",
             "side": "over",
             "line": 0.5,
-            "odds": 175.0,
-            "model_raw": 0.4576,
-            "model_prob": 0.4106,
-            "market_prob": 0.34,
-            "fair_odds": 144,
-            "edge": 0.0706,
-            "edge_at_price": 0.0469,
-            "ev": 0.129,
-            "tier": "High",
+            "odds": -125.0,
+            "model_raw": 0.6442,
+            "model_prob": 0.5946,
+            "market_prob": 0.5203,
+            "fair_odds": -147,
+            "edge": 0.0743,
+            "edge_at_price": 0.0391,
+            "ev": 0.0704,
+            "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 45.8% before shrink, this book's no-vig 34.0%.",
-              "Projection 0.57 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/19, all 7/19."
+              "Model over 0.5: 64.4% before shrink, this book's no-vig 52.0%.",
+              "Projection 1.0 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/19, all 12/19."
             ],
             "flags": [],
-            "caution": [],
+            "caution": [
+              "model far from market (64% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (64% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at +148 or better (current +175); re-check injuries/line 60 min before start.",
+            "next_step": "Monitor only; if anything, wait for -140 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jack Quinn Under 0.5 ast",
+            "selection": "Jack Quinn Under 0.5 pts",
             "side": "under",
             "line": 0.5,
-            "odds": -240.0,
-            "model_raw": 0.5424,
-            "model_prob": 0.5894,
-            "market_prob": 0.66,
-            "fair_odds": -144,
-            "edge": -0.0706,
-            "edge_at_price": -0.1164,
-            "ev": -0.165,
+            "odds": -105.0,
+            "model_raw": 0.3558,
+            "model_prob": 0.4054,
+            "market_prob": 0.4797,
+            "fair_odds": 147,
+            "edge": -0.0743,
+            "edge_at_price": -0.1068,
+            "ev": -0.2086,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 54.2% before shrink, this book's no-vig 66.0%.",
-              "Projection 0.57 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/19, all 7/19."
+              "Model under 0.5: 35.6% before shrink, this book's no-vig 48.0%.",
+              "Projection 1.0 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/19, all 12/19."
             ],
             "flags": [],
-            "caution": [],
+            "caution": [
+              "model far from market (36% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -137 or better.",
+            "next_step": "Pass. Only interesting at +152 or better.",
             "proven": false
           }
         }
@@ -2096,23 +2096,23 @@
       "player": "Jamie Benn",
       "player_id": "3998",
       "team": "Dallas Stars",
-      "stat": "pts",
-      "stat_label": "Points",
+      "stat": "ast",
+      "stat_label": "Assists",
       "line": 0.5,
-      "projection": 0.46,
+      "projection": 0.27,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "6/18",
-        "all": "6/18"
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "4/18",
+        "all": "4/18"
       },
       "recent": [
         0.0,
-        1.0,
+        0.0,
         0.0,
         1.0,
         1.0,
-        1.0,
+        0.0,
         0.0,
         1.0,
         0.0,
@@ -2121,44 +2121,44 @@
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.95,
-          "fair_over": -1900,
-          "fair_under": 1900,
-          "L10": "5/10"
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.413,
-          "fair_over": 142,
-          "fair_under": -142,
-          "L10": "5/10"
+          "p_over": 0.27,
+          "fair_over": 270,
+          "fair_under": -270,
+          "L10": "3/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.12,
-          "fair_over": 730,
-          "fair_under": -730,
+          "p_over": 0.064,
+          "fair_over": 1471,
+          "fair_under": -1471,
           "L10": "0/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.079,
-          "fair_over": 1162,
-          "fair_under": -1162,
+          "p_over": 0.049,
+          "fair_over": 1947,
+          "fair_under": -1947,
           "L10": "0/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.037,
-          "fair_over": 2604,
-          "fair_under": -2604,
+          "p_over": 0.031,
+          "fair_over": 3132,
+          "fair_under": -3132,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.036,
-          "fair_over": 2642,
-          "fair_under": -2642,
+          "p_over": 0.031,
+          "fair_over": 3137,
+          "fair_under": -3137,
           "L10": "0/10"
         }
       ],
@@ -2169,56 +2169,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jamie Benn Over 0.5 pts",
+            "selection": "Jamie Benn Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": 115.0,
-            "model_raw": 0.4128,
-            "model_prob": 0.4199,
-            "market_prob": 0.4305,
-            "fair_odds": 138,
-            "edge": -0.0106,
-            "edge_at_price": -0.0453,
-            "ev": -0.0973,
+            "odds": 205.0,
+            "model_raw": 0.2699,
+            "model_prob": 0.2851,
+            "market_prob": 0.3079,
+            "fair_odds": 251,
+            "edge": -0.0228,
+            "edge_at_price": -0.0428,
+            "ev": -0.1304,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 41.3% before shrink, this book's no-vig 43.0%.",
-              "Projection 0.46 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 6/18, all 6/18."
+              "Model over 0.5: 27.0% before shrink, this book's no-vig 30.8%.",
+              "Projection 0.27 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/18, all 4/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +143 or better.",
+            "next_step": "Pass. Only interesting at +258 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jamie Benn Under 0.5 pts",
+            "selection": "Jamie Benn Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": -160.0,
-            "model_raw": 0.5872,
-            "model_prob": 0.5801,
-            "market_prob": 0.5695,
-            "fair_odds": -138,
-            "edge": 0.0106,
-            "edge_at_price": -0.0353,
-            "ev": -0.0573,
+            "odds": -280.0,
+            "model_raw": 0.7301,
+            "model_prob": 0.7149,
+            "market_prob": 0.6921,
+            "fair_odds": -251,
+            "edge": 0.0228,
+            "edge_at_price": -0.022,
+            "ev": -0.0298,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 58.7% before shrink, this book's no-vig 57.0%.",
-              "Projection 0.46 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 6/18, all 6/18."
+              "Model under 0.5: 73.0% before shrink, this book's no-vig 69.2%.",
+              "Projection 0.27 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 4/18, all 4/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -132 or better.",
+            "next_step": "Pass. Only interesting at -234 or better.",
             "proven": false
           }
         }
@@ -2382,23 +2382,23 @@
       "player": "Jamie Benn",
       "player_id": "3998",
       "team": "Dallas Stars",
-      "stat": "ast",
-      "stat_label": "Assists",
+      "stat": "pts",
+      "stat_label": "Points",
       "line": 0.5,
-      "projection": 0.27,
+      "projection": 0.46,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "3/10",
-        "L20": "4/18",
-        "all": "4/18"
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "6/18",
+        "all": "6/18"
       },
       "recent": [
         0.0,
-        0.0,
+        1.0,
         0.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         0.0,
         1.0,
         0.0,
@@ -2407,44 +2407,44 @@
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
+          "p_over": 0.95,
+          "fair_over": -1900,
+          "fair_under": 1900,
+          "L10": "5/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.27,
-          "fair_over": 270,
-          "fair_under": -270,
-          "L10": "3/10"
+          "p_over": 0.413,
+          "fair_over": 142,
+          "fair_under": -142,
+          "L10": "5/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.064,
-          "fair_over": 1471,
-          "fair_under": -1471,
+          "p_over": 0.12,
+          "fair_over": 730,
+          "fair_under": -730,
           "L10": "0/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.049,
-          "fair_over": 1947,
-          "fair_under": -1947,
+          "p_over": 0.079,
+          "fair_over": 1162,
+          "fair_under": -1162,
           "L10": "0/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.031,
-          "fair_over": 3132,
-          "fair_under": -3132,
+          "p_over": 0.037,
+          "fair_over": 2604,
+          "fair_under": -2604,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.031,
-          "fair_over": 3137,
-          "fair_under": -3137,
+          "p_over": 0.036,
+          "fair_over": 2642,
+          "fair_under": -2642,
           "L10": "0/10"
         }
       ],
@@ -2455,56 +2455,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jamie Benn Over 0.5 ast",
+            "selection": "Jamie Benn Over 0.5 pts",
             "side": "over",
             "line": 0.5,
-            "odds": 205.0,
-            "model_raw": 0.2699,
-            "model_prob": 0.2851,
-            "market_prob": 0.3079,
-            "fair_odds": 251,
-            "edge": -0.0228,
-            "edge_at_price": -0.0428,
-            "ev": -0.1304,
+            "odds": 115.0,
+            "model_raw": 0.4128,
+            "model_prob": 0.4199,
+            "market_prob": 0.4305,
+            "fair_odds": 138,
+            "edge": -0.0106,
+            "edge_at_price": -0.0453,
+            "ev": -0.0973,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 27.0% before shrink, this book's no-vig 30.8%.",
-              "Projection 0.27 (Poisson).",
-              "Hit rate over L5 2/5, L10 3/10, L20 4/18, all 4/18."
+              "Model over 0.5: 41.3% before shrink, this book's no-vig 43.0%.",
+              "Projection 0.46 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 6/18, all 6/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +258 or better.",
+            "next_step": "Pass. Only interesting at +143 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jamie Benn Under 0.5 ast",
+            "selection": "Jamie Benn Under 0.5 pts",
             "side": "under",
             "line": 0.5,
-            "odds": -280.0,
-            "model_raw": 0.7301,
-            "model_prob": 0.7149,
-            "market_prob": 0.6921,
-            "fair_odds": -251,
-            "edge": 0.0228,
-            "edge_at_price": -0.022,
-            "ev": -0.0298,
+            "odds": -160.0,
+            "model_raw": 0.5872,
+            "model_prob": 0.5801,
+            "market_prob": 0.5695,
+            "fair_odds": -138,
+            "edge": 0.0106,
+            "edge_at_price": -0.0353,
+            "ev": -0.0573,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 73.0% before shrink, this book's no-vig 69.2%.",
-              "Projection 0.27 (Poisson).",
-              "Hit rate over L5 2/5, L10 3/10, L20 4/18, all 4/18."
+              "Model under 0.5: 58.7% before shrink, this book's no-vig 57.0%.",
+              "Projection 0.46 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 6/18, all 6/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -234 or better.",
+            "next_step": "Pass. Only interesting at -132 or better.",
             "proven": false
           }
         }
@@ -2514,70 +2514,70 @@
       "player": "Jason Robertson",
       "player_id": "4233875",
       "team": "Dallas Stars",
-      "stat": "pts",
-      "stat_label": "Points",
+      "stat": "ast",
+      "stat_label": "Assists",
       "line": 0.5,
-      "projection": 1.22,
+      "projection": 0.66,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "7/10",
-        "L20": "12/18",
-        "all": "12/18"
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "9/18",
+        "all": "9/18"
       },
       "recent": [
         1.0,
+        0.0,
+        0.0,
+        1.0,
         1.0,
         0.0,
-        4.0,
-        1.0,
         0.0,
         0.0,
-        2.0,
         2.0,
         2.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
+          "p_over": 0.95,
+          "fair_over": -1900,
+          "fair_under": 1900,
+          "L10": "5/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.692,
-          "fair_over": -225,
-          "fair_under": 225,
-          "L10": "7/10"
+          "p_over": 0.491,
+          "fair_over": 104,
+          "fair_under": -104,
+          "L10": "5/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.546,
-          "fair_over": -120,
-          "fair_under": 120,
-          "L10": "4/10"
+          "p_over": 0.258,
+          "fair_over": 287,
+          "fair_under": -287,
+          "L10": "2/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.371,
-          "fair_over": 170,
-          "fair_under": -170,
-          "L10": "4/10"
+          "p_over": 0.181,
+          "fair_over": 453,
+          "fair_under": -453,
+          "L10": "2/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.183,
-          "fair_over": 447,
-          "fair_under": -447,
-          "L10": "1/10"
+          "p_over": 0.057,
+          "fair_over": 1655,
+          "fair_under": -1655,
+          "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.14,
-          "fair_over": 614,
-          "fair_under": -614,
-          "L10": "1/10"
+          "p_over": 0.049,
+          "fair_over": 1956,
+          "fair_under": -1956,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2587,56 +2587,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jason Robertson Over 0.5 pts",
+            "selection": "Jason Robertson Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": -225.0,
-            "model_raw": 0.6923,
-            "model_prob": 0.6743,
-            "market_prob": 0.6472,
-            "fair_odds": -207,
-            "edge": 0.027,
-            "edge_at_price": -0.018,
-            "ev": -0.0261,
+            "odds": 110.0,
+            "model_raw": 0.4905,
+            "model_prob": 0.4713,
+            "market_prob": 0.4425,
+            "fair_odds": 112,
+            "edge": 0.0288,
+            "edge_at_price": -0.0049,
+            "ev": -0.0103,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 69.2% before shrink, this book's no-vig 64.7%.",
-              "Projection 1.22 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 12/18, all 12/18."
+              "Model over 0.5: 49.0% before shrink, this book's no-vig 44.2%.",
+              "Projection 0.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/18, all 9/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -195 or better.",
+            "next_step": "Pass. Only interesting at +116 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jason Robertson Under 0.5 pts",
+            "selection": "Jason Robertson Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": 165.0,
-            "model_raw": 0.3077,
-            "model_prob": 0.3257,
-            "market_prob": 0.3528,
-            "fair_odds": 207,
-            "edge": -0.027,
-            "edge_at_price": -0.0516,
-            "ev": -0.1368,
+            "odds": -150.0,
+            "model_raw": 0.5095,
+            "model_prob": 0.5287,
+            "market_prob": 0.5575,
+            "fair_odds": -112,
+            "edge": -0.0288,
+            "edge_at_price": -0.0713,
+            "ev": -0.1188,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 30.8% before shrink, this book's no-vig 35.3%.",
-              "Projection 1.22 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 12/18, all 12/18."
+              "Model under 0.5: 50.9% before shrink, this book's no-vig 55.8%.",
+              "Projection 0.66 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/18, all 9/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +213 or better.",
+            "next_step": "Pass. Only interesting at -108 or better.",
             "proven": false
           }
         }
@@ -2799,70 +2799,70 @@
       "player": "Jason Robertson",
       "player_id": "4233875",
       "team": "Dallas Stars",
-      "stat": "ast",
-      "stat_label": "Assists",
+      "stat": "pts",
+      "stat_label": "Points",
       "line": 0.5,
-      "projection": 0.66,
+      "projection": 1.22,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "9/18",
-        "all": "9/18"
+        "L5": "4/5",
+        "L10": "7/10",
+        "L20": "12/18",
+        "all": "12/18"
       },
       "recent": [
         1.0,
-        0.0,
-        0.0,
-        1.0,
         1.0,
         0.0,
+        4.0,
+        1.0,
         0.0,
         0.0,
+        2.0,
         2.0,
         2.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.95,
-          "fair_over": -1900,
-          "fair_under": 1900,
-          "L10": "5/10"
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.491,
-          "fair_over": 104,
-          "fair_under": -104,
-          "L10": "5/10"
+          "p_over": 0.692,
+          "fair_over": -225,
+          "fair_under": 225,
+          "L10": "7/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.258,
-          "fair_over": 287,
-          "fair_under": -287,
-          "L10": "2/10"
+          "p_over": 0.546,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "4/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.181,
-          "fair_over": 453,
-          "fair_under": -453,
-          "L10": "2/10"
+          "p_over": 0.371,
+          "fair_over": 170,
+          "fair_under": -170,
+          "L10": "4/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.057,
-          "fair_over": 1655,
-          "fair_under": -1655,
-          "L10": "0/10"
+          "p_over": 0.183,
+          "fair_over": 447,
+          "fair_under": -447,
+          "L10": "1/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.049,
-          "fair_over": 1956,
-          "fair_under": -1956,
-          "L10": "0/10"
+          "p_over": 0.14,
+          "fair_over": 614,
+          "fair_under": -614,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2872,56 +2872,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jason Robertson Over 0.5 ast",
+            "selection": "Jason Robertson Over 0.5 pts",
             "side": "over",
             "line": 0.5,
-            "odds": 110.0,
-            "model_raw": 0.4905,
-            "model_prob": 0.4713,
-            "market_prob": 0.4425,
-            "fair_odds": 112,
-            "edge": 0.0288,
-            "edge_at_price": -0.0049,
-            "ev": -0.0103,
+            "odds": -225.0,
+            "model_raw": 0.6923,
+            "model_prob": 0.6743,
+            "market_prob": 0.6472,
+            "fair_odds": -207,
+            "edge": 0.027,
+            "edge_at_price": -0.018,
+            "ev": -0.0261,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 49.0% before shrink, this book's no-vig 44.2%.",
-              "Projection 0.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 9/18, all 9/18."
+              "Model over 0.5: 69.2% before shrink, this book's no-vig 64.7%.",
+              "Projection 1.22 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 12/18, all 12/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +116 or better.",
+            "next_step": "Pass. Only interesting at -195 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jason Robertson Under 0.5 ast",
+            "selection": "Jason Robertson Under 0.5 pts",
             "side": "under",
             "line": 0.5,
-            "odds": -150.0,
-            "model_raw": 0.5095,
-            "model_prob": 0.5287,
-            "market_prob": 0.5575,
-            "fair_odds": -112,
-            "edge": -0.0288,
-            "edge_at_price": -0.0713,
-            "ev": -0.1188,
+            "odds": 165.0,
+            "model_raw": 0.3077,
+            "model_prob": 0.3257,
+            "market_prob": 0.3528,
+            "fair_odds": 207,
+            "edge": -0.027,
+            "edge_at_price": -0.0516,
+            "ev": -0.1368,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 50.9% before shrink, this book's no-vig 55.8%.",
-              "Projection 0.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 9/18, all 9/18."
+              "Model under 0.5: 30.8% before shrink, this book's no-vig 35.3%.",
+              "Projection 1.22 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 12/18, all 12/18."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -108 or better.",
+            "next_step": "Pass. Only interesting at +213 or better.",
             "proven": false
           }
         }
@@ -2931,83 +2931,69 @@
       "player": "Mikko Rantanen",
       "player_id": "3899938",
       "team": "Dallas Stars",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 1.5,
-      "projection": 1.25,
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.63,
       "hit_rates": {
         "L5": "1/5",
-        "L10": "4/10",
-        "L20": "5/18",
-        "all": "5/18"
+        "L10": "3/10",
+        "L20": "7/18",
+        "all": "7/18"
       },
       "recent": [
         0.0,
         2.0,
-        1.0,
-        1.0,
-        1.0,
+        0.0,
+        0.0,
+        0.0,
         2.0,
         0.0,
-        1.0,
+        0.0,
         2.0,
-        3.0
+        0.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.726,
-          "fair_over": -264,
-          "fair_under": 264,
-          "L10": "8/10"
+          "p_over": 0.419,
+          "fair_over": 138,
+          "fair_under": -138,
+          "L10": "3/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.578,
-          "fair_over": -137,
-          "fair_under": 137,
-          "L10": "4/10"
+          "p_over": 0.244,
+          "fair_over": 309,
+          "fair_under": -309,
+          "L10": "3/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.376,
-          "fair_over": 166,
-          "fair_under": -166,
-          "L10": "4/10"
+          "p_over": 0.202,
+          "fair_over": 396,
+          "fair_under": -396,
+          "L10": "3/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.187,
-          "fair_over": 434,
-          "fair_under": -434,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.143,
-          "fair_over": 598,
-          "fair_under": -598,
-          "L10": "1/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.059,
-          "fair_over": 1594,
-          "fair_under": -1594,
+          "p_over": 0.058,
+          "fair_over": 1635,
+          "fair_under": -1635,
           "L10": "0/10"
         },
         {
-          "line": 3.5,
-          "p_over": 0.054,
-          "fair_over": 1757,
-          "fair_under": -1757,
+          "line": 2.5,
+          "p_over": 0.046,
+          "fair_over": 2076,
+          "fair_under": -2076,
           "L10": "0/10"
         }
       ],
@@ -3018,56 +3004,64 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Mikko Rantanen Over 1.5 pts",
+            "selection": "Mikko Rantanen Over 0.5 ast",
             "side": "over",
-            "line": 1.5,
-            "odds": 175.0,
-            "model_raw": 0.376,
-            "model_prob": 0.3616,
-            "market_prob": 0.34,
-            "fair_odds": 177,
-            "edge": 0.0216,
-            "edge_at_price": -0.002,
-            "ev": -0.0056,
+            "line": 0.5,
+            "odds": -140.0,
+            "model_raw": 0.4193,
+            "model_prob": 0.4694,
+            "market_prob": 0.5446,
+            "fair_odds": 113,
+            "edge": -0.0752,
+            "edge_at_price": -0.1139,
+            "ev": -0.1953,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 1.5: 37.6% before shrink, this book's no-vig 34.0%.",
-              "Projection 1.25 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 5/18, all 5/18."
+              "Model over 0.5: 41.9% before shrink, this book's no-vig 54.5%.",
+              "Projection 0.63 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 7/18, all 7/18."
             ],
             "flags": [],
-            "caution": [],
+            "caution": [
+              "model far from market (42% vs 54%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (42% vs 54%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +182 or better.",
+            "next_step": "Pass. Only interesting at +117 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Mikko Rantanen Under 1.5 pts",
+            "selection": "Mikko Rantanen Under 0.5 ast",
             "side": "under",
-            "line": 1.5,
-            "odds": -240.0,
-            "model_raw": 0.624,
-            "model_prob": 0.6384,
-            "market_prob": 0.66,
-            "fair_odds": -177,
-            "edge": -0.0216,
-            "edge_at_price": -0.0675,
-            "ev": -0.0956,
+            "line": 0.5,
+            "odds": 105.0,
+            "model_raw": 0.5807,
+            "model_prob": 0.5306,
+            "market_prob": 0.4554,
+            "fair_odds": -113,
+            "edge": 0.0752,
+            "edge_at_price": 0.0428,
+            "ev": 0.0877,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 1.5: 62.4% before shrink, this book's no-vig 66.0%.",
-              "Projection 1.25 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 5/18, all 5/18."
+              "Model under 0.5: 58.1% before shrink, this book's no-vig 45.5%.",
+              "Projection 0.63 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 7/18, all 7/18."
             ],
             "flags": [],
-            "caution": [],
+            "caution": [
+              "model far from market (58% vs 46%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (58% vs 46%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -167 or better.",
+            "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -3230,69 +3224,83 @@
       "player": "Mikko Rantanen",
       "player_id": "3899938",
       "team": "Dallas Stars",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "line": 0.5,
-      "projection": 0.63,
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 1.5,
+      "projection": 1.25,
       "hit_rates": {
         "L5": "1/5",
-        "L10": "3/10",
-        "L20": "7/18",
-        "all": "7/18"
+        "L10": "4/10",
+        "L20": "5/18",
+        "all": "5/18"
       },
       "recent": [
         0.0,
         2.0,
-        0.0,
-        0.0,
-        0.0,
+        1.0,
+        1.0,
+        1.0,
         2.0,
         0.0,
-        0.0,
+        1.0,
         2.0,
-        0.0
+        3.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.419,
-          "fair_over": 138,
-          "fair_under": -138,
-          "L10": "3/10"
+          "p_over": 0.726,
+          "fair_over": -264,
+          "fair_under": 264,
+          "L10": "8/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.244,
-          "fair_over": 309,
-          "fair_under": -309,
-          "L10": "3/10"
+          "p_over": 0.578,
+          "fair_over": -137,
+          "fair_under": 137,
+          "L10": "4/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.202,
-          "fair_over": 396,
-          "fair_under": -396,
-          "L10": "3/10"
+          "p_over": 0.376,
+          "fair_over": 166,
+          "fair_under": -166,
+          "L10": "4/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.058,
-          "fair_over": 1635,
-          "fair_under": -1635,
-          "L10": "0/10"
+          "p_over": 0.187,
+          "fair_over": 434,
+          "fair_under": -434,
+          "L10": "1/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.046,
-          "fair_over": 2076,
-          "fair_under": -2076,
+          "p_over": 0.143,
+          "fair_over": 598,
+          "fair_under": -598,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.059,
+          "fair_over": 1594,
+          "fair_under": -1594,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.054,
+          "fair_over": 1757,
+          "fair_under": -1757,
           "L10": "0/10"
         }
       ],
@@ -3303,64 +3311,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Mikko Rantanen Over 0.5 ast",
+            "selection": "Mikko Rantanen Over 1.5 pts",
             "side": "over",
-            "line": 0.5,
-            "odds": -140.0,
-            "model_raw": 0.4193,
-            "model_prob": 0.4694,
-            "market_prob": 0.5446,
-            "fair_odds": 113,
-            "edge": -0.0752,
-            "edge_at_price": -0.1139,
-            "ev": -0.1953,
+            "line": 1.5,
+            "odds": 175.0,
+            "model_raw": 0.376,
+            "model_prob": 0.3616,
+            "market_prob": 0.34,
+            "fair_odds": 177,
+            "edge": 0.0216,
+            "edge_at_price": -0.002,
+            "ev": -0.0056,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 41.9% before shrink, this book's no-vig 54.5%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 7/18, all 7/18."
+              "Model over 1.5: 37.6% before shrink, this book's no-vig 34.0%.",
+              "Projection 1.25 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 5/18, all 5/18."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (42% vs 54%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (42% vs 54%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
+            "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +117 or better.",
+            "next_step": "Pass. Only interesting at +182 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Mikko Rantanen Under 0.5 ast",
+            "selection": "Mikko Rantanen Under 1.5 pts",
             "side": "under",
-            "line": 0.5,
-            "odds": 105.0,
-            "model_raw": 0.5807,
-            "model_prob": 0.5306,
-            "market_prob": 0.4554,
-            "fair_odds": -113,
-            "edge": 0.0752,
-            "edge_at_price": 0.0428,
-            "ev": 0.0877,
+            "line": 1.5,
+            "odds": -240.0,
+            "model_raw": 0.624,
+            "model_prob": 0.6384,
+            "market_prob": 0.66,
+            "fair_odds": -177,
+            "edge": -0.0216,
+            "edge_at_price": -0.0675,
+            "ev": -0.0956,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 58.1% before shrink, this book's no-vig 45.5%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 7/18, all 7/18."
+              "Model under 1.5: 62.4% before shrink, this book's no-vig 66.0%.",
+              "Projection 1.25 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 5/18, all 5/18."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (58% vs 46%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (58% vs 46%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
+            "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -108 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at -167 or better.",
             "proven": false
           }
         }

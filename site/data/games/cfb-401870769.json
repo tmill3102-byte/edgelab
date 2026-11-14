@@ -23,7 +23,7 @@
     "id": "338"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,26 +33,34 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": 225.0,
-      "ml_away": -278.0,
-      "spread_home": 7.0,
-      "spread_home_odds": -102.0,
-      "spread_away": -7.0,
-      "spread_away_odds": -118.0,
-      "total": 46.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0
+      "ml_home": 250.0,
+      "ml_away": -310.0,
+      "spread_home": 8.5,
+      "spread_home_odds": -115.0,
+      "spread_away": -8.5,
+      "spread_away_odds": -105.0,
+      "total": 44.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin SHSU -12.3 \u00b7 total 48.5",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: SHSU 31.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin SHSU -12.3, total 48.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 LLLLL",
+    "away": "L5 LLLWW"
+  },
   "markets": [
     {
       "market": "ML",
@@ -65,27 +73,29 @@
               "selection": "SHSU ML",
               "side": "home",
               "line": null,
-              "odds": 225.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": 250.0,
+              "model_raw": 0.2134,
+              "model_prob": 0.2742,
+              "market_prob": 0.2742,
+              "fair_odds": 265,
+              "edge": 0.0,
+              "edge_at_price": -0.0115,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model SHSU win 21.3% vs market no-vig 27.4%.",
+                "v2 projected margin SHSU -12.3 (ratings SHSU -39.7, KENN -24.1, home edge 3.33); raw model 21.3%.",
+                "KENN L5 LLLWW (MOV -1.9), SHSU L5 LLLLL (MOV -10.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes SHSU 27%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +272 or better.",
+              "proven": false
             }
           }
         },
@@ -97,27 +107,29 @@
               "selection": "KENN ML",
               "side": "away",
               "line": null,
-              "odds": -278.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -310.0,
+              "model_raw": 0.7866,
+              "model_prob": 0.7258,
+              "market_prob": 0.7258,
+              "fair_odds": -265,
+              "edge": 0.0,
+              "edge_at_price": -0.0303,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model KENN win 78.7% vs market no-vig 72.6%.",
+                "v2 projected margin SHSU -12.3 (ratings SHSU -39.7, KENN -24.1, home edge 3.33); raw model 78.7%.",
+                "KENN L5 LLLWW (MOV -1.9), SHSU L5 LLLLL (MOV -10.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes KENN 73%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -247 or better.",
+              "proven": false
             }
           }
         }
@@ -131,30 +143,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "SHSU +7",
+              "selection": "SHSU +8.5",
               "side": "home",
-              "line": 7.0,
-              "odds": -102.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 8.5,
+              "odds": -115.0,
+              "model_raw": 0.4027,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model SHSU +8.5 covers 40.3% vs market 51.1%.",
+                "Projected margin SHSU -12.3 vs line SHSU +8.5.",
+                "KENN L5 LLLWW (MOV -1.9), SHSU L5 LLLLL (MOV -10.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -163,30 +177,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "KENN -7",
+              "selection": "KENN -8.5",
               "side": "away",
-              "line": -7.0,
-              "odds": -118.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": -8.5,
+              "odds": -105.0,
+              "model_raw": 0.5973,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model KENN -8.5 covers 59.7% vs market 48.9%.",
+                "Projected margin SHSU -12.3 vs line SHSU +8.5.",
+                "KENN L5 LLLWW (MOV -1.9), SHSU L5 LLLLL (MOV -10.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-7.5 -> -8.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }
@@ -200,30 +218,32 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 46.5",
+              "selection": "Over 44.5",
               "side": "over",
-              "line": 46.5,
-              "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 44.5,
+              "odds": -112.0,
+              "model_raw": 0.5982,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 44.5: 59.8% vs market 50.4%.",
+                "Projected total 48.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "KENN L5 LLLWW (MOV -1.9), SHSU L5 LLLLL (MOV -10.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         },
@@ -232,30 +252,32 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 46.5",
+              "selection": "Under 44.5",
               "side": "under",
-              "line": 46.5,
-              "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 44.5,
+              "odds": -108.0,
+              "model_raw": 0.4018,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 44.5: 40.2% vs market 49.6%.",
+                "Projected total 48.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "KENN L5 LLLWW (MOV -1.9), SHSU L5 LLLLL (MOV -10.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         }

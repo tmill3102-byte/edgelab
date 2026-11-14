@@ -23,7 +23,7 @@
     "id": "2306"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,26 +33,34 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -520.0,
-      "ml_away": 390.0,
-      "spread_home": -13.5,
-      "spread_home_odds": -110.0,
-      "spread_away": 13.5,
-      "spread_away_odds": -110.0,
+      "ml_home": -535.0,
+      "ml_away": 400.0,
+      "spread_home": -14.0,
+      "spread_home_odds": -108.0,
+      "spread_away": 14.0,
+      "spread_away_odds": -112.0,
       "total": 44.5,
       "over_odds": -112.0,
       "under_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin TCU +18.0 \u00b7 total 50.5",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: TCU 74.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin TCU +18.0, total 50.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 LWLWL",
+    "away": "L5 LWLLL"
+  },
   "markets": [
     {
       "market": "ML",
@@ -65,27 +73,29 @@
               "selection": "TCU ML",
               "side": "home",
               "line": null,
-              "odds": -520.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -535.0,
+              "model_raw": 0.8767,
+              "model_prob": 0.8082,
+              "market_prob": 0.8082,
+              "fair_odds": -421,
+              "edge": 0.0,
+              "edge_at_price": -0.0344,
+              "ev": -0.0408,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model TCU win 87.7% vs market no-vig 80.8%.",
+                "v2 projected margin TCU +18.0 (ratings TCU -4.9, KSU -19.5, home edge 3.33); raw model 87.7%.",
+                "KSU L5 LWLLL (MOV 4.6), TCU L5 LWLWL (MOV 8.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes TCU 81%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -382 or better.",
+              "proven": false
             }
           }
         },
@@ -97,27 +107,31 @@
               "selection": "KSU ML",
               "side": "away",
               "line": null,
-              "odds": 390.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": 400.0,
+              "model_raw": 0.1233,
+              "model_prob": 0.1918,
+              "market_prob": 0.1918,
+              "fair_odds": 421,
+              "edge": -0.0,
+              "edge_at_price": -0.0082,
+              "ev": -0.0408,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model KSU win 12.3% vs market no-vig 19.2%.",
+                "v2 projected margin TCU +18.0 (ratings TCU -4.9, KSU -19.5, home edge 3.33); raw model 12.3%.",
+                "KSU L5 LWLLL (MOV 4.6), TCU L5 LWLWL (MOV 8.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: price drifted against this side (+275 -> +400)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Market makes KSU 19%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +432 or better.",
+              "proven": false
             }
           }
         }
@@ -131,30 +145,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "TCU -13.5",
+              "selection": "TCU -14",
               "side": "home",
-              "line": -13.5,
-              "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": -14.0,
+              "odds": -108.0,
+              "model_raw": 0.6008,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model TCU -14 covers 60.1% vs market 49.6%.",
+                "Projected margin TCU +18.0 vs line TCU -14.",
+                "KSU L5 LWLLL (MOV 4.6), TCU L5 LWLWL (MOV 8.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-9.5 -> -14)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         },
@@ -163,30 +181,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "KSU +13.5",
+              "selection": "KSU +14",
               "side": "away",
-              "line": 13.5,
-              "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 14.0,
+              "odds": -112.0,
+              "model_raw": 0.3992,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model KSU +14 covers 39.9% vs market 50.4%.",
+                "Projected margin TCU +18.0 vs line TCU -14.",
+                "KSU L5 LWLLL (MOV 4.6), TCU L5 LWLWL (MOV 8.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }
@@ -204,26 +224,31 @@
               "side": "over",
               "line": 44.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.6458,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 44.5: 64.6% vs market 50.4%.",
+                "Projected total 50.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 45.5 -> 44.5.",
+                "KSU L5 LWLLL (MOV 4.6), TCU L5 LWLWL (MOV 8.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (65% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (45.5 -> 44.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         },
@@ -236,26 +261,31 @@
               "side": "under",
               "line": 44.5,
               "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.3542,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 44.5: 35.4% vs market 49.6%.",
+                "Projected total 50.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 45.5 -> 44.5.",
+                "KSU L5 LWLLL (MOV 4.6), TCU L5 LWLWL (MOV 8.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (35% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (45.5 -> 44.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         }

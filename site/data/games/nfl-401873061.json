@@ -2580,6 +2580,154 @@
       "player": "Matthew Stafford",
       "player_id": "12483",
       "team": "Los Angeles Rams",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 0.5,
+      "projection": 2.75,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "7/20",
+        "all": "9/24"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        -3.0,
+        0.0,
+        0.0,
+        10.0,
+        13.0,
+        -1.0,
+        -1.0,
+        16.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.844,
+          "fair_over": -543,
+          "fair_under": 543,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.754,
+          "fair_over": -307,
+          "fair_under": 307,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.727,
+          "fair_over": -266,
+          "fair_under": 266,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.611,
+          "fair_over": -157,
+          "fair_under": 157,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.561,
+          "fair_over": -128,
+          "fair_under": 128,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.454,
+          "fair_over": 120,
+          "fair_under": -120,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Matthew Stafford Over 0.5 rush_yds",
+            "side": "over",
+            "line": 0.5,
+            "odds": 119.0,
+            "model_raw": 0.7543,
+            "model_prob": 0.5932,
+            "market_prob": 0.4322,
+            "fair_odds": -146,
+            "edge": 0.1611,
+            "edge_at_price": 0.1366,
+            "ev": 0.2992,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 75.4% before shrink, this book's no-vig 43.2%.",
+              "Projection 2.75 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 9/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (75% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (75% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -139 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Matthew Stafford Under 0.5 rush_yds",
+            "side": "under",
+            "line": 0.5,
+            "odds": -150.0,
+            "model_raw": 0.2457,
+            "model_prob": 0.4068,
+            "market_prob": 0.5678,
+            "fair_odds": 146,
+            "edge": -0.1611,
+            "edge_at_price": -0.1932,
+            "ev": -0.322,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 0.5: 24.6% before shrink, this book's no-vig 56.8%.",
+              "Projection 2.75 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 9/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (25% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (25% vs 57%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +151 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Matthew Stafford",
+      "player_id": "12483",
+      "team": "Los Angeles Rams",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
       "line": 212.5,
@@ -2740,154 +2888,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +163 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Matthew Stafford",
-      "player_id": "12483",
-      "team": "Los Angeles Rams",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 0.5,
-      "projection": 2.75,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "4/10",
-        "L20": "7/20",
-        "all": "9/24"
-      },
-      "recent": [
-        1.0,
-        0.0,
-        -3.0,
-        0.0,
-        0.0,
-        10.0,
-        13.0,
-        -1.0,
-        -1.0,
-        16.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.844,
-          "fair_over": -543,
-          "fair_under": 543,
-          "L10": "4/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.754,
-          "fair_over": -307,
-          "fair_under": 307,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.727,
-          "fair_over": -266,
-          "fair_under": 266,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.611,
-          "fair_over": -157,
-          "fair_under": 157,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.561,
-          "fair_over": -128,
-          "fair_under": 128,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.454,
-          "fair_over": 120,
-          "fair_under": -120,
-          "L10": "3/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 9 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Matthew Stafford Over 0.5 rush_yds",
-            "side": "over",
-            "line": 0.5,
-            "odds": 119.0,
-            "model_raw": 0.7543,
-            "model_prob": 0.5932,
-            "market_prob": 0.4322,
-            "fair_odds": -146,
-            "edge": 0.1611,
-            "edge_at_price": 0.1366,
-            "ev": 0.2992,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 75.4% before shrink, this book's no-vig 43.2%.",
-              "Projection 2.75 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 9/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "model far from market (75% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (75% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -139 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Matthew Stafford Under 0.5 rush_yds",
-            "side": "under",
-            "line": 0.5,
-            "odds": -150.0,
-            "model_raw": 0.2457,
-            "model_prob": 0.4068,
-            "market_prob": 0.5678,
-            "fair_odds": 146,
-            "edge": -0.1611,
-            "edge_at_price": -0.1932,
-            "ev": -0.322,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 0.5: 24.6% before shrink, this book's no-vig 56.8%.",
-              "Projection 2.75 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 9/24."
-            ],
-            "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "model far from market (25% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (25% vs 57%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +151 or better.",
             "proven": false
           }
         }

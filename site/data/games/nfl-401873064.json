@@ -185,6 +185,12 @@
     ],
     "away": [
       {
+        "name": "Pat Freiermuth",
+        "status": "Questionable",
+        "pos": "TE",
+        "key": false
+      },
+      {
         "name": "Derrick Harmon",
         "status": "Injured Reserve",
         "pos": "DT",
@@ -206,12 +212,6 @@
         "name": "Roman Wilson",
         "status": "Injured Reserve",
         "pos": "WR",
-        "key": false
-      },
-      {
-        "name": "Gennings Dunker",
-        "status": "Injured Reserve",
-        "pos": "G",
         "key": false
       }
     ]
@@ -1676,6 +1676,154 @@
       "player": "Aaron Rodgers",
       "player_id": "8439",
       "team": "Pittsburgh Steelers",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 0.5,
+      "projection": 4.01,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "12/23"
+      },
+      "recent": [
+        0.0,
+        6.0,
+        -1.0,
+        6.0,
+        0.0,
+        10.0,
+        5.0,
+        -3.0,
+        0.0,
+        20.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "5/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.813,
+          "fair_over": -435,
+          "fair_under": 435,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.812,
+          "fair_over": -433,
+          "fair_under": 433,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.766,
+          "fair_over": -327,
+          "fair_under": 327,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.756,
+          "fair_over": -309,
+          "fair_under": 309,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.671,
+          "fair_over": -204,
+          "fair_under": 204,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Rodgers Over 0.5 rush_yds",
+            "side": "over",
+            "line": 0.5,
+            "odds": -111.0,
+            "model_raw": 0.8132,
+            "model_prob": 0.6555,
+            "market_prob": 0.4979,
+            "fair_odds": -190,
+            "edge": 0.1577,
+            "edge_at_price": 0.1295,
+            "ev": 0.2461,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 81.3% before shrink, this book's no-vig 49.8%.",
+              "Projection 4.01 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (81% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (81% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -180 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Rodgers Under 0.5 rush_yds",
+            "side": "under",
+            "line": 0.5,
+            "odds": -113.0,
+            "model_raw": 0.1868,
+            "model_prob": 0.3445,
+            "market_prob": 0.5021,
+            "fair_odds": 190,
+            "edge": -0.1577,
+            "edge_at_price": -0.1861,
+            "ev": -0.3507,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 0.5: 18.7% before shrink, this book's no-vig 50.2%.",
+              "Projection 4.01 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/23."
+            ],
+            "flags": [
+              "current season only 8 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
+              "model far from market (19% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (19% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +196 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Aaron Rodgers",
+      "player_id": "8439",
+      "team": "Pittsburgh Steelers",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
       "line": 239.5,
@@ -1832,154 +1980,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for -118 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Aaron Rodgers",
-      "player_id": "8439",
-      "team": "Pittsburgh Steelers",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 0.5,
-      "projection": 4.01,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "9/20",
-        "all": "12/23"
-      },
-      "recent": [
-        0.0,
-        6.0,
-        -1.0,
-        6.0,
-        0.0,
-        10.0,
-        5.0,
-        -3.0,
-        0.0,
-        20.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.883,
-          "fair_over": -757,
-          "fair_under": 757,
-          "L10": "5/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.813,
-          "fair_over": -435,
-          "fair_under": 435,
-          "L10": "5/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.812,
-          "fair_over": -433,
-          "fair_under": 433,
-          "L10": "5/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.766,
-          "fair_over": -327,
-          "fair_under": 327,
-          "L10": "5/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.756,
-          "fair_over": -309,
-          "fair_under": 309,
-          "L10": "5/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.671,
-          "fair_over": -204,
-          "fair_under": 204,
-          "L10": "5/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 8 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Aaron Rodgers Over 0.5 rush_yds",
-            "side": "over",
-            "line": 0.5,
-            "odds": -111.0,
-            "model_raw": 0.8132,
-            "model_prob": 0.6555,
-            "market_prob": 0.4979,
-            "fair_odds": -190,
-            "edge": 0.1577,
-            "edge_at_price": 0.1295,
-            "ev": 0.2461,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 81.3% before shrink, this book's no-vig 49.8%.",
-              "Projection 4.01 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/23."
-            ],
-            "flags": [
-              "current season only 8 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
-              "model far from market (81% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (81% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -180 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Aaron Rodgers Under 0.5 rush_yds",
-            "side": "under",
-            "line": 0.5,
-            "odds": -113.0,
-            "model_raw": 0.1868,
-            "model_prob": 0.3445,
-            "market_prob": 0.5021,
-            "fair_odds": 190,
-            "edge": -0.1577,
-            "edge_at_price": -0.1861,
-            "ev": -0.3507,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 0.5: 18.7% before shrink, this book's no-vig 50.2%.",
-              "Projection 4.01 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 12/23."
-            ],
-            "flags": [
-              "current season only 8 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 8 games; added 15 from prior season (role/team may differ)",
-              "model far from market (19% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (19% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +196 or better.",
             "proven": false
           }
         }
@@ -2883,169 +2883,6 @@
       "player": "Joe Burrow",
       "player_id": "3915511",
       "team": "Cincinnati Bengals",
-      "stat": "pass_yds",
-      "stat_label": "Pass yds",
-      "line": 288.5,
-      "projection": 280.5,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "4/10",
-        "L20": "5/16",
-        "all": "5/16"
-      },
-      "recent": [
-        271.0,
-        462.0,
-        292.0,
-        190.0,
-        428.0,
-        282.0,
-        207.0,
-        254.0,
-        236.0,
-        305.0
-      ],
-      "ladder": [
-        {
-          "line": 280.5,
-          "p_over": 0.5,
-          "fair_over": 100,
-          "fair_under": -100,
-          "L10": "5/10"
-        },
-        {
-          "line": 282.5,
-          "p_over": 0.465,
-          "fair_over": 115,
-          "fair_under": -115,
-          "L10": "4/10"
-        },
-        {
-          "line": 284.5,
-          "p_over": 0.458,
-          "fair_over": 118,
-          "fair_under": -118,
-          "L10": "4/10"
-        },
-        {
-          "line": 286.5,
-          "p_over": 0.452,
-          "fair_over": 121,
-          "fair_under": -121,
-          "L10": "4/10"
-        },
-        {
-          "line": 288.5,
-          "p_over": 0.446,
-          "fair_over": 124,
-          "fair_under": -124,
-          "L10": "4/10"
-        },
-        {
-          "line": 290.5,
-          "p_over": 0.44,
-          "fair_over": 127,
-          "fair_under": -127,
-          "L10": "4/10"
-        },
-        {
-          "line": 292.5,
-          "p_over": 0.405,
-          "fair_over": 147,
-          "fair_under": -147,
-          "L10": "3/10"
-        },
-        {
-          "line": 294.5,
-          "p_over": 0.399,
-          "fair_over": 151,
-          "fair_under": -151,
-          "L10": "3/10"
-        },
-        {
-          "line": 296.5,
-          "p_over": 0.392,
-          "fair_over": 155,
-          "fair_under": -155,
-          "L10": "3/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 8 games; added 8 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Joe Burrow Over 288.5 pass_yds",
-            "side": "over",
-            "line": 288.5,
-            "odds": -111.0,
-            "model_raw": 0.4461,
-            "model_prob": 0.472,
-            "market_prob": 0.4979,
-            "fair_odds": 112,
-            "edge": -0.0259,
-            "edge_at_price": -0.0541,
-            "ev": -0.1028,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 288.5: 44.6% before shrink, this book's no-vig 49.8%.",
-              "Projection 280.5 (Normal(sd 83.9)).",
-              "Hit rate over L5 3/5, L10 4/10, L20 5/16, all 5/16."
-            ],
-            "flags": [
-              "current season only 8 games; added 8 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 8 games; added 8 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +116 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Joe Burrow Under 288.5 pass_yds",
-            "side": "under",
-            "line": 288.5,
-            "odds": -113.0,
-            "model_raw": 0.5539,
-            "model_prob": 0.528,
-            "market_prob": 0.5021,
-            "fair_odds": -112,
-            "edge": 0.0259,
-            "edge_at_price": -0.0025,
-            "ev": -0.0047,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 288.5: 55.4% before shrink, this book's no-vig 50.2%.",
-              "Projection 280.5 (Normal(sd 83.9)).",
-              "Hit rate over L5 3/5, L10 4/10, L20 5/16, all 5/16."
-            ],
-            "flags": [
-              "current season only 8 games; added 8 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 8 games; added 8 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -107 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Joe Burrow",
-      "player_id": "3915511",
-      "team": "Cincinnati Bengals",
       "stat": "rush_yds",
       "stat_label": "Rush yds",
       "line": 7.5,
@@ -3202,6 +3039,169 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +122 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Joe Burrow",
+      "player_id": "3915511",
+      "team": "Cincinnati Bengals",
+      "stat": "pass_yds",
+      "stat_label": "Pass yds",
+      "line": 288.5,
+      "projection": 280.5,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "5/16",
+        "all": "5/16"
+      },
+      "recent": [
+        271.0,
+        462.0,
+        292.0,
+        190.0,
+        428.0,
+        282.0,
+        207.0,
+        254.0,
+        236.0,
+        305.0
+      ],
+      "ladder": [
+        {
+          "line": 280.5,
+          "p_over": 0.5,
+          "fair_over": 100,
+          "fair_under": -100,
+          "L10": "5/10"
+        },
+        {
+          "line": 282.5,
+          "p_over": 0.465,
+          "fair_over": 115,
+          "fair_under": -115,
+          "L10": "4/10"
+        },
+        {
+          "line": 284.5,
+          "p_over": 0.458,
+          "fair_over": 118,
+          "fair_under": -118,
+          "L10": "4/10"
+        },
+        {
+          "line": 286.5,
+          "p_over": 0.452,
+          "fair_over": 121,
+          "fair_under": -121,
+          "L10": "4/10"
+        },
+        {
+          "line": 288.5,
+          "p_over": 0.446,
+          "fair_over": 124,
+          "fair_under": -124,
+          "L10": "4/10"
+        },
+        {
+          "line": 290.5,
+          "p_over": 0.44,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "4/10"
+        },
+        {
+          "line": 292.5,
+          "p_over": 0.405,
+          "fair_over": 147,
+          "fair_under": -147,
+          "L10": "3/10"
+        },
+        {
+          "line": 294.5,
+          "p_over": 0.399,
+          "fair_over": 151,
+          "fair_under": -151,
+          "L10": "3/10"
+        },
+        {
+          "line": 296.5,
+          "p_over": 0.392,
+          "fair_over": 155,
+          "fair_under": -155,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 8 games; added 8 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Joe Burrow Over 288.5 pass_yds",
+            "side": "over",
+            "line": 288.5,
+            "odds": -111.0,
+            "model_raw": 0.4461,
+            "model_prob": 0.472,
+            "market_prob": 0.4979,
+            "fair_odds": 112,
+            "edge": -0.0259,
+            "edge_at_price": -0.0541,
+            "ev": -0.1028,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 288.5: 44.6% before shrink, this book's no-vig 49.8%.",
+              "Projection 280.5 (Normal(sd 83.9)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 5/16, all 5/16."
+            ],
+            "flags": [
+              "current season only 8 games; added 8 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 8 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Joe Burrow Under 288.5 pass_yds",
+            "side": "under",
+            "line": 288.5,
+            "odds": -113.0,
+            "model_raw": 0.5539,
+            "model_prob": 0.528,
+            "market_prob": 0.5021,
+            "fair_odds": -112,
+            "edge": 0.0259,
+            "edge_at_price": -0.0025,
+            "ev": -0.0047,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 288.5: 55.4% before shrink, this book's no-vig 50.2%.",
+              "Projection 280.5 (Normal(sd 83.9)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 5/16, all 5/16."
+            ],
+            "flags": [
+              "current season only 8 games; added 8 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 8 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -107 or better.",
             "proven": false
           }
         }
