@@ -35,9 +35,9 @@
     "draftkings": {
       "ml_home": -148.0,
       "ml_away": 124.0,
-      "total": 57.5,
-      "over_odds": -118.0,
-      "under_odds": -102.0,
+      "total": 58.5,
+      "over_odds": -102.0,
+      "under_odds": -118.0,
       "spread_home": -3.0,
       "spread_home_odds": -108.0,
       "spread_away": 3.0,
@@ -45,13 +45,13 @@
     }
   },
   "badge": null,
-  "model_summary": "Margin ISU +3.8 \u00b7 total 57.1",
+  "model_summary": "Margin ISU +3.8 \u00b7 total 57.0",
   "flags": [
     "injury report not available for this league"
   ],
   "notes": [
-    "ESPN matchup predictor: ISU 51.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin ISU +3.8, total 57.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "ESPN matchup predictor: ISU 51.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin ISU +3.8, total 57.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -220,47 +220,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 57.5",
+              "selection": "Over 58.5",
               "side": "over",
-              "line": 57.5,
-              "odds": -118.0,
-              "model_raw": 0.4897,
-              "model_prob": 0.5174,
-              "market_prob": 0.5174,
-              "fair_odds": -107,
-              "edge": -0.0,
-              "edge_at_price": -0.0239,
-              "ev": -0.0442,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model over 57.5: 49.0% vs market 51.7%.",
-                "Projected total 57.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 60.5 -> 57.5.",
-                "CIN L5 LLWLL (MOV 3.6), ISU L5 WLLWL (MOV 0.3)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [
-                "line move: market moved against the over (60.5 -> 57.5)"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -103 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 57.5",
-              "side": "under",
-              "line": 57.5,
+              "line": 58.5,
               "odds": -102.0,
-              "model_raw": 0.5103,
+              "model_raw": 0.4636,
               "model_prob": 0.4826,
               "market_prob": 0.4826,
               "fair_odds": 107,
@@ -270,8 +234,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 57.5: 51.0% vs market 48.3%.",
-                "Projected total 57.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 60.5 -> 57.5.",
+                "Model over 58.5: 46.4% vs market 48.3%.",
+                "Projected total 57.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 60.5 -> 58.5.",
                 "CIN L5 LLWLL (MOV 3.6), ISU L5 WLLWL (MOV 0.3)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -279,10 +243,46 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: total already moved toward under (60.5 -> 57.5); value may be gone"
+                "line move: market moved against the over (60.5 -> 58.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 58.5",
+              "side": "under",
+              "line": 58.5,
+              "odds": -118.0,
+              "model_raw": 0.5364,
+              "model_prob": 0.5174,
+              "market_prob": 0.5174,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model under 58.5: 53.6% vs market 51.7%.",
+                "Projected total 57.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 60.5 -> 58.5.",
+                "CIN L5 LLWLL (MOV 3.6), ISU L5 WLLWL (MOV 0.3)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [
+                "line move: total already moved toward under (60.5 -> 58.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -103 or better.",
               "proven": false
             }
           }
