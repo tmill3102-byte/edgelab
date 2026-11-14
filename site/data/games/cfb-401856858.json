@@ -23,7 +23,7 @@
     "id": "239"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -35,24 +35,32 @@
     "draftkings": {
       "ml_home": -310.0,
       "ml_away": 250.0,
+      "total": 49.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
       "spread_home": -8.5,
       "spread_home_odds": -112.0,
       "spread_away": 8.5,
-      "spread_away_odds": -108.0,
-      "total": 50.5,
-      "over_odds": -108.0,
-      "under_odds": -112.0
+      "spread_away_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin BYU +1.6 \u00b7 total 51.7",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: BYU 68.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin BYU +1.6, total 51.7; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WWLWL",
+    "away": "L5 WLLWW"
+  },
   "markets": [
     {
       "market": "ML",
@@ -66,26 +74,29 @@
               "side": "home",
               "line": null,
               "odds": -310.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5404,
+              "model_prob": 0.7258,
+              "market_prob": 0.7258,
+              "fair_odds": -265,
+              "edge": 0.0,
+              "edge_at_price": -0.0303,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model BYU win 54.0% vs market no-vig 72.6%.",
+                "v2 projected margin BYU +1.6 (ratings BYU -1.8, BAY +0.0, home edge 3.33); raw model 54.0%.",
+                "BAY L5 WLLWW (MOV 14.9), BYU L5 WWLWL (MOV 11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (54% vs 73%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes BYU 73%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -247 or better.",
+              "proven": false
             }
           }
         },
@@ -98,26 +109,29 @@
               "side": "away",
               "line": null,
               "odds": 250.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4596,
+              "model_prob": 0.2742,
+              "market_prob": 0.2742,
+              "fair_odds": 265,
+              "edge": 0.0,
+              "edge_at_price": -0.0115,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model BAY win 46.0% vs market no-vig 27.4%.",
+                "v2 projected margin BYU +1.6 (ratings BYU -1.8, BAY +0.0, home edge 3.33); raw model 46.0%.",
+                "BAY L5 WLLWW (MOV 14.9), BYU L5 WWLWL (MOV 11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (46% vs 27%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes BAY 27%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +272 or better.",
+              "proven": false
             }
           }
         }
@@ -135,26 +149,31 @@
               "side": "home",
               "line": -8.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.3275,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model BYU -8.5 covers 32.7% vs market 50.4%.",
+                "Projected margin BYU +1.6 vs line BYU -8.5.",
+                "BAY L5 WLLWW (MOV 14.9), BYU L5 WWLWL (MOV 11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-7.5 -> -8.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         },
@@ -167,26 +186,29 @@
               "side": "away",
               "line": 8.5,
               "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.6725,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model BAY +8.5 covers 67.3% vs market 49.6%.",
+                "Projected margin BYU +1.6 vs line BYU -8.5.",
+                "BAY L5 WLLWW (MOV 14.9), BYU L5 WWLWL (MOV 11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         }
@@ -200,30 +222,34 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 50.5",
+              "selection": "Over 49.5",
               "side": "over",
-              "line": 50.5,
-              "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 49.5,
+              "odds": -115.0,
+              "model_raw": 0.5546,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 49.5: 55.5% vs market 51.1%.",
+                "Projected total 51.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 49.5.",
+                "BAY L5 WLLWW (MOV 14.9), BYU L5 WWLWL (MOV 11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward over (47.5 -> 49.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -232,30 +258,34 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 50.5",
+              "selection": "Under 49.5",
               "side": "under",
-              "line": 50.5,
-              "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 49.5,
+              "odds": -105.0,
+              "model_raw": 0.4454,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 49.5: 44.5% vs market 48.9%.",
+                "Projected total 51.7 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 49.5.",
+                "BAY L5 WLLWW (MOV 14.9), BYU L5 WWLWL (MOV 11.2)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the under (47.5 -> 49.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }

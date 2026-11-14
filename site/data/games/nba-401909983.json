@@ -33,30 +33,36 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -148.0,
-      "ml_away": 125.0,
-      "total": 228.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0,
-      "spread_home": -2.5,
-      "spread_home_odds": -110.0,
-      "spread_away": 2.5,
-      "spread_away_odds": -110.0
+      "ml_home": -130.0,
+      "ml_away": 110.0,
+      "total": 227.5,
+      "over_odds": -108.0,
+      "under_odds": -112.0,
+      "spread_home": -1.5,
+      "spread_home_odds": -112.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -108.0
     }
   },
   "badge": null,
   "model_summary": "Margin MEM +3.0 \u00b7 total 228.2",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: MEM 65.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: MEM 66.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin MEM +3.0, total 228.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
         "name": "Quinten Post",
-        "status": "Day-To-Day",
+        "status": "Out",
         "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Jerami Grant",
+        "status": "Day-To-Day",
+        "pos": "F",
         "key": false
       },
       {
@@ -66,13 +72,13 @@
         "key": false
       },
       {
-        "name": "Scotty Pippen Jr.",
+        "name": "Ty Jerome",
         "status": "Out",
         "pos": "G",
-        "key": false
+        "key": true
       },
       {
-        "name": "Richie Saunders",
+        "name": "Scotty Pippen Jr.",
         "status": "Out",
         "pos": "G",
         "key": false
@@ -109,30 +115,32 @@
               "selection": "MEM ML",
               "side": "home",
               "line": null,
-              "odds": -148.0,
+              "odds": -130.0,
               "model_raw": 0.5963,
-              "model_prob": 0.5764,
-              "market_prob": 0.5731,
-              "fair_odds": -136,
-              "edge": 0.0033,
-              "edge_at_price": -0.0204,
-              "ev": -0.0341,
+              "model_prob": 0.5503,
+              "market_prob": 0.5427,
+              "fair_odds": -122,
+              "edge": 0.0076,
+              "edge_at_price": -0.0149,
+              "ev": -0.0263,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MEM win 59.6% vs market no-vig 57.3%.",
+                "Model MEM win 59.6% vs market no-vig 54.3%.",
                 "v2 projected margin MEM +3.0 (ratings MEM +0.2, BKN -4.8, home edge 1.5); raw model 59.6%.",
                 "BKN L5 LWLLW (MOV -5.1), MEM L5 LLWLW (MOV 8.1)",
                 "pace: projected total -0.2 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to MEM's margin (home b2b)",
+                "MEM key player(s) out: Ty Jerome (not in the rating; the market has usually priced this)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
               "caution": [
-                "line move: price drifted against this side (-195 -> -148)"
+                "line move: price drifted against this side (-195 -> -130)",
+                "injury: Ty Jerome out for this side and the rating doesn't know it"
               ],
-              "case_against": "Market makes MEM 57%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -130 or better.",
+              "case_against": "Market makes MEM 54%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -117 or better.",
               "proven": true
             }
           }
@@ -145,28 +153,29 @@
               "selection": "BKN ML",
               "side": "away",
               "line": null,
-              "odds": 125.0,
+              "odds": 110.0,
               "model_raw": 0.4037,
-              "model_prob": 0.4236,
-              "market_prob": 0.4269,
-              "fair_odds": 136,
-              "edge": -0.0033,
-              "edge_at_price": -0.0209,
-              "ev": -0.0469,
+              "model_prob": 0.4497,
+              "market_prob": 0.4573,
+              "fair_odds": 122,
+              "edge": -0.0076,
+              "edge_at_price": -0.0265,
+              "ev": -0.0557,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model BKN win 40.4% vs market no-vig 42.7%.",
+                "Model BKN win 40.4% vs market no-vig 45.7%.",
                 "v2 projected margin MEM +3.0 (ratings MEM +0.2, BKN -4.8, home edge 1.5); raw model 40.4%.",
                 "BKN L5 LWLLW (MOV -5.1), MEM L5 LLWLW (MOV 8.1)",
                 "pace: projected total -0.2 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to MEM's margin (home b2b)",
+                "MEM key player(s) out: Ty Jerome (not in the rating; the market has usually priced this)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes BKN 43%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +141 or better.",
+              "case_against": "Market makes BKN 46%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +127 or better.",
               "proven": true
             }
           }
@@ -181,31 +190,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "MEM -2.5",
+              "selection": "MEM -1.5",
               "side": "home",
-              "line": -2.5,
-              "odds": -110.0,
-              "model_raw": 0.5175,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": -1.5,
+              "odds": -112.0,
+              "model_raw": 0.5493,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MEM -2.5 covers 51.8% vs market 50.0%.",
-                "Projected margin MEM +3.0 vs line MEM -2.5.",
+                "Model MEM -1.5 covers 54.9% vs market 50.4%.",
+                "Projected margin MEM +3.0 vs line MEM -1.5.",
                 "BKN L5 LWLLW (MOV -5.1), MEM L5 LLWLW (MOV 8.1)",
                 "pace: projected total -0.2 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to MEM's margin (home b2b)",
+                "MEM key player(s) out: Ty Jerome (not in the rating; the market has usually priced this)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury: Ty Jerome out for this side and the rating doesn't know it"
+              ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -215,33 +227,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "BKN +2.5",
+              "selection": "BKN +1.5",
               "side": "away",
-              "line": 2.5,
-              "odds": -110.0,
-              "model_raw": 0.4825,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 1.5,
+              "odds": -108.0,
+              "model_raw": 0.4507,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model BKN +2.5 covers 48.2% vs market 50.0%.",
-                "Projected margin MEM +3.0 vs line MEM -2.5.",
+                "Model BKN +1.5 covers 45.1% vs market 49.6%.",
+                "Projected margin MEM +3.0 vs line MEM -1.5.",
                 "BKN L5 LWLLW (MOV -5.1), MEM L5 LLWLW (MOV 8.1)",
                 "pace: projected total -0.2 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to MEM's margin (home b2b)",
+                "MEM key player(s) out: Ty Jerome (not in the rating; the market has usually priced this)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: spread moved against this side (+5.5 -> +2.5)"
+                "line move: spread moved against this side (+5.5 -> +1.5)"
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }
@@ -256,31 +269,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 228.5",
+              "selection": "Over 227.5",
               "side": "over",
-              "line": 228.5,
-              "odds": -105.0,
-              "model_raw": 0.4935,
-              "model_prob": 0.4899,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
-              "edge": 0.0007,
-              "edge_at_price": -0.0223,
-              "ev": -0.0435,
+              "line": 227.5,
+              "odds": -108.0,
+              "model_raw": 0.5141,
+              "model_prob": 0.4988,
+              "market_prob": 0.4957,
+              "fair_odds": 100,
+              "edge": 0.0031,
+              "edge_at_price": -0.0204,
+              "ev": -0.0393,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 228.5: 49.3% vs market 48.9%.",
-                "Projected total 228.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 225.5 -> 228.5.",
+                "Model over 227.5: 51.4% vs market 49.6%.",
+                "Projected total 228.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 225.5 -> 227.5.",
                 "BKN L5 LWLLW (MOV -5.1), MEM L5 LLWLW (MOV 8.1)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
               "caution": [
-                "line move: total already moved toward over (225.5 -> 228.5); value may be gone"
+                "line move: total already moved toward over (225.5 -> 227.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +108 or better.",
+              "next_step": "Pass. Only interesting at +104 or better.",
               "proven": true
             }
           }
@@ -290,31 +303,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 228.5",
+              "selection": "Under 227.5",
               "side": "under",
-              "line": 228.5,
-              "odds": -115.0,
-              "model_raw": 0.5065,
-              "model_prob": 0.5101,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
-              "edge": -0.0007,
-              "edge_at_price": -0.0248,
-              "ev": -0.0463,
+              "line": 227.5,
+              "odds": -112.0,
+              "model_raw": 0.4859,
+              "model_prob": 0.5012,
+              "market_prob": 0.5043,
+              "fair_odds": -100,
+              "edge": -0.0031,
+              "edge_at_price": -0.0271,
+              "ev": -0.0513,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 228.5: 50.7% vs market 51.1%.",
-                "Projected total 228.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 225.5 -> 228.5.",
+                "Model under 227.5: 48.6% vs market 50.4%.",
+                "Projected total 228.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 225.5 -> 227.5.",
                 "BKN L5 LWLLW (MOV -5.1), MEM L5 LLWLW (MOV 8.1)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the under (225.5 -> 228.5)"
+                "line move: market moved against the under (225.5 -> 227.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -100 or better.",
+              "next_step": "Pass. Only interesting at +104 or better.",
               "proven": true
             }
           }
@@ -323,225 +336,6 @@
     }
   ],
   "props": [
-    {
-      "player": "Cameron Boozer",
-      "player_id": "5041935",
-      "team": "Memphis Grizzlies",
-      "stat": "pra",
-      "stat_label": "PRA",
-      "line": 32.5,
-      "projection": 30.33,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "3/10",
-        "L20": "4/12",
-        "all": "4/12"
-      },
-      "recent": [
-        25.0,
-        29.0,
-        37.0,
-        24.0,
-        20.0,
-        32.0,
-        39.0,
-        42.0,
-        24.0,
-        29.0
-      ],
-      "ladder": [
-        {
-          "line": 28.5,
-          "p_over": 0.597,
-          "fair_over": -148,
-          "fair_under": 148,
-          "L10": "6/10"
-        },
-        {
-          "line": 29.5,
-          "p_over": 0.502,
-          "fair_over": -101,
-          "fair_under": 101,
-          "L10": "4/10"
-        },
-        {
-          "line": 30.5,
-          "p_over": 0.464,
-          "fair_over": 115,
-          "fair_under": -115,
-          "L10": "4/10"
-        },
-        {
-          "line": 31.5,
-          "p_over": 0.427,
-          "fair_over": 134,
-          "fair_under": -134,
-          "L10": "4/10"
-        },
-        {
-          "line": 32.5,
-          "p_over": 0.361,
-          "fair_over": 177,
-          "fair_under": -177,
-          "L10": "3/10"
-        },
-        {
-          "line": 33.5,
-          "p_over": 0.327,
-          "fair_over": 206,
-          "fair_under": -206,
-          "L10": "3/10"
-        },
-        {
-          "line": 34.5,
-          "p_over": 0.294,
-          "fair_over": 240,
-          "fair_under": -240,
-          "L10": "3/10"
-        },
-        {
-          "line": 35.5,
-          "p_over": 0.264,
-          "fair_over": 279,
-          "fair_under": -279,
-          "L10": "3/10"
-        },
-        {
-          "line": 36.5,
-          "p_over": 0.237,
-          "fair_over": 321,
-          "fair_under": -321,
-          "L10": "3/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "betrivers": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Over 32.5 pra",
-            "side": "over",
-            "line": 32.5,
-            "odds": -109.0,
-            "model_raw": 0.3614,
-            "model_prob": 0.4109,
-            "market_prob": 0.4851,
-            "fair_odds": 143,
-            "edge": -0.0742,
-            "edge_at_price": -0.1107,
-            "ev": -0.2122,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 32.5: 36.1% before shrink, this book's no-vig 48.5%.",
-              "Projection 30.33 (Normal(sd 6.9)).",
-              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +148 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Over 32.5 pra",
-            "side": "over",
-            "line": 32.5,
-            "odds": 100.0,
-            "model_raw": 0.3614,
-            "model_prob": 0.4046,
-            "market_prob": 0.4694,
-            "fair_odds": 147,
-            "edge": -0.0648,
-            "edge_at_price": -0.0954,
-            "ev": -0.1908,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 32.5: 36.1% before shrink, this book's no-vig 46.9%.",
-              "Projection 30.33 (Normal(sd 6.9)).",
-              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +152 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "betrivers": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Under 32.5 pra",
-            "side": "under",
-            "line": 32.5,
-            "odds": -124.0,
-            "model_raw": 0.6386,
-            "model_prob": 0.5891,
-            "market_prob": 0.5149,
-            "fair_odds": -143,
-            "edge": 0.0742,
-            "edge_at_price": 0.0355,
-            "ev": 0.0642,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 32.5: 63.9% before shrink, this book's no-vig 51.5%.",
-              "Projection 30.33 (Normal(sd 6.9)).",
-              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -137 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Under 32.5 pra",
-            "side": "under",
-            "line": 32.5,
-            "odds": -130.0,
-            "model_raw": 0.6386,
-            "model_prob": 0.5954,
-            "market_prob": 0.5306,
-            "fair_odds": -147,
-            "edge": 0.0648,
-            "edge_at_price": 0.0302,
-            "ev": 0.0534,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 32.5: 63.9% before shrink, this book's no-vig 53.1%.",
-              "Projection 30.33 (Normal(sd 6.9)).",
-              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -140 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
     {
       "player": "Cameron Boozer",
       "player_id": "5041935",
@@ -943,6 +737,367 @@
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +121 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cameron Boozer",
+      "player_id": "5041935",
+      "team": "Memphis Grizzlies",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 9.5,
+      "projection": 9.57,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/12",
+        "all": "7/12"
+      },
+      "recent": [
+        10.0,
+        11.0,
+        7.0,
+        12.0,
+        6.0,
+        9.0,
+        9.0,
+        12.0,
+        7.0,
+        11.0
+      ],
+      "ladder": [
+        {
+          "line": 7.5,
+          "p_over": 0.781,
+          "fair_over": -357,
+          "fair_under": 357,
+          "L10": "7/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.764,
+          "fair_over": -324,
+          "fair_under": 324,
+          "L10": "7/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.688,
+          "fair_over": -220,
+          "fair_under": 220,
+          "L10": "7/10"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.62,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "5/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.509,
+          "fair_over": -104,
+          "fair_under": 104,
+          "L10": "5/10"
+        },
+        {
+          "line": 10.0,
+          "p_over": 0.42,
+          "fair_over": 138,
+          "fair_under": -138,
+          "L10": "4/10"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.358,
+          "fair_over": 179,
+          "fair_under": -179,
+          "L10": "4/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.239,
+          "fair_over": 319,
+          "fair_under": -319,
+          "L10": "2/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.201,
+          "fair_over": 397,
+          "fair_under": -397,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Over 9.5 reb",
+            "side": "over",
+            "line": 9.5,
+            "odds": 102.0,
+            "model_raw": 0.5092,
+            "model_prob": 0.4904,
+            "market_prob": 0.4621,
+            "fair_odds": 104,
+            "edge": 0.0283,
+            "edge_at_price": -0.0047,
+            "ev": -0.0095,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 9.5: 50.9% before shrink, this book's no-vig 46.2%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +108 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Over 9.5 reb",
+            "side": "over",
+            "line": 9.5,
+            "odds": 107.0,
+            "model_raw": 0.5092,
+            "model_prob": 0.4864,
+            "market_prob": 0.4523,
+            "fair_odds": 106,
+            "edge": 0.0342,
+            "edge_at_price": 0.0033,
+            "ev": 0.0069,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 9.5: 50.9% before shrink, this book's no-vig 45.2%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +110 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Over 9.5 reb",
+            "side": "over",
+            "line": 9.5,
+            "odds": 100.0,
+            "model_raw": 0.5092,
+            "model_prob": 0.4913,
+            "market_prob": 0.4646,
+            "fair_odds": 104,
+            "edge": 0.0268,
+            "edge_at_price": -0.0087,
+            "ev": -0.0173,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 9.5: 50.9% before shrink, this book's no-vig 46.5%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +108 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Over 9.5 reb",
+            "side": "over",
+            "line": 9.5,
+            "odds": 107.0,
+            "model_raw": 0.5092,
+            "model_prob": 0.487,
+            "market_prob": 0.4537,
+            "fair_odds": 105,
+            "edge": 0.0333,
+            "edge_at_price": 0.0039,
+            "ev": 0.0081,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 9.5: 50.9% before shrink, this book's no-vig 45.4%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +109 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Over 9.5 reb",
+            "side": "over",
+            "line": 9.5,
+            "odds": 110.0,
+            "model_raw": 0.5092,
+            "model_prob": 0.4839,
+            "market_prob": 0.4459,
+            "fair_odds": 107,
+            "edge": 0.038,
+            "edge_at_price": 0.0077,
+            "ev": 0.0161,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 9.5: 50.9% before shrink, this book's no-vig 44.6%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +111 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Under 9.5 reb",
+            "side": "under",
+            "line": 9.5,
+            "odds": -136.0,
+            "model_raw": 0.4908,
+            "model_prob": 0.5096,
+            "market_prob": 0.5379,
+            "fair_odds": -104,
+            "edge": -0.0283,
+            "edge_at_price": -0.0666,
+            "ev": -0.1156,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 9.5: 49.1% before shrink, this book's no-vig 53.8%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +100 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Under 9.5 reb",
+            "side": "under",
+            "line": 9.5,
+            "odds": -141.0,
+            "model_raw": 0.4908,
+            "model_prob": 0.5136,
+            "market_prob": 0.5477,
+            "fair_odds": -106,
+            "edge": -0.0342,
+            "edge_at_price": -0.0715,
+            "ev": -0.1222,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 9.5: 49.1% before shrink, this book's no-vig 54.8%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Under 9.5 reb",
+            "side": "under",
+            "line": 9.5,
+            "odds": -136.0,
+            "model_raw": 0.4908,
+            "model_prob": 0.5087,
+            "market_prob": 0.5354,
+            "fair_odds": -104,
+            "edge": -0.0268,
+            "edge_at_price": -0.0676,
+            "ev": -0.1173,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 9.5: 49.1% before shrink, this book's no-vig 53.5%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +101 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Under 9.5 reb",
+            "side": "under",
+            "line": 9.5,
+            "odds": -139.0,
+            "model_raw": 0.4908,
+            "model_prob": 0.513,
+            "market_prob": 0.5463,
+            "fair_odds": -105,
+            "edge": -0.0333,
+            "edge_at_price": -0.0686,
+            "ev": -0.118,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 9.5: 49.1% before shrink, this book's no-vig 54.6%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Under 9.5 reb",
+            "side": "under",
+            "line": 9.5,
+            "odds": -145.0,
+            "model_raw": 0.4908,
+            "model_prob": 0.5161,
+            "market_prob": 0.5541,
+            "fair_odds": -107,
+            "edge": -0.038,
+            "edge_at_price": -0.0757,
+            "ev": -0.1279,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 9.5: 49.1% before shrink, this book's no-vig 55.4%.",
+              "Projection 9.57 (Normal(sd 2.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -102 or better.",
             "proven": false
           }
         }
@@ -1758,91 +1913,91 @@
       "player": "Cameron Boozer",
       "player_id": "5041935",
       "team": "Memphis Grizzlies",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "line": 9.5,
-      "projection": 9.57,
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 32.5,
+      "projection": 30.33,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "7/12",
-        "all": "7/12"
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "4/12",
+        "all": "4/12"
       },
       "recent": [
-        10.0,
-        11.0,
-        7.0,
-        12.0,
-        6.0,
-        9.0,
-        9.0,
-        12.0,
-        7.0,
-        11.0
+        25.0,
+        29.0,
+        37.0,
+        24.0,
+        20.0,
+        32.0,
+        39.0,
+        42.0,
+        24.0,
+        29.0
       ],
       "ladder": [
         {
-          "line": 7.5,
-          "p_over": 0.781,
-          "fair_over": -357,
-          "fair_under": 357,
-          "L10": "7/10"
+          "line": 28.5,
+          "p_over": 0.597,
+          "fair_over": -148,
+          "fair_under": 148,
+          "L10": "6/10"
         },
         {
-          "line": 8.0,
-          "p_over": 0.764,
-          "fair_over": -324,
-          "fair_under": 324,
-          "L10": "7/10"
-        },
-        {
-          "line": 8.5,
-          "p_over": 0.688,
-          "fair_over": -220,
-          "fair_under": 220,
-          "L10": "7/10"
-        },
-        {
-          "line": 9.0,
-          "p_over": 0.62,
-          "fair_over": -163,
-          "fair_under": 163,
-          "L10": "5/10"
-        },
-        {
-          "line": 9.5,
-          "p_over": 0.509,
-          "fair_over": -104,
-          "fair_under": 104,
-          "L10": "5/10"
-        },
-        {
-          "line": 10.0,
-          "p_over": 0.42,
-          "fair_over": 138,
-          "fair_under": -138,
+          "line": 29.5,
+          "p_over": 0.502,
+          "fair_over": -101,
+          "fair_under": 101,
           "L10": "4/10"
         },
         {
-          "line": 10.5,
-          "p_over": 0.358,
-          "fair_over": 179,
-          "fair_under": -179,
+          "line": 30.5,
+          "p_over": 0.464,
+          "fair_over": 115,
+          "fair_under": -115,
           "L10": "4/10"
         },
         {
-          "line": 11.0,
-          "p_over": 0.239,
-          "fair_over": 319,
-          "fair_under": -319,
-          "L10": "2/10"
+          "line": 31.5,
+          "p_over": 0.427,
+          "fair_over": 134,
+          "fair_under": -134,
+          "L10": "4/10"
         },
         {
-          "line": 11.5,
-          "p_over": 0.201,
-          "fair_over": 397,
-          "fair_under": -397,
-          "L10": "2/10"
+          "line": 32.5,
+          "p_over": 0.361,
+          "fair_over": 177,
+          "fair_under": -177,
+          "L10": "3/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.327,
+          "fair_over": 206,
+          "fair_under": -206,
+          "L10": "3/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.294,
+          "fair_over": 240,
+          "fair_under": -240,
+          "L10": "3/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.264,
+          "fair_over": 279,
+          "fair_under": -279,
+          "L10": "3/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.237,
+          "fair_over": 321,
+          "fair_under": -321,
+          "L10": "3/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -1850,609 +2005,124 @@
       "status": null,
       "sides": {
         "over": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Over 9.5 reb",
-            "side": "over",
-            "line": 9.5,
-            "odds": 102.0,
-            "model_raw": 0.5092,
-            "model_prob": 0.4904,
-            "market_prob": 0.4621,
-            "fair_odds": 104,
-            "edge": 0.0283,
-            "edge_at_price": -0.0047,
-            "ev": -0.0095,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 9.5: 50.9% before shrink, this book's no-vig 46.2%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +108 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Over 9.5 reb",
-            "side": "over",
-            "line": 9.5,
-            "odds": 107.0,
-            "model_raw": 0.5092,
-            "model_prob": 0.4864,
-            "market_prob": 0.4523,
-            "fair_odds": 106,
-            "edge": 0.0342,
-            "edge_at_price": 0.0033,
-            "ev": 0.0069,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 9.5: 50.9% before shrink, this book's no-vig 45.2%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +110 or better and re-check injuries near start.",
-            "proven": false
-          },
           "betrivers": {
             "market": "Prop",
-            "selection": "Cameron Boozer Over 9.5 reb",
+            "selection": "Cameron Boozer Over 32.5 pra",
             "side": "over",
-            "line": 9.5,
+            "line": 32.5,
+            "odds": -109.0,
+            "model_raw": 0.3614,
+            "model_prob": 0.4109,
+            "market_prob": 0.4851,
+            "fair_odds": 143,
+            "edge": -0.0742,
+            "edge_at_price": -0.1107,
+            "ev": -0.2122,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 32.5: 36.1% before shrink, this book's no-vig 48.5%.",
+              "Projection 30.33 (Normal(sd 6.9)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +148 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cameron Boozer Over 32.5 pra",
+            "side": "over",
+            "line": 32.5,
             "odds": 100.0,
-            "model_raw": 0.5092,
-            "model_prob": 0.4913,
-            "market_prob": 0.4646,
-            "fair_odds": 104,
-            "edge": 0.0268,
-            "edge_at_price": -0.0087,
-            "ev": -0.0173,
+            "model_raw": 0.3614,
+            "model_prob": 0.4046,
+            "market_prob": 0.4694,
+            "fair_odds": 147,
+            "edge": -0.0648,
+            "edge_at_price": -0.0954,
+            "ev": -0.1908,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 9.5: 50.9% before shrink, this book's no-vig 46.5%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+              "Model over 32.5: 36.1% before shrink, this book's no-vig 46.9%.",
+              "Projection 30.33 (Normal(sd 6.9)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
             ],
             "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +108 or better.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Over 9.5 reb",
-            "side": "over",
-            "line": 9.5,
-            "odds": 107.0,
-            "model_raw": 0.5092,
-            "model_prob": 0.487,
-            "market_prob": 0.4537,
-            "fair_odds": 105,
-            "edge": 0.0333,
-            "edge_at_price": 0.0039,
-            "ev": 0.0081,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 9.5: 50.9% before shrink, this book's no-vig 45.4%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            "caution": [
+              "model far from market (36% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
-            "flags": [],
-            "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +109 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Over 9.5 reb",
-            "side": "over",
-            "line": 9.5,
-            "odds": 110.0,
-            "model_raw": 0.5092,
-            "model_prob": 0.4839,
-            "market_prob": 0.4459,
-            "fair_odds": 107,
-            "edge": 0.038,
-            "edge_at_price": 0.0077,
-            "ev": 0.0161,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 9.5: 50.9% before shrink, this book's no-vig 44.6%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +111 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +152 or better.",
             "proven": false
           }
         },
         "under": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Under 9.5 reb",
-            "side": "under",
-            "line": 9.5,
-            "odds": -136.0,
-            "model_raw": 0.4908,
-            "model_prob": 0.5096,
-            "market_prob": 0.5379,
-            "fair_odds": -104,
-            "edge": -0.0283,
-            "edge_at_price": -0.0666,
-            "ev": -0.1156,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 9.5: 49.1% before shrink, this book's no-vig 53.8%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +100 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Under 9.5 reb",
-            "side": "under",
-            "line": 9.5,
-            "odds": -141.0,
-            "model_raw": 0.4908,
-            "model_prob": 0.5136,
-            "market_prob": 0.5477,
-            "fair_odds": -106,
-            "edge": -0.0342,
-            "edge_at_price": -0.0715,
-            "ev": -0.1222,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 9.5: 49.1% before shrink, this book's no-vig 54.8%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -101 or better.",
-            "proven": false
-          },
           "betrivers": {
             "market": "Prop",
-            "selection": "Cameron Boozer Under 9.5 reb",
+            "selection": "Cameron Boozer Under 32.5 pra",
             "side": "under",
-            "line": 9.5,
-            "odds": -136.0,
-            "model_raw": 0.4908,
-            "model_prob": 0.5087,
-            "market_prob": 0.5354,
-            "fair_odds": -104,
-            "edge": -0.0268,
-            "edge_at_price": -0.0676,
-            "ev": -0.1173,
+            "line": 32.5,
+            "odds": -124.0,
+            "model_raw": 0.6386,
+            "model_prob": 0.5891,
+            "market_prob": 0.5149,
+            "fair_odds": -143,
+            "edge": 0.0742,
+            "edge_at_price": 0.0355,
+            "ev": 0.0642,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 9.5: 49.1% before shrink, this book's no-vig 53.5%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+              "Model under 32.5: 63.9% before shrink, this book's no-vig 51.5%.",
+              "Projection 30.33 (Normal(sd 6.9)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
             ],
             "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +101 or better.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Cameron Boozer Under 9.5 reb",
-            "side": "under",
-            "line": 9.5,
-            "odds": -139.0,
-            "model_raw": 0.4908,
-            "model_prob": 0.513,
-            "market_prob": 0.5463,
-            "fair_odds": -105,
-            "edge": -0.0333,
-            "edge_at_price": -0.0686,
-            "ev": -0.118,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 9.5: 49.1% before shrink, this book's no-vig 54.6%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+            "caution": [
+              "model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
             ],
-            "flags": [],
-            "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -101 or better.",
+            "next_step": "Monitor only; if anything, wait for -137 or better and re-check injuries near start.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Cameron Boozer Under 9.5 reb",
+            "selection": "Cameron Boozer Under 32.5 pra",
             "side": "under",
-            "line": 9.5,
-            "odds": -145.0,
-            "model_raw": 0.4908,
-            "model_prob": 0.5161,
-            "market_prob": 0.5541,
-            "fair_odds": -107,
-            "edge": -0.038,
-            "edge_at_price": -0.0757,
-            "ev": -0.1279,
+            "line": 32.5,
+            "odds": -130.0,
+            "model_raw": 0.6386,
+            "model_prob": 0.5954,
+            "market_prob": 0.5306,
+            "fair_odds": -147,
+            "edge": 0.0648,
+            "edge_at_price": 0.0302,
+            "ev": 0.0534,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 9.5: 49.1% before shrink, this book's no-vig 55.4%.",
-              "Projection 9.57 (Normal(sd 2.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/12, all 7/12."
+              "Model under 32.5: 63.9% before shrink, this book's no-vig 53.1%.",
+              "Projection 30.33 (Normal(sd 6.9)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 4/12, all 4/12."
             ],
             "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -102 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Cedric Coward",
-      "player_id": "4903027",
-      "team": "Memphis Grizzlies",
-      "stat": "pra",
-      "stat_label": "PRA",
-      "line": 23.5,
-      "projection": 24.06,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "6/10",
-        "L20": "8/20",
-        "all": "9/26"
-      },
-      "recent": [
-        27.0,
-        30.0,
-        13.0,
-        19.0,
-        36.0,
-        22.0,
-        19.0,
-        28.0,
-        30.0,
-        29.0
-      ],
-      "ladder": [
-        {
-          "line": 19.5,
-          "p_over": 0.726,
-          "fair_over": -265,
-          "fair_under": 265,
-          "L10": "7/10"
-        },
-        {
-          "line": 20.5,
-          "p_over": 0.693,
-          "fair_over": -226,
-          "fair_under": 226,
-          "L10": "7/10"
-        },
-        {
-          "line": 21.5,
-          "p_over": 0.658,
-          "fair_over": -192,
-          "fair_under": 192,
-          "L10": "7/10"
-        },
-        {
-          "line": 22.5,
-          "p_over": 0.591,
-          "fair_over": -144,
-          "fair_under": 144,
-          "L10": "6/10"
-        },
-        {
-          "line": 23.5,
-          "p_over": 0.551,
-          "fair_over": -123,
-          "fair_under": 123,
-          "L10": "6/10"
-        },
-        {
-          "line": 24.5,
-          "p_over": 0.512,
-          "fair_over": -105,
-          "fair_under": 105,
-          "L10": "6/10"
-        },
-        {
-          "line": 25.5,
-          "p_over": 0.472,
-          "fair_over": 112,
-          "fair_under": -112,
-          "L10": "6/10"
-        },
-        {
-          "line": 26.5,
-          "p_over": 0.434,
-          "fair_over": 130,
-          "fair_under": -130,
-          "L10": "6/10"
-        },
-        {
-          "line": 27.5,
-          "p_over": 0.369,
-          "fair_over": 171,
-          "fair_under": -171,
-          "L10": "5/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 11 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Cedric Coward Over 23.5 pra",
-            "side": "over",
-            "line": 23.5,
-            "odds": -122.0,
-            "model_raw": 0.5513,
-            "model_prob": 0.5327,
-            "market_prob": 0.5142,
-            "fair_odds": -114,
-            "edge": 0.0186,
-            "edge_at_price": -0.0168,
-            "ev": -0.0306,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 23.5: 55.1% before shrink, this book's no-vig 51.4%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
             "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -109 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Cedric Coward Over 23.5 pra",
-            "side": "over",
-            "line": 23.5,
-            "odds": -111.0,
-            "model_raw": 0.5513,
-            "model_prob": 0.5216,
-            "market_prob": 0.4919,
-            "fair_odds": -109,
-            "edge": 0.0297,
-            "edge_at_price": -0.0045,
-            "ev": -0.0085,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 23.5: 55.1% before shrink, this book's no-vig 49.2%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -105 or better.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Cedric Coward Over 23.5 pra",
-            "side": "over",
-            "line": 23.5,
-            "odds": -110.0,
-            "model_raw": 0.5513,
-            "model_prob": 0.5215,
-            "market_prob": 0.4918,
-            "fair_odds": -109,
-            "edge": 0.0298,
-            "edge_at_price": -0.0023,
-            "ev": -0.0043,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 23.5: 55.1% before shrink, this book's no-vig 49.2%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -105 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cedric Coward Over 23.5 pra",
-            "side": "over",
-            "line": 23.5,
-            "odds": -110.0,
-            "model_raw": 0.5513,
-            "model_prob": 0.5206,
-            "market_prob": 0.4899,
-            "fair_odds": -109,
-            "edge": 0.0307,
-            "edge_at_price": -0.0032,
-            "ev": -0.0061,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 23.5: 55.1% before shrink, this book's no-vig 49.0%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -104 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Cedric Coward Under 23.5 pra",
-            "side": "under",
-            "line": 23.5,
-            "odds": -108.0,
-            "model_raw": 0.4487,
-            "model_prob": 0.4673,
-            "market_prob": 0.4858,
-            "fair_odds": 114,
-            "edge": -0.0186,
-            "edge_at_price": -0.052,
-            "ev": -0.1001,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 23.5: 44.9% before shrink, this book's no-vig 48.6%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+              "model far from market (64% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "downgraded High -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +118 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Cedric Coward Under 23.5 pra",
-            "side": "under",
-            "line": 23.5,
-            "odds": -119.0,
-            "model_raw": 0.4487,
-            "model_prob": 0.4784,
-            "market_prob": 0.5081,
-            "fair_odds": 109,
-            "edge": -0.0297,
-            "edge_at_price": -0.065,
-            "ev": -0.1196,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 23.5: 44.9% before shrink, this book's no-vig 50.8%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +113 or better.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Cedric Coward Under 23.5 pra",
-            "side": "under",
-            "line": 23.5,
-            "odds": -118.0,
-            "model_raw": 0.4487,
-            "model_prob": 0.4785,
-            "market_prob": 0.5082,
-            "fair_odds": 109,
-            "edge": -0.0298,
-            "edge_at_price": -0.0628,
-            "ev": -0.1161,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 23.5: 44.9% before shrink, this book's no-vig 50.8%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +113 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cedric Coward Under 23.5 pra",
-            "side": "under",
-            "line": 23.5,
-            "odds": -120.0,
-            "model_raw": 0.4487,
-            "model_prob": 0.4794,
-            "market_prob": 0.5101,
-            "fair_odds": 109,
-            "edge": -0.0307,
-            "edge_at_price": -0.066,
-            "ev": -0.1211,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 23.5: 44.9% before shrink, this book's no-vig 51.0%.",
-              "Projection 24.06 (Normal(sd 6.5)).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +113 or better.",
+            "next_step": "Monitor only; if anything, wait for -140 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2911,6 +2581,241 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cedric Coward",
+      "player_id": "4903027",
+      "team": "Memphis Grizzlies",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 6.5,
+      "projection": 7.71,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "9/10",
+        "L20": "12/20",
+        "all": "14/26"
+      },
+      "recent": [
+        7.0,
+        11.0,
+        6.0,
+        9.0,
+        9.0,
+        9.0,
+        7.0,
+        7.0,
+        11.0,
+        11.0
+      ],
+      "ladder": [
+        {
+          "line": 4.5,
+          "p_over": 0.895,
+          "fair_over": -848,
+          "fair_under": 848,
+          "L10": "10/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.886,
+          "fair_over": -777,
+          "fair_under": 777,
+          "L10": "10/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.828,
+          "fair_over": -483,
+          "fair_under": 483,
+          "L10": "10/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.804,
+          "fair_over": -411,
+          "fair_under": 411,
+          "L10": "9/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.714,
+          "fair_over": -250,
+          "fair_under": 250,
+          "L10": "9/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.657,
+          "fair_over": -191,
+          "fair_under": 191,
+          "L10": "6/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.533,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "6/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.481,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "6/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.443,
+          "fair_over": 126,
+          "fair_under": -126,
+          "L10": "6/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cedric Coward Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": -142.0,
+            "model_raw": 0.7143,
+            "model_prob": 0.632,
+            "market_prob": 0.5497,
+            "fair_odds": -172,
+            "edge": 0.0823,
+            "edge_at_price": 0.0452,
+            "ev": 0.077,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 71.4% before shrink, this book's no-vig 55.0%.",
+              "Projection 7.71 (Poisson).",
+              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "model far from market (71% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (71% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -163 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cedric Coward Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": -150.0,
+            "model_raw": 0.7143,
+            "model_prob": 0.6388,
+            "market_prob": 0.5633,
+            "fair_odds": -177,
+            "edge": 0.0755,
+            "edge_at_price": 0.0388,
+            "ev": 0.0647,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 71.4% before shrink, this book's no-vig 56.3%.",
+              "Projection 7.71 (Poisson).",
+              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "model far from market (71% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (71% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -168 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cedric Coward Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": 108.0,
+            "model_raw": 0.2857,
+            "model_prob": 0.368,
+            "market_prob": 0.4503,
+            "fair_odds": 172,
+            "edge": -0.0823,
+            "edge_at_price": -0.1127,
+            "ev": -0.2345,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 28.6% before shrink, this book's no-vig 45.0%.",
+              "Projection 7.71 (Poisson).",
+              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "model far from market (29% vs 45%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (29% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +177 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cedric Coward Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": 115.0,
+            "model_raw": 0.2857,
+            "model_prob": 0.3612,
+            "market_prob": 0.4367,
+            "fair_odds": 177,
+            "edge": -0.0755,
+            "edge_at_price": -0.1039,
+            "ev": -0.2234,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 28.6% before shrink, this book's no-vig 43.7%.",
+              "Projection 7.71 (Poisson).",
+              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
+              "model far from market (29% vs 45%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (29% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +182 or better.",
             "proven": false
           }
         }
@@ -3666,91 +3571,91 @@
       "player": "Cedric Coward",
       "player_id": "4903027",
       "team": "Memphis Grizzlies",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "line": 6.5,
-      "projection": 7.71,
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 23.5,
+      "projection": 24.06,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "9/10",
-        "L20": "12/20",
-        "all": "14/26"
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "8/20",
+        "all": "9/26"
       },
       "recent": [
-        7.0,
-        11.0,
-        6.0,
-        9.0,
-        9.0,
-        9.0,
-        7.0,
-        7.0,
-        11.0,
-        11.0
+        27.0,
+        30.0,
+        13.0,
+        19.0,
+        36.0,
+        22.0,
+        19.0,
+        28.0,
+        30.0,
+        29.0
       ],
       "ladder": [
         {
-          "line": 4.5,
-          "p_over": 0.895,
-          "fair_over": -848,
-          "fair_under": 848,
-          "L10": "10/10"
+          "line": 19.5,
+          "p_over": 0.726,
+          "fair_over": -265,
+          "fair_under": 265,
+          "L10": "7/10"
         },
         {
-          "line": 5.0,
-          "p_over": 0.886,
-          "fair_over": -777,
-          "fair_under": 777,
-          "L10": "10/10"
+          "line": 20.5,
+          "p_over": 0.693,
+          "fair_over": -226,
+          "fair_under": 226,
+          "L10": "7/10"
         },
         {
-          "line": 5.5,
-          "p_over": 0.828,
-          "fair_over": -483,
-          "fair_under": 483,
-          "L10": "10/10"
+          "line": 21.5,
+          "p_over": 0.658,
+          "fair_over": -192,
+          "fair_under": 192,
+          "L10": "7/10"
         },
         {
-          "line": 6.0,
-          "p_over": 0.804,
-          "fair_over": -411,
-          "fair_under": 411,
-          "L10": "9/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.714,
-          "fair_over": -250,
-          "fair_under": 250,
-          "L10": "9/10"
-        },
-        {
-          "line": 7.0,
-          "p_over": 0.657,
-          "fair_over": -191,
-          "fair_under": 191,
+          "line": 22.5,
+          "p_over": 0.591,
+          "fair_over": -144,
+          "fair_under": 144,
           "L10": "6/10"
         },
         {
-          "line": 7.5,
-          "p_over": 0.533,
-          "fair_over": -114,
-          "fair_under": 114,
+          "line": 23.5,
+          "p_over": 0.551,
+          "fair_over": -123,
+          "fair_under": 123,
           "L10": "6/10"
         },
         {
-          "line": 8.0,
-          "p_over": 0.481,
-          "fair_over": 108,
-          "fair_under": -108,
+          "line": 24.5,
+          "p_over": 0.512,
+          "fair_over": -105,
+          "fair_under": 105,
           "L10": "6/10"
         },
         {
-          "line": 8.5,
-          "p_over": 0.443,
-          "fair_over": 126,
-          "fair_under": -126,
+          "line": 25.5,
+          "p_over": 0.472,
+          "fair_over": 112,
+          "fair_under": -112,
           "L10": "6/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.434,
+          "fair_over": 130,
+          "fair_under": -130,
+          "L10": "6/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.369,
+          "fair_over": 171,
+          "fair_under": -171,
+          "L10": "5/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -3760,481 +3665,246 @@
       "status": null,
       "sides": {
         "over": {
-          "draftkings": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Cedric Coward Over 6.5 reb",
+            "selection": "Cedric Coward Over 23.5 pra",
             "side": "over",
-            "line": 6.5,
-            "odds": -142.0,
-            "model_raw": 0.7143,
-            "model_prob": 0.632,
-            "market_prob": 0.5497,
-            "fair_odds": -172,
-            "edge": 0.0823,
-            "edge_at_price": 0.0452,
-            "ev": 0.077,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 6.5: 71.4% before shrink, this book's no-vig 55.0%.",
-              "Projection 7.71 (Poisson).",
-              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
-              "model far from market (71% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (71% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -163 or better and re-check injuries near start.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cedric Coward Over 6.5 reb",
-            "side": "over",
-            "line": 6.5,
-            "odds": -150.0,
-            "model_raw": 0.7143,
-            "model_prob": 0.6388,
-            "market_prob": 0.5633,
-            "fair_odds": -177,
-            "edge": 0.0755,
-            "edge_at_price": 0.0388,
-            "ev": 0.0647,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 6.5: 71.4% before shrink, this book's no-vig 56.3%.",
-              "Projection 7.71 (Poisson).",
-              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
-              "model far from market (71% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (71% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -168 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Cedric Coward Under 6.5 reb",
-            "side": "under",
-            "line": 6.5,
-            "odds": 108.0,
-            "model_raw": 0.2857,
-            "model_prob": 0.368,
-            "market_prob": 0.4503,
-            "fair_odds": 172,
-            "edge": -0.0823,
-            "edge_at_price": -0.1127,
-            "ev": -0.2345,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 6.5: 28.6% before shrink, this book's no-vig 45.0%.",
-              "Projection 7.71 (Poisson).",
-              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
-              "model far from market (29% vs 45%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (29% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +177 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Cedric Coward Under 6.5 reb",
-            "side": "under",
-            "line": 6.5,
-            "odds": 115.0,
-            "model_raw": 0.2857,
-            "model_prob": 0.3612,
-            "market_prob": 0.4367,
-            "fair_odds": 177,
-            "edge": -0.0755,
-            "edge_at_price": -0.1039,
-            "ev": -0.2234,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 6.5: 28.6% before shrink, this book's no-vig 43.7%.",
-              "Projection 7.71 (Poisson).",
-              "Hit rate over L5 4/5, L10 9/10, L20 12/20, all 14/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)",
-              "model far from market (29% vs 45%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (29% vs 44%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +182 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Egor Demin",
-      "player_id": "5175643",
-      "team": "Brooklyn Nets",
-      "stat": "pra",
-      "stat_label": "PRA",
-      "line": 16.5,
-      "projection": 15.1,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "9/20",
-        "all": "9/20"
-      },
-      "recent": [
-        24.0,
-        5.0,
-        4.0,
-        32.0,
-        10.0,
-        7.0,
-        20.0,
-        10.0,
-        18.0,
-        11.0
-      ],
-      "ladder": [
-        {
-          "line": 12.5,
-          "p_over": 0.548,
-          "fair_over": -121,
-          "fair_under": 121,
-          "L10": "4/10"
-        },
-        {
-          "line": 13.5,
-          "p_over": 0.519,
-          "fair_over": -108,
-          "fair_under": 108,
-          "L10": "4/10"
-        },
-        {
-          "line": 14.5,
-          "p_over": 0.489,
-          "fair_over": 105,
-          "fair_under": -105,
-          "L10": "4/10"
-        },
-        {
-          "line": 15.5,
-          "p_over": 0.459,
-          "fair_over": 118,
-          "fair_under": -118,
-          "L10": "4/10"
-        },
-        {
-          "line": 16.5,
-          "p_over": 0.429,
-          "fair_over": 133,
-          "fair_under": -133,
-          "L10": "4/10"
-        },
-        {
-          "line": 17.5,
-          "p_over": 0.4,
-          "fair_over": 150,
-          "fair_under": -150,
-          "L10": "4/10"
-        },
-        {
-          "line": 18.5,
-          "p_over": 0.342,
-          "fair_over": 192,
-          "fair_under": -192,
-          "L10": "3/10"
-        },
-        {
-          "line": 19.5,
-          "p_over": 0.315,
-          "fair_over": 217,
-          "fair_under": -217,
-          "L10": "3/10"
-        },
-        {
-          "line": 20.5,
-          "p_over": 0.26,
-          "fair_over": 284,
-          "fair_under": -284,
-          "L10": "2/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 5 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "betrivers": {
-            "market": "Prop",
-            "selection": "Egor Demin Over 16.5 pra",
-            "side": "over",
-            "line": 16.5,
-            "odds": -110.0,
-            "model_raw": 0.429,
-            "model_prob": 0.4585,
-            "market_prob": 0.488,
-            "fair_odds": 118,
-            "edge": -0.0295,
-            "edge_at_price": -0.0653,
-            "ev": -0.1247,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 16.5: 42.9% before shrink, this book's no-vig 48.8%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +122 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Egor Demin Over 16.5 pra",
-            "side": "over",
-            "line": 16.5,
-            "odds": -105.0,
-            "model_raw": 0.429,
-            "model_prob": 0.4543,
-            "market_prob": 0.4797,
-            "fair_odds": 120,
-            "edge": -0.0253,
-            "edge_at_price": -0.0578,
-            "ev": -0.1129,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 16.5: 42.9% before shrink, this book's no-vig 48.0%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +125 or better.",
-            "proven": false
-          },
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Egor Demin Over 16.5 pra",
-            "side": "over",
-            "line": 16.5,
-            "odds": -102.0,
-            "model_raw": 0.429,
-            "model_prob": 0.4517,
-            "market_prob": 0.4744,
-            "fair_odds": 121,
-            "edge": -0.0227,
-            "edge_at_price": -0.0533,
-            "ev": -0.1055,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 16.5: 42.9% before shrink, this book's no-vig 47.4%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +126 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Egor Demin Over 16.5 pra",
-            "side": "over",
-            "line": 16.5,
-            "odds": -105.0,
-            "model_raw": 0.429,
-            "model_prob": 0.4543,
-            "market_prob": 0.4797,
-            "fair_odds": 120,
-            "edge": -0.0253,
-            "edge_at_price": -0.0578,
-            "ev": -0.1129,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 16.5: 42.9% before shrink, this book's no-vig 48.0%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +125 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "betrivers": {
-            "market": "Prop",
-            "selection": "Egor Demin Under 16.5 pra",
-            "side": "under",
-            "line": 16.5,
+            "line": 23.5,
             "odds": -122.0,
-            "model_raw": 0.571,
-            "model_prob": 0.5415,
-            "market_prob": 0.512,
-            "fair_odds": -118,
-            "edge": 0.0295,
-            "edge_at_price": -0.0081,
-            "ev": -0.0147,
+            "model_raw": 0.5513,
+            "model_prob": 0.5327,
+            "market_prob": 0.5142,
+            "fair_odds": -114,
+            "edge": 0.0186,
+            "edge_at_price": -0.0168,
+            "ev": -0.0306,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 16.5: 57.1% before shrink, this book's no-vig 51.2%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
+              "Model over 23.5: 55.1% before shrink, this book's no-vig 51.4%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
             ],
             "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -113 or better.",
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -109 or better.",
             "proven": false
           },
-          "betmgm": {
+          "draftkings": {
             "market": "Prop",
-            "selection": "Egor Demin Under 16.5 pra",
-            "side": "under",
-            "line": 16.5,
-            "odds": -125.0,
-            "model_raw": 0.571,
-            "model_prob": 0.5457,
-            "market_prob": 0.5203,
-            "fair_odds": -120,
-            "edge": 0.0253,
-            "edge_at_price": -0.0099,
-            "ev": -0.0178,
+            "selection": "Cedric Coward Over 23.5 pra",
+            "side": "over",
+            "line": 23.5,
+            "odds": -111.0,
+            "model_raw": 0.5513,
+            "model_prob": 0.5216,
+            "market_prob": 0.4919,
+            "fair_odds": -109,
+            "edge": 0.0297,
+            "edge_at_price": -0.0045,
+            "ev": -0.0085,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 16.5: 57.1% before shrink, this book's no-vig 52.0%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
+              "Model over 23.5: 55.1% before shrink, this book's no-vig 49.2%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
             ],
             "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -115 or better.",
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -105 or better.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Egor Demin Under 16.5 pra",
-            "side": "under",
-            "line": 16.5,
-            "odds": -127.0,
-            "model_raw": 0.571,
-            "model_prob": 0.5483,
-            "market_prob": 0.5256,
-            "fair_odds": -121,
-            "edge": 0.0227,
-            "edge_at_price": -0.0112,
-            "ev": -0.02,
+            "selection": "Cedric Coward Over 23.5 pra",
+            "side": "over",
+            "line": 23.5,
+            "odds": -110.0,
+            "model_raw": 0.5513,
+            "model_prob": 0.5215,
+            "market_prob": 0.4918,
+            "fair_odds": -109,
+            "edge": 0.0298,
+            "edge_at_price": -0.0023,
+            "ev": -0.0043,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 16.5: 57.1% before shrink, this book's no-vig 52.6%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
+              "Model over 23.5: 55.1% before shrink, this book's no-vig 49.2%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
             ],
             "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -116 or better.",
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -105 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Egor Demin Under 16.5 pra",
-            "side": "under",
-            "line": 16.5,
-            "odds": -125.0,
-            "model_raw": 0.571,
-            "model_prob": 0.5457,
-            "market_prob": 0.5203,
-            "fair_odds": -120,
-            "edge": 0.0253,
-            "edge_at_price": -0.0099,
-            "ev": -0.0178,
+            "selection": "Cedric Coward Over 23.5 pra",
+            "side": "over",
+            "line": 23.5,
+            "odds": -110.0,
+            "model_raw": 0.5513,
+            "model_prob": 0.5206,
+            "market_prob": 0.4899,
+            "fair_odds": -109,
+            "edge": 0.0307,
+            "edge_at_price": -0.0032,
+            "ev": -0.0061,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 16.5: 57.1% before shrink, this book's no-vig 52.0%.",
-              "Projection 15.1 (Normal(sd 8.6)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
+              "Model over 23.5: 55.1% before shrink, this book's no-vig 49.0%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
             ],
             "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Cedric Coward Under 23.5 pra",
+            "side": "under",
+            "line": 23.5,
+            "odds": -108.0,
+            "model_raw": 0.4487,
+            "model_prob": 0.4673,
+            "market_prob": 0.4858,
+            "fair_odds": 114,
+            "edge": -0.0186,
+            "edge_at_price": -0.052,
+            "ev": -0.1001,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 44.9% before shrink, this book's no-vig 48.6%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -115 or better.",
+            "next_step": "Pass. Only interesting at +118 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cedric Coward Under 23.5 pra",
+            "side": "under",
+            "line": 23.5,
+            "odds": -119.0,
+            "model_raw": 0.4487,
+            "model_prob": 0.4784,
+            "market_prob": 0.5081,
+            "fair_odds": 109,
+            "edge": -0.0297,
+            "edge_at_price": -0.065,
+            "ev": -0.1196,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 44.9% before shrink, this book's no-vig 50.8%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Cedric Coward Under 23.5 pra",
+            "side": "under",
+            "line": 23.5,
+            "odds": -118.0,
+            "model_raw": 0.4487,
+            "model_prob": 0.4785,
+            "market_prob": 0.5082,
+            "fair_odds": 109,
+            "edge": -0.0298,
+            "edge_at_price": -0.0628,
+            "ev": -0.1161,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 44.9% before shrink, this book's no-vig 50.8%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Cedric Coward Under 23.5 pra",
+            "side": "under",
+            "line": 23.5,
+            "odds": -120.0,
+            "model_raw": 0.4487,
+            "model_prob": 0.4794,
+            "market_prob": 0.5101,
+            "fair_odds": 109,
+            "edge": -0.0307,
+            "edge_at_price": -0.066,
+            "ev": -0.1211,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 44.9% before shrink, this book's no-vig 51.0%.",
+              "Projection 24.06 (Normal(sd 6.5)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
             "proven": false
           }
         }
@@ -4593,6 +4263,469 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for +118 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Egor Demin",
+      "player_id": "5175643",
+      "team": "Brooklyn Nets",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 2.5,
+      "projection": 2.86,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "11/20"
+      },
+      "recent": [
+        1.0,
+        1.0,
+        0.0,
+        4.0,
+        4.0,
+        0.0,
+        5.0,
+        5.0,
+        1.0,
+        5.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.875,
+          "fair_over": -702,
+          "fair_under": 702,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.839,
+          "fair_over": -520,
+          "fair_under": 520,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.681,
+          "fair_over": -214,
+          "fair_under": 214,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.637,
+          "fair_over": -176,
+          "fair_under": 176,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.529,
+          "fair_over": -112,
+          "fair_under": 112,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.444,
+          "fair_over": 125,
+          "fair_under": -125,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.384,
+          "fair_over": 160,
+          "fair_under": -160,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.265,
+          "fair_over": 277,
+          "fair_under": -277,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.222,
+          "fair_over": 351,
+          "fair_under": -351,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 5 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Egor Demin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -112.0,
+            "model_raw": 0.5291,
+            "model_prob": 0.5115,
+            "market_prob": 0.4939,
+            "fair_odds": -105,
+            "edge": 0.0176,
+            "edge_at_price": -0.0168,
+            "ev": -0.0318,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 52.9% before shrink, this book's no-vig 49.4%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Egor Demin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -120.0,
+            "model_raw": 0.5291,
+            "model_prob": 0.5196,
+            "market_prob": 0.5101,
+            "fair_odds": -108,
+            "edge": 0.0095,
+            "edge_at_price": -0.0258,
+            "ev": -0.0474,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 52.9% before shrink, this book's no-vig 51.0%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Egor Demin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -114.0,
+            "model_raw": 0.5291,
+            "model_prob": 0.5126,
+            "market_prob": 0.496,
+            "fair_odds": -105,
+            "edge": 0.0165,
+            "edge_at_price": -0.0202,
+            "ev": -0.0378,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 52.9% before shrink, this book's no-vig 49.6%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Egor Demin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -115.0,
+            "model_raw": 0.5291,
+            "model_prob": 0.5146,
+            "market_prob": 0.5,
+            "fair_odds": -106,
+            "edge": 0.0146,
+            "edge_at_price": -0.0203,
+            "ev": -0.038,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 52.9% before shrink, this book's no-vig 50.0%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Egor Demin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -111.0,
+            "model_raw": 0.5291,
+            "model_prob": 0.512,
+            "market_prob": 0.4948,
+            "fair_odds": -105,
+            "edge": 0.0171,
+            "edge_at_price": -0.0141,
+            "ev": -0.0268,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 52.9% before shrink, this book's no-vig 49.5%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Egor Demin Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -115.0,
+            "model_raw": 0.5291,
+            "model_prob": 0.5146,
+            "market_prob": 0.5,
+            "fair_odds": -106,
+            "edge": 0.0146,
+            "edge_at_price": -0.0203,
+            "ev": -0.038,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 52.9% before shrink, this book's no-vig 50.0%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Egor Demin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -118.0,
+            "model_raw": 0.4709,
+            "model_prob": 0.4885,
+            "market_prob": 0.5061,
+            "fair_odds": 105,
+            "edge": -0.0176,
+            "edge_at_price": -0.0528,
+            "ev": -0.0975,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.6%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Egor Demin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -110.0,
+            "model_raw": 0.4709,
+            "model_prob": 0.4804,
+            "market_prob": 0.4899,
+            "fair_odds": 108,
+            "edge": -0.0095,
+            "edge_at_price": -0.0434,
+            "ev": -0.0829,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 47.1% before shrink, this book's no-vig 49.0%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Egor Demin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -118.0,
+            "model_raw": 0.4709,
+            "model_prob": 0.4874,
+            "market_prob": 0.504,
+            "fair_odds": 105,
+            "edge": -0.0165,
+            "edge_at_price": -0.0538,
+            "ev": -0.0995,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.4%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Egor Demin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -115.0,
+            "model_raw": 0.4709,
+            "model_prob": 0.4854,
+            "market_prob": 0.5,
+            "fair_odds": 106,
+            "edge": -0.0146,
+            "edge_at_price": -0.0494,
+            "ev": -0.0924,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.0%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +110 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Egor Demin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -116.0,
+            "model_raw": 0.4709,
+            "model_prob": 0.488,
+            "market_prob": 0.5052,
+            "fair_odds": 105,
+            "edge": -0.0171,
+            "edge_at_price": -0.049,
+            "ev": -0.0913,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.5%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Egor Demin Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": -115.0,
+            "model_raw": 0.4709,
+            "model_prob": 0.4854,
+            "market_prob": 0.5,
+            "fair_odds": 106,
+            "edge": -0.0146,
+            "edge_at_price": -0.0494,
+            "ev": -0.0924,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.0%.",
+              "Projection 2.86 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+            ],
+            "flags": [
+              "current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +110 or better.",
             "proven": false
           }
         }
@@ -5297,91 +5430,91 @@
       "player": "Egor Demin",
       "player_id": "5175643",
       "team": "Brooklyn Nets",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "line": 2.5,
-      "projection": 2.86,
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 16.5,
+      "projection": 15.1,
       "hit_rates": {
         "L5": "2/5",
-        "L10": "5/10",
-        "L20": "11/20",
-        "all": "11/20"
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "9/20"
       },
       "recent": [
-        1.0,
-        1.0,
-        0.0,
-        4.0,
-        4.0,
-        0.0,
+        24.0,
         5.0,
-        5.0,
-        1.0,
-        5.0
+        4.0,
+        32.0,
+        10.0,
+        7.0,
+        20.0,
+        10.0,
+        18.0,
+        11.0
       ],
       "ladder": [
         {
-          "line": 0.5,
-          "p_over": 0.875,
-          "fair_over": -702,
-          "fair_under": 702,
-          "L10": "8/10"
+          "line": 12.5,
+          "p_over": 0.548,
+          "fair_over": -121,
+          "fair_under": 121,
+          "L10": "4/10"
         },
         {
-          "line": 1.0,
-          "p_over": 0.839,
-          "fair_over": -520,
-          "fair_under": 520,
-          "L10": "5/10"
+          "line": 13.5,
+          "p_over": 0.519,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "4/10"
         },
         {
-          "line": 1.5,
-          "p_over": 0.681,
-          "fair_over": -214,
-          "fair_under": 214,
-          "L10": "5/10"
+          "line": 14.5,
+          "p_over": 0.489,
+          "fair_over": 105,
+          "fair_under": -105,
+          "L10": "4/10"
         },
         {
-          "line": 2.0,
-          "p_over": 0.637,
-          "fair_over": -176,
-          "fair_under": 176,
-          "L10": "5/10"
+          "line": 15.5,
+          "p_over": 0.459,
+          "fair_over": 118,
+          "fair_under": -118,
+          "L10": "4/10"
         },
         {
-          "line": 2.5,
-          "p_over": 0.529,
-          "fair_over": -112,
-          "fair_under": 112,
-          "L10": "5/10"
+          "line": 16.5,
+          "p_over": 0.429,
+          "fair_over": 133,
+          "fair_under": -133,
+          "L10": "4/10"
         },
         {
-          "line": 3.0,
-          "p_over": 0.444,
-          "fair_over": 125,
-          "fair_under": -125,
-          "L10": "5/10"
+          "line": 17.5,
+          "p_over": 0.4,
+          "fair_over": 150,
+          "fair_under": -150,
+          "L10": "4/10"
         },
         {
-          "line": 3.5,
-          "p_over": 0.384,
-          "fair_over": 160,
-          "fair_under": -160,
-          "L10": "5/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.265,
-          "fair_over": 277,
-          "fair_under": -277,
+          "line": 18.5,
+          "p_over": 0.342,
+          "fair_over": 192,
+          "fair_under": -192,
           "L10": "3/10"
         },
         {
-          "line": 4.5,
-          "p_over": 0.222,
-          "fair_over": 351,
-          "fair_under": -351,
+          "line": 19.5,
+          "p_over": 0.315,
+          "fair_over": 217,
+          "fair_under": -217,
           "L10": "3/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.26,
+          "fair_over": 284,
+          "fair_under": -284,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -5391,85 +5524,25 @@
       "status": null,
       "sides": {
         "over": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Egor Demin Over 2.5 reb",
-            "side": "over",
-            "line": 2.5,
-            "odds": -112.0,
-            "model_raw": 0.5291,
-            "model_prob": 0.5115,
-            "market_prob": 0.4939,
-            "fair_odds": -105,
-            "edge": 0.0176,
-            "edge_at_price": -0.0168,
-            "ev": -0.0318,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 2.5: 52.9% before shrink, this book's no-vig 49.4%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -101 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Egor Demin Over 2.5 reb",
-            "side": "over",
-            "line": 2.5,
-            "odds": -120.0,
-            "model_raw": 0.5291,
-            "model_prob": 0.5196,
-            "market_prob": 0.5101,
-            "fair_odds": -108,
-            "edge": 0.0095,
-            "edge_at_price": -0.0258,
-            "ev": -0.0474,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 2.5: 52.9% before shrink, this book's no-vig 51.0%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -104 or better.",
-            "proven": false
-          },
           "betrivers": {
             "market": "Prop",
-            "selection": "Egor Demin Over 2.5 reb",
+            "selection": "Egor Demin Over 16.5 pra",
             "side": "over",
-            "line": 2.5,
-            "odds": -114.0,
-            "model_raw": 0.5291,
-            "model_prob": 0.5126,
-            "market_prob": 0.496,
-            "fair_odds": -105,
-            "edge": 0.0165,
-            "edge_at_price": -0.0202,
-            "ev": -0.0378,
+            "line": 16.5,
+            "odds": -110.0,
+            "model_raw": 0.429,
+            "model_prob": 0.4585,
+            "market_prob": 0.488,
+            "fair_odds": 118,
+            "edge": -0.0295,
+            "edge_at_price": -0.0653,
+            "ev": -0.1247,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 52.9% before shrink, this book's no-vig 49.6%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model over 16.5: 42.9% before shrink, this book's no-vig 48.8%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5478,28 +5551,28 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -101 or better.",
+            "next_step": "Pass. Only interesting at +122 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Egor Demin Over 2.5 reb",
+            "selection": "Egor Demin Over 16.5 pra",
             "side": "over",
-            "line": 2.5,
-            "odds": -115.0,
-            "model_raw": 0.5291,
-            "model_prob": 0.5146,
-            "market_prob": 0.5,
-            "fair_odds": -106,
-            "edge": 0.0146,
-            "edge_at_price": -0.0203,
-            "ev": -0.038,
+            "line": 16.5,
+            "odds": -105.0,
+            "model_raw": 0.429,
+            "model_prob": 0.4543,
+            "market_prob": 0.4797,
+            "fair_odds": 120,
+            "edge": -0.0253,
+            "edge_at_price": -0.0578,
+            "ev": -0.1129,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 52.9% before shrink, this book's no-vig 50.0%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model over 16.5: 42.9% before shrink, this book's no-vig 48.0%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5508,28 +5581,28 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -102 or better.",
+            "next_step": "Pass. Only interesting at +125 or better.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Egor Demin Over 2.5 reb",
+            "selection": "Egor Demin Over 16.5 pra",
             "side": "over",
-            "line": 2.5,
-            "odds": -111.0,
-            "model_raw": 0.5291,
-            "model_prob": 0.512,
-            "market_prob": 0.4948,
-            "fair_odds": -105,
-            "edge": 0.0171,
-            "edge_at_price": -0.0141,
-            "ev": -0.0268,
+            "line": 16.5,
+            "odds": -102.0,
+            "model_raw": 0.429,
+            "model_prob": 0.4517,
+            "market_prob": 0.4744,
+            "fair_odds": 121,
+            "edge": -0.0227,
+            "edge_at_price": -0.0533,
+            "ev": -0.1055,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 52.9% before shrink, this book's no-vig 49.5%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model over 16.5: 42.9% before shrink, this book's no-vig 47.4%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5538,28 +5611,28 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -101 or better.",
+            "next_step": "Pass. Only interesting at +126 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Egor Demin Over 2.5 reb",
+            "selection": "Egor Demin Over 16.5 pra",
             "side": "over",
-            "line": 2.5,
-            "odds": -115.0,
-            "model_raw": 0.5291,
-            "model_prob": 0.5146,
-            "market_prob": 0.5,
-            "fair_odds": -106,
-            "edge": 0.0146,
-            "edge_at_price": -0.0203,
-            "ev": -0.038,
+            "line": 16.5,
+            "odds": -105.0,
+            "model_raw": 0.429,
+            "model_prob": 0.4543,
+            "market_prob": 0.4797,
+            "fair_odds": 120,
+            "edge": -0.0253,
+            "edge_at_price": -0.0578,
+            "ev": -0.1129,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 52.9% before shrink, this book's no-vig 50.0%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model over 16.5: 42.9% before shrink, this book's no-vig 48.0%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5568,90 +5641,30 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -102 or better.",
+            "next_step": "Pass. Only interesting at +125 or better.",
             "proven": false
           }
         },
         "under": {
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Egor Demin Under 2.5 reb",
-            "side": "under",
-            "line": 2.5,
-            "odds": -118.0,
-            "model_raw": 0.4709,
-            "model_prob": 0.4885,
-            "market_prob": 0.5061,
-            "fair_odds": 105,
-            "edge": -0.0176,
-            "edge_at_price": -0.0528,
-            "ev": -0.0975,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.6%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +109 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Egor Demin Under 2.5 reb",
-            "side": "under",
-            "line": 2.5,
-            "odds": -110.0,
-            "model_raw": 0.4709,
-            "model_prob": 0.4804,
-            "market_prob": 0.4899,
-            "fair_odds": 108,
-            "edge": -0.0095,
-            "edge_at_price": -0.0434,
-            "ev": -0.0829,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 2.5: 47.1% before shrink, this book's no-vig 49.0%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +112 or better.",
-            "proven": false
-          },
           "betrivers": {
             "market": "Prop",
-            "selection": "Egor Demin Under 2.5 reb",
+            "selection": "Egor Demin Under 16.5 pra",
             "side": "under",
-            "line": 2.5,
-            "odds": -118.0,
-            "model_raw": 0.4709,
-            "model_prob": 0.4874,
-            "market_prob": 0.504,
-            "fair_odds": 105,
-            "edge": -0.0165,
-            "edge_at_price": -0.0538,
-            "ev": -0.0995,
+            "line": 16.5,
+            "odds": -122.0,
+            "model_raw": 0.571,
+            "model_prob": 0.5415,
+            "market_prob": 0.512,
+            "fair_odds": -118,
+            "edge": 0.0295,
+            "edge_at_price": -0.0081,
+            "ev": -0.0147,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.4%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model under 16.5: 57.1% before shrink, this book's no-vig 51.2%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5660,28 +5673,28 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +109 or better.",
+            "next_step": "Pass. Only interesting at -113 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Egor Demin Under 2.5 reb",
+            "selection": "Egor Demin Under 16.5 pra",
             "side": "under",
-            "line": 2.5,
-            "odds": -115.0,
-            "model_raw": 0.4709,
-            "model_prob": 0.4854,
-            "market_prob": 0.5,
-            "fair_odds": 106,
-            "edge": -0.0146,
-            "edge_at_price": -0.0494,
-            "ev": -0.0924,
+            "line": 16.5,
+            "odds": -125.0,
+            "model_raw": 0.571,
+            "model_prob": 0.5457,
+            "market_prob": 0.5203,
+            "fair_odds": -120,
+            "edge": 0.0253,
+            "edge_at_price": -0.0099,
+            "ev": -0.0178,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.0%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model under 16.5: 57.1% before shrink, this book's no-vig 52.0%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5690,28 +5703,28 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +110 or better.",
+            "next_step": "Pass. Only interesting at -115 or better.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Egor Demin Under 2.5 reb",
+            "selection": "Egor Demin Under 16.5 pra",
             "side": "under",
-            "line": 2.5,
-            "odds": -116.0,
-            "model_raw": 0.4709,
-            "model_prob": 0.488,
-            "market_prob": 0.5052,
-            "fair_odds": 105,
-            "edge": -0.0171,
-            "edge_at_price": -0.049,
-            "ev": -0.0913,
+            "line": 16.5,
+            "odds": -127.0,
+            "model_raw": 0.571,
+            "model_prob": 0.5483,
+            "market_prob": 0.5256,
+            "fair_odds": -121,
+            "edge": 0.0227,
+            "edge_at_price": -0.0112,
+            "ev": -0.02,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.5%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model under 16.5: 57.1% before shrink, this book's no-vig 52.6%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5720,28 +5733,28 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +109 or better.",
+            "next_step": "Pass. Only interesting at -116 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Egor Demin Under 2.5 reb",
+            "selection": "Egor Demin Under 16.5 pra",
             "side": "under",
-            "line": 2.5,
-            "odds": -115.0,
-            "model_raw": 0.4709,
-            "model_prob": 0.4854,
-            "market_prob": 0.5,
-            "fair_odds": 106,
-            "edge": -0.0146,
-            "edge_at_price": -0.0494,
-            "ev": -0.0924,
+            "line": 16.5,
+            "odds": -125.0,
+            "model_raw": 0.571,
+            "model_prob": 0.5457,
+            "market_prob": 0.5203,
+            "fair_odds": -120,
+            "edge": 0.0253,
+            "edge_at_price": -0.0099,
+            "ev": -0.0178,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 47.1% before shrink, this book's no-vig 50.0%.",
-              "Projection 2.86 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 11/20."
+              "Model under 16.5: 57.1% before shrink, this book's no-vig 52.0%.",
+              "Projection 15.1 (Normal(sd 8.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 9/20."
             ],
             "flags": [
               "current season only 5 games; added 15 from prior season (role/team may differ)"
@@ -5750,7 +5763,7 @@
               "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +110 or better.",
+            "next_step": "Pass. Only interesting at -115 or better.",
             "proven": false
           }
         }
@@ -5760,91 +5773,84 @@
       "player": "Jaylen Wells",
       "player_id": "5112087",
       "team": "Memphis Grizzlies",
-      "stat": "pra",
-      "stat_label": "PRA",
-      "line": 14.5,
-      "projection": 15.76,
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 2.12,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "11/20",
-        "all": "16/27"
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "14/20",
+        "all": "20/27"
       },
       "recent": [
-        14.0,
-        25.0,
-        19.0,
-        7.0,
+        2.0,
         5.0,
-        22.0,
-        6.0,
-        11.0,
-        17.0,
-        26.0
+        4.0,
+        1.0,
+        0.0,
+        3.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0
       ],
       "ladder": [
         {
-          "line": 10.5,
-          "p_over": 0.728,
-          "fair_over": -267,
-          "fair_under": 267,
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.834,
+          "fair_over": -504,
+          "fair_under": 504,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.8,
+          "fair_over": -400,
+          "fair_under": 400,
           "L10": "7/10"
         },
         {
-          "line": 11.5,
-          "p_over": 0.67,
-          "fair_over": -203,
-          "fair_under": 203,
-          "L10": "6/10"
+          "line": 1.5,
+          "p_over": 0.64,
+          "fair_over": -178,
+          "fair_under": 178,
+          "L10": "7/10"
         },
         {
-          "line": 12.5,
-          "p_over": 0.639,
-          "fair_over": -177,
-          "fair_under": 177,
-          "L10": "6/10"
+          "line": 2.0,
+          "p_over": 0.491,
+          "fair_over": 103,
+          "fair_under": -103,
+          "L10": "3/10"
         },
         {
-          "line": 13.5,
-          "p_over": 0.607,
-          "fair_over": -154,
-          "fair_under": 154,
-          "L10": "6/10"
+          "line": 2.5,
+          "p_over": 0.348,
+          "fair_over": 188,
+          "fair_under": -188,
+          "L10": "3/10"
         },
         {
-          "line": 14.5,
-          "p_over": 0.544,
-          "fair_over": -119,
-          "fair_under": 119,
-          "L10": "5/10"
+          "line": 3.0,
+          "p_over": 0.228,
+          "fair_over": 339,
+          "fair_under": -339,
+          "L10": "2/10"
         },
         {
-          "line": 15.5,
-          "p_over": 0.509,
-          "fair_over": -104,
-          "fair_under": 104,
-          "L10": "5/10"
-        },
-        {
-          "line": 16.5,
-          "p_over": 0.474,
-          "fair_over": 111,
-          "fair_under": -111,
-          "L10": "5/10"
-        },
-        {
-          "line": 17.5,
-          "p_over": 0.411,
-          "fair_over": 144,
-          "fair_under": -144,
-          "L10": "4/10"
-        },
-        {
-          "line": 18.5,
-          "p_over": 0.377,
-          "fair_over": 165,
-          "fair_under": -165,
-          "L10": "4/10"
+          "line": 3.5,
+          "p_over": 0.195,
+          "fair_over": 413,
+          "fair_under": -413,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -5854,25 +5860,25 @@
       "status": null,
       "sides": {
         "over": {
-          "betmgm": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Jaylen Wells Over 14.5 pra",
+            "selection": "Jaylen Wells Over 1.5 threes",
             "side": "over",
-            "line": 14.5,
-            "odds": -110.0,
-            "model_raw": 0.5437,
-            "model_prob": 0.5168,
-            "market_prob": 0.4899,
-            "fair_odds": -107,
-            "edge": 0.0269,
-            "edge_at_price": -0.007,
-            "ev": -0.0134,
+            "line": 1.5,
+            "odds": -158.0,
+            "model_raw": 0.6398,
+            "model_prob": 0.6058,
+            "market_prob": 0.5717,
+            "fair_odds": -154,
+            "edge": 0.034,
+            "edge_at_price": -0.0066,
+            "ev": -0.0108,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 14.5: 54.4% before shrink, this book's no-vig 49.0%.",
-              "Projection 15.76 (Normal(sd 7.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 16/27."
+              "Model over 1.5: 64.0% before shrink, this book's no-vig 57.2%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
@@ -5881,28 +5887,119 @@
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -103 or better.",
+            "next_step": "Pass. Only interesting at -146 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Wells Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -148.0,
+            "model_raw": 0.6398,
+            "model_prob": 0.5997,
+            "market_prob": 0.5597,
+            "fair_odds": -150,
+            "edge": 0.0401,
+            "edge_at_price": 0.003,
+            "ev": 0.005,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 64.0% before shrink, this book's no-vig 56.0%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -143 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Jaylen Wells Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -165.0,
+            "model_raw": 0.6398,
+            "model_prob": 0.6089,
+            "market_prob": 0.578,
+            "fair_odds": -156,
+            "edge": 0.0309,
+            "edge_at_price": -0.0137,
+            "ev": -0.022,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 64.0% before shrink, this book's no-vig 57.8%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -148 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Jaylen Wells Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -135.0,
+            "model_raw": 0.6398,
+            "model_prob": 0.5872,
+            "market_prob": 0.5347,
+            "fair_odds": -142,
+            "edge": 0.0526,
+            "edge_at_price": 0.0128,
+            "ev": 0.0222,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 64.0% before shrink, this book's no-vig 53.5%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -136 or better and re-check injuries near start.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Jaylen Wells Over 14.5 pra",
+            "selection": "Jaylen Wells Over 1.5 threes",
             "side": "over",
-            "line": 14.5,
-            "odds": -118.0,
-            "model_raw": 0.5437,
-            "model_prob": 0.526,
-            "market_prob": 0.5082,
-            "fair_odds": -111,
-            "edge": 0.0177,
-            "edge_at_price": -0.0153,
-            "ev": -0.0283,
+            "line": 1.5,
+            "odds": -143.0,
+            "model_raw": 0.6398,
+            "model_prob": 0.5963,
+            "market_prob": 0.5527,
+            "fair_odds": -148,
+            "edge": 0.0435,
+            "edge_at_price": 0.0078,
+            "ev": 0.0132,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 14.5: 54.4% before shrink, this book's no-vig 50.8%.",
-              "Projection 15.76 (Normal(sd 7.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 16/27."
+              "Model over 1.5: 64.0% before shrink, this book's no-vig 55.3%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
@@ -5911,60 +6008,61 @@
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -106 or better.",
+            "next_step": "Monitor only; if anything, wait for -141 or better and re-check injuries near start.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Jaylen Wells Over 14.5 pra",
+            "selection": "Jaylen Wells Over 1.5 threes",
             "side": "over",
-            "line": 14.5,
-            "odds": -125.0,
-            "model_raw": 0.5437,
-            "model_prob": 0.532,
-            "market_prob": 0.5203,
-            "fair_odds": -114,
-            "edge": 0.0117,
-            "edge_at_price": -0.0236,
-            "ev": -0.0424,
+            "line": 1.5,
+            "odds": -135.0,
+            "model_raw": 0.6398,
+            "model_prob": 0.5903,
+            "market_prob": 0.5408,
+            "fair_odds": -144,
+            "edge": 0.0495,
+            "edge_at_price": 0.0158,
+            "ev": 0.0276,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 14.5: 54.4% before shrink, this book's no-vig 52.0%.",
-              "Projection 15.76 (Normal(sd 7.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 16/27."
+              "Model over 1.5: 64.0% before shrink, this book's no-vig 54.1%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -109 or better.",
+            "next_step": "Monitor only; if anything, wait for -137 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
-          "betmgm": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Jaylen Wells Under 14.5 pra",
+            "selection": "Jaylen Wells Under 1.5 threes",
             "side": "under",
-            "line": 14.5,
-            "odds": -120.0,
-            "model_raw": 0.4563,
-            "model_prob": 0.4832,
-            "market_prob": 0.5101,
-            "fair_odds": 107,
-            "edge": -0.0269,
-            "edge_at_price": -0.0622,
-            "ev": -0.1141,
+            "line": 1.5,
+            "odds": 118.0,
+            "model_raw": 0.3602,
+            "model_prob": 0.3942,
+            "market_prob": 0.4283,
+            "fair_odds": 154,
+            "edge": -0.034,
+            "edge_at_price": -0.0645,
+            "ev": -0.1406,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 14.5: 45.6% before shrink, this book's no-vig 51.0%.",
-              "Projection 15.76 (Normal(sd 7.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 16/27."
+              "Model under 1.5: 36.0% before shrink, this book's no-vig 42.8%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
@@ -5973,28 +6071,118 @@
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +111 or better.",
+            "next_step": "Pass. Only interesting at +159 or better.",
+            "proven": false
+          },
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Wells Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 113.0,
+            "model_raw": 0.3602,
+            "model_prob": 0.4003,
+            "market_prob": 0.4403,
+            "fair_odds": 150,
+            "edge": -0.0401,
+            "edge_at_price": -0.0692,
+            "ev": -0.1475,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 36.0% before shrink, this book's no-vig 44.0%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +155 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Jaylen Wells Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 120.0,
+            "model_raw": 0.3602,
+            "model_prob": 0.3911,
+            "market_prob": 0.422,
+            "fair_odds": 156,
+            "edge": -0.0309,
+            "edge_at_price": -0.0635,
+            "ev": -0.1396,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 36.0% before shrink, this book's no-vig 42.2%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +161 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Jaylen Wells Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 100.0,
+            "model_raw": 0.3602,
+            "model_prob": 0.4128,
+            "market_prob": 0.4653,
+            "fair_odds": 142,
+            "edge": -0.0526,
+            "edge_at_price": -0.0872,
+            "ev": -0.1745,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 36.0% before shrink, this book's no-vig 46.5%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +147 or better.",
             "proven": false
           },
           "betonlineag": {
             "market": "Prop",
-            "selection": "Jaylen Wells Under 14.5 pra",
+            "selection": "Jaylen Wells Under 1.5 threes",
             "side": "under",
-            "line": 14.5,
-            "odds": -110.0,
-            "model_raw": 0.4563,
-            "model_prob": 0.474,
-            "market_prob": 0.4918,
-            "fair_odds": 111,
-            "edge": -0.0177,
-            "edge_at_price": -0.0498,
-            "ev": -0.095,
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.3602,
+            "model_prob": 0.4037,
+            "market_prob": 0.4473,
+            "fair_odds": 148,
+            "edge": -0.0435,
+            "edge_at_price": -0.0725,
+            "ev": -0.1522,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 14.5: 45.6% before shrink, this book's no-vig 49.2%.",
-              "Projection 15.76 (Normal(sd 7.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 16/27."
+              "Model under 1.5: 36.0% before shrink, this book's no-vig 44.7%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
@@ -6003,28 +6191,28 @@
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +115 or better.",
+            "next_step": "Pass. Only interesting at +153 or better.",
             "proven": false
           },
           "bovada": {
             "market": "Prop",
-            "selection": "Jaylen Wells Under 14.5 pra",
+            "selection": "Jaylen Wells Under 1.5 threes",
             "side": "under",
-            "line": 14.5,
-            "odds": -105.0,
-            "model_raw": 0.4563,
-            "model_prob": 0.468,
-            "market_prob": 0.4797,
-            "fair_odds": 114,
-            "edge": -0.0117,
-            "edge_at_price": -0.0442,
-            "ev": -0.0863,
+            "line": 1.5,
+            "odds": 105.0,
+            "model_raw": 0.3602,
+            "model_prob": 0.4097,
+            "market_prob": 0.4592,
+            "fair_odds": 144,
+            "edge": -0.0495,
+            "edge_at_price": -0.0781,
+            "ev": -0.1601,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 14.5: 45.6% before shrink, this book's no-vig 48.0%.",
-              "Projection 15.76 (Normal(sd 7.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 16/27."
+              "Model under 1.5: 36.0% before shrink, this book's no-vig 45.9%.",
+              "Projection 2.12 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/20, all 20/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
@@ -6033,7 +6221,7 @@
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +118 or better.",
+            "next_step": "Pass. Only interesting at +149 or better.",
             "proven": false
           }
         }
