@@ -35,13 +35,13 @@
     "draftkings": {
       "ml_home": 285.0,
       "ml_away": -360.0,
-      "spread_home": 9.5,
-      "spread_home_odds": -110.0,
-      "spread_away": -9.5,
-      "spread_away_odds": -110.0,
-      "total": 38.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0
+      "total": 37.5,
+      "over_odds": -102.0,
+      "under_odds": -118.0,
+      "spread_home": 8.5,
+      "spread_home_odds": -115.0,
+      "spread_away": -8.5,
+      "spread_away_odds": -105.0
     }
   },
   "badge": null,
@@ -51,7 +51,7 @@
   ],
   "notes": [
     "ESPN matchup predictor: WYO 13.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin WYO -7.1, total 43.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "v2 ratings: margin WYO -7.1, total 43.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -145,22 +145,22 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "WYO +9.5",
+              "selection": "WYO +8.5",
               "side": "home",
-              "line": 9.5,
-              "odds": -110.0,
-              "model_raw": 0.562,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 8.5,
+              "odds": -115.0,
+              "model_raw": 0.5365,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model WYO +9.5 covers 56.2% vs market 50.0%.",
-                "Projected margin WYO -7.1 vs line WYO +9.5.",
+                "Model WYO +8.5 covers 53.7% vs market 51.1%.",
+                "Projected margin WYO -7.1 vs line WYO +8.5.",
                 "UNM L5 WWWWL (MOV 20.9), WYO L5 WWWWW (MOV 1.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -168,10 +168,10 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: spread moved against this side (+10.5 -> +9.5)"
+                "line move: spread moved against this side (+10.5 -> +8.5)"
               ],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
           }
@@ -181,22 +181,22 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "UNM -9.5",
+              "selection": "UNM -8.5",
               "side": "away",
-              "line": -9.5,
-              "odds": -110.0,
-              "model_raw": 0.438,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": -8.5,
+              "odds": -105.0,
+              "model_raw": 0.4635,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model UNM -9.5 covers 43.8% vs market 50.0%.",
-                "Projected margin WYO -7.1 vs line WYO +9.5.",
+                "Model UNM -8.5 covers 46.3% vs market 48.9%.",
+                "Projected margin WYO -7.1 vs line WYO +8.5.",
                 "UNM L5 WWWWL (MOV 20.9), WYO L5 WWWWW (MOV 1.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -205,7 +205,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }
@@ -220,31 +220,34 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 38.5",
+              "selection": "Over 37.5",
               "side": "over",
-              "line": 38.5,
-              "odds": -110.0,
-              "model_raw": 0.6136,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 37.5,
+              "odds": -102.0,
+              "model_raw": 0.6365,
+              "model_prob": 0.4826,
+              "market_prob": 0.4826,
+              "fair_odds": 107,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.0223,
+              "ev": -0.0442,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 38.5: 61.4% vs market 50.0%.",
-                "Projected total 43.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 37.5: 63.6% vs market 48.3%.",
+                "Projected total 43.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 38.5 -> 37.5.",
                 "UNM L5 WWWWL (MOV 20.9), WYO L5 WWWWW (MOV 1.4)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (64% vs 48%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the over (38.5 -> 37.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +111 or better.",
               "proven": false
             }
           }
@@ -254,31 +257,34 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 38.5",
+              "selection": "Under 37.5",
               "side": "under",
-              "line": 38.5,
-              "odds": -110.0,
-              "model_raw": 0.3864,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
-              "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "line": 37.5,
+              "odds": -118.0,
+              "model_raw": 0.3635,
+              "model_prob": 0.5174,
+              "market_prob": 0.5174,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 38.5: 38.6% vs market 50.0%.",
-                "Projected total 43.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 37.5: 36.4% vs market 51.7%.",
+                "Projected total 43.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 38.5 -> 37.5.",
                 "UNM L5 WWWWL (MOV 20.9), WYO L5 WWWWW (MOV 1.4)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (36% vs 52%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward under (38.5 -> 37.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at -103 or better.",
               "proven": false
             }
           }

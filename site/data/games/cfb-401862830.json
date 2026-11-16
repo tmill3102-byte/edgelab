@@ -35,13 +35,13 @@
     "draftkings": {
       "ml_home": -170.0,
       "ml_away": 142.0,
-      "spread_home": -4.0,
+      "total": 48.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0,
+      "spread_home": -3.5,
       "spread_home_odds": -110.0,
-      "spread_away": 4.0,
-      "spread_away_odds": -110.0,
-      "total": 47.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0
+      "spread_away": 3.5,
+      "spread_away_odds": -110.0
     }
   },
   "badge": null,
@@ -143,11 +143,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "TEM -4",
+              "selection": "TEM -3.5",
               "side": "home",
-              "line": -4.0,
+              "line": -3.5,
               "odds": -110.0,
-              "model_raw": 0.5049,
+              "model_raw": 0.5177,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -157,8 +157,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model TEM -4 covers 50.5% vs market 50.0%.",
-                "Projected margin TEM +4.2 vs line TEM -4.",
+                "Model TEM -3.5 covers 51.8% vs market 50.0%.",
+                "Projected margin TEM +4.2 vs line TEM -3.5.",
                 "RICE L5 LLLLL (MOV -11.8), TEM L5 LLLLL (MOV -5.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -177,11 +177,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "RICE +4",
+              "selection": "RICE +3.5",
               "side": "away",
-              "line": 4.0,
+              "line": 3.5,
               "odds": -110.0,
-              "model_raw": 0.4951,
+              "model_raw": 0.4823,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -191,8 +191,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model RICE +4 covers 49.5% vs market 50.0%.",
-                "Projected margin TEM +4.2 vs line TEM -4.",
+                "Model RICE +3.5 covers 48.2% vs market 50.0%.",
+                "Projected margin TEM +4.2 vs line TEM -3.5.",
                 "RICE L5 LLLLL (MOV -11.8), TEM L5 LLLLL (MOV -5.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -216,31 +216,33 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 47.5",
+              "selection": "Over 48.5",
               "side": "over",
-              "line": 47.5,
-              "odds": -110.0,
-              "model_raw": 0.5842,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 48.5,
+              "odds": -112.0,
+              "model_raw": 0.5592,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 47.5: 58.4% vs market 50.0%.",
-                "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 48.5: 55.9% vs market 50.4%.",
+                "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 48.5.",
                 "RICE L5 LLLLL (MOV -11.8), TEM L5 LLLLL (MOV -5.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward over (47.5 -> 48.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -250,31 +252,33 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 47.5",
+              "selection": "Under 48.5",
               "side": "under",
-              "line": 47.5,
-              "odds": -110.0,
-              "model_raw": 0.4158,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 48.5,
+              "odds": -108.0,
+              "model_raw": 0.4408,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 47.5: 41.6% vs market 50.0%.",
-                "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 48.5: 44.1% vs market 49.6%.",
+                "Projected total 50.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 47.5 -> 48.5.",
                 "RICE L5 LLLLL (MOV -11.8), TEM L5 LLLLL (MOV -5.7)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the under (47.5 -> 48.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }

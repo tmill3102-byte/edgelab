@@ -35,13 +35,13 @@
     "draftkings": {
       "ml_home": 195.0,
       "ml_away": -238.0,
-      "spread_home": 6.5,
-      "spread_home_odds": -105.0,
-      "spread_away": -6.5,
-      "spread_away_odds": -115.0,
-      "total": 49.5,
+      "total": 48.5,
       "over_odds": -105.0,
-      "under_odds": -115.0
+      "under_odds": -115.0,
+      "spread_home": 5.5,
+      "spread_home_odds": -112.0,
+      "spread_away": -5.5,
+      "spread_away_odds": -108.0
     }
   },
   "badge": null,
@@ -143,31 +143,33 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "KU +6.5",
+              "selection": "KU +5.5",
               "side": "home",
-              "line": 6.5,
-              "odds": -105.0,
-              "model_raw": 0.5613,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
+              "line": 5.5,
+              "odds": -112.0,
+              "model_raw": 0.5357,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model KU +6.5 covers 56.1% vs market 48.9%.",
-                "Projected margin KU -4.1 vs line KU +6.5.",
+                "Model KU +5.5 covers 53.6% vs market 50.4%.",
+                "Projected margin KU -4.1 vs line KU +5.5.",
                 "BYU L5 WLWLW (MOV 12.2), KU L5 LWLLW (MOV 6.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: spread moved against this side (+7 -> +5.5)"
+              ],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +109 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -177,22 +179,22 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "BYU -6.5",
+              "selection": "BYU -5.5",
               "side": "away",
-              "line": -6.5,
-              "odds": -115.0,
-              "model_raw": 0.4387,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
+              "line": -5.5,
+              "odds": -108.0,
+              "model_raw": 0.4643,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.045,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model BYU -6.5 covers 43.9% vs market 51.1%.",
-                "Projected margin KU -4.1 vs line KU +6.5.",
+                "Model BYU -5.5 covers 46.4% vs market 49.6%.",
+                "Projected margin KU -4.1 vs line KU +5.5.",
                 "BYU L5 WLWLW (MOV 12.2), KU L5 LWLLW (MOV 6.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -201,7 +203,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -100 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }
@@ -216,11 +218,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 49.5",
+              "selection": "Over 48.5",
               "side": "over",
-              "line": 49.5,
+              "line": 48.5,
               "odds": -105.0,
-              "model_raw": 0.5222,
+              "model_raw": 0.5461,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
               "fair_odds": 104,
@@ -230,8 +232,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 49.5: 52.2% vs market 48.9%.",
-                "Projected total 50.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 50.5 -> 49.5.",
+                "Model over 48.5: 54.6% vs market 48.9%.",
+                "Projected total 50.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 50.5 -> 48.5.",
                 "BYU L5 WLWLW (MOV 12.2), KU L5 LWLLW (MOV 6.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -239,7 +241,7 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: market moved against the over (50.5 -> 49.5)"
+                "line move: market moved against the over (50.5 -> 48.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +109 or better.",
@@ -252,11 +254,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 49.5",
+              "selection": "Under 48.5",
               "side": "under",
-              "line": 49.5,
+              "line": 48.5,
               "odds": -115.0,
-              "model_raw": 0.4778,
+              "model_raw": 0.4539,
               "model_prob": 0.5108,
               "market_prob": 0.5108,
               "fair_odds": -104,
@@ -266,8 +268,8 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 49.5: 47.8% vs market 51.1%.",
-                "Projected total 50.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 50.5 -> 49.5.",
+                "Model under 48.5: 45.4% vs market 51.1%.",
+                "Projected total 50.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 50.5 -> 48.5.",
                 "BYU L5 WLWLW (MOV 12.2), KU L5 LWLLW (MOV 6.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -275,7 +277,7 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: total already moved toward under (50.5 -> 49.5); value may be gone"
+                "line move: total already moved toward under (50.5 -> 48.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at -100 or better.",

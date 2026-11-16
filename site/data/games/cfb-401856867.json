@@ -33,13 +33,13 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -148.0,
-      "ml_away": 124.0,
-      "spread_home": -3.0,
-      "spread_home_odds": -115.0,
-      "spread_away": 3.0,
-      "spread_away_odds": -105.0,
-      "total": 59.5,
+      "ml_home": -170.0,
+      "ml_away": 142.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -115.0,
+      "total": 60.5,
       "over_odds": -112.0,
       "under_odds": -108.0
     }
@@ -73,18 +73,18 @@
               "selection": "CIN ML",
               "side": "home",
               "line": null,
-              "odds": -148.0,
+              "odds": -170.0,
               "model_raw": 0.5762,
-              "model_prob": 0.5721,
-              "market_prob": 0.5721,
-              "fair_odds": -134,
+              "model_prob": 0.6038,
+              "market_prob": 0.6038,
+              "fair_odds": -152,
               "edge": 0.0,
-              "edge_at_price": -0.0247,
-              "ev": -0.0414,
+              "edge_at_price": -0.0259,
+              "ev": -0.0411,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model CIN win 57.6% vs market no-vig 57.2%.",
+                "Model CIN win 57.6% vs market no-vig 60.4%.",
                 "v2 projected margin CIN +3.0 (ratings CIN -15.1, COLO -14.8, home edge 3.33); raw model 57.6%.",
                 "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -93,8 +93,8 @@
                 "injury report not available for this league"
               ],
               "caution": [],
-              "case_against": "Market makes CIN 57%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -128 or better.",
+              "case_against": "Market makes CIN 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -145 or better.",
               "proven": false
             }
           }
@@ -107,18 +107,18 @@
               "selection": "COLO ML",
               "side": "away",
               "line": null,
-              "odds": 124.0,
+              "odds": 142.0,
               "model_raw": 0.4238,
-              "model_prob": 0.4279,
-              "market_prob": 0.4279,
-              "fair_odds": 134,
+              "model_prob": 0.3962,
+              "market_prob": 0.3962,
+              "fair_odds": 152,
               "edge": 0.0,
-              "edge_at_price": -0.0185,
-              "ev": -0.0414,
+              "edge_at_price": -0.017,
+              "ev": -0.0411,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model COLO win 42.4% vs market no-vig 42.8%.",
+                "Model COLO win 42.4% vs market no-vig 39.6%.",
                 "v2 projected margin CIN +3.0 (ratings CIN -15.1, COLO -14.8, home edge 3.33); raw model 42.4%.",
                 "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -126,9 +126,11 @@
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
-              "case_against": "Market makes COLO 43%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +138 or better.",
+              "caution": [
+                "line move: price drifted against this side (+120 -> +142)"
+              ],
+              "case_against": "Market makes COLO 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +157 or better.",
               "proven": false
             }
           }
@@ -143,45 +145,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "CIN -3",
+              "selection": "CIN -3.5",
               "side": "home",
-              "line": -3.0,
-              "odds": -115.0,
-              "model_raw": 0.4994,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
-              "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.045,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model CIN -3 covers 49.9% vs market 51.1%.",
-                "Projected margin CIN +3.0 vs line CIN -3.",
-                "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [],
-              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -100 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "COLO +3",
-              "side": "away",
-              "line": 3.0,
+              "line": -3.5,
               "odds": -105.0,
-              "model_raw": 0.5006,
+              "model_raw": 0.4866,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
               "fair_odds": 104,
@@ -191,8 +159,44 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model COLO +3 covers 50.1% vs market 48.9%.",
-                "Projected margin CIN +3.0 vs line CIN -3.",
+                "Model CIN -3.5 covers 48.7% vs market 48.9%.",
+                "Projected margin CIN +3.0 vs line CIN -3.5.",
+                "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [
+                "line move: spread moved against this side (-2.5 -> -3.5)"
+              ],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "COLO +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -115.0,
+              "model_raw": 0.5134,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model COLO +3.5 covers 51.3% vs market 51.1%.",
+                "Projected margin CIN +3.0 vs line CIN -3.5.",
                 "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -201,7 +205,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +109 or better.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
           }
@@ -216,11 +220,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 59.5",
+              "selection": "Over 60.5",
               "side": "over",
-              "line": 59.5,
+              "line": 60.5,
               "odds": -112.0,
-              "model_raw": 0.3671,
+              "model_raw": 0.3433,
               "model_prob": 0.5043,
               "market_prob": 0.5043,
               "fair_odds": -102,
@@ -230,16 +234,18 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 59.5: 36.7% vs market 50.4%.",
-                "Projected total 54.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 60.5: 34.3% vs market 50.4%.",
+                "Projected total 54.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 59.5 -> 60.5.",
                 "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (37% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward over (59.5 -> 60.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
@@ -251,11 +257,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 59.5",
+              "selection": "Under 60.5",
               "side": "under",
-              "line": 59.5,
+              "line": 60.5,
               "odds": -108.0,
-              "model_raw": 0.6329,
+              "model_raw": 0.6567,
               "model_prob": 0.4957,
               "market_prob": 0.4957,
               "fair_odds": 102,
@@ -265,16 +271,18 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 59.5: 63.3% vs market 49.6%.",
-                "Projected total 54.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 60.5: 65.7% vs market 49.6%.",
+                "Projected total 54.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 59.5 -> 60.5.",
                 "COLO L5 LLWLW (MOV -6.7), CIN L5 LWLLL (MOV 0.4)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (63% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the under (59.5 -> 60.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
