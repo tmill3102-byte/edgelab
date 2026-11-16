@@ -33,12 +33,8 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -455.0,
-      "ml_away": 350.0,
-      "spread_home": -11.5,
-      "spread_home_odds": -112.0,
-      "spread_away": 11.5,
-      "spread_away_odds": -108.0,
+      "ml_home": -500.0,
+      "ml_away": 380.0,
       "total": 43.5,
       "over_odds": -110.0,
       "under_odds": -110.0
@@ -50,7 +46,7 @@
     "injury report not available for this league"
   ],
   "notes": [
-    "ESPN matchup predictor: DUKE 79.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: DUKE 79.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin DUKE +23.2, total 46.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -73,29 +69,29 @@
               "selection": "DUKE ML",
               "side": "home",
               "line": null,
-              "odds": -455.0,
+              "odds": -500.0,
               "model_raw": 0.933,
-              "model_prob": 0.7867,
-              "market_prob": 0.7867,
-              "fair_odds": -369,
+              "model_prob": 0.8,
+              "market_prob": 0.8,
+              "fair_odds": -400,
               "edge": 0.0,
-              "edge_at_price": -0.0331,
-              "ev": -0.0403,
+              "edge_at_price": -0.0333,
+              "ev": -0.04,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model DUKE win 93.3% vs market no-vig 78.7%.",
+                "Model DUKE win 93.3% vs market no-vig 80.0%.",
                 "v2 projected margin DUKE +23.2 (ratings DUKE +4.6, CLEM -15.3, home edge 3.33); raw model 93.3%.",
                 "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (93% vs 79%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (93% vs 80%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [],
-              "case_against": "Market makes DUKE 79%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -337 or better.",
+              "case_against": "Market makes DUKE 80%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -364 or better.",
               "proven": false
             }
           }
@@ -108,108 +104,31 @@
               "selection": "CLEM ML",
               "side": "away",
               "line": null,
-              "odds": 350.0,
+              "odds": 380.0,
               "model_raw": 0.067,
-              "model_prob": 0.2133,
-              "market_prob": 0.2133,
-              "fair_odds": 369,
-              "edge": 0.0,
-              "edge_at_price": -0.009,
-              "ev": -0.0403,
+              "model_prob": 0.2,
+              "market_prob": 0.2,
+              "fair_odds": 400,
+              "edge": -0.0,
+              "edge_at_price": -0.0083,
+              "ev": -0.04,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model CLEM win 6.7% vs market no-vig 21.3%.",
+                "Model CLEM win 6.7% vs market no-vig 20.0%.",
                 "v2 projected margin DUKE +23.2 (ratings DUKE +4.6, CLEM -15.3, home edge 3.33); raw model 6.7%.",
                 "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (7% vs 21%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (7% vs 20%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: price drifted against this side (+260 -> +350)"
+                "line move: price drifted against this side (+260 -> +380)"
               ],
-              "case_against": "Market makes CLEM 21%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +378 or better.",
-              "proven": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "market": "Spread",
-      "sides": [
-        {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "DUKE -11.5",
-              "side": "home",
-              "line": -11.5,
-              "odds": -112.0,
-              "model_raw": 0.7754,
-              "model_prob": 0.5043,
-              "market_prob": 0.5043,
-              "fair_odds": -102,
-              "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.0454,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model DUKE -11.5 covers 77.5% vs market 50.4%.",
-                "Projected margin DUKE +23.2 vs line DUKE -11.5.",
-                "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (78% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [
-                "line move: spread moved against this side (-8.5 -> -11.5)"
-              ],
-              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +102 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "CLEM +11.5",
-              "side": "away",
-              "line": 11.5,
-              "odds": -108.0,
-              "model_raw": 0.2246,
-              "model_prob": 0.4957,
-              "market_prob": 0.4957,
-              "fair_odds": 102,
-              "edge": 0.0,
-              "edge_at_price": -0.0236,
-              "ev": -0.0454,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model CLEM +11.5 covers 22.5% vs market 49.6%.",
-                "Projected margin DUKE +23.2 vs line DUKE -11.5.",
-                "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (22% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [],
-              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +106 or better.",
+              "case_against": "Market makes CLEM 20%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +410 or better.",
               "proven": false
             }
           }

@@ -35,10 +35,10 @@
     "draftkings": {
       "ml_home": -700.0,
       "ml_away": 500.0,
-      "spread_home": -15.5,
-      "spread_home_odds": -110.0,
-      "spread_away": 15.5,
-      "spread_away_odds": -110.0,
+      "spread_home": -16.5,
+      "spread_home_odds": -108.0,
+      "spread_away": 16.5,
+      "spread_away_odds": -112.0,
       "total": 48.5,
       "over_odds": -110.0,
       "under_odds": -110.0
@@ -143,31 +143,33 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "TOL -15.5",
+              "selection": "TOL -16.5",
               "side": "home",
-              "line": -15.5,
-              "odds": -110.0,
-              "model_raw": 0.5222,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": -16.5,
+              "odds": -108.0,
+              "model_raw": 0.4965,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model TOL -15.5 covers 52.2% vs market 50.0%.",
-                "Projected margin TOL +16.4 vs line TOL -15.5.",
+                "Model TOL -16.5 covers 49.6% vs market 49.6%.",
+                "Projected margin TOL +16.4 vs line TOL -16.5.",
                 "BGSU L5 WLLLW (MOV -9.6), TOL L5 LWWWW (MOV 12.3)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: spread moved against this side (-15.5 -> -16.5)"
+              ],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }
@@ -177,22 +179,22 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "BGSU +15.5",
+              "selection": "BGSU +16.5",
               "side": "away",
-              "line": 15.5,
-              "odds": -110.0,
-              "model_raw": 0.4778,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 16.5,
+              "odds": -112.0,
+              "model_raw": 0.5035,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model BGSU +15.5 covers 47.8% vs market 50.0%.",
-                "Projected margin TOL +16.4 vs line TOL -15.5.",
+                "Model BGSU +16.5 covers 50.4% vs market 50.4%.",
+                "Projected margin TOL +16.4 vs line TOL -16.5.",
                 "BGSU L5 WLLLW (MOV -9.6), TOL L5 LWWWW (MOV 12.3)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -201,7 +203,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
