@@ -23,7 +23,7 @@
     "id": "228"
   },
   "score": null,
-  "analyzed": true,
+  "analyzed": false,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,30 +33,26 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -500.0,
-      "ml_away": 380.0,
-      "total": 43.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0
+      "ml_home": -485.0,
+      "ml_away": 370.0,
+      "spread_home": -12.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 12.5,
+      "spread_away_odds": -105.0,
+      "total": 40.5,
+      "over_odds": -108.0,
+      "under_odds": -112.0
     }
   },
   "badge": null,
-  "model_summary": "Margin DUKE +23.2 \u00b7 total 46.0",
-  "flags": [
-    "injury report not available for this league"
-  ],
-  "notes": [
-    "ESPN matchup predictor: DUKE 79.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin DUKE +23.2, total 46.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
-  ],
+  "model_summary": null,
+  "flags": [],
+  "notes": [],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {
-    "home": "L5 LWWWL",
-    "away": "L5 WLWWL"
-  },
+  "form": {},
   "markets": [
     {
       "market": "ML",
@@ -69,30 +65,27 @@
               "selection": "DUKE ML",
               "side": "home",
               "line": null,
-              "odds": -500.0,
-              "model_raw": 0.933,
-              "model_prob": 0.8,
-              "market_prob": 0.8,
-              "fair_odds": -400,
-              "edge": 0.0,
-              "edge_at_price": -0.0333,
-              "ev": -0.04,
-              "tier": "Low",
-              "data_quality": "Medium",
+              "odds": -485.0,
+              "model_raw": null,
+              "model_prob": null,
+              "market_prob": null,
+              "fair_odds": null,
+              "edge": null,
+              "edge_at_price": null,
+              "ev": null,
+              "tier": null,
+              "data_quality": null,
               "reasons": [
-                "Model DUKE win 93.3% vs market no-vig 80.0%.",
-                "v2 projected margin DUKE +23.2 (ratings DUKE +4.6, CLEM -15.3, home edge 3.33); raw model 93.3%.",
-                "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (93% vs 80%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
               ],
               "flags": [
-                "injury report not available for this league"
+                "!not modeled this refresh"
               ],
-              "caution": [],
-              "case_against": "Market makes DUKE 80%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -364 or better.",
-              "proven": false
+              "caution": [
+                "no model on this refresh"
+              ],
+              "case_against": "No model was run, so there is no edge to show.",
+              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
             }
           }
         },
@@ -104,32 +97,96 @@
               "selection": "CLEM ML",
               "side": "away",
               "line": null,
-              "odds": 380.0,
-              "model_raw": 0.067,
-              "model_prob": 0.2,
-              "market_prob": 0.2,
-              "fair_odds": 400,
-              "edge": -0.0,
-              "edge_at_price": -0.0083,
-              "ev": -0.04,
-              "tier": "Low",
-              "data_quality": "Medium",
+              "odds": 370.0,
+              "model_raw": null,
+              "model_prob": null,
+              "market_prob": null,
+              "fair_odds": null,
+              "edge": null,
+              "edge_at_price": null,
+              "ev": null,
+              "tier": null,
+              "data_quality": null,
               "reasons": [
-                "Model CLEM win 6.7% vs market no-vig 20.0%.",
-                "v2 projected margin DUKE +23.2 (ratings DUKE +4.6, CLEM -15.3, home edge 3.33); raw model 6.7%.",
-                "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (7% vs 20%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
               ],
               "flags": [
-                "injury report not available for this league"
+                "!not modeled this refresh"
               ],
               "caution": [
-                "line move: price drifted against this side (+260 -> +380)"
+                "no model on this refresh"
               ],
-              "case_against": "Market makes CLEM 20%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +410 or better.",
-              "proven": false
+              "case_against": "No model was run, so there is no edge to show.",
+              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "DUKE -12.5",
+              "side": "home",
+              "line": -12.5,
+              "odds": -115.0,
+              "model_raw": null,
+              "model_prob": null,
+              "market_prob": null,
+              "fair_odds": null,
+              "edge": null,
+              "edge_at_price": null,
+              "ev": null,
+              "tier": null,
+              "data_quality": null,
+              "reasons": [
+                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+              ],
+              "flags": [
+                "!not modeled this refresh"
+              ],
+              "caution": [
+                "no model on this refresh"
+              ],
+              "case_against": "No model was run, so there is no edge to show.",
+              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CLEM +12.5",
+              "side": "away",
+              "line": 12.5,
+              "odds": -105.0,
+              "model_raw": null,
+              "model_prob": null,
+              "market_prob": null,
+              "fair_odds": null,
+              "edge": null,
+              "edge_at_price": null,
+              "ev": null,
+              "tier": null,
+              "data_quality": null,
+              "reasons": [
+                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+              ],
+              "flags": [
+                "!not modeled this refresh"
+              ],
+              "caution": [
+                "no model on this refresh"
+              ],
+              "case_against": "No model was run, so there is no edge to show.",
+              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
             }
           }
         }
@@ -143,34 +200,30 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 43.5",
+              "selection": "Over 40.5",
               "side": "over",
-              "line": 43.5,
-              "odds": -110.0,
-              "model_raw": 0.5621,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
-              "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
-              "tier": "Low",
-              "data_quality": "Medium",
+              "line": 40.5,
+              "odds": -108.0,
+              "model_raw": null,
+              "model_prob": null,
+              "market_prob": null,
+              "fair_odds": null,
+              "edge": null,
+              "edge_at_price": null,
+              "ev": null,
+              "tier": null,
+              "data_quality": null,
               "reasons": [
-                "Model over 43.5: 56.2% vs market 50.0%.",
-                "Projected total 46.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 44.5 -> 43.5.",
-                "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
               ],
               "flags": [
-                "injury report not available for this league"
+                "!not modeled this refresh"
               ],
               "caution": [
-                "line move: market moved against the over (44.5 -> 43.5)"
+                "no model on this refresh"
               ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
-              "proven": false
+              "case_against": "No model was run, so there is no edge to show.",
+              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
             }
           }
         },
@@ -179,34 +232,30 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 43.5",
+              "selection": "Under 40.5",
               "side": "under",
-              "line": 43.5,
-              "odds": -110.0,
-              "model_raw": 0.4379,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
-              "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
-              "tier": "Low",
-              "data_quality": "Medium",
+              "line": 40.5,
+              "odds": -112.0,
+              "model_raw": null,
+              "model_prob": null,
+              "market_prob": null,
+              "fair_odds": null,
+              "edge": null,
+              "edge_at_price": null,
+              "ev": null,
+              "tier": null,
+              "data_quality": null,
               "reasons": [
-                "Model under 43.5: 43.8% vs market 50.0%.",
-                "Projected total 46.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 44.5 -> 43.5.",
-                "CLEM L5 WLWWL (MOV 0.4), DUKE L5 LWWWL (MOV 16.9)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
               ],
               "flags": [
-                "injury report not available for this league"
+                "!not modeled this refresh"
               ],
               "caution": [
-                "line move: total already moved toward under (44.5 -> 43.5); value may be gone"
+                "no model on this refresh"
               ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
-              "proven": false
+              "case_against": "No model was run, so there is no edge to show.",
+              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
             }
           }
         }
