@@ -35,9 +35,9 @@
     "draftkings": {
       "ml_home": -130.0,
       "ml_away": 110.0,
-      "total": 6.5,
-      "over_odds": 114.0,
-      "under_odds": -135.0,
+      "total": 5.5,
+      "over_odds": -135.0,
+      "under_odds": 114.0,
       "spread_home": -1.5,
       "spread_home_odds": 200.0,
       "spread_away": 1.5,
@@ -48,7 +48,7 @@
   "model_summary": "Margin SJ +0.4 \u00b7 total 6.2",
   "flags": [],
   "notes": [
-    "v2 ratings: margin SJ +0.4, total 6.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "v2 ratings: margin SJ +0.4, total 6.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
@@ -228,7 +228,7 @@
               "fair_odds": -213,
               "edge": -0.0004,
               "edge_at_price": -0.03,
-              "ev": -0.0423,
+              "ev": -0.0422,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
@@ -255,43 +255,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 6.5",
+              "selection": "Over 5.5",
               "side": "over",
-              "line": 6.5,
-              "odds": 114.0,
-              "model_raw": 0.4342,
-              "model_prob": 0.4486,
-              "market_prob": 0.4486,
-              "fair_odds": 123,
-              "edge": -0.0,
-              "edge_at_price": -0.0187,
-              "ev": -0.0401,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model over 6.5: 43.4% vs market 44.9%.",
-                "Projected total 6.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
-                "CGY L5 LWLWL (MOV -1.1), SJ L5 LWLWW (MOV -0.8)",
-                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +127 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 6.5",
-              "side": "under",
-              "line": 6.5,
+              "line": 5.5,
               "odds": -135.0,
-              "model_raw": 0.5658,
+              "model_raw": 0.5933,
               "model_prob": 0.5514,
               "market_prob": 0.5514,
               "fair_odds": -123,
@@ -301,8 +269,8 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 6.5: 56.6% vs market 55.1%.",
-                "Projected total 6.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 5.5: 59.3% vs market 55.1%.",
+                "Projected total 6.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 6.5 -> 5.5.",
                 "CGY L5 LWLWL (MOV -1.1), SJ L5 LWLWW (MOV -0.8)",
                 "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -310,6 +278,38 @@
               "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at -118 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 5.5",
+              "side": "under",
+              "line": 5.5,
+              "odds": 114.0,
+              "model_raw": 0.4067,
+              "model_prob": 0.4486,
+              "market_prob": 0.4486,
+              "fair_odds": 123,
+              "edge": -0.0,
+              "edge_at_price": -0.0187,
+              "ev": -0.0401,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 5.5: 40.7% vs market 44.9%.",
+                "Projected total 6.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 6.5 -> 5.5.",
+                "CGY L5 LWLWL (MOV -1.1), SJ L5 LWLWW (MOV -0.8)",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +127 or better.",
               "proven": false
             }
           }
