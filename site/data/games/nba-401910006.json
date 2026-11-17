@@ -24,24 +24,123 @@
   },
   "score": null,
   "analyzed": true,
-  "odds_feed": "espn",
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betmgm",
+    "betonlineag",
+    "betrivers",
+    "betus",
+    "bovada",
+    "draftkings",
+    "fanduel",
+    "lowvig",
+    "mybookieag"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/35028657"
+    "draftkings": "https://sportsbook.draftkings.com/event/35028657",
+    "fanduel": "https://sportsbook.fanduel.com/basketball/nba/utah-jazz-%40-los-angeles-clippers-36323395",
+    "betrivers": "https://oh.betrivers.com/?page=sportsbook#event/1028754043",
+    "betmgm": "https://sports.oh.betmgm.com/en/sports/events/utah-jazz-at-los-angeles-clippers-20050502"
   },
   "lines": {
     "draftkings": {
       "ml_home": -238.0,
       "ml_away": 197.0,
       "total": 225.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0,
+      "over_odds": -112.0,
+      "under_odds": -108.0,
       "spread_home": -6.5,
       "spread_home_odds": -107.0,
       "spread_away": 6.5,
       "spread_away_odds": -113.0
+    },
+    "fanduel": {
+      "ml_home": -235.0,
+      "ml_away": 194.0,
+      "total": 225.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -106.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -114.0
+    },
+    "betonlineag": {
+      "ml_home": -240.0,
+      "ml_away": 200.0,
+      "total": 226.5,
+      "over_odds": -108.0,
+      "under_odds": -112.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -108.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -112.0
+    },
+    "lowvig": {
+      "ml_home": -238.0,
+      "ml_away": 202.0,
+      "total": 226.5,
+      "over_odds": -105.0,
+      "under_odds": -109.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -104.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -108.0
+    },
+    "betrivers": {
+      "ml_home": -245.0,
+      "ml_away": 195.0,
+      "total": 225.5,
+      "over_odds": -107.0,
+      "under_odds": -115.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -110.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -112.0
+    },
+    "betmgm": {
+      "ml_home": -235.0,
+      "ml_away": 190.0,
+      "total": 226.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -115.0
+    },
+    "bovada": {
+      "ml_home": -240.0,
+      "ml_away": 200.0,
+      "total": 225.5,
+      "over_odds": -115.0,
+      "under_odds": -105.0,
+      "spread_home": -6.0,
+      "spread_home_odds": -115.0,
+      "spread_away": 6.0,
+      "spread_away_odds": -105.0
+    },
+    "mybookieag": {
+      "ml_home": -250.0,
+      "ml_away": 198.0,
+      "total": 225.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -110.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -110.0
+    },
+    "betus": {
+      "ml_home": -240.0,
+      "ml_away": 203.0,
+      "total": 226.0,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -110.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -110.0
     }
   },
   "badge": null,
@@ -132,16 +231,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model LAC win 75.8% vs market no-vig 67.7%.",
-                "v2 projected margin LAC +8.8 (ratings LAC -1.1, UTAH -8.3, home edge 1.5); raw model 75.8%.",
-                "UTAH L5 LLLLL (MOV -10.9), LAC L5 LWLWW (MOV -4.2)",
-                "pace: projected total -0.0 vs these teams' rating-only total (recent shot volume)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes LAC 68%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -208 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -235.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6862,
+              "market_prob": 0.6735,
+              "fair_odds": -219,
+              "edge": 0.0127,
+              "edge_at_price": -0.0153,
+              "ev": -0.0218,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -206 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -240.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6911,
+              "market_prob": 0.6792,
+              "fair_odds": -224,
+              "edge": 0.0118,
+              "edge_at_price": -0.0148,
+              "ev": -0.021,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -210 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -238.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6918,
+              "market_prob": 0.6802,
+              "fair_odds": -225,
+              "edge": 0.0117,
+              "edge_at_price": -0.0123,
+              "ev": -0.0175,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -211 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -245.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6891,
+              "market_prob": 0.6769,
+              "fair_odds": -222,
+              "edge": 0.0122,
+              "edge_at_price": -0.021,
+              "ev": -0.0296,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -208 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -235.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6837,
+              "market_prob": 0.6704,
+              "fair_odds": -216,
+              "edge": 0.0132,
+              "edge_at_price": -0.0178,
+              "ev": -0.0254,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -203 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -240.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6911,
+              "market_prob": 0.6792,
+              "fair_odds": -224,
+              "edge": 0.0118,
+              "edge_at_price": -0.0148,
+              "ev": -0.021,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -210 or better.",
+              "proven": true
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -250.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.692,
+              "market_prob": 0.6804,
+              "fair_odds": -225,
+              "edge": 0.0117,
+              "edge_at_price": -0.0223,
+              "ev": -0.0312,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -211 or better.",
+              "proven": true
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "LAC ML",
+              "side": "home",
+              "line": null,
+              "odds": -240.0,
+              "model_raw": 0.7581,
+              "model_prob": 0.6929,
+              "market_prob": 0.6814,
+              "fair_odds": -226,
+              "edge": 0.0115,
+              "edge_at_price": -0.013,
+              "ev": -0.0184,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC ML: 75.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -212 or better.",
               "proven": true
             }
           }
@@ -165,18 +470,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model UTAH win 24.2% vs market no-vig 32.3%.",
-                "v2 projected margin LAC +8.8 (ratings LAC -1.1, UTAH -8.3, home edge 1.5); raw model 24.2%.",
-                "UTAH L5 LLLLL (MOV -10.9), LAC L5 LWLWW (MOV -4.2)",
-                "pace: projected total -0.0 vs these teams' rating-only total (recent shot volume)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
               ],
               "flags": [],
-              "caution": [
-                "line move: price drifted against this side (+166 -> +197)"
-              ],
-              "case_against": "Market makes UTAH 32%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +228 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 194.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3138,
+              "market_prob": 0.3265,
+              "fair_odds": 219,
+              "edge": -0.0127,
+              "edge_at_price": -0.0263,
+              "ev": -0.0774,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +225 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 200.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3089,
+              "market_prob": 0.3208,
+              "fair_odds": 224,
+              "edge": -0.0118,
+              "edge_at_price": -0.0244,
+              "ev": -0.0732,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +230 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 202.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3082,
+              "market_prob": 0.3198,
+              "fair_odds": 225,
+              "edge": -0.0117,
+              "edge_at_price": -0.023,
+              "ev": -0.0694,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +231 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 195.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3109,
+              "market_prob": 0.3231,
+              "fair_odds": 222,
+              "edge": -0.0122,
+              "edge_at_price": -0.0281,
+              "ev": -0.0828,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +228 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 190.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3163,
+              "market_prob": 0.3296,
+              "fair_odds": 216,
+              "edge": -0.0132,
+              "edge_at_price": -0.0285,
+              "ev": -0.0826,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +222 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 200.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3089,
+              "market_prob": 0.3208,
+              "fair_odds": 224,
+              "edge": -0.0118,
+              "edge_at_price": -0.0244,
+              "ev": -0.0732,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +230 or better.",
+              "proven": true
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 198.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.308,
+              "market_prob": 0.3196,
+              "fair_odds": 225,
+              "edge": -0.0117,
+              "edge_at_price": -0.0276,
+              "ev": -0.0822,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +231 or better.",
+              "proven": true
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "UTAH ML",
+              "side": "away",
+              "line": null,
+              "odds": 203.0,
+              "model_raw": 0.2419,
+              "model_prob": 0.3071,
+              "market_prob": 0.3186,
+              "fair_odds": 226,
+              "edge": -0.0115,
+              "edge_at_price": -0.0229,
+              "ev": -0.0695,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH ML: 24.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +232 or better.",
               "proven": true
             }
           }
@@ -205,18 +714,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model LAC -6.5 covers 57.2% vs market 49.4%.",
-                "Projected margin LAC +8.8 vs line LAC -6.5.",
-                "UTAH L5 LLLLL (MOV -10.9), LAC L5 LWLWW (MOV -4.2)",
-                "pace: projected total -0.0 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
               ],
               "flags": [],
-              "caution": [
-                "line move: spread moved against this side (-5.5 -> -6.5)"
-              ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -106.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.4913,
+              "market_prob": 0.4913,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.0232,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -108.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -104.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.4954,
+              "market_prob": 0.4954,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0144,
+              "ev": -0.0282,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -110.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.4979,
+              "market_prob": 0.4979,
+              "fair_odds": 101,
+              "edge": -0.0,
+              "edge_at_price": -0.0259,
+              "ev": -0.0495,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -105.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "LAC -6",
+              "side": "home",
+              "line": -6.0,
+              "odds": -115.0,
+              "model_raw": 0.5872,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6: 58.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -110.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "LAC -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -110.0,
+              "model_raw": 0.5715,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model LAC -6.5: 57.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
             }
           }
@@ -240,16 +953,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model UTAH +6.5 covers 42.8% vs market 50.6%.",
-                "Projected margin LAC +8.8 vs line LAC -6.5.",
-                "UTAH L5 LLLLL (MOV -10.9), LAC L5 LWLWW (MOV -4.2)",
-                "pace: projected total -0.0 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -114.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5087,
+              "market_prob": 0.5087,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -112.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -108.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5046,
+              "market_prob": 0.5046,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.0147,
+              "ev": -0.0282,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -112.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5021,
+              "market_prob": 0.5021,
+              "fair_odds": -101,
+              "edge": 0.0,
+              "edge_at_price": -0.0262,
+              "ev": -0.0495,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -115.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "UTAH +6",
+              "side": "away",
+              "line": 6.0,
+              "odds": -105.0,
+              "model_raw": 0.4128,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6: 41.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -110.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "UTAH +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -110.0,
+              "model_raw": 0.4285,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model UTAH +6.5: 42.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
             }
           }
@@ -267,27 +1186,232 @@
               "selection": "Over 225.5",
               "side": "over",
               "line": 225.5,
+              "odds": -112.0,
+              "model_raw": 0.5348,
+              "model_prob": 0.5095,
+              "market_prob": 0.5043,
+              "fair_odds": -104,
+              "edge": 0.0052,
+              "edge_at_price": -0.0188,
+              "ev": -0.0355,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 225.5: 53.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +100 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Over 225.5",
+              "side": "over",
+              "line": 225.5,
               "odds": -110.0,
-              "model_raw": 0.5347,
+              "model_raw": 0.5348,
               "model_prob": 0.5059,
               "market_prob": 0.5,
               "fair_odds": -102,
               "edge": 0.0059,
               "edge_at_price": -0.0179,
-              "ev": -0.0342,
+              "ev": -0.0341,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 225.5: 53.5% vs market 50.0%.",
-                "Projected total 227.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 223.5 -> 225.5.",
-                "UTAH L5 LLLLL (MOV -10.9), LAC L5 LWLWW (MOV -4.2)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+                "Raw model Over 225.5: 53.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
               ],
               "flags": [],
-              "caution": [
-                "line move: total already moved toward over (223.5 -> 225.5); value may be gone"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 226.5",
+              "side": "over",
+              "line": 226.5,
+              "odds": -108.0,
+              "model_raw": 0.5142,
+              "model_prob": 0.4988,
+              "market_prob": 0.4957,
+              "fair_odds": 100,
+              "edge": 0.0032,
+              "edge_at_price": -0.0204,
+              "ev": -0.0393,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 226.5: 51.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
               ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 226.5",
+              "side": "over",
+              "line": 226.5,
+              "odds": -105.0,
+              "model_raw": 0.5142,
+              "model_prob": 0.4987,
+              "market_prob": 0.4955,
+              "fair_odds": 101,
+              "edge": 0.0032,
+              "edge_at_price": -0.0135,
+              "ev": -0.0264,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 226.5: 51.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 225.5",
+              "side": "over",
+              "line": 225.5,
+              "odds": -107.0,
+              "model_raw": 0.5348,
+              "model_prob": 0.4988,
+              "market_prob": 0.4915,
+              "fair_odds": 100,
+              "edge": 0.0074,
+              "edge_at_price": -0.0181,
+              "ev": -0.035,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 225.5: 53.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Over 226.5",
+              "side": "over",
+              "line": 226.5,
+              "odds": -110.0,
+              "model_raw": 0.5142,
+              "model_prob": 0.5024,
+              "market_prob": 0.5,
+              "fair_odds": -101,
+              "edge": 0.0024,
+              "edge_at_price": -0.0214,
+              "ev": -0.0408,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 226.5: 51.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Over 225.5",
+              "side": "over",
+              "line": 225.5,
+              "odds": -115.0,
+              "model_raw": 0.5348,
+              "model_prob": 0.5149,
+              "market_prob": 0.5108,
+              "fair_odds": -106,
+              "edge": 0.0041,
+              "edge_at_price": -0.02,
+              "ev": -0.0373,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 225.5: 53.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -102 or better.",
+              "proven": true
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Over 225.5",
+              "side": "over",
+              "line": 225.5,
+              "odds": -110.0,
+              "model_raw": 0.5348,
+              "model_prob": 0.5059,
+              "market_prob": 0.5,
+              "fair_odds": -102,
+              "edge": 0.0059,
+              "edge_at_price": -0.0179,
+              "ev": -0.0341,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 225.5: 53.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": true
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Over 226",
+              "side": "over",
+              "line": 226.0,
+              "odds": -110.0,
+              "model_raw": 0.5246,
+              "model_prob": 0.5042,
+              "market_prob": 0.5,
+              "fair_odds": -102,
+              "edge": 0.0042,
+              "edge_at_price": -0.0196,
+              "ev": -0.0375,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 226: 52.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +102 or better.",
               "proven": true
             }
@@ -301,27 +1425,232 @@
               "selection": "Under 225.5",
               "side": "under",
               "line": 225.5,
+              "odds": -108.0,
+              "model_raw": 0.4652,
+              "model_prob": 0.4905,
+              "market_prob": 0.4957,
+              "fair_odds": 104,
+              "edge": -0.0052,
+              "edge_at_price": -0.0288,
+              "ev": -0.0554,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 225.5: 46.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 225.5",
+              "side": "under",
+              "line": 225.5,
               "odds": -110.0,
-              "model_raw": 0.4653,
+              "model_raw": 0.4652,
               "model_prob": 0.4941,
               "market_prob": 0.5,
               "fair_odds": 102,
               "edge": -0.0059,
               "edge_at_price": -0.0297,
-              "ev": -0.0567,
+              "ev": -0.0568,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 225.5: 46.5% vs market 50.0%.",
-                "Projected total 227.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 223.5 -> 225.5.",
-                "UTAH L5 LLLLL (MOV -10.9), LAC L5 LWLWW (MOV -4.2)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+                "Raw model Under 225.5: 46.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
               ],
               "flags": [],
-              "caution": [
-                "line move: market moved against the under (223.5 -> 225.5)"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 226.5",
+              "side": "under",
+              "line": 226.5,
+              "odds": -112.0,
+              "model_raw": 0.4858,
+              "model_prob": 0.5012,
+              "market_prob": 0.5043,
+              "fair_odds": -100,
+              "edge": -0.0032,
+              "edge_at_price": -0.0271,
+              "ev": -0.0514,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 226.5: 48.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
               ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 226.5",
+              "side": "under",
+              "line": 226.5,
+              "odds": -109.0,
+              "model_raw": 0.4858,
+              "model_prob": 0.5013,
+              "market_prob": 0.5045,
+              "fair_odds": -101,
+              "edge": -0.0032,
+              "edge_at_price": -0.0202,
+              "ev": -0.0387,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 226.5: 48.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 225.5",
+              "side": "under",
+              "line": 225.5,
+              "odds": -115.0,
+              "model_raw": 0.4652,
+              "model_prob": 0.5012,
+              "market_prob": 0.5085,
+              "fair_odds": -100,
+              "edge": -0.0074,
+              "edge_at_price": -0.0337,
+              "ev": -0.063,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 225.5: 46.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 226.5",
+              "side": "under",
+              "line": 226.5,
+              "odds": -110.0,
+              "model_raw": 0.4858,
+              "model_prob": 0.4976,
+              "market_prob": 0.5,
+              "fair_odds": 101,
+              "edge": -0.0024,
+              "edge_at_price": -0.0262,
+              "ev": -0.0501,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 226.5: 48.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Under 225.5",
+              "side": "under",
+              "line": 225.5,
+              "odds": -105.0,
+              "model_raw": 0.4652,
+              "model_prob": 0.4851,
+              "market_prob": 0.4892,
+              "fair_odds": 106,
+              "edge": -0.0041,
+              "edge_at_price": -0.0271,
+              "ev": -0.0529,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 225.5: 46.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +110 or better.",
+              "proven": true
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Under 225.5",
+              "side": "under",
+              "line": 225.5,
+              "odds": -110.0,
+              "model_raw": 0.4652,
+              "model_prob": 0.4941,
+              "market_prob": 0.5,
+              "fair_odds": 102,
+              "edge": -0.0059,
+              "edge_at_price": -0.0297,
+              "ev": -0.0568,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 225.5: 46.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": true
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Under 226",
+              "side": "under",
+              "line": 226.0,
+              "odds": -110.0,
+              "model_raw": 0.4754,
+              "model_prob": 0.4958,
+              "market_prob": 0.5,
+              "fair_odds": 102,
+              "edge": -0.0042,
+              "edge_at_price": -0.028,
+              "ev": -0.0534,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 226: 47.5%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin LAC +8.8, total 227.19."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +106 or better.",
               "proven": true
             }
@@ -330,5 +1659,2598 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Ace Bailey",
+      "player_id": "4873138",
+      "team": "Utah Jazz",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 14.5,
+      "projection": 14.74,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "18/29"
+      },
+      "recent": [
+        7.0,
+        21.0,
+        18.0,
+        23.0,
+        7.0,
+        12.0,
+        15.0,
+        5.0,
+        9.0,
+        19.0
+      ],
+      "ladder": [
+        {
+          "line": 12.5,
+          "p_over": 0.592,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "5/10"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.577,
+          "fair_over": -136,
+          "fair_under": 136,
+          "L10": "5/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.552,
+          "fair_over": -123,
+          "fair_under": 123,
+          "L10": "5/10"
+        },
+        {
+          "line": 14.0,
+          "p_over": 0.533,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "5/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.51,
+          "fair_over": -104,
+          "fair_under": 104,
+          "L10": "5/10"
+        },
+        {
+          "line": 15.0,
+          "p_over": 0.472,
+          "fair_over": 112,
+          "fair_under": -112,
+          "L10": "4/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.439,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "4/10"
+        },
+        {
+          "line": 16.0,
+          "p_over": 0.415,
+          "fair_over": 141,
+          "fair_under": -141,
+          "L10": "4/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.398,
+          "fair_over": 152,
+          "fair_under": -152,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Over 14.5 pts",
+            "side": "over",
+            "line": 14.5,
+            "odds": -116.0,
+            "model_raw": 0.5101,
+            "model_prob": 0.5082,
+            "market_prob": 0.5062,
+            "fair_odds": -103,
+            "edge": 0.0019,
+            "edge_at_price": -0.0289,
+            "ev": -0.0538,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 14.5: 51.0% before shrink, this book's no-vig 50.6%.",
+              "Projection 14.74 (Normal(sd 6.2)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 18/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +101 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Under 14.5 pts",
+            "side": "under",
+            "line": 14.5,
+            "odds": -110.0,
+            "model_raw": 0.4899,
+            "model_prob": 0.4918,
+            "market_prob": 0.4938,
+            "fair_odds": 103,
+            "edge": -0.0019,
+            "edge_at_price": -0.032,
+            "ev": -0.061,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 14.5: 49.0% before shrink, this book's no-vig 49.4%.",
+              "Projection 14.74 (Normal(sd 6.2)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 18/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +107 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ace Bailey",
+      "player_id": "4873138",
+      "team": "Utah Jazz",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 1.5,
+      "projection": 1.83,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "5/10",
+        "L20": "13/20",
+        "all": "20/29"
+      },
+      "recent": [
+        4.0,
+        1.0,
+        2.0,
+        2.0,
+        3.0,
+        0.0,
+        1.0,
+        2.0,
+        1.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.808,
+          "fair_over": -421,
+          "fair_under": 421,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.736,
+          "fair_over": -278,
+          "fair_under": 278,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.53,
+          "fair_over": -113,
+          "fair_under": 113,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.363,
+          "fair_over": 176,
+          "fair_under": -176,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.268,
+          "fair_over": 274,
+          "fair_under": -274,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.152,
+          "fair_over": 559,
+          "fair_under": -559,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.132,
+          "fair_over": 657,
+          "fair_under": -657,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Over 1.5 ast",
+            "side": "over",
+            "line": 1.5,
+            "odds": -159.0,
+            "model_raw": 0.5297,
+            "model_prob": 0.5521,
+            "market_prob": 0.5746,
+            "fair_odds": -123,
+            "edge": -0.0224,
+            "edge_at_price": -0.0618,
+            "ev": -0.1006,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 53.0% before shrink, this book's no-vig 57.5%.",
+              "Projection 1.83 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 13/20, all 20/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -118 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Under 1.5 ast",
+            "side": "under",
+            "line": 1.5,
+            "odds": 120.0,
+            "model_raw": 0.4703,
+            "model_prob": 0.4479,
+            "market_prob": 0.4254,
+            "fair_odds": 123,
+            "edge": 0.0224,
+            "edge_at_price": -0.0067,
+            "ev": -0.0147,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 47.0% before shrink, this book's no-vig 42.5%.",
+              "Projection 1.83 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 13/20, all 20/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +128 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ace Bailey",
+      "player_id": "4873138",
+      "team": "Utah Jazz",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 22.5,
+      "projection": 22.25,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "15/29"
+      },
+      "recent": [
+        19.0,
+        25.0,
+        27.0,
+        32.0,
+        12.0,
+        18.0,
+        21.0,
+        13.0,
+        17.0,
+        25.0
+      ],
+      "ladder": [
+        {
+          "line": 18.5,
+          "p_over": 0.681,
+          "fair_over": -213,
+          "fair_under": 213,
+          "L10": "6/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.614,
+          "fair_over": -159,
+          "fair_under": 159,
+          "L10": "5/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.574,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "5/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.503,
+          "fair_over": -101,
+          "fair_under": 101,
+          "L10": "4/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.46,
+          "fair_over": 117,
+          "fair_under": -117,
+          "L10": "4/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.417,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "4/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.376,
+          "fair_over": 166,
+          "fair_under": -166,
+          "L10": "4/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.279,
+          "fair_over": 258,
+          "fair_under": -258,
+          "L10": "2/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.244,
+          "fair_over": 310,
+          "fair_under": -310,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Over 22.5 pra",
+            "side": "over",
+            "line": 22.5,
+            "odds": -114.0,
+            "model_raw": 0.4601,
+            "model_prob": 0.4795,
+            "market_prob": 0.499,
+            "fair_odds": 109,
+            "edge": -0.0194,
+            "edge_at_price": -0.0532,
+            "ev": -0.0998,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 22.5: 46.0% before shrink, this book's no-vig 49.9%.",
+              "Projection 22.25 (Normal(sd 6.0)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 15/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Under 22.5 pra",
+            "side": "under",
+            "line": 22.5,
+            "odds": -115.0,
+            "model_raw": 0.5399,
+            "model_prob": 0.5205,
+            "market_prob": 0.501,
+            "fair_odds": -109,
+            "edge": 0.0194,
+            "edge_at_price": -0.0144,
+            "ev": -0.027,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 22.5: 54.0% before shrink, this book's no-vig 50.1%.",
+              "Projection 22.25 (Normal(sd 6.0)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 9/20, all 15/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -104 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ace Bailey",
+      "player_id": "4873138",
+      "team": "Utah Jazz",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 1.82,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "3/10",
+        "L20": "9/20",
+        "all": "15/29"
+      },
+      "recent": [
+        1.0,
+        3.0,
+        3.0,
+        3.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.837,
+          "fair_over": -513,
+          "fair_under": 513,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.735,
+          "fair_over": -277,
+          "fair_under": 277,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.47,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.362,
+          "fair_over": 176,
+          "fair_under": -176,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.296,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.126,
+          "fair_over": 691,
+          "fair_under": -691,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.102,
+          "fair_over": 877,
+          "fair_under": -877,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -151.0,
+            "model_raw": 0.4705,
+            "model_prob": 0.5167,
+            "market_prob": 0.5628,
+            "fair_odds": -107,
+            "edge": -0.0462,
+            "edge_at_price": -0.0849,
+            "ev": -0.1412,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 47.0% before shrink, this book's no-vig 56.3%.",
+              "Projection 1.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 9/20, all 15/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -103 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 114.0,
+            "model_raw": 0.5295,
+            "model_prob": 0.4833,
+            "market_prob": 0.4372,
+            "fair_odds": 107,
+            "edge": 0.0462,
+            "edge_at_price": 0.016,
+            "ev": 0.0343,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 52.9% before shrink, this book's no-vig 43.7%.",
+              "Projection 1.82 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 9/20, all 15/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for +111 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ace Bailey",
+      "player_id": "4873138",
+      "team": "Utah Jazz",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 5.5,
+      "projection": 5.68,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "12/20",
+        "all": "17/29"
+      },
+      "recent": [
+        8.0,
+        3.0,
+        7.0,
+        7.0,
+        2.0,
+        6.0,
+        5.0,
+        6.0,
+        7.0,
+        6.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.794,
+          "fair_over": -386,
+          "fair_under": 386,
+          "L10": "8/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.774,
+          "fair_over": -342,
+          "fair_under": 342,
+          "L10": "8/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.698,
+          "fair_over": -231,
+          "fair_under": 231,
+          "L10": "8/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.647,
+          "fair_over": -183,
+          "fair_under": 183,
+          "L10": "7/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.56,
+          "fair_over": -127,
+          "fair_under": 127,
+          "L10": "7/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.459,
+          "fair_over": 118,
+          "fair_under": -118,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.369,
+          "fair_over": 171,
+          "fair_under": -171,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.237,
+          "fair_over": 322,
+          "fair_under": -322,
+          "L10": "1/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.197,
+          "fair_over": 407,
+          "fair_under": -407,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Over 5.5 reb",
+            "side": "over",
+            "line": 5.5,
+            "odds": -118.0,
+            "model_raw": 0.5596,
+            "model_prob": 0.5328,
+            "market_prob": 0.5061,
+            "fair_odds": -114,
+            "edge": 0.0268,
+            "edge_at_price": -0.0084,
+            "ev": -0.0156,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 56.0% before shrink, this book's no-vig 50.6%.",
+              "Projection 5.68 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/20, all 17/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -109 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ace Bailey Under 5.5 reb",
+            "side": "under",
+            "line": 5.5,
+            "odds": -112.0,
+            "model_raw": 0.4404,
+            "model_prob": 0.4672,
+            "market_prob": 0.4939,
+            "fair_odds": 114,
+            "edge": -0.0268,
+            "edge_at_price": -0.0611,
+            "ev": -0.1157,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 44.0% before shrink, this book's no-vig 49.4%.",
+              "Projection 5.68 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/20, all 17/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +118 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brook Lopez",
+      "player_id": "3448",
+      "team": "LA Clippers",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 12.5,
+      "projection": 13.07,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "14/27"
+      },
+      "recent": [
+        7.0,
+        26.0,
+        8.0,
+        20.0,
+        20.0,
+        12.0,
+        7.0,
+        13.0,
+        2.0,
+        15.0
+      ],
+      "ladder": [
+        {
+          "line": 10.5,
+          "p_over": 0.622,
+          "fair_over": -165,
+          "fair_under": 165,
+          "L10": "6/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.609,
+          "fair_over": -156,
+          "fair_under": 156,
+          "L10": "6/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.587,
+          "fair_over": -142,
+          "fair_under": 142,
+          "L10": "6/10"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.558,
+          "fair_over": -126,
+          "fair_under": 126,
+          "L10": "5/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.521,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "5/10"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.487,
+          "fair_over": 105,
+          "fair_under": -105,
+          "L10": "4/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.455,
+          "fair_over": 120,
+          "fair_under": -120,
+          "L10": "4/10"
+        },
+        {
+          "line": 14.0,
+          "p_over": 0.435,
+          "fair_over": 130,
+          "fair_under": -130,
+          "L10": "4/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.418,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Over 12.5 pts",
+            "side": "over",
+            "line": 12.5,
+            "odds": -126.0,
+            "model_raw": 0.5212,
+            "model_prob": 0.5236,
+            "market_prob": 0.526,
+            "fair_odds": -110,
+            "edge": -0.0024,
+            "edge_at_price": -0.0339,
+            "ev": -0.0609,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 52.1% before shrink, this book's no-vig 52.6%.",
+              "Projection 13.07 (Normal(sd 7.0)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -105 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Under 12.5 pts",
+            "side": "under",
+            "line": 12.5,
+            "odds": -101.0,
+            "model_raw": 0.4788,
+            "model_prob": 0.4764,
+            "market_prob": 0.474,
+            "fair_odds": 110,
+            "edge": 0.0024,
+            "edge_at_price": -0.0261,
+            "ev": -0.0519,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 47.9% before shrink, this book's no-vig 47.4%.",
+              "Projection 13.07 (Normal(sd 7.0)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 14/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +114 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brook Lopez",
+      "player_id": "3448",
+      "team": "LA Clippers",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 1.5,
+      "projection": 2.02,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "8/20",
+        "all": "13/27"
+      },
+      "recent": [
+        8.0,
+        4.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        3.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.826,
+          "fair_over": -474,
+          "fair_under": 474,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.75,
+          "fair_over": -301,
+          "fair_under": 301,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.535,
+          "fair_over": -115,
+          "fair_under": 115,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.419,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.33,
+          "fair_over": 203,
+          "fair_under": -203,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.211,
+          "fair_over": 373,
+          "fair_under": -373,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.182,
+          "fair_over": 449,
+          "fair_under": -449,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Over 1.5 ast",
+            "side": "over",
+            "line": 1.5,
+            "odds": -109.0,
+            "model_raw": 0.5347,
+            "model_prob": 0.5113,
+            "market_prob": 0.4878,
+            "fair_odds": -105,
+            "edge": 0.0234,
+            "edge_at_price": -0.0103,
+            "ev": -0.0197,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 53.5% before shrink, this book's no-vig 48.8%.",
+              "Projection 2.02 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Under 1.5 ast",
+            "side": "under",
+            "line": 1.5,
+            "odds": -121.0,
+            "model_raw": 0.4653,
+            "model_prob": 0.4887,
+            "market_prob": 0.5122,
+            "fair_odds": 105,
+            "edge": -0.0234,
+            "edge_at_price": -0.0588,
+            "ev": -0.1074,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 46.5% before shrink, this book's no-vig 51.2%.",
+              "Projection 2.02 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brook Lopez",
+      "player_id": "3448",
+      "team": "LA Clippers",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 20.5,
+      "projection": 20.34,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "3/10",
+        "L20": "10/20",
+        "all": "13/27"
+      },
+      "recent": [
+        20.0,
+        37.0,
+        13.0,
+        28.0,
+        29.0,
+        19.0,
+        9.0,
+        19.0,
+        8.0,
+        18.0
+      ],
+      "ladder": [
+        {
+          "line": 16.5,
+          "p_over": 0.669,
+          "fair_over": -202,
+          "fair_under": 202,
+          "L10": "7/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.642,
+          "fair_over": -179,
+          "fair_under": 179,
+          "L10": "7/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.584,
+          "fair_over": -140,
+          "fair_under": 140,
+          "L10": "6/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.496,
+          "fair_over": 102,
+          "fair_under": -102,
+          "L10": "4/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.437,
+          "fair_over": 129,
+          "fair_under": -129,
+          "L10": "3/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.407,
+          "fair_over": 146,
+          "fair_under": -146,
+          "L10": "3/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.378,
+          "fair_over": 165,
+          "fair_under": -165,
+          "L10": "3/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.349,
+          "fair_over": 186,
+          "fair_under": -186,
+          "L10": "3/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.322,
+          "fair_over": 211,
+          "fair_under": -211,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Over 20.5 pra",
+            "side": "over",
+            "line": 20.5,
+            "odds": -113.0,
+            "model_raw": 0.4369,
+            "model_prob": 0.4669,
+            "market_prob": 0.4969,
+            "fair_odds": 114,
+            "edge": -0.03,
+            "edge_at_price": -0.0636,
+            "ev": -0.1199,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 20.5: 43.7% before shrink, this book's no-vig 49.7%.",
+              "Projection 20.34 (Normal(sd 8.7)).",
+              "Hit rate over L5 3/5, L10 3/10, L20 10/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +118 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Under 20.5 pra",
+            "side": "under",
+            "line": 20.5,
+            "odds": -116.0,
+            "model_raw": 0.5631,
+            "model_prob": 0.5331,
+            "market_prob": 0.5031,
+            "fair_odds": -114,
+            "edge": 0.03,
+            "edge_at_price": -0.004,
+            "ev": -0.0074,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 20.5: 56.3% before shrink, this book's no-vig 50.3%.",
+              "Projection 20.34 (Normal(sd 8.7)).",
+              "Hit rate over L5 3/5, L10 3/10, L20 10/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -109 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brook Lopez",
+      "player_id": "3448",
+      "team": "LA Clippers",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 1.49,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "7/20",
+        "all": "11/27"
+      },
+      "recent": [
+        1.0,
+        3.0,
+        1.0,
+        1.0,
+        2.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.795,
+          "fair_over": -389,
+          "fair_under": 389,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.663,
+          "fair_over": -197,
+          "fair_under": 197,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.402,
+          "fair_over": 149,
+          "fair_under": -149,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.259,
+          "fair_over": 285,
+          "fair_under": -285,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.21,
+          "fair_over": 375,
+          "fair_under": -375,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.083,
+          "fair_over": 1105,
+          "fair_under": -1105,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.071,
+          "fair_over": 1305,
+          "fair_under": -1305,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 105.0,
+            "model_raw": 0.4023,
+            "model_prob": 0.4296,
+            "market_prob": 0.4569,
+            "fair_odds": 133,
+            "edge": -0.0273,
+            "edge_at_price": -0.0582,
+            "ev": -0.1193,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 1.5: 40.2% before shrink, this book's no-vig 45.7%.",
+              "Projection 1.49 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +137 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -138.0,
+            "model_raw": 0.5977,
+            "model_prob": 0.5704,
+            "market_prob": 0.5431,
+            "fair_odds": -133,
+            "edge": 0.0273,
+            "edge_at_price": -0.0094,
+            "ev": -0.0163,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 1.5: 59.8% before shrink, this book's no-vig 54.3%.",
+              "Projection 1.49 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -127 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brook Lopez",
+      "player_id": "3448",
+      "team": "LA Clippers",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 5.5,
+      "projection": 5.25,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "12/20",
+        "all": "15/27"
+      },
+      "recent": [
+        5.0,
+        7.0,
+        4.0,
+        7.0,
+        8.0,
+        6.0,
+        2.0,
+        6.0,
+        3.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.733,
+          "fair_over": -274,
+          "fair_under": 274,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.692,
+          "fair_over": -225,
+          "fair_under": 225,
+          "L10": "6/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.596,
+          "fair_over": -147,
+          "fair_under": 147,
+          "L10": "6/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.528,
+          "fair_over": -112,
+          "fair_under": 112,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.453,
+          "fair_over": 121,
+          "fair_under": -121,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.351,
+          "fair_over": 185,
+          "fair_under": -185,
+          "L10": "3/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.296,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.188,
+          "fair_over": 432,
+          "fair_under": -432,
+          "L10": "1/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.163,
+          "fair_over": 514,
+          "fair_under": -514,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Over 5.5 reb",
+            "side": "over",
+            "line": 5.5,
+            "odds": -111.0,
+            "model_raw": 0.4532,
+            "model_prob": 0.473,
+            "market_prob": 0.4929,
+            "fair_odds": 111,
+            "edge": -0.0198,
+            "edge_at_price": -0.053,
+            "ev": -0.1008,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 5.5: 45.3% before shrink, this book's no-vig 49.3%.",
+              "Projection 5.25 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 15/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brook Lopez Under 5.5 reb",
+            "side": "under",
+            "line": 5.5,
+            "odds": -118.0,
+            "model_raw": 0.5468,
+            "model_prob": 0.527,
+            "market_prob": 0.5071,
+            "fair_odds": -111,
+            "edge": 0.0198,
+            "edge_at_price": -0.0143,
+            "ev": -0.0265,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 5.5: 54.7% before shrink, this book's no-vig 50.7%.",
+              "Projection 5.25 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 15/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -107 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darius Garland",
+      "player_id": "4396907",
+      "team": "LA Clippers",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 23.5,
+      "projection": 20.31,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "5/10",
+        "L20": "7/20",
+        "all": "12/27"
+      },
+      "recent": [
+        27.0,
+        24.0,
+        13.0,
+        24.0,
+        26.0,
+        16.0,
+        15.0,
+        24.0,
+        14.0,
+        16.0
+      ],
+      "ladder": [
+        {
+          "line": 19.5,
+          "p_over": 0.54,
+          "fair_over": -117,
+          "fair_under": 117,
+          "L10": "5/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.491,
+          "fair_over": 104,
+          "fair_under": -104,
+          "L10": "5/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.442,
+          "fair_over": 126,
+          "fair_under": -126,
+          "L10": "5/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.395,
+          "fair_over": 153,
+          "fair_under": -153,
+          "L10": "5/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.351,
+          "fair_over": 185,
+          "fair_under": -185,
+          "L10": "5/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.225,
+          "fair_over": 344,
+          "fair_under": -344,
+          "L10": "2/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.192,
+          "fair_over": 420,
+          "fair_under": -420,
+          "L10": "2/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.136,
+          "fair_over": 637,
+          "fair_under": -637,
+          "L10": "1/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.085,
+          "fair_over": 1083,
+          "fair_under": -1083,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Over 23.5 pts",
+            "side": "over",
+            "line": 23.5,
+            "odds": -115.0,
+            "model_raw": 0.3515,
+            "model_prob": 0.4284,
+            "market_prob": 0.5052,
+            "fair_odds": 133,
+            "edge": -0.0769,
+            "edge_at_price": -0.1065,
+            "ev": -0.1991,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 23.5: 35.1% before shrink, this book's no-vig 50.5%.",
+              "Projection 20.31 (Normal(sd 5.2)).",
+              "Hit rate over L5 4/5, L10 5/10, L20 7/20, all 12/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)",
+              "model far from market (35% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (35% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Under 23.5 pts",
+            "side": "under",
+            "line": 23.5,
+            "odds": -110.0,
+            "model_raw": 0.6485,
+            "model_prob": 0.5716,
+            "market_prob": 0.4948,
+            "fair_odds": -133,
+            "edge": 0.0769,
+            "edge_at_price": 0.0478,
+            "ev": 0.0913,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 23.5: 64.8% before shrink, this book's no-vig 49.5%.",
+              "Projection 20.31 (Normal(sd 5.2)).",
+              "Hit rate over L5 4/5, L10 5/10, L20 7/20, all 12/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)",
+              "model far from market (65% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (65% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darius Garland",
+      "player_id": "4396907",
+      "team": "LA Clippers",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 6.5,
+      "projection": 7.09,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "7/10",
+        "L20": "10/20",
+        "all": "13/27"
+      },
+      "recent": [
+        7.0,
+        7.0,
+        6.0,
+        10.0,
+        7.0,
+        8.0,
+        7.0,
+        5.0,
+        5.0,
+        11.0
+      ],
+      "ladder": [
+        {
+          "line": 4.5,
+          "p_over": 0.864,
+          "fair_over": -634,
+          "fair_under": 634,
+          "L10": "10/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.843,
+          "fair_over": -535,
+          "fair_under": 535,
+          "L10": "8/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.725,
+          "fair_over": -263,
+          "fair_under": 263,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.684,
+          "fair_over": -217,
+          "fair_under": 217,
+          "L10": "7/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.6,
+          "fair_over": -150,
+          "fair_under": 150,
+          "L10": "7/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.492,
+          "fair_over": 103,
+          "fair_under": -103,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.386,
+          "fair_over": 159,
+          "fair_under": -159,
+          "L10": "3/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.307,
+          "fair_over": 225,
+          "fair_under": -225,
+          "L10": "2/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.271,
+          "fair_over": 269,
+          "fair_under": -269,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": -134.0,
+            "model_raw": 0.5998,
+            "model_prob": 0.5681,
+            "market_prob": 0.5363,
+            "fair_odds": -132,
+            "edge": 0.0317,
+            "edge_at_price": -0.0046,
+            "ev": -0.008,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 60.0% before shrink, this book's no-vig 53.6%.",
+              "Projection 7.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 10/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -126 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": 102.0,
+            "model_raw": 0.4002,
+            "model_prob": 0.4319,
+            "market_prob": 0.4637,
+            "fair_odds": 132,
+            "edge": -0.0317,
+            "edge_at_price": -0.0631,
+            "ev": -0.1275,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 40.0% before shrink, this book's no-vig 46.4%.",
+              "Projection 7.09 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 10/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +136 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darius Garland",
+      "player_id": "4396907",
+      "team": "LA Clippers",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 33.5,
+      "projection": 29.98,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "11/27"
+      },
+      "recent": [
+        40.0,
+        35.0,
+        24.0,
+        34.0,
+        34.0,
+        28.0,
+        22.0,
+        31.0,
+        20.0,
+        31.0
+      ],
+      "ladder": [
+        {
+          "line": 29.5,
+          "p_over": 0.55,
+          "fair_over": -122,
+          "fair_under": 122,
+          "L10": "6/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.507,
+          "fair_over": -103,
+          "fair_under": 103,
+          "L10": "6/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.406,
+          "fair_over": 146,
+          "fair_under": -146,
+          "L10": "4/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.366,
+          "fair_over": 174,
+          "fair_under": -174,
+          "L10": "4/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.328,
+          "fair_over": 205,
+          "fair_under": -205,
+          "L10": "4/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.235,
+          "fair_over": 326,
+          "fair_under": -326,
+          "L10": "2/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.175,
+          "fair_over": 470,
+          "fair_under": -470,
+          "L10": "1/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.149,
+          "fair_over": 570,
+          "fair_under": -570,
+          "L10": "1/10"
+        },
+        {
+          "line": 37.5,
+          "p_over": 0.127,
+          "fair_over": 686,
+          "fair_under": -686,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Over 33.5 pra",
+            "side": "over",
+            "line": 33.5,
+            "odds": -115.0,
+            "model_raw": 0.3277,
+            "model_prob": 0.4144,
+            "market_prob": 0.501,
+            "fair_odds": 141,
+            "edge": -0.0867,
+            "edge_at_price": -0.1205,
+            "ev": -0.2253,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 33.5: 32.8% before shrink, this book's no-vig 50.1%.",
+              "Projection 29.98 (Normal(sd 6.0)).",
+              "Hit rate over L5 4/5, L10 4/10, L20 6/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)",
+              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +146 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Under 33.5 pra",
+            "side": "under",
+            "line": 33.5,
+            "odds": -114.0,
+            "model_raw": 0.6723,
+            "model_prob": 0.5856,
+            "market_prob": 0.499,
+            "fair_odds": -141,
+            "edge": 0.0867,
+            "edge_at_price": 0.0529,
+            "ev": 0.0994,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 33.5: 67.2% before shrink, this book's no-vig 49.9%.",
+              "Projection 29.98 (Normal(sd 6.0)).",
+              "Hit rate over L5 4/5, L10 4/10, L20 6/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)",
+              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -135 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darius Garland",
+      "player_id": "4396907",
+      "team": "LA Clippers",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 2.54,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "15/27"
+      },
+      "recent": [
+        3.0,
+        3.0,
+        1.0,
+        3.0,
+        4.0,
+        1.0,
+        1.0,
+        4.0,
+        1.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.919,
+          "fair_over": -1140,
+          "fair_under": 1140,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.892,
+          "fair_over": -824,
+          "fair_under": 824,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.672,
+          "fair_over": -205,
+          "fair_under": 205,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.597,
+          "fair_over": -148,
+          "fair_under": 148,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.477,
+          "fair_over": 109,
+          "fair_under": -109,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.324,
+          "fair_over": 209,
+          "fair_under": -209,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.25,
+          "fair_over": 300,
+          "fair_under": -300,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.121,
+          "fair_over": 730,
+          "fair_under": -730,
+          "L10": "0/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.103,
+          "fair_over": 871,
+          "fair_under": -871,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -131.0,
+            "model_raw": 0.4774,
+            "model_prob": 0.5044,
+            "market_prob": 0.5314,
+            "fair_odds": -102,
+            "edge": -0.027,
+            "edge_at_price": -0.0627,
+            "ev": -0.1105,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 47.7% before shrink, this book's no-vig 53.1%.",
+              "Projection 2.54 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 9/20, all 15/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": 100.0,
+            "model_raw": 0.5226,
+            "model_prob": 0.4956,
+            "market_prob": 0.4686,
+            "fair_odds": 102,
+            "edge": 0.027,
+            "edge_at_price": -0.0044,
+            "ev": -0.0088,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 52.3% before shrink, this book's no-vig 46.9%.",
+              "Projection 2.54 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 9/20, all 15/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darius Garland",
+      "player_id": "4396907",
+      "team": "LA Clippers",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 2.5,
+      "projection": 2.58,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "8/20",
+        "all": "11/27"
+      },
+      "recent": [
+        6.0,
+        4.0,
+        5.0,
+        0.0,
+        1.0,
+        4.0,
+        0.0,
+        2.0,
+        1.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.863,
+          "fair_over": -632,
+          "fair_under": 632,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.834,
+          "fair_over": -502,
+          "fair_under": 502,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.678,
+          "fair_over": -211,
+          "fair_under": 211,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.606,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.485,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.391,
+          "fair_over": 156,
+          "fair_under": -156,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.344,
+          "fair_over": 191,
+          "fair_under": -191,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.208,
+          "fair_over": 382,
+          "fair_under": -382,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.166,
+          "fair_over": 504,
+          "fair_under": -504,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -136.0,
+            "model_raw": 0.4852,
+            "model_prob": 0.5122,
+            "market_prob": 0.5391,
+            "fair_odds": -105,
+            "edge": -0.027,
+            "edge_at_price": -0.0641,
+            "ev": -0.1112,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 2.5: 48.5% before shrink, this book's no-vig 53.9%.",
+              "Projection 2.58 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darius Garland Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": 103.0,
+            "model_raw": 0.5148,
+            "model_prob": 0.4878,
+            "market_prob": 0.4609,
+            "fair_odds": 105,
+            "edge": 0.027,
+            "edge_at_price": -0.0048,
+            "ev": -0.0097,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 2.5: 51.5% before shrink, this book's no-vig 46.1%.",
+              "Projection 2.58 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darryn Peterson",
+      "player_id": "5041955",
+      "team": "Utah Jazz",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 21.5,
+      "projection": 18.5,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "4/10",
+        "L20": "4/14",
+        "all": "4/14"
+      },
+      "recent": [
+        17.0,
+        28.0,
+        22.0,
+        25.0,
+        26.0,
+        21.0,
+        7.0,
+        14.0,
+        16.0,
+        18.0
+      ],
+      "ladder": [
+        {
+          "line": 17.5,
+          "p_over": 0.572,
+          "fair_over": -134,
+          "fair_under": 134,
+          "L10": "6/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.5,
+          "fair_over": 100,
+          "fair_under": -100,
+          "L10": "5/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.457,
+          "fair_over": 119,
+          "fair_under": -119,
+          "L10": "5/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.415,
+          "fair_over": 141,
+          "fair_under": -141,
+          "L10": "5/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.346,
+          "fair_over": 189,
+          "fair_under": -189,
+          "L10": "4/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.281,
+          "fair_over": 256,
+          "fair_under": -256,
+          "L10": "3/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.248,
+          "fair_over": 303,
+          "fair_under": -303,
+          "L10": "3/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.22,
+          "fair_over": 355,
+          "fair_under": -355,
+          "L10": "3/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.167,
+          "fair_over": 500,
+          "fair_under": -500,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darryn Peterson Over 21.5 pts",
+            "side": "over",
+            "line": 21.5,
+            "odds": -108.0,
+            "model_raw": 0.3463,
+            "model_prob": 0.4036,
+            "market_prob": 0.4896,
+            "fair_odds": 148,
+            "edge": -0.086,
+            "edge_at_price": -0.1156,
+            "ev": -0.2227,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 21.5: 34.6% before shrink, this book's no-vig 49.0%.",
+              "Projection 18.5 (Normal(sd 6.0)).",
+              "Hit rate over L5 4/5, L10 4/10, L20 4/14, all 4/14."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (35% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (35% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +153 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darryn Peterson Under 21.5 pts",
+            "side": "under",
+            "line": 21.5,
+            "odds": -118.0,
+            "model_raw": 0.6537,
+            "model_prob": 0.5964,
+            "market_prob": 0.5104,
+            "fair_odds": -148,
+            "edge": 0.086,
+            "edge_at_price": 0.0551,
+            "ev": 0.1018,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 21.5: 65.4% before shrink, this book's no-vig 51.0%.",
+              "Projection 18.5 (Normal(sd 6.0)).",
+              "Hit rate over L5 4/5, L10 4/10, L20 4/14, all 4/14."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (65% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (65% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -141 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }

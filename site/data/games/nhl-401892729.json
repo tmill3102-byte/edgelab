@@ -24,12 +24,23 @@
   },
   "score": null,
   "analyzed": true,
-  "odds_feed": "espn",
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betmgm",
+    "betonlineag",
+    "betrivers",
+    "betus",
+    "bovada",
+    "draftkings",
+    "fanduel",
+    "lowvig",
+    "mybookieag"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/35036223"
+    "draftkings": "https://sportsbook.draftkings.com/event/35036223",
+    "betrivers": "https://oh.betrivers.com/?page=sportsbook#event/1028410085",
+    "fanduel": "https://sportsbook.fanduel.com/ice-hockey/nhl/washington-capitals-%40-tampa-bay-lightning-36309193",
+    "betmgm": "https://sports.oh.betmgm.com/en/sports/events/washington-capitals-at-tampa-bay-lightning-20098625"
   },
   "lines": {
     "draftkings": {
@@ -40,8 +51,96 @@
       "ml_home": -162.0,
       "ml_away": 136.0,
       "total": 6.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0
+      "over_odds": -105.0,
+      "under_odds": -115.0
+    },
+    "betonlineag": {
+      "spread_home": -1.5,
+      "spread_home_odds": 152.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -173.0,
+      "ml_home": -156.0,
+      "ml_away": 137.0,
+      "total": 6.5,
+      "over_odds": -103.0,
+      "under_odds": -113.0
+    },
+    "lowvig": {
+      "spread_home": -1.5,
+      "spread_home_odds": 152.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -173.0,
+      "ml_home": -156.0,
+      "ml_away": 137.0,
+      "total": 6.5,
+      "over_odds": -103.0,
+      "under_odds": -113.0
+    },
+    "betus": {
+      "spread_home": -1.5,
+      "spread_home_odds": 152.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -175.0,
+      "ml_home": -155.0,
+      "ml_away": 134.0,
+      "total": 6.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0
+    },
+    "betrivers": {
+      "spread_home": -1.5,
+      "spread_home_odds": 155.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -195.0,
+      "ml_home": -162.0,
+      "ml_away": 135.0,
+      "total": 6.5,
+      "over_odds": -109.0,
+      "under_odds": -114.0
+    },
+    "fanduel": {
+      "spread_home": -1.5,
+      "spread_home_odds": 144.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -178.0,
+      "ml_home": -162.0,
+      "ml_away": 134.0,
+      "total": 6.5,
+      "over_odds": -102.0,
+      "under_odds": -120.0
+    },
+    "betmgm": {
+      "spread_home": -1.5,
+      "spread_home_odds": 150.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -185.0,
+      "ml_home": -160.0,
+      "ml_away": 135.0,
+      "total": 6.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0
+    },
+    "bovada": {
+      "spread_home": -1.5,
+      "spread_home_odds": 147.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -172.0,
+      "ml_home": -168.0,
+      "ml_away": 142.0,
+      "total": 6.5,
+      "over_odds": -108.0,
+      "under_odds": -112.0
+    },
+    "mybookieag": {
+      "spread_home": -1.5,
+      "spread_home_odds": 145.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -179.0,
+      "ml_home": -162.0,
+      "ml_away": 131.0,
+      "total": 6.5,
+      "over_odds": -105.0,
+      "under_odds": -117.0
     }
   },
   "badge": null,
@@ -53,6 +152,12 @@
   "injuries": {
     "home": [
       {
+        "name": "Conor Geekie",
+        "status": "Injured Reserve",
+        "pos": "C",
+        "key": false
+      },
+      {
         "name": "Erik Cernak",
         "status": "Day-To-Day",
         "pos": "D",
@@ -61,12 +166,6 @@
       {
         "name": "Anthony Cirelli",
         "status": "Day-To-Day",
-        "pos": "C",
-        "key": false
-      },
-      {
-        "name": "Brayden Point",
-        "status": "Injured Reserve",
         "pos": "C",
         "key": false
       }
@@ -113,15 +212,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TB win 63.0% vs market no-vig 59.3%.",
-                "v2 projected margin TB +0.8 (ratings TB +0.6, WSH +0.1, home edge 0.4); raw model 63.0%.",
-                "WSH L5 LWWLL (MOV -0.2), TB L5 WLWWL (MOV 0.8)",
-                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes TB 59%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -139 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -156.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5909,
+              "market_prob": 0.5909,
+              "fair_odds": -144,
+              "edge": 0.0,
+              "edge_at_price": -0.0185,
+              "ev": -0.0304,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -138 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -156.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5909,
+              "market_prob": 0.5909,
+              "fair_odds": -144,
+              "edge": 0.0,
+              "edge_at_price": -0.0185,
+              "ev": -0.0304,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -138 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -155.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5872,
+              "market_prob": 0.5872,
+              "fair_odds": -142,
+              "edge": 0.0,
+              "edge_at_price": -0.0207,
+              "ev": -0.034,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -136 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -162.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5923,
+              "market_prob": 0.5923,
+              "fair_odds": -145,
+              "edge": 0.0,
+              "edge_at_price": -0.026,
+              "ev": -0.042,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -138 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -162.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5913,
+              "market_prob": 0.5913,
+              "fair_odds": -145,
+              "edge": 0.0,
+              "edge_at_price": -0.027,
+              "ev": -0.0437,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -138 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -160.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5912,
+              "market_prob": 0.5912,
+              "fair_odds": -145,
+              "edge": 0.0,
+              "edge_at_price": -0.0242,
+              "ev": -0.0393,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -138 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -168.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.6027,
+              "market_prob": 0.6027,
+              "fair_odds": -152,
+              "edge": 0.0,
+              "edge_at_price": -0.0242,
+              "ev": -0.0385,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -144 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "TB ML",
+              "side": "home",
+              "line": null,
+              "odds": -162.0,
+              "model_raw": 0.6303,
+              "model_prob": 0.5882,
+              "market_prob": 0.5882,
+              "fair_odds": -143,
+              "edge": 0.0,
+              "edge_at_price": -0.0301,
+              "ev": -0.0487,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB ML: 63.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -136 or better.",
               "proven": false
             }
           }
@@ -145,15 +451,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model WSH win 37.0% vs market no-vig 40.7%.",
-                "v2 projected margin TB +0.8 (ratings TB +0.6, WSH +0.1, home edge 0.4); raw model 37.0%.",
-                "WSH L5 LWWLL (MOV -0.2), TB L5 WLWWL (MOV 0.8)",
-                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes WSH 41%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +151 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 137.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4091,
+              "market_prob": 0.4091,
+              "fair_odds": 144,
+              "edge": 0.0,
+              "edge_at_price": -0.0128,
+              "ev": -0.0304,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +149 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 137.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4091,
+              "market_prob": 0.4091,
+              "fair_odds": 144,
+              "edge": 0.0,
+              "edge_at_price": -0.0128,
+              "ev": -0.0304,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +149 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 134.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4128,
+              "market_prob": 0.4128,
+              "fair_odds": 142,
+              "edge": 0.0,
+              "edge_at_price": -0.0145,
+              "ev": -0.034,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +147 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 135.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4077,
+              "market_prob": 0.4077,
+              "fair_odds": 145,
+              "edge": -0.0,
+              "edge_at_price": -0.0179,
+              "ev": -0.042,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +150 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 134.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4087,
+              "market_prob": 0.4087,
+              "fair_odds": 145,
+              "edge": 0.0,
+              "edge_at_price": -0.0187,
+              "ev": -0.0437,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +150 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 135.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4088,
+              "market_prob": 0.4088,
+              "fair_odds": 145,
+              "edge": -0.0,
+              "edge_at_price": -0.0167,
+              "ev": -0.0393,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +150 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 142.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.3973,
+              "market_prob": 0.3973,
+              "fair_odds": 152,
+              "edge": 0.0,
+              "edge_at_price": -0.0159,
+              "ev": -0.0385,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +157 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 131.0,
+              "model_raw": 0.3697,
+              "model_prob": 0.4118,
+              "market_prob": 0.4118,
+              "fair_odds": 143,
+              "edge": 0.0,
+              "edge_at_price": -0.0211,
+              "ev": -0.0487,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH ML: 37.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +148 or better.",
               "proven": false
             }
           }
@@ -182,15 +695,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TB -1.5 covers 39.2% vs market 38.4%.",
-                "Projected margin TB +0.8 vs line TB -1.5.",
-                "WSH L5 LWWLL (MOV -0.2), TB L5 WLWWL (MOV 0.8)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +164 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 152.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3868,
+              "market_prob": 0.3851,
+              "fair_odds": 159,
+              "edge": 0.0018,
+              "edge_at_price": -0.01,
+              "ev": -0.0252,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +164 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 152.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3868,
+              "market_prob": 0.3851,
+              "fair_odds": 159,
+              "edge": 0.0018,
+              "edge_at_price": -0.01,
+              "ev": -0.0252,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +164 or better.",
+              "proven": true
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 152.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3861,
+              "market_prob": 0.3841,
+              "fair_odds": 159,
+              "edge": 0.002,
+              "edge_at_price": -0.0107,
+              "ev": -0.027,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +164 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 155.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3775,
+              "market_prob": 0.3724,
+              "fair_odds": 165,
+              "edge": 0.0052,
+              "edge_at_price": -0.0146,
+              "ev": -0.0373,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +170 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 144.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3906,
+              "market_prob": 0.3903,
+              "fair_odds": 156,
+              "edge": 0.0004,
+              "edge_at_price": -0.0192,
+              "ev": -0.0469,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +161 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 150.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3841,
+              "market_prob": 0.3813,
+              "fair_odds": 160,
+              "edge": 0.0028,
+              "edge_at_price": -0.0159,
+              "ev": -0.0399,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +166 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 147.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3907,
+              "market_prob": 0.3903,
+              "fair_odds": 156,
+              "edge": 0.0003,
+              "edge_at_price": -0.0142,
+              "ev": -0.035,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +161 or better.",
+              "proven": true
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "TB -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 145.0,
+              "model_raw": 0.3916,
+              "model_prob": 0.3896,
+              "market_prob": 0.3888,
+              "fair_odds": 157,
+              "edge": 0.0008,
+              "edge_at_price": -0.0186,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model TB -1.5: 39.2%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +162 or better.",
               "proven": true
             }
           }
@@ -214,15 +934,222 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model WSH +1.5 covers 60.8% vs market 61.6%.",
-                "Projected margin TB +0.8 vs line TB -1.5.",
-                "WSH L5 LWWLL (MOV -0.2), TB L5 WLWWL (MOV 0.8)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -151 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -173.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6132,
+              "market_prob": 0.6149,
+              "fair_odds": -159,
+              "edge": -0.0018,
+              "edge_at_price": -0.0205,
+              "ev": -0.0324,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -151 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -173.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6132,
+              "market_prob": 0.6149,
+              "fair_odds": -159,
+              "edge": -0.0018,
+              "edge_at_price": -0.0205,
+              "ev": -0.0324,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -151 or better.",
+              "proven": true
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -175.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6139,
+              "market_prob": 0.6159,
+              "fair_odds": -159,
+              "edge": -0.002,
+              "edge_at_price": -0.0225,
+              "ev": -0.0353,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -151 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -195.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6225,
+              "market_prob": 0.6276,
+              "fair_odds": -165,
+              "edge": -0.0052,
+              "edge_at_price": -0.0385,
+              "ev": -0.0583,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -157 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -178.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6094,
+              "market_prob": 0.6097,
+              "fair_odds": -156,
+              "edge": -0.0004,
+              "edge_at_price": -0.0309,
+              "ev": -0.0483,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -148 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -185.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6159,
+              "market_prob": 0.6187,
+              "fair_odds": -160,
+              "edge": -0.0028,
+              "edge_at_price": -0.0332,
+              "ev": -0.0511,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -152 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -172.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6093,
+              "market_prob": 0.6097,
+              "fair_odds": -156,
+              "edge": -0.0003,
+              "edge_at_price": -0.023,
+              "ev": -0.0364,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -148 or better.",
+              "proven": true
+            },
+            "mybookieag": {
+              "market": "Spread",
+              "selection": "WSH +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -179.0,
+              "model_raw": 0.6084,
+              "model_prob": 0.6104,
+              "market_prob": 0.6112,
+              "fair_odds": -157,
+              "edge": -0.0008,
+              "edge_at_price": -0.0312,
+              "ev": -0.0486,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model WSH +1.5: 60.8%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -149 or better.",
               "proven": true
             }
           }
@@ -240,26 +1167,233 @@
               "selection": "Over 6.5",
               "side": "over",
               "line": 6.5,
-              "odds": -110.0,
+              "odds": -105.0,
               "model_raw": 0.4417,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 6.5: 44.2% vs market 50.0%.",
-                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
-                "WSH L5 LWWLL (MOV -0.2), TB L5 WLWWL (MOV 0.8)",
-                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -103.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4889,
+              "market_prob": 0.4889,
+              "fair_odds": 105,
+              "edge": 0.0,
+              "edge_at_price": -0.0185,
+              "ev": -0.0365,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -103.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4889,
+              "market_prob": 0.4889,
+              "fair_odds": 105,
+              "edge": 0.0,
+              "edge_at_price": -0.0185,
+              "ev": -0.0365,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -105.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -109.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4947,
+              "market_prob": 0.4947,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0268,
+              "ev": -0.0515,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -102.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4807,
+              "market_prob": 0.4807,
+              "fair_odds": 108,
+              "edge": 0.0,
+              "edge_at_price": -0.0242,
+              "ev": -0.048,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +112 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -105.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -108.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Over 6.5",
+              "side": "over",
+              "line": 6.5,
+              "odds": -105.0,
+              "model_raw": 0.4417,
+              "model_prob": 0.4872,
+              "market_prob": 0.4872,
+              "fair_odds": 105,
+              "edge": 0.0,
+              "edge_at_price": -0.025,
+              "ev": -0.0489,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 6.5: 44.2%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }
@@ -272,26 +1406,233 @@
               "selection": "Under 6.5",
               "side": "under",
               "line": 6.5,
-              "odds": -110.0,
+              "odds": -115.0,
               "model_raw": 0.5583,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 6.5: 55.8% vs market 50.0%.",
-                "Projected total 6.3 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
-                "WSH L5 LWWLL (MOV -0.2), TB L5 WLWWL (MOV 0.8)",
-                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -113.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5111,
+              "market_prob": 0.5111,
+              "fair_odds": -105,
+              "edge": 0.0,
+              "edge_at_price": -0.0194,
+              "ev": -0.0365,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -113.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5111,
+              "market_prob": 0.5111,
+              "fair_odds": -105,
+              "edge": 0.0,
+              "edge_at_price": -0.0194,
+              "ev": -0.0365,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -115.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -114.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5053,
+              "market_prob": 0.5053,
+              "fair_odds": -102,
+              "edge": -0.0,
+              "edge_at_price": -0.0274,
+              "ev": -0.0515,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -120.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5193,
+              "market_prob": 0.5193,
+              "fair_odds": -108,
+              "edge": 0.0,
+              "edge_at_price": -0.0262,
+              "ev": -0.048,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -104 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -115.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -112.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "Total",
+              "selection": "Under 6.5",
+              "side": "under",
+              "line": 6.5,
+              "odds": -117.0,
+              "model_raw": 0.5583,
+              "model_prob": 0.5128,
+              "market_prob": 0.5128,
+              "fair_odds": -105,
+              "edge": 0.0,
+              "edge_at_price": -0.0263,
+              "ev": -0.0489,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 6.5: 55.8%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NHL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin TB +0.8, total 6.3."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -101 or better.",
               "proven": false
             }
           }
@@ -299,5 +1640,1709 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Alex Ovechkin",
+      "player_id": "3101",
+      "team": "Washington Capitals",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.15,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/10",
+        "L20": "4/18",
+        "all": "4/18"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.148,
+          "fair_over": 575,
+          "fair_under": -575,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.039,
+          "fair_over": 2444,
+          "fair_under": -2444,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.036,
+          "fair_over": 2702,
+          "fair_under": -2702,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.029,
+          "fair_over": 3291,
+          "fair_under": -3291,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.029,
+          "fair_over": 3291,
+          "fair_under": -3291,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Ovechkin Over 0.5 ast",
+            "side": "over",
+            "line": 0.5,
+            "odds": 350.0,
+            "model_raw": 0.1483,
+            "model_prob": 0.1732,
+            "market_prob": 0.2105,
+            "fair_odds": 477,
+            "edge": -0.0373,
+            "edge_at_price": -0.049,
+            "ev": -0.2206,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 14.8% before shrink, this book's no-vig 21.1%.",
+              "Projection 0.15 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 4/18, all 4/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +489 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Ovechkin Under 0.5 ast",
+            "side": "under",
+            "line": 0.5,
+            "odds": -500.0,
+            "model_raw": 0.8517,
+            "model_prob": 0.8268,
+            "market_prob": 0.7895,
+            "fair_odds": -477,
+            "edge": 0.0373,
+            "edge_at_price": -0.0065,
+            "ev": -0.0078,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 85.2% before shrink, this book's no-vig 78.9%.",
+              "Projection 0.15 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 4/18, all 4/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -428 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex Ovechkin",
+      "player_id": "3101",
+      "team": "Washington Capitals",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.17,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/10",
+        "L20": "5/18",
+        "all": "5/18"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.161,
+          "fair_over": 523,
+          "fair_under": -523,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.042,
+          "fair_over": 2295,
+          "fair_under": -2295,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.038,
+          "fair_over": 2555,
+          "fair_under": -2555,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.03,
+          "fair_over": 3273,
+          "fair_under": -3273,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.03,
+          "fair_over": 3273,
+          "fair_under": -3273,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Ovechkin Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": 160.0,
+            "model_raw": 0.1606,
+            "model_prob": 0.2399,
+            "market_prob": 0.3587,
+            "fair_odds": 317,
+            "edge": -0.1189,
+            "edge_at_price": -0.1448,
+            "ev": -0.3764,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 16.1% before shrink, this book's no-vig 35.9%.",
+              "Projection 0.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 5/18, all 5/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (16% vs 36%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (16% vs 36%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +325 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Ovechkin Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -220.0,
+            "model_raw": 0.8394,
+            "model_prob": 0.7601,
+            "market_prob": 0.6413,
+            "fair_odds": -317,
+            "edge": 0.1189,
+            "edge_at_price": 0.0726,
+            "ev": 0.1057,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 83.9% before shrink, this book's no-vig 64.1%.",
+              "Projection 0.17 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 5/18, all 5/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (84% vs 64%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (84% vs 64%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -292 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex Ovechkin",
+      "player_id": "3101",
+      "team": "Washington Capitals",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 1.5,
+      "projection": 1.97,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "12/18",
+        "all": "12/18"
+      },
+      "recent": [
+        4.0,
+        2.0,
+        0.0,
+        3.0,
+        2.0,
+        2.0,
+        3.0,
+        2.0,
+        1.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.851,
+          "fair_over": -572,
+          "fair_under": 572,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.812,
+          "fair_over": -431,
+          "fair_under": 431,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.643,
+          "fair_over": -180,
+          "fair_under": 180,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.481,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.322,
+          "fair_over": 211,
+          "fair_under": -211,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.179,
+          "fair_over": 459,
+          "fair_under": -459,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.148,
+          "fair_over": 576,
+          "fair_under": -576,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Ovechkin Over 1.5 sog",
+            "side": "over",
+            "line": 1.5,
+            "odds": -160.0,
+            "model_raw": 0.6435,
+            "model_prob": 0.6162,
+            "market_prob": 0.5752,
+            "fair_odds": -161,
+            "edge": 0.041,
+            "edge_at_price": 0.0008,
+            "ev": 0.0013,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 64.3% before shrink, this book's no-vig 57.5%.",
+              "Projection 1.97 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 12/18, all 12/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -153 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Ovechkin Under 1.5 sog",
+            "side": "under",
+            "line": 1.5,
+            "odds": 120.0,
+            "model_raw": 0.3565,
+            "model_prob": 0.3838,
+            "market_prob": 0.4248,
+            "fair_odds": 161,
+            "edge": -0.041,
+            "edge_at_price": -0.0707,
+            "ev": -0.1556,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 35.6% before shrink, this book's no-vig 42.5%.",
+              "Projection 1.97 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 12/18, all 12/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +166 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex Tuch",
+      "player_id": "3114766",
+      "team": "Washington Capitals",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.04,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "0/10",
+        "L20": "2/18",
+        "all": "2/18"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.825,
+          "fair_over": -471,
+          "fair_under": 471,
+          "L10": "0/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.057,
+          "fair_over": 1641,
+          "fair_under": -1641,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.03,
+          "fair_over": 3254,
+          "fair_under": -3254,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.03,
+          "fair_over": 3257,
+          "fair_under": -3257,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.029,
+          "fair_over": 3327,
+          "fair_under": -3327,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.029,
+          "fair_over": 3327,
+          "fair_under": -3327,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Tuch Over 0.5 ast",
+            "side": "over",
+            "line": 0.5,
+            "odds": 240.0,
+            "model_raw": 0.0574,
+            "model_prob": 0.1453,
+            "market_prob": 0.2771,
+            "fair_odds": 588,
+            "edge": -0.1318,
+            "edge_at_price": -0.1489,
+            "ev": -0.5061,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 5.7% before shrink, this book's no-vig 27.7%.",
+              "Projection 0.04 (Poisson).",
+              "Hit rate over L5 0/5, L10 0/10, L20 2/18, all 2/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (6% vs 28%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (6% vs 28%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +602 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Tuch Under 0.5 ast",
+            "side": "under",
+            "line": 0.5,
+            "odds": -330.0,
+            "model_raw": 0.9426,
+            "model_prob": 0.8547,
+            "market_prob": 0.7229,
+            "fair_odds": -588,
+            "edge": 0.1318,
+            "edge_at_price": 0.0873,
+            "ev": 0.1137,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 94.3% before shrink, this book's no-vig 72.3%.",
+              "Projection 0.04 (Poisson).",
+              "Hit rate over L5 0/5, L10 0/10, L20 2/18, all 2/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (94% vs 72%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (94% vs 72%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -517 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex Tuch",
+      "player_id": "3114766",
+      "team": "Washington Capitals",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.65,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "8/18",
+        "all": "8/18"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.456,
+          "fair_over": 119,
+          "fair_under": -119,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.241,
+          "fair_over": 315,
+          "fair_under": -315,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.177,
+          "fair_over": 464,
+          "fair_under": -464,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.056,
+          "fair_over": 1698,
+          "fair_under": -1698,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.048,
+          "fair_over": 2005,
+          "fair_under": -2005,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Tuch Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": -105.0,
+            "model_raw": 0.4561,
+            "model_prob": 0.4638,
+            "market_prob": 0.4754,
+            "fair_odds": 116,
+            "edge": -0.0116,
+            "edge_at_price": -0.0484,
+            "ev": -0.0945,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 45.6% before shrink, this book's no-vig 47.5%.",
+              "Projection 0.65 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 8/18, all 8/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +120 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Tuch Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -130.0,
+            "model_raw": 0.5439,
+            "model_prob": 0.5362,
+            "market_prob": 0.5246,
+            "fair_odds": -116,
+            "edge": 0.0116,
+            "edge_at_price": -0.029,
+            "ev": -0.0514,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 54.4% before shrink, this book's no-vig 52.5%.",
+              "Projection 0.65 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 8/18, all 8/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -111 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex Tuch",
+      "player_id": "3114766",
+      "team": "Washington Capitals",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 2.5,
+      "projection": 2.38,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "9/18",
+        "all": "9/18"
+      },
+      "recent": [
+        3.0,
+        0.0,
+        0.0,
+        3.0,
+        2.0,
+        4.0,
+        1.0,
+        5.0,
+        3.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.852,
+          "fair_over": -577,
+          "fair_under": 577,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.827,
+          "fair_over": -479,
+          "fair_under": 479,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.68,
+          "fair_over": -212,
+          "fair_under": 212,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.584,
+          "fair_over": -141,
+          "fair_under": 141,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.451,
+          "fair_over": 122,
+          "fair_under": -122,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.295,
+          "fair_over": 239,
+          "fair_under": -239,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.229,
+          "fair_over": 337,
+          "fair_under": -337,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.133,
+          "fair_over": 652,
+          "fair_under": -652,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.119,
+          "fair_over": 740,
+          "fair_under": -740,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Tuch Over 2.5 sog",
+            "side": "over",
+            "line": 2.5,
+            "odds": 140.0,
+            "model_raw": 0.4513,
+            "model_prob": 0.4263,
+            "market_prob": 0.3887,
+            "fair_odds": 135,
+            "edge": 0.0375,
+            "edge_at_price": 0.0096,
+            "ev": 0.0231,
+            "tier": "Medium",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 45.1% before shrink, this book's no-vig 38.9%.",
+              "Projection 2.38 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/18, all 9/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at +139 or better (current +140); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex Tuch Under 2.5 sog",
+            "side": "under",
+            "line": 2.5,
+            "odds": -190.0,
+            "model_raw": 0.5487,
+            "model_prob": 0.5737,
+            "market_prob": 0.6113,
+            "fair_odds": -135,
+            "edge": -0.0375,
+            "edge_at_price": -0.0814,
+            "ev": -0.1243,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 54.9% before shrink, this book's no-vig 61.1%.",
+              "Projection 2.38 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/18, all 9/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -129 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Aliaksei Protas",
+      "player_id": "4587943",
+      "team": "Washington Capitals",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.54,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "5/10",
+        "L20": "7/18",
+        "all": "7/18"
+      },
+      "recent": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.95,
+          "fair_over": -1900,
+          "fair_under": 1900,
+          "L10": "5/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.445,
+          "fair_over": 125,
+          "fair_under": -125,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.184,
+          "fair_over": 443,
+          "fair_under": -443,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.125,
+          "fair_over": 703,
+          "fair_under": -703,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.044,
+          "fair_over": 2163,
+          "fair_under": -2163,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.04,
+          "fair_over": 2370,
+          "fair_under": -2370,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aliaksei Protas Over 0.5 ast",
+            "side": "over",
+            "line": 0.5,
+            "odds": 260.0,
+            "model_raw": 0.4454,
+            "model_prob": 0.3716,
+            "market_prob": 0.2608,
+            "fair_odds": 169,
+            "edge": 0.1107,
+            "edge_at_price": 0.0938,
+            "ev": 0.3376,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 44.5% before shrink, this book's no-vig 26.1%.",
+              "Projection 0.54 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 7/18, all 7/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (45% vs 26%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (45% vs 26%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +174 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aliaksei Protas Under 0.5 ast",
+            "side": "under",
+            "line": 0.5,
+            "odds": -370.0,
+            "model_raw": 0.5546,
+            "model_prob": 0.6284,
+            "market_prob": 0.7392,
+            "fair_odds": -169,
+            "edge": -0.1107,
+            "edge_at_price": -0.1588,
+            "ev": -0.2017,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 55.5% before shrink, this book's no-vig 73.9%.",
+              "Projection 0.54 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 7/18, all 7/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (55% vs 74%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (55% vs 74%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -160 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Aliaksei Protas",
+      "player_id": "4587943",
+      "team": "Washington Capitals",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.7,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "6/10",
+        "L20": "8/18",
+        "all": "8/18"
+      },
+      "recent": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        0.0,
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.956,
+          "fair_over": -2186,
+          "fair_under": 2186,
+          "L10": "6/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.532,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.287,
+          "fair_over": 248,
+          "fair_under": -248,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.189,
+          "fair_over": 428,
+          "fair_under": -428,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.06,
+          "fair_over": 1553,
+          "fair_under": -1553,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.052,
+          "fair_over": 1840,
+          "fair_under": -1840,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aliaksei Protas Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": 150.0,
+            "model_raw": 0.5321,
+            "model_prob": 0.4685,
+            "market_prob": 0.3731,
+            "fair_odds": 113,
+            "edge": 0.0954,
+            "edge_at_price": 0.0685,
+            "ev": 0.1712,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 53.2% before shrink, this book's no-vig 37.3%.",
+              "Projection 0.7 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 8/18, all 8/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (53% vs 37%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (53% vs 37%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +118 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aliaksei Protas Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -205.0,
+            "model_raw": 0.4679,
+            "model_prob": 0.5315,
+            "market_prob": 0.6269,
+            "fair_odds": -113,
+            "edge": -0.0954,
+            "edge_at_price": -0.1406,
+            "ev": -0.2092,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 46.8% before shrink, this book's no-vig 62.7%.",
+              "Projection 0.7 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 8/18, all 8/18."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (47% vs 63%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (47% vs 63%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -109 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Aliaksei Protas",
+      "player_id": "4587943",
+      "team": "Washington Capitals",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 1.5,
+      "projection": 1.66,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "6/18",
+        "all": "6/18"
+      },
+      "recent": [
+        5.0,
+        1.0,
+        1.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        3.0,
+        4.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.789,
+          "fair_over": -373,
+          "fair_under": 373,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.688,
+          "fair_over": -220,
+          "fair_under": 220,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.467,
+          "fair_over": 114,
+          "fair_under": -114,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.331,
+          "fair_over": 202,
+          "fair_under": -202,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.267,
+          "fair_over": 274,
+          "fair_under": -274,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.162,
+          "fair_over": 519,
+          "fair_under": -519,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.144,
+          "fair_over": 594,
+          "fair_under": -594,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aliaksei Protas Over 1.5 sog",
+            "side": "over",
+            "line": 1.5,
+            "odds": 115.0,
+            "model_raw": 0.4666,
+            "model_prob": 0.4534,
+            "market_prob": 0.4335,
+            "fair_odds": 121,
+            "edge": 0.0199,
+            "edge_at_price": -0.0118,
+            "ev": -0.0253,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 46.7% before shrink, this book's no-vig 43.3%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/18, all 6/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aliaksei Protas Under 1.5 sog",
+            "side": "under",
+            "line": 1.5,
+            "odds": -155.0,
+            "model_raw": 0.5334,
+            "model_prob": 0.5466,
+            "market_prob": 0.5665,
+            "fair_odds": -121,
+            "edge": -0.0199,
+            "edge_at_price": -0.0612,
+            "ev": -0.1007,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 53.3% before shrink, this book's no-vig 56.7%.",
+              "Projection 1.66 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/18, all 6/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -115 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Anthony Cirelli",
+      "player_id": "3941973",
+      "team": "Tampa Bay Lightning",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.62,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "6/18",
+        "all": "6/18"
+      },
+      "recent": [
+        3.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.446,
+          "fair_over": 124,
+          "fair_under": -124,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.23,
+          "fair_over": 334,
+          "fair_under": -334,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.171,
+          "fair_over": 485,
+          "fair_under": -485,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.082,
+          "fair_over": 1122,
+          "fair_under": -1122,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.075,
+          "fair_over": 1239,
+          "fair_under": -1239,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: day-to-day",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Anthony Cirelli Over 0.5 ast",
+            "side": "over",
+            "line": 0.5,
+            "odds": 200.0,
+            "model_raw": 0.4462,
+            "model_prob": 0.3927,
+            "market_prob": 0.3125,
+            "fair_odds": 155,
+            "edge": 0.0802,
+            "edge_at_price": 0.0594,
+            "ev": 0.1782,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 44.6% before shrink, this book's no-vig 31.2%.",
+              "Projection 0.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/18, all 6/18."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: day-to-day",
+              "model far from market (45% vs 31%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low",
+              "model far from market (45% vs 31%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +160 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Anthony Cirelli Under 0.5 ast",
+            "side": "under",
+            "line": 0.5,
+            "odds": -275.0,
+            "model_raw": 0.5538,
+            "model_prob": 0.6073,
+            "market_prob": 0.6875,
+            "fair_odds": -155,
+            "edge": -0.0802,
+            "edge_at_price": -0.1261,
+            "ev": -0.1719,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 55.4% before shrink, this book's no-vig 68.8%.",
+              "Projection 0.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/18, all 6/18."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: day-to-day",
+              "model far from market (55% vs 69%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (55% vs 69%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -147 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Anthony Cirelli",
+      "player_id": "3941973",
+      "team": "Tampa Bay Lightning",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.97,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "6/10",
+        "L20": "9/18",
+        "all": "9/18"
+      },
+      "recent": [
+        3.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.956,
+          "fair_over": -2186,
+          "fair_under": 2186,
+          "L10": "6/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.608,
+          "fair_over": -155,
+          "fair_under": 155,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.416,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.282,
+          "fair_over": 255,
+          "fair_under": -255,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.155,
+          "fair_over": 546,
+          "fair_under": -546,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.136,
+          "fair_over": 634,
+          "fair_under": -634,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: day-to-day",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Anthony Cirelli Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": 115.0,
+            "model_raw": 0.608,
+            "model_prob": 0.5382,
+            "market_prob": 0.4335,
+            "fair_odds": -117,
+            "edge": 0.1047,
+            "edge_at_price": 0.0731,
+            "ev": 0.1571,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 60.8% before shrink, this book's no-vig 43.3%.",
+              "Projection 0.97 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 9/18, all 9/18."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: day-to-day",
+              "model far from market (61% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low",
+              "model far from market (61% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -112 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Anthony Cirelli Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -155.0,
+            "model_raw": 0.392,
+            "model_prob": 0.4618,
+            "market_prob": 0.5665,
+            "fair_odds": 117,
+            "edge": -0.1047,
+            "edge_at_price": -0.146,
+            "ev": -0.2403,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 39.2% before shrink, this book's no-vig 56.7%.",
+              "Projection 0.97 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 9/18, all 9/18."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: day-to-day",
+              "model far from market (39% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 57%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +121 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Anthony Cirelli",
+      "player_id": "3941973",
+      "team": "Tampa Bay Lightning",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 1.5,
+      "projection": 1.64,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/18",
+        "all": "7/18"
+      },
+      "recent": [
+        1.0,
+        1.0,
+        2.0,
+        2.0,
+        5.0,
+        0.0,
+        1.0,
+        2.0,
+        1.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.816,
+          "fair_over": -443,
+          "fair_under": 443,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.728,
+          "fair_over": -268,
+          "fair_under": 268,
+          "L10": "5/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.493,
+          "fair_over": 103,
+          "fair_under": -103,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.288,
+          "fair_over": 248,
+          "fair_under": -248,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.206,
+          "fair_over": 385,
+          "fair_under": -385,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.123,
+          "fair_over": 716,
+          "fair_under": -716,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.113,
+          "fair_over": 782,
+          "fair_under": -782,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: day-to-day",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Anthony Cirelli Over 1.5 sog",
+            "side": "over",
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.4926,
+            "model_prob": 0.4726,
+            "market_prob": 0.4425,
+            "fair_odds": 112,
+            "edge": 0.0301,
+            "edge_at_price": -0.0036,
+            "ev": -0.0076,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 49.3% before shrink, this book's no-vig 44.2%.",
+              "Projection 1.64 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/18, all 7/18."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: day-to-day"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +116 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Anthony Cirelli Under 1.5 sog",
+            "side": "under",
+            "line": 1.5,
+            "odds": -150.0,
+            "model_raw": 0.5074,
+            "model_prob": 0.5274,
+            "market_prob": 0.5575,
+            "fair_odds": -112,
+            "edge": -0.0301,
+            "edge_at_price": -0.0726,
+            "ev": -0.1209,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 50.7% before shrink, this book's no-vig 55.8%.",
+              "Projection 1.64 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/18, all 7/18."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: day-to-day"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -107 or better.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }
