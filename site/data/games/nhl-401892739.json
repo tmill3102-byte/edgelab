@@ -116,14 +116,14 @@
   "injuries": {
     "home": [
       {
-        "name": "Albert Johansson",
-        "status": "Injured Reserve",
+        "name": "William Wallinder",
+        "status": "Out",
         "pos": "D",
         "key": false
       },
       {
-        "name": "William Wallinder",
-        "status": "Day-To-Day",
+        "name": "Albert Johansson",
+        "status": "Injured Reserve",
         "pos": "D",
         "key": false
       },
@@ -1141,6 +1141,146 @@
       "player": "Alex DeBrincat",
       "player_id": "4063433",
       "team": "Detroit Red Wings",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.54,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "3/10",
+        "L20": "10/20",
+        "all": "10/21"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        2.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.39,
+          "fair_over": 157,
+          "fair_under": -157,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.169,
+          "fair_over": 492,
+          "fair_under": -492,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.126,
+          "fair_over": 694,
+          "fair_under": -694,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.045,
+          "fair_over": 2141,
+          "fair_under": -2141,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.041,
+          "fair_over": 2347,
+          "fair_under": -2347,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex DeBrincat Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": -195.0,
+            "model_raw": 0.3897,
+            "model_prob": 0.4811,
+            "market_prob": 0.6182,
+            "fair_odds": 108,
+            "edge": -0.1371,
+            "edge_at_price": -0.1799,
+            "ev": -0.2722,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 39.0% before shrink, this book's no-vig 61.8%.",
+              "Projection 0.54 (Poisson).",
+              "Hit rate over L5 0/5, L10 3/10, L20 10/20, all 10/21."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (39% vs 62%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 62%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Alex DeBrincat Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": 145.0,
+            "model_raw": 0.6103,
+            "model_prob": 0.5189,
+            "market_prob": 0.3818,
+            "fair_odds": -108,
+            "edge": 0.1371,
+            "edge_at_price": 0.1107,
+            "ev": 0.2713,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 61.0% before shrink, this book's no-vig 38.2%.",
+              "Projection 0.54 (Poisson).",
+              "Hit rate over L5 0/5, L10 3/10, L20 10/20, all 10/21."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (61% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (61% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -104 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Alex DeBrincat",
+      "player_id": "4063433",
+      "team": "Detroit Red Wings",
       "stat": "sog",
       "stat_label": "Shots",
       "line": 3.5,
@@ -1346,146 +1486,6 @@
       "player": "Alex DeBrincat",
       "player_id": "4063433",
       "team": "Detroit Red Wings",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 0.5,
-      "projection": 0.54,
-      "hit_rates": {
-        "L5": "0/5",
-        "L10": "3/10",
-        "L20": "10/20",
-        "all": "10/21"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        2.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.39,
-          "fair_over": 157,
-          "fair_under": -157,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.169,
-          "fair_over": 492,
-          "fair_under": -492,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.126,
-          "fair_over": 694,
-          "fair_under": -694,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.045,
-          "fair_over": 2141,
-          "fair_under": -2141,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.041,
-          "fair_over": 2347,
-          "fair_under": -2347,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Alex DeBrincat Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": -195.0,
-            "model_raw": 0.3897,
-            "model_prob": 0.4811,
-            "market_prob": 0.6182,
-            "fair_odds": 108,
-            "edge": -0.1371,
-            "edge_at_price": -0.1799,
-            "ev": -0.2722,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 39.0% before shrink, this book's no-vig 61.8%.",
-              "Projection 0.54 (Poisson).",
-              "Hit rate over L5 0/5, L10 3/10, L20 10/20, all 10/21."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (39% vs 62%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (39% vs 62%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +112 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Alex DeBrincat Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": 145.0,
-            "model_raw": 0.6103,
-            "model_prob": 0.5189,
-            "market_prob": 0.3818,
-            "fair_odds": -108,
-            "edge": 0.1371,
-            "edge_at_price": 0.1107,
-            "ev": 0.2713,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 61.0% before shrink, this book's no-vig 38.2%.",
-              "Projection 0.54 (Poisson).",
-              "Hit rate over L5 0/5, L10 3/10, L20 10/20, all 10/21."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (61% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (61% vs 38%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -104 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Alex DeBrincat",
-      "player_id": "4063433",
-      "team": "Detroit Red Wings",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
@@ -1617,6 +1617,146 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for -186 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Charlie McAvoy",
+      "player_id": "3988803",
+      "team": "Boston Bruins",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.42,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "5/15",
+        "all": "5/15"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.31,
+          "fair_over": 222,
+          "fair_under": -222,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.124,
+          "fair_over": 708,
+          "fair_under": -708,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.102,
+          "fair_over": 882,
+          "fair_under": -882,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.038,
+          "fair_over": 2528,
+          "fair_under": -2528,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.035,
+          "fair_over": 2754,
+          "fair_under": -2754,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Charlie McAvoy Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": -135.0,
+            "model_raw": 0.3104,
+            "model_prob": 0.4001,
+            "market_prob": 0.5347,
+            "fair_odds": 150,
+            "edge": -0.1346,
+            "edge_at_price": -0.1744,
+            "ev": -0.3035,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 31.0% before shrink, this book's no-vig 53.5%.",
+              "Projection 0.42 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 5/15, all 5/15."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (31% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 53%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +155 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Charlie McAvoy Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": 100.0,
+            "model_raw": 0.6896,
+            "model_prob": 0.5999,
+            "market_prob": 0.4653,
+            "fair_odds": -150,
+            "edge": 0.1346,
+            "edge_at_price": 0.0999,
+            "ev": 0.1998,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 69.0% before shrink, this book's no-vig 46.5%.",
+              "Projection 0.42 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 5/15, all 5/15."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (69% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (69% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -143 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -1772,146 +1912,6 @@
       "player": "Charlie McAvoy",
       "player_id": "3988803",
       "team": "Boston Bruins",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 0.5,
-      "projection": 0.42,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "2/10",
-        "L20": "5/15",
-        "all": "5/15"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        2.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.912,
-          "fair_over": -1043,
-          "fair_under": 1043,
-          "L10": "2/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.31,
-          "fair_over": 222,
-          "fair_under": -222,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.124,
-          "fair_over": 708,
-          "fair_under": -708,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.102,
-          "fair_over": 882,
-          "fair_under": -882,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.038,
-          "fair_over": 2528,
-          "fair_under": -2528,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.035,
-          "fair_over": 2754,
-          "fair_under": -2754,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Charlie McAvoy Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": -135.0,
-            "model_raw": 0.3104,
-            "model_prob": 0.4001,
-            "market_prob": 0.5347,
-            "fair_odds": 150,
-            "edge": -0.1346,
-            "edge_at_price": -0.1744,
-            "ev": -0.3035,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 31.0% before shrink, this book's no-vig 53.5%.",
-              "Projection 0.42 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 5/15, all 5/15."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (31% vs 53%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (31% vs 53%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +155 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Charlie McAvoy Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": 100.0,
-            "model_raw": 0.6896,
-            "model_prob": 0.5999,
-            "market_prob": 0.4653,
-            "fair_odds": -150,
-            "edge": 0.1346,
-            "edge_at_price": 0.0999,
-            "ev": 0.1998,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 69.0% before shrink, this book's no-vig 46.5%.",
-              "Projection 0.42 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 5/15, all 5/15."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (69% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (69% vs 47%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -143 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Charlie McAvoy",
-      "player_id": "3988803",
-      "team": "Boston Bruins",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
@@ -2043,6 +2043,152 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for -161 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "David Pastrnak",
+      "player_id": "3114778",
+      "team": "Boston Bruins",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 1.5,
+      "projection": 1.1,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "3/10",
+        "L20": "8/20",
+        "all": "8/21"
+      },
+      "recent": [
+        0.0,
+        2.0,
+        0.0,
+        2.0,
+        2.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.666,
+          "fair_over": -199,
+          "fair_under": 199,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.482,
+          "fair_over": 107,
+          "fair_under": -107,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.311,
+          "fair_over": 221,
+          "fair_under": -221,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.119,
+          "fair_over": 740,
+          "fair_under": -740,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.093,
+          "fair_over": 972,
+          "fair_under": -972,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.047,
+          "fair_over": 2029,
+          "fair_under": -2029,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.046,
+          "fair_over": 2090,
+          "fair_under": -2090,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "David Pastrnak Over 1.5 pts",
+            "side": "over",
+            "line": 1.5,
+            "odds": 175.0,
+            "model_raw": 0.3112,
+            "model_prob": 0.3227,
+            "market_prob": 0.34,
+            "fair_odds": 210,
+            "edge": -0.0173,
+            "edge_at_price": -0.0409,
+            "ev": -0.1125,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 31.1% before shrink, this book's no-vig 34.0%.",
+              "Projection 1.1 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 8/21."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +216 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "David Pastrnak Under 1.5 pts",
+            "side": "under",
+            "line": 1.5,
+            "odds": -240.0,
+            "model_raw": 0.6888,
+            "model_prob": 0.6773,
+            "market_prob": 0.66,
+            "fair_odds": -210,
+            "edge": 0.0173,
+            "edge_at_price": -0.0286,
+            "ev": -0.0405,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 68.9% before shrink, this book's no-vig 66.0%.",
+              "Projection 1.1 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 8/21."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -198 or better.",
             "proven": false
           }
         }
@@ -2205,152 +2351,6 @@
       "player": "David Pastrnak",
       "player_id": "3114778",
       "team": "Boston Bruins",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 1.5,
-      "projection": 1.1,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "3/10",
-        "L20": "8/20",
-        "all": "8/21"
-      },
-      "recent": [
-        0.0,
-        2.0,
-        0.0,
-        2.0,
-        2.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.666,
-          "fair_over": -199,
-          "fair_under": 199,
-          "L10": "7/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.482,
-          "fair_over": 107,
-          "fair_under": -107,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.311,
-          "fair_over": 221,
-          "fair_under": -221,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.119,
-          "fair_over": 740,
-          "fair_under": -740,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.093,
-          "fair_over": 972,
-          "fair_under": -972,
-          "L10": "0/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.047,
-          "fair_over": 2029,
-          "fair_under": -2029,
-          "L10": "0/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.046,
-          "fair_over": 2090,
-          "fair_under": -2090,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "David Pastrnak Over 1.5 pts",
-            "side": "over",
-            "line": 1.5,
-            "odds": 175.0,
-            "model_raw": 0.3112,
-            "model_prob": 0.3227,
-            "market_prob": 0.34,
-            "fair_odds": 210,
-            "edge": -0.0173,
-            "edge_at_price": -0.0409,
-            "ev": -0.1125,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 1.5: 31.1% before shrink, this book's no-vig 34.0%.",
-              "Projection 1.1 (Poisson).",
-              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 8/21."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +216 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "David Pastrnak Under 1.5 pts",
-            "side": "under",
-            "line": 1.5,
-            "odds": -240.0,
-            "model_raw": 0.6888,
-            "model_prob": 0.6773,
-            "market_prob": 0.66,
-            "fair_odds": -210,
-            "edge": 0.0173,
-            "edge_at_price": -0.0286,
-            "ev": -0.0405,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 1.5: 68.9% before shrink, this book's no-vig 66.0%.",
-              "Projection 1.1 (Poisson).",
-              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 8/21."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -198 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "David Pastrnak",
-      "player_id": "3114778",
-      "team": "Boston Bruins",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
@@ -2474,6 +2474,138 @@
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Elias Lindholm",
+      "player_id": "3041994",
+      "team": "Boston Bruins",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.86,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "13/20",
+        "all": "14/21"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        2.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.609,
+          "fair_over": -156,
+          "fair_under": 156,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.369,
+          "fair_over": 171,
+          "fair_under": -171,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.227,
+          "fair_over": 341,
+          "fair_under": -341,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.079,
+          "fair_over": 1166,
+          "fair_under": -1166,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.066,
+          "fair_over": 1410,
+          "fair_under": -1410,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Elias Lindholm Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": -110.0,
+            "model_raw": 0.6093,
+            "model_prob": 0.5615,
+            "market_prob": 0.4899,
+            "fair_odds": -128,
+            "edge": 0.0717,
+            "edge_at_price": 0.0377,
+            "ev": 0.072,
+            "tier": "High",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 60.9% before shrink, this book's no-vig 49.0%.",
+              "Projection 0.86 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 14/21."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at -122 or better (current -110); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Elias Lindholm Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -120.0,
+            "model_raw": 0.3907,
+            "model_prob": 0.4385,
+            "market_prob": 0.5101,
+            "fair_odds": 128,
+            "edge": -0.0717,
+            "edge_at_price": -0.107,
+            "ev": -0.1961,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 39.1% before shrink, this book's no-vig 51.0%.",
+              "Projection 0.86 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 14/21."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +133 or better.",
             "proven": false
           }
         }
@@ -2620,138 +2752,6 @@
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +107 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Elias Lindholm",
-      "player_id": "3041994",
-      "team": "Boston Bruins",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 0.5,
-      "projection": 0.86,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "7/10",
-        "L20": "13/20",
-        "all": "14/21"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        2.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0,
-        2.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.609,
-          "fair_over": -156,
-          "fair_under": 156,
-          "L10": "7/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.369,
-          "fair_over": 171,
-          "fair_under": -171,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.227,
-          "fair_over": 341,
-          "fair_under": -341,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.079,
-          "fair_over": 1166,
-          "fair_under": -1166,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.066,
-          "fair_over": 1410,
-          "fair_under": -1410,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Elias Lindholm Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": -110.0,
-            "model_raw": 0.6093,
-            "model_prob": 0.5615,
-            "market_prob": 0.4899,
-            "fair_odds": -128,
-            "edge": 0.0717,
-            "edge_at_price": 0.0377,
-            "ev": 0.072,
-            "tier": "High",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 60.9% before shrink, this book's no-vig 49.0%.",
-              "Projection 0.86 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 14/21."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at -122 or better (current -110); re-check injuries/line 60 min before start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Elias Lindholm Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": -120.0,
-            "model_raw": 0.3907,
-            "model_prob": 0.4385,
-            "market_prob": 0.5101,
-            "fair_odds": 128,
-            "edge": -0.0717,
-            "edge_at_price": -0.107,
-            "ev": -0.1961,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 39.1% before shrink, this book's no-vig 51.0%.",
-              "Projection 0.86 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 14/21."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +133 or better.",
             "proven": false
           }
         }

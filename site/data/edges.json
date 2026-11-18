@@ -1,5 +1,93 @@
 [
   {
+    "league": "nhl",
+    "event_id": "401892751",
+    "game": "Anaheim Ducks at Colorado Avalanche",
+    "start_local": "Thu Nov 19 9:00 PM ET",
+    "date_et": "2026-11-19",
+    "book": "draftkings",
+    "selection": "COL -1.5",
+    "market": "Spread",
+    "side": "home",
+    "odds": 154.0,
+    "line": -1.5,
+    "edge": 0.0297,
+    "edge_at_price": 0.0136,
+    "tier": "Medium",
+    "proven": true,
+    "caution": [
+      "injury: Nathan MacKinnon out for this side and the rating doesn't know it",
+      "downgraded High -> Medium"
+    ],
+    "model_prob": 0.4073,
+    "leg": {
+      "id": "nhl:401892751:Spread:home:-1.5",
+      "event_id": "401892751",
+      "league": "nhl",
+      "name": "Anaheim Ducks at Colorado Avalanche",
+      "start": "2026-11-20T02:00Z",
+      "start_local": "Thu Nov 19 9:00 PM ET",
+      "date_et": "2026-11-19",
+      "weekday": "thursday",
+      "matchup": "ANA @ COL",
+      "home_abbr": "COL",
+      "away_abbr": "ANA",
+      "home_name": "Colorado Avalanche",
+      "away_name": "Anaheim Ducks",
+      "market": "Spread",
+      "side": "home",
+      "selection": "COL -1.5",
+      "line": -1.5,
+      "primary_book": "draftkings",
+      "position": null,
+      "player": null,
+      "prop_key": null,
+      "hit_rate": null,
+      "hit_rates": null,
+      "event_urls": {
+        "draftkings": "https://sportsbook.draftkings.com/event/35040622"
+      },
+      "odds_feed": "espn",
+      "offers": {
+        "draftkings": {
+          "market": "Spread",
+          "selection": "COL -1.5",
+          "side": "home",
+          "line": -1.5,
+          "odds": 154.0,
+          "model_raw": 0.4906,
+          "model_prob": 0.4073,
+          "market_prob": 0.3775,
+          "fair_odds": 146,
+          "edge": 0.0297,
+          "edge_at_price": 0.0136,
+          "ev": 0.0345,
+          "tier": "Medium",
+          "data_quality": "High",
+          "reasons": [
+            "Model COL -1.5 covers 49.1% vs market 37.8%.",
+            "Projected margin COL +1.5 vs line COL -1.5.",
+            "ANA L5 WLLWL (MOV 0.0), COL L5 LWWLW (MOV 1.0)",
+            "COL key player(s) out: Nathan MacKinnon (not in the rating; the market has usually priced this)",
+            "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)"
+          ],
+          "flags": [],
+          "caution": [
+            "injury: Nathan MacKinnon out for this side and the rating doesn't know it",
+            "downgraded High -> Medium"
+          ],
+          "case_against": "One-goal games (and empty-net/late goals) decide most of these; goalie/lineup news isn't in the model.",
+          "next_step": "Playable at +150 or better (current +154); re-check injuries/line 60 min before start.",
+          "proven": true
+        }
+      },
+      "team_abbr": "COL",
+      "team_name": "Colorado Avalanche",
+      "opponent": "vs ANA",
+      "form": "L5 LWWLW"
+    }
+  },
+  {
     "league": "nfl",
     "event_id": "401873076",
     "game": "Pittsburgh Steelers at Philadelphia Eagles",
@@ -717,7 +805,6 @@
     "tier": "Prop",
     "proven": false,
     "caution": [
-      "injury news: listed Day-To-Day: Adebayo (hip) is probable for Wednesday's game against the Bucks, per Ira Winderman of the South Florida Sun Sentinel.",
       "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
       "model far from market (81% vs 66%): usually means the model is missing info (lineups, motivation, SOS)",
       "downgraded Medium -> Low",
@@ -783,7 +870,6 @@
             "current season only 14 games; added 15 from prior season (role/team may differ)"
           ],
           "caution": [
-            "injury news: listed Day-To-Day: Adebayo (hip) is probable for Wednesday's game against the Bucks, per Ira Winderman of the South Florida Sun Sentinel.",
             "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
             "model far from market (81% vs 66%): usually means the model is missing info (lineups, motivation, SOS)",
             "downgraded Medium -> Low",

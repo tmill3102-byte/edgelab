@@ -33,26 +33,38 @@
   },
   "lines": {
     "draftkings": {
-      "total": 227.5,
-      "over_odds": -115.0,
-      "under_odds": -105.0,
-      "ml_away": 205.0,
-      "ml_home": -249.0,
-      "spread_home": -6.5,
-      "spread_home_odds": -113.0,
-      "spread_away": 6.5,
-      "spread_away_odds": -107.0
+      "total": 225.5,
+      "over_odds": -107.0,
+      "under_odds": -113.0,
+      "ml_home": -191.0,
+      "ml_away": 160.0,
+      "spread_home": -4.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 4.5,
+      "spread_away_odds": -106.0
     }
   },
   "badge": null,
   "model_summary": "Margin TOR +4.6 \u00b7 total 232.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: TOR 65.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: TOR 62.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin TOR +4.6, total 232.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
+      {
+        "name": "RJ Barrett",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Scottie Barnes",
+        "status": "Out",
+        "pos": "F",
+        "key": true
+      },
       {
         "name": "Kawhi Leonard",
         "status": "Out",
@@ -63,12 +75,6 @@
         "name": "Nate Bittle",
         "status": "Out",
         "pos": "C",
-        "key": false
-      },
-      {
-        "name": "Kevin McCullar Jr.",
-        "status": "Day-To-Day",
-        "pos": "G",
         "key": false
       }
     ],
@@ -114,40 +120,6 @@
       "market": "ML",
       "sides": [
         {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "WSH ML",
-              "side": "away",
-              "line": null,
-              "odds": 205.0,
-              "model_raw": 0.3569,
-              "model_prob": 0.3206,
-              "market_prob": 0.3149,
-              "fair_odds": 212,
-              "edge": 0.0057,
-              "edge_at_price": -0.0073,
-              "ev": -0.0222,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model WSH win 35.7% vs market no-vig 31.5%.",
-                "v2 projected margin TOR +4.6 (ratings TOR +0.2, WSH -6.4, home edge 1.5); raw model 35.7%.",
-                "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
-                "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
-                "rest/back-to-back adjustment -3.50 to TOR's margin (home b2b)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Market makes WSH 31%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +218 or better.",
-              "proven": true
-            }
-          }
-        },
-        {
           "side": "home",
           "offers": {
             "draftkings": {
@@ -155,28 +127,67 @@
               "selection": "TOR ML",
               "side": "home",
               "line": null,
-              "odds": -249.0,
+              "odds": -191.0,
               "model_raw": 0.6431,
-              "model_prob": 0.6794,
-              "market_prob": 0.6851,
-              "fair_odds": -212,
-              "edge": -0.0057,
-              "edge_at_price": -0.034,
-              "ev": -0.0477,
+              "model_prob": 0.6323,
+              "market_prob": 0.6305,
+              "fair_odds": -172,
+              "edge": 0.0018,
+              "edge_at_price": -0.0241,
+              "ev": -0.0367,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TOR win 64.3% vs market no-vig 68.5%.",
+                "Model TOR win 64.3% vs market no-vig 63.1%.",
                 "v2 projected margin TOR +4.6 (ratings TOR +0.2, WSH -6.4, home edge 1.5); raw model 64.3%.",
                 "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to TOR's margin (home b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: price drifted against this side (-276 -> -191)",
+                "injury: Scottie Barnes out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Market makes TOR 63%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -163 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "WSH ML",
+              "side": "away",
+              "line": null,
+              "odds": 160.0,
+              "model_raw": 0.3569,
+              "model_prob": 0.3677,
+              "market_prob": 0.3695,
+              "fair_odds": 172,
+              "edge": -0.0018,
+              "edge_at_price": -0.0169,
+              "ev": -0.044,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model WSH win 35.7% vs market no-vig 36.9%.",
+                "v2 projected margin TOR +4.6 (ratings TOR +0.2, WSH -6.4, home edge 1.5); raw model 35.7%.",
+                "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
+                "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment -3.50 to TOR's margin (home b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes TOR 69%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -199 or better.",
+              "case_against": "Market makes WSH 37%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +177 or better.",
               "proven": true
             }
           }
@@ -191,31 +202,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "TOR -6.5",
+              "selection": "TOR -4.5",
               "side": "home",
-              "line": -6.5,
-              "odds": -113.0,
-              "model_raw": 0.4391,
-              "model_prob": 0.5065,
-              "market_prob": 0.5065,
-              "fair_odds": -103,
+              "line": -4.5,
+              "odds": -115.0,
+              "model_raw": 0.5027,
+              "model_prob": 0.5097,
+              "market_prob": 0.5097,
+              "fair_odds": -104,
               "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.0453,
+              "edge_at_price": -0.0252,
+              "ev": -0.0471,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model TOR -6.5 covers 43.9% vs market 50.6%.",
-                "Projected margin TOR +4.6 vs line TOR -6.5.",
+                "Model TOR -4.5 covers 50.3% vs market 51.0%.",
+                "Projected margin TOR +4.6 vs line TOR -4.5.",
                 "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to TOR's margin (home b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury: Scottie Barnes out for this side and the rating doesn't know it"
+              ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +101 or better.",
+              "next_step": "Pass. Only interesting at +100 or better.",
               "proven": false
             }
           }
@@ -225,33 +239,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "WSH +6.5",
+              "selection": "WSH +4.5",
               "side": "away",
-              "line": 6.5,
-              "odds": -107.0,
-              "model_raw": 0.5609,
-              "model_prob": 0.4935,
-              "market_prob": 0.4935,
-              "fair_odds": 103,
+              "line": 4.5,
+              "odds": -106.0,
+              "model_raw": 0.4973,
+              "model_prob": 0.4903,
+              "market_prob": 0.4903,
+              "fair_odds": 104,
               "edge": 0.0,
-              "edge_at_price": -0.0234,
-              "ev": -0.0453,
+              "edge_at_price": -0.0242,
+              "ev": -0.0471,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model WSH +6.5 covers 56.1% vs market 49.4%.",
-                "Projected margin TOR +4.6 vs line TOR -6.5.",
+                "Model WSH +4.5 covers 49.7% vs market 49.0%.",
+                "Projected margin TOR +4.6 vs line TOR -4.5.",
                 "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "rest/back-to-back adjustment -3.50 to TOR's margin (home b2b)",
+                "TOR key player(s) out: Scottie Barnes (not in the rating; the market has usually priced this)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
               "caution": [
-                "line move: spread moved against this side (+7.5 -> +6.5)"
+                "line move: spread moved against this side (+7.5 -> +4.5)"
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +107 or better.",
+              "next_step": "Pass. Only interesting at +108 or better.",
               "proven": false
             }
           }
@@ -266,29 +281,32 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 227.5",
+              "selection": "Over 225.5",
               "side": "over",
-              "line": 227.5,
-              "odds": -115.0,
-              "model_raw": 0.5925,
-              "model_prob": 0.5249,
-              "market_prob": 0.5108,
-              "fair_odds": -110,
-              "edge": 0.014,
-              "edge_at_price": -0.01,
-              "ev": -0.0187,
+              "line": 225.5,
+              "odds": -107.0,
+              "model_raw": 0.6321,
+              "model_prob": 0.5176,
+              "market_prob": 0.4935,
+              "fair_odds": -107,
+              "edge": 0.0241,
+              "edge_at_price": 0.0007,
+              "ev": 0.0013,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 227.5: 59.2% vs market 51.1%.",
-                "Projected total 232.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 225.5: 63.2% vs market 49.4%.",
+                "Projected total 232.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 227.5 -> 225.5.",
                 "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "Note: model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the over (227.5 -> 225.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -106 or better.",
+              "next_step": "Monitor only; if anything, wait for -103 or better and re-check injuries near start.",
               "proven": true
             }
           }
@@ -298,29 +316,32 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 227.5",
+              "selection": "Under 225.5",
               "side": "under",
-              "line": 227.5,
-              "odds": -105.0,
-              "model_raw": 0.4075,
-              "model_prob": 0.4751,
-              "market_prob": 0.4892,
-              "fair_odds": 110,
-              "edge": -0.014,
-              "edge_at_price": -0.0371,
-              "ev": -0.0724,
+              "line": 225.5,
+              "odds": -113.0,
+              "model_raw": 0.3679,
+              "model_prob": 0.4824,
+              "market_prob": 0.5065,
+              "fair_odds": 107,
+              "edge": -0.0241,
+              "edge_at_price": -0.0481,
+              "ev": -0.0907,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 227.5: 40.8% vs market 48.9%.",
-                "Projected total 232.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 225.5: 36.8% vs market 50.6%.",
+                "Projected total 232.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 227.5 -> 225.5.",
                 "WSH L5 LLLLL (MOV -7.9), TOR L5 LLLLL (MOV 0.3)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "Note: model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward under (227.5 -> 225.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +115 or better.",
+              "next_step": "Pass. Only interesting at +111 or better.",
               "proven": true
             }
           }
@@ -329,167 +350,6 @@
     }
   ],
   "props": [
-    {
-      "player": "AJ Dybantsa",
-      "player_id": "5142718",
-      "team": "Washington Wizards",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "line": 5.5,
-      "projection": 6.34,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "7/10",
-        "L20": "7/11",
-        "all": "7/11"
-      },
-      "recent": [
-        5.0,
-        7.0,
-        8.0,
-        4.0,
-        8.0,
-        6.0,
-        9.0,
-        6.0,
-        5.0,
-        7.0
-      ],
-      "ladder": [
-        {
-          "line": 3.5,
-          "p_over": 0.89,
-          "fair_over": -813,
-          "fair_under": 813,
-          "L10": "10/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.877,
-          "fair_over": -713,
-          "fair_under": 713,
-          "L10": "9/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.784,
-          "fair_over": -363,
-          "fair_under": 363,
-          "L10": "9/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.744,
-          "fair_over": -291,
-          "fair_under": 291,
-          "L10": "7/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.628,
-          "fair_over": -169,
-          "fair_under": 169,
-          "L10": "7/10"
-        },
-        {
-          "line": 6.0,
-          "p_over": 0.556,
-          "fair_over": -125,
-          "fair_under": 125,
-          "L10": "5/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.466,
-          "fair_over": 115,
-          "fair_under": -115,
-          "L10": "5/10"
-        },
-        {
-          "line": 7.0,
-          "p_over": 0.37,
-          "fair_over": 170,
-          "fair_under": -170,
-          "L10": "3/10"
-        },
-        {
-          "line": 7.5,
-          "p_over": 0.314,
-          "fair_over": 219,
-          "fair_under": -219,
-          "L10": "3/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "AJ Dybantsa Over 5.5 reb",
-            "side": "over",
-            "line": 5.5,
-            "odds": -106.0,
-            "model_raw": 0.6277,
-            "model_prob": 0.5693,
-            "market_prob": 0.4817,
-            "fair_odds": -132,
-            "edge": 0.0876,
-            "edge_at_price": 0.0548,
-            "ev": 0.1064,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 5.5: 62.8% before shrink, this book's no-vig 48.2%.",
-              "Projection 6.34 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 7/11, all 7/11."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (63% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium",
-              "model far from market (63% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -126 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "AJ Dybantsa Under 5.5 reb",
-            "side": "under",
-            "line": 5.5,
-            "odds": -124.0,
-            "model_raw": 0.3723,
-            "model_prob": 0.4307,
-            "market_prob": 0.5183,
-            "fair_odds": 132,
-            "edge": -0.0876,
-            "edge_at_price": -0.1229,
-            "ev": -0.222,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 5.5: 37.2% before shrink, this book's no-vig 51.8%.",
-              "Projection 6.34 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 7/11, all 7/11."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (37% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (37% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +137 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
     {
       "player": "AJ Dybantsa",
       "player_id": "5142718",
@@ -1104,169 +964,161 @@
       }
     },
     {
-      "player": "Alex Sarr",
-      "player_id": "5160992",
+      "player": "AJ Dybantsa",
+      "player_id": "5142718",
       "team": "Washington Wizards",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 6.5,
-      "projection": 7.78,
+      "line": 5.5,
+      "projection": 6.34,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "8/10",
-        "L20": "10/20",
-        "all": "15/29"
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "7/11",
+        "all": "7/11"
       },
       "recent": [
+        5.0,
+        7.0,
+        8.0,
         4.0,
+        8.0,
+        6.0,
         9.0,
-        9.0,
-        8.0,
-        8.0,
-        14.0,
-        8.0,
-        9.0,
-        8.0,
-        4.0
+        6.0,
+        5.0,
+        7.0
       ],
       "ladder": [
         {
+          "line": 3.5,
+          "p_over": 0.89,
+          "fair_over": -813,
+          "fair_under": 813,
+          "L10": "10/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.877,
+          "fair_over": -713,
+          "fair_under": 713,
+          "L10": "9/10"
+        },
+        {
           "line": 4.5,
-          "p_over": 0.839,
-          "fair_over": -522,
-          "fair_under": 522,
-          "L10": "8/10"
+          "p_over": 0.784,
+          "fair_over": -363,
+          "fair_under": 363,
+          "L10": "9/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.831,
-          "fair_over": -492,
-          "fair_under": 492,
-          "L10": "8/10"
+          "p_over": 0.744,
+          "fair_over": -291,
+          "fair_under": 291,
+          "L10": "7/10"
         },
         {
           "line": 5.5,
-          "p_over": 0.775,
-          "fair_over": -344,
-          "fair_under": 344,
-          "L10": "8/10"
+          "p_over": 0.628,
+          "fair_over": -169,
+          "fair_under": 169,
+          "L10": "7/10"
         },
         {
           "line": 6.0,
-          "p_over": 0.754,
-          "fair_over": -307,
-          "fair_under": 307,
-          "L10": "8/10"
+          "p_over": 0.556,
+          "fair_over": -125,
+          "fair_under": 125,
+          "L10": "5/10"
         },
         {
           "line": 6.5,
-          "p_over": 0.691,
-          "fair_over": -224,
-          "fair_under": 224,
-          "L10": "8/10"
+          "p_over": 0.466,
+          "fair_over": 115,
+          "fair_under": -115,
+          "L10": "5/10"
         },
         {
           "line": 7.0,
-          "p_over": 0.654,
-          "fair_over": -189,
-          "fair_under": 189,
-          "L10": "8/10"
+          "p_over": 0.37,
+          "fair_over": 170,
+          "fair_under": -170,
+          "L10": "3/10"
         },
         {
           "line": 7.5,
-          "p_over": 0.598,
-          "fair_over": -149,
-          "fair_under": 149,
-          "L10": "8/10"
-        },
-        {
-          "line": 8.0,
-          "p_over": 0.504,
-          "fair_over": -101,
-          "fair_under": 101,
-          "L10": "4/10"
-        },
-        {
-          "line": 8.5,
-          "p_over": 0.391,
-          "fair_over": 156,
-          "fair_under": -156,
-          "L10": "4/10"
+          "p_over": 0.314,
+          "fair_over": 219,
+          "fair_under": -219,
+          "L10": "3/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 14 games; added 15 from prior season (role/team may differ)"
-      ],
+      "flags": [],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Alex Sarr Over 6.5 reb",
+            "selection": "AJ Dybantsa Over 5.5 reb",
             "side": "over",
-            "line": 6.5,
-            "odds": -144.0,
-            "model_raw": 0.6912,
-            "model_prob": 0.6217,
-            "market_prob": 0.5523,
-            "fair_odds": -164,
-            "edge": 0.0695,
-            "edge_at_price": 0.0316,
-            "ev": 0.0535,
+            "line": 5.5,
+            "odds": -106.0,
+            "model_raw": 0.6277,
+            "model_prob": 0.5693,
+            "market_prob": 0.4817,
+            "fair_odds": -132,
+            "edge": 0.0876,
+            "edge_at_price": 0.0548,
+            "ev": 0.1064,
             "tier": "Low",
-            "data_quality": "Medium",
+            "data_quality": "High",
             "reasons": [
-              "Model over 6.5: 69.1% before shrink, this book's no-vig 55.2%.",
-              "Projection 7.78 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 15/29."
+              "Model over 5.5: 62.8% before shrink, this book's no-vig 48.2%.",
+              "Projection 6.34 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 7/11, all 7/11."
             ],
-            "flags": [
-              "current season only 14 games; added 15 from prior season (role/team may differ)"
-            ],
+            "flags": [],
             "caution": [
-              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
-              "model far from market (69% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (69% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "model far from market (63% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (63% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -156 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -126 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Alex Sarr Under 6.5 reb",
+            "selection": "AJ Dybantsa Under 5.5 reb",
             "side": "under",
-            "line": 6.5,
-            "odds": 109.0,
-            "model_raw": 0.3088,
-            "model_prob": 0.3783,
-            "market_prob": 0.4477,
-            "fair_odds": 164,
-            "edge": -0.0695,
-            "edge_at_price": -0.1002,
-            "ev": -0.2094,
+            "line": 5.5,
+            "odds": -124.0,
+            "model_raw": 0.3723,
+            "model_prob": 0.4307,
+            "market_prob": 0.5183,
+            "fair_odds": 132,
+            "edge": -0.0876,
+            "edge_at_price": -0.1229,
+            "ev": -0.222,
             "tier": "Low",
-            "data_quality": "Medium",
+            "data_quality": "High",
             "reasons": [
-              "Model under 6.5: 30.9% before shrink, this book's no-vig 44.8%.",
-              "Projection 7.78 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 15/29."
+              "Model under 5.5: 37.2% before shrink, this book's no-vig 51.8%.",
+              "Projection 6.34 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 7/11, all 7/11."
             ],
-            "flags": [
-              "current season only 14 games; added 15 from prior season (role/team may differ)"
-            ],
+            "flags": [],
             "caution": [
-              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
-              "model far from market (31% vs 45%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (31% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (37% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (37% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +170 or better.",
+            "next_step": "Pass. Only interesting at +137 or better.",
             "proven": false
           }
         }
@@ -1917,163 +1769,169 @@
       }
     },
     {
-      "player": "Immanuel Quickley",
-      "player_id": "4395724",
-      "team": "Toronto Raptors",
+      "player": "Alex Sarr",
+      "player_id": "5160992",
+      "team": "Washington Wizards",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 3.5,
-      "projection": 3.61,
+      "line": 6.5,
+      "projection": 7.78,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "6/10",
+        "L5": "4/5",
+        "L10": "8/10",
         "L20": "10/20",
-        "all": "13/27"
+        "all": "15/29"
       },
       "recent": [
-        1.0,
-        6.0,
         4.0,
-        4.0,
-        1.0,
-        4.0,
-        6.0,
-        6.0,
-        3.0,
-        3.0
+        9.0,
+        9.0,
+        8.0,
+        8.0,
+        14.0,
+        8.0,
+        9.0,
+        8.0,
+        4.0
       ],
       "ladder": [
         {
-          "line": 1.5,
-          "p_over": 0.832,
-          "fair_over": -494,
-          "fair_under": 494,
-          "L10": "8/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.814,
-          "fair_over": -439,
-          "fair_under": 439,
-          "L10": "8/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.717,
-          "fair_over": -254,
-          "fair_under": 254,
-          "L10": "8/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.647,
-          "fair_over": -183,
-          "fair_under": 183,
-          "L10": "6/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.521,
-          "fair_over": -109,
-          "fair_under": 109,
-          "L10": "6/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.394,
-          "fair_over": 154,
-          "fair_under": -154,
-          "L10": "3/10"
-        },
-        {
           "line": 4.5,
-          "p_over": 0.309,
-          "fair_over": 223,
-          "fair_under": -223,
-          "L10": "3/10"
+          "p_over": 0.839,
+          "fair_over": -522,
+          "fair_under": 522,
+          "L10": "8/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.236,
-          "fair_over": 324,
-          "fair_under": -324,
-          "L10": "3/10"
+          "p_over": 0.831,
+          "fair_over": -492,
+          "fair_under": 492,
+          "L10": "8/10"
         },
         {
           "line": 5.5,
-          "p_over": 0.219,
-          "fair_over": 356,
-          "fair_under": -356,
-          "L10": "3/10"
+          "p_over": 0.775,
+          "fair_over": -344,
+          "fair_under": 344,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.754,
+          "fair_over": -307,
+          "fair_under": 307,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.691,
+          "fair_over": -224,
+          "fair_under": 224,
+          "L10": "8/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.654,
+          "fair_over": -189,
+          "fair_under": 189,
+          "L10": "8/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.598,
+          "fair_over": -149,
+          "fair_under": 149,
+          "L10": "8/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.504,
+          "fair_over": -101,
+          "fair_under": 101,
+          "L10": "4/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.391,
+          "fair_over": 156,
+          "fair_under": -156,
+          "L10": "4/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 12 games; added 15 from prior season (role/team may differ)"
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Immanuel Quickley Over 3.5 reb",
+            "selection": "Alex Sarr Over 6.5 reb",
             "side": "over",
-            "line": 3.5,
-            "odds": -157.0,
-            "model_raw": 0.5211,
-            "model_prob": 0.5467,
-            "market_prob": 0.5723,
-            "fair_odds": -121,
-            "edge": -0.0256,
-            "edge_at_price": -0.0642,
-            "ev": -0.1051,
+            "line": 6.5,
+            "odds": -144.0,
+            "model_raw": 0.6912,
+            "model_prob": 0.6217,
+            "market_prob": 0.5523,
+            "fair_odds": -164,
+            "edge": 0.0695,
+            "edge_at_price": 0.0316,
+            "ev": 0.0535,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 3.5: 52.1% before shrink, this book's no-vig 57.2%.",
-              "Projection 3.61 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/27."
+              "Model over 6.5: 69.1% before shrink, this book's no-vig 55.2%.",
+              "Projection 7.78 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 15/29."
             ],
             "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 55%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -116 or better.",
+            "next_step": "Monitor only; if anything, wait for -156 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Immanuel Quickley Under 3.5 reb",
+            "selection": "Alex Sarr Under 6.5 reb",
             "side": "under",
-            "line": 3.5,
-            "odds": 119.0,
-            "model_raw": 0.4789,
-            "model_prob": 0.4533,
-            "market_prob": 0.4277,
-            "fair_odds": 121,
-            "edge": 0.0256,
-            "edge_at_price": -0.0033,
-            "ev": -0.0072,
+            "line": 6.5,
+            "odds": 109.0,
+            "model_raw": 0.3088,
+            "model_prob": 0.3783,
+            "market_prob": 0.4477,
+            "fair_odds": 164,
+            "edge": -0.0695,
+            "edge_at_price": -0.1002,
+            "ev": -0.2094,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 3.5: 47.9% before shrink, this book's no-vig 42.8%.",
-              "Projection 3.61 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/27."
+              "Model under 6.5: 30.9% before shrink, this book's no-vig 44.8%.",
+              "Projection 7.78 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 15/29."
             ],
             "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 45%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 45%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +125 or better.",
+            "next_step": "Pass. Only interesting at +170 or better.",
             "proven": false
           }
         }
@@ -2746,94 +2604,257 @@
       }
     },
     {
-      "player": "Ja'Kobe Walter",
-      "player_id": "4684272",
+      "player": "Immanuel Quickley",
+      "player_id": "4395724",
       "team": "Toronto Raptors",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 4.5,
-      "projection": 3.67,
+      "line": 3.5,
+      "projection": 3.61,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "7/20",
-        "all": "9/29"
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "10/20",
+        "all": "13/27"
       },
       "recent": [
         1.0,
-        2.0,
-        5.0,
-        3.0,
-        6.0,
-        6.0,
-        1.0,
         6.0,
         4.0,
+        4.0,
+        1.0,
+        4.0,
+        6.0,
+        6.0,
+        3.0,
         3.0
       ],
       "ladder": [
         {
+          "line": 1.5,
+          "p_over": 0.832,
+          "fair_over": -494,
+          "fair_under": 494,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.814,
+          "fair_over": -439,
+          "fair_under": 439,
+          "L10": "8/10"
+        },
+        {
           "line": 2.5,
-          "p_over": 0.694,
-          "fair_over": -227,
-          "fair_under": 227,
-          "L10": "7/10"
+          "p_over": 0.717,
+          "fair_over": -254,
+          "fair_under": 254,
+          "L10": "8/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.621,
-          "fair_over": -164,
-          "fair_under": 164,
-          "L10": "5/10"
+          "p_over": 0.647,
+          "fair_over": -183,
+          "fair_under": 183,
+          "L10": "6/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.499,
-          "fair_over": 100,
-          "fair_under": -100,
-          "L10": "5/10"
+          "p_over": 0.521,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "6/10"
         },
         {
           "line": 4.0,
-          "p_over": 0.406,
-          "fair_over": 146,
-          "fair_under": -146,
-          "L10": "4/10"
+          "p_over": 0.394,
+          "fair_over": 154,
+          "fair_under": -154,
+          "L10": "3/10"
         },
         {
           "line": 4.5,
-          "p_over": 0.345,
-          "fair_over": 190,
-          "fair_under": -190,
-          "L10": "4/10"
+          "p_over": 0.309,
+          "fair_over": 223,
+          "fair_under": -223,
+          "L10": "3/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.252,
-          "fair_over": 296,
-          "fair_under": -296,
+          "p_over": 0.236,
+          "fair_over": 324,
+          "fair_under": -324,
           "L10": "3/10"
         },
         {
           "line": 5.5,
-          "p_over": 0.224,
-          "fair_over": 346,
-          "fair_under": -346,
+          "p_over": 0.219,
+          "fair_over": 356,
+          "fair_under": -356,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Over 3.5 reb",
+            "side": "over",
+            "line": 3.5,
+            "odds": -157.0,
+            "model_raw": 0.5211,
+            "model_prob": 0.5467,
+            "market_prob": 0.5723,
+            "fair_odds": -121,
+            "edge": -0.0256,
+            "edge_at_price": -0.0642,
+            "ev": -0.1051,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 52.1% before shrink, this book's no-vig 57.2%.",
+              "Projection 3.61 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -116 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Immanuel Quickley Under 3.5 reb",
+            "side": "under",
+            "line": 3.5,
+            "odds": 119.0,
+            "model_raw": 0.4789,
+            "model_prob": 0.4533,
+            "market_prob": 0.4277,
+            "fair_odds": 121,
+            "edge": 0.0256,
+            "edge_at_price": -0.0033,
+            "ev": -0.0072,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 47.9% before shrink, this book's no-vig 42.8%.",
+              "Projection 3.61 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ja'Kobe Walter",
+      "player_id": "4684272",
+      "team": "Toronto Raptors",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 18.5,
+      "projection": 16.47,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "7/20",
+        "all": "9/29"
+      },
+      "recent": [
+        28.0,
+        10.0,
+        11.0,
+        21.0,
+        18.0,
+        15.0,
+        11.0,
+        21.0,
+        17.0,
+        13.0
+      ],
+      "ladder": [
+        {
+          "line": 14.5,
+          "p_over": 0.621,
+          "fair_over": -164,
+          "fair_under": 164,
+          "L10": "6/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.546,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "5/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "5/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.422,
+          "fair_over": 137,
+          "fair_under": -137,
+          "L10": "4/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.346,
+          "fair_over": 189,
+          "fair_under": -189,
           "L10": "3/10"
         },
         {
-          "line": 6.0,
-          "p_over": 0.095,
-          "fair_over": 951,
-          "fair_under": -951,
-          "L10": "0/10"
+          "line": 19.5,
+          "p_over": 0.303,
+          "fair_over": 230,
+          "fair_under": -230,
+          "L10": "3/10"
         },
         {
-          "line": 6.5,
-          "p_over": 0.081,
-          "fair_over": 1142,
-          "fair_under": -1142,
-          "L10": "0/10"
+          "line": 20.5,
+          "p_over": 0.265,
+          "fair_over": 278,
+          "fair_under": -278,
+          "L10": "3/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.173,
+          "fair_over": 479,
+          "fair_under": -479,
+          "L10": "1/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.144,
+          "fair_over": 593,
+          "fair_under": -593,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2845,64 +2866,70 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Ja'Kobe Walter Over 4.5 reb",
+            "selection": "Ja'Kobe Walter Over 18.5 pra",
             "side": "over",
-            "line": 4.5,
-            "odds": 119.0,
-            "model_raw": 0.3452,
-            "model_prob": 0.3865,
-            "market_prob": 0.4277,
-            "fair_odds": 159,
-            "edge": -0.0413,
-            "edge_at_price": -0.0702,
-            "ev": -0.1536,
+            "line": 18.5,
+            "odds": -125.0,
+            "model_raw": 0.3464,
+            "model_prob": 0.4334,
+            "market_prob": 0.5203,
+            "fair_odds": 131,
+            "edge": -0.087,
+            "edge_at_price": -0.1222,
+            "ev": -0.22,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 4.5: 34.5% before shrink, this book's no-vig 42.8%.",
-              "Projection 3.67 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 7/20, all 9/29."
+              "Model over 18.5: 34.6% before shrink, this book's no-vig 52.0%.",
+              "Projection 16.47 (Normal(sd 5.4)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 9/29."
             ],
             "flags": [
               "current season only 14 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "model far from market (35% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (35% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +164 or better.",
+            "next_step": "Pass. Only interesting at +135 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Ja'Kobe Walter Under 4.5 reb",
+            "selection": "Ja'Kobe Walter Under 18.5 pra",
             "side": "under",
-            "line": 4.5,
-            "odds": -157.0,
-            "model_raw": 0.6548,
-            "model_prob": 0.6135,
-            "market_prob": 0.5723,
-            "fair_odds": -159,
-            "edge": 0.0413,
-            "edge_at_price": 0.0026,
-            "ev": 0.0043,
+            "line": 18.5,
+            "odds": -105.0,
+            "model_raw": 0.6536,
+            "model_prob": 0.5666,
+            "market_prob": 0.4797,
+            "fair_odds": -131,
+            "edge": 0.087,
+            "edge_at_price": 0.0545,
+            "ev": 0.1063,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 4.5: 65.5% before shrink, this book's no-vig 57.2%.",
-              "Projection 3.67 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 7/20, all 9/29."
+              "Model under 18.5: 65.4% before shrink, this book's no-vig 48.0%.",
+              "Projection 16.47 (Normal(sd 5.4)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 9/29."
             ],
             "flags": [
               "current season only 14 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "model far from market (65% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (65% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -151 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -125 or better and re-check injuries near start.",
             "proven": false
           }
         }

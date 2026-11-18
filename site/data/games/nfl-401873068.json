@@ -153,27 +153,27 @@
   "injuries": {
     "home": [
       {
-        "name": "Will Lee III",
-        "status": "Questionable",
-        "pos": "CB",
-        "key": false
-      },
-      {
-        "name": "Bobby Okereke",
-        "status": "Questionable",
+        "name": "Claudin Cherelus",
+        "status": "Out",
         "pos": "LB",
         "key": false
       },
       {
-        "name": "Brady Christensen",
-        "status": "Injured Reserve",
-        "pos": "G",
+        "name": "Isaiah Simmons",
+        "status": "Questionable",
+        "pos": "S",
         "key": false
       },
       {
-        "name": "Mike Jackson",
-        "status": "Injured Reserve",
-        "pos": "CB",
+        "name": "Tommy Tremble",
+        "status": "Questionable",
+        "pos": "TE",
+        "key": false
+      },
+      {
+        "name": "Darren Waller",
+        "status": "Questionable",
+        "pos": "TE",
         "key": false
       },
       {
@@ -184,6 +184,12 @@
       }
     ],
     "away": [
+      {
+        "name": "Lamar Jackson",
+        "status": "Injured Reserve",
+        "pos": "QB",
+        "key": true
+      },
       {
         "name": "Jaylinn Hawkins",
         "status": "Questionable",
@@ -203,16 +209,10 @@
         "key": false
       },
       {
-        "name": "Adam Randall",
-        "status": "Injured Reserve",
-        "pos": "RB",
+        "name": "Adisa Isaac",
+        "status": "Questionable",
+        "pos": "LB",
         "key": false
-      },
-      {
-        "name": "Lamar Jackson",
-        "status": "Injured Reserve",
-        "pos": "QB",
-        "key": true
       }
     ]
   },
@@ -2780,6 +2780,123 @@
       "player": "Darren Waller",
       "player_id": "2576925",
       "team": "Carolina Panthers",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.46,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "7/18",
+        "all": "7/18"
+      },
+      "recent": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.357,
+          "fair_over": 180,
+          "fair_under": -180,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.142,
+          "fair_over": 602,
+          "fair_under": -602,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.11,
+          "fair_over": 812,
+          "fair_under": -812,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.04,
+          "fair_over": 2402,
+          "fair_under": -2402,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.037,
+          "fair_over": 2620,
+          "fair_under": -2620,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 9 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": "Questionable: Waller didn't practice Wednesday due to a knee issue, and afterward head coach Dave Canales called the tight end's injury a \"concern,\" Steve Reed of the Associated Press reports.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Darren Waller Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 340.0,
+            "model_raw": 0.3572,
+            "model_prob": 0.2873,
+            "market_prob": 0.2175,
+            "fair_odds": 248,
+            "edge": 0.0698,
+            "edge_at_price": 0.0601,
+            "ev": 0.2643,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 35.7% before shrink, this book's no-vig 21.8%.",
+              "Projection 0.46 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/18, all 7/18."
+            ],
+            "flags": [
+              "current season only 9 games; added 9 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "injury news: listed Questionable: Waller didn't practice Wednesday due to a knee issue, and afterward head coach Dave Canales called the tight end's injury a \"concern,\" Steve Reed of the Associated Press reports.",
+              "thin data: current season only 9 games; added 9 from prior season (role/team may differ)",
+              "model far from market (36% vs 22%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (36% vs 22%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +255 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Darren Waller",
+      "player_id": "2576925",
+      "team": "Carolina Panthers",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 30.5,
@@ -2871,7 +2988,7 @@
       "flags": [
         "current season only 9 games; added 9 from prior season (role/team may differ)"
       ],
-      "status": null,
+      "status": "Questionable: Waller didn't practice Wednesday due to a knee issue, and afterward head coach Dave Canales called the tight end's injury a \"concern,\" Steve Reed of the Associated Press reports.",
       "sides": {
         "over": {
           "draftkings": {
@@ -2898,6 +3015,7 @@
               "current season only 9 games; added 9 from prior season (role/team may differ)"
             ],
             "caution": [
+              "injury news: listed Questionable: Waller didn't practice Wednesday due to a knee issue, and afterward head coach Dave Canales called the tight end's injury a \"concern,\" Steve Reed of the Associated Press reports.",
               "thin data: current season only 9 games; added 9 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
@@ -2930,126 +3048,11 @@
               "current season only 9 games; added 9 from prior season (role/team may differ)"
             ],
             "caution": [
+              "injury news: listed Questionable: Waller didn't practice Wednesday due to a knee issue, and afterward head coach Dave Canales called the tight end's injury a \"concern,\" Steve Reed of the Associated Press reports.",
               "thin data: current season only 9 games; added 9 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +108 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Darren Waller",
-      "player_id": "2576925",
-      "team": "Carolina Panthers",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.46,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "3/10",
-        "L20": "7/18",
-        "all": "7/18"
-      },
-      "recent": [
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        2.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.357,
-          "fair_over": 180,
-          "fair_under": -180,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.142,
-          "fair_over": 602,
-          "fair_under": -602,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.11,
-          "fair_over": 812,
-          "fair_under": -812,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.04,
-          "fair_over": 2402,
-          "fair_under": -2402,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.037,
-          "fair_over": 2620,
-          "fair_under": -2620,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 9 games; added 9 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Darren Waller Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 340.0,
-            "model_raw": 0.3572,
-            "model_prob": 0.2873,
-            "market_prob": 0.2175,
-            "fair_odds": 248,
-            "edge": 0.0698,
-            "edge_at_price": 0.0601,
-            "ev": 0.2643,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 35.7% before shrink, this book's no-vig 21.8%.",
-              "Projection 0.46 (Poisson).",
-              "Hit rate over L5 2/5, L10 3/10, L20 7/18, all 7/18."
-            ],
-            "flags": [
-              "current season only 9 games; added 9 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 9 games; added 9 from prior season (role/team may differ)",
-              "model far from market (36% vs 22%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (36% vs 22%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +255 or better and re-check injuries near start.",
             "proven": false
           }
         }

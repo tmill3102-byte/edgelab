@@ -33,11 +33,11 @@
   },
   "lines": {
     "draftkings": {
-      "total": 222.5,
-      "under_odds": -110.0,
-      "over_odds": -110.0,
       "ml_away": -142.0,
       "ml_home": 120.0,
+      "total": 218.5,
+      "under_odds": -107.0,
+      "over_odds": -113.0,
       "spread_home": 2.5,
       "spread_home_odds": -110.0,
       "spread_away": -2.5,
@@ -48,7 +48,7 @@
   "model_summary": "Margin DEN -3.9 \u00b7 total 217.8",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: DEN 41.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: DEN 41.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin DEN -3.9, total 217.8; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -217,31 +217,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 222.5",
+              "selection": "Under 218.5",
               "side": "under",
-              "line": 222.5,
-              "odds": -110.0,
-              "model_raw": 0.5956,
-              "model_prob": 0.5164,
-              "market_prob": 0.5,
-              "fair_odds": -107,
-              "edge": 0.0164,
-              "edge_at_price": -0.0074,
-              "ev": -0.0141,
+              "line": 218.5,
+              "odds": -107.0,
+              "model_raw": 0.5139,
+              "model_prob": 0.497,
+              "market_prob": 0.4935,
+              "fair_odds": 101,
+              "edge": 0.0035,
+              "edge_at_price": -0.0199,
+              "ev": -0.0386,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 222.5: 59.6% vs market 50.0%.",
-                "Projected total 217.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 219.5 -> 222.5.",
+                "Model under 218.5: 51.4% vs market 49.4%.",
+                "Projected total 217.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 219.5 -> 218.5.",
                 "BOS L5 WWWWL (MOV 11.5), DEN L5 WLWWL (MOV 0.7)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the under (219.5 -> 222.5)"
+                "line move: total already moved toward under (219.5 -> 218.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -103 or better.",
+              "next_step": "Pass. Only interesting at +105 or better.",
               "proven": true
             }
           }
@@ -251,31 +251,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 222.5",
+              "selection": "Over 218.5",
               "side": "over",
-              "line": 222.5,
-              "odds": -110.0,
-              "model_raw": 0.4044,
-              "model_prob": 0.4836,
-              "market_prob": 0.5,
-              "fair_odds": 107,
-              "edge": -0.0164,
-              "edge_at_price": -0.0403,
-              "ev": -0.0769,
+              "line": 218.5,
+              "odds": -113.0,
+              "model_raw": 0.4861,
+              "model_prob": 0.503,
+              "market_prob": 0.5065,
+              "fair_odds": -101,
+              "edge": -0.0035,
+              "edge_at_price": -0.0275,
+              "ev": -0.0518,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 222.5: 40.4% vs market 50.0%.",
-                "Projected total 217.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 219.5 -> 222.5.",
+                "Model over 218.5: 48.6% vs market 50.6%.",
+                "Projected total 217.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 219.5 -> 218.5.",
                 "BOS L5 WWWWL (MOV 11.5), DEN L5 WLWWL (MOV 0.7)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
               "caution": [
-                "line move: total already moved toward over (219.5 -> 222.5); value may be gone"
+                "line move: market moved against the over (219.5 -> 218.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +111 or better.",
+              "next_step": "Pass. Only interesting at +103 or better.",
               "proven": true
             }
           }
@@ -284,169 +284,6 @@
     }
   ],
   "props": [
-    {
-      "player": "Aaron Gordon",
-      "player_id": "3064290",
-      "team": "Denver Nuggets",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "line": 4.5,
-      "projection": 4.71,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "12/20",
-        "all": "17/27"
-      },
-      "recent": [
-        1.0,
-        5.0,
-        3.0,
-        5.0,
-        5.0,
-        1.0,
-        6.0,
-        4.0,
-        11.0,
-        4.0
-      ],
-      "ladder": [
-        {
-          "line": 2.5,
-          "p_over": 0.814,
-          "fair_over": -439,
-          "fair_under": 439,
-          "L10": "8/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.788,
-          "fair_over": -372,
-          "fair_under": 372,
-          "L10": "7/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.684,
-          "fair_over": -216,
-          "fair_under": 216,
-          "L10": "7/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.615,
-          "fair_over": -160,
-          "fair_under": 160,
-          "L10": "5/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.505,
-          "fair_over": -102,
-          "fair_under": 102,
-          "L10": "5/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.38,
-          "fair_over": 163,
-          "fair_under": -163,
-          "L10": "2/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.305,
-          "fair_over": 228,
-          "fair_under": -228,
-          "L10": "2/10"
-        },
-        {
-          "line": 6.0,
-          "p_over": 0.212,
-          "fair_over": 371,
-          "fair_under": -371,
-          "L10": "1/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.187,
-          "fair_over": 436,
-          "fair_under": -436,
-          "L10": "1/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 12 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Aaron Gordon Over 4.5 reb",
-            "side": "over",
-            "line": 4.5,
-            "odds": -146.0,
-            "model_raw": 0.5053,
-            "model_prob": 0.5307,
-            "market_prob": 0.556,
-            "fair_odds": -113,
-            "edge": -0.0254,
-            "edge_at_price": -0.0628,
-            "ev": -0.1059,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 4.5: 50.5% before shrink, this book's no-vig 55.6%.",
-              "Projection 4.71 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 17/27."
-            ],
-            "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -108 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Aaron Gordon Under 4.5 reb",
-            "side": "under",
-            "line": 4.5,
-            "odds": 111.0,
-            "model_raw": 0.4947,
-            "model_prob": 0.4693,
-            "market_prob": 0.444,
-            "fair_odds": 113,
-            "edge": 0.0254,
-            "edge_at_price": -0.0046,
-            "ev": -0.0097,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 4.5: 49.5% before shrink, this book's no-vig 44.4%.",
-              "Projection 4.71 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 17/27."
-            ],
-            "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +117 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
     {
       "player": "Aaron Gordon",
       "player_id": "3064290",
@@ -1094,163 +931,163 @@
       }
     },
     {
-      "player": "Cameron Johnson",
-      "player_id": "3138196",
+      "player": "Aaron Gordon",
+      "player_id": "3064290",
       "team": "Denver Nuggets",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 3.5,
-      "projection": 3.85,
+      "line": 4.5,
+      "projection": 4.71,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "6/10",
-        "L20": "10/20",
-        "all": "11/24"
+        "L10": "5/10",
+        "L20": "12/20",
+        "all": "17/27"
       },
       "recent": [
-        0.0,
+        1.0,
         5.0,
+        3.0,
+        5.0,
+        5.0,
+        1.0,
+        6.0,
         4.0,
-        2.0,
-        4.0,
-        2.0,
-        4.0,
-        9.0,
-        2.0,
-        8.0
+        11.0,
+        4.0
       ],
       "ladder": [
         {
-          "line": 1.5,
-          "p_over": 0.875,
-          "fair_over": -697,
-          "fair_under": 697,
-          "L10": "9/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.843,
-          "fair_over": -535,
-          "fair_under": 535,
-          "L10": "6/10"
-        },
-        {
           "line": 2.5,
-          "p_over": 0.685,
-          "fair_over": -217,
-          "fair_under": 217,
-          "L10": "6/10"
+          "p_over": 0.814,
+          "fair_over": -439,
+          "fair_under": 439,
+          "L10": "8/10"
         },
         {
           "line": 3.0,
-          "p_over": 0.642,
-          "fair_over": -179,
-          "fair_under": 179,
-          "L10": "6/10"
+          "p_over": 0.788,
+          "fair_over": -372,
+          "fair_under": 372,
+          "L10": "7/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.553,
-          "fair_over": -124,
-          "fair_under": 124,
-          "L10": "6/10"
+          "p_over": 0.684,
+          "fair_over": -216,
+          "fair_under": 216,
+          "L10": "7/10"
         },
         {
           "line": 4.0,
-          "p_over": 0.432,
-          "fair_over": 132,
-          "fair_under": -132,
-          "L10": "3/10"
+          "p_over": 0.615,
+          "fair_over": -160,
+          "fair_under": 160,
+          "L10": "5/10"
         },
         {
           "line": 4.5,
-          "p_over": 0.339,
-          "fair_over": 195,
-          "fair_under": -195,
-          "L10": "3/10"
+          "p_over": 0.505,
+          "fair_over": -102,
+          "fair_under": 102,
+          "L10": "5/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.242,
-          "fair_over": 313,
-          "fair_under": -313,
+          "p_over": 0.38,
+          "fair_over": 163,
+          "fair_under": -163,
           "L10": "2/10"
         },
         {
           "line": 5.5,
+          "p_over": 0.305,
+          "fair_over": 228,
+          "fair_under": -228,
+          "L10": "2/10"
+        },
+        {
+          "line": 6.0,
           "p_over": 0.212,
           "fair_over": 371,
           "fair_under": -371,
-          "L10": "2/10"
+          "L10": "1/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.187,
+          "fair_over": 436,
+          "fair_under": -436,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 9 games; added 15 from prior season (role/team may differ)"
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Cameron Johnson Over 3.5 reb",
+            "selection": "Aaron Gordon Over 4.5 reb",
             "side": "over",
-            "line": 3.5,
-            "odds": -113.0,
-            "model_raw": 0.553,
-            "model_prob": 0.5245,
-            "market_prob": 0.496,
-            "fair_odds": -110,
-            "edge": 0.0285,
-            "edge_at_price": -0.006,
-            "ev": -0.0114,
+            "line": 4.5,
+            "odds": -146.0,
+            "model_raw": 0.5053,
+            "model_prob": 0.5307,
+            "market_prob": 0.556,
+            "fair_odds": -113,
+            "edge": -0.0254,
+            "edge_at_price": -0.0628,
+            "ev": -0.1059,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 3.5: 55.3% before shrink, this book's no-vig 49.6%.",
-              "Projection 3.85 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 11/24."
+              "Model over 4.5: 50.5% before shrink, this book's no-vig 55.6%.",
+              "Projection 4.71 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 17/27."
             ],
             "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -106 or better.",
+            "next_step": "Pass. Only interesting at -108 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Cameron Johnson Under 3.5 reb",
+            "selection": "Aaron Gordon Under 4.5 reb",
             "side": "under",
-            "line": 3.5,
-            "odds": -117.0,
-            "model_raw": 0.447,
-            "model_prob": 0.4755,
-            "market_prob": 0.504,
-            "fair_odds": 110,
-            "edge": -0.0285,
-            "edge_at_price": -0.0636,
-            "ev": -0.118,
+            "line": 4.5,
+            "odds": 111.0,
+            "model_raw": 0.4947,
+            "model_prob": 0.4693,
+            "market_prob": 0.444,
+            "fair_odds": 113,
+            "edge": 0.0254,
+            "edge_at_price": -0.0046,
+            "ev": -0.0097,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 3.5: 44.7% before shrink, this book's no-vig 50.4%.",
-              "Projection 3.85 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 11/24."
+              "Model under 4.5: 49.5% before shrink, this book's no-vig 44.4%.",
+              "Projection 4.71 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 17/27."
             ],
             "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +115 or better.",
+            "next_step": "Pass. Only interesting at +117 or better.",
             "proven": false
           }
         }
@@ -1895,163 +1732,163 @@
       }
     },
     {
-      "player": "Christian Braun",
-      "player_id": "4431767",
+      "player": "Cameron Johnson",
+      "player_id": "3138196",
       "team": "Denver Nuggets",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 4.5,
-      "projection": 3.86,
+      "line": 3.5,
+      "projection": 3.85,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "3/10",
-        "L20": "8/20",
-        "all": "11/27"
+        "L10": "6/10",
+        "L20": "10/20",
+        "all": "11/24"
       },
       "recent": [
-        3.0,
-        7.0,
-        5.0,
+        0.0,
         5.0,
         4.0,
-        3.0,
-        3.0,
-        3.0,
-        0.0,
-        4.0
+        2.0,
+        4.0,
+        2.0,
+        4.0,
+        9.0,
+        2.0,
+        8.0
       ],
       "ladder": [
         {
-          "line": 2.5,
-          "p_over": 0.774,
-          "fair_over": -342,
-          "fair_under": 342,
+          "line": 1.5,
+          "p_over": 0.875,
+          "fair_over": -697,
+          "fair_under": 697,
           "L10": "9/10"
         },
         {
+          "line": 2.0,
+          "p_over": 0.843,
+          "fair_over": -535,
+          "fair_under": 535,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.685,
+          "fair_over": -217,
+          "fair_under": 217,
+          "L10": "6/10"
+        },
+        {
           "line": 3.0,
-          "p_over": 0.702,
-          "fair_over": -235,
-          "fair_under": 235,
-          "L10": "5/10"
+          "p_over": 0.642,
+          "fair_over": -179,
+          "fair_under": 179,
+          "L10": "6/10"
         },
         {
           "line": 3.5,
-          "p_over": 0.526,
-          "fair_over": -111,
-          "fair_under": 111,
-          "L10": "5/10"
+          "p_over": 0.553,
+          "fair_over": -124,
+          "fair_under": 124,
+          "L10": "6/10"
         },
         {
           "line": 4.0,
-          "p_over": 0.418,
-          "fair_over": 139,
-          "fair_under": -139,
+          "p_over": 0.432,
+          "fair_over": 132,
+          "fair_under": -132,
           "L10": "3/10"
         },
         {
           "line": 4.5,
-          "p_over": 0.341,
-          "fair_over": 193,
-          "fair_under": -193,
+          "p_over": 0.339,
+          "fair_over": 195,
+          "fair_under": -195,
           "L10": "3/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.219,
-          "fair_over": 358,
-          "fair_under": -358,
-          "L10": "1/10"
+          "p_over": 0.242,
+          "fair_over": 313,
+          "fair_under": -313,
+          "L10": "2/10"
         },
         {
           "line": 5.5,
-          "p_over": 0.184,
-          "fair_over": 442,
-          "fair_under": -442,
-          "L10": "1/10"
-        },
-        {
-          "line": 6.0,
-          "p_over": 0.128,
-          "fair_over": 680,
-          "fair_under": -680,
-          "L10": "1/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.121,
-          "fair_over": 724,
-          "fair_under": -724,
-          "L10": "1/10"
+          "p_over": 0.212,
+          "fair_over": 371,
+          "fair_under": -371,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 12 games; added 15 from prior season (role/team may differ)"
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Christian Braun Over 4.5 reb",
+            "selection": "Cameron Johnson Over 3.5 reb",
             "side": "over",
-            "line": 4.5,
-            "odds": 117.0,
-            "model_raw": 0.3407,
-            "model_prob": 0.3863,
-            "market_prob": 0.4318,
-            "fair_odds": 159,
-            "edge": -0.0456,
-            "edge_at_price": -0.0746,
-            "ev": -0.1618,
+            "line": 3.5,
+            "odds": -113.0,
+            "model_raw": 0.553,
+            "model_prob": 0.5245,
+            "market_prob": 0.496,
+            "fair_odds": -110,
+            "edge": 0.0285,
+            "edge_at_price": -0.006,
+            "ev": -0.0114,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 4.5: 34.1% before shrink, this book's no-vig 43.2%.",
-              "Projection 3.86 (Poisson).",
-              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 11/27."
+              "Model over 3.5: 55.3% before shrink, this book's no-vig 49.6%.",
+              "Projection 3.85 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 11/24."
             ],
             "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +164 or better.",
+            "next_step": "Pass. Only interesting at -106 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Christian Braun Under 4.5 reb",
+            "selection": "Cameron Johnson Under 3.5 reb",
             "side": "under",
-            "line": 4.5,
-            "odds": -154.0,
-            "model_raw": 0.6593,
-            "model_prob": 0.6137,
-            "market_prob": 0.5682,
-            "fair_odds": -159,
-            "edge": 0.0456,
-            "edge_at_price": 0.0074,
-            "ev": 0.0123,
+            "line": 3.5,
+            "odds": -117.0,
+            "model_raw": 0.447,
+            "model_prob": 0.4755,
+            "market_prob": 0.504,
+            "fair_odds": 110,
+            "edge": -0.0285,
+            "edge_at_price": -0.0636,
+            "ev": -0.118,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 4.5: 65.9% before shrink, this book's no-vig 56.8%.",
-              "Projection 3.86 (Poisson).",
-              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 11/27."
+              "Model under 3.5: 44.7% before shrink, this book's no-vig 50.4%.",
+              "Projection 3.85 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 11/24."
             ],
             "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -151 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +115 or better.",
             "proven": false
           }
         }
@@ -2705,94 +2542,257 @@
       }
     },
     {
-      "player": "Derrick White",
-      "player_id": "3078576",
-      "team": "Boston Celtics",
+      "player": "Christian Braun",
+      "player_id": "4431767",
+      "team": "Denver Nuggets",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 2.5,
-      "projection": 2.87,
+      "line": 4.5,
+      "projection": 3.86,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "5/10",
-        "L20": "11/20",
-        "all": "18/29"
+        "L10": "3/10",
+        "L20": "8/20",
+        "all": "11/27"
       },
       "recent": [
         3.0,
+        7.0,
+        5.0,
+        5.0,
         4.0,
-        1.0,
-        1.0,
         3.0,
-        4.0,
-        4.0,
-        2.0,
-        2.0,
-        2.0
+        3.0,
+        3.0,
+        0.0,
+        4.0
       ],
       "ladder": [
         {
-          "line": 0.5,
-          "p_over": 0.934,
-          "fair_over": -1415,
-          "fair_under": 1415,
-          "L10": "10/10"
+          "line": 2.5,
+          "p_over": 0.774,
+          "fair_over": -342,
+          "fair_under": 342,
+          "L10": "9/10"
         },
         {
-          "line": 1.0,
-          "p_over": 0.921,
-          "fair_over": -1166,
-          "fair_under": 1166,
-          "L10": "8/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.77,
-          "fair_over": -335,
-          "fair_under": 335,
-          "L10": "8/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.697,
-          "fair_over": -230,
-          "fair_under": 230,
+          "line": 3.0,
+          "p_over": 0.702,
+          "fair_over": -235,
+          "fair_under": 235,
           "L10": "5/10"
         },
         {
-          "line": 2.5,
-          "p_over": 0.531,
+          "line": 3.5,
+          "p_over": 0.526,
+          "fair_over": -111,
+          "fair_under": 111,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.418,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.341,
+          "fair_over": 193,
+          "fair_under": -193,
+          "L10": "3/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.219,
+          "fair_over": 358,
+          "fair_under": -358,
+          "L10": "1/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.184,
+          "fair_over": 442,
+          "fair_under": -442,
+          "L10": "1/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.128,
+          "fair_over": 680,
+          "fair_under": -680,
+          "L10": "1/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.121,
+          "fair_over": 724,
+          "fair_under": -724,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Christian Braun Over 4.5 reb",
+            "side": "over",
+            "line": 4.5,
+            "odds": 117.0,
+            "model_raw": 0.3407,
+            "model_prob": 0.3863,
+            "market_prob": 0.4318,
+            "fair_odds": 159,
+            "edge": -0.0456,
+            "edge_at_price": -0.0746,
+            "ev": -0.1618,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 4.5: 34.1% before shrink, this book's no-vig 43.2%.",
+              "Projection 3.86 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +164 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Christian Braun Under 4.5 reb",
+            "side": "under",
+            "line": 4.5,
+            "odds": -154.0,
+            "model_raw": 0.6593,
+            "model_prob": 0.6137,
+            "market_prob": 0.5682,
+            "fair_odds": -159,
+            "edge": 0.0456,
+            "edge_at_price": 0.0074,
+            "ev": 0.0123,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 4.5: 65.9% before shrink, this book's no-vig 56.8%.",
+              "Projection 3.86 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 8/20, all 11/27."
+            ],
+            "flags": [
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -151 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Derrick White",
+      "player_id": "3078576",
+      "team": "Boston Celtics",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 20.5,
+      "projection": 19.37,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "8/20",
+        "all": "10/29"
+      },
+      "recent": [
+        14.0,
+        22.0,
+        27.0,
+        9.0,
+        19.0,
+        27.0,
+        35.0,
+        12.0,
+        16.0,
+        15.0
+      ],
+      "ladder": [
+        {
+          "line": 16.5,
+          "p_over": 0.595,
+          "fair_over": -147,
+          "fair_under": 147,
+          "L10": "5/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.563,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "5/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.529,
           "fair_over": -113,
           "fair_under": 113,
           "L10": "5/10"
         },
         {
-          "line": 3.0,
-          "p_over": 0.411,
-          "fair_over": 143,
-          "fair_under": -143,
+          "line": 19.5,
+          "p_over": 0.467,
+          "fair_over": 114,
+          "fair_under": -114,
+          "L10": "4/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.433,
+          "fair_over": 131,
+          "fair_under": -131,
+          "L10": "4/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.4,
+          "fair_over": 150,
+          "fair_under": -150,
+          "L10": "4/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.339,
+          "fair_over": 195,
+          "fair_under": -195,
           "L10": "3/10"
         },
         {
-          "line": 3.5,
-          "p_over": 0.327,
-          "fair_over": 206,
-          "fair_under": -206,
+          "line": 23.5,
+          "p_over": 0.309,
+          "fair_over": 224,
+          "fair_under": -224,
           "L10": "3/10"
         },
         {
-          "line": 4.0,
-          "p_over": 0.165,
-          "fair_over": 505,
-          "fair_under": -505,
-          "L10": "0/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.135,
-          "fair_over": 639,
-          "fair_under": -639,
-          "L10": "0/10"
+          "line": 24.5,
+          "p_over": 0.28,
+          "fair_over": 257,
+          "fair_under": -257,
+          "L10": "3/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2804,23 +2804,23 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Derrick White Over 2.5 reb",
+            "selection": "Derrick White Over 20.5 pra",
             "side": "over",
-            "line": 2.5,
-            "odds": -176.0,
-            "model_raw": 0.5306,
-            "model_prob": 0.5642,
-            "market_prob": 0.5977,
-            "fair_odds": -129,
-            "edge": -0.0336,
-            "edge_at_price": -0.0735,
-            "ev": -0.1153,
+            "line": 20.5,
+            "odds": -125.0,
+            "model_raw": 0.4329,
+            "model_prob": 0.4766,
+            "market_prob": 0.5203,
+            "fair_odds": 110,
+            "edge": -0.0437,
+            "edge_at_price": -0.079,
+            "ev": -0.1421,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 2.5: 53.1% before shrink, this book's no-vig 59.8%.",
-              "Projection 2.87 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 18/29."
+              "Model over 20.5: 43.3% before shrink, this book's no-vig 52.0%.",
+              "Projection 19.37 (Normal(sd 7.7)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 10/29."
             ],
             "flags": [
               "current season only 14 games; added 15 from prior season (role/team may differ)"
@@ -2829,39 +2829,41 @@
               "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -124 or better.",
+            "next_step": "Pass. Only interesting at +114 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Derrick White Under 2.5 reb",
+            "selection": "Derrick White Under 20.5 pra",
             "side": "under",
-            "line": 2.5,
-            "odds": 133.0,
-            "model_raw": 0.4694,
-            "model_prob": 0.4358,
-            "market_prob": 0.4023,
-            "fair_odds": 129,
-            "edge": 0.0336,
-            "edge_at_price": 0.0067,
-            "ev": 0.0155,
+            "line": 20.5,
+            "odds": -105.0,
+            "model_raw": 0.5671,
+            "model_prob": 0.5234,
+            "market_prob": 0.4797,
+            "fair_odds": -110,
+            "edge": 0.0437,
+            "edge_at_price": 0.0112,
+            "ev": 0.0219,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 2.5: 46.9% before shrink, this book's no-vig 40.2%.",
-              "Projection 2.87 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 18/29."
+              "Model under 20.5: 56.7% before shrink, this book's no-vig 48.0%.",
+              "Projection 19.37 (Normal(sd 7.7)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 10/29."
             ],
             "flags": [
               "current season only 14 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for +134 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -105 or better and re-check injuries near start.",
             "proven": false
           }
         }

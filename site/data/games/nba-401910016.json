@@ -33,22 +33,22 @@
   },
   "lines": {
     "draftkings": {
-      "ml_away": 184.0,
-      "ml_home": -222.0,
-      "total": 221.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0,
-      "spread_home": -5.5,
-      "spread_home_odds": -118.0,
-      "spread_away": 5.5,
-      "spread_away_odds": -103.0
+      "ml_away": 164.0,
+      "ml_home": -197.0,
+      "total": 224.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0,
+      "spread_home": -4.5,
+      "spread_home_odds": -111.0,
+      "spread_away": 4.5,
+      "spread_away_odds": -109.0
     }
   },
   "badge": null,
   "model_summary": "Margin DAL -0.5 \u00b7 total 228.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: DAL 65.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: DAL 65.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin DAL -0.4, total 228.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -86,6 +86,12 @@
     ],
     "away": [
       {
+        "name": "Brandon Williams",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
         "name": "Draymond Green",
         "status": "Day-To-Day",
         "pos": "F",
@@ -102,12 +108,6 @@
         "status": "Out",
         "pos": "G",
         "key": true
-      },
-      {
-        "name": "Brandon Williams",
-        "status": "Out",
-        "pos": "G",
-        "key": false
       },
       {
         "name": "Kristaps Porzingis",
@@ -133,24 +133,24 @@
               "selection": "GS ML",
               "side": "away",
               "line": null,
-              "odds": 184.0,
+              "odds": 164.0,
               "model_raw": 0.5142,
-              "model_prob": 0.3613,
-              "market_prob": 0.3381,
-              "fair_odds": 177,
-              "edge": 0.0232,
-              "edge_at_price": 0.0091,
-              "ev": 0.026,
+              "model_prob": 0.3837,
+              "market_prob": 0.3635,
+              "fair_odds": 161,
+              "edge": 0.0202,
+              "edge_at_price": 0.0049,
+              "ev": 0.013,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model GS win 51.4% vs market no-vig 33.8%.",
+                "Model GS win 51.4% vs market no-vig 36.3%.",
                 "v2 projected margin DAL -0.5 (ratings DAL -2.4, GS -0.4, home edge 1.5); raw model 51.4%.",
                 "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "Note: model far from market (51% vs 34%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (51% vs 36%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
@@ -158,8 +158,8 @@
                 "injury: Stephen Curry out for this side and the rating doesn't know it",
                 "downgraded Medium -> Low"
               ],
-              "case_against": "Market makes GS 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Monitor only; if anything, wait for +182 or better and re-check injuries near start.",
+              "case_against": "Market makes GS 36%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +166 or better and re-check injuries near start.",
               "proven": true
             }
           }
@@ -172,29 +172,29 @@
               "selection": "DAL ML",
               "side": "home",
               "line": null,
-              "odds": -222.0,
+              "odds": -197.0,
               "model_raw": 0.4858,
-              "model_prob": 0.6387,
-              "market_prob": 0.6619,
-              "fair_odds": -177,
-              "edge": -0.0232,
-              "edge_at_price": -0.0507,
-              "ev": -0.0735,
+              "model_prob": 0.6163,
+              "market_prob": 0.6365,
+              "fair_odds": -161,
+              "edge": -0.0202,
+              "edge_at_price": -0.047,
+              "ev": -0.0709,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model DAL win 48.6% vs market no-vig 66.2%.",
+                "Model DAL win 48.6% vs market no-vig 63.7%.",
                 "v2 projected margin DAL -0.5 (ratings DAL -2.4, GS -0.4, home edge 1.5); raw model 48.6%.",
                 "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "Note: model far from market (49% vs 66%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (49% vs 64%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes DAL 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -168 or better.",
+              "case_against": "Market makes DAL 64%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -153 or better.",
               "proven": true
             }
           }
@@ -209,32 +209,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "DAL -5.5",
+              "selection": "DAL -4.5",
               "side": "home",
-              "line": -5.5,
-              "odds": -118.0,
-              "model_raw": 0.3172,
-              "model_prob": 0.5162,
-              "market_prob": 0.5162,
-              "fair_odds": -107,
+              "line": -4.5,
+              "odds": -111.0,
+              "model_raw": 0.3462,
+              "model_prob": 0.5022,
+              "market_prob": 0.5022,
+              "fair_odds": -101,
               "edge": 0.0,
-              "edge_at_price": -0.0251,
-              "ev": -0.0464,
+              "edge_at_price": -0.0239,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model DAL -5.5 covers 31.7% vs market 51.6%.",
-                "Projected margin DAL -0.5 vs line DAL -5.5.",
+                "Model DAL -4.5 covers 34.6% vs market 50.2%.",
+                "Projected margin DAL -0.5 vs line DAL -4.5.",
                 "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (32% vs 52%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (35% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -102 or better.",
+              "next_step": "Pass. Only interesting at +103 or better.",
               "proven": false
             }
           }
@@ -244,36 +244,36 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "GS +5.5",
+              "selection": "GS +4.5",
               "side": "away",
-              "line": 5.5,
-              "odds": -103.0,
-              "model_raw": 0.6828,
-              "model_prob": 0.4838,
-              "market_prob": 0.4838,
-              "fair_odds": 107,
+              "line": 4.5,
+              "odds": -109.0,
+              "model_raw": 0.6538,
+              "model_prob": 0.4978,
+              "market_prob": 0.4978,
+              "fair_odds": 101,
               "edge": 0.0,
-              "edge_at_price": -0.0236,
-              "ev": -0.0464,
+              "edge_at_price": -0.0237,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model GS +5.5 covers 68.3% vs market 48.4%.",
-                "Projected margin DAL -0.5 vs line DAL -5.5.",
+                "Model GS +4.5 covers 65.4% vs market 49.8%.",
+                "Projected margin DAL -0.5 vs line DAL -4.5.",
                 "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
                 "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
                 "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (68% vs 48%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (65% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
                 "injury news: key player status uncertain - Draymond Green (Day-To-Day)",
-                "line move: spread moved against this side (+6.5 -> +5.5)",
+                "line move: spread moved against this side (+6.5 -> +4.5)",
                 "injury: Stephen Curry out for this side and the rating doesn't know it"
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +111 or better.",
+              "next_step": "Pass. Only interesting at +105 or better.",
               "proven": false
             }
           }
@@ -288,30 +288,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 221.5",
+              "selection": "Over 224.5",
               "side": "over",
-              "line": 221.5,
-              "odds": -105.0,
-              "model_raw": 0.6315,
-              "model_prob": 0.5139,
-              "market_prob": 0.4892,
-              "fair_odds": -106,
-              "edge": 0.0247,
-              "edge_at_price": 0.0017,
-              "ev": 0.0033,
+              "line": 224.5,
+              "odds": -112.0,
+              "model_raw": 0.5717,
+              "model_prob": 0.5159,
+              "market_prob": 0.5043,
+              "fair_odds": -107,
+              "edge": 0.0115,
+              "edge_at_price": -0.0124,
+              "ev": -0.0236,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 221.5: 63.2% vs market 48.9%.",
-                "Projected total 228.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 224.5: 57.2% vs market 50.4%.",
+                "Projected total 228.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 221.5 -> 224.5.",
                 "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "Note: model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward over (221.5 -> 224.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Monitor only; if anything, wait for -102 or better and re-check injuries near start.",
+              "next_step": "Pass. Only interesting at -102 or better.",
               "proven": true
             }
           }
@@ -321,30 +322,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 221.5",
+              "selection": "Under 224.5",
               "side": "under",
-              "line": 221.5,
-              "odds": -115.0,
-              "model_raw": 0.3685,
-              "model_prob": 0.4861,
-              "market_prob": 0.5108,
-              "fair_odds": 106,
-              "edge": -0.0247,
-              "edge_at_price": -0.0488,
-              "ev": -0.0912,
+              "line": 224.5,
+              "odds": -108.0,
+              "model_raw": 0.4283,
+              "model_prob": 0.4841,
+              "market_prob": 0.4957,
+              "fair_odds": 107,
+              "edge": -0.0115,
+              "edge_at_price": -0.0351,
+              "ev": -0.0676,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 221.5: 36.8% vs market 51.1%.",
-                "Projected total 228.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 224.5: 42.8% vs market 49.6%.",
+                "Projected total 228.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 221.5 -> 224.5.",
                 "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "Note: model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the under (221.5 -> 224.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +110 or better.",
+              "next_step": "Pass. Only interesting at +111 or better.",
               "proven": true
             }
           }
@@ -353,171 +355,6 @@
     }
   ],
   "props": [
-    {
-      "player": "Al Horford",
-      "player_id": "3213",
-      "team": "Golden State Warriors",
-      "stat": "reb",
-      "stat_label": "Rebounds",
-      "line": 4.5,
-      "projection": 3.91,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "15/27"
-      },
-      "recent": [
-        5.0,
-        3.0,
-        1.0,
-        2.0,
-        5.0,
-        5.0,
-        5.0,
-        2.0,
-        5.0,
-        3.0
-      ],
-      "ladder": [
-        {
-          "line": 2.5,
-          "p_over": 0.72,
-          "fair_over": -257,
-          "fair_under": 257,
-          "L10": "7/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.655,
-          "fair_over": -190,
-          "fair_under": 190,
-          "L10": "5/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.531,
-          "fair_over": -113,
-          "fair_under": 113,
-          "L10": "5/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.46,
-          "fair_over": 117,
-          "fair_under": -117,
-          "L10": "5/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.405,
-          "fair_over": 147,
-          "fair_under": -147,
-          "L10": "5/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.204,
-          "fair_over": 390,
-          "fair_under": -390,
-          "L10": "0/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.16,
-          "fair_over": 527,
-          "fair_under": -527,
-          "L10": "0/10"
-        },
-        {
-          "line": 6.0,
-          "p_over": 0.102,
-          "fair_over": 878,
-          "fair_under": -878,
-          "L10": "0/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.095,
-          "fair_over": 952,
-          "fair_under": -952,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 12 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": "Day-To-Day: Horford (back) is questionable for Wednesday's game against Dallas.",
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Al Horford Over 4.5 reb",
-            "side": "over",
-            "line": 4.5,
-            "odds": -108.0,
-            "model_raw": 0.4046,
-            "model_prob": 0.4452,
-            "market_prob": 0.4858,
-            "fair_odds": 125,
-            "edge": -0.0406,
-            "edge_at_price": -0.074,
-            "ev": -0.1426,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 4.5: 40.5% before shrink, this book's no-vig 48.6%.",
-              "Projection 3.91 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 15/27."
-            ],
-            "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "injury news: listed Day-To-Day: Horford (back) is questionable for Wednesday's game against Dallas.",
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +129 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Al Horford Under 4.5 reb",
-            "side": "under",
-            "line": 4.5,
-            "odds": -122.0,
-            "model_raw": 0.5954,
-            "model_prob": 0.5548,
-            "market_prob": 0.5142,
-            "fair_odds": -125,
-            "edge": 0.0406,
-            "edge_at_price": 0.0052,
-            "ev": 0.0095,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 4.5: 59.5% before shrink, this book's no-vig 51.4%.",
-              "Projection 3.91 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 15/27."
-            ],
-            "flags": [
-              "current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "injury news: listed Day-To-Day: Horford (back) is questionable for Wednesday's game against Dallas.",
-              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -119 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
     {
       "player": "Al Horford",
       "player_id": "3213",
@@ -1196,163 +1033,165 @@
       }
     },
     {
-      "player": "Brandin Podziemski",
-      "player_id": "4709138",
+      "player": "Al Horford",
+      "player_id": "3213",
       "team": "Golden State Warriors",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 5.5,
-      "projection": 5.06,
+      "line": 4.5,
+      "projection": 3.91,
       "hit_rates": {
-        "L5": "3/5",
+        "L5": "2/5",
         "L10": "5/10",
-        "L20": "8/20",
-        "all": "13/27"
+        "L20": "10/20",
+        "all": "15/27"
       },
       "recent": [
-        6.0,
-        3.0,
-        6.0,
-        2.0,
-        7.0,
-        6.0,
-        3.0,
-        8.0,
         5.0,
-        5.0
+        3.0,
+        1.0,
+        2.0,
+        5.0,
+        5.0,
+        5.0,
+        2.0,
+        5.0,
+        3.0
       ],
       "ladder": [
         {
-          "line": 3.5,
-          "p_over": 0.716,
-          "fair_over": -253,
-          "fair_under": 253,
+          "line": 2.5,
+          "p_over": 0.72,
+          "fair_over": -257,
+          "fair_under": 257,
           "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.655,
+          "fair_over": -190,
+          "fair_under": 190,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.531,
+          "fair_over": -113,
+          "fair_under": 113,
+          "L10": "5/10"
         },
         {
           "line": 4.0,
-          "p_over": 0.681,
-          "fair_over": -214,
-          "fair_under": 214,
-          "L10": "7/10"
+          "p_over": 0.46,
+          "fair_over": 117,
+          "fair_under": -117,
+          "L10": "5/10"
         },
         {
           "line": 4.5,
-          "p_over": 0.604,
-          "fair_over": -152,
-          "fair_under": 152,
-          "L10": "7/10"
+          "p_over": 0.405,
+          "fair_over": 147,
+          "fair_under": -147,
+          "L10": "5/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.521,
-          "fair_over": -109,
-          "fair_under": 109,
-          "L10": "5/10"
+          "p_over": 0.204,
+          "fair_over": 390,
+          "fair_under": -390,
+          "L10": "0/10"
         },
         {
           "line": 5.5,
-          "p_over": 0.431,
-          "fair_over": 132,
-          "fair_under": -132,
-          "L10": "5/10"
+          "p_over": 0.16,
+          "fair_over": 527,
+          "fair_under": -527,
+          "L10": "0/10"
         },
         {
           "line": 6.0,
-          "p_over": 0.305,
-          "fair_over": 228,
-          "fair_under": -228,
-          "L10": "2/10"
+          "p_over": 0.102,
+          "fair_over": 878,
+          "fair_under": -878,
+          "L10": "0/10"
         },
         {
           "line": 6.5,
-          "p_over": 0.248,
-          "fair_over": 304,
-          "fair_under": -304,
-          "L10": "2/10"
-        },
-        {
-          "line": 7.0,
-          "p_over": 0.165,
-          "fair_over": 505,
-          "fair_under": -505,
-          "L10": "1/10"
-        },
-        {
-          "line": 7.5,
-          "p_over": 0.149,
-          "fair_over": 570,
-          "fair_under": -570,
-          "L10": "1/10"
+          "p_over": 0.095,
+          "fair_over": 952,
+          "fair_under": -952,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
         "current season only 12 games; added 15 from prior season (role/team may differ)"
       ],
-      "status": null,
+      "status": "Day-To-Day: Horford (back) is questionable for Wednesday's game against Dallas.",
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Brandin Podziemski Over 5.5 reb",
+            "selection": "Al Horford Over 4.5 reb",
             "side": "over",
-            "line": 5.5,
-            "odds": 105.0,
-            "model_raw": 0.4315,
-            "model_prob": 0.4438,
-            "market_prob": 0.4562,
+            "line": 4.5,
+            "odds": -108.0,
+            "model_raw": 0.4046,
+            "model_prob": 0.4452,
+            "market_prob": 0.4858,
             "fair_odds": 125,
-            "edge": -0.0123,
-            "edge_at_price": -0.044,
-            "ev": -0.0902,
+            "edge": -0.0406,
+            "edge_at_price": -0.074,
+            "ev": -0.1426,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 5.5: 43.1% before shrink, this book's no-vig 45.6%.",
-              "Projection 5.06 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 13/27."
+              "Model over 4.5: 40.5% before shrink, this book's no-vig 48.6%.",
+              "Projection 3.91 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 15/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
+              "injury news: listed Day-To-Day: Horford (back) is questionable for Wednesday's game against Dallas.",
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +130 or better.",
+            "next_step": "Pass. Only interesting at +129 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Brandin Podziemski Under 5.5 reb",
+            "selection": "Al Horford Under 4.5 reb",
             "side": "under",
-            "line": 5.5,
-            "odds": -139.0,
-            "model_raw": 0.5685,
-            "model_prob": 0.5562,
-            "market_prob": 0.5438,
+            "line": 4.5,
+            "odds": -122.0,
+            "model_raw": 0.5954,
+            "model_prob": 0.5548,
+            "market_prob": 0.5142,
             "fair_odds": -125,
-            "edge": 0.0123,
-            "edge_at_price": -0.0254,
-            "ev": -0.0437,
+            "edge": 0.0406,
+            "edge_at_price": 0.0052,
+            "ev": 0.0095,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 5.5: 56.9% before shrink, this book's no-vig 54.4%.",
-              "Projection 5.06 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 13/27."
+              "Model under 4.5: 59.5% before shrink, this book's no-vig 51.4%.",
+              "Projection 3.91 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 15/27."
             ],
             "flags": [
               "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
+              "injury news: listed Day-To-Day: Horford (back) is questionable for Wednesday's game against Dallas.",
               "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -120 or better.",
+            "next_step": "Monitor only; if anything, wait for -119 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2019,163 +1858,163 @@
       }
     },
     {
-      "player": "Cooper Flagg",
-      "player_id": "5041939",
-      "team": "Dallas Mavericks",
+      "player": "Brandin Podziemski",
+      "player_id": "4709138",
+      "team": "Golden State Warriors",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 6.5,
-      "projection": 6.96,
+      "line": 5.5,
+      "projection": 5.06,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "6/10",
-        "L20": "10/20",
-        "all": "13/28"
+        "L10": "5/10",
+        "L20": "8/20",
+        "all": "13/27"
       },
       "recent": [
+        6.0,
+        3.0,
+        6.0,
+        2.0,
+        7.0,
+        6.0,
         3.0,
         8.0,
-        7.0,
-        10.0,
         5.0,
-        10.0,
-        10.0,
-        4.0,
-        9.0,
         5.0
       ],
       "ladder": [
         {
+          "line": 3.5,
+          "p_over": 0.716,
+          "fair_over": -253,
+          "fair_under": 253,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.681,
+          "fair_over": -214,
+          "fair_under": 214,
+          "L10": "7/10"
+        },
+        {
           "line": 4.5,
-          "p_over": 0.798,
-          "fair_over": -394,
-          "fair_under": 394,
-          "L10": "8/10"
+          "p_over": 0.604,
+          "fair_over": -152,
+          "fair_under": 152,
+          "L10": "7/10"
         },
         {
           "line": 5.0,
-          "p_over": 0.763,
-          "fair_over": -322,
-          "fair_under": 322,
-          "L10": "6/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.655,
-          "fair_over": -190,
-          "fair_under": 190,
-          "L10": "6/10"
-        },
-        {
-          "line": 6.0,
-          "p_over": 0.62,
-          "fair_over": -163,
-          "fair_under": 163,
-          "L10": "6/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.558,
-          "fair_over": -126,
-          "fair_under": 126,
-          "L10": "6/10"
-        },
-        {
-          "line": 7.0,
-          "p_over": 0.493,
-          "fair_over": 103,
-          "fair_under": -103,
+          "p_over": 0.521,
+          "fair_over": -109,
+          "fair_under": 109,
           "L10": "5/10"
         },
         {
-          "line": 7.5,
-          "p_over": 0.432,
+          "line": 5.5,
+          "p_over": 0.431,
           "fair_over": 132,
           "fair_under": -132,
           "L10": "5/10"
         },
         {
-          "line": 8.0,
-          "p_over": 0.358,
-          "fair_over": 180,
-          "fair_under": -180,
-          "L10": "4/10"
+          "line": 6.0,
+          "p_over": 0.305,
+          "fair_over": 228,
+          "fair_under": -228,
+          "L10": "2/10"
         },
         {
-          "line": 8.5,
-          "p_over": 0.319,
-          "fair_over": 214,
-          "fair_under": -214,
-          "L10": "4/10"
+          "line": 6.5,
+          "p_over": 0.248,
+          "fair_over": 304,
+          "fair_under": -304,
+          "L10": "2/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.165,
+          "fair_over": 505,
+          "fair_under": -505,
+          "L10": "1/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.149,
+          "fair_over": 570,
+          "fair_under": -570,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 13 games; added 15 from prior season (role/team may differ)"
+        "current season only 12 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Cooper Flagg Over 6.5 reb",
+            "selection": "Brandin Podziemski Over 5.5 reb",
             "side": "over",
-            "line": 6.5,
-            "odds": -139.0,
-            "model_raw": 0.558,
-            "model_prob": 0.5515,
-            "market_prob": 0.5451,
-            "fair_odds": -123,
-            "edge": 0.0065,
-            "edge_at_price": -0.0301,
-            "ev": -0.0517,
+            "line": 5.5,
+            "odds": 105.0,
+            "model_raw": 0.4315,
+            "model_prob": 0.4438,
+            "market_prob": 0.4562,
+            "fair_odds": 125,
+            "edge": -0.0123,
+            "edge_at_price": -0.044,
+            "ev": -0.0902,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 6.5: 55.8% before shrink, this book's no-vig 54.5%.",
-              "Projection 6.96 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/28."
+              "Model over 5.5: 43.1% before shrink, this book's no-vig 45.6%.",
+              "Projection 5.06 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 13/27."
             ],
             "flags": [
-              "current season only 13 games; added 15 from prior season (role/team may differ)"
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 13 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -118 or better.",
+            "next_step": "Pass. Only interesting at +130 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Cooper Flagg Under 6.5 reb",
+            "selection": "Brandin Podziemski Under 5.5 reb",
             "side": "under",
-            "line": 6.5,
-            "odds": 106.0,
-            "model_raw": 0.442,
-            "model_prob": 0.4485,
-            "market_prob": 0.4549,
-            "fair_odds": 123,
-            "edge": -0.0065,
-            "edge_at_price": -0.037,
-            "ev": -0.0761,
+            "line": 5.5,
+            "odds": -139.0,
+            "model_raw": 0.5685,
+            "model_prob": 0.5562,
+            "market_prob": 0.5438,
+            "fair_odds": -125,
+            "edge": 0.0123,
+            "edge_at_price": -0.0254,
+            "ev": -0.0437,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 6.5: 44.2% before shrink, this book's no-vig 45.5%.",
-              "Projection 6.96 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/28."
+              "Model under 5.5: 56.9% before shrink, this book's no-vig 54.4%.",
+              "Projection 5.06 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 13/27."
             ],
             "flags": [
-              "current season only 13 games; added 15 from prior season (role/team may differ)"
+              "current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 13 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 12 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +127 or better.",
+            "next_step": "Pass. Only interesting at -120 or better.",
             "proven": false
           }
         }
@@ -2827,94 +2666,257 @@
       }
     },
     {
-      "player": "Kyrie Irving",
-      "player_id": "6442",
+      "player": "Cooper Flagg",
+      "player_id": "5041939",
       "team": "Dallas Mavericks",
       "stat": "reb",
       "stat_label": "Rebounds",
-      "line": 3.5,
-      "projection": 3.42,
+      "line": 6.5,
+      "projection": 6.96,
       "hit_rates": {
-        "L5": "1/5",
-        "L10": "4/10",
-        "L20": "5/11",
-        "all": "5/11"
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "10/20",
+        "all": "13/28"
       },
       "recent": [
-        6.0,
         3.0,
-        0.0,
-        3.0,
-        2.0,
+        8.0,
         7.0,
+        10.0,
+        5.0,
+        10.0,
+        10.0,
         4.0,
-        2.0,
-        6.0,
-        1.0
+        9.0,
+        5.0
       ],
       "ladder": [
         {
-          "line": 1.5,
-          "p_over": 0.819,
-          "fair_over": -451,
-          "fair_under": 451,
+          "line": 4.5,
+          "p_over": 0.798,
+          "fair_over": -394,
+          "fair_under": 394,
           "L10": "8/10"
         },
         {
-          "line": 2.0,
-          "p_over": 0.779,
-          "fair_over": -352,
-          "fair_under": 352,
+          "line": 5.0,
+          "p_over": 0.763,
+          "fair_over": -322,
+          "fair_under": 322,
           "L10": "6/10"
         },
         {
-          "line": 2.5,
-          "p_over": 0.636,
-          "fair_over": -175,
-          "fair_under": 175,
+          "line": 5.5,
+          "p_over": 0.655,
+          "fair_over": -190,
+          "fair_under": 190,
           "L10": "6/10"
         },
         {
-          "line": 3.0,
-          "p_over": 0.546,
-          "fair_over": -120,
-          "fair_under": 120,
+          "line": 6.0,
+          "p_over": 0.62,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "6/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.558,
+          "fair_over": -126,
+          "fair_under": 126,
+          "L10": "6/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.493,
+          "fair_over": 103,
+          "fair_under": -103,
+          "L10": "5/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.432,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "5/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.358,
+          "fair_over": 180,
+          "fair_under": -180,
           "L10": "4/10"
         },
         {
-          "line": 3.5,
-          "p_over": 0.436,
+          "line": 8.5,
+          "p_over": 0.319,
+          "fair_over": 214,
+          "fair_under": -214,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 13 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Over 6.5 reb",
+            "side": "over",
+            "line": 6.5,
+            "odds": -139.0,
+            "model_raw": 0.558,
+            "model_prob": 0.5515,
+            "market_prob": 0.5451,
+            "fair_odds": -123,
+            "edge": 0.0065,
+            "edge_at_price": -0.0301,
+            "ev": -0.0517,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 6.5: 55.8% before shrink, this book's no-vig 54.5%.",
+              "Projection 6.96 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/28."
+            ],
+            "flags": [
+              "current season only 13 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 13 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -118 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cooper Flagg Under 6.5 reb",
+            "side": "under",
+            "line": 6.5,
+            "odds": 106.0,
+            "model_raw": 0.442,
+            "model_prob": 0.4485,
+            "market_prob": 0.4549,
+            "fair_odds": 123,
+            "edge": -0.0065,
+            "edge_at_price": -0.037,
+            "ev": -0.0761,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 6.5: 44.2% before shrink, this book's no-vig 45.5%.",
+              "Projection 6.96 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/20, all 13/28."
+            ],
+            "flags": [
+              "current season only 13 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 13 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +127 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Kyrie Irving",
+      "player_id": "6442",
+      "team": "Dallas Mavericks",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 30.5,
+      "projection": 31.12,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "4/11",
+        "all": "4/11"
+      },
+      "recent": [
+        45.0,
+        17.0,
+        39.0,
+        28.0,
+        18.0,
+        41.0,
+        48.0,
+        21.0,
+        30.0,
+        28.0
+      ],
+      "ladder": [
+        {
+          "line": 26.5,
+          "p_over": 0.668,
+          "fair_over": -201,
+          "fair_under": 201,
+          "L10": "7/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.645,
+          "fair_over": -182,
+          "fair_under": 182,
+          "L10": "7/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.563,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "5/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.539,
+          "fair_over": -117,
+          "fair_under": 117,
+          "L10": "5/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.486,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "4/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.462,
+          "fair_over": 117,
+          "fair_under": -117,
+          "L10": "4/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.437,
           "fair_over": 129,
           "fair_under": -129,
           "L10": "4/10"
         },
         {
-          "line": 4.0,
-          "p_over": 0.335,
-          "fair_over": 199,
-          "fair_under": -199,
-          "L10": "3/10"
+          "line": 33.5,
+          "p_over": 0.413,
+          "fair_over": 142,
+          "fair_under": -142,
+          "L10": "4/10"
         },
         {
-          "line": 4.5,
-          "p_over": 0.286,
-          "fair_over": 250,
-          "fair_under": -250,
-          "L10": "3/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.215,
-          "fair_over": 365,
-          "fair_under": -365,
-          "L10": "3/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.203,
-          "fair_over": 394,
-          "fair_under": -394,
-          "L10": "3/10"
+          "line": 34.5,
+          "p_over": 0.39,
+          "fair_over": 157,
+          "fair_under": -157,
+          "L10": "4/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2924,56 +2926,56 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Kyrie Irving Over 3.5 reb",
+            "selection": "Kyrie Irving Over 30.5 pra",
             "side": "over",
-            "line": 3.5,
-            "odds": -121.0,
-            "model_raw": 0.436,
-            "model_prob": 0.4665,
-            "market_prob": 0.5122,
-            "fair_odds": 114,
-            "edge": -0.0457,
-            "edge_at_price": -0.0811,
-            "ev": -0.148,
+            "line": 30.5,
+            "odds": -114.0,
+            "model_raw": 0.4859,
+            "model_prob": 0.4911,
+            "market_prob": 0.499,
+            "fair_odds": 104,
+            "edge": -0.0078,
+            "edge_at_price": -0.0416,
+            "ev": -0.078,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 3.5: 43.6% before shrink, this book's no-vig 51.2%.",
-              "Projection 3.42 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 5/11, all 5/11."
+              "Model over 30.5: 48.6% before shrink, this book's no-vig 49.9%.",
+              "Projection 31.12 (Normal(sd 10.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 4/11, all 4/11."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +119 or better.",
+            "next_step": "Pass. Only interesting at +108 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Kyrie Irving Under 3.5 reb",
+            "selection": "Kyrie Irving Under 30.5 pra",
             "side": "under",
-            "line": 3.5,
-            "odds": -109.0,
-            "model_raw": 0.564,
-            "model_prob": 0.5335,
-            "market_prob": 0.4878,
-            "fair_odds": -114,
-            "edge": 0.0457,
-            "edge_at_price": 0.012,
-            "ev": 0.023,
-            "tier": "Medium",
+            "line": 30.5,
+            "odds": -115.0,
+            "model_raw": 0.5141,
+            "model_prob": 0.5089,
+            "market_prob": 0.501,
+            "fair_odds": -104,
+            "edge": 0.0078,
+            "edge_at_price": -0.026,
+            "ev": -0.0486,
+            "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 3.5: 56.4% before shrink, this book's no-vig 48.8%.",
-              "Projection 3.42 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 5/11, all 5/11."
+              "Model under 30.5: 51.4% before shrink, this book's no-vig 50.1%.",
+              "Projection 31.12 (Normal(sd 10.6)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 4/11, all 4/11."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Playable at -110 or better (current -109); re-check injuries/line 60 min before start.",
+            "next_step": "Pass. Only interesting at +100 or better.",
             "proven": false
           }
         }
