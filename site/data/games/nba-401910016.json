@@ -1,0 +1,360 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401910016",
+  "name": "Golden State Warriors at Dallas Mavericks",
+  "matchup": "GS @ DAL",
+  "start": "2026-11-19T01:00Z",
+  "start_local": "Wed Nov 18 8:00 PM ET",
+  "date_et": "2026-11-18",
+  "weekday": "wednesday",
+  "state": "pre",
+  "status": "11/18 - 8:00 PM EST",
+  "home": {
+    "abbr": "DAL",
+    "name": "Dallas Mavericks",
+    "record": "7-7",
+    "id": "6"
+  },
+  "away": {
+    "abbr": "GS",
+    "name": "Golden State Warriors",
+    "record": "8-6",
+    "id": "9"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35033288"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 191.0,
+      "ml_home": -230.0,
+      "total": 221.5,
+      "over_odds": -114.0,
+      "under_odds": -106.0,
+      "spread_home": -5.5,
+      "spread_home_odds": -114.0,
+      "spread_away": 5.5,
+      "spread_away_odds": -106.0
+    }
+  },
+  "badge": {
+    "tier": "Medium",
+    "edge": 0.0241,
+    "selection": "GS ML",
+    "market": "ML",
+    "book": "draftkings"
+  },
+  "model_summary": "Margin DAL -0.5 \u00b7 total 228.0",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: DAL 65.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin DAL -0.4, total 228.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Sergio de Larrea",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Walter Clayton Jr.",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Dereck Lively II",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Tobi Lawal",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Tarik Biberovic",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Al Horford",
+        "status": "Day-To-Day",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Stephen Curry",
+        "status": "Out",
+        "pos": "G",
+        "key": true
+      },
+      {
+        "name": "Brandon Williams",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Kristaps Porzingis",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Moses Moody",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 WWLLL",
+    "away": "L5 WWLLL"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "GS ML",
+              "side": "away",
+              "line": null,
+              "odds": 191.0,
+              "model_raw": 0.5142,
+              "model_prob": 0.3543,
+              "market_prob": 0.3302,
+              "fair_odds": 182,
+              "edge": 0.0241,
+              "edge_at_price": 0.0107,
+              "ev": 0.031,
+              "tier": "Medium",
+              "data_quality": "High",
+              "reasons": [
+                "Model GS win 51.4% vs market no-vig 33.0%.",
+                "v2 projected margin DAL -0.5 (ratings DAL -2.4, GS -0.4, home edge 1.5); raw model 51.4%.",
+                "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
+                "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
+                "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (51% vs 33%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury: Stephen Curry out for this side and the rating doesn't know it",
+                "downgraded High -> Medium"
+              ],
+              "case_against": "Market makes GS 33%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Playable at +188 or better (current +191); re-check injuries/line 60 min before start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "home",
+              "line": null,
+              "odds": -230.0,
+              "model_raw": 0.4858,
+              "model_prob": 0.6457,
+              "market_prob": 0.6698,
+              "fair_odds": -182,
+              "edge": -0.0241,
+              "edge_at_price": -0.0513,
+              "ev": -0.0736,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DAL win 48.6% vs market no-vig 67.0%.",
+                "v2 projected margin DAL -0.5 (ratings DAL -2.4, GS -0.4, home edge 1.5); raw model 48.6%.",
+                "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
+                "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
+                "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (49% vs 67%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes DAL 67%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -173 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "DAL -5.5",
+              "side": "home",
+              "line": -5.5,
+              "odds": -114.0,
+              "model_raw": 0.3172,
+              "model_prob": 0.5087,
+              "market_prob": 0.5087,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DAL -5.5 covers 31.7% vs market 50.9%.",
+                "Projected margin DAL -0.5 vs line DAL -5.5.",
+                "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
+                "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
+                "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (32% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "GS +5.5",
+              "side": "away",
+              "line": 5.5,
+              "odds": -106.0,
+              "model_raw": 0.6828,
+              "model_prob": 0.4913,
+              "market_prob": 0.4913,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.0232,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model GS +5.5 covers 68.3% vs market 49.1%.",
+                "Projected margin DAL -0.5 vs line DAL -5.5.",
+                "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
+                "pace: projected total +0.5 vs these teams' rating-only total (recent shot volume)",
+                "GS key player(s) out: Stephen Curry (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (68% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (+6.5 -> +5.5)",
+                "injury: Stephen Curry out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 221.5",
+              "side": "over",
+              "line": 221.5,
+              "odds": -114.0,
+              "model_raw": 0.6315,
+              "model_prob": 0.53,
+              "market_prob": 0.5087,
+              "fair_odds": -113,
+              "edge": 0.0214,
+              "edge_at_price": -0.0027,
+              "ev": -0.005,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 221.5: 63.1% vs market 50.9%.",
+                "Projected total 228.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "Note: model far from market (63% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -108 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 221.5",
+              "side": "under",
+              "line": 221.5,
+              "odds": -106.0,
+              "model_raw": 0.3685,
+              "model_prob": 0.47,
+              "market_prob": 0.4913,
+              "fair_odds": 113,
+              "edge": -0.0214,
+              "edge_at_price": -0.0446,
+              "ev": -0.0867,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 221.5: 36.9% vs market 49.1%.",
+                "Projected total 228.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "GS L5 WWLLL (MOV 2.5), DAL L5 WWLLL (MOV -2.5)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "Note: model far from market (37% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +117 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

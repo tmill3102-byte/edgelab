@@ -1,0 +1,295 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401910011",
+  "name": "Chicago Bulls at Brooklyn Nets",
+  "matchup": "CHI @ BKN",
+  "start": "2026-11-19T00:30Z",
+  "start_local": "Wed Nov 18 7:30 PM ET",
+  "date_et": "2026-11-18",
+  "weekday": "wednesday",
+  "state": "pre",
+  "status": "11/18 - 7:30 PM EST",
+  "home": {
+    "abbr": "BKN",
+    "name": "Brooklyn Nets",
+    "record": "3-10",
+    "id": "17"
+  },
+  "away": {
+    "abbr": "CHI",
+    "name": "Chicago Bulls",
+    "record": "3-10",
+    "id": "4"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35033286"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 128.0,
+      "ml_home": -152.0,
+      "total": 237.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -2.5,
+      "spread_home_odds": -110.0,
+      "spread_away": 2.5,
+      "spread_away_odds": -110.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin BKN +0.6 \u00b7 total 239.4",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: BKN 53.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin BKN +0.6, total 239.4; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [],
+    "away": [
+      {
+        "name": "Patrick Williams",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Tobe Awaka",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Caleb Wilson",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LLWLL",
+    "away": "L5 LLWWL"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "CHI ML",
+              "side": "away",
+              "line": null,
+              "odds": 128.0,
+              "model_raw": 0.4801,
+              "model_prob": 0.4292,
+              "market_prob": 0.421,
+              "fair_odds": 133,
+              "edge": 0.0082,
+              "edge_at_price": -0.0094,
+              "ev": -0.0215,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CHI win 48.0% vs market no-vig 42.1%.",
+                "v2 projected margin BKN +0.6 (ratings BKN -6.2, CHI -5.3, home edge 1.5); raw model 48.0%.",
+                "CHI L5 LLWWL (MOV -11.3), BKN L5 LLWLL (MOV -6.7)",
+                "pace: projected total +1.9 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes CHI 42%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +138 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "BKN ML",
+              "side": "home",
+              "line": null,
+              "odds": -152.0,
+              "model_raw": 0.5199,
+              "model_prob": 0.5708,
+              "market_prob": 0.579,
+              "fair_odds": -133,
+              "edge": -0.0082,
+              "edge_at_price": -0.0324,
+              "ev": -0.0537,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BKN win 52.0% vs market no-vig 57.9%.",
+                "v2 projected margin BKN +0.6 (ratings BKN -6.2, CHI -5.3, home edge 1.5); raw model 52.0%.",
+                "CHI L5 LLWWL (MOV -11.3), BKN L5 LLWLL (MOV -6.7)",
+                "pace: projected total +1.9 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes BKN 58%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -127 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "BKN -2.5",
+              "side": "home",
+              "line": -2.5,
+              "odds": -110.0,
+              "model_raw": 0.4403,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BKN -2.5 covers 44.0% vs market 50.0%.",
+                "Projected margin BKN +0.6 vs line BKN -2.5.",
+                "CHI L5 LLWWL (MOV -11.3), BKN L5 LLWLL (MOV -6.7)",
+                "pace: projected total +1.9 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CHI +2.5",
+              "side": "away",
+              "line": 2.5,
+              "odds": -110.0,
+              "model_raw": 0.5597,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CHI +2.5 covers 56.0% vs market 50.0%.",
+                "Projected margin BKN +0.6 vs line BKN -2.5.",
+                "CHI L5 LLWWL (MOV -11.3), BKN L5 LLWLL (MOV -6.7)",
+                "pace: projected total +1.9 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 237.5",
+              "side": "over",
+              "line": 237.5,
+              "odds": -110.0,
+              "model_raw": 0.5398,
+              "model_prob": 0.5068,
+              "market_prob": 0.5,
+              "fair_odds": -103,
+              "edge": 0.0068,
+              "edge_at_price": -0.017,
+              "ev": -0.0325,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 237.5: 54.0% vs market 50.0%.",
+                "Projected total 239.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "CHI L5 LLWWL (MOV -11.3), BKN L5 LLWLL (MOV -6.7)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 237.5",
+              "side": "under",
+              "line": 237.5,
+              "odds": -110.0,
+              "model_raw": 0.4602,
+              "model_prob": 0.4932,
+              "market_prob": 0.5,
+              "fair_odds": 103,
+              "edge": -0.0068,
+              "edge_at_price": -0.0306,
+              "ev": -0.0584,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 237.5: 46.0% vs market 50.0%.",
+                "Projected total 239.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "CHI L5 LLWWL (MOV -11.3), BKN L5 LLWLL (MOV -6.7)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}
