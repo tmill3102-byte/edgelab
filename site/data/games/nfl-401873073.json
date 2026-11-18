@@ -147,7 +147,7 @@
   "model_summary": "Margin DAL +7.4 \u00b7 total 55.7",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: DAL 79.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: DAL 80.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin DAL +7.4, total 55.7; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -1676,6 +1676,287 @@
       "player": "Javonte Williams",
       "player_id": "4361579",
       "team": "Dallas Cowboys",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 79.5,
+      "projection": 70.94,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "8/20",
+        "all": "11/25"
+      },
+      "recent": [
+        63.0,
+        101.0,
+        56.0,
+        155.0,
+        41.0,
+        45.0,
+        62.0,
+        98.0,
+        30.0,
+        41.0
+      ],
+      "ladder": [
+        {
+          "line": 71.5,
+          "p_over": 0.438,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "3/10"
+        },
+        {
+          "line": 73.5,
+          "p_over": 0.423,
+          "fair_over": 136,
+          "fair_under": -136,
+          "L10": "3/10"
+        },
+        {
+          "line": 75.5,
+          "p_over": 0.409,
+          "fair_over": 144,
+          "fair_under": -144,
+          "L10": "3/10"
+        },
+        {
+          "line": 77.5,
+          "p_over": 0.395,
+          "fair_over": 153,
+          "fair_under": -153,
+          "L10": "3/10"
+        },
+        {
+          "line": 79.5,
+          "p_over": 0.381,
+          "fair_over": 162,
+          "fair_under": -162,
+          "L10": "3/10"
+        },
+        {
+          "line": 81.5,
+          "p_over": 0.367,
+          "fair_over": 172,
+          "fair_under": -172,
+          "L10": "3/10"
+        },
+        {
+          "line": 83.5,
+          "p_over": 0.354,
+          "fair_over": 183,
+          "fair_under": -183,
+          "L10": "3/10"
+        },
+        {
+          "line": 85.5,
+          "p_over": 0.34,
+          "fair_over": 194,
+          "fair_under": -194,
+          "L10": "3/10"
+        },
+        {
+          "line": 87.5,
+          "p_over": 0.327,
+          "fair_over": 205,
+          "fair_under": -205,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Javonte Williams Over 79.5 rush_yds",
+            "side": "over",
+            "line": 79.5,
+            "odds": -114.0,
+            "model_raw": 0.3811,
+            "model_prob": 0.4427,
+            "market_prob": 0.5042,
+            "fair_odds": 126,
+            "edge": -0.0616,
+            "edge_at_price": -0.0901,
+            "ev": -0.169,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 79.5: 38.1% before shrink, this book's no-vig 50.4%.",
+              "Projection 70.94 (Normal(sd 36.3)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (38% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (38% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +130 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Javonte Williams Under 79.5 rush_yds",
+            "side": "under",
+            "line": 79.5,
+            "odds": -110.0,
+            "model_raw": 0.6189,
+            "model_prob": 0.5573,
+            "market_prob": 0.4958,
+            "fair_odds": -126,
+            "edge": 0.0616,
+            "edge_at_price": 0.0335,
+            "ev": 0.064,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 79.5: 61.9% before shrink, this book's no-vig 49.6%.",
+              "Projection 70.94 (Normal(sd 36.3)).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (62% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (62% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -120 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Javonte Williams",
+      "player_id": "4361579",
+      "team": "Dallas Cowboys",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.94,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "13/20",
+        "all": "16/25"
+      },
+      "recent": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0,
+        0.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.628,
+          "fair_over": -169,
+          "fair_under": 169,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.397,
+          "fair_over": 152,
+          "fair_under": -152,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.244,
+          "fair_over": 310,
+          "fair_under": -310,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.118,
+          "fair_over": 749,
+          "fair_under": -749,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.103,
+          "fair_over": 870,
+          "fair_under": -870,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Javonte Williams Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -260.0,
+            "model_raw": 0.6284,
+            "model_prob": 0.6598,
+            "market_prob": 0.6911,
+            "fair_odds": -194,
+            "edge": -0.0313,
+            "edge_at_price": -0.0625,
+            "ev": -0.0865,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 62.8% before shrink, this book's no-vig 69.1%.",
+              "Projection 0.94 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -183 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Javonte Williams",
+      "player_id": "4361579",
+      "team": "Dallas Cowboys",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 10.5,
@@ -1775,18 +2056,18 @@
             "selection": "Javonte Williams Over 10.5 rec_yds",
             "side": "over",
             "line": 10.5,
-            "odds": -110.0,
+            "odds": -114.0,
             "model_raw": 0.5379,
-            "model_prob": 0.5168,
-            "market_prob": 0.4958,
-            "fair_odds": -107,
-            "edge": 0.0211,
-            "edge_at_price": -0.007,
-            "ev": -0.0133,
+            "model_prob": 0.5211,
+            "market_prob": 0.5042,
+            "fair_odds": -109,
+            "edge": 0.0168,
+            "edge_at_price": -0.0117,
+            "ev": -0.0219,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 10.5: 53.8% before shrink, this book's no-vig 49.6%.",
+              "Model over 10.5: 53.8% before shrink, this book's no-vig 50.4%.",
               "Projection 11.99 (Normal(sd 10.1)).",
               "Hit rate over L5 1/5, L10 5/10, L20 7/20, all 10/25."
             ],
@@ -1797,7 +2078,7 @@
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -103 or better.",
+            "next_step": "Pass. Only interesting at -104 or better.",
             "proven": false
           }
         },
@@ -1807,18 +2088,18 @@
             "selection": "Javonte Williams Under 10.5 rec_yds",
             "side": "under",
             "line": 10.5,
-            "odds": -114.0,
+            "odds": -110.0,
             "model_raw": 0.4621,
-            "model_prob": 0.4832,
-            "market_prob": 0.5042,
-            "fair_odds": 107,
-            "edge": -0.0211,
-            "edge_at_price": -0.0496,
-            "ev": -0.093,
+            "model_prob": 0.4789,
+            "market_prob": 0.4958,
+            "fair_odds": 109,
+            "edge": -0.0168,
+            "edge_at_price": -0.0449,
+            "ev": -0.0857,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 10.5: 46.2% before shrink, this book's no-vig 50.4%.",
+              "Model under 10.5: 46.2% before shrink, this book's no-vig 49.6%.",
               "Projection 11.99 (Normal(sd 10.1)).",
               "Hit rate over L5 1/5, L10 5/10, L20 7/20, all 10/25."
             ],
@@ -1829,85 +2110,248 @@
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +111 or better.",
+            "next_step": "Pass. Only interesting at +113 or better.",
             "proven": false
           }
         }
       }
     },
     {
-      "player": "Javonte Williams",
-      "player_id": "4361579",
-      "team": "Dallas Cowboys",
+      "player": "Tony Pollard",
+      "player_id": "3916148",
+      "team": "Tennessee Titans",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 65.5,
+      "projection": 66.53,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "8/20",
+        "all": "9/24"
+      },
+      "recent": [
+        33.0,
+        117.0,
+        129.0,
+        76.0,
+        52.0,
+        48.0,
+        74.0,
+        64.0,
+        35.0,
+        48.0
+      ],
+      "ladder": [
+        {
+          "line": 57.5,
+          "p_over": 0.574,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "5/10"
+        },
+        {
+          "line": 59.5,
+          "p_over": 0.558,
+          "fair_over": -126,
+          "fair_under": 126,
+          "L10": "5/10"
+        },
+        {
+          "line": 61.5,
+          "p_over": 0.542,
+          "fair_over": -118,
+          "fair_under": 118,
+          "L10": "5/10"
+        },
+        {
+          "line": 63.5,
+          "p_over": 0.525,
+          "fair_over": -111,
+          "fair_under": 111,
+          "L10": "5/10"
+        },
+        {
+          "line": 65.5,
+          "p_over": 0.479,
+          "fair_over": 109,
+          "fair_under": -109,
+          "L10": "4/10"
+        },
+        {
+          "line": 67.5,
+          "p_over": 0.463,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "4/10"
+        },
+        {
+          "line": 69.5,
+          "p_over": 0.446,
+          "fair_over": 124,
+          "fair_under": -124,
+          "L10": "4/10"
+        },
+        {
+          "line": 71.5,
+          "p_over": 0.429,
+          "fair_over": 133,
+          "fair_under": -133,
+          "L10": "4/10"
+        },
+        {
+          "line": 73.5,
+          "p_over": 0.413,
+          "fair_over": 142,
+          "fair_under": -142,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tony Pollard Over 65.5 rush_yds",
+            "side": "over",
+            "line": 65.5,
+            "odds": -110.0,
+            "model_raw": 0.4794,
+            "model_prob": 0.4876,
+            "market_prob": 0.4958,
+            "fair_odds": 105,
+            "edge": -0.0082,
+            "edge_at_price": -0.0362,
+            "ev": -0.0691,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 65.5: 47.9% before shrink, this book's no-vig 49.6%.",
+              "Projection 66.53 (Normal(sd 31.0)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 8/20, all 9/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tony Pollard Under 65.5 rush_yds",
+            "side": "under",
+            "line": 65.5,
+            "odds": -114.0,
+            "model_raw": 0.5206,
+            "model_prob": 0.5124,
+            "market_prob": 0.5042,
+            "fair_odds": -105,
+            "edge": 0.0082,
+            "edge_at_price": -0.0203,
+            "ev": -0.0381,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 65.5: 52.1% before shrink, this book's no-vig 50.4%.",
+              "Projection 66.53 (Normal(sd 31.0)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 8/20, all 9/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Tony Pollard",
+      "player_id": "3916148",
+      "team": "Tennessee Titans",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.94,
+      "projection": 0.62,
       "hit_rates": {
         "L5": "3/5",
-        "L10": "7/10",
-        "L20": "13/20",
-        "all": "16/25"
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "8/24"
       },
       "recent": [
-        0.0,
         1.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
+        2.0,
         3.0,
+        0.0,
+        0.0,
         1.0,
         0.0,
-        2.0
+        0.0,
+        0.0,
+        0.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.628,
-          "fair_over": -169,
-          "fair_under": 169,
-          "L10": "7/10"
+          "p_over": 0.446,
+          "fair_over": 124,
+          "fair_under": -124,
+          "L10": "4/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.397,
-          "fair_over": 152,
-          "fair_under": -152,
+          "p_over": 0.23,
+          "fair_over": 334,
+          "fair_under": -334,
           "L10": "2/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.244,
-          "fair_over": 310,
-          "fair_under": -310,
+          "p_over": 0.171,
+          "fair_over": 485,
+          "fair_under": -485,
           "L10": "2/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.118,
-          "fair_over": 749,
-          "fair_under": -749,
+          "p_over": 0.082,
+          "fair_over": 1122,
+          "fair_under": -1122,
           "L10": "1/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.103,
-          "fair_over": 870,
-          "fair_under": -870,
+          "p_over": 0.075,
+          "fair_over": 1239,
+          "fair_under": -1239,
           "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "current season only 9 games; added 15 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -1915,202 +2359,196 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Javonte Williams Anytime TD",
+            "selection": "Tony Pollard Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": -240.0,
-            "model_raw": 0.6284,
-            "model_prob": 0.652,
-            "market_prob": 0.6755,
-            "fair_odds": -187,
-            "edge": -0.0235,
-            "edge_at_price": -0.0539,
-            "ev": -0.0764,
+            "odds": -120.0,
+            "model_raw": 0.4462,
+            "model_prob": 0.4841,
+            "market_prob": 0.522,
+            "fair_odds": 107,
+            "edge": -0.0379,
+            "edge_at_price": -0.0614,
+            "ev": -0.1125,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 62.8% before shrink, this book's no-vig 67.5%.",
-              "Projection 0.94 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 16/25."
+              "Model over 0.5: 44.6% before shrink, this book's no-vig 52.2%.",
+              "Projection 0.62 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 8/24."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "current season only 9 games; added 15 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -177 or better.",
+            "next_step": "Pass. Only interesting at +111 or better.",
             "proven": false
           }
         }
       }
     },
     {
-      "player": "Javonte Williams",
-      "player_id": "4361579",
-      "team": "Dallas Cowboys",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 81.5,
-      "projection": 70.94,
+      "player": "Tony Pollard",
+      "player_id": "3916148",
+      "team": "Tennessee Titans",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 18.5,
+      "projection": 14.4,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "3/10",
-        "L20": "8/20",
-        "all": "11/25"
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "6/24"
       },
       "recent": [
-        63.0,
-        101.0,
-        56.0,
-        155.0,
-        41.0,
-        45.0,
-        62.0,
-        98.0,
-        30.0,
-        41.0
+        66.0,
+        20.0,
+        26.0,
+        0.0,
+        0.0,
+        2.0,
+        22.0,
+        1.0,
+        -1.0,
+        17.0
       ],
       "ladder": [
         {
-          "line": 73.5,
-          "p_over": 0.423,
-          "fair_over": 136,
-          "fair_under": -136,
-          "L10": "3/10"
+          "line": 16.5,
+          "p_over": 0.472,
+          "fair_over": 112,
+          "fair_under": -112,
+          "L10": "5/10"
         },
         {
-          "line": 75.5,
-          "p_over": 0.409,
+          "line": 17.0,
+          "p_over": 0.449,
+          "fair_over": 123,
+          "fair_under": -123,
+          "L10": "4/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.43,
+          "fair_over": 133,
+          "fair_under": -133,
+          "L10": "4/10"
+        },
+        {
+          "line": 18.0,
+          "p_over": 0.423,
+          "fair_over": 137,
+          "fair_under": -137,
+          "L10": "4/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.417,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "4/10"
+        },
+        {
+          "line": 19.0,
+          "p_over": 0.41,
           "fair_over": 144,
           "fair_under": -144,
+          "L10": "4/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.404,
+          "fair_over": 147,
+          "fair_under": -147,
+          "L10": "4/10"
+        },
+        {
+          "line": 20.0,
+          "p_over": 0.378,
+          "fair_over": 165,
+          "fair_under": -165,
           "L10": "3/10"
         },
         {
-          "line": 77.5,
-          "p_over": 0.395,
-          "fair_over": 153,
-          "fair_under": -153,
-          "L10": "3/10"
-        },
-        {
-          "line": 79.5,
-          "p_over": 0.381,
-          "fair_over": 162,
-          "fair_under": -162,
-          "L10": "3/10"
-        },
-        {
-          "line": 81.5,
-          "p_over": 0.367,
-          "fair_over": 172,
-          "fair_under": -172,
-          "L10": "3/10"
-        },
-        {
-          "line": 83.5,
-          "p_over": 0.354,
-          "fair_over": 183,
-          "fair_under": -183,
-          "L10": "3/10"
-        },
-        {
-          "line": 85.5,
-          "p_over": 0.34,
-          "fair_over": 194,
-          "fair_under": -194,
-          "L10": "3/10"
-        },
-        {
-          "line": 87.5,
-          "p_over": 0.327,
-          "fair_over": 205,
-          "fair_under": -205,
-          "L10": "3/10"
-        },
-        {
-          "line": 89.5,
-          "p_over": 0.315,
-          "fair_over": 218,
-          "fair_under": -218,
+          "line": 20.5,
+          "p_over": 0.362,
+          "fair_over": 176,
+          "fair_under": -176,
           "L10": "3/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)"
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Javonte Williams Over 81.5 rush_yds",
+            "selection": "Tony Pollard Over 18.5 rec_yds",
             "side": "over",
-            "line": 81.5,
-            "odds": -111.0,
-            "model_raw": 0.3673,
-            "model_prob": 0.4326,
-            "market_prob": 0.4979,
-            "fair_odds": 131,
-            "edge": -0.0653,
-            "edge_at_price": -0.0935,
-            "ev": -0.1777,
+            "line": 18.5,
+            "odds": -108.0,
+            "model_raw": 0.4171,
+            "model_prob": 0.4543,
+            "market_prob": 0.4916,
+            "fair_odds": 120,
+            "edge": -0.0372,
+            "edge_at_price": -0.0649,
+            "ev": -0.125,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 81.5: 36.7% before shrink, this book's no-vig 49.8%.",
-              "Projection 70.94 (Normal(sd 36.3)).",
-              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+              "Model over 18.5: 41.7% before shrink, this book's no-vig 49.2%.",
+              "Projection 14.4 (Normal(sd 19.7)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 6/24."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (37% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (37% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +136 or better.",
+            "next_step": "Pass. Only interesting at +125 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Javonte Williams Under 81.5 rush_yds",
+            "selection": "Tony Pollard Under 18.5 rec_yds",
             "side": "under",
-            "line": 81.5,
-            "odds": -113.0,
-            "model_raw": 0.6327,
-            "model_prob": 0.5674,
-            "market_prob": 0.5021,
-            "fair_odds": -131,
-            "edge": 0.0653,
-            "edge_at_price": 0.0369,
-            "ev": 0.0695,
+            "line": 18.5,
+            "odds": -116.0,
+            "model_raw": 0.5829,
+            "model_prob": 0.5457,
+            "market_prob": 0.5084,
+            "fair_odds": -120,
+            "edge": 0.0372,
+            "edge_at_price": 0.0086,
+            "ev": 0.0161,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 81.5: 63.3% before shrink, this book's no-vig 50.2%.",
-              "Projection 70.94 (Normal(sd 36.3)).",
-              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 11/25."
+              "Model under 18.5: 58.3% before shrink, this book's no-vig 50.8%.",
+              "Projection 14.4 (Normal(sd 19.7)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 6/20, all 6/24."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (63% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (63% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -125 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -115 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2122,7 +2560,7 @@
       "team": "Dallas Cowboys",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
-      "line": 21.5,
+      "line": 22.5,
       "projection": 13.25,
       "hit_rates": {
         "L5": "3/5",
@@ -2143,20 +2581,6 @@
         14.0
       ],
       "ladder": [
-        {
-          "line": 19.5,
-          "p_over": 0.344,
-          "fair_over": 190,
-          "fair_under": -190,
-          "L10": "4/10"
-        },
-        {
-          "line": 20.0,
-          "p_over": 0.313,
-          "fair_over": 220,
-          "fair_under": -220,
-          "L10": "3/10"
-        },
         {
           "line": 20.5,
           "p_over": 0.297,
@@ -2205,6 +2629,20 @@
           "fair_over": 304,
           "fair_under": -304,
           "L10": "3/10"
+        },
+        {
+          "line": 24.0,
+          "p_over": 0.236,
+          "fair_over": 324,
+          "fair_under": -324,
+          "L10": "3/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.233,
+          "fair_over": 328,
+          "fair_under": -328,
+          "L10": "3/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2216,21 +2654,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Brevyn Spann-Ford Over 21.5 rec_yds",
+            "selection": "Brevyn Spann-Ford Over 22.5 rec_yds",
             "side": "over",
-            "line": 21.5,
-            "odds": -116.0,
-            "model_raw": 0.2796,
-            "model_prob": 0.3935,
-            "market_prob": 0.5073,
-            "fair_odds": 154,
-            "edge": -0.1139,
-            "edge_at_price": -0.1436,
-            "ev": -0.2673,
+            "line": 22.5,
+            "odds": -112.0,
+            "model_raw": 0.2632,
+            "model_prob": 0.3816,
+            "market_prob": 0.5,
+            "fair_odds": 162,
+            "edge": -0.1184,
+            "edge_at_price": -0.1467,
+            "ev": -0.2777,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 21.5: 28.0% before shrink, this book's no-vig 50.7%.",
+              "Model over 22.5: 26.3% before shrink, this book's no-vig 50.0%.",
               "Projection 13.25 (Normal(sd 12.3)).",
               "Hit rate over L5 3/5, L10 3/10, L20 5/20, all 5/25."
             ],
@@ -2239,32 +2677,32 @@
             ],
             "caution": [
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (28% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (28% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (26% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (26% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +159 or better.",
+            "next_step": "Pass. Only interesting at +167 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Brevyn Spann-Ford Under 21.5 rec_yds",
+            "selection": "Brevyn Spann-Ford Under 22.5 rec_yds",
             "side": "under",
-            "line": 21.5,
-            "odds": -109.0,
-            "model_raw": 0.7204,
-            "model_prob": 0.6065,
-            "market_prob": 0.4927,
-            "fair_odds": -154,
-            "edge": 0.1139,
-            "edge_at_price": 0.085,
-            "ev": 0.163,
+            "line": 22.5,
+            "odds": -112.0,
+            "model_raw": 0.7368,
+            "model_prob": 0.6184,
+            "market_prob": 0.5,
+            "fair_odds": -162,
+            "edge": 0.1184,
+            "edge_at_price": 0.0901,
+            "ev": 0.1705,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 21.5: 72.0% before shrink, this book's no-vig 49.3%.",
+              "Model under 22.5: 73.7% before shrink, this book's no-vig 50.0%.",
               "Projection 13.25 (Normal(sd 12.3)).",
               "Hit rate over L5 3/5, L10 3/10, L20 5/20, all 5/25."
             ],
@@ -2273,13 +2711,13 @@
             ],
             "caution": [
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (72% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (74% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (72% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (74% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -147 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -154 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2368,18 +2806,18 @@
             "selection": "Brevyn Spann-Ford Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": 240.0,
+            "odds": 270.0,
             "model_raw": 0.0395,
-            "model_prob": 0.1605,
-            "market_prob": 0.2815,
-            "fair_odds": 523,
-            "edge": -0.121,
-            "edge_at_price": -0.1336,
-            "ev": -0.4543,
+            "model_prob": 0.149,
+            "market_prob": 0.2586,
+            "fair_odds": 571,
+            "edge": -0.1096,
+            "edge_at_price": -0.1212,
+            "ev": -0.4485,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 4.0% before shrink, this book's no-vig 28.1%.",
+              "Model over 0.5: 4.0% before shrink, this book's no-vig 25.9%.",
               "Projection 0.02 (Poisson).",
               "Hit rate over L5 0/5, L10 0/10, L20 1/20, all 1/25."
             ],
@@ -2389,449 +2827,11 @@
             ],
             "caution": [
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (4% vs 28%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (4% vs 28%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (4% vs 26%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (4% vs 26%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +536 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "CeeDee Lamb",
-      "player_id": "4241389",
-      "team": "Dallas Cowboys",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 92.5,
-      "projection": 92.78,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "4/10",
-        "L20": "7/20",
-        "all": "10/24"
-      },
-      "recent": [
-        72.0,
-        195.0,
-        58.0,
-        74.0,
-        70.0,
-        9.0,
-        189.0,
-        112.0,
-        153.0,
-        44.0
-      ],
-      "ladder": [
-        {
-          "line": 84.5,
-          "p_over": 0.507,
-          "fair_over": -103,
-          "fair_under": 103,
-          "L10": "4/10"
-        },
-        {
-          "line": 86.5,
-          "p_over": 0.498,
-          "fair_over": 101,
-          "fair_under": -101,
-          "L10": "4/10"
-        },
-        {
-          "line": 88.5,
-          "p_over": 0.489,
-          "fair_over": 104,
-          "fair_under": -104,
-          "L10": "4/10"
-        },
-        {
-          "line": 90.5,
-          "p_over": 0.481,
-          "fair_over": 108,
-          "fair_under": -108,
-          "L10": "4/10"
-        },
-        {
-          "line": 92.5,
-          "p_over": 0.472,
-          "fair_over": 112,
-          "fair_under": -112,
-          "L10": "4/10"
-        },
-        {
-          "line": 94.5,
-          "p_over": 0.463,
-          "fair_over": 116,
-          "fair_under": -116,
-          "L10": "4/10"
-        },
-        {
-          "line": 96.5,
-          "p_over": 0.455,
-          "fair_over": 120,
-          "fair_under": -120,
-          "L10": "4/10"
-        },
-        {
-          "line": 98.5,
-          "p_over": 0.446,
-          "fair_over": 124,
-          "fair_under": -124,
-          "L10": "4/10"
-        },
-        {
-          "line": 100.5,
-          "p_over": 0.437,
-          "fair_over": 129,
-          "fair_under": -129,
-          "L10": "4/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 14 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "CeeDee Lamb Over 92.5 rec_yds",
-            "side": "over",
-            "line": 92.5,
-            "odds": -112.0,
-            "model_raw": 0.472,
-            "model_prob": 0.486,
-            "market_prob": 0.5,
-            "fair_odds": 106,
-            "edge": -0.014,
-            "edge_at_price": -0.0423,
-            "ev": -0.0801,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 92.5: 47.2% before shrink, this book's no-vig 50.0%.",
-              "Projection 92.78 (Normal(sd 59.5)).",
-              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 10/24."
-            ],
-            "flags": [
-              "current season only 10 games; added 14 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 14 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +110 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "CeeDee Lamb Under 92.5 rec_yds",
-            "side": "under",
-            "line": 92.5,
-            "odds": -112.0,
-            "model_raw": 0.528,
-            "model_prob": 0.514,
-            "market_prob": 0.5,
-            "fair_odds": -106,
-            "edge": 0.014,
-            "edge_at_price": -0.0143,
-            "ev": -0.0271,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 92.5: 52.8% before shrink, this book's no-vig 50.0%.",
-              "Projection 92.78 (Normal(sd 59.5)).",
-              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 10/24."
-            ],
-            "flags": [
-              "current season only 10 games; added 14 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 14 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -102 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "CeeDee Lamb",
-      "player_id": "4241389",
-      "team": "Dallas Cowboys",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.66,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "6/10",
-        "L20": "8/20",
-        "all": "9/24"
-      },
-      "recent": [
-        1.0,
-        1.0,
-        0.0,
-        2.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        2.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.956,
-          "fair_over": -2186,
-          "fair_under": 2186,
-          "L10": "6/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.519,
-          "fair_over": -108,
-          "fair_under": 108,
-          "L10": "6/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.273,
-          "fair_over": 267,
-          "fair_under": -267,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.181,
-          "fair_over": 454,
-          "fair_under": -454,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.057,
-          "fair_over": 1658,
-          "fair_under": -1658,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.049,
-          "fair_over": 1959,
-          "fair_under": -1959,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 14 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "CeeDee Lamb Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": -185.0,
-            "model_raw": 0.5193,
-            "model_prob": 0.5702,
-            "market_prob": 0.6212,
-            "fair_odds": -133,
-            "edge": -0.051,
-            "edge_at_price": -0.0789,
-            "ev": -0.1215,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 51.9% before shrink, this book's no-vig 62.1%.",
-              "Projection 0.66 (Poisson).",
-              "Hit rate over L5 3/5, L10 6/10, L20 8/20, all 9/24."
-            ],
-            "flags": [
-              "current season only 10 games; added 14 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 14 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -127 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Dak Prescott",
-      "player_id": "2577417",
-      "team": "Dallas Cowboys",
-      "stat": "pass_yds",
-      "stat_label": "Pass yds",
-      "line": 278.5,
-      "projection": 271.07,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "11/25"
-      },
-      "recent": [
-        343.0,
-        335.0,
-        195.0,
-        212.0,
-        258.0,
-        316.0,
-        335.0,
-        276.0,
-        279.0,
-        175.0
-      ],
-      "ladder": [
-        {
-          "line": 270.5,
-          "p_over": 0.532,
-          "fair_over": -114,
-          "fair_under": 114,
-          "L10": "6/10"
-        },
-        {
-          "line": 272.5,
-          "p_over": 0.523,
-          "fair_over": -110,
-          "fair_under": 110,
-          "L10": "6/10"
-        },
-        {
-          "line": 274.5,
-          "p_over": 0.514,
-          "fair_over": -106,
-          "fair_under": 106,
-          "L10": "6/10"
-        },
-        {
-          "line": 276.5,
-          "p_over": 0.476,
-          "fair_over": 110,
-          "fair_under": -110,
-          "L10": "5/10"
-        },
-        {
-          "line": 278.5,
-          "p_over": 0.467,
-          "fair_over": 114,
-          "fair_under": -114,
-          "L10": "5/10"
-        },
-        {
-          "line": 280.5,
-          "p_over": 0.429,
-          "fair_over": 133,
-          "fair_under": -133,
-          "L10": "4/10"
-        },
-        {
-          "line": 282.5,
-          "p_over": 0.42,
-          "fair_over": 138,
-          "fair_under": -138,
-          "L10": "4/10"
-        },
-        {
-          "line": 284.5,
-          "p_over": 0.412,
-          "fair_over": 143,
-          "fair_under": -143,
-          "L10": "4/10"
-        },
-        {
-          "line": 286.5,
-          "p_over": 0.403,
-          "fair_over": 148,
-          "fair_under": -148,
-          "L10": "4/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Dak Prescott Over 278.5 pass_yds",
-            "side": "over",
-            "line": 278.5,
-            "odds": -113.0,
-            "model_raw": 0.4671,
-            "model_prob": 0.4846,
-            "market_prob": 0.5021,
-            "fair_odds": 106,
-            "edge": -0.0175,
-            "edge_at_price": -0.0459,
-            "ev": -0.0865,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 278.5: 46.7% before shrink, this book's no-vig 50.2%.",
-              "Projection 271.07 (Normal(sd 58.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +110 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Dak Prescott Under 278.5 pass_yds",
-            "side": "under",
-            "line": 278.5,
-            "odds": -111.0,
-            "model_raw": 0.5329,
-            "model_prob": 0.5154,
-            "market_prob": 0.4979,
-            "fair_odds": -106,
-            "edge": 0.0175,
-            "edge_at_price": -0.0107,
-            "ev": -0.0203,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 278.5: 53.3% before shrink, this book's no-vig 49.8%.",
-              "Projection 271.07 (Normal(sd 58.4)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -102 or better.",
+            "next_step": "Pass. Only interesting at +585 or better.",
             "proven": false
           }
         }

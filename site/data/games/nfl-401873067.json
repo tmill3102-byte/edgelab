@@ -147,7 +147,7 @@
   "model_summary": "Margin KC +13.3 \u00b7 total 44.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: KC 88.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: KC 88.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin KC +13.3, total 44.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -185,6 +185,12 @@
     ],
     "away": [
       {
+        "name": "Gardner Minshew II",
+        "status": "Injured Reserve",
+        "pos": "QB",
+        "key": true
+      },
+      {
         "name": "Jordan Burch",
         "status": "Injured Reserve",
         "pos": "LB",
@@ -206,12 +212,6 @@
         "name": "Jayden Williams",
         "status": "Questionable",
         "pos": "OT",
-        "key": false
-      },
-      {
-        "name": "Hjalte Froholdt",
-        "status": "Questionable",
-        "pos": "C",
         "key": false
       }
     ]
@@ -1671,5 +1671,1373 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Carson Beck",
+      "player_id": "4430841",
+      "team": "Arizona Cardinals",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 8.5,
+      "projection": 1.0,
+      "hit_rates": {
+        "L5": "0/1",
+        "L10": "0/1",
+        "L20": "0/1",
+        "all": "0/1"
+      },
+      "recent": [
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 6.5,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 10.0,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/1"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "!fewer than 5 games of data"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Carson Beck Over 8.5 rush_yds",
+            "side": "over",
+            "line": 8.5,
+            "odds": -110.0,
+            "model_raw": 0.1167,
+            "model_prob": 0.3821,
+            "market_prob": 0.4958,
+            "fair_odds": 162,
+            "edge": -0.1137,
+            "edge_at_price": -0.1417,
+            "ev": -0.2706,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model over 8.5: 11.7% before shrink, this book's no-vig 49.6%.",
+              "Projection 1.0 (Poisson).",
+              "Hit rate over L5 0/1, L10 0/1, L20 0/1, all 0/1."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data",
+              "model far from market (12% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (12% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +167 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Carson Beck Under 8.5 rush_yds",
+            "side": "under",
+            "line": 8.5,
+            "odds": -114.0,
+            "model_raw": 0.8833,
+            "model_prob": 0.6179,
+            "market_prob": 0.5042,
+            "fair_odds": -162,
+            "edge": 0.1137,
+            "edge_at_price": 0.0852,
+            "ev": 0.16,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model under 8.5: 88.3% before shrink, this book's no-vig 50.4%.",
+              "Projection 1.0 (Poisson).",
+              "Hit rate over L5 0/1, L10 0/1, L20 0/1, all 0/1."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data",
+              "model far from market (88% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (88% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -154 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Carson Beck",
+      "player_id": "4430841",
+      "team": "Arizona Cardinals",
+      "stat": "pass_yds",
+      "stat_label": "Pass yds",
+      "line": 170.5,
+      "projection": 108.0,
+      "hit_rates": {
+        "L5": "0/1",
+        "L10": "0/1",
+        "L20": "0/1",
+        "all": "0/1"
+      },
+      "recent": [
+        108.0
+      ],
+      "ladder": [
+        {
+          "line": 162.5,
+          "p_over": 0.147,
+          "fair_over": 581,
+          "fair_under": -581,
+          "L10": "0/1"
+        },
+        {
+          "line": 164.5,
+          "p_over": 0.143,
+          "fair_over": 599,
+          "fair_under": -599,
+          "L10": "0/1"
+        },
+        {
+          "line": 166.5,
+          "p_over": 0.14,
+          "fair_over": 616,
+          "fair_under": -616,
+          "L10": "0/1"
+        },
+        {
+          "line": 168.5,
+          "p_over": 0.137,
+          "fair_over": 631,
+          "fair_under": -631,
+          "L10": "0/1"
+        },
+        {
+          "line": 170.5,
+          "p_over": 0.134,
+          "fair_over": 646,
+          "fair_under": -646,
+          "L10": "0/1"
+        },
+        {
+          "line": 172.5,
+          "p_over": 0.132,
+          "fair_over": 659,
+          "fair_under": -659,
+          "L10": "0/1"
+        },
+        {
+          "line": 174.5,
+          "p_over": 0.13,
+          "fair_over": 671,
+          "fair_under": -671,
+          "L10": "0/1"
+        },
+        {
+          "line": 176.5,
+          "p_over": 0.128,
+          "fair_over": 682,
+          "fair_under": -682,
+          "L10": "0/1"
+        },
+        {
+          "line": 178.5,
+          "p_over": 0.126,
+          "fair_over": 692,
+          "fair_under": -692,
+          "L10": "0/1"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "!fewer than 5 games of data"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Carson Beck Over 170.5 pass_yds",
+            "side": "over",
+            "line": 170.5,
+            "odds": -111.0,
+            "model_raw": 0.1341,
+            "model_prob": 0.3888,
+            "market_prob": 0.4979,
+            "fair_odds": 157,
+            "edge": -0.1091,
+            "edge_at_price": -0.1373,
+            "ev": -0.261,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model over 170.5: 13.4% before shrink, this book's no-vig 49.8%.",
+              "Projection 108.0 (Normal(sd 32.4)).",
+              "Hit rate over L5 0/1, L10 0/1, L20 0/1, all 0/1."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data",
+              "model far from market (13% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (13% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +162 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Carson Beck Under 170.5 pass_yds",
+            "side": "under",
+            "line": 170.5,
+            "odds": -113.0,
+            "model_raw": 0.8659,
+            "model_prob": 0.6112,
+            "market_prob": 0.5021,
+            "fair_odds": -157,
+            "edge": 0.1091,
+            "edge_at_price": 0.0807,
+            "ev": 0.1522,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model under 170.5: 86.6% before shrink, this book's no-vig 50.2%.",
+              "Projection 108.0 (Normal(sd 32.4)).",
+              "Hit rate over L5 0/1, L10 0/1, L20 0/1, all 0/1."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data",
+              "model far from market (87% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (87% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -150 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Patrick Mahomes",
+      "player_id": "3139477",
+      "team": "Kansas City Chiefs",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 9.5,
+      "projection": 15.98,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "13/20",
+        "all": "15/23"
+      },
+      "recent": [
+        15.0,
+        8.0,
+        6.0,
+        14.0,
+        16.0,
+        0.0,
+        1.0,
+        17.0,
+        23.0,
+        15.0
+      ],
+      "ladder": [
+        {
+          "line": 5.5,
+          "p_over": 0.868,
+          "fair_over": -656,
+          "fair_under": 656,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.825,
+          "fair_over": -471,
+          "fair_under": 471,
+          "L10": "7/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.809,
+          "fair_over": -423,
+          "fair_under": 423,
+          "L10": "7/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.76,
+          "fair_over": -317,
+          "fair_under": 317,
+          "L10": "6/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.738,
+          "fair_over": -281,
+          "fair_under": 281,
+          "L10": "6/10"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.712,
+          "fair_over": -247,
+          "fair_under": 247,
+          "L10": "6/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.683,
+          "fair_over": -216,
+          "fair_under": 216,
+          "L10": "6/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.652,
+          "fair_over": -187,
+          "fair_under": 187,
+          "L10": "6/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.618,
+          "fair_over": -162,
+          "fair_under": 162,
+          "L10": "6/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 14 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Patrick Mahomes Over 9.5 rush_yds",
+            "side": "over",
+            "line": 9.5,
+            "odds": -114.0,
+            "model_raw": 0.7375,
+            "model_prob": 0.6209,
+            "market_prob": 0.5042,
+            "fair_odds": -164,
+            "edge": 0.1166,
+            "edge_at_price": 0.0881,
+            "ev": 0.1655,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 9.5: 73.8% before shrink, this book's no-vig 50.4%.",
+              "Projection 15.98 (Normal(sd 7.1)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/23."
+            ],
+            "flags": [
+              "current season only 9 games; added 14 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 14 from prior season (role/team may differ)",
+              "model far from market (74% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (74% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -156 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Patrick Mahomes Under 9.5 rush_yds",
+            "side": "under",
+            "line": 9.5,
+            "odds": -110.0,
+            "model_raw": 0.2625,
+            "model_prob": 0.3791,
+            "market_prob": 0.4958,
+            "fair_odds": 164,
+            "edge": -0.1166,
+            "edge_at_price": -0.1447,
+            "ev": -0.2762,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 9.5: 26.2% before shrink, this book's no-vig 49.6%.",
+              "Projection 15.98 (Normal(sd 7.1)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 13/20, all 15/23."
+            ],
+            "flags": [
+              "current season only 9 games; added 14 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 14 from prior season (role/team may differ)",
+              "model far from market (26% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (26% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +169 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Patrick Mahomes",
+      "player_id": "3139477",
+      "team": "Kansas City Chiefs",
+      "stat": "pass_yds",
+      "stat_label": "Pass yds",
+      "line": 252.5,
+      "projection": 258.3,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "12/20",
+        "all": "13/23"
+      },
+      "recent": [
+        348.0,
+        242.0,
+        321.0,
+        165.0,
+        272.0,
+        225.0,
+        246.0,
+        382.0,
+        184.0,
+        189.0
+      ],
+      "ladder": [
+        {
+          "line": 244.5,
+          "p_over": 0.551,
+          "fair_over": -123,
+          "fair_under": 123,
+          "L10": "5/10"
+        },
+        {
+          "line": 246.5,
+          "p_over": 0.515,
+          "fair_over": -106,
+          "fair_under": 106,
+          "L10": "4/10"
+        },
+        {
+          "line": 248.5,
+          "p_over": 0.507,
+          "fair_over": -103,
+          "fair_under": 103,
+          "L10": "4/10"
+        },
+        {
+          "line": 250.5,
+          "p_over": 0.5,
+          "fair_over": 100,
+          "fair_under": -100,
+          "L10": "4/10"
+        },
+        {
+          "line": 252.5,
+          "p_over": 0.493,
+          "fair_over": 103,
+          "fair_under": -103,
+          "L10": "4/10"
+        },
+        {
+          "line": 254.5,
+          "p_over": 0.485,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "4/10"
+        },
+        {
+          "line": 256.5,
+          "p_over": 0.478,
+          "fair_over": 109,
+          "fair_under": -109,
+          "L10": "4/10"
+        },
+        {
+          "line": 258.5,
+          "p_over": 0.47,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "4/10"
+        },
+        {
+          "line": 260.5,
+          "p_over": 0.463,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 14 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Patrick Mahomes Over 252.5 pass_yds",
+            "side": "over",
+            "line": 252.5,
+            "odds": -111.0,
+            "model_raw": 0.4925,
+            "model_prob": 0.4952,
+            "market_prob": 0.4979,
+            "fair_odds": 102,
+            "edge": -0.0027,
+            "edge_at_price": -0.0309,
+            "ev": -0.0587,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 252.5: 49.2% before shrink, this book's no-vig 49.8%.",
+              "Projection 258.3 (Normal(sd 69.3)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 12/20, all 13/23."
+            ],
+            "flags": [
+              "current season only 9 games; added 14 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 14 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +106 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Patrick Mahomes Under 252.5 pass_yds",
+            "side": "under",
+            "line": 252.5,
+            "odds": -113.0,
+            "model_raw": 0.5075,
+            "model_prob": 0.5048,
+            "market_prob": 0.5021,
+            "fair_odds": -102,
+            "edge": 0.0027,
+            "edge_at_price": -0.0257,
+            "ev": -0.0485,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 252.5: 50.7% before shrink, this book's no-vig 50.2%.",
+              "Projection 258.3 (Normal(sd 69.3)).",
+              "Hit rate over L5 3/5, L10 4/10, L20 12/20, all 13/23."
+            ],
+            "flags": [
+              "current season only 9 games; added 14 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 14 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Tyler Allgeier",
+      "player_id": "4373626",
+      "team": "Arizona Cardinals",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 28.5,
+      "projection": 35.73,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "11/25"
+      },
+      "recent": [
+        14.0,
+        46.0,
+        147.0,
+        19.0,
+        38.0,
+        7.0,
+        42.0,
+        -1.0,
+        10.0,
+        61.0
+      ],
+      "ladder": [
+        {
+          "line": 24.5,
+          "p_over": 0.57,
+          "fair_over": -133,
+          "fair_under": 133,
+          "L10": "5/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.564,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "5/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.558,
+          "fair_over": -126,
+          "fair_under": 126,
+          "L10": "5/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.552,
+          "fair_over": -123,
+          "fair_under": 123,
+          "L10": "5/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.546,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "5/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.539,
+          "fair_over": -117,
+          "fair_under": 117,
+          "L10": "5/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.533,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "5/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.527,
+          "fair_over": -111,
+          "fair_under": 111,
+          "L10": "5/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.52,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tyler Allgeier Over 28.5 rush_yds",
+            "side": "over",
+            "line": 28.5,
+            "odds": -115.0,
+            "model_raw": 0.5457,
+            "model_prob": 0.526,
+            "market_prob": 0.5063,
+            "fair_odds": -111,
+            "edge": 0.0197,
+            "edge_at_price": -0.0089,
+            "ev": -0.0166,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 28.5: 54.6% before shrink, this book's no-vig 50.6%.",
+              "Projection 35.73 (Normal(sd 40.9)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -106 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tyler Allgeier Under 28.5 rush_yds",
+            "side": "under",
+            "line": 28.5,
+            "odds": -109.0,
+            "model_raw": 0.4543,
+            "model_prob": 0.474,
+            "market_prob": 0.4937,
+            "fair_odds": 111,
+            "edge": -0.0197,
+            "edge_at_price": -0.0475,
+            "ev": -0.0912,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 28.5: 45.4% before shrink, this book's no-vig 49.4%.",
+              "Projection 35.73 (Normal(sd 40.9)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +115 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Tyler Allgeier",
+      "player_id": "4373626",
+      "team": "Arizona Cardinals",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.34,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "5/20",
+        "all": "8/25"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.275,
+          "fair_over": 264,
+          "fair_under": -264,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.103,
+          "fair_over": 868,
+          "fair_under": -868,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.088,
+          "fair_over": 1031,
+          "fair_under": -1031,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.035,
+          "fair_over": 2736,
+          "fair_under": -2736,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.032,
+          "fair_over": 2979,
+          "fair_under": -2979,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tyler Allgeier Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 350.0,
+            "model_raw": 0.2748,
+            "model_prob": 0.2437,
+            "market_prob": 0.2127,
+            "fair_odds": 310,
+            "edge": 0.031,
+            "edge_at_price": 0.0215,
+            "ev": 0.0969,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 27.5% before shrink, this book's no-vig 21.3%.",
+              "Projection 0.34 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 5/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +319 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Tyler Allgeier",
+      "player_id": "4373626",
+      "team": "Arizona Cardinals",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 7.5,
+      "projection": 11.2,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "9/20",
+        "all": "10/25"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        44.0,
+        30.0,
+        10.0,
+        9.0,
+        7.0,
+        10.0,
+        9.0,
+        9.0
+      ],
+      "ladder": [
+        {
+          "line": 5.5,
+          "p_over": 0.698,
+          "fair_over": -231,
+          "fair_under": 231,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.691,
+          "fair_over": -224,
+          "fair_under": 224,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.679,
+          "fair_over": -212,
+          "fair_under": 212,
+          "L10": "8/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.664,
+          "fair_over": -198,
+          "fair_under": 198,
+          "L10": "7/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.631,
+          "fair_over": -171,
+          "fair_under": 171,
+          "L10": "7/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.623,
+          "fair_over": -166,
+          "fair_under": 166,
+          "L10": "7/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.612,
+          "fair_over": -158,
+          "fair_under": 158,
+          "L10": "7/10"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.564,
+          "fair_over": -130,
+          "fair_under": 130,
+          "L10": "4/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.505,
+          "fair_over": -102,
+          "fair_under": 102,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tyler Allgeier Over 7.5 rec_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -116.0,
+            "model_raw": 0.6312,
+            "model_prob": 0.5698,
+            "market_prob": 0.5084,
+            "fair_odds": -132,
+            "edge": 0.0614,
+            "edge_at_price": 0.0328,
+            "ev": 0.061,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 63.1% before shrink, this book's no-vig 50.8%.",
+              "Projection 11.2 (Normal(sd 13.0)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 9/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (63% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (63% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Tyler Allgeier Under 7.5 rec_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -108.0,
+            "model_raw": 0.3688,
+            "model_prob": 0.4302,
+            "market_prob": 0.4916,
+            "fair_odds": 132,
+            "edge": -0.0614,
+            "edge_at_price": -0.089,
+            "ev": -0.1715,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 36.9% before shrink, this book's no-vig 49.2%.",
+              "Projection 11.2 (Normal(sd 13.0)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 9/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (37% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (37% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +137 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cyrus Allen",
+      "player_id": "4912218",
+      "team": "Kansas City Chiefs",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 12.5,
+      "projection": 12.11,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "4/9",
+        "L20": "4/9",
+        "all": "4/9"
+      },
+      "recent": [
+        44.0,
+        0.0,
+        20.0,
+        18.0,
+        27.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 10.5,
+          "p_over": 0.512,
+          "fair_over": -105,
+          "fair_under": 105,
+          "L10": "4/9"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.504,
+          "fair_over": -101,
+          "fair_under": 101,
+          "L10": "4/9"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.495,
+          "fair_over": 102,
+          "fair_under": -102,
+          "L10": "4/9"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.486,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "4/9"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.477,
+          "fair_over": 109,
+          "fair_under": -109,
+          "L10": "4/9"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.468,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "4/9"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.46,
+          "fair_over": 117,
+          "fair_under": -117,
+          "L10": "4/9"
+        },
+        {
+          "line": 14.0,
+          "p_over": 0.451,
+          "fair_over": 122,
+          "fair_under": -122,
+          "L10": "4/9"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.443,
+          "fair_over": 126,
+          "fair_under": -126,
+          "L10": "4/9"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (9 games)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cyrus Allen Over 12.5 rec_yds",
+            "side": "over",
+            "line": 12.5,
+            "odds": -112.0,
+            "model_raw": 0.4774,
+            "model_prob": 0.4887,
+            "market_prob": 0.5,
+            "fair_odds": 105,
+            "edge": -0.0113,
+            "edge_at_price": -0.0396,
+            "ev": -0.075,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 47.7% before shrink, this book's no-vig 50.0%.",
+              "Projection 12.11 (Normal(sd 15.2)).",
+              "Hit rate over L5 4/5, L10 4/9, L20 4/9, all 4/9."
+            ],
+            "flags": [
+              "thin sample (9 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (9 games)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cyrus Allen Under 12.5 rec_yds",
+            "side": "under",
+            "line": 12.5,
+            "odds": -112.0,
+            "model_raw": 0.5226,
+            "model_prob": 0.5113,
+            "market_prob": 0.5,
+            "fair_odds": -105,
+            "edge": 0.0113,
+            "edge_at_price": -0.017,
+            "ev": -0.0322,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 52.3% before shrink, this book's no-vig 50.0%.",
+              "Projection 12.11 (Normal(sd 15.2)).",
+              "Hit rate over L5 4/5, L10 4/9, L20 4/9, all 4/9."
+            ],
+            "flags": [
+              "thin sample (9 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (9 games)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -101 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Cyrus Allen",
+      "player_id": "4912218",
+      "team": "Kansas City Chiefs",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.11,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/9",
+        "L20": "1/9",
+        "all": "1/9"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/9"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.132,
+          "fair_over": 658,
+          "fair_under": -658,
+          "L10": "1/9"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.039,
+          "fair_over": 2455,
+          "fair_under": -2455,
+          "L10": "0/9"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.036,
+          "fair_over": 2713,
+          "fair_under": -2713,
+          "L10": "0/9"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.032,
+          "fair_over": 3029,
+          "fair_under": -3029,
+          "L10": "0/9"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.032,
+          "fair_over": 3029,
+          "fair_under": -3029,
+          "L10": "0/9"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (9 games)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Cyrus Allen Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 550.0,
+            "model_raw": 0.132,
+            "model_prob": 0.1396,
+            "market_prob": 0.1472,
+            "fair_odds": 616,
+            "edge": -0.0076,
+            "edge_at_price": -0.0142,
+            "ev": -0.0926,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 13.2% before shrink, this book's no-vig 14.7%.",
+              "Projection 0.11 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/9, L20 1/9, all 1/9."
+            ],
+            "flags": [
+              "thin sample (9 games)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: thin sample (9 games)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +631 or better.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }

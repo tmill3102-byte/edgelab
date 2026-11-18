@@ -35,10 +35,10 @@
     "draftkings": {
       "ml_home": -162.0,
       "ml_away": 136.0,
-      "spread_home": -3.0,
-      "spread_home_odds": -115.0,
-      "spread_away": 3.0,
-      "spread_away_odds": -105.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -115.0,
       "total": 46.5,
       "over_odds": -110.0,
       "under_odds": -110.0
@@ -145,46 +145,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "MASS -3",
+              "selection": "MASS -3.5",
               "side": "home",
-              "line": -3.0,
-              "odds": -115.0,
-              "model_raw": 0.7127,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
-              "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.045,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model MASS -3 covers 71.3% vs market 51.1%.",
-                "Projected margin MASS +11.7 vs line MASS -3.",
-                "AKR L5 LLLLL (MOV -14.6), MASS L5 LLLWL (MOV 2.0)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (71% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [],
-              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -100 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "AKR +3",
-              "side": "away",
-              "line": 3.0,
+              "line": -3.5,
               "odds": -105.0,
-              "model_raw": 0.2873,
+              "model_raw": 0.7016,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
               "fair_odds": 104,
@@ -194,11 +159,11 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model AKR +3 covers 28.7% vs market 48.9%.",
-                "Projected margin MASS +11.7 vs line MASS -3.",
+                "Model MASS -3.5 covers 70.2% vs market 48.9%.",
+                "Projected margin MASS +11.7 vs line MASS -3.5.",
                 "AKR L5 LLLLL (MOV -14.6), MASS L5 LLLWL (MOV 2.0)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (29% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (70% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -206,6 +171,41 @@
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
               "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "AKR +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -115.0,
+              "model_raw": 0.2984,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model AKR +3.5 covers 29.8% vs market 51.1%.",
+                "Projected margin MASS +11.7 vs line MASS -3.5.",
+                "AKR L5 LLLLL (MOV -14.6), MASS L5 LLLWL (MOV 2.0)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (30% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
           }
