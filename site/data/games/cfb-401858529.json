@@ -33,12 +33,12 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": 600.0,
-      "ml_away": -900.0,
-      "spread_home": 16.5,
-      "spread_home_odds": -105.0,
-      "spread_away": -16.5,
-      "spread_away_odds": -115.0,
+      "ml_home": 625.0,
+      "ml_away": -950.0,
+      "spread_home": 17.5,
+      "spread_home_odds": -115.0,
+      "spread_away": -17.5,
+      "spread_away_odds": -105.0,
       "total": 44.5,
       "over_odds": -110.0,
       "under_odds": -110.0
@@ -73,18 +73,18 @@
               "selection": "MSU ML",
               "side": "home",
               "line": null,
-              "odds": 600.0,
+              "odds": 625.0,
               "model_raw": 0.2396,
-              "model_prob": 0.137,
-              "market_prob": 0.137,
-              "fair_odds": 630,
+              "model_prob": 0.1323,
+              "market_prob": 0.1323,
+              "fair_odds": 656,
               "edge": 0.0,
-              "edge_at_price": -0.0059,
-              "ev": -0.0411,
+              "edge_at_price": -0.0056,
+              "ev": -0.0409,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model MSU win 24.0% vs market no-vig 13.7%.",
+                "Model MSU win 24.0% vs market no-vig 13.2%.",
                 "v2 projected margin MSU -11.0 (ratings MSU -11.3, ORE +3.0, home edge 3.33); raw model 24.0%.",
                 "ORE L5 WLWWW (MOV 13.2), MSU L5 LLLWL (MOV -4.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -93,10 +93,10 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: price drifted against this side (+350 -> +600)"
+                "line move: price drifted against this side (+350 -> +625)"
               ],
-              "case_against": "Market makes MSU 14%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +645 or better.",
+              "case_against": "Market makes MSU 13%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +671 or better.",
               "proven": false
             }
           }
@@ -109,18 +109,18 @@
               "selection": "ORE ML",
               "side": "away",
               "line": null,
-              "odds": -900.0,
+              "odds": -950.0,
               "model_raw": 0.7604,
-              "model_prob": 0.863,
-              "market_prob": 0.863,
-              "fair_odds": -630,
+              "model_prob": 0.8677,
+              "market_prob": 0.8677,
+              "fair_odds": -656,
               "edge": 0.0,
               "edge_at_price": -0.037,
-              "ev": -0.0411,
+              "ev": -0.0409,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model ORE win 76.0% vs market no-vig 86.3%.",
+                "Model ORE win 76.0% vs market no-vig 86.8%.",
                 "v2 projected margin MSU -11.0 (ratings MSU -11.3, ORE +3.0, home edge 3.33); raw model 76.0%.",
                 "ORE L5 WLWWW (MOV 13.2), MSU L5 LLLWL (MOV -4.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
@@ -129,8 +129,8 @@
                 "injury report not available for this league"
               ],
               "caution": [],
-              "case_against": "Market makes ORE 86%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -550 or better.",
+              "case_against": "Market makes ORE 87%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -570 or better.",
               "proven": false
             }
           }
@@ -145,46 +145,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "MSU +16.5",
+              "selection": "MSU +17.5",
               "side": "home",
-              "line": 16.5,
-              "odds": -105.0,
-              "model_raw": 0.6394,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
-              "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
-              "tier": "Low",
-              "data_quality": "Medium",
-              "reasons": [
-                "Model MSU +16.5 covers 63.9% vs market 48.9%.",
-                "Projected margin MSU -11.0 vs line MSU +16.5.",
-                "ORE L5 WLWWW (MOV 13.2), MSU L5 LLLWL (MOV -4.5)",
-                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (64% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
-              ],
-              "flags": [
-                "injury report not available for this league"
-              ],
-              "caution": [],
-              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +109 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "ORE -16.5",
-              "side": "away",
-              "line": -16.5,
+              "line": 17.5,
               "odds": -115.0,
-              "model_raw": 0.3606,
+              "model_raw": 0.6633,
               "model_prob": 0.5108,
               "market_prob": 0.5108,
               "fair_odds": -104,
@@ -194,20 +159,55 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model ORE -16.5 covers 36.1% vs market 51.1%.",
-                "Projected margin MSU -11.0 vs line MSU +16.5.",
+                "Model MSU +17.5 covers 66.3% vs market 51.1%.",
+                "Projected margin MSU -11.0 vs line MSU +17.5.",
                 "ORE L5 WLWWW (MOV 13.2), MSU L5 LLLWL (MOV -4.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (36% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (66% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [
+                "injury report not available for this league"
+              ],
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "ORE -17.5",
+              "side": "away",
+              "line": -17.5,
+              "odds": -105.0,
+              "model_raw": 0.3367,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
+              "reasons": [
+                "Model ORE -17.5 covers 33.7% vs market 48.9%.",
+                "Projected margin MSU -11.0 vs line MSU +17.5.",
+                "ORE L5 WLWWW (MOV 13.2), MSU L5 LLLWL (MOV -4.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (34% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: spread moved against this side (-12.5 -> -16.5)"
+                "line move: spread moved against this side (-12.5 -> -17.5)"
               ],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -100 or better.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }
