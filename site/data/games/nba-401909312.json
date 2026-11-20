@@ -1,0 +1,317 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909312",
+  "name": "Houston Rockets at Denver Nuggets",
+  "matchup": "HOU @ DEN",
+  "start": "2026-11-21T03:00Z",
+  "start_local": "Fri Nov 20 10:00 PM ET",
+  "date_et": "2026-11-20",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "11/20 - 10:00 PM EST",
+  "home": {
+    "abbr": "DEN",
+    "name": "Denver Nuggets",
+    "record": "8-5",
+    "id": "7"
+  },
+  "away": {
+    "abbr": "HOU",
+    "name": "Houston Rockets",
+    "record": "12-4",
+    "id": "10"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/34516244"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 103.0,
+      "ml_home": -122.0,
+      "total": 223.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -1.5,
+      "spread_home_odds": -112.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -108.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin DEN -3.5 \u00b7 total 223.9",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: DEN 50.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin DEN -3.5, total 223.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Julian Strawther",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Steven Adams",
+        "status": "Day-To-Day",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Clint Capela",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Alperen Sengun",
+        "status": "Day-To-Day",
+        "pos": "C",
+        "key": true
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LWWLW",
+    "away": "L5 WWWLW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "HOU ML",
+              "side": "away",
+              "line": null,
+              "odds": 103.0,
+              "model_raw": 0.6105,
+              "model_prob": 0.4922,
+              "market_prob": 0.4727,
+              "fair_odds": 103,
+              "edge": 0.0195,
+              "edge_at_price": -0.0004,
+              "ev": -0.0008,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU win 61.1% vs market no-vig 47.3%.",
+                "v2 projected margin DEN -3.5 (ratings DEN +1.2, HOU +6.2, home edge 1.5); raw model 61.1%.",
+                "HOU L5 WWWLW (MOV 8.7), DEN L5 LWWLW (MOV 0.9)",
+                "pace: projected total -0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (61% vs 47%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Alperen Sengun (Day-To-Day)"
+              ],
+              "case_against": "Market makes HOU 47%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "home",
+              "line": null,
+              "odds": -122.0,
+              "model_raw": 0.3895,
+              "model_prob": 0.5078,
+              "market_prob": 0.5273,
+              "fair_odds": -103,
+              "edge": -0.0195,
+              "edge_at_price": -0.0418,
+              "ev": -0.076,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DEN win 39.0% vs market no-vig 52.7%.",
+                "v2 projected margin DEN -3.5 (ratings DEN +1.2, HOU +6.2, home edge 1.5); raw model 39.0%.",
+                "HOU L5 WWWLW (MOV 8.7), DEN L5 LWWLW (MOV 0.9)",
+                "pace: projected total -0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (39% vs 53%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: price drifted against this side (-148 -> -122)"
+              ],
+              "case_against": "Market makes DEN 53%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "DEN -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": -112.0,
+              "model_raw": 0.3444,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DEN -1.5 covers 34.4% vs market 50.4%.",
+                "Projected margin DEN -3.5 vs line DEN -1.5.",
+                "HOU L5 WWWLW (MOV 8.7), DEN L5 LWWLW (MOV 0.9)",
+                "pace: projected total -0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "HOU +1.5",
+              "side": "away",
+              "line": 1.5,
+              "odds": -108.0,
+              "model_raw": 0.6556,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU +1.5 covers 65.6% vs market 49.6%.",
+                "Projected margin DEN -3.5 vs line DEN -1.5.",
+                "HOU L5 WWWLW (MOV 8.7), DEN L5 LWWLW (MOV 0.9)",
+                "pace: projected total -0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Alperen Sengun (Day-To-Day)",
+                "line move: spread moved against this side (+3.5 -> +1.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -110.0,
+              "model_raw": 0.5088,
+              "model_prob": 0.5015,
+              "market_prob": 0.5,
+              "fair_odds": -101,
+              "edge": 0.0015,
+              "edge_at_price": -0.0223,
+              "ev": -0.0426,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 223.5: 50.9% vs market 50.0%.",
+                "Projected total 223.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 227.5 -> 223.5.",
+                "HOU L5 WWWLW (MOV 8.7), DEN L5 LWWLW (MOV 0.9)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the over (227.5 -> 223.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -110.0,
+              "model_raw": 0.4912,
+              "model_prob": 0.4985,
+              "market_prob": 0.5,
+              "fair_odds": 101,
+              "edge": -0.0015,
+              "edge_at_price": -0.0253,
+              "ev": -0.0483,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 223.5: 49.1% vs market 50.0%.",
+                "Projected total 223.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 227.5 -> 223.5.",
+                "HOU L5 WWWLW (MOV 8.7), DEN L5 LWWLW (MOV 0.9)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward under (227.5 -> 223.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}
