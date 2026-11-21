@@ -1676,6 +1676,175 @@
       "player": "Jaylen Warren",
       "player_id": "4569987",
       "team": "Pittsburgh Steelers",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 22.5,
+      "projection": 28.59,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "10/20",
+        "all": "12/24"
+      },
+      "recent": [
+        26.0,
+        0.0,
+        36.0,
+        28.0,
+        87.0,
+        33.0,
+        49.0,
+        34.0,
+        27.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 18.5,
+          "p_over": 0.698,
+          "fair_over": -232,
+          "fair_under": 232,
+          "L10": "8/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.688,
+          "fair_over": -221,
+          "fair_under": 221,
+          "L10": "8/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.677,
+          "fair_over": -210,
+          "fair_under": 210,
+          "L10": "8/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.667,
+          "fair_over": -200,
+          "fair_under": 200,
+          "L10": "8/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.656,
+          "fair_over": -191,
+          "fair_under": 191,
+          "L10": "8/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.645,
+          "fair_over": -182,
+          "fair_under": 182,
+          "L10": "8/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.634,
+          "fair_over": -173,
+          "fair_under": 173,
+          "L10": "8/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.622,
+          "fair_over": -165,
+          "fair_under": 165,
+          "L10": "8/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.582,
+          "fair_over": -139,
+          "fair_under": 139,
+          "L10": "7/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 9 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Over 22.5 rec_yds",
+            "side": "over",
+            "line": 22.5,
+            "odds": -110.0,
+            "model_raw": 0.6558,
+            "model_prob": 0.5753,
+            "market_prob": 0.4948,
+            "fair_odds": -135,
+            "edge": 0.0805,
+            "edge_at_price": 0.0515,
+            "ev": 0.0983,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 22.5: 65.6% before shrink, this book's no-vig 49.5%.",
+              "Projection 28.59 (Normal(sd 22.8)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 12/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -129 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Under 22.5 rec_yds",
+            "side": "under",
+            "line": 22.5,
+            "odds": -115.0,
+            "model_raw": 0.3442,
+            "model_prob": 0.4247,
+            "market_prob": 0.5052,
+            "fair_odds": 135,
+            "edge": -0.0805,
+            "edge_at_price": -0.1102,
+            "ev": -0.206,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 22.5: 34.4% before shrink, this book's no-vig 50.5%.",
+              "Projection 28.59 (Normal(sd 22.8)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 12/24."
+            ],
+            "flags": [
+              "current season only 9 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
+              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +140 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jaylen Warren",
+      "player_id": "4569987",
+      "team": "Pittsburgh Steelers",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
@@ -1950,169 +2119,167 @@
       }
     },
     {
-      "player": "Jaylen Warren",
-      "player_id": "4569987",
-      "team": "Pittsburgh Steelers",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 22.5,
-      "projection": 28.59,
+      "player": "Joe Milton",
+      "player_id": "4360698",
+      "team": "Philadelphia Eagles",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 38.5,
+      "projection": 22.8,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "8/10",
-        "L20": "10/20",
-        "all": "12/24"
+        "L5": "2/5",
+        "L10": "2/5",
+        "L20": "2/5",
+        "all": "2/5"
       },
       "recent": [
-        26.0,
+        64.0,
+        43.0,
+        7.0,
         0.0,
-        36.0,
-        28.0,
-        87.0,
-        33.0,
-        49.0,
-        34.0,
-        27.0,
-        4.0
+        0.0
       ],
       "ladder": [
         {
-          "line": 18.5,
-          "p_over": 0.698,
-          "fair_over": -232,
-          "fair_under": 232,
-          "L10": "8/10"
+          "line": 34.5,
+          "p_over": 0.362,
+          "fair_over": 176,
+          "fair_under": -176,
+          "L10": "2/5"
         },
         {
-          "line": 19.5,
-          "p_over": 0.688,
-          "fair_over": -221,
-          "fair_under": 221,
-          "L10": "8/10"
+          "line": 35.5,
+          "p_over": 0.353,
+          "fair_over": 183,
+          "fair_under": -183,
+          "L10": "2/5"
         },
         {
-          "line": 20.5,
-          "p_over": 0.677,
-          "fair_over": -210,
-          "fair_under": 210,
-          "L10": "8/10"
+          "line": 36.5,
+          "p_over": 0.345,
+          "fair_over": 190,
+          "fair_under": -190,
+          "L10": "2/5"
         },
         {
-          "line": 21.5,
-          "p_over": 0.667,
-          "fair_over": -200,
-          "fair_under": 200,
-          "L10": "8/10"
+          "line": 37.5,
+          "p_over": 0.336,
+          "fair_over": 198,
+          "fair_under": -198,
+          "L10": "2/5"
         },
         {
-          "line": 22.5,
-          "p_over": 0.656,
-          "fair_over": -191,
-          "fair_under": 191,
-          "L10": "8/10"
+          "line": 38.5,
+          "p_over": 0.328,
+          "fair_over": 205,
+          "fair_under": -205,
+          "L10": "2/5"
         },
         {
-          "line": 23.5,
-          "p_over": 0.645,
-          "fair_over": -182,
-          "fair_under": 182,
-          "L10": "8/10"
+          "line": 39.5,
+          "p_over": 0.32,
+          "fair_over": 213,
+          "fair_under": -213,
+          "L10": "2/5"
         },
         {
-          "line": 24.5,
-          "p_over": 0.634,
-          "fair_over": -173,
-          "fair_under": 173,
-          "L10": "8/10"
+          "line": 40.5,
+          "p_over": 0.312,
+          "fair_over": 221,
+          "fair_under": -221,
+          "L10": "2/5"
         },
         {
-          "line": 25.5,
-          "p_over": 0.622,
-          "fair_over": -165,
-          "fair_under": 165,
-          "L10": "8/10"
+          "line": 41.5,
+          "p_over": 0.304,
+          "fair_over": 229,
+          "fair_under": -229,
+          "L10": "2/5"
         },
         {
-          "line": 26.5,
-          "p_over": 0.582,
-          "fair_over": -139,
-          "fair_under": 139,
-          "L10": "7/10"
+          "line": 42.5,
+          "p_over": 0.296,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "2/5"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 9 games; added 15 from prior season (role/team may differ)"
+        "current season only 1 games; added 4 from prior season (role/team may differ)",
+        "thin sample (5 games)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jaylen Warren Over 22.5 rec_yds",
+            "selection": "Joe Milton Over 38.5 rush_yds",
             "side": "over",
-            "line": 22.5,
-            "odds": -110.0,
-            "model_raw": 0.6558,
-            "model_prob": 0.5753,
-            "market_prob": 0.4948,
-            "fair_odds": -135,
-            "edge": 0.0805,
-            "edge_at_price": 0.0515,
-            "ev": 0.0983,
+            "line": 38.5,
+            "odds": -112.0,
+            "model_raw": 0.3277,
+            "model_prob": 0.4144,
+            "market_prob": 0.5011,
+            "fair_odds": 141,
+            "edge": -0.0867,
+            "edge_at_price": -0.1139,
+            "ev": -0.2156,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 22.5: 65.6% before shrink, this book's no-vig 49.5%.",
-              "Projection 28.59 (Normal(sd 22.8)).",
-              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 12/24."
+              "Model over 38.5: 32.8% before shrink, this book's no-vig 50.1%.",
+              "Projection 22.8 (Normal(sd 26.1)).",
+              "Hit rate over L5 2/5, L10 2/5, L20 2/5, all 2/5."
             ],
             "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
+              "current season only 1 games; added 4 from prior season (role/team may differ)",
+              "thin sample (5 games)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (66% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "thin data: current season only 1 games; added 4 from prior season (role/team may differ); thin sample (5 games)",
+              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -129 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +146 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jaylen Warren Under 22.5 rec_yds",
+            "selection": "Joe Milton Under 38.5 rush_yds",
             "side": "under",
-            "line": 22.5,
-            "odds": -115.0,
-            "model_raw": 0.3442,
-            "model_prob": 0.4247,
-            "market_prob": 0.5052,
-            "fair_odds": 135,
-            "edge": -0.0805,
-            "edge_at_price": -0.1102,
-            "ev": -0.206,
+            "line": 38.5,
+            "odds": -111.0,
+            "model_raw": 0.6723,
+            "model_prob": 0.5856,
+            "market_prob": 0.4989,
+            "fair_odds": -141,
+            "edge": 0.0867,
+            "edge_at_price": 0.0596,
+            "ev": 0.1132,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 22.5: 34.4% before shrink, this book's no-vig 50.5%.",
-              "Projection 28.59 (Normal(sd 22.8)).",
-              "Hit rate over L5 4/5, L10 8/10, L20 10/20, all 12/24."
+              "Model under 38.5: 67.2% before shrink, this book's no-vig 49.9%.",
+              "Projection 22.8 (Normal(sd 26.1)).",
+              "Hit rate over L5 2/5, L10 2/5, L20 2/5, all 2/5."
             ],
             "flags": [
-              "current season only 9 games; added 15 from prior season (role/team may differ)"
+              "current season only 1 games; added 4 from prior season (role/team may differ)",
+              "thin sample (5 games)"
             ],
             "caution": [
-              "thin data: current season only 9 games; added 15 from prior season (role/team may differ)",
-              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (34% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 1 games; added 4 from prior season (role/team may differ); thin sample (5 games)",
+              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +140 or better.",
+            "next_step": "Monitor only; if anything, wait for -135 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2286,167 +2453,165 @@
       }
     },
     {
-      "player": "Joe Milton",
-      "player_id": "4360698",
-      "team": "Philadelphia Eagles",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 38.5,
-      "projection": 22.8,
+      "player": "Rico Dowdle",
+      "player_id": "4038815",
+      "team": "Pittsburgh Steelers",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 9.5,
+      "projection": 15.11,
       "hit_rates": {
         "L5": "2/5",
-        "L10": "2/5",
-        "L20": "2/5",
-        "all": "2/5"
+        "L10": "4/10",
+        "L20": "12/20",
+        "all": "12/21"
       },
       "recent": [
-        64.0,
-        43.0,
-        7.0,
+        8.0,
         0.0,
-        0.0
+        45.0,
+        9.0,
+        22.0,
+        6.0,
+        6.0,
+        20.0,
+        4.0,
+        14.0
       ],
       "ladder": [
         {
-          "line": 34.5,
-          "p_over": 0.362,
-          "fair_over": 176,
-          "fair_under": -176,
-          "L10": "2/5"
+          "line": 5.5,
+          "p_over": 0.77,
+          "fair_over": -334,
+          "fair_under": 334,
+          "L10": "8/10"
         },
         {
-          "line": 35.5,
-          "p_over": 0.353,
-          "fair_over": 183,
-          "fair_under": -183,
-          "L10": "2/5"
+          "line": 6.5,
+          "p_over": 0.695,
+          "fair_over": -228,
+          "fair_under": 228,
+          "L10": "6/10"
         },
         {
-          "line": 36.5,
-          "p_over": 0.345,
-          "fair_over": 190,
-          "fair_under": -190,
-          "L10": "2/5"
+          "line": 7.5,
+          "p_over": 0.679,
+          "fair_over": -211,
+          "fair_under": 211,
+          "L10": "6/10"
         },
         {
-          "line": 37.5,
-          "p_over": 0.336,
-          "fair_over": 198,
-          "fair_under": -198,
-          "L10": "2/5"
+          "line": 8.5,
+          "p_over": 0.632,
+          "fair_over": -172,
+          "fair_under": 172,
+          "L10": "5/10"
         },
         {
-          "line": 38.5,
-          "p_over": 0.328,
-          "fair_over": 205,
-          "fair_under": -205,
-          "L10": "2/5"
+          "line": 9.5,
+          "p_over": 0.584,
+          "fair_over": -140,
+          "fair_under": 140,
+          "L10": "4/10"
         },
         {
-          "line": 39.5,
-          "p_over": 0.32,
-          "fair_over": 213,
-          "fair_under": -213,
-          "L10": "2/5"
+          "line": 10.5,
+          "p_over": 0.565,
+          "fair_over": -130,
+          "fair_under": 130,
+          "L10": "4/10"
         },
         {
-          "line": 40.5,
-          "p_over": 0.312,
-          "fair_over": 221,
-          "fair_under": -221,
-          "L10": "2/5"
+          "line": 11.5,
+          "p_over": 0.545,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "4/10"
         },
         {
-          "line": 41.5,
-          "p_over": 0.304,
-          "fair_over": 229,
-          "fair_under": -229,
-          "L10": "2/5"
+          "line": 12.5,
+          "p_over": 0.525,
+          "fair_over": -110,
+          "fair_under": 110,
+          "L10": "4/10"
         },
         {
-          "line": 42.5,
-          "p_over": 0.296,
-          "fair_over": 238,
-          "fair_under": -238,
-          "L10": "2/5"
+          "line": 13.5,
+          "p_over": 0.504,
+          "fair_over": -102,
+          "fair_under": 102,
+          "L10": "4/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 1 games; added 4 from prior season (role/team may differ)",
-        "thin sample (5 games)"
+        "current season only 6 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Joe Milton Over 38.5 rush_yds",
+            "selection": "Rico Dowdle Over 9.5 rec_yds",
             "side": "over",
-            "line": 38.5,
-            "odds": -112.0,
-            "model_raw": 0.3277,
-            "model_prob": 0.4144,
-            "market_prob": 0.5011,
-            "fair_odds": 141,
-            "edge": -0.0867,
-            "edge_at_price": -0.1139,
-            "ev": -0.2156,
+            "line": 9.5,
+            "odds": -114.0,
+            "model_raw": 0.584,
+            "model_prob": 0.5441,
+            "market_prob": 0.5042,
+            "fair_odds": -119,
+            "edge": 0.0399,
+            "edge_at_price": 0.0114,
+            "ev": 0.0214,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 38.5: 32.8% before shrink, this book's no-vig 50.1%.",
-              "Projection 22.8 (Normal(sd 26.1)).",
-              "Hit rate over L5 2/5, L10 2/5, L20 2/5, all 2/5."
+              "Model over 9.5: 58.4% before shrink, this book's no-vig 50.4%.",
+              "Projection 15.11 (Normal(sd 12.4)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 12/21."
             ],
             "flags": [
-              "current season only 1 games; added 4 from prior season (role/team may differ)",
-              "thin sample (5 games)"
+              "current season only 6 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 1 games; added 4 from prior season (role/team may differ); thin sample (5 games)",
-              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +146 or better.",
+            "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Joe Milton Under 38.5 rush_yds",
+            "selection": "Rico Dowdle Under 9.5 rec_yds",
             "side": "under",
-            "line": 38.5,
-            "odds": -111.0,
-            "model_raw": 0.6723,
-            "model_prob": 0.5856,
-            "market_prob": 0.4989,
-            "fair_odds": -141,
-            "edge": 0.0867,
-            "edge_at_price": 0.0596,
-            "ev": 0.1132,
+            "line": 9.5,
+            "odds": -110.0,
+            "model_raw": 0.416,
+            "model_prob": 0.4559,
+            "market_prob": 0.4958,
+            "fair_odds": 119,
+            "edge": -0.0399,
+            "edge_at_price": -0.0679,
+            "ev": -0.1297,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 38.5: 67.2% before shrink, this book's no-vig 49.9%.",
-              "Projection 22.8 (Normal(sd 26.1)).",
-              "Hit rate over L5 2/5, L10 2/5, L20 2/5, all 2/5."
+              "Model under 9.5: 41.6% before shrink, this book's no-vig 49.6%.",
+              "Projection 15.11 (Normal(sd 12.4)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 12/21."
             ],
             "flags": [
-              "current season only 1 games; added 4 from prior season (role/team may differ)",
-              "thin sample (5 games)"
+              "current season only 6 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 1 games; added 4 from prior season (role/team may differ); thin sample (5 games)",
-              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -135 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +124 or better.",
             "proven": false
           }
         }
@@ -2730,165 +2895,163 @@
       }
     },
     {
-      "player": "Rico Dowdle",
-      "player_id": "4038815",
-      "team": "Pittsburgh Steelers",
+      "player": "Saquon Barkley",
+      "player_id": "3929630",
+      "team": "Philadelphia Eagles",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 9.5,
-      "projection": 15.11,
+      "projection": 9.58,
       "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "12/20",
-        "all": "12/21"
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "8/20",
+        "all": "9/22"
       },
       "recent": [
-        8.0,
         0.0,
-        45.0,
+        24.0,
         9.0,
-        22.0,
-        6.0,
-        6.0,
-        20.0,
-        4.0,
-        14.0
+        2.0,
+        -2.0,
+        11.0,
+        -3.0,
+        25.0,
+        0.0,
+        0.0
       ],
       "ladder": [
         {
-          "line": 5.5,
-          "p_over": 0.77,
-          "fair_over": -334,
-          "fair_under": 334,
-          "L10": "8/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.695,
-          "fair_over": -228,
-          "fair_under": 228,
-          "L10": "6/10"
-        },
-        {
           "line": 7.5,
-          "p_over": 0.679,
-          "fair_over": -211,
-          "fair_under": 211,
-          "L10": "6/10"
-        },
-        {
-          "line": 8.5,
-          "p_over": 0.632,
-          "fair_over": -172,
-          "fair_under": 172,
-          "L10": "5/10"
-        },
-        {
-          "line": 9.5,
-          "p_over": 0.584,
-          "fair_over": -140,
-          "fair_under": 140,
-          "L10": "4/10"
-        },
-        {
-          "line": 10.5,
-          "p_over": 0.565,
-          "fair_over": -130,
-          "fair_under": 130,
-          "L10": "4/10"
-        },
-        {
-          "line": 11.5,
-          "p_over": 0.545,
-          "fair_over": -120,
-          "fair_under": 120,
-          "L10": "4/10"
-        },
-        {
-          "line": 12.5,
           "p_over": 0.525,
           "fair_over": -110,
           "fair_under": 110,
           "L10": "4/10"
         },
         {
-          "line": 13.5,
-          "p_over": 0.504,
-          "fair_over": -102,
-          "fair_under": 102,
+          "line": 8.0,
+          "p_over": 0.514,
+          "fair_over": -106,
+          "fair_under": 106,
           "L10": "4/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.499,
+          "fair_over": 100,
+          "fair_under": -100,
+          "L10": "4/10"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.468,
+          "fair_over": 114,
+          "fair_under": -114,
+          "L10": "3/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.444,
+          "fair_over": 125,
+          "fair_under": -125,
+          "L10": "3/10"
+        },
+        {
+          "line": 10.0,
+          "p_over": 0.43,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "3/10"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.418,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "3/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.382,
+          "fair_over": 162,
+          "fair_under": -162,
+          "L10": "2/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.363,
+          "fair_over": 176,
+          "fair_under": -176,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 6 games; added 15 from prior season (role/team may differ)"
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Rico Dowdle Over 9.5 rec_yds",
+            "selection": "Saquon Barkley Over 9.5 rec_yds",
             "side": "over",
             "line": 9.5,
-            "odds": -114.0,
-            "model_raw": 0.584,
-            "model_prob": 0.5441,
-            "market_prob": 0.5042,
-            "fair_odds": -119,
-            "edge": 0.0399,
-            "edge_at_price": 0.0114,
-            "ev": 0.0214,
+            "odds": -111.0,
+            "model_raw": 0.4437,
+            "model_prob": 0.4708,
+            "market_prob": 0.4979,
+            "fair_odds": 112,
+            "edge": -0.0271,
+            "edge_at_price": -0.0553,
+            "ev": -0.1051,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 9.5: 58.4% before shrink, this book's no-vig 50.4%.",
-              "Projection 15.11 (Normal(sd 12.4)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 12/21."
+              "Model over 9.5: 44.4% before shrink, this book's no-vig 49.8%.",
+              "Projection 9.58 (Normal(sd 9.9)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 8/20, all 9/22."
             ],
             "flags": [
-              "current season only 6 games; added 15 from prior season (role/team may differ)"
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low",
-              "downgraded Medium -> Low"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +117 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Rico Dowdle Under 9.5 rec_yds",
+            "selection": "Saquon Barkley Under 9.5 rec_yds",
             "side": "under",
             "line": 9.5,
-            "odds": -110.0,
-            "model_raw": 0.416,
-            "model_prob": 0.4559,
-            "market_prob": 0.4958,
-            "fair_odds": 119,
-            "edge": -0.0399,
-            "edge_at_price": -0.0679,
-            "ev": -0.1297,
+            "odds": -113.0,
+            "model_raw": 0.5563,
+            "model_prob": 0.5292,
+            "market_prob": 0.5021,
+            "fair_odds": -112,
+            "edge": 0.0271,
+            "edge_at_price": -0.0013,
+            "ev": -0.0025,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 9.5: 41.6% before shrink, this book's no-vig 49.6%.",
-              "Projection 15.11 (Normal(sd 12.4)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 12/20, all 12/21."
+              "Model under 9.5: 55.6% before shrink, this book's no-vig 50.2%.",
+              "Projection 9.58 (Normal(sd 9.9)).",
+              "Hit rate over L5 1/5, L10 3/10, L20 8/20, all 9/22."
             ],
             "flags": [
-              "current season only 6 games; added 15 from prior season (role/team may differ)"
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +124 or better.",
+            "next_step": "Pass. Only interesting at -108 or better.",
             "proven": false
           }
         }
@@ -3164,169 +3327,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +118 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Saquon Barkley",
-      "player_id": "3929630",
-      "team": "Philadelphia Eagles",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 9.5,
-      "projection": 9.58,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "3/10",
-        "L20": "8/20",
-        "all": "9/22"
-      },
-      "recent": [
-        0.0,
-        24.0,
-        9.0,
-        2.0,
-        -2.0,
-        11.0,
-        -3.0,
-        25.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 7.5,
-          "p_over": 0.525,
-          "fair_over": -110,
-          "fair_under": 110,
-          "L10": "4/10"
-        },
-        {
-          "line": 8.0,
-          "p_over": 0.514,
-          "fair_over": -106,
-          "fair_under": 106,
-          "L10": "4/10"
-        },
-        {
-          "line": 8.5,
-          "p_over": 0.499,
-          "fair_over": 100,
-          "fair_under": -100,
-          "L10": "4/10"
-        },
-        {
-          "line": 9.0,
-          "p_over": 0.468,
-          "fair_over": 114,
-          "fair_under": -114,
-          "L10": "3/10"
-        },
-        {
-          "line": 9.5,
-          "p_over": 0.444,
-          "fair_over": 125,
-          "fair_under": -125,
-          "L10": "3/10"
-        },
-        {
-          "line": 10.0,
-          "p_over": 0.43,
-          "fair_over": 132,
-          "fair_under": -132,
-          "L10": "3/10"
-        },
-        {
-          "line": 10.5,
-          "p_over": 0.418,
-          "fair_over": 139,
-          "fair_under": -139,
-          "L10": "3/10"
-        },
-        {
-          "line": 11.0,
-          "p_over": 0.382,
-          "fair_over": 162,
-          "fair_under": -162,
-          "L10": "2/10"
-        },
-        {
-          "line": 11.5,
-          "p_over": 0.363,
-          "fair_over": 176,
-          "fair_under": -176,
-          "L10": "2/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 7 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Saquon Barkley Over 9.5 rec_yds",
-            "side": "over",
-            "line": 9.5,
-            "odds": -111.0,
-            "model_raw": 0.4437,
-            "model_prob": 0.4708,
-            "market_prob": 0.4979,
-            "fair_odds": 112,
-            "edge": -0.0271,
-            "edge_at_price": -0.0553,
-            "ev": -0.1051,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 9.5: 44.4% before shrink, this book's no-vig 49.8%.",
-              "Projection 9.58 (Normal(sd 9.9)).",
-              "Hit rate over L5 1/5, L10 3/10, L20 8/20, all 9/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +117 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Saquon Barkley Under 9.5 rec_yds",
-            "side": "under",
-            "line": 9.5,
-            "odds": -113.0,
-            "model_raw": 0.5563,
-            "model_prob": 0.5292,
-            "market_prob": 0.5021,
-            "fair_odds": -112,
-            "edge": 0.0271,
-            "edge_at_price": -0.0013,
-            "ev": -0.0025,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 9.5: 55.6% before shrink, this book's no-vig 50.2%.",
-              "Projection 9.58 (Normal(sd 9.9)).",
-              "Hit rate over L5 1/5, L10 3/10, L20 8/20, all 9/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -108 or better.",
             "proven": false
           }
         }
