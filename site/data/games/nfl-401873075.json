@@ -1694,6 +1694,120 @@
       "player": "Ashton Jeanty",
       "player_id": "4890973",
       "team": "Las Vegas Raiders",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.45,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "7/20",
+        "all": "9/25"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.351,
+          "fair_over": 185,
+          "fair_under": -185,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.138,
+          "fair_over": 624,
+          "fair_under": -624,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.107,
+          "fair_over": 835,
+          "fair_under": -835,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.039,
+          "fair_over": 2446,
+          "fair_under": -2446,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.036,
+          "fair_over": 2666,
+          "fair_under": -2666,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ashton Jeanty Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 215.0,
+            "model_raw": 0.3514,
+            "model_prob": 0.3276,
+            "market_prob": 0.3038,
+            "fair_odds": 205,
+            "edge": 0.0238,
+            "edge_at_price": 0.0101,
+            "ev": 0.0319,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 35.1% before shrink, this book's no-vig 30.4%.",
+              "Projection 0.45 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 9/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for +211 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ashton Jeanty",
+      "player_id": "4890973",
+      "team": "Las Vegas Raiders",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 29.5,
@@ -1793,18 +1907,18 @@
             "selection": "Ashton Jeanty Over 29.5 rec_yds",
             "side": "over",
             "line": 29.5,
-            "odds": -111.0,
+            "odds": -115.0,
             "model_raw": 0.6783,
-            "model_prob": 0.5881,
-            "market_prob": 0.4979,
-            "fair_odds": -143,
-            "edge": 0.0902,
-            "edge_at_price": 0.062,
-            "ev": 0.1179,
+            "model_prob": 0.5923,
+            "market_prob": 0.5063,
+            "fair_odds": -145,
+            "edge": 0.086,
+            "edge_at_price": 0.0574,
+            "ev": 0.1074,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 29.5: 67.8% before shrink, this book's no-vig 49.8%.",
+              "Model over 29.5: 67.8% before shrink, this book's no-vig 50.6%.",
               "Projection 37.18 (Normal(sd 21.5)).",
               "Hit rate over L5 4/5, L10 8/10, L20 12/20, all 13/25."
             ],
@@ -1813,13 +1927,13 @@
             ],
             "caution": [
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (68% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (68% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (68% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (68% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -136 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -138 or better and re-check injuries near start.",
             "proven": false
           }
         },
@@ -1829,18 +1943,18 @@
             "selection": "Ashton Jeanty Under 29.5 rec_yds",
             "side": "under",
             "line": 29.5,
-            "odds": -113.0,
+            "odds": -109.0,
             "model_raw": 0.3217,
-            "model_prob": 0.4119,
-            "market_prob": 0.5021,
-            "fair_odds": 143,
-            "edge": -0.0902,
-            "edge_at_price": -0.1186,
-            "ev": -0.2236,
+            "model_prob": 0.4077,
+            "market_prob": 0.4937,
+            "fair_odds": 145,
+            "edge": -0.086,
+            "edge_at_price": -0.1138,
+            "ev": -0.2183,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 29.5: 32.2% before shrink, this book's no-vig 50.2%.",
+              "Model under 29.5: 32.2% before shrink, this book's no-vig 49.4%.",
               "Projection 37.18 (Normal(sd 21.5)).",
               "Hit rate over L5 4/5, L10 8/10, L20 12/20, all 13/25."
             ],
@@ -1849,11 +1963,11 @@
             ],
             "caution": [
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (32% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (32% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+              "model far from market (32% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (32% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +148 or better.",
+            "next_step": "Pass. Only interesting at +150 or better.",
             "proven": false
           }
         }
@@ -1962,18 +2076,18 @@
             "selection": "Ashton Jeanty Over 31.5 rush_yds",
             "side": "over",
             "line": 31.5,
-            "odds": -110.0,
+            "odds": -111.0,
             "model_raw": 0.58,
-            "model_prob": 0.5374,
-            "market_prob": 0.4948,
-            "fair_odds": -116,
-            "edge": 0.0426,
-            "edge_at_price": 0.0136,
-            "ev": 0.0259,
+            "model_prob": 0.5389,
+            "market_prob": 0.4979,
+            "fair_odds": -117,
+            "edge": 0.0411,
+            "edge_at_price": 0.0129,
+            "ev": 0.0245,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 31.5: 58.0% before shrink, this book's no-vig 49.5%.",
+              "Model over 31.5: 58.0% before shrink, this book's no-vig 49.8%.",
               "Projection 43.18 (Normal(sd 26.9)).",
               "Hit rate over L5 0/5, L10 4/10, L20 11/20, all 15/25."
             ],
@@ -1986,7 +2100,7 @@
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -111 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -112 or better and re-check injuries near start.",
             "proven": false
           }
         },
@@ -1996,18 +2110,18 @@
             "selection": "Ashton Jeanty Under 31.5 rush_yds",
             "side": "under",
             "line": 31.5,
-            "odds": -115.0,
+            "odds": -113.0,
             "model_raw": 0.42,
-            "model_prob": 0.4626,
-            "market_prob": 0.5052,
-            "fair_odds": 116,
-            "edge": -0.0426,
-            "edge_at_price": -0.0723,
-            "ev": -0.1351,
+            "model_prob": 0.4611,
+            "market_prob": 0.5021,
+            "fair_odds": 117,
+            "edge": -0.0411,
+            "edge_at_price": -0.0695,
+            "ev": -0.1309,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 31.5: 42.0% before shrink, this book's no-vig 50.5%.",
+              "Model under 31.5: 42.0% before shrink, this book's no-vig 50.2%.",
               "Projection 43.18 (Normal(sd 26.9)).",
               "Hit rate over L5 0/5, L10 4/10, L20 11/20, all 15/25."
             ],
@@ -2018,119 +2132,7 @@
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +120 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Ashton Jeanty",
-      "player_id": "4890973",
-      "team": "Las Vegas Raiders",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.45,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "3/10",
-        "L20": "7/20",
-        "all": "9/25"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.351,
-          "fair_over": 185,
-          "fair_under": -185,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.138,
-          "fair_over": 624,
-          "fair_under": -624,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.107,
-          "fair_over": 835,
-          "fair_under": -835,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.039,
-          "fair_over": 2446,
-          "fair_under": -2446,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.036,
-          "fair_over": 2666,
-          "fair_under": -2666,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ashton Jeanty Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 205.0,
-            "model_raw": 0.3514,
-            "model_prob": 0.3326,
-            "market_prob": 0.3138,
-            "fair_odds": 201,
-            "edge": 0.0188,
-            "edge_at_price": 0.0047,
-            "ev": 0.0144,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 35.1% before shrink, this book's no-vig 31.4%.",
-              "Projection 0.45 (Poisson).",
-              "Hit rate over L5 2/5, L10 3/10, L20 7/20, all 9/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +207 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +121 or better.",
             "proven": false
           }
         }
@@ -2142,7 +2144,7 @@
       "team": "Denver Broncos",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 215.5,
+      "line": 218.5,
       "projection": 210.62,
       "hit_rates": {
         "L5": "3/5",
@@ -2164,66 +2166,66 @@
       ],
       "ladder": [
         {
-          "line": 207.5,
-          "p_over": 0.543,
-          "fair_over": -119,
-          "fair_under": 119,
+          "line": 210.5,
+          "p_over": 0.53,
+          "fair_over": -113,
+          "fair_under": 113,
           "L10": "6/10"
         },
         {
-          "line": 209.5,
-          "p_over": 0.534,
-          "fair_over": -115,
-          "fair_under": 115,
+          "line": 212.5,
+          "p_over": 0.521,
+          "fair_over": -109,
+          "fair_under": 109,
           "L10": "6/10"
         },
         {
-          "line": 211.5,
-          "p_over": 0.525,
-          "fair_over": -111,
-          "fair_under": 111,
-          "L10": "6/10"
-        },
-        {
-          "line": 213.5,
-          "p_over": 0.517,
-          "fair_over": -107,
-          "fair_under": 107,
-          "L10": "6/10"
-        },
-        {
-          "line": 215.5,
-          "p_over": 0.479,
-          "fair_over": 109,
-          "fair_under": -109,
+          "line": 214.5,
+          "p_over": 0.483,
+          "fair_over": 107,
+          "fair_under": -107,
           "L10": "5/10"
         },
         {
-          "line": 217.5,
-          "p_over": 0.47,
-          "fair_over": 113,
-          "fair_under": -113,
+          "line": 216.5,
+          "p_over": 0.475,
+          "fair_over": 111,
+          "fair_under": -111,
           "L10": "5/10"
         },
         {
-          "line": 219.5,
-          "p_over": 0.462,
-          "fair_over": 117,
-          "fair_under": -117,
+          "line": 218.5,
+          "p_over": 0.466,
+          "fair_over": 115,
+          "fair_under": -115,
           "L10": "5/10"
         },
         {
-          "line": 221.5,
-          "p_over": 0.453,
-          "fair_over": 121,
-          "fair_under": -121,
+          "line": 220.5,
+          "p_over": 0.458,
+          "fair_over": 119,
+          "fair_under": -119,
           "L10": "5/10"
         },
         {
-          "line": 223.5,
-          "p_over": 0.386,
-          "fair_over": 159,
-          "fair_under": -159,
+          "line": 222.5,
+          "p_over": 0.391,
+          "fair_over": 156,
+          "fair_under": -156,
+          "L10": "3/10"
+        },
+        {
+          "line": 224.5,
+          "p_over": 0.382,
+          "fair_over": 162,
+          "fair_under": -162,
+          "L10": "3/10"
+        },
+        {
+          "line": 226.5,
+          "p_over": 0.374,
+          "fair_over": 167,
+          "fair_under": -167,
           "L10": "3/10"
         }
       ],
@@ -2236,21 +2238,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bo Nix Over 215.5 pass_yds",
+            "selection": "Bo Nix Over 218.5 pass_yds",
             "side": "over",
-            "line": 215.5,
+            "line": 218.5,
             "odds": -112.0,
-            "model_raw": 0.479,
-            "model_prob": 0.4895,
+            "model_raw": 0.4661,
+            "model_prob": 0.483,
             "market_prob": 0.5,
-            "fair_odds": 104,
-            "edge": -0.0105,
-            "edge_at_price": -0.0388,
-            "ev": -0.0734,
+            "fair_odds": 107,
+            "edge": -0.017,
+            "edge_at_price": -0.0453,
+            "ev": -0.0857,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 215.5: 47.9% before shrink, this book's no-vig 50.0%.",
+              "Model over 218.5: 46.6% before shrink, this book's no-vig 50.0%.",
               "Projection 210.62 (Normal(sd 60.0)).",
               "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 13/24."
             ],
@@ -2261,28 +2263,28 @@
               "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +108 or better.",
+            "next_step": "Pass. Only interesting at +111 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bo Nix Under 215.5 pass_yds",
+            "selection": "Bo Nix Under 218.5 pass_yds",
             "side": "under",
-            "line": 215.5,
+            "line": 218.5,
             "odds": -112.0,
-            "model_raw": 0.521,
-            "model_prob": 0.5105,
+            "model_raw": 0.5339,
+            "model_prob": 0.517,
             "market_prob": 0.5,
-            "fair_odds": -104,
-            "edge": 0.0105,
-            "edge_at_price": -0.0178,
-            "ev": -0.0337,
+            "fair_odds": -107,
+            "edge": 0.017,
+            "edge_at_price": -0.0114,
+            "ev": -0.0215,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 215.5: 52.1% before shrink, this book's no-vig 50.0%.",
+              "Model under 218.5: 53.4% before shrink, this book's no-vig 50.0%.",
               "Projection 210.62 (Normal(sd 60.0)).",
               "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 13/24."
             ],
@@ -2293,7 +2295,7 @@
               "thin data: current season only 9 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -100 or better.",
+            "next_step": "Pass. Only interesting at -103 or better.",
             "proven": false
           }
         }
@@ -2402,18 +2404,18 @@
             "selection": "Bo Nix Over 10.5 rush_yds",
             "side": "over",
             "line": 10.5,
-            "odds": -108.0,
+            "odds": -109.0,
             "model_raw": 0.4783,
-            "model_prob": 0.4849,
-            "market_prob": 0.4916,
+            "model_prob": 0.486,
+            "market_prob": 0.4937,
             "fair_odds": 106,
-            "edge": -0.0066,
-            "edge_at_price": -0.0343,
-            "ev": -0.0661,
+            "edge": -0.0077,
+            "edge_at_price": -0.0355,
+            "ev": -0.0681,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 10.5: 47.8% before shrink, this book's no-vig 49.2%.",
+              "Model over 10.5: 47.8% before shrink, this book's no-vig 49.4%.",
               "Projection 15.87 (Normal(sd 20.9)).",
               "Hit rate over L5 1/5, L10 2/10, L20 8/20, all 11/24."
             ],
@@ -2434,18 +2436,18 @@
             "selection": "Bo Nix Under 10.5 rush_yds",
             "side": "under",
             "line": 10.5,
-            "odds": -116.0,
+            "odds": -115.0,
             "model_raw": 0.5217,
-            "model_prob": 0.5151,
-            "market_prob": 0.5084,
+            "model_prob": 0.514,
+            "market_prob": 0.5063,
             "fair_odds": -106,
-            "edge": 0.0066,
-            "edge_at_price": -0.022,
-            "ev": -0.0409,
+            "edge": 0.0077,
+            "edge_at_price": -0.0209,
+            "ev": -0.039,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 10.5: 52.2% before shrink, this book's no-vig 50.8%.",
+              "Model under 10.5: 52.2% before shrink, this book's no-vig 50.6%.",
               "Projection 15.87 (Normal(sd 20.9)).",
               "Hit rate over L5 1/5, L10 2/10, L20 8/20, all 11/24."
             ],
@@ -2468,7 +2470,7 @@
       "team": "Las Vegas Raiders",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 171.5,
+      "line": 172.5,
       "projection": 47.75,
       "hit_rates": {
         "L5": "0/4",
@@ -2484,66 +2486,66 @@
       ],
       "ladder": [
         {
-          "line": 163.5,
-          "p_over": 0.074,
-          "fair_over": 1256,
-          "fair_under": -1256,
-          "L10": "0/4"
-        },
-        {
-          "line": 165.5,
+          "line": 164.5,
           "p_over": 0.073,
-          "fair_over": 1279,
-          "fair_under": -1279,
+          "fair_over": 1267,
+          "fair_under": -1267,
           "L10": "0/4"
         },
         {
-          "line": 167.5,
+          "line": 166.5,
+          "p_over": 0.072,
+          "fair_over": 1290,
+          "fair_under": -1290,
+          "L10": "0/4"
+        },
+        {
+          "line": 168.5,
           "p_over": 0.071,
-          "fair_over": 1300,
-          "fair_under": -1300,
+          "fair_over": 1311,
+          "fair_under": -1311,
           "L10": "0/4"
         },
         {
-          "line": 169.5,
+          "line": 170.5,
           "p_over": 0.07,
-          "fair_over": 1321,
-          "fair_under": -1321,
+          "fair_over": 1331,
+          "fair_under": -1331,
           "L10": "0/4"
         },
         {
-          "line": 171.5,
+          "line": 172.5,
           "p_over": 0.069,
-          "fair_over": 1341,
-          "fair_under": -1341,
+          "fair_over": 1351,
+          "fair_under": -1351,
           "L10": "0/4"
         },
         {
-          "line": 173.5,
+          "line": 174.5,
           "p_over": 0.068,
-          "fair_over": 1360,
-          "fair_under": -1360,
+          "fair_over": 1369,
+          "fair_under": -1369,
           "L10": "0/4"
         },
         {
-          "line": 175.5,
-          "p_over": 0.068,
-          "fair_over": 1378,
-          "fair_under": -1378,
-          "L10": "0/4"
-        },
-        {
-          "line": 177.5,
+          "line": 176.5,
           "p_over": 0.067,
-          "fair_over": 1396,
-          "fair_under": -1396,
+          "fair_over": 1387,
+          "fair_under": -1387,
           "L10": "0/4"
         },
         {
-          "line": 179.5,
+          "line": 178.5,
           "p_over": 0.066,
-          "fair_over": 1412,
-          "fair_under": -1412,
+          "fair_over": 1404,
+          "fair_under": -1404,
+          "L10": "0/4"
+        },
+        {
+          "line": 180.5,
+          "p_over": 0.066,
+          "fair_over": 1420,
+          "fair_under": -1420,
           "L10": "0/4"
         }
       ],
@@ -2556,21 +2558,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Fernando Mendoza Over 171.5 pass_yds",
+            "selection": "Fernando Mendoza Over 172.5 pass_yds",
             "side": "over",
-            "line": 171.5,
-            "odds": -114.0,
-            "model_raw": 0.0694,
-            "model_prob": 0.373,
-            "market_prob": 0.5031,
-            "fair_odds": 168,
-            "edge": -0.1301,
-            "edge_at_price": -0.1597,
-            "ev": -0.2998,
+            "line": 172.5,
+            "odds": -111.0,
+            "model_raw": 0.0689,
+            "model_prob": 0.3692,
+            "market_prob": 0.4979,
+            "fair_odds": 171,
+            "edge": -0.1287,
+            "edge_at_price": -0.1569,
+            "ev": -0.2982,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model over 171.5: 6.9% before shrink, this book's no-vig 50.3%.",
+              "Model over 172.5: 6.9% before shrink, this book's no-vig 49.8%.",
               "Projection 47.75 (Normal(sd 58.4)).",
               "Hit rate over L5 0/4, L10 0/4, L20 0/4, all 0/4."
             ],
@@ -2583,28 +2585,28 @@
               "model far from market (7% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +173 or better.",
+            "next_step": "Pass. Only interesting at +176 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Fernando Mendoza Under 171.5 pass_yds",
+            "selection": "Fernando Mendoza Under 172.5 pass_yds",
             "side": "under",
-            "line": 171.5,
-            "odds": -111.0,
-            "model_raw": 0.9306,
-            "model_prob": 0.627,
-            "market_prob": 0.4969,
-            "fair_odds": -168,
-            "edge": 0.1301,
-            "edge_at_price": 0.1009,
-            "ev": 0.1918,
+            "line": 172.5,
+            "odds": -113.0,
+            "model_raw": 0.9311,
+            "model_prob": 0.6308,
+            "market_prob": 0.5021,
+            "fair_odds": -171,
+            "edge": 0.1287,
+            "edge_at_price": 0.1003,
+            "ev": 0.189,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model under 171.5: 93.1% before shrink, this book's no-vig 49.7%.",
+              "Model under 172.5: 93.1% before shrink, this book's no-vig 50.2%.",
               "Projection 47.75 (Normal(sd 58.4)).",
               "Hit rate over L5 0/4, L10 0/4, L20 0/4, all 0/4."
             ],
@@ -2617,7 +2619,7 @@
               "model far from market (93% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -160 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -162 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2788,328 +2790,6 @@
       "player": "Jonah Coleman",
       "player_id": "4702555",
       "team": "Denver Broncos",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 23.5,
-      "projection": 32.0,
-      "hit_rates": {
-        "L5": "2/4",
-        "L10": "2/4",
-        "L20": "2/4",
-        "all": "2/4"
-      },
-      "recent": [
-        31.0,
-        63.0,
-        15.0,
-        19.0
-      ],
-      "ladder": [
-        {
-          "line": 19.5,
-          "p_over": 0.66,
-          "fair_over": -194,
-          "fair_under": 194,
-          "L10": "2/4"
-        },
-        {
-          "line": 20.5,
-          "p_over": 0.649,
-          "fair_over": -185,
-          "fair_under": 185,
-          "L10": "2/4"
-        },
-        {
-          "line": 21.5,
-          "p_over": 0.637,
-          "fair_over": -176,
-          "fair_under": 176,
-          "L10": "2/4"
-        },
-        {
-          "line": 22.5,
-          "p_over": 0.625,
-          "fair_over": -167,
-          "fair_under": 167,
-          "L10": "2/4"
-        },
-        {
-          "line": 23.5,
-          "p_over": 0.613,
-          "fair_over": -158,
-          "fair_under": 158,
-          "L10": "2/4"
-        },
-        {
-          "line": 24.5,
-          "p_over": 0.601,
-          "fair_over": -150,
-          "fair_under": 150,
-          "L10": "2/4"
-        },
-        {
-          "line": 25.5,
-          "p_over": 0.588,
-          "fair_over": -143,
-          "fair_under": 143,
-          "L10": "2/4"
-        },
-        {
-          "line": 26.5,
-          "p_over": 0.575,
-          "fair_over": -135,
-          "fair_under": 135,
-          "L10": "2/4"
-        },
-        {
-          "line": 27.5,
-          "p_over": 0.561,
-          "fair_over": -128,
-          "fair_under": 128,
-          "L10": "2/4"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "!fewer than 5 games of data"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jonah Coleman Over 23.5 rec_yds",
-            "side": "over",
-            "line": 23.5,
-            "odds": -108.0,
-            "model_raw": 0.6131,
-            "model_prob": 0.528,
-            "market_prob": 0.4916,
-            "fair_odds": -112,
-            "edge": 0.0365,
-            "edge_at_price": 0.0088,
-            "ev": 0.0169,
-            "tier": "Low",
-            "data_quality": "Low",
-            "reasons": [
-              "Model over 23.5: 61.3% before shrink, this book's no-vig 49.2%.",
-              "Projection 32.0 (Normal(sd 18.8)).",
-              "Hit rate over L5 2/4, L10 2/4, L20 2/4, all 2/4."
-            ],
-            "flags": [
-              "!fewer than 5 games of data"
-            ],
-            "caution": [
-              "thin data: fewer than 5 games of data",
-              "model far from market (61% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (61% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -107 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jonah Coleman Under 23.5 rec_yds",
-            "side": "under",
-            "line": 23.5,
-            "odds": -116.0,
-            "model_raw": 0.3869,
-            "model_prob": 0.472,
-            "market_prob": 0.5084,
-            "fair_odds": 112,
-            "edge": -0.0365,
-            "edge_at_price": -0.0651,
-            "ev": -0.1212,
-            "tier": "Low",
-            "data_quality": "Low",
-            "reasons": [
-              "Model under 23.5: 38.7% before shrink, this book's no-vig 50.8%.",
-              "Projection 32.0 (Normal(sd 18.8)).",
-              "Hit rate over L5 2/4, L10 2/4, L20 2/4, all 2/4."
-            ],
-            "flags": [
-              "!fewer than 5 games of data"
-            ],
-            "caution": [
-              "thin data: fewer than 5 games of data",
-              "model far from market (39% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (39% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +116 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jonah Coleman",
-      "player_id": "4702555",
-      "team": "Denver Broncos",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 72.5,
-      "projection": 47.75,
-      "hit_rates": {
-        "L5": "0/4",
-        "L10": "0/4",
-        "L20": "0/4",
-        "all": "0/4"
-      },
-      "recent": [
-        57.0,
-        41.0,
-        54.0,
-        39.0
-      ],
-      "ladder": [
-        {
-          "line": 64.5,
-          "p_over": 0.069,
-          "fair_over": 1348,
-          "fair_under": -1348,
-          "L10": "0/4"
-        },
-        {
-          "line": 66.5,
-          "p_over": 0.064,
-          "fair_over": 1466,
-          "fair_under": -1466,
-          "L10": "0/4"
-        },
-        {
-          "line": 68.5,
-          "p_over": 0.061,
-          "fair_over": 1539,
-          "fair_under": -1539,
-          "L10": "0/4"
-        },
-        {
-          "line": 70.5,
-          "p_over": 0.06,
-          "fair_over": 1579,
-          "fair_under": -1579,
-          "L10": "0/4"
-        },
-        {
-          "line": 72.5,
-          "p_over": 0.059,
-          "fair_over": 1599,
-          "fair_under": -1599,
-          "L10": "0/4"
-        },
-        {
-          "line": 74.5,
-          "p_over": 0.059,
-          "fair_over": 1608,
-          "fair_under": -1608,
-          "L10": "0/4"
-        },
-        {
-          "line": 76.5,
-          "p_over": 0.058,
-          "fair_over": 1612,
-          "fair_under": -1612,
-          "L10": "0/4"
-        },
-        {
-          "line": 78.5,
-          "p_over": 0.058,
-          "fair_over": 1613,
-          "fair_under": -1613,
-          "L10": "0/4"
-        },
-        {
-          "line": 80.5,
-          "p_over": 0.058,
-          "fair_over": 1614,
-          "fair_under": -1614,
-          "L10": "0/4"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "!fewer than 5 games of data"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jonah Coleman Over 72.5 rush_yds",
-            "side": "over",
-            "line": 72.5,
-            "odds": -114.0,
-            "model_raw": 0.0589,
-            "model_prob": 0.3706,
-            "market_prob": 0.5042,
-            "fair_odds": 170,
-            "edge": -0.1336,
-            "edge_at_price": -0.1621,
-            "ev": -0.3043,
-            "tier": "Low",
-            "data_quality": "Low",
-            "reasons": [
-              "Model over 72.5: 5.9% before shrink, this book's no-vig 50.4%.",
-              "Projection 47.75 (Normal(sd 7.9)).",
-              "Hit rate over L5 0/4, L10 0/4, L20 0/4, all 0/4."
-            ],
-            "flags": [
-              "!fewer than 5 games of data"
-            ],
-            "caution": [
-              "thin data: fewer than 5 games of data",
-              "model far from market (6% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (6% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +175 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jonah Coleman Under 72.5 rush_yds",
-            "side": "under",
-            "line": 72.5,
-            "odds": -110.0,
-            "model_raw": 0.9411,
-            "model_prob": 0.6294,
-            "market_prob": 0.4958,
-            "fair_odds": -170,
-            "edge": 0.1336,
-            "edge_at_price": 0.1056,
-            "ev": 0.2015,
-            "tier": "Low",
-            "data_quality": "Low",
-            "reasons": [
-              "Model under 72.5: 94.1% before shrink, this book's no-vig 49.6%.",
-              "Projection 47.75 (Normal(sd 7.9)).",
-              "Hit rate over L5 0/4, L10 0/4, L20 0/4, all 0/4."
-            ],
-            "flags": [
-              "!fewer than 5 games of data"
-            ],
-            "caution": [
-              "thin data: fewer than 5 games of data",
-              "model far from market (94% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (94% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -161 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jonah Coleman",
-      "player_id": "4702555",
-      "team": "Denver Broncos",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
@@ -3183,18 +2863,18 @@
             "selection": "Jonah Coleman Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": -150.0,
+            "odds": -135.0,
             "model_raw": 0.5763,
-            "model_prob": 0.5748,
-            "market_prob": 0.5742,
-            "fair_odds": -135,
-            "edge": 0.0006,
-            "edge_at_price": -0.0252,
-            "ev": -0.0419,
+            "model_prob": 0.5577,
+            "market_prob": 0.5497,
+            "fair_odds": -126,
+            "edge": 0.008,
+            "edge_at_price": -0.0168,
+            "ev": -0.0292,
             "tier": "Low",
             "data_quality": "Low",
             "reasons": [
-              "Model over 0.5: 57.6% before shrink, this book's no-vig 57.4%.",
+              "Model over 0.5: 57.6% before shrink, this book's no-vig 55.0%.",
               "Projection 0.75 (Poisson).",
               "Hit rate over L5 3/4, L10 3/4, L20 3/4, all 3/4."
             ],
@@ -3206,7 +2886,325 @@
               "thin data: fewer than 5 games of data"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -129 or better.",
+            "next_step": "Pass. Only interesting at -121 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jonah Coleman",
+      "player_id": "4702555",
+      "team": "Denver Broncos",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 22.5,
+      "projection": 32.0,
+      "hit_rates": {
+        "L5": "2/4",
+        "L10": "2/4",
+        "L20": "2/4",
+        "all": "2/4"
+      },
+      "recent": [
+        31.0,
+        63.0,
+        15.0,
+        19.0
+      ],
+      "ladder": [
+        {
+          "line": 18.5,
+          "p_over": 0.729,
+          "fair_over": -270,
+          "fair_under": 270,
+          "L10": "3/4"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.66,
+          "fair_over": -194,
+          "fair_under": 194,
+          "L10": "2/4"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.649,
+          "fair_over": -185,
+          "fair_under": 185,
+          "L10": "2/4"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.637,
+          "fair_over": -176,
+          "fair_under": 176,
+          "L10": "2/4"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.625,
+          "fair_over": -167,
+          "fair_under": 167,
+          "L10": "2/4"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.613,
+          "fair_over": -158,
+          "fair_under": 158,
+          "L10": "2/4"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.601,
+          "fair_over": -150,
+          "fair_under": 150,
+          "L10": "2/4"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.588,
+          "fair_over": -143,
+          "fair_under": 143,
+          "L10": "2/4"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.575,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "2/4"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "!fewer than 5 games of data"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Over 22.5 rec_yds",
+            "side": "over",
+            "line": 22.5,
+            "odds": -115.0,
+            "model_raw": 0.6254,
+            "model_prob": 0.542,
+            "market_prob": 0.5063,
+            "fair_odds": -118,
+            "edge": 0.0357,
+            "edge_at_price": 0.0072,
+            "ev": 0.0134,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model over 22.5: 62.5% before shrink, this book's no-vig 50.6%.",
+              "Projection 32.0 (Normal(sd 18.8)).",
+              "Hit rate over L5 2/4, L10 2/4, L20 2/4, all 2/4."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -113 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Under 22.5 rec_yds",
+            "side": "under",
+            "line": 22.5,
+            "odds": -109.0,
+            "model_raw": 0.3746,
+            "model_prob": 0.458,
+            "market_prob": 0.4937,
+            "fair_odds": 118,
+            "edge": -0.0357,
+            "edge_at_price": -0.0636,
+            "ev": -0.1219,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model under 22.5: 37.5% before shrink, this book's no-vig 49.4%.",
+              "Projection 32.0 (Normal(sd 18.8)).",
+              "Hit rate over L5 2/4, L10 2/4, L20 2/4, all 2/4."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +123 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jonah Coleman",
+      "player_id": "4702555",
+      "team": "Denver Broncos",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 73.5,
+      "projection": 47.75,
+      "hit_rates": {
+        "L5": "0/4",
+        "L10": "0/4",
+        "L20": "0/4",
+        "all": "0/4"
+      },
+      "recent": [
+        57.0,
+        41.0,
+        54.0,
+        39.0
+      ],
+      "ladder": [
+        {
+          "line": 65.5,
+          "p_over": 0.066,
+          "fair_over": 1413,
+          "fair_under": -1413,
+          "L10": "0/4"
+        },
+        {
+          "line": 67.5,
+          "p_over": 0.062,
+          "fair_over": 1508,
+          "fair_under": -1508,
+          "L10": "0/4"
+        },
+        {
+          "line": 69.5,
+          "p_over": 0.06,
+          "fair_over": 1562,
+          "fair_under": -1562,
+          "L10": "0/4"
+        },
+        {
+          "line": 71.5,
+          "p_over": 0.059,
+          "fair_over": 1591,
+          "fair_under": -1591,
+          "L10": "0/4"
+        },
+        {
+          "line": 73.5,
+          "p_over": 0.059,
+          "fair_over": 1604,
+          "fair_under": -1604,
+          "L10": "0/4"
+        },
+        {
+          "line": 75.5,
+          "p_over": 0.058,
+          "fair_over": 1610,
+          "fair_under": -1610,
+          "L10": "0/4"
+        },
+        {
+          "line": 77.5,
+          "p_over": 0.058,
+          "fair_over": 1613,
+          "fair_under": -1613,
+          "L10": "0/4"
+        },
+        {
+          "line": 79.5,
+          "p_over": 0.058,
+          "fair_over": 1614,
+          "fair_under": -1614,
+          "L10": "0/4"
+        },
+        {
+          "line": 81.5,
+          "p_over": 0.058,
+          "fair_over": 1614,
+          "fair_under": -1614,
+          "L10": "0/4"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "!fewer than 5 games of data"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Over 73.5 rush_yds",
+            "side": "over",
+            "line": 73.5,
+            "odds": -111.0,
+            "model_raw": 0.0587,
+            "model_prob": 0.3661,
+            "market_prob": 0.4979,
+            "fair_odds": 173,
+            "edge": -0.1318,
+            "edge_at_price": -0.1599,
+            "ev": -0.304,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model over 73.5: 5.9% before shrink, this book's no-vig 49.8%.",
+              "Projection 47.75 (Normal(sd 7.9)).",
+              "Hit rate over L5 0/4, L10 0/4, L20 0/4, all 0/4."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data",
+              "model far from market (6% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (6% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +179 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Under 73.5 rush_yds",
+            "side": "under",
+            "line": 73.5,
+            "odds": -113.0,
+            "model_raw": 0.9413,
+            "model_prob": 0.6339,
+            "market_prob": 0.5021,
+            "fair_odds": -173,
+            "edge": 0.1318,
+            "edge_at_price": 0.1033,
+            "ev": 0.1948,
+            "tier": "Low",
+            "data_quality": "Low",
+            "reasons": [
+              "Model under 73.5: 94.1% before shrink, this book's no-vig 50.2%.",
+              "Projection 47.75 (Normal(sd 7.9)).",
+              "Hit rate over L5 0/4, L10 0/4, L20 0/4, all 0/4."
+            ],
+            "flags": [
+              "!fewer than 5 games of data"
+            ],
+            "caution": [
+              "thin data: fewer than 5 games of data",
+              "model far from market (94% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (94% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -164 or better and re-check injuries near start.",
             "proven": false
           }
         }
