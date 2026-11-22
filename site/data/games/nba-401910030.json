@@ -1,0 +1,332 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401910030",
+  "name": "Oklahoma City Thunder at Miami Heat",
+  "matchup": "OKC @ MIA",
+  "start": "2026-11-22T23:00Z",
+  "start_local": "Sun Nov 22 6:00 PM ET",
+  "date_et": "2026-11-22",
+  "weekday": "sunday",
+  "state": "pre",
+  "status": "11/22 - 6:00 PM EST",
+  "home": {
+    "abbr": "MIA",
+    "name": "Miami Heat",
+    "record": "9-6",
+    "id": "14"
+  },
+  "away": {
+    "abbr": "OKC",
+    "name": "Oklahoma City Thunder",
+    "record": "10-6",
+    "id": "25"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35056405"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 117.0,
+      "ml_home": -139.0,
+      "total": 231.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "spread_home": -2.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 2.5,
+      "spread_away_odds": -115.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin MIA -3.1 \u00b7 total 233.6",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: MIA 49.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin MIA -3.1, total 233.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Myron Gardner",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Giannis Antetokounmpo",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": true
+      }
+    ],
+    "away": [
+      {
+        "name": "Shai Gilgeous-Alexander",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": true
+      },
+      {
+        "name": "Nikola Topic",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Jaylin Williams",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Alex Caruso",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Thomas Sorber",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 WWWWW",
+    "away": "L5 LLWLW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "OKC ML",
+              "side": "away",
+              "line": null,
+              "odds": 117.0,
+              "model_raw": 0.5971,
+              "model_prob": 0.4638,
+              "market_prob": 0.4421,
+              "fair_odds": 116,
+              "edge": 0.0217,
+              "edge_at_price": 0.003,
+              "ev": 0.0064,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model OKC win 59.7% vs market no-vig 44.2%.",
+                "v2 projected margin MIA -3.1 (ratings MIA +0.3, OKC +4.8, home edge 1.5); raw model 59.7%.",
+                "OKC L5 LLWLW (MOV 4.5), MIA L5 WWWWW (MOV 0.7)",
+                "pace: projected total +2.6 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (60% vs 44%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Shai Gilgeous-Alexander (Day-To-Day)"
+              ],
+              "case_against": "Market makes OKC 44%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +120 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "home",
+              "line": null,
+              "odds": -139.0,
+              "model_raw": 0.4029,
+              "model_prob": 0.5362,
+              "market_prob": 0.5579,
+              "fair_odds": -116,
+              "edge": -0.0217,
+              "edge_at_price": -0.0454,
+              "ev": -0.078,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIA win 40.3% vs market no-vig 55.8%.",
+                "v2 projected margin MIA -3.1 (ratings MIA +0.3, OKC +4.8, home edge 1.5); raw model 40.3%.",
+                "OKC L5 LLWLW (MOV 4.5), MIA L5 WWWWW (MOV 0.7)",
+                "pace: projected total +2.6 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "Note: model far from market (40% vs 56%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Giannis Antetokounmpo (Day-To-Day)"
+              ],
+              "case_against": "Market makes MIA 56%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -111 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "MIA -2.5",
+              "side": "home",
+              "line": -2.5,
+              "odds": -105.0,
+              "model_raw": 0.3278,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIA -2.5 covers 32.8% vs market 48.9%.",
+                "Projected margin MIA -3.1 vs line MIA -2.5.",
+                "OKC L5 LLWLW (MOV 4.5), MIA L5 WWWWW (MOV 0.7)",
+                "pace: projected total +2.6 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (33% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Giannis Antetokounmpo (Day-To-Day)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "OKC +2.5",
+              "side": "away",
+              "line": 2.5,
+              "odds": -115.0,
+              "model_raw": 0.6722,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model OKC +2.5 covers 67.2% vs market 51.1%.",
+                "Projected margin MIA -3.1 vs line MIA -2.5.",
+                "OKC L5 LLWLW (MOV 4.5), MIA L5 WWWWW (MOV 0.7)",
+                "pace: projected total +2.6 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (67% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Shai Gilgeous-Alexander (Day-To-Day)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 231.5",
+              "side": "over",
+              "line": 231.5,
+              "odds": -110.0,
+              "model_raw": 0.5422,
+              "model_prob": 0.5072,
+              "market_prob": 0.5,
+              "fair_odds": -103,
+              "edge": 0.0072,
+              "edge_at_price": -0.0166,
+              "ev": -0.0317,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 231.5: 54.2% vs market 50.0%.",
+                "Projected total 233.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "OKC L5 LLWLW (MOV 4.5), MIA L5 WWWWW (MOV 0.7)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 231.5",
+              "side": "under",
+              "line": 231.5,
+              "odds": -110.0,
+              "model_raw": 0.4578,
+              "model_prob": 0.4928,
+              "market_prob": 0.5,
+              "fair_odds": 103,
+              "edge": -0.0072,
+              "edge_at_price": -0.031,
+              "ev": -0.0592,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 231.5: 45.8% vs market 50.0%.",
+                "Projected total 233.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "OKC L5 LLWLW (MOV 4.5), MIA L5 WWWWW (MOV 0.7)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

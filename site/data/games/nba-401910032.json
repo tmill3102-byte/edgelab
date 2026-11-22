@@ -1,0 +1,312 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401910032",
+  "name": "Denver Nuggets at Chicago Bulls",
+  "matchup": "DEN @ CHI",
+  "start": "2026-11-23T00:00Z",
+  "start_local": "Sun Nov 22 7:00 PM ET",
+  "date_et": "2026-11-22",
+  "weekday": "sunday",
+  "state": "pre",
+  "status": "11/22 - 7:00 PM EST",
+  "home": {
+    "abbr": "CHI",
+    "name": "Chicago Bulls",
+    "record": "4-11",
+    "id": "4"
+  },
+  "away": {
+    "abbr": "DEN",
+    "name": "Denver Nuggets",
+    "record": "9-5",
+    "id": "7"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35056412"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_home": 279.0,
+      "ml_away": -348.0,
+      "total": 237.5,
+      "under_odds": -110.0,
+      "over_odds": -110.0,
+      "spread_home": 8.5,
+      "spread_home_odds": -110.0,
+      "spread_away": -8.5,
+      "spread_away_odds": -110.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin CHI -4.7 \u00b7 total 234.4",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: CHI 25.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin CHI -4.7, total 234.4; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Norman Powell",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": true
+      },
+      {
+        "name": "Jalen Smith",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Tobe Awaka",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Caleb Wilson",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Julian Strawther",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 WWLWL",
+    "away": "L5 WWLWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "CHI ML",
+              "side": "home",
+              "line": null,
+              "odds": 279.0,
+              "model_raw": 0.3525,
+              "model_prob": 0.2662,
+              "market_prob": 0.2535,
+              "fair_odds": 276,
+              "edge": 0.0127,
+              "edge_at_price": 0.0024,
+              "ev": 0.0091,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CHI win 35.2% vs market no-vig 25.4%.",
+                "v2 projected margin CHI -4.7 (ratings CHI -4.4, DEN +1.9, home edge 1.5); raw model 35.2%.",
+                "DEN L5 WWLWW (MOV 1.5), CHI L5 WWLWL (MOV -8.1)",
+                "pace: projected total +2.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Norman Powell (Day-To-Day), Jalen Smith (Day-To-Day)"
+              ],
+              "case_against": "Market makes CHI 25%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +283 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -348.0,
+              "model_raw": 0.6475,
+              "model_prob": 0.7338,
+              "market_prob": 0.7465,
+              "fair_odds": -276,
+              "edge": -0.0127,
+              "edge_at_price": -0.043,
+              "ev": -0.0554,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DEN win 64.8% vs market no-vig 74.6%.",
+                "v2 projected margin CHI -4.7 (ratings CHI -4.4, DEN +1.9, home edge 1.5); raw model 64.8%.",
+                "DEN L5 WWLWW (MOV 1.5), CHI L5 WWLWL (MOV -8.1)",
+                "pace: projected total +2.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes DEN 75%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -256 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CHI +8.5",
+              "side": "home",
+              "line": 8.5,
+              "odds": -110.0,
+              "model_raw": 0.6185,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CHI +8.5 covers 61.8% vs market 50.0%.",
+                "Projected margin CHI -4.7 vs line CHI +8.5.",
+                "DEN L5 WWLWW (MOV 1.5), CHI L5 WWLWL (MOV -8.1)",
+                "pace: projected total +2.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury news: key player status uncertain - Norman Powell (Day-To-Day), Jalen Smith (Day-To-Day)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "DEN -8.5",
+              "side": "away",
+              "line": -8.5,
+              "odds": -110.0,
+              "model_raw": 0.3815,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model DEN -8.5 covers 38.2% vs market 50.0%.",
+                "Projected margin CHI -4.7 vs line CHI +8.5.",
+                "DEN L5 WWLWW (MOV 1.5), CHI L5 WWLWL (MOV -8.1)",
+                "pace: projected total +2.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 237.5",
+              "side": "under",
+              "line": 237.5,
+              "odds": -110.0,
+              "model_raw": 0.563,
+              "model_prob": 0.5108,
+              "market_prob": 0.5,
+              "fair_odds": -104,
+              "edge": 0.0108,
+              "edge_at_price": -0.013,
+              "ev": -0.0249,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 237.5: 56.3% vs market 50.0%.",
+                "Projected total 234.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "DEN L5 WWLWW (MOV 1.5), CHI L5 WWLWL (MOV -8.1)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 237.5",
+              "side": "over",
+              "line": 237.5,
+              "odds": -110.0,
+              "model_raw": 0.437,
+              "model_prob": 0.4892,
+              "market_prob": 0.5,
+              "fair_odds": 104,
+              "edge": -0.0108,
+              "edge_at_price": -0.0346,
+              "ev": -0.066,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 237.5: 43.7% vs market 50.0%.",
+                "Projected total 234.4 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "DEN L5 WWLWW (MOV 1.5), CHI L5 WWLWL (MOV -8.1)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}
