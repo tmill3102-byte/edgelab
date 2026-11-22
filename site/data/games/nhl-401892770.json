@@ -43,10 +43,10 @@
   },
   "lines": {
     "draftkings": {
-      "spread_home": 1.5,
-      "spread_home_odds": -245.0,
       "spread_away": -1.5,
       "spread_away_odds": 200.0,
+      "spread_home": 1.5,
+      "spread_home_odds": -245.0,
       "total": 6.5,
       "over_odds": 110.0,
       "under_odds": -130.0,
@@ -54,10 +54,10 @@
       "ml_away": -118.0
     },
     "betmgm": {
-      "spread_home": -1.5,
-      "spread_home_odds": 220.0,
       "spread_away": 1.5,
       "spread_away_odds": -275.0,
+      "spread_home": -1.5,
+      "spread_home_odds": 220.0,
       "total": 6.0,
       "over_odds": -115.0,
       "under_odds": -105.0,
@@ -65,10 +65,10 @@
       "ml_away": -115.0
     },
     "fanduel": {
-      "spread_home": 1.5,
-      "spread_home_odds": -265.0,
       "spread_away": -1.5,
       "spread_away_odds": 210.0,
+      "spread_home": 1.5,
+      "spread_home_odds": -265.0,
       "total": 5.5,
       "over_odds": -138.0,
       "under_odds": 112.0,
@@ -76,10 +76,10 @@
       "ml_away": -111.0
     },
     "betrivers": {
-      "spread_home": 1.5,
-      "spread_home_odds": -250.0,
       "spread_away": -1.5,
       "spread_away_odds": 195.0,
+      "spread_home": 1.5,
+      "spread_home_odds": -250.0,
       "total": 6.5,
       "over_odds": -103.0,
       "under_odds": -121.0,
@@ -87,10 +87,10 @@
       "ml_away": -129.0
     },
     "bovada": {
-      "spread_home": 1.5,
-      "spread_home_odds": -230.0,
       "spread_away": -1.5,
       "spread_away_odds": 190.0,
+      "spread_home": 1.5,
+      "spread_home_odds": -230.0,
       "total": 6.0,
       "over_odds": -112.0,
       "under_odds": -108.0,
@@ -129,7 +129,7 @@
     "home": [
       {
         "name": "Connor McMichael",
-        "status": "Out",
+        "status": "Day-To-Day",
         "pos": "LW",
         "key": false
       },
@@ -625,141 +625,6 @@
       "market": "Spread",
       "sides": [
         {
-          "side": "home",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "STL +1.5",
-              "side": "home",
-              "line": 1.5,
-              "odds": -245.0,
-              "model_raw": 0.7506,
-              "model_prob": 0.7005,
-              "market_prob": 0.6806,
-              "fair_odds": -234,
-              "edge": 0.0199,
-              "edge_at_price": -0.0096,
-              "ev": -0.0136,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model STL +1.5: 75.1%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
-                "v2 margin STL +0.2, total 6.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -219 or better.",
-              "proven": true
-            },
-            "betmgm": {
-              "market": "Spread",
-              "selection": "STL -1.5",
-              "side": "home",
-              "line": -1.5,
-              "odds": 220.0,
-              "model_raw": 0.2925,
-              "model_prob": 0.2971,
-              "market_prob": 0.2988,
-              "fair_odds": 237,
-              "edge": -0.0017,
-              "edge_at_price": -0.0154,
-              "ev": -0.0493,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model STL -1.5: 29.3%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
-                "v2 margin STL +0.2, total 6.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +243 or better.",
-              "proven": true
-            },
-            "fanduel": {
-              "market": "Spread",
-              "selection": "STL +1.5",
-              "side": "home",
-              "line": 1.5,
-              "odds": -265.0,
-              "model_raw": 0.7506,
-              "model_prob": 0.7088,
-              "market_prob": 0.6924,
-              "fair_odds": -243,
-              "edge": 0.0165,
-              "edge_at_price": -0.0172,
-              "ev": -0.0237,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model STL +1.5: 75.1%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
-                "v2 margin STL +0.2, total 6.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -228 or better.",
-              "proven": true
-            },
-            "betrivers": {
-              "market": "Spread",
-              "selection": "STL +1.5",
-              "side": "home",
-              "line": 1.5,
-              "odds": -250.0,
-              "model_raw": 0.7506,
-              "model_prob": 0.6988,
-              "market_prob": 0.6782,
-              "fair_odds": -232,
-              "edge": 0.0207,
-              "edge_at_price": -0.0155,
-              "ev": -0.0217,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model STL +1.5: 75.1%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
-                "v2 margin STL +0.2, total 6.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -218 or better.",
-              "proven": true
-            },
-            "bovada": {
-              "market": "Spread",
-              "selection": "STL +1.5",
-              "side": "home",
-              "line": 1.5,
-              "odds": -230.0,
-              "model_raw": 0.7506,
-              "model_prob": 0.6924,
-              "market_prob": 0.669,
-              "fair_odds": -225,
-              "edge": 0.0234,
-              "edge_at_price": -0.0046,
-              "ev": -0.0066,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model STL +1.5: 75.1%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
-                "v2 margin STL +0.2, total 6.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -211 or better.",
-              "proven": true
-            }
-          }
-        },
-        {
           "side": "away",
           "offers": {
             "draftkings": {
@@ -890,6 +755,141 @@
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +232 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "STL +1.5",
+              "side": "home",
+              "line": 1.5,
+              "odds": -245.0,
+              "model_raw": 0.7506,
+              "model_prob": 0.7005,
+              "market_prob": 0.6806,
+              "fair_odds": -234,
+              "edge": 0.0199,
+              "edge_at_price": -0.0096,
+              "ev": -0.0136,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model STL +1.5: 75.1%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin STL +0.2, total 6.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -219 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "STL -1.5",
+              "side": "home",
+              "line": -1.5,
+              "odds": 220.0,
+              "model_raw": 0.2925,
+              "model_prob": 0.2971,
+              "market_prob": 0.2988,
+              "fair_odds": 237,
+              "edge": -0.0017,
+              "edge_at_price": -0.0154,
+              "ev": -0.0493,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model STL -1.5: 29.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin STL +0.2, total 6.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +243 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "STL +1.5",
+              "side": "home",
+              "line": 1.5,
+              "odds": -265.0,
+              "model_raw": 0.7506,
+              "model_prob": 0.7088,
+              "market_prob": 0.6924,
+              "fair_odds": -243,
+              "edge": 0.0165,
+              "edge_at_price": -0.0172,
+              "ev": -0.0237,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model STL +1.5: 75.1%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin STL +0.2, total 6.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -228 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "STL +1.5",
+              "side": "home",
+              "line": 1.5,
+              "odds": -250.0,
+              "model_raw": 0.7506,
+              "model_prob": 0.6988,
+              "market_prob": 0.6782,
+              "fair_odds": -232,
+              "edge": 0.0207,
+              "edge_at_price": -0.0155,
+              "ev": -0.0217,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model STL +1.5: 75.1%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin STL +0.2, total 6.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -218 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "STL +1.5",
+              "side": "home",
+              "line": 1.5,
+              "odds": -230.0,
+              "model_raw": 0.7506,
+              "model_prob": 0.6924,
+              "market_prob": 0.669,
+              "fair_odds": -225,
+              "edge": 0.0234,
+              "edge_at_price": -0.0046,
+              "ev": -0.0066,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model STL +1.5: 75.1%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 27% weight vs the market in log-odds for NHL spreads; walk-forward blend beat the opening line's log loss over 1632 test games (dLL -0.0006 \u00b1 0.0003)",
+                "v2 margin STL +0.2, total 6.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -211 or better.",
               "proven": true
             }
           }

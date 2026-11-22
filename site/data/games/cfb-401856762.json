@@ -35,11 +35,11 @@
     "draftkings": {
       "ml_home": -1350.0,
       "ml_away": 800.0,
-      "spread_home": -20.5,
-      "spread_home_odds": -110.0,
-      "spread_away": 20.5,
-      "spread_away_odds": -110.0,
-      "total": 57.5,
+      "spread_home": -18.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 18.5,
+      "spread_away_odds": -105.0,
+      "total": 56.5,
       "over_odds": -110.0,
       "under_odds": -110.0
     }
@@ -145,22 +145,22 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "MISS -20.5",
+              "selection": "MISS -18.5",
               "side": "home",
-              "line": -20.5,
-              "odds": -110.0,
-              "model_raw": 0.537,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": -18.5,
+              "odds": -115.0,
+              "model_raw": 0.5878,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model MISS -20.5 covers 53.7% vs market 50.0%.",
-                "Projected margin MISS +21.9 vs line MISS -20.5.",
+                "Model MISS -18.5 covers 58.8% vs market 51.1%.",
+                "Projected margin MISS +21.9 vs line MISS -18.5.",
                 "MSST L5 LLLLW (MOV -2.5), MISS L5 LWLLW (MOV 9.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -168,10 +168,10 @@
                 "injury report not available for this league"
               ],
               "caution": [
-                "line move: spread moved against this side (-14.5 -> -20.5)"
+                "line move: spread moved against this side (-14.5 -> -18.5)"
               ],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
           }
@@ -181,22 +181,22 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "MSST +20.5",
+              "selection": "MSST +18.5",
               "side": "away",
-              "line": 20.5,
-              "odds": -110.0,
-              "model_raw": 0.463,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 18.5,
+              "odds": -105.0,
+              "model_raw": 0.4122,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model MSST +20.5 covers 46.3% vs market 50.0%.",
-                "Projected margin MISS +21.9 vs line MISS -20.5.",
+                "Model MSST +18.5 covers 41.2% vs market 48.9%.",
+                "Projected margin MISS +21.9 vs line MISS -18.5.",
                 "MSST L5 LLLLW (MOV -2.5), MISS L5 LWLLW (MOV 9.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
@@ -205,7 +205,7 @@
               ],
               "caution": [],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }
@@ -220,11 +220,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 57.5",
+              "selection": "Over 56.5",
               "side": "over",
-              "line": 57.5,
+              "line": 56.5,
               "odds": -110.0,
-              "model_raw": 0.5401,
+              "model_raw": 0.5646,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -234,15 +234,17 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 57.5: 54.0% vs market 50.0%.",
-                "Projected total 59.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 56.5: 56.5% vs market 50.0%.",
+                "Projected total 59.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 57.5 -> 56.5.",
                 "MSST L5 LLLLW (MOV -2.5), MISS L5 LWLLW (MOV 9.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the over (57.5 -> 56.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
@@ -254,11 +256,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 57.5",
+              "selection": "Under 56.5",
               "side": "under",
-              "line": 57.5,
+              "line": 56.5,
               "odds": -110.0,
-              "model_raw": 0.4599,
+              "model_raw": 0.4354,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -268,15 +270,17 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 57.5: 46.0% vs market 50.0%.",
-                "Projected total 59.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 56.5: 43.5% vs market 50.0%.",
+                "Projected total 59.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 57.5 -> 56.5.",
                 "MSST L5 LLLLW (MOV -2.5), MISS L5 LWLLW (MOV 9.5)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward under (57.5 -> 56.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
               "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false

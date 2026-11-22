@@ -35,13 +35,13 @@
     "draftkings": {
       "ml_home": 295.0,
       "ml_away": -375.0,
-      "spread_home": 10.0,
+      "total": 50.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0,
+      "spread_home": 8.5,
       "spread_home_odds": -110.0,
-      "spread_away": -10.0,
-      "spread_away_odds": -110.0,
-      "total": 49.5,
-      "over_odds": -110.0,
-      "under_odds": -110.0
+      "spread_away": -8.5,
+      "spread_away_odds": -110.0
     }
   },
   "badge": null,
@@ -143,11 +143,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "AKR +10",
+              "selection": "AKR +8.5",
               "side": "home",
-              "line": 10.0,
+              "line": 8.5,
               "odds": -110.0,
-              "model_raw": 0.327,
+              "model_raw": 0.2929,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -157,16 +157,18 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model AKR +10 covers 32.7% vs market 50.0%.",
-                "Projected margin AKR -16.9 vs line AKR +10.",
+                "Model AKR +8.5 covers 29.3% vs market 50.0%.",
+                "Projected margin AKR -16.9 vs line AKR +8.5.",
                 "BUFF L5 WWWWW (MOV 1.9), AKR L5 LLLLW (MOV -13.2)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (33% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (29% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: spread moved against this side (+10 -> +8.5)"
+              ],
               "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
               "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
@@ -178,11 +180,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "BUFF -10",
+              "selection": "BUFF -8.5",
               "side": "away",
-              "line": -10.0,
+              "line": -8.5,
               "odds": -110.0,
-              "model_raw": 0.673,
+              "model_raw": 0.7071,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -192,11 +194,11 @@
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model BUFF -10 covers 67.3% vs market 50.0%.",
-                "Projected margin AKR -16.9 vs line AKR +10.",
+                "Model BUFF -8.5 covers 70.7% vs market 50.0%.",
+                "Projected margin AKR -16.9 vs line AKR +8.5.",
                 "BUFF L5 WWWWW (MOV 1.9), AKR L5 LLLLW (MOV -13.2)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (67% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (71% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -218,31 +220,33 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 49.5",
+              "selection": "Over 50.5",
               "side": "over",
-              "line": 49.5,
-              "odds": -110.0,
-              "model_raw": 0.5331,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 50.5,
+              "odds": -105.0,
+              "model_raw": 0.5084,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 49.5: 53.3% vs market 50.0%.",
-                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model over 50.5: 50.8% vs market 48.9%.",
+                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 49.5 -> 50.5.",
                 "BUFF L5 WWWWW (MOV 1.9), AKR L5 LLLLW (MOV -13.2)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: total already moved toward over (49.5 -> 50.5); value may be gone"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
           }
@@ -252,31 +256,33 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 49.5",
+              "selection": "Under 50.5",
               "side": "under",
-              "line": 49.5,
-              "odds": -110.0,
-              "model_raw": 0.4669,
-              "model_prob": 0.5,
-              "market_prob": 0.5,
-              "fair_odds": 100,
+              "line": 50.5,
+              "odds": -115.0,
+              "model_raw": 0.4916,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
               "edge": 0.0,
-              "edge_at_price": -0.0238,
-              "ev": -0.0455,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 49.5: 46.7% vs market 50.0%.",
-                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "Model under 50.5: 49.2% vs market 51.1%.",
+                "Projected total 50.8 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 49.5 -> 50.5.",
                 "BUFF L5 WWWWW (MOV 1.9), AKR L5 LLLLW (MOV -13.2)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [],
+              "caution": [
+                "line move: market moved against the under (49.5 -> 50.5)"
+              ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +104 or better.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
           }
