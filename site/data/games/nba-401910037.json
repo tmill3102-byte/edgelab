@@ -33,22 +33,22 @@
   },
   "lines": {
     "draftkings": {
-      "ml_away": 130.0,
-      "ml_home": -155.0,
-      "total": 229.5,
-      "under_odds": -110.0,
-      "over_odds": -110.0,
+      "ml_away": 139.0,
+      "ml_home": -166.0,
+      "total": 232.5,
+      "under_odds": -115.0,
+      "over_odds": -105.0,
       "spread_home": -3.5,
-      "spread_home_odds": -104.0,
+      "spread_home_odds": -108.0,
       "spread_away": 3.5,
-      "spread_away_odds": -116.0
+      "spread_away_odds": -112.0
     }
   },
   "badge": null,
   "model_summary": "Margin PHI -1.2 \u00b7 total 228.9",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: PHI 57.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: PHI 57.8% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin PHI -1.2, total 228.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -121,28 +121,30 @@
               "selection": "POR ML",
               "side": "away",
               "line": null,
-              "odds": 130.0,
+              "odds": 139.0,
               "model_raw": 0.5381,
-              "model_prob": 0.4337,
-              "market_prob": 0.417,
-              "fair_odds": 131,
-              "edge": 0.0167,
-              "edge_at_price": -0.0011,
-              "ev": -0.0025,
+              "model_prob": 0.4201,
+              "market_prob": 0.4014,
+              "fair_odds": 138,
+              "edge": 0.0187,
+              "edge_at_price": 0.0017,
+              "ev": 0.004,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model POR win 53.8% vs market no-vig 41.7%.",
+                "Model POR win 53.8% vs market no-vig 40.1%.",
                 "v2 projected margin PHI -1.2 (ratings PHI +1.7, POR +4.4, home edge 1.5); raw model 53.8%.",
                 "POR L5 WLLWL (MOV 5.8), PHI L5 WWWWW (MOV 2.9)",
                 "pace: projected total +0.2 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "Note: model far from market (54% vs 42%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (54% vs 40%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
-              "caution": [],
-              "case_against": "Market makes POR 42%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +135 or better.",
+              "caution": [
+                "line move: price drifted against this side (+121 -> +139)"
+              ],
+              "case_against": "Market makes POR 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +143 or better and re-check injuries near start.",
               "proven": true
             }
           }
@@ -155,28 +157,28 @@
               "selection": "PHI ML",
               "side": "home",
               "line": null,
-              "odds": -155.0,
+              "odds": -166.0,
               "model_raw": 0.4619,
-              "model_prob": 0.5663,
-              "market_prob": 0.583,
-              "fair_odds": -131,
-              "edge": -0.0167,
-              "edge_at_price": -0.0415,
-              "ev": -0.0683,
+              "model_prob": 0.5799,
+              "market_prob": 0.5986,
+              "fair_odds": -138,
+              "edge": -0.0187,
+              "edge_at_price": -0.0441,
+              "ev": -0.0707,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model PHI win 46.2% vs market no-vig 58.3%.",
+                "Model PHI win 46.2% vs market no-vig 59.9%.",
                 "v2 projected margin PHI -1.2 (ratings PHI +1.7, POR +4.4, home edge 1.5); raw model 46.2%.",
                 "POR L5 WLLWL (MOV 5.8), PHI L5 WWWWW (MOV 2.9)",
                 "pace: projected total +0.2 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "Note: model far from market (46% vs 58%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (46% vs 60%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes PHI 58%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -125 or better.",
+              "case_against": "Market makes PHI 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -132 or better.",
               "proven": true
             }
           }
@@ -194,30 +196,30 @@
               "selection": "PHI -3.5",
               "side": "home",
               "line": -3.5,
-              "odds": -104.0,
+              "odds": -108.0,
               "model_raw": 0.3535,
-              "model_prob": 0.487,
-              "market_prob": 0.487,
-              "fair_odds": 105,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.0228,
-              "ev": -0.0447,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model PHI -3.5 covers 35.4% vs market 48.7%.",
+                "Model PHI -3.5 covers 35.4% vs market 49.6%.",
                 "Projected margin PHI -1.2 vs line PHI -3.5.",
                 "POR L5 WLLWL (MOV 5.8), PHI L5 WWWWW (MOV 2.9)",
                 "pace: projected total +0.2 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (35% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (35% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [
                 "line move: spread moved against this side (-2.5 -> -3.5)"
               ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at +109 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }
@@ -230,28 +232,28 @@
               "selection": "POR +3.5",
               "side": "away",
               "line": 3.5,
-              "odds": -116.0,
+              "odds": -112.0,
               "model_raw": 0.6465,
-              "model_prob": 0.513,
-              "market_prob": 0.513,
-              "fair_odds": -105,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
               "edge_at_price": -0.024,
-              "ev": -0.0447,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model POR +3.5 covers 64.6% vs market 51.3%.",
+                "Model POR +3.5 covers 64.6% vs market 50.4%.",
                 "Projected margin PHI -1.2 vs line PHI -3.5.",
                 "POR L5 WLLWL (MOV 5.8), PHI L5 WWWWW (MOV 2.9)",
                 "pace: projected total +0.2 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (65% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (65% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -101 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -266,31 +268,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 229.5",
+              "selection": "Under 232.5",
               "side": "under",
-              "line": 229.5,
-              "odds": -110.0,
-              "model_raw": 0.5115,
-              "model_prob": 0.502,
-              "market_prob": 0.5,
-              "fair_odds": -101,
-              "edge": 0.002,
-              "edge_at_price": -0.0219,
-              "ev": -0.0417,
+              "line": 232.5,
+              "odds": -115.0,
+              "model_raw": 0.5731,
+              "model_prob": 0.5215,
+              "market_prob": 0.5108,
+              "fair_odds": -109,
+              "edge": 0.0107,
+              "edge_at_price": -0.0134,
+              "ev": -0.025,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 229.5: 51.1% vs market 50.0%.",
-                "Projected total 228.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 228.5 -> 229.5.",
+                "Model under 232.5: 57.3% vs market 51.1%.",
+                "Projected total 228.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 228.5 -> 232.5.",
                 "POR L5 WLLWL (MOV 5.8), PHI L5 WWWWW (MOV 2.9)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
               "caution": [
-                "line move: market moved against the under (228.5 -> 229.5)"
+                "line move: market moved against the under (228.5 -> 232.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +103 or better.",
+              "next_step": "Pass. Only interesting at -105 or better.",
               "proven": true
             }
           }
@@ -300,31 +302,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 229.5",
+              "selection": "Over 232.5",
               "side": "over",
-              "line": 229.5,
-              "odds": -110.0,
-              "model_raw": 0.4885,
-              "model_prob": 0.498,
-              "market_prob": 0.5,
-              "fair_odds": 101,
-              "edge": -0.002,
-              "edge_at_price": -0.0258,
-              "ev": -0.0492,
+              "line": 232.5,
+              "odds": -105.0,
+              "model_raw": 0.4269,
+              "model_prob": 0.4785,
+              "market_prob": 0.4892,
+              "fair_odds": 109,
+              "edge": -0.0107,
+              "edge_at_price": -0.0337,
+              "ev": -0.0658,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 229.5: 48.9% vs market 50.0%.",
-                "Projected total 228.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 228.5 -> 229.5.",
+                "Model over 232.5: 42.7% vs market 48.9%.",
+                "Projected total 228.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 228.5 -> 232.5.",
                 "POR L5 WLLWL (MOV 5.8), PHI L5 WWWWW (MOV 2.9)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
               ],
               "flags": [],
               "caution": [
-                "line move: total already moved toward over (228.5 -> 229.5); value may be gone"
+                "line move: total already moved toward over (228.5 -> 232.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +105 or better.",
+              "next_step": "Pass. Only interesting at +113 or better.",
               "proven": true
             }
           }
