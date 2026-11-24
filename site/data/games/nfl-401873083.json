@@ -24,24 +24,104 @@
   },
   "score": null,
   "analyzed": true,
-  "odds_feed": "espn",
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betmgm",
+    "betonlineag",
+    "betrivers",
+    "betus",
+    "draftkings",
+    "fanduel",
+    "lowvig",
+    "mybookieag"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/34118077"
+    "draftkings": "https://sportsbook.draftkings.com/event/34118077",
+    "fanduel": "https://sportsbook.fanduel.com/football/nfl/denver-broncos-%40-pittsburgh-steelers-35610249",
+    "betmgm": "https://sports.oh.betmgm.com/en/sports/events/denver-broncos-@-pittsburgh-steelers-6%3A44072",
+    "betrivers": "https://oh.betrivers.com/?page=sportsbook#event/1028824892"
   },
   "lines": {
     "draftkings": {
-      "ml_home": 132.0,
-      "ml_away": -156.0,
+      "ml_home": 131.0,
+      "ml_away": -155.0,
       "spread_home": 3.0,
       "spread_home_odds": -115.0,
       "spread_away": -3.0,
       "spread_away_odds": -104.0,
+      "total": 38.5,
+      "over_odds": -104.0,
+      "under_odds": -115.0
+    },
+    "fanduel": {
+      "ml_home": 120.0,
+      "ml_away": -142.0,
+      "spread_home": 2.5,
+      "spread_home_odds": -105.0,
+      "spread_away": -2.5,
+      "spread_away_odds": -115.0,
       "total": 37.5,
       "over_odds": -115.0,
-      "under_odds": -104.0
+      "under_odds": -105.0
+    },
+    "betmgm": {
+      "ml_home": 125.0,
+      "ml_away": -145.0,
+      "spread_home": 2.5,
+      "spread_home_odds": -102.0,
+      "spread_away": -2.5,
+      "spread_away_odds": -118.0,
+      "total": 37.5,
+      "over_odds": -110.0,
+      "under_odds": -108.0
+    },
+    "betrivers": {
+      "ml_home": 128.0,
+      "ml_away": -155.0,
+      "spread_home": 3.0,
+      "spread_home_odds": -112.0,
+      "spread_away": -3.0,
+      "spread_away_odds": -109.0,
+      "total": 38.5,
+      "over_odds": -108.0,
+      "under_odds": -113.0
+    },
+    "betonlineag": {
+      "ml_home": 128.0,
+      "ml_away": -148.0,
+      "spread_home": 2.5,
+      "spread_home_odds": -103.0,
+      "spread_away": -2.5,
+      "spread_away_odds": -117.0,
+      "total": 38.0,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "lowvig": {
+      "ml_home": 128.0,
+      "ml_away": -148.0,
+      "spread_home": 2.5,
+      "spread_home_odds": 102.0,
+      "spread_away": -2.5,
+      "spread_away_odds": -113.0,
+      "total": 38.0,
+      "over_odds": -107.0,
+      "under_odds": -107.0
+    },
+    "betus": {
+      "ml_home": 128.0,
+      "ml_away": -148.0,
+      "spread_home": 2.0,
+      "spread_home_odds": 100.0,
+      "spread_away": -2.0,
+      "spread_away_odds": -120.0,
+      "total": 38.0,
+      "over_odds": -110.0,
+      "under_odds": -110.0
+    },
+    "mybookieag": {
+      "ml_home": 124.0,
+      "ml_away": -152.0
     }
   },
   "badge": null,
@@ -54,43 +134,37 @@
   "injuries": {
     "home": [
       {
+        "name": "Michael Pittman Jr.",
+        "status": "Injured Reserve",
+        "pos": "WR",
+        "key": false
+      },
+      {
         "name": "Alex Highsmith",
-        "status": "Questionable",
+        "status": "Doubtful",
         "pos": "LB",
         "key": false
       },
       {
-        "name": "Kaden Wetjen",
+        "name": "Nick Herbig",
         "status": "Out",
-        "pos": "WR",
+        "pos": "LB",
         "key": false
       },
       {
-        "name": "Will Howard",
-        "status": "Out",
-        "pos": "QB",
-        "key": true
-      },
-      {
-        "name": "Gabriel Rubio",
-        "status": "Out",
-        "pos": "DE",
+        "name": "Gennings Dunker",
+        "status": "Injured Reserve",
+        "pos": "G",
         "key": false
       },
       {
-        "name": "Sean Murphy-Bunting",
-        "status": "Out",
-        "pos": "CB",
+        "name": "Mason McCormick",
+        "status": "Injured Reserve",
+        "pos": "G",
         "key": false
       }
     ],
     "away": [
-      {
-        "name": "Lil'Jordan Humphrey",
-        "status": "Out",
-        "pos": "WR",
-        "key": false
-      },
       {
         "name": "Brandon Jones",
         "status": "Out",
@@ -98,21 +172,27 @@
         "key": false
       },
       {
-        "name": "Sam Ehlinger",
-        "status": "Out",
-        "pos": "QB",
-        "key": true
-      },
-      {
-        "name": "Gavin Ortega",
-        "status": "Out",
-        "pos": "OT",
+        "name": "Caleb Lohner",
+        "status": "Injured Reserve",
+        "pos": "TE",
         "key": false
       },
       {
-        "name": "Kage Casey",
-        "status": "Out",
-        "pos": "OT",
+        "name": "Eyioma Uwazurike",
+        "status": "Injured Reserve",
+        "pos": "DE",
+        "key": false
+      },
+      {
+        "name": "RJ Harvey",
+        "status": "Injured Reserve",
+        "pos": "RB",
+        "key": false
+      },
+      {
+        "name": "Tyler Badie",
+        "status": "Injured Reserve",
+        "pos": "RB",
         "key": false
       }
     ]
@@ -133,31 +213,207 @@
               "selection": "PIT ML",
               "side": "home",
               "line": null,
-              "odds": 132.0,
+              "odds": 131.0,
               "model_raw": 0.4112,
-              "model_prob": 0.4143,
-              "market_prob": 0.4143,
-              "fair_odds": 141,
+              "model_prob": 0.416,
+              "market_prob": 0.416,
+              "fair_odds": 140,
               "edge": 0.0,
-              "edge_at_price": -0.0167,
-              "ev": -0.0388,
+              "edge_at_price": -0.0169,
+              "ev": -0.0391,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model PIT win 41.1% vs market no-vig 41.4%.",
-                "v2 projected margin PIT -3.0 (ratings PIT -0.1, DEN +4.4, home edge 1.5); raw model 41.1%.",
-                "DEN L5 WWWWW (MOV 2.6), PIT L5 WWWLL (MOV 1.3)",
-                "PIT key player(s) out: Will Howard (not in the rating; the market has usually priced this)",
-                "DEN key player(s) out: Sam Ehlinger (not in the rating; the market has usually priced this)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
               "flags": [],
-              "caution": [
-                "line move: price drifted against this side (-102 -> +132)",
-                "injury: Will Howard out for this side and the rating doesn't know it"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +145 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 120.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4365,
+              "market_prob": 0.4365,
+              "fair_odds": 129,
+              "edge": 0.0,
+              "edge_at_price": -0.018,
+              "ev": -0.0397,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
-              "case_against": "Market makes PIT 41%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +146 or better.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +134 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 125.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4289,
+              "market_prob": 0.4289,
+              "fair_odds": 133,
+              "edge": 0.0,
+              "edge_at_price": -0.0156,
+              "ev": -0.035,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +138 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 128.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4191,
+              "market_prob": 0.4191,
+              "fair_odds": 139,
+              "edge": 0.0,
+              "edge_at_price": -0.0195,
+              "ev": -0.0444,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +143 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 128.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4236,
+              "market_prob": 0.4236,
+              "fair_odds": 136,
+              "edge": 0.0,
+              "edge_at_price": -0.015,
+              "ev": -0.0342,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +141 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 128.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4236,
+              "market_prob": 0.4236,
+              "fair_odds": 136,
+              "edge": 0.0,
+              "edge_at_price": -0.015,
+              "ev": -0.0342,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +141 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 128.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4236,
+              "market_prob": 0.4236,
+              "fair_odds": 136,
+              "edge": 0.0,
+              "edge_at_price": -0.015,
+              "ev": -0.0342,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +141 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "PIT ML",
+              "side": "home",
+              "line": null,
+              "odds": 124.0,
+              "model_raw": 0.4112,
+              "model_prob": 0.4253,
+              "market_prob": 0.4253,
+              "fair_odds": 135,
+              "edge": -0.0,
+              "edge_at_price": -0.0211,
+              "ev": -0.0473,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT ML: 41.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +140 or better.",
               "proven": false
             }
           }
@@ -170,30 +426,207 @@
               "selection": "DEN ML",
               "side": "away",
               "line": null,
-              "odds": -156.0,
+              "odds": -155.0,
               "model_raw": 0.5888,
-              "model_prob": 0.5857,
-              "market_prob": 0.5857,
-              "fair_odds": -141,
+              "model_prob": 0.584,
+              "market_prob": 0.584,
+              "fair_odds": -140,
               "edge": 0.0,
-              "edge_at_price": -0.0237,
-              "ev": -0.0388,
+              "edge_at_price": -0.0238,
+              "ev": -0.0391,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model DEN win 58.9% vs market no-vig 58.6%.",
-                "v2 projected margin PIT -3.0 (ratings PIT -0.1, DEN +4.4, home edge 1.5); raw model 58.9%.",
-                "DEN L5 WWWWW (MOV 2.6), PIT L5 WWWLL (MOV 1.3)",
-                "PIT key player(s) out: Will Howard (not in the rating; the market has usually priced this)",
-                "DEN key player(s) out: Sam Ehlinger (not in the rating; the market has usually priced this)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
               "flags": [],
-              "caution": [
-                "injury: Sam Ehlinger out for this side and the rating doesn't know it"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -134 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -142.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5635,
+              "market_prob": 0.5635,
+              "fair_odds": -129,
+              "edge": 0.0,
+              "edge_at_price": -0.0233,
+              "ev": -0.0397,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
-              "case_against": "Market makes DEN 59%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
-              "next_step": "Pass. Only interesting at -135 or better.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -123 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -145.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5711,
+              "market_prob": 0.5711,
+              "fair_odds": -133,
+              "edge": -0.0,
+              "edge_at_price": -0.0207,
+              "ev": -0.035,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -127 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -155.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5809,
+              "market_prob": 0.5809,
+              "fair_odds": -139,
+              "edge": 0.0,
+              "edge_at_price": -0.027,
+              "ev": -0.0444,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -132 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -148.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5764,
+              "market_prob": 0.5764,
+              "fair_odds": -136,
+              "edge": 0.0,
+              "edge_at_price": -0.0204,
+              "ev": -0.0342,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -130 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -148.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5764,
+              "market_prob": 0.5764,
+              "fair_odds": -136,
+              "edge": 0.0,
+              "edge_at_price": -0.0204,
+              "ev": -0.0342,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -130 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -148.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5764,
+              "market_prob": 0.5764,
+              "fair_odds": -136,
+              "edge": 0.0,
+              "edge_at_price": -0.0204,
+              "ev": -0.0342,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -130 or better.",
+              "proven": false
+            },
+            "mybookieag": {
+              "market": "ML",
+              "selection": "DEN ML",
+              "side": "away",
+              "line": null,
+              "odds": -152.0,
+              "model_raw": 0.5888,
+              "model_prob": 0.5747,
+              "market_prob": 0.5747,
+              "fair_odds": -135,
+              "edge": 0.0,
+              "edge_at_price": -0.0285,
+              "ev": -0.0473,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN ML: 58.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -129 or better.",
               "proven": false
             }
           }
@@ -222,19 +655,170 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model PIT +3 covers 49.9% vs market 51.2%.",
-                "Projected margin PIT -3.0 vs line PIT +3.",
-                "DEN L5 WWWWW (MOV 2.6), PIT L5 WWWLL (MOV 1.3)",
-                "PIT key player(s) out: Will Howard (not in the rating; the market has usually priced this)",
-                "DEN key player(s) out: Sam Ehlinger (not in the rating; the market has usually priced this)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model PIT +3: 49.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
               "flags": [],
-              "caution": [
-                "injury: Will Howard out for this side and the rating doesn't know it"
-              ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -101 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "PIT +2.5",
+              "side": "home",
+              "line": 2.5,
+              "odds": -105.0,
+              "model_raw": 0.4843,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT +2.5: 48.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "PIT +2.5",
+              "side": "home",
+              "line": 2.5,
+              "odds": -102.0,
+              "model_raw": 0.4843,
+              "model_prob": 0.4826,
+              "market_prob": 0.4826,
+              "fair_odds": 107,
+              "edge": 0.0,
+              "edge_at_price": -0.0223,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT +2.5: 48.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "PIT +3",
+              "side": "home",
+              "line": 3.0,
+              "odds": -112.0,
+              "model_raw": 0.4991,
+              "model_prob": 0.5032,
+              "market_prob": 0.5032,
+              "fair_odds": -101,
+              "edge": 0.0,
+              "edge_at_price": -0.0251,
+              "ev": -0.0475,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT +3: 49.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "PIT +2.5",
+              "side": "home",
+              "line": 2.5,
+              "odds": -103.0,
+              "model_raw": 0.4843,
+              "model_prob": 0.4848,
+              "market_prob": 0.4848,
+              "fair_odds": 106,
+              "edge": 0.0,
+              "edge_at_price": -0.0226,
+              "ev": -0.0445,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT +2.5: 48.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +110 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "PIT +2.5",
+              "side": "home",
+              "line": 2.5,
+              "odds": 102.0,
+              "model_raw": 0.4843,
+              "model_prob": 0.4827,
+              "market_prob": 0.4827,
+              "fair_odds": 107,
+              "edge": 0.0,
+              "edge_at_price": -0.0123,
+              "ev": -0.0249,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT +2.5: 48.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +111 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "PIT +2",
+              "side": "home",
+              "line": 2.0,
+              "odds": 100.0,
+              "model_raw": 0.4695,
+              "model_prob": 0.4783,
+              "market_prob": 0.4783,
+              "fair_odds": 109,
+              "edge": 0.0,
+              "edge_at_price": -0.0217,
+              "ev": -0.0435,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PIT +2: 47.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +113 or better.",
               "proven": false
             }
           }
@@ -258,20 +842,170 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model DEN -3 covers 50.1% vs market 48.8%.",
-                "Projected margin PIT -3.0 vs line PIT +3.",
-                "DEN L5 WWWWW (MOV 2.6), PIT L5 WWWLL (MOV 1.3)",
-                "PIT key player(s) out: Will Howard (not in the rating; the market has usually priced this)",
-                "DEN key player(s) out: Sam Ehlinger (not in the rating; the market has usually priced this)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model DEN -3: 50.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
               "flags": [],
-              "caution": [
-                "line move: spread moved against this side (-1.5 -> -3)",
-                "injury: Sam Ehlinger out for this side and the rating doesn't know it"
-              ],
-              "case_against": "Margin s.d. is ~13.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "DEN -2.5",
+              "side": "away",
+              "line": -2.5,
+              "odds": -115.0,
+              "model_raw": 0.5157,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN -2.5: 51.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "DEN -2.5",
+              "side": "away",
+              "line": -2.5,
+              "odds": -118.0,
+              "model_raw": 0.5157,
+              "model_prob": 0.5174,
+              "market_prob": 0.5174,
+              "fair_odds": -107,
+              "edge": -0.0,
+              "edge_at_price": -0.0239,
+              "ev": -0.0442,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN -2.5: 51.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -103 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "DEN -3",
+              "side": "away",
+              "line": -3.0,
+              "odds": -109.0,
+              "model_raw": 0.5009,
+              "model_prob": 0.4968,
+              "market_prob": 0.4968,
+              "fair_odds": 101,
+              "edge": 0.0,
+              "edge_at_price": -0.0248,
+              "ev": -0.0475,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN -3: 50.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "DEN -2.5",
+              "side": "away",
+              "line": -2.5,
+              "odds": -117.0,
+              "model_raw": 0.5157,
+              "model_prob": 0.5152,
+              "market_prob": 0.5152,
+              "fair_odds": -106,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0445,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN -2.5: 51.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -102 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "DEN -2.5",
+              "side": "away",
+              "line": -2.5,
+              "odds": -113.0,
+              "model_raw": 0.5157,
+              "model_prob": 0.5173,
+              "market_prob": 0.5173,
+              "fair_odds": -107,
+              "edge": 0.0,
+              "edge_at_price": -0.0132,
+              "ev": -0.0249,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN -2.5: 51.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -103 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Spread",
+              "selection": "DEN -2",
+              "side": "away",
+              "line": -2.0,
+              "odds": -120.0,
+              "model_raw": 0.5305,
+              "model_prob": 0.5217,
+              "market_prob": 0.5217,
+              "fair_odds": -109,
+              "edge": 0.0,
+              "edge_at_price": -0.0237,
+              "ev": -0.0435,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DEN -2: 53.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -105 or better.",
               "proven": false
             }
           }
@@ -286,45 +1020,11 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 37.5",
+              "selection": "Over 38.5",
               "side": "over",
-              "line": 37.5,
-              "odds": -115.0,
-              "model_raw": 0.6039,
-              "model_prob": 0.512,
-              "market_prob": 0.512,
-              "fair_odds": -105,
-              "edge": 0.0,
-              "edge_at_price": -0.0229,
-              "ev": -0.0428,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model over 37.5: 60.4% vs market 51.2%.",
-                "Projected total 41.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 41.5 -> 37.5.",
-                "DEN L5 WWWWW (MOV 2.6), PIT L5 WWWLL (MOV 1.3)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [],
-              "caution": [
-                "line move: market moved against the over (41.5 -> 37.5)"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -101 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 37.5",
-              "side": "under",
-              "line": 37.5,
+              "line": 38.5,
               "odds": -104.0,
-              "model_raw": 0.3961,
+              "model_raw": 0.5758,
               "model_prob": 0.488,
               "market_prob": 0.488,
               "fair_odds": 105,
@@ -334,17 +1034,357 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 37.5: 39.6% vs market 48.8%.",
-                "Projected total 41.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 41.5 -> 37.5.",
-                "DEN L5 WWWWW (MOV 2.6), PIT L5 WWWLL (MOV 1.3)",
-                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model Over 38.5: 57.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
               ],
               "flags": [],
-              "caution": [
-                "line move: total already moved toward under (41.5 -> 37.5); value may be gone"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Over 37.5",
+              "side": "over",
+              "line": 37.5,
+              "odds": -115.0,
+              "model_raw": 0.6039,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 37.5: 60.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Over 37.5",
+              "side": "over",
+              "line": 37.5,
+              "odds": -110.0,
+              "model_raw": 0.6039,
+              "model_prob": 0.5022,
+              "market_prob": 0.5022,
+              "fair_odds": -101,
+              "edge": -0.0,
+              "edge_at_price": -0.0216,
+              "ev": -0.0413,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 37.5: 60.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 38.5",
+              "side": "over",
+              "line": 38.5,
+              "odds": -108.0,
+              "model_raw": 0.5758,
+              "model_prob": 0.4946,
+              "market_prob": 0.4946,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0246,
+              "ev": -0.0474,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 38.5: 57.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 38",
+              "side": "over",
+              "line": 38.0,
+              "odds": -110.0,
+              "model_raw": 0.5899,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 38: 59.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 38",
+              "side": "over",
+              "line": 38.0,
+              "odds": -107.0,
+              "model_raw": 0.5899,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0169,
+              "ev": -0.0327,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 38: 59.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Over 38",
+              "side": "over",
+              "line": 38.0,
+              "odds": -110.0,
+              "model_raw": 0.5899,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 38: 59.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 38.5",
+              "side": "under",
+              "line": 38.5,
+              "odds": -115.0,
+              "model_raw": 0.4242,
+              "model_prob": 0.512,
+              "market_prob": 0.512,
+              "fair_odds": -105,
+              "edge": 0.0,
+              "edge_at_price": -0.0229,
+              "ev": -0.0428,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 38.5: 42.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -101 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 37.5",
+              "side": "under",
+              "line": 37.5,
+              "odds": -105.0,
+              "model_raw": 0.3961,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 37.5: 39.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 37.5",
+              "side": "under",
+              "line": 37.5,
+              "odds": -108.0,
+              "model_raw": 0.3961,
+              "model_prob": 0.4978,
+              "market_prob": 0.4978,
+              "fair_odds": 101,
+              "edge": -0.0,
+              "edge_at_price": -0.0214,
+              "ev": -0.0413,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 37.5: 39.6%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 38.5",
+              "side": "under",
+              "line": 38.5,
+              "odds": -113.0,
+              "model_raw": 0.4242,
+              "model_prob": 0.5054,
+              "market_prob": 0.5054,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.0251,
+              "ev": -0.0474,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 38.5: 42.4%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 38",
+              "side": "under",
+              "line": 38.0,
+              "odds": -110.0,
+              "model_raw": 0.4101,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 38: 41.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 38",
+              "side": "under",
+              "line": 38.0,
+              "odds": -107.0,
+              "model_raw": 0.4101,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0169,
+              "ev": -0.0327,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 38: 41.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            },
+            "betus": {
+              "market": "Total",
+              "selection": "Under 38",
+              "side": "under",
+              "line": 38.0,
+              "odds": -110.0,
+              "model_raw": 0.4101,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 38: 41.0%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin PIT -3.0, total 41.14."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
               "proven": false
             }
           }
@@ -352,5 +1392,1551 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Aaron Rodgers",
+      "player_id": "8439",
+      "team": "Pittsburgh Steelers",
+      "stat": "pass_yds",
+      "stat_label": "Pass yds",
+      "line": 199.5,
+      "projection": 218.65,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "12/20",
+        "all": "16/25"
+      },
+      "recent": [
+        227.0,
+        143.0,
+        172.0,
+        212.0,
+        253.0,
+        235.0,
+        299.0,
+        292.0,
+        187.0,
+        221.0
+      ],
+      "ladder": [
+        {
+          "line": 191.5,
+          "p_over": 0.7,
+          "fair_over": -234,
+          "fair_under": 234,
+          "L10": "7/10"
+        },
+        {
+          "line": 193.5,
+          "p_over": 0.691,
+          "fair_over": -224,
+          "fair_under": 224,
+          "L10": "7/10"
+        },
+        {
+          "line": 195.5,
+          "p_over": 0.681,
+          "fair_over": -214,
+          "fair_under": 214,
+          "L10": "7/10"
+        },
+        {
+          "line": 197.5,
+          "p_over": 0.671,
+          "fair_over": -204,
+          "fair_under": 204,
+          "L10": "7/10"
+        },
+        {
+          "line": 199.5,
+          "p_over": 0.661,
+          "fair_over": -195,
+          "fair_under": 195,
+          "L10": "7/10"
+        },
+        {
+          "line": 201.5,
+          "p_over": 0.651,
+          "fair_over": -187,
+          "fair_under": 187,
+          "L10": "7/10"
+        },
+        {
+          "line": 203.5,
+          "p_over": 0.641,
+          "fair_over": -178,
+          "fair_under": 178,
+          "L10": "7/10"
+        },
+        {
+          "line": 205.5,
+          "p_over": 0.63,
+          "fair_over": -170,
+          "fair_under": 170,
+          "L10": "7/10"
+        },
+        {
+          "line": 207.5,
+          "p_over": 0.619,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "7/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Rodgers Over 199.5 pass_yds",
+            "side": "over",
+            "line": 199.5,
+            "odds": -113.0,
+            "model_raw": 0.6613,
+            "model_prob": 0.5817,
+            "market_prob": 0.5021,
+            "fair_odds": -139,
+            "edge": 0.0796,
+            "edge_at_price": 0.0512,
+            "ev": 0.0965,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 199.5: 66.1% before shrink, this book's no-vig 50.2%.",
+              "Projection 218.65 (Normal(sd 46.9)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (66% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -133 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Rodgers Under 199.5 pass_yds",
+            "side": "under",
+            "line": 199.5,
+            "odds": -111.0,
+            "model_raw": 0.3387,
+            "model_prob": 0.4183,
+            "market_prob": 0.4979,
+            "fair_odds": 139,
+            "edge": -0.0796,
+            "edge_at_price": -0.1078,
+            "ev": -0.2049,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 199.5: 33.9% before shrink, this book's no-vig 49.8%.",
+              "Projection 218.65 (Normal(sd 46.9)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (34% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +144 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Aaron Rodgers",
+      "player_id": "8439",
+      "team": "Pittsburgh Steelers",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 3.5,
+      "projection": 4.82,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "11/25"
+      },
+      "recent": [
+        29.0,
+        -1.0,
+        0.0,
+        6.0,
+        -1.0,
+        6.0,
+        0.0,
+        10.0,
+        5.0,
+        -3.0
+      ],
+      "ladder": [
+        {
+          "line": 1.5,
+          "p_over": 0.794,
+          "fair_over": -387,
+          "fair_under": 387,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.791,
+          "fair_over": -379,
+          "fair_under": 379,
+          "L10": "5/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.734,
+          "fair_over": -275,
+          "fair_under": 275,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.717,
+          "fair_over": -254,
+          "fair_under": 254,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.636,
+          "fair_over": -175,
+          "fair_under": 175,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.594,
+          "fair_over": -146,
+          "fair_under": 146,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.518,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.437,
+          "fair_over": 129,
+          "fair_under": -129,
+          "L10": "4/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.375,
+          "fair_over": 167,
+          "fair_under": -167,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Rodgers Over 3.5 rush_yds",
+            "side": "over",
+            "line": 3.5,
+            "odds": -108.0,
+            "model_raw": 0.6357,
+            "model_prob": 0.5636,
+            "market_prob": 0.4916,
+            "fair_odds": -129,
+            "edge": 0.0721,
+            "edge_at_price": 0.0444,
+            "ev": 0.0855,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 3.5: 63.6% before shrink, this book's no-vig 49.2%.",
+              "Projection 4.82 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (64% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -123 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Rodgers Under 3.5 rush_yds",
+            "side": "under",
+            "line": 3.5,
+            "odds": -116.0,
+            "model_raw": 0.3643,
+            "model_prob": 0.4364,
+            "market_prob": 0.5084,
+            "fair_odds": 129,
+            "edge": -0.0721,
+            "edge_at_price": -0.1007,
+            "ev": -0.1875,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 3.5: 36.4% before shrink, this book's no-vig 50.8%.",
+              "Projection 4.82 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 9/20, all 11/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (36% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +134 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bo Nix",
+      "player_id": "4426338",
+      "team": "Denver Broncos",
+      "stat": "pass_yds",
+      "stat_label": "Pass yds",
+      "line": 214.5,
+      "projection": 207.38,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "5/10",
+        "L20": "10/20",
+        "all": "14/25"
+      },
+      "recent": [
+        225.0,
+        237.0,
+        222.0,
+        222.0,
+        107.0,
+        123.0,
+        214.0,
+        186.0,
+        288.0,
+        131.0
+      ],
+      "ladder": [
+        {
+          "line": 206.5,
+          "p_over": 0.533,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "6/10"
+        },
+        {
+          "line": 208.5,
+          "p_over": 0.524,
+          "fair_over": -110,
+          "fair_under": 110,
+          "L10": "6/10"
+        },
+        {
+          "line": 210.5,
+          "p_over": 0.514,
+          "fair_over": -106,
+          "fair_under": 106,
+          "L10": "6/10"
+        },
+        {
+          "line": 212.5,
+          "p_over": 0.505,
+          "fair_over": -102,
+          "fair_under": 102,
+          "L10": "6/10"
+        },
+        {
+          "line": 214.5,
+          "p_over": 0.467,
+          "fair_over": 114,
+          "fair_under": -114,
+          "L10": "5/10"
+        },
+        {
+          "line": 216.5,
+          "p_over": 0.457,
+          "fair_over": 119,
+          "fair_under": -119,
+          "L10": "5/10"
+        },
+        {
+          "line": 218.5,
+          "p_over": 0.448,
+          "fair_over": 123,
+          "fair_under": -123,
+          "L10": "5/10"
+        },
+        {
+          "line": 220.5,
+          "p_over": 0.439,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "5/10"
+        },
+        {
+          "line": 222.5,
+          "p_over": 0.371,
+          "fair_over": 169,
+          "fair_under": -169,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bo Nix Over 214.5 pass_yds",
+            "side": "over",
+            "line": 214.5,
+            "odds": -112.0,
+            "model_raw": 0.4665,
+            "model_prob": 0.4833,
+            "market_prob": 0.5,
+            "fair_odds": 107,
+            "edge": -0.0167,
+            "edge_at_price": -0.0451,
+            "ev": -0.0853,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 214.5: 46.7% before shrink, this book's no-vig 50.0%.",
+              "Projection 207.38 (Normal(sd 55.0)).",
+              "Hit rate over L5 4/5, L10 5/10, L20 10/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +111 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bo Nix Under 214.5 pass_yds",
+            "side": "under",
+            "line": 214.5,
+            "odds": -112.0,
+            "model_raw": 0.5335,
+            "model_prob": 0.5168,
+            "market_prob": 0.5,
+            "fair_odds": -107,
+            "edge": 0.0168,
+            "edge_at_price": -0.0116,
+            "ev": -0.0219,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 214.5: 53.3% before shrink, this book's no-vig 50.0%.",
+              "Projection 207.38 (Normal(sd 55.0)).",
+              "Hit rate over L5 4/5, L10 5/10, L20 10/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -103 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bo Nix",
+      "player_id": "4426338",
+      "team": "Denver Broncos",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 12.5,
+      "projection": 14.22,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/10",
+        "L20": "7/20",
+        "all": "10/25"
+      },
+      "recent": [
+        5.0,
+        2.0,
+        4.0,
+        73.0,
+        2.0,
+        10.0,
+        10.0,
+        7.0,
+        6.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 10.5,
+          "p_over": 0.43,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "1/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.425,
+          "fair_over": 135,
+          "fair_under": -135,
+          "L10": "1/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.418,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "1/10"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.412,
+          "fair_over": 143,
+          "fair_under": -143,
+          "L10": "1/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.405,
+          "fair_over": 147,
+          "fair_under": -147,
+          "L10": "1/10"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.399,
+          "fair_over": 151,
+          "fair_under": -151,
+          "L10": "1/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.392,
+          "fair_over": 155,
+          "fair_under": -155,
+          "L10": "1/10"
+        },
+        {
+          "line": 14.0,
+          "p_over": 0.386,
+          "fair_over": 159,
+          "fair_under": -159,
+          "L10": "1/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.38,
+          "fair_over": 163,
+          "fair_under": -163,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bo Nix Over 12.5 rush_yds",
+            "side": "over",
+            "line": 12.5,
+            "odds": -110.0,
+            "model_raw": 0.4051,
+            "model_prob": 0.4504,
+            "market_prob": 0.4958,
+            "fair_odds": 122,
+            "edge": -0.0453,
+            "edge_at_price": -0.0734,
+            "ev": -0.1401,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 12.5: 40.5% before shrink, this book's no-vig 49.6%.",
+              "Projection 14.22 (Normal(sd 20.5)).",
+              "Hit rate over L5 1/5, L10 1/10, L20 7/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +126 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bo Nix Under 12.5 rush_yds",
+            "side": "under",
+            "line": 12.5,
+            "odds": -114.0,
+            "model_raw": 0.5949,
+            "model_prob": 0.5496,
+            "market_prob": 0.5042,
+            "fair_odds": -122,
+            "edge": 0.0453,
+            "edge_at_price": 0.0168,
+            "ev": 0.0316,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 12.5: 59.5% before shrink, this book's no-vig 50.4%.",
+              "Projection 14.22 (Normal(sd 20.5)).",
+              "Hit rate over L5 1/5, L10 1/10, L20 7/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -117 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jaylen Warren",
+      "player_id": "4569987",
+      "team": "Pittsburgh Steelers",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 60.5,
+      "projection": 71.43,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "11/20",
+        "all": "13/25"
+      },
+      "recent": [
+        28.0,
+        15.0,
+        143.0,
+        101.0,
+        50.0,
+        101.0,
+        93.0,
+        127.0,
+        43.0,
+        46.0
+      ],
+      "ladder": [
+        {
+          "line": 52.5,
+          "p_over": 0.614,
+          "fair_over": -159,
+          "fair_under": 159,
+          "L10": "5/10"
+        },
+        {
+          "line": 54.5,
+          "p_over": 0.603,
+          "fair_over": -152,
+          "fair_under": 152,
+          "L10": "5/10"
+        },
+        {
+          "line": 56.5,
+          "p_over": 0.591,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "5/10"
+        },
+        {
+          "line": 58.5,
+          "p_over": 0.579,
+          "fair_over": -138,
+          "fair_under": 138,
+          "L10": "5/10"
+        },
+        {
+          "line": 60.5,
+          "p_over": 0.567,
+          "fair_over": -131,
+          "fair_under": 131,
+          "L10": "5/10"
+        },
+        {
+          "line": 62.5,
+          "p_over": 0.555,
+          "fair_over": -125,
+          "fair_under": 125,
+          "L10": "5/10"
+        },
+        {
+          "line": 64.5,
+          "p_over": 0.543,
+          "fair_over": -119,
+          "fair_under": 119,
+          "L10": "5/10"
+        },
+        {
+          "line": 66.5,
+          "p_over": 0.531,
+          "fair_over": -113,
+          "fair_under": 113,
+          "L10": "5/10"
+        },
+        {
+          "line": 68.5,
+          "p_over": 0.518,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Over 60.5 rush_yds",
+            "side": "over",
+            "line": 60.5,
+            "odds": -112.0,
+            "model_raw": 0.5674,
+            "model_prob": 0.5337,
+            "market_prob": 0.5,
+            "fair_odds": -114,
+            "edge": 0.0337,
+            "edge_at_price": 0.0054,
+            "ev": 0.0102,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 60.5: 56.7% before shrink, this book's no-vig 50.0%.",
+              "Projection 71.43 (Normal(sd 41.6)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -110 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Under 60.5 rush_yds",
+            "side": "under",
+            "line": 60.5,
+            "odds": -112.0,
+            "model_raw": 0.4326,
+            "model_prob": 0.4663,
+            "market_prob": 0.5,
+            "fair_odds": 114,
+            "edge": -0.0337,
+            "edge_at_price": -0.062,
+            "ev": -0.1174,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 60.5: 43.3% before shrink, this book's no-vig 50.0%.",
+              "Projection 71.43 (Normal(sd 41.6)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +119 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jaylen Warren",
+      "player_id": "4569987",
+      "team": "Pittsburgh Steelers",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 16.5,
+      "projection": 28.06,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "8/10",
+        "L20": "11/20",
+        "all": "13/25"
+      },
+      "recent": [
+        1.0,
+        26.0,
+        0.0,
+        36.0,
+        28.0,
+        87.0,
+        33.0,
+        49.0,
+        34.0,
+        27.0
+      ],
+      "ladder": [
+        {
+          "line": 12.5,
+          "p_over": 0.749,
+          "fair_over": -298,
+          "fair_under": 298,
+          "L10": "8/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.74,
+          "fair_over": -285,
+          "fair_under": 285,
+          "L10": "8/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.731,
+          "fair_over": -271,
+          "fair_under": 271,
+          "L10": "8/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.721,
+          "fair_over": -259,
+          "fair_under": 259,
+          "L10": "8/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.711,
+          "fair_over": -247,
+          "fair_under": 247,
+          "L10": "8/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.701,
+          "fair_over": -235,
+          "fair_under": 235,
+          "L10": "8/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.691,
+          "fair_over": -224,
+          "fair_under": 224,
+          "L10": "8/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.681,
+          "fair_over": -213,
+          "fair_under": 213,
+          "L10": "8/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.67,
+          "fair_over": -203,
+          "fair_under": 203,
+          "L10": "8/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Over 16.5 rec_yds",
+            "side": "over",
+            "line": 16.5,
+            "odds": -111.0,
+            "model_raw": 0.7114,
+            "model_prob": 0.6046,
+            "market_prob": 0.4979,
+            "fair_odds": -153,
+            "edge": 0.1068,
+            "edge_at_price": 0.0786,
+            "ev": 0.1494,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 16.5: 71.1% before shrink, this book's no-vig 49.8%.",
+              "Projection 28.06 (Normal(sd 23.2)).",
+              "Hit rate over L5 3/5, L10 8/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (71% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (71% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -146 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Under 16.5 rec_yds",
+            "side": "under",
+            "line": 16.5,
+            "odds": -113.0,
+            "model_raw": 0.2886,
+            "model_prob": 0.3954,
+            "market_prob": 0.5021,
+            "fair_odds": 153,
+            "edge": -0.1068,
+            "edge_at_price": -0.1352,
+            "ev": -0.2548,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 16.5: 28.9% before shrink, this book's no-vig 50.2%.",
+              "Projection 28.06 (Normal(sd 23.2)).",
+              "Hit rate over L5 3/5, L10 8/10, L20 11/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (29% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (29% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +158 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jaylen Warren",
+      "player_id": "4569987",
+      "team": "Pittsburgh Steelers",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.34,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "6/20",
+        "all": "7/25"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.275,
+          "fair_over": 264,
+          "fair_under": -264,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.103,
+          "fair_over": 868,
+          "fair_under": -868,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.088,
+          "fair_over": 1031,
+          "fair_under": -1031,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.035,
+          "fair_over": 2736,
+          "fair_under": -2736,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.032,
+          "fair_over": 2979,
+          "fair_under": -2979,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jaylen Warren Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 175.0,
+            "model_raw": 0.2748,
+            "model_prob": 0.3114,
+            "market_prob": 0.348,
+            "fair_odds": 221,
+            "edge": -0.0366,
+            "edge_at_price": -0.0522,
+            "ev": -0.1436,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 27.5% before shrink, this book's no-vig 34.8%.",
+              "Projection 0.34 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 6/20, all 7/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +228 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jonah Coleman",
+      "player_id": "4702555",
+      "team": "Denver Broncos",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 71.5,
+      "projection": 60.4,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/5",
+        "L20": "1/5",
+        "all": "1/5"
+      },
+      "recent": [
+        111.0,
+        57.0,
+        41.0,
+        54.0,
+        39.0
+      ],
+      "ladder": [
+        {
+          "line": 63.5,
+          "p_over": 0.394,
+          "fair_over": 154,
+          "fair_under": -154,
+          "L10": "1/5"
+        },
+        {
+          "line": 65.5,
+          "p_over": 0.375,
+          "fair_over": 167,
+          "fair_under": -167,
+          "L10": "1/5"
+        },
+        {
+          "line": 67.5,
+          "p_over": 0.356,
+          "fair_over": 181,
+          "fair_under": -181,
+          "L10": "1/5"
+        },
+        {
+          "line": 69.5,
+          "p_over": 0.337,
+          "fair_over": 197,
+          "fair_under": -197,
+          "L10": "1/5"
+        },
+        {
+          "line": 71.5,
+          "p_over": 0.319,
+          "fair_over": 214,
+          "fair_under": -214,
+          "L10": "1/5"
+        },
+        {
+          "line": 73.5,
+          "p_over": 0.301,
+          "fair_over": 232,
+          "fair_under": -232,
+          "L10": "1/5"
+        },
+        {
+          "line": 75.5,
+          "p_over": 0.284,
+          "fair_over": 252,
+          "fair_under": -252,
+          "L10": "1/5"
+        },
+        {
+          "line": 77.5,
+          "p_over": 0.267,
+          "fair_over": 274,
+          "fair_under": -274,
+          "L10": "1/5"
+        },
+        {
+          "line": 79.5,
+          "p_over": 0.252,
+          "fair_over": 297,
+          "fair_under": -297,
+          "L10": "1/5"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (5 games)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Over 71.5 rush_yds",
+            "side": "over",
+            "line": 71.5,
+            "odds": -112.0,
+            "model_raw": 0.3186,
+            "model_prob": 0.4093,
+            "market_prob": 0.5,
+            "fair_odds": 144,
+            "edge": -0.0907,
+            "edge_at_price": -0.119,
+            "ev": -0.2253,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 71.5: 31.9% before shrink, this book's no-vig 50.0%.",
+              "Projection 60.4 (Normal(sd 26.3)).",
+              "Hit rate over L5 1/5, L10 1/5, L20 1/5, all 1/5."
+            ],
+            "flags": [
+              "thin sample (5 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (5 games)",
+              "model far from market (32% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (32% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +149 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Under 71.5 rush_yds",
+            "side": "under",
+            "line": 71.5,
+            "odds": -112.0,
+            "model_raw": 0.6814,
+            "model_prob": 0.5907,
+            "market_prob": 0.5,
+            "fair_odds": -144,
+            "edge": 0.0907,
+            "edge_at_price": 0.0624,
+            "ev": 0.1181,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 71.5: 68.1% before shrink, this book's no-vig 50.0%.",
+              "Projection 60.4 (Normal(sd 26.3)).",
+              "Hit rate over L5 1/5, L10 1/5, L20 1/5, all 1/5."
+            ],
+            "flags": [
+              "thin sample (5 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (5 games)",
+              "model far from market (68% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (68% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -138 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jonah Coleman",
+      "player_id": "4702555",
+      "team": "Denver Broncos",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 20.5,
+      "projection": 29.2,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "2/5",
+        "L20": "2/5",
+        "all": "2/5"
+      },
+      "recent": [
+        18.0,
+        31.0,
+        63.0,
+        15.0,
+        19.0
+      ],
+      "ladder": [
+        {
+          "line": 16.5,
+          "p_over": 0.746,
+          "fair_over": -293,
+          "fair_under": 293,
+          "L10": "4/5"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.734,
+          "fair_over": -276,
+          "fair_under": 276,
+          "L10": "4/5"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.672,
+          "fair_over": -205,
+          "fair_under": 205,
+          "L10": "3/5"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.61,
+          "fair_over": -156,
+          "fair_under": 156,
+          "L10": "2/5"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.597,
+          "fair_over": -148,
+          "fair_under": 148,
+          "L10": "2/5"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.584,
+          "fair_over": -140,
+          "fair_under": 140,
+          "L10": "2/5"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.571,
+          "fair_over": -133,
+          "fair_under": 133,
+          "L10": "2/5"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.557,
+          "fair_over": -126,
+          "fair_under": 126,
+          "L10": "2/5"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.543,
+          "fair_over": -119,
+          "fair_under": 119,
+          "L10": "2/5"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (5 games)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Over 20.5 rec_yds",
+            "side": "over",
+            "line": 20.5,
+            "odds": -107.0,
+            "model_raw": 0.5971,
+            "model_prob": 0.5433,
+            "market_prob": 0.4895,
+            "fair_odds": -119,
+            "edge": 0.0538,
+            "edge_at_price": 0.0264,
+            "ev": 0.051,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 20.5: 59.7% before shrink, this book's no-vig 48.9%.",
+              "Projection 29.2 (Normal(sd 17.8)).",
+              "Hit rate over L5 2/5, L10 2/5, L20 2/5, all 2/5."
+            ],
+            "flags": [
+              "thin sample (5 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (5 games)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Under 20.5 rec_yds",
+            "side": "under",
+            "line": 20.5,
+            "odds": -117.0,
+            "model_raw": 0.4029,
+            "model_prob": 0.4567,
+            "market_prob": 0.5105,
+            "fair_odds": 119,
+            "edge": -0.0538,
+            "edge_at_price": -0.0825,
+            "ev": -0.1529,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 20.5: 40.3% before shrink, this book's no-vig 51.1%.",
+              "Projection 29.2 (Normal(sd 17.8)).",
+              "Hit rate over L5 2/5, L10 2/5, L20 2/5, all 2/5."
+            ],
+            "flags": [
+              "thin sample (5 games)"
+            ],
+            "caution": [
+              "thin data: thin sample (5 games)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +123 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jonah Coleman",
+      "player_id": "4702555",
+      "team": "Denver Broncos",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 1.2,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "4/5",
+        "L20": "4/5",
+        "all": "4/5"
+      },
+      "recent": [
+        3.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/5"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.704,
+          "fair_over": -238,
+          "fair_under": 238,
+          "L10": "4/5"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.518,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "1/5"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.319,
+          "fair_over": 213,
+          "fair_under": -213,
+          "L10": "1/5"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.2,
+          "fair_over": 400,
+          "fair_under": -400,
+          "L10": "1/5"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.178,
+          "fair_over": 461,
+          "fair_under": -461,
+          "L10": "1/5"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "thin sample (5 games)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonah Coleman Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -110.0,
+            "model_raw": 0.7042,
+            "model_prob": 0.6028,
+            "market_prob": 0.5013,
+            "fair_odds": -152,
+            "edge": 0.1015,
+            "edge_at_price": 0.0789,
+            "ev": 0.1507,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 70.4% before shrink, this book's no-vig 50.1%.",
+              "Projection 1.2 (Poisson).",
+              "Hit rate over L5 4/5, L10 4/5, L20 4/5, all 4/5."
+            ],
+            "flags": [
+              "thin sample (5 games)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: thin sample (5 games)",
+              "model far from market (70% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (70% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -144 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }
