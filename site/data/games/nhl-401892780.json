@@ -152,14 +152,8 @@
   "injuries": {
     "home": [
       {
-        "name": "Ryan Nugent-Hopkins",
-        "status": "Day-To-Day",
-        "pos": "C",
-        "key": false
-      },
-      {
         "name": "Zach Hyman",
-        "status": "Day-To-Day",
+        "status": "Out",
         "pos": "LW",
         "key": false
       },
@@ -179,6 +173,12 @@
         "name": "Frederik Andersen",
         "status": "Injured Reserve",
         "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Mattias Janmark",
+        "status": "Injured Reserve",
+        "pos": "C",
         "key": false
       }
     ],
@@ -1641,72 +1641,86 @@
   ],
   "props": [
     {
-      "player": "Connor McDavid",
-      "player_id": "3895074",
-      "team": "Edmonton Oilers",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "line": 0.5,
-      "projection": 1.53,
+      "player": "Brett Howden",
+      "player_id": "4024989",
+      "team": "Vegas Golden Knights",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 1.5,
+      "projection": 1.95,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "8/10",
-        "L20": "18/20",
-        "all": "24/26"
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "8/20",
+        "all": "11/25"
       },
       "recent": [
-        1.0,
-        2.0,
-        0.0,
-        1.0,
-        2.0,
-        1.0,
-        1.0,
-        0.0,
         3.0,
-        3.0
+        3.0,
+        1.0,
+        1.0,
+        5.0,
+        4.0,
+        1.0,
+        1.0,
+        0.0,
+        2.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.772,
-          "fair_over": -339,
-          "fair_under": 339,
-          "L10": "8/10"
+          "p_over": 0.849,
+          "fair_over": -562,
+          "fair_under": 562,
+          "L10": "9/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.659,
-          "fair_over": -193,
-          "fair_under": 193,
-          "L10": "4/10"
+          "p_over": 0.784,
+          "fair_over": -363,
+          "fair_under": 363,
+          "L10": "5/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.44,
-          "fair_over": 127,
-          "fair_under": -127,
-          "L10": "4/10"
+          "p_over": 0.552,
+          "fair_over": -123,
+          "fair_under": 123,
+          "L10": "5/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.279,
-          "fair_over": 259,
-          "fair_under": -259,
-          "L10": "2/10"
+          "p_over": 0.435,
+          "fair_over": 130,
+          "fair_under": -130,
+          "L10": "4/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.217,
-          "fair_over": 361,
-          "fair_under": -361,
+          "p_over": 0.347,
+          "fair_over": 188,
+          "fair_under": -188,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.21,
+          "fair_over": 375,
+          "fair_under": -375,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.174,
+          "fair_over": 474,
+          "fair_under": -474,
           "L10": "2/10"
         }
       ],
@@ -1717,108 +1731,730 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Connor McDavid Over 0.5 ast",
+            "selection": "Brett Howden Over 1.5 sog",
             "side": "over",
-            "line": 0.5,
-            "odds": -245.0,
-            "model_raw": 0.7721,
-            "model_prob": 0.7294,
-            "market_prob": 0.6654,
-            "fair_odds": -270,
-            "edge": 0.064,
-            "edge_at_price": 0.0193,
-            "ev": 0.0271,
-            "tier": "Medium",
+            "line": 1.5,
+            "odds": 110.0,
+            "model_raw": 0.5518,
+            "model_prob": 0.5081,
+            "market_prob": 0.4425,
+            "fair_odds": -103,
+            "edge": 0.0656,
+            "edge_at_price": 0.0319,
+            "ev": 0.0669,
+            "tier": "High",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 77.2% before shrink, this book's no-vig 66.5%.",
-              "Projection 1.53 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
+              "Model over 1.5: 55.2% before shrink, this book's no-vig 44.2%.",
+              "Projection 1.95 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/25."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at -251 or better (current -245); re-check injuries/line 60 min before start.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Connor McDavid Over 0.5 ast",
-            "side": "over",
-            "line": 0.5,
-            "odds": -235.0,
-            "model_raw": 0.7721,
-            "model_prob": 0.7267,
-            "market_prob": 0.6586,
-            "fair_odds": -266,
-            "edge": 0.0681,
-            "edge_at_price": 0.0252,
-            "ev": 0.0359,
-            "tier": "Medium",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 77.2% before shrink, this book's no-vig 65.9%.",
-              "Projection 1.53 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at -248 or better (current -235); re-check injuries/line 60 min before start.",
+            "next_step": "Playable at +101 or better (current +110); re-check injuries/line 60 min before start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Connor McDavid Under 0.5 ast",
+            "selection": "Brett Howden Under 1.5 sog",
             "side": "under",
-            "line": 0.5,
-            "odds": 180.0,
-            "model_raw": 0.2279,
-            "model_prob": 0.2706,
-            "market_prob": 0.3346,
-            "fair_odds": 270,
-            "edge": -0.064,
-            "edge_at_price": -0.0866,
-            "ev": -0.2423,
+            "line": 1.5,
+            "odds": -150.0,
+            "model_raw": 0.4482,
+            "model_prob": 0.4919,
+            "market_prob": 0.5575,
+            "fair_odds": 103,
+            "edge": -0.0656,
+            "edge_at_price": -0.1081,
+            "ev": -0.1801,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 22.8% before shrink, this book's no-vig 33.5%.",
-              "Projection 1.53 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
+              "Model under 1.5: 44.8% before shrink, this book's no-vig 55.8%.",
+              "Projection 1.95 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/20, all 11/25."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +277 or better.",
+            "next_step": "Pass. Only interesting at +107 or better.",
             "proven": false
-          },
-          "betmgm": {
+          }
+        }
+      }
+    },
+    {
+      "player": "Brett Howden",
+      "player_id": "4024989",
+      "team": "Vegas Golden Knights",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.43,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "8/20",
+        "all": "10/25"
+      },
+      "recent": [
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.345,
+          "fair_over": 190,
+          "fair_under": -190,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.134,
+          "fair_over": 649,
+          "fair_under": -649,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.104,
+          "fair_over": 861,
+          "fair_under": -861,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.039,
+          "fair_over": 2493,
+          "fair_under": -2493,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.036,
+          "fair_over": 2716,
+          "fair_under": -2716,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
             "market": "Prop",
-            "selection": "Connor McDavid Under 0.5 ast",
-            "side": "under",
+            "selection": "Brett Howden Over 0.5 pts",
+            "side": "over",
             "line": 0.5,
-            "odds": 175.0,
-            "model_raw": 0.2279,
-            "model_prob": 0.2733,
-            "market_prob": 0.3414,
-            "fair_odds": 266,
-            "edge": -0.0681,
-            "edge_at_price": -0.0903,
-            "ev": -0.2484,
+            "odds": 140.0,
+            "model_raw": 0.3447,
+            "model_prob": 0.3632,
+            "market_prob": 0.3909,
+            "fair_odds": 175,
+            "edge": -0.0277,
+            "edge_at_price": -0.0535,
+            "ev": -0.1283,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 22.8% before shrink, this book's no-vig 34.1%.",
-              "Projection 1.53 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
+              "Model over 0.5: 34.5% before shrink, this book's no-vig 39.1%.",
+              "Projection 0.43 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 10/25."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +181 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brett Howden Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -185.0,
+            "model_raw": 0.6553,
+            "model_prob": 0.6368,
+            "market_prob": 0.6091,
+            "fair_odds": -175,
+            "edge": 0.0277,
+            "edge_at_price": -0.0123,
+            "ev": -0.019,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 65.5% before shrink, this book's no-vig 60.9%.",
+              "Projection 0.43 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 8/20, all 10/25."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +273 or better.",
+            "next_step": "Pass. Only interesting at -166 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Brett Howden",
+      "player_id": "4024989",
+      "team": "Vegas Golden Knights",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.12,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/10",
+        "L20": "3/20",
+        "all": "4/25"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.134,
+          "fair_over": 646,
+          "fair_under": -646,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.037,
+          "fair_over": 2604,
+          "fair_under": -2604,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.034,
+          "fair_over": 2861,
+          "fair_under": -2861,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.029,
+          "fair_over": 3306,
+          "fair_under": -3306,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.029,
+          "fair_over": 3307,
+          "fair_under": -3307,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brett Howden Over 0.5 ast",
+            "side": "over",
+            "line": 0.5,
+            "odds": 300.0,
+            "model_raw": 0.1341,
+            "model_prob": 0.1748,
+            "market_prob": 0.236,
+            "fair_odds": 472,
+            "edge": -0.0611,
+            "edge_at_price": -0.0752,
+            "ev": -0.3006,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 13.4% before shrink, this book's no-vig 23.6%.",
+              "Projection 0.12 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 3/20, all 4/25."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +484 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Brett Howden Under 0.5 ast",
+            "side": "under",
+            "line": 0.5,
+            "odds": -425.0,
+            "model_raw": 0.8659,
+            "model_prob": 0.8252,
+            "market_prob": 0.764,
+            "fair_odds": -472,
+            "edge": 0.0611,
+            "edge_at_price": 0.0156,
+            "ev": 0.0193,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 86.6% before shrink, this book's no-vig 76.4%.",
+              "Projection 0.12 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 3/20, all 4/25."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -424 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Colton Dach",
+      "player_id": "4874940",
+      "team": "Edmonton Oilers",
+      "stat": "sog",
+      "stat_label": "Shots",
+      "line": 1.5,
+      "projection": 1.64,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "11/20",
+        "all": "11/20"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        3.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.757,
+          "fair_over": -312,
+          "fair_under": 312,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.66,
+          "fair_over": -194,
+          "fair_under": 194,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.463,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.345,
+          "fair_over": 189,
+          "fair_under": -189,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.293,
+          "fair_over": 241,
+          "fair_under": -241,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.142,
+          "fair_over": 605,
+          "fair_under": -605,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.113,
+          "fair_over": 783,
+          "fair_under": -783,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Colton Dach Over 1.5 sog",
+            "side": "over",
+            "line": 1.5,
+            "odds": 120.0,
+            "model_raw": 0.463,
+            "model_prob": 0.4466,
+            "market_prob": 0.422,
+            "fair_odds": 124,
+            "edge": 0.0246,
+            "edge_at_price": -0.008,
+            "ev": -0.0175,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 46.3% before shrink, this book's no-vig 42.2%.",
+              "Projection 1.64 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 11/20, all 11/20."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +128 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Colton Dach Under 1.5 sog",
+            "side": "under",
+            "line": 1.5,
+            "odds": -165.0,
+            "model_raw": 0.537,
+            "model_prob": 0.5534,
+            "market_prob": 0.578,
+            "fair_odds": -124,
+            "edge": -0.0246,
+            "edge_at_price": -0.0692,
+            "ev": -0.1112,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 53.7% before shrink, this book's no-vig 57.8%.",
+              "Projection 1.64 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 11/20, all 11/20."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -119 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Colton Dach",
+      "player_id": "4874940",
+      "team": "Edmonton Oilers",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 0.5,
+      "projection": 0.44,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "5/20",
+        "all": "5/20"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.377,
+          "fair_over": 165,
+          "fair_under": -165,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.144,
+          "fair_over": 596,
+          "fair_under": -596,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.106,
+          "fair_over": 848,
+          "fair_under": -848,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.039,
+          "fair_over": 2469,
+          "fair_under": -2469,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.036,
+          "fair_over": 2691,
+          "fair_under": -2691,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Colton Dach Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": 210.0,
+            "model_raw": 0.3772,
+            "model_prob": 0.3473,
+            "market_prob": 0.3026,
+            "fair_odds": 188,
+            "edge": 0.0448,
+            "edge_at_price": 0.0248,
+            "ev": 0.0768,
+            "tier": "High",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 37.7% before shrink, this book's no-vig 30.3%.",
+              "Projection 0.44 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 5/20, all 5/20."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at +194 or better (current +210); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Colton Dach Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": -290.0,
+            "model_raw": 0.6228,
+            "model_prob": 0.6527,
+            "market_prob": 0.6974,
+            "fair_odds": -188,
+            "edge": -0.0448,
+            "edge_at_price": -0.0909,
+            "ev": -0.1223,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 62.3% before shrink, this book's no-vig 69.7%.",
+              "Projection 0.44 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 5/20, all 5/20."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -178 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Colton Dach",
+      "player_id": "4874940",
+      "team": "Edmonton Oilers",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 0.5,
+      "projection": 0.1,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "1/10",
+        "L20": "2/20",
+        "all": "2/20"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.12,
+          "fair_over": 732,
+          "fair_under": -732,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.035,
+          "fair_over": 2744,
+          "fair_under": -2744,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.032,
+          "fair_over": 3005,
+          "fair_under": -3005,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.029,
+          "fair_over": 3317,
+          "fair_under": -3317,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.029,
+          "fair_over": 3317,
+          "fair_under": -3317,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Colton Dach Over 0.5 ast",
+            "side": "over",
+            "line": 0.5,
+            "odds": 370.0,
+            "model_raw": 0.1202,
+            "model_prob": 0.1525,
+            "market_prob": 0.2009,
+            "fair_odds": 556,
+            "edge": -0.0484,
+            "edge_at_price": -0.0603,
+            "ev": -0.2833,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 12.0% before shrink, this book's no-vig 20.1%.",
+              "Projection 0.1 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 2/20, all 2/20."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +569 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Colton Dach Under 0.5 ast",
+            "side": "under",
+            "line": 0.5,
+            "odds": -550.0,
+            "model_raw": 0.8798,
+            "model_prob": 0.8475,
+            "market_prob": 0.7991,
+            "fair_odds": -556,
+            "edge": 0.0484,
+            "edge_at_price": 0.0014,
+            "ev": 0.0016,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 88.0% before shrink, this book's no-vig 79.9%.",
+              "Projection 0.1 (Poisson).",
+              "Hit rate over L5 0/5, L10 1/10, L20 2/20, all 2/20."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -491 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -1951,25 +2587,25 @@
             "selection": "Connor McDavid Over 2.5 sog",
             "side": "over",
             "line": 2.5,
-            "odds": -125.0,
+            "odds": -135.0,
             "model_raw": 0.4792,
-            "model_prob": 0.4956,
-            "market_prob": 0.5203,
-            "fair_odds": 102,
-            "edge": -0.0247,
-            "edge_at_price": -0.0599,
-            "ev": -0.1078,
+            "model_prob": 0.5014,
+            "market_prob": 0.5347,
+            "fair_odds": -101,
+            "edge": -0.0333,
+            "edge_at_price": -0.0731,
+            "ev": -0.1272,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 2.5: 47.9% before shrink, this book's no-vig 52.0%.",
+              "Model over 2.5: 47.9% before shrink, this book's no-vig 53.5%.",
               "Projection 2.55 (Poisson).",
               "Hit rate over L5 1/5, L10 5/10, L20 11/20, all 14/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +106 or better.",
+            "next_step": "Pass. Only interesting at +103 or better.",
             "proven": false
           },
           "betmgm": {
@@ -2057,25 +2693,25 @@
             "selection": "Connor McDavid Under 2.5 sog",
             "side": "under",
             "line": 2.5,
-            "odds": -105.0,
+            "odds": 100.0,
             "model_raw": 0.5208,
-            "model_prob": 0.5044,
-            "market_prob": 0.4797,
-            "fair_odds": -102,
-            "edge": 0.0247,
-            "edge_at_price": -0.0078,
-            "ev": -0.0153,
+            "model_prob": 0.4986,
+            "market_prob": 0.4653,
+            "fair_odds": 101,
+            "edge": 0.0333,
+            "edge_at_price": -0.0014,
+            "ev": -0.0028,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 2.5: 52.1% before shrink, this book's no-vig 48.0%.",
+              "Model under 2.5: 52.1% before shrink, this book's no-vig 46.5%.",
               "Projection 2.55 (Poisson).",
               "Hit rate over L5 1/5, L10 5/10, L20 11/20, all 14/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +102 or better.",
+            "next_step": "Pass. Only interesting at +105 or better.",
             "proven": false
           },
           "betmgm": {
@@ -2253,25 +2889,25 @@
             "selection": "Connor McDavid Over 1.5 pts",
             "side": "over",
             "line": 1.5,
-            "odds": -110.0,
+            "odds": -125.0,
             "model_raw": 0.5562,
-            "model_prob": 0.5278,
-            "market_prob": 0.4853,
-            "fair_odds": -112,
-            "edge": 0.0425,
-            "edge_at_price": 0.004,
-            "ev": 0.0077,
+            "model_prob": 0.5396,
+            "market_prob": 0.5147,
+            "fair_odds": -117,
+            "edge": 0.0249,
+            "edge_at_price": -0.016,
+            "ev": -0.0287,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 1.5: 55.6% before shrink, this book's no-vig 48.5%.",
+              "Model over 1.5: 55.6% before shrink, this book's no-vig 51.5%.",
               "Projection 1.97 (Poisson).",
               "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 16/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -107 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at -112 or better.",
             "proven": false
           },
           "betmgm": {
@@ -2333,25 +2969,25 @@
             "selection": "Connor McDavid Under 1.5 pts",
             "side": "under",
             "line": 1.5,
-            "odds": -125.0,
+            "odds": -110.0,
             "model_raw": 0.4438,
-            "model_prob": 0.4722,
-            "market_prob": 0.5147,
-            "fair_odds": 112,
-            "edge": -0.0425,
-            "edge_at_price": -0.0834,
-            "ev": -0.1501,
+            "model_prob": 0.4604,
+            "market_prob": 0.4853,
+            "fair_odds": 117,
+            "edge": -0.0249,
+            "edge_at_price": -0.0634,
+            "ev": -0.1211,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 1.5: 44.4% before shrink, this book's no-vig 51.5%.",
+              "Model under 1.5: 44.4% before shrink, this book's no-vig 48.5%.",
               "Projection 1.97 (Poisson).",
               "Hit rate over L5 3/5, L10 5/10, L20 11/20, all 16/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +116 or better.",
+            "next_step": "Pass. Only interesting at +122 or better.",
             "proven": false
           },
           "betmgm": {
@@ -2384,73 +3020,73 @@
       }
     },
     {
-      "player": "Evan Bouchard",
-      "player_id": "4352722",
+      "player": "Connor McDavid",
+      "player_id": "3895074",
       "team": "Edmonton Oilers",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
-      "projection": 0.9,
+      "projection": 1.53,
       "hit_rates": {
         "L5": "4/5",
-        "L10": "7/10",
-        "L20": "16/20",
-        "all": "21/26"
+        "L10": "8/10",
+        "L20": "18/20",
+        "all": "24/26"
       },
       "recent": [
-        1.0,
-        1.0,
-        0.0,
         1.0,
         2.0,
         0.0,
         1.0,
-        0.0,
+        2.0,
         1.0,
-        1.0
+        1.0,
+        0.0,
+        3.0,
+        3.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
+          "p_over": 0.965,
+          "fair_over": -2757,
+          "fair_under": 2757,
+          "L10": "8/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.618,
-          "fair_over": -162,
-          "fair_under": 162,
-          "L10": "7/10"
+          "p_over": 0.772,
+          "fair_over": -339,
+          "fair_under": 339,
+          "L10": "8/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.348,
-          "fair_over": 187,
-          "fair_under": -187,
-          "L10": "1/10"
+          "p_over": 0.659,
+          "fair_over": -193,
+          "fair_under": 193,
+          "L10": "4/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.205,
-          "fair_over": 388,
-          "fair_under": -388,
-          "L10": "1/10"
+          "p_over": 0.44,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "4/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.08,
-          "fair_over": 1149,
-          "fair_under": -1149,
-          "L10": "0/10"
+          "p_over": 0.279,
+          "fair_over": 259,
+          "fair_under": -259,
+          "L10": "2/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.07,
-          "fair_over": 1338,
-          "fair_under": -1338,
-          "L10": "0/10"
+          "p_over": 0.217,
+          "fair_over": 361,
+          "fair_under": -361,
+          "L10": "2/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2460,108 +3096,108 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Evan Bouchard Over 0.5 ast",
+            "selection": "Connor McDavid Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": -160.0,
-            "model_raw": 0.6178,
-            "model_prob": 0.5985,
-            "market_prob": 0.5695,
-            "fair_odds": -149,
-            "edge": 0.029,
-            "edge_at_price": -0.0169,
-            "ev": -0.0274,
-            "tier": "Low",
+            "odds": -230.0,
+            "model_raw": 0.7721,
+            "model_prob": 0.7245,
+            "market_prob": 0.653,
+            "fair_odds": -263,
+            "edge": 0.0715,
+            "edge_at_price": 0.0275,
+            "ev": 0.0394,
+            "tier": "Medium",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 61.8% before shrink, this book's no-vig 57.0%.",
-              "Projection 0.9 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
+              "Model over 0.5: 77.2% before shrink, this book's no-vig 65.3%.",
+              "Projection 1.53 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -142 or better.",
+            "next_step": "Playable at -245 or better (current -230); re-check injuries/line 60 min before start.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Evan Bouchard Over 0.5 ast",
+            "selection": "Connor McDavid Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": -155.0,
-            "model_raw": 0.6178,
-            "model_prob": 0.5973,
-            "market_prob": 0.5665,
-            "fair_odds": -148,
-            "edge": 0.0308,
-            "edge_at_price": -0.0106,
-            "ev": -0.0174,
-            "tier": "Low",
+            "odds": -235.0,
+            "model_raw": 0.7721,
+            "model_prob": 0.7267,
+            "market_prob": 0.6586,
+            "fair_odds": -266,
+            "edge": 0.0681,
+            "edge_at_price": 0.0252,
+            "ev": 0.0359,
+            "tier": "Medium",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 61.8% before shrink, this book's no-vig 56.7%.",
-              "Projection 0.9 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
+              "Model over 0.5: 77.2% before shrink, this book's no-vig 65.9%.",
+              "Projection 1.53 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -141 or better.",
+            "next_step": "Playable at -248 or better (current -235); re-check injuries/line 60 min before start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Evan Bouchard Under 0.5 ast",
+            "selection": "Connor McDavid Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": 115.0,
-            "model_raw": 0.3822,
-            "model_prob": 0.4015,
-            "market_prob": 0.4305,
-            "fair_odds": 149,
-            "edge": -0.029,
-            "edge_at_price": -0.0636,
-            "ev": -0.1368,
+            "odds": 170.0,
+            "model_raw": 0.2279,
+            "model_prob": 0.2755,
+            "market_prob": 0.347,
+            "fair_odds": 263,
+            "edge": -0.0715,
+            "edge_at_price": -0.0948,
+            "ev": -0.256,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 38.2% before shrink, this book's no-vig 43.0%.",
-              "Projection 0.9 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
+              "Model under 0.5: 22.8% before shrink, this book's no-vig 34.7%.",
+              "Projection 1.53 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +154 or better.",
+            "next_step": "Pass. Only interesting at +270 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Evan Bouchard Under 0.5 ast",
+            "selection": "Connor McDavid Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": 115.0,
-            "model_raw": 0.3822,
-            "model_prob": 0.4027,
-            "market_prob": 0.4335,
-            "fair_odds": 148,
-            "edge": -0.0308,
-            "edge_at_price": -0.0624,
-            "ev": -0.1342,
+            "odds": 175.0,
+            "model_raw": 0.2279,
+            "model_prob": 0.2733,
+            "market_prob": 0.3414,
+            "fair_odds": 266,
+            "edge": -0.0681,
+            "edge_at_price": -0.0903,
+            "ev": -0.2484,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 38.2% before shrink, this book's no-vig 43.3%.",
-              "Projection 0.9 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
+              "Model under 0.5: 22.8% before shrink, this book's no-vig 34.1%.",
+              "Projection 1.53 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 18/20, all 24/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +153 or better.",
+            "next_step": "Pass. Only interesting at +273 or better.",
             "proven": false
           }
         }
@@ -2694,25 +3330,25 @@
             "selection": "Evan Bouchard Over 2.5 sog",
             "side": "over",
             "line": 2.5,
-            "odds": 105.0,
+            "odds": 110.0,
             "model_raw": 0.3619,
-            "model_prob": 0.3979,
-            "market_prob": 0.4518,
-            "fair_odds": 151,
-            "edge": -0.054,
-            "edge_at_price": -0.0899,
-            "ev": -0.1844,
+            "model_prob": 0.3941,
+            "market_prob": 0.4425,
+            "fair_odds": 154,
+            "edge": -0.0483,
+            "edge_at_price": -0.0821,
+            "ev": -0.1723,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 2.5: 36.2% before shrink, this book's no-vig 45.2%.",
+              "Model over 2.5: 36.2% before shrink, this book's no-vig 44.2%.",
               "Projection 2.2 (Poisson).",
               "Hit rate over L5 2/5, L10 3/10, L20 9/20, all 12/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +156 or better.",
+            "next_step": "Pass. Only interesting at +159 or better.",
             "proven": false
           },
           "betmgm": {
@@ -2802,25 +3438,25 @@
             "selection": "Evan Bouchard Under 2.5 sog",
             "side": "under",
             "line": 2.5,
-            "odds": -145.0,
+            "odds": -150.0,
             "model_raw": 0.6381,
-            "model_prob": 0.6021,
-            "market_prob": 0.5482,
-            "fair_odds": -151,
-            "edge": 0.054,
-            "edge_at_price": 0.0103,
-            "ev": 0.0174,
+            "model_prob": 0.6059,
+            "market_prob": 0.5575,
+            "fair_odds": -154,
+            "edge": 0.0483,
+            "edge_at_price": 0.0059,
+            "ev": 0.0098,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 2.5: 63.8% before shrink, this book's no-vig 54.8%.",
+              "Model under 2.5: 63.8% before shrink, this book's no-vig 55.8%.",
               "Projection 2.2 (Poisson).",
               "Hit rate over L5 2/5, L10 3/10, L20 9/20, all 12/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Monitor only; if anything, wait for -144 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -146 or better and re-check injuries near start.",
             "proven": false
           },
           "betmgm": {
@@ -2956,6 +3592,32 @@
       "status": null,
       "sides": {
         "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Evan Bouchard Over 0.5 pts",
+            "side": "over",
+            "line": 0.5,
+            "odds": -235.0,
+            "model_raw": 0.7281,
+            "model_prob": 0.6986,
+            "market_prob": 0.6545,
+            "fair_odds": -232,
+            "edge": 0.0442,
+            "edge_at_price": -0.0028,
+            "ev": -0.0041,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 72.8% before shrink, this book's no-vig 65.4%.",
+              "Projection 1.26 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 17/20, all 22/26."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -217 or better.",
+            "proven": false
+          },
           "betmgm": {
             "market": "Prop",
             "selection": "Evan Bouchard Over 0.5 pts",
@@ -2984,6 +3646,32 @@
           }
         },
         "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Evan Bouchard Under 0.5 pts",
+            "side": "under",
+            "line": 0.5,
+            "odds": 170.0,
+            "model_raw": 0.2719,
+            "model_prob": 0.3014,
+            "market_prob": 0.3455,
+            "fair_odds": 232,
+            "edge": -0.0442,
+            "edge_at_price": -0.069,
+            "ev": -0.1863,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 27.2% before shrink, this book's no-vig 34.6%.",
+              "Projection 1.26 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 17/20, all 22/26."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +238 or better.",
+            "proven": false
+          },
           "betmgm": {
             "market": "Prop",
             "selection": "Evan Bouchard Under 0.5 pts",
@@ -3014,212 +3702,28 @@
       }
     },
     {
-      "player": "Ivan Barbashev",
-      "player_id": "3114985",
-      "team": "Vegas Golden Knights",
+      "player": "Evan Bouchard",
+      "player_id": "4352722",
+      "team": "Edmonton Oilers",
       "stat": "ast",
       "stat_label": "Assists",
       "line": 0.5,
-      "projection": 0.37,
+      "projection": 0.9,
       "hit_rates": {
-        "L5": "1/5",
-        "L10": "2/10",
-        "L20": "5/20",
-        "all": "8/25"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        2.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.912,
-          "fair_over": -1043,
-          "fair_under": 1043,
-          "L10": "2/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.289,
-          "fair_over": 246,
-          "fair_under": -246,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.111,
-          "fair_over": 801,
-          "fair_under": -801,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.094,
-          "fair_over": 969,
-          "fair_under": -969,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.036,
-          "fair_over": 2658,
-          "fair_under": -2658,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.033,
-          "fair_over": 2894,
-          "fair_under": -2894,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 ast",
-            "side": "over",
-            "line": 0.5,
-            "odds": 280.0,
-            "model_raw": 0.2894,
-            "model_prob": 0.2726,
-            "market_prob": 0.2475,
-            "fair_odds": 267,
-            "edge": 0.0251,
-            "edge_at_price": 0.0095,
-            "ev": 0.0361,
-            "tier": "Medium",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 28.9% before shrink, this book's no-vig 24.8%.",
-              "Projection 0.37 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 5/20, all 8/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at +274 or better (current +280); re-check injuries/line 60 min before start.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 ast",
-            "side": "over",
-            "line": 0.5,
-            "odds": 230.0,
-            "model_raw": 0.2894,
-            "model_prob": 0.2872,
-            "market_prob": 0.2838,
-            "fair_odds": 248,
-            "edge": 0.0034,
-            "edge_at_price": -0.0159,
-            "ev": -0.0524,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 28.9% before shrink, this book's no-vig 28.4%.",
-              "Projection 0.37 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 5/20, all 8/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +255 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 ast",
-            "side": "under",
-            "line": 0.5,
-            "odds": -400.0,
-            "model_raw": 0.7106,
-            "model_prob": 0.7274,
-            "market_prob": 0.7525,
-            "fair_odds": -267,
-            "edge": -0.0251,
-            "edge_at_price": -0.0726,
-            "ev": -0.0908,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 71.1% before shrink, this book's no-vig 75.2%.",
-              "Projection 0.37 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 5/20, all 8/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -249 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 ast",
-            "side": "under",
-            "line": 0.5,
-            "odds": -325.0,
-            "model_raw": 0.7106,
-            "model_prob": 0.7128,
-            "market_prob": 0.7162,
-            "fair_odds": -248,
-            "edge": -0.0034,
-            "edge_at_price": -0.0519,
-            "ev": -0.0678,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 71.1% before shrink, this book's no-vig 71.6%.",
-              "Projection 0.37 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 5/20, all 8/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -232 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Ivan Barbashev",
-      "player_id": "3114985",
-      "team": "Vegas Golden Knights",
-      "stat": "sog",
-      "stat_label": "Shots",
-      "line": 0.5,
-      "projection": 1.23,
-      "hit_rates": {
-        "L5": "3/5",
+        "L5": "4/5",
         "L10": "7/10",
-        "L20": "13/20",
-        "all": "17/25"
+        "L20": "16/20",
+        "all": "21/26"
       },
       "recent": [
         1.0,
-        3.0,
+        1.0,
         0.0,
+        1.0,
+        2.0,
         0.0,
-        2.0,
-        2.0,
+        1.0,
         0.0,
-        2.0,
         1.0,
         1.0
       ],
@@ -3233,457 +3737,37 @@
         },
         {
           "line": 0.5,
-          "p_over": 0.694,
-          "fair_over": -227,
-          "fair_under": 227,
+          "p_over": 0.618,
+          "fair_over": -162,
+          "fair_under": 162,
           "L10": "7/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.548,
-          "fair_over": -121,
-          "fair_under": 121,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.373,
-          "fair_over": 168,
-          "fair_under": -168,
-          "L10": "4/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.184,
-          "fair_over": 443,
-          "fair_under": -443,
+          "p_over": 0.348,
+          "fair_over": 187,
+          "fair_under": -187,
           "L10": "1/10"
         },
         {
-          "line": 2.5,
-          "p_over": 0.141,
-          "fair_over": 608,
-          "fair_under": -608,
+          "line": 1.5,
+          "p_over": 0.205,
+          "fair_over": 388,
+          "fair_under": -388,
           "L10": "1/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 sog",
-            "side": "over",
-            "line": 0.5,
-            "odds": -230.0,
-            "model_raw": 0.6937,
-            "model_prob": 0.6774,
-            "market_prob": 0.653,
-            "fair_odds": -210,
-            "edge": 0.0244,
-            "edge_at_price": -0.0196,
-            "ev": -0.0281,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 69.4% before shrink, this book's no-vig 65.3%.",
-              "Projection 1.23 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 17/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -198 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 sog",
-            "side": "over",
-            "line": 0.5,
-            "odds": -225.0,
-            "model_raw": 0.6937,
-            "model_prob": 0.6768,
-            "market_prob": 0.6515,
-            "fair_odds": -209,
-            "edge": 0.0253,
-            "edge_at_price": -0.0155,
-            "ev": -0.0224,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 69.4% before shrink, this book's no-vig 65.1%.",
-              "Projection 1.23 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 17/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -197 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 sog",
-            "side": "under",
-            "line": 0.5,
-            "odds": 170.0,
-            "model_raw": 0.3063,
-            "model_prob": 0.3226,
-            "market_prob": 0.347,
-            "fair_odds": 210,
-            "edge": -0.0244,
-            "edge_at_price": -0.0478,
-            "ev": -0.129,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 30.6% before shrink, this book's no-vig 34.7%.",
-              "Projection 1.23 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 17/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +216 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 sog",
-            "side": "under",
-            "line": 0.5,
-            "odds": 170.0,
-            "model_raw": 0.3063,
-            "model_prob": 0.3232,
-            "market_prob": 0.3485,
-            "fair_odds": 209,
-            "edge": -0.0253,
-            "edge_at_price": -0.0472,
-            "ev": -0.1274,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 30.6% before shrink, this book's no-vig 34.9%.",
-              "Projection 1.23 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 17/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +216 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Ivan Barbashev",
-      "player_id": "3114985",
-      "team": "Vegas Golden Knights",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 0.5,
-      "projection": 0.63,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "9/20",
-        "all": "12/25"
-      },
-      "recent": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        2.0,
-        2.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.942,
-          "fair_over": -1614,
-          "fair_under": 1614,
-          "L10": "4/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.45,
-          "fair_over": 122,
-          "fair_under": -122,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.235,
-          "fair_over": 326,
-          "fair_under": -326,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.174,
-          "fair_over": 476,
-          "fair_under": -476,
-          "L10": "2/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.054,
-          "fair_over": 1745,
-          "fair_under": -1745,
+          "p_over": 0.08,
+          "fair_over": 1149,
+          "fair_under": -1149,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.046,
-          "fair_over": 2059,
-          "fair_under": -2059,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": 164.0,
-            "model_raw": 0.4503,
-            "model_prob": 0.4127,
-            "market_prob": 0.3562,
-            "fair_odds": 142,
-            "edge": 0.0564,
-            "edge_at_price": 0.0339,
-            "ev": 0.0895,
-            "tier": "High",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 45.0% before shrink, this book's no-vig 35.6%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 12/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at +147 or better (current +164); re-check injuries/line 60 min before start.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": 165.0,
-            "model_raw": 0.4503,
-            "model_prob": 0.4113,
-            "market_prob": 0.3528,
-            "fair_odds": 143,
-            "edge": 0.0585,
-            "edge_at_price": 0.0339,
-            "ev": 0.0899,
-            "tier": "High",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 45.0% before shrink, this book's no-vig 35.3%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 12/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at +148 or better (current +165); re-check injuries/line 60 min before start.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": 145.0,
-            "model_raw": 0.4503,
-            "model_prob": 0.4221,
-            "market_prob": 0.3797,
-            "fair_odds": 137,
-            "edge": 0.0423,
-            "edge_at_price": 0.0139,
-            "ev": 0.0341,
-            "tier": "Medium",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 45.0% before shrink, this book's no-vig 38.0%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 12/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at +142 or better (current +145); re-check injuries/line 60 min before start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": -217.0,
-            "model_raw": 0.5497,
-            "model_prob": 0.5873,
-            "market_prob": 0.6438,
-            "fair_odds": -142,
-            "edge": -0.0564,
-            "edge_at_price": -0.0972,
-            "ev": -0.142,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 55.0% before shrink, this book's no-vig 64.4%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 12/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -136 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": -225.0,
-            "model_raw": 0.5497,
-            "model_prob": 0.5887,
-            "market_prob": 0.6472,
-            "fair_odds": -143,
-            "edge": -0.0585,
-            "edge_at_price": -0.1036,
-            "ev": -0.1496,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 55.0% before shrink, this book's no-vig 64.7%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 12/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -136 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Ivan Barbashev Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": -200.0,
-            "model_raw": 0.5497,
-            "model_prob": 0.5779,
-            "market_prob": 0.6203,
-            "fair_odds": -137,
-            "edge": -0.0423,
-            "edge_at_price": -0.0887,
-            "ev": -0.1331,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 55.0% before shrink, this book's no-vig 62.0%.",
-              "Projection 0.63 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 9/20, all 12/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -131 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jack Eichel",
-      "player_id": "3648002",
-      "team": "Vegas Golden Knights",
-      "stat": "ast",
-      "stat_label": "Assists",
-      "line": 0.5,
-      "projection": 0.89,
-      "hit_rates": {
-        "L5": "4/5",
-        "L10": "7/10",
-        "L20": "9/20",
-        "all": "14/25"
-      },
-      "recent": [
-        2.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        2.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.617,
-          "fair_over": -161,
-          "fair_under": 161,
-          "L10": "7/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.38,
-          "fair_over": 163,
-          "fair_under": -163,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.233,
-          "fair_over": 328,
-          "fair_under": -328,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.083,
-          "fair_over": 1108,
-          "fair_under": -1108,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.069,
-          "fair_over": 1346,
-          "fair_under": -1346,
+          "p_over": 0.07,
+          "fair_over": 1338,
+          "fair_under": -1338,
           "L10": "0/10"
         }
       ],
@@ -3694,606 +3778,108 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jack Eichel Over 0.5 ast",
+            "selection": "Evan Bouchard Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": -140.0,
-            "model_raw": 0.6169,
-            "model_prob": 0.588,
-            "market_prob": 0.5446,
-            "fair_odds": -143,
-            "edge": 0.0434,
-            "edge_at_price": 0.0046,
-            "ev": 0.008,
+            "odds": -150.0,
+            "model_raw": 0.6178,
+            "model_prob": 0.5937,
+            "market_prob": 0.5575,
+            "fair_odds": -146,
+            "edge": 0.0362,
+            "edge_at_price": -0.0063,
+            "ev": -0.0105,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 61.7% before shrink, this book's no-vig 54.5%.",
-              "Projection 0.89 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 9/20, all 14/25."
+              "Model over 0.5: 61.8% before shrink, this book's no-vig 55.8%.",
+              "Projection 0.9 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -136 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at -139 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Jack Eichel Over 0.5 ast",
+            "selection": "Evan Bouchard Over 0.5 ast",
             "side": "over",
             "line": 0.5,
-            "odds": -110.0,
-            "model_raw": 0.6169,
-            "model_prob": 0.5661,
-            "market_prob": 0.4899,
-            "fair_odds": -130,
-            "edge": 0.0762,
-            "edge_at_price": 0.0423,
-            "ev": 0.0807,
-            "tier": "Medium",
+            "odds": -155.0,
+            "model_raw": 0.6178,
+            "model_prob": 0.5973,
+            "market_prob": 0.5665,
+            "fair_odds": -148,
+            "edge": 0.0308,
+            "edge_at_price": -0.0106,
+            "ev": -0.0174,
+            "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model over 0.5: 61.7% before shrink, this book's no-vig 49.0%.",
-              "Projection 0.89 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 9/20, all 14/25."
+              "Model over 0.5: 61.8% before shrink, this book's no-vig 56.7%.",
+              "Projection 0.9 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
             ],
             "flags": [],
-            "caution": [
-              "model far from market (62% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded High -> Medium"
-            ],
+            "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Playable at -125 or better (current -110); re-check injuries/line 60 min before start.",
+            "next_step": "Pass. Only interesting at -141 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Jack Eichel Under 0.5 ast",
+            "selection": "Evan Bouchard Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": 105.0,
-            "model_raw": 0.3831,
-            "model_prob": 0.412,
-            "market_prob": 0.4554,
-            "fair_odds": 143,
-            "edge": -0.0434,
-            "edge_at_price": -0.0758,
-            "ev": -0.1554,
+            "odds": 110.0,
+            "model_raw": 0.3822,
+            "model_prob": 0.4063,
+            "market_prob": 0.4425,
+            "fair_odds": 146,
+            "edge": -0.0362,
+            "edge_at_price": -0.0699,
+            "ev": -0.1467,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 38.3% before shrink, this book's no-vig 45.5%.",
-              "Projection 0.89 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 9/20, all 14/25."
+              "Model under 0.5: 38.2% before shrink, this book's no-vig 44.2%.",
+              "Projection 0.9 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +148 or better.",
+            "next_step": "Pass. Only interesting at +151 or better.",
             "proven": false
           },
           "betmgm": {
             "market": "Prop",
-            "selection": "Jack Eichel Under 0.5 ast",
+            "selection": "Evan Bouchard Under 0.5 ast",
             "side": "under",
             "line": 0.5,
-            "odds": -120.0,
-            "model_raw": 0.3831,
-            "model_prob": 0.4339,
-            "market_prob": 0.5101,
-            "fair_odds": 130,
-            "edge": -0.0762,
-            "edge_at_price": -0.1115,
-            "ev": -0.2045,
+            "odds": 115.0,
+            "model_raw": 0.3822,
+            "model_prob": 0.4027,
+            "market_prob": 0.4335,
+            "fair_odds": 148,
+            "edge": -0.0308,
+            "edge_at_price": -0.0624,
+            "ev": -0.1342,
             "tier": "Low",
             "data_quality": "High",
             "reasons": [
-              "Model under 0.5: 38.3% before shrink, this book's no-vig 51.0%.",
-              "Projection 0.89 (Poisson).",
-              "Hit rate over L5 4/5, L10 7/10, L20 9/20, all 14/25."
-            ],
-            "flags": [],
-            "caution": [
-              "model far from market (38% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +135 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jack Eichel",
-      "player_id": "3648002",
-      "team": "Vegas Golden Knights",
-      "stat": "sog",
-      "stat_label": "Shots",
-      "line": 2.5,
-      "projection": 2.89,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "11/25"
-      },
-      "recent": [
-        4.0,
-        2.0,
-        1.0,
-        5.0,
-        6.0,
-        1.0,
-        5.0,
-        4.0,
-        1.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.5,
-          "p_over": 0.935,
-          "fair_over": -1430,
-          "fair_under": 1430,
-          "L10": "10/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.913,
-          "fair_over": -1051,
-          "fair_under": 1051,
-          "L10": "6/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.713,
-          "fair_over": -249,
-          "fair_under": 249,
-          "L10": "6/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.658,
-          "fair_over": -192,
-          "fair_under": 192,
-          "L10": "5/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.533,
-          "fair_over": -114,
-          "fair_under": 114,
-          "L10": "5/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.449,
-          "fair_over": 123,
-          "fair_under": -123,
-          "L10": "5/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.388,
-          "fair_over": 158,
-          "fair_under": -158,
-          "L10": "5/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.269,
-          "fair_over": 272,
-          "fair_under": -272,
-          "L10": "3/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.225,
-          "fair_over": 345,
-          "fair_under": -345,
-          "L10": "3/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Jack Eichel Over 2.5 sog",
-            "side": "over",
-            "line": 2.5,
-            "odds": -114.0,
-            "model_raw": 0.5333,
-            "model_prob": 0.52,
-            "market_prob": 0.5,
-            "fair_odds": -108,
-            "edge": 0.02,
-            "edge_at_price": -0.0127,
-            "ev": -0.0239,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 2.5: 53.3% before shrink, this book's no-vig 50.0%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -104 or better.",
-            "proven": false
-          },
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Jack Eichel Over 2.5 sog",
-            "side": "over",
-            "line": 2.5,
-            "odds": -115.0,
-            "model_raw": 0.5333,
-            "model_prob": 0.5208,
-            "market_prob": 0.502,
-            "fair_odds": -109,
-            "edge": 0.0188,
-            "edge_at_price": -0.0141,
-            "ev": -0.0263,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 2.5: 53.3% before shrink, this book's no-vig 50.2%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -104 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jack Eichel Over 2.5 sog",
-            "side": "over",
-            "line": 2.5,
-            "odds": -120.0,
-            "model_raw": 0.5333,
-            "model_prob": 0.5219,
-            "market_prob": 0.5049,
-            "fair_odds": -109,
-            "edge": 0.017,
-            "edge_at_price": -0.0235,
-            "ev": -0.0431,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 2.5: 53.3% before shrink, this book's no-vig 50.5%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -105 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jack Eichel Over 2.5 sog",
-            "side": "over",
-            "line": 2.5,
-            "odds": -120.0,
-            "model_raw": 0.5333,
-            "model_prob": 0.524,
-            "market_prob": 0.5101,
-            "fair_odds": -110,
-            "edge": 0.0139,
-            "edge_at_price": -0.0214,
-            "ev": -0.0393,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 2.5: 53.3% before shrink, this book's no-vig 51.0%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -106 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Jack Eichel Over 2.5 sog",
-            "side": "over",
-            "line": 2.5,
-            "odds": -120.0,
-            "model_raw": 0.5333,
-            "model_prob": 0.524,
-            "market_prob": 0.5101,
-            "fair_odds": -110,
-            "edge": 0.0139,
-            "edge_at_price": -0.0214,
-            "ev": -0.0393,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 2.5: 53.3% before shrink, this book's no-vig 51.0%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -106 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "betonlineag": {
-            "market": "Prop",
-            "selection": "Jack Eichel Under 2.5 sog",
-            "side": "under",
-            "line": 2.5,
-            "odds": -114.0,
-            "model_raw": 0.4667,
-            "model_prob": 0.48,
-            "market_prob": 0.5,
-            "fair_odds": 108,
-            "edge": -0.02,
-            "edge_at_price": -0.0527,
-            "ev": -0.0989,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 2.5: 46.7% before shrink, this book's no-vig 50.0%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
+              "Model under 0.5: 38.2% before shrink, this book's no-vig 43.3%.",
+              "Projection 0.9 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 16/20, all 21/26."
             ],
             "flags": [],
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +112 or better.",
-            "proven": false
-          },
-          "fanduel": {
-            "market": "Prop",
-            "selection": "Jack Eichel Under 2.5 sog",
-            "side": "under",
-            "line": 2.5,
-            "odds": -113.0,
-            "model_raw": 0.4667,
-            "model_prob": 0.4792,
-            "market_prob": 0.498,
-            "fair_odds": 109,
-            "edge": -0.0188,
-            "edge_at_price": -0.0513,
-            "ev": -0.0967,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 2.5: 46.7% before shrink, this book's no-vig 49.8%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +113 or better.",
-            "proven": false
-          },
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jack Eichel Under 2.5 sog",
-            "side": "under",
-            "line": 2.5,
-            "odds": -115.0,
-            "model_raw": 0.4667,
-            "model_prob": 0.4781,
-            "market_prob": 0.4951,
-            "fair_odds": 109,
-            "edge": -0.017,
-            "edge_at_price": -0.0568,
-            "ev": -0.1062,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 2.5: 46.7% before shrink, this book's no-vig 49.5%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +113 or better.",
-            "proven": false
-          },
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jack Eichel Under 2.5 sog",
-            "side": "under",
-            "line": 2.5,
-            "odds": -110.0,
-            "model_raw": 0.4667,
-            "model_prob": 0.476,
-            "market_prob": 0.4899,
-            "fair_odds": 110,
-            "edge": -0.0139,
-            "edge_at_price": -0.0478,
-            "ev": -0.0913,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 2.5: 46.7% before shrink, this book's no-vig 49.0%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +114 or better.",
-            "proven": false
-          },
-          "bovada": {
-            "market": "Prop",
-            "selection": "Jack Eichel Under 2.5 sog",
-            "side": "under",
-            "line": 2.5,
-            "odds": -110.0,
-            "model_raw": 0.4667,
-            "model_prob": 0.476,
-            "market_prob": 0.4899,
-            "fair_odds": 110,
-            "edge": -0.0139,
-            "edge_at_price": -0.0478,
-            "ev": -0.0913,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 2.5: 46.7% before shrink, this book's no-vig 49.0%.",
-              "Projection 2.89 (Poisson).",
-              "Hit rate over L5 3/5, L10 5/10, L20 10/20, all 11/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +114 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jack Eichel",
-      "player_id": "3648002",
-      "team": "Vegas Golden Knights",
-      "stat": "pts",
-      "stat_label": "Points",
-      "line": 0.5,
-      "projection": 1.16,
-      "hit_rates": {
-        "L5": "4/5",
-        "L10": "8/10",
-        "L20": "13/20",
-        "all": "18/25"
-      },
-      "recent": [
-        2.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        2.0,
-        1.0,
-        1.0,
-        2.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.965,
-          "fair_over": -2757,
-          "fair_under": 2757,
-          "L10": "8/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.708,
-          "fair_over": -242,
-          "fair_under": 242,
-          "L10": "8/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.528,
-          "fair_over": -112,
-          "fair_under": 112,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.326,
-          "fair_over": 207,
-          "fair_under": -207,
-          "L10": "3/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.13,
-          "fair_over": 667,
-          "fair_under": -667,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.101,
-          "fair_over": 886,
-          "fair_under": -886,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [],
-      "status": null,
-      "sides": {
-        "over": {
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jack Eichel Over 0.5 pts",
-            "side": "over",
-            "line": 0.5,
-            "odds": -250.0,
-            "model_raw": 0.7079,
-            "model_prob": 0.6914,
-            "market_prob": 0.6667,
-            "fair_odds": -224,
-            "edge": 0.0247,
-            "edge_at_price": -0.0229,
-            "ev": -0.032,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model over 0.5: 70.8% before shrink, this book's no-vig 66.7%.",
-              "Projection 1.16 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 18/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -210 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "betmgm": {
-            "market": "Prop",
-            "selection": "Jack Eichel Under 0.5 pts",
-            "side": "under",
-            "line": 0.5,
-            "odds": 180.0,
-            "model_raw": 0.2921,
-            "model_prob": 0.3086,
-            "market_prob": 0.3333,
-            "fair_odds": 224,
-            "edge": -0.0247,
-            "edge_at_price": -0.0485,
-            "ev": -0.1359,
-            "tier": "Low",
-            "data_quality": "High",
-            "reasons": [
-              "Model under 0.5: 29.2% before shrink, this book's no-vig 33.3%.",
-              "Projection 1.16 (Poisson).",
-              "Hit rate over L5 4/5, L10 8/10, L20 13/20, all 18/25."
-            ],
-            "flags": [],
-            "caution": [],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +231 or better.",
+            "next_step": "Pass. Only interesting at +153 or better.",
             "proven": false
           }
         }

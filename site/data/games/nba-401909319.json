@@ -33,22 +33,22 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -224.0,
-      "ml_away": 186.0,
+      "ml_home": -163.0,
+      "ml_away": 137.0,
       "total": 220.5,
       "over_odds": -110.0,
       "under_odds": -110.0,
-      "spread_home": -5.5,
-      "spread_home_odds": -115.0,
-      "spread_away": 5.5,
-      "spread_away_odds": -105.0
+      "spread_home": -3.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -115.0
     }
   },
   "badge": null,
   "model_summary": "Margin NY +6.1 \u00b7 total 221.1",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: NY 65.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: NY 59.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin NY +6.1, total 221.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -60,16 +60,28 @@
         "key": false
       },
       {
-        "name": "OG Anunoby",
-        "status": "Day-To-Day",
-        "pos": "F",
-        "key": false
-      },
-      {
         "name": "Jordan Clarkson",
         "status": "Out",
         "pos": "G",
         "key": false
+      },
+      {
+        "name": "Josh Hart",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "OG Anunoby",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Karl-Anthony Towns",
+        "status": "Day-To-Day",
+        "pos": "C",
+        "key": true
       }
     ],
     "away": [
@@ -103,27 +115,30 @@
               "selection": "NY ML",
               "side": "home",
               "line": null,
-              "odds": -224.0,
+              "odds": -163.0,
               "model_raw": 0.6884,
-              "model_prob": 0.6676,
-              "market_prob": 0.6641,
-              "fair_odds": -201,
-              "edge": 0.0035,
-              "edge_at_price": -0.0238,
-              "ev": -0.0344,
+              "model_prob": 0.6086,
+              "market_prob": 0.595,
+              "fair_odds": -156,
+              "edge": 0.0137,
+              "edge_at_price": -0.0111,
+              "ev": -0.0179,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NY win 68.8% vs market no-vig 66.4%.",
+                "Model NY win 68.8% vs market no-vig 59.5%.",
                 "v2 projected margin NY +6.1 (ratings NY +5.4, CLE +0.8, home edge 1.5); raw model 68.8%.",
                 "CLE L5 WWLWL (MOV 1.4), NY L5 WWWWW (MOV 5.7)",
                 "pace: projected total -0.9 vs these teams' rating-only total (recent shot volume)",
                 "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
               ],
               "flags": [],
-              "caution": [],
-              "case_against": "Market makes NY 66%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
-              "next_step": "Pass. Only interesting at -189 or better.",
+              "caution": [
+                "injury news: key player status uncertain - Karl-Anthony Towns (Day-To-Day)",
+                "line move: price drifted against this side (-224 -> -163)"
+              ],
+              "case_against": "Market makes NY 59%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -148 or better.",
               "proven": true
             }
           }
@@ -136,18 +151,18 @@
               "selection": "CLE ML",
               "side": "away",
               "line": null,
-              "odds": 186.0,
+              "odds": 137.0,
               "model_raw": 0.3116,
-              "model_prob": 0.3324,
-              "market_prob": 0.3359,
-              "fair_odds": 201,
-              "edge": -0.0035,
-              "edge_at_price": -0.0172,
-              "ev": -0.0493,
+              "model_prob": 0.3914,
+              "market_prob": 0.405,
+              "fair_odds": 156,
+              "edge": -0.0137,
+              "edge_at_price": -0.0306,
+              "ev": -0.0725,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model CLE win 31.2% vs market no-vig 33.6%.",
+                "Model CLE win 31.2% vs market no-vig 40.5%.",
                 "v2 projected margin NY +6.1 (ratings NY +5.4, CLE +0.8, home edge 1.5); raw model 31.2%.",
                 "CLE L5 WWLWL (MOV 1.4), NY L5 WWWWW (MOV 5.7)",
                 "pace: projected total -0.9 vs these teams' rating-only total (recent shot volume)",
@@ -155,8 +170,8 @@
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes CLE 34%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
-              "next_step": "Pass. Only interesting at +207 or better.",
+              "case_against": "Market makes CLE 41%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +161 or better.",
               "proven": true
             }
           }
@@ -171,44 +186,11 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "NY -5.5",
+              "selection": "NY -3.5",
               "side": "home",
-              "line": -5.5,
-              "odds": -115.0,
-              "model_raw": 0.5204,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
-              "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.045,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Model NY -5.5 covers 52.0% vs market 51.1%.",
-                "Projected margin NY +6.1 vs line NY -5.5.",
-                "CLE L5 WWLWL (MOV 1.4), NY L5 WWWWW (MOV 5.7)",
-                "pace: projected total -0.9 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
-              "next_step": "Pass. Only interesting at -100 or better.",
-              "proven": false
-            }
-          }
-        },
-        {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "Spread",
-              "selection": "CLE +5.5",
-              "side": "away",
-              "line": 5.5,
+              "line": -3.5,
               "odds": -105.0,
-              "model_raw": 0.4796,
+              "model_raw": 0.5836,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
               "fair_odds": 104,
@@ -218,16 +200,53 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model CLE +5.5 covers 48.0% vs market 48.9%.",
-                "Projected margin NY +6.1 vs line NY -5.5.",
+                "Model NY -3.5 covers 58.4% vs market 48.9%.",
+                "Projected margin NY +6.1 vs line NY -3.5.",
                 "CLE L5 WWLWL (MOV 1.4), NY L5 WWWWW (MOV 5.7)",
                 "pace: projected total -0.9 vs these teams' rating-only total (recent shot volume)",
                 "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [],
-              "caution": [],
+              "caution": [
+                "injury news: key player status uncertain - Karl-Anthony Towns (Day-To-Day)"
+              ],
               "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
               "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "CLE +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -115.0,
+              "model_raw": 0.4164,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model CLE +3.5 covers 41.6% vs market 51.1%.",
+                "Projected margin NY +6.1 vs line NY -3.5.",
+                "CLE L5 WWLWL (MOV 1.4), NY L5 WWWWW (MOV 5.7)",
+                "pace: projected total -0.9 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (+5.5 -> +3.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
           }
