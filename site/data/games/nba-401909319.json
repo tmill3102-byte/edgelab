@@ -147,22 +147,16 @@
   "model_summary": "Margin NY +6.1 \u00b7 total 221.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: NY 59.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: NY 52.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin NY +6.1, total 221.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
-        "name": "Miles McBride",
+        "name": "Jalen Brunson",
         "status": "Day-To-Day",
         "pos": "G",
-        "key": false
-      },
-      {
-        "name": "Jordan Clarkson",
-        "status": "Out",
-        "pos": "G",
-        "key": false
+        "key": true
       },
       {
         "name": "Josh Hart",
@@ -171,9 +165,9 @@
         "key": false
       },
       {
-        "name": "OG Anunoby",
+        "name": "Miles McBride",
         "status": "Out",
-        "pos": "F",
+        "pos": "G",
         "key": false
       },
       {
@@ -181,6 +175,12 @@
         "status": "Day-To-Day",
         "pos": "C",
         "key": true
+      },
+      {
+        "name": "Jordan Clarkson",
+        "status": "Out",
+        "pos": "G",
+        "key": false
       }
     ],
     "away": [
@@ -1653,5 +1653,2522 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Donovan Mitchell",
+      "player_id": "3908809",
+      "team": "Cleveland Cavaliers",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 34.5,
+      "projection": 35.27,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "10/17",
+        "all": "10/17"
+      },
+      "recent": [
+        36.0,
+        26.0,
+        41.0,
+        47.0,
+        36.0,
+        36.0,
+        17.0,
+        45.0,
+        38.0,
+        36.0
+      ],
+      "ladder": [
+        {
+          "line": 30.5,
+          "p_over": 0.728,
+          "fair_over": -268,
+          "fair_under": 268,
+          "L10": "8/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.701,
+          "fair_over": -235,
+          "fair_under": 235,
+          "L10": "8/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.672,
+          "fair_over": -205,
+          "fair_under": 205,
+          "L10": "8/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.642,
+          "fair_over": -180,
+          "fair_under": 180,
+          "L10": "8/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.611,
+          "fair_over": -157,
+          "fair_under": 157,
+          "L10": "8/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.58,
+          "fair_over": -138,
+          "fair_under": 138,
+          "L10": "8/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.433,
+          "fair_over": 131,
+          "fair_under": -131,
+          "L10": "4/10"
+        },
+        {
+          "line": 37.5,
+          "p_over": 0.402,
+          "fair_over": 149,
+          "fair_under": -149,
+          "L10": "4/10"
+        },
+        {
+          "line": 38.5,
+          "p_over": 0.343,
+          "fair_over": 191,
+          "fair_under": -191,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Over 34.5 pra",
+            "side": "over",
+            "line": 34.5,
+            "odds": -107.0,
+            "model_raw": 0.6114,
+            "model_prob": 0.5604,
+            "market_prob": 0.4838,
+            "fair_odds": -127,
+            "edge": 0.0766,
+            "edge_at_price": 0.0434,
+            "ev": 0.084,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 34.5: 61.1% before shrink, this book's no-vig 48.4%.",
+              "Projection 35.27 (Normal(sd 8.3)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (61% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (61% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -122 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Under 34.5 pra",
+            "side": "under",
+            "line": 34.5,
+            "odds": -123.0,
+            "model_raw": 0.3886,
+            "model_prob": 0.4396,
+            "market_prob": 0.5162,
+            "fair_odds": 127,
+            "edge": -0.0766,
+            "edge_at_price": -0.1119,
+            "ev": -0.2029,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 34.5: 38.9% before shrink, this book's no-vig 51.6%.",
+              "Projection 35.27 (Normal(sd 8.3)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (39% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +132 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Donovan Mitchell",
+      "player_id": "3908809",
+      "team": "Cleveland Cavaliers",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 25.5,
+      "projection": 25.9,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/17",
+        "all": "7/17"
+      },
+      "recent": [
+        28.0,
+        20.0,
+        34.0,
+        39.0,
+        25.0,
+        23.0,
+        11.0,
+        37.0,
+        23.0,
+        27.0
+      ],
+      "ladder": [
+        {
+          "line": 21.5,
+          "p_over": 0.724,
+          "fair_over": -262,
+          "fair_under": 262,
+          "L10": "8/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.695,
+          "fair_over": -228,
+          "fair_under": 228,
+          "L10": "8/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.606,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "6/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.575,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "6/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.513,
+          "fair_over": -105,
+          "fair_under": 105,
+          "L10": "5/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.481,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "5/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.419,
+          "fair_over": 139,
+          "fair_under": -139,
+          "L10": "4/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.359,
+          "fair_over": 179,
+          "fair_under": -179,
+          "L10": "3/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.328,
+          "fair_over": 205,
+          "fair_under": -205,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Over 25.5 pts",
+            "side": "over",
+            "line": 25.5,
+            "odds": -104.0,
+            "model_raw": 0.5131,
+            "model_prob": 0.5,
+            "market_prob": 0.4803,
+            "fair_odds": 100,
+            "edge": 0.0197,
+            "edge_at_price": -0.0098,
+            "ev": -0.0193,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 25.5: 51.3% before shrink, this book's no-vig 48.0%.",
+              "Projection 25.9 (Normal(sd 8.0)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +104 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Under 25.5 pts",
+            "side": "under",
+            "line": 25.5,
+            "odds": -123.0,
+            "model_raw": 0.4869,
+            "model_prob": 0.5,
+            "market_prob": 0.5197,
+            "fair_odds": -100,
+            "edge": -0.0197,
+            "edge_at_price": -0.0516,
+            "ev": -0.0935,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 25.5: 48.7% before shrink, this book's no-vig 52.0%.",
+              "Projection 25.9 (Normal(sd 8.0)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +104 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Donovan Mitchell",
+      "player_id": "3908809",
+      "team": "Cleveland Cavaliers",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 4.5,
+      "projection": 4.3,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "2/10",
+        "L20": "7/17",
+        "all": "7/17"
+      },
+      "recent": [
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        7.0,
+        2.0,
+        4.0,
+        7.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 2.5,
+          "p_over": 0.813,
+          "fair_over": -435,
+          "fair_under": 435,
+          "L10": "9/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.765,
+          "fair_over": -326,
+          "fair_under": 326,
+          "L10": "6/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.608,
+          "fair_over": -155,
+          "fair_under": 155,
+          "L10": "6/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.477,
+          "fair_over": 110,
+          "fair_under": -110,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.366,
+          "fair_over": 173,
+          "fair_under": -173,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.292,
+          "fair_over": 242,
+          "fair_under": -242,
+          "L10": "2/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.258,
+          "fair_over": 287,
+          "fair_under": -287,
+          "L10": "2/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.193,
+          "fair_over": 417,
+          "fair_under": -417,
+          "L10": "2/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.181,
+          "fair_over": 453,
+          "fair_under": -453,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Over 4.5 reb",
+            "side": "over",
+            "line": 4.5,
+            "odds": 120.0,
+            "model_raw": 0.3661,
+            "model_prob": 0.3898,
+            "market_prob": 0.4254,
+            "fair_odds": 157,
+            "edge": -0.0356,
+            "edge_at_price": -0.0647,
+            "ev": -0.1424,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 4.5: 36.6% before shrink, this book's no-vig 42.5%.",
+              "Projection 4.3 (Poisson).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +162 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Under 4.5 reb",
+            "side": "under",
+            "line": 4.5,
+            "odds": -159.0,
+            "model_raw": 0.6339,
+            "model_prob": 0.6102,
+            "market_prob": 0.5746,
+            "fair_odds": -157,
+            "edge": 0.0356,
+            "edge_at_price": -0.0037,
+            "ev": -0.0061,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 4.5: 63.4% before shrink, this book's no-vig 57.5%.",
+              "Projection 4.3 (Poisson).",
+              "Hit rate over L5 0/5, L10 2/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -149 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Donovan Mitchell",
+      "player_id": "3908809",
+      "team": "Cleveland Cavaliers",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 2.6,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "5/17",
+        "all": "5/17"
+      },
+      "recent": [
+        1.0,
+        2.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0,
+        1.0,
+        5.0,
+        1.0,
+        5.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.922,
+          "fair_over": -1187,
+          "fair_under": 1187,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.901,
+          "fair_over": -910,
+          "fair_under": 910,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.709,
+          "fair_over": -244,
+          "fair_under": 244,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.592,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.429,
+          "fair_over": 133,
+          "fair_under": -133,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.335,
+          "fair_over": 198,
+          "fair_under": -198,
+          "L10": "3/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.288,
+          "fair_over": 248,
+          "fair_under": -248,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.209,
+          "fair_over": 379,
+          "fair_under": -379,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.196,
+          "fair_over": 410,
+          "fair_under": -410,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -127.0,
+            "model_raw": 0.4289,
+            "model_prob": 0.4666,
+            "market_prob": 0.5232,
+            "fair_odds": 114,
+            "edge": -0.0566,
+            "edge_at_price": -0.0928,
+            "ev": -0.1659,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 42.9% before shrink, this book's no-vig 52.3%.",
+              "Projection 2.6 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/17, all 5/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +119 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -104.0,
+            "model_raw": 0.5711,
+            "model_prob": 0.5334,
+            "market_prob": 0.4768,
+            "fair_odds": -114,
+            "edge": 0.0566,
+            "edge_at_price": 0.0236,
+            "ev": 0.0462,
+            "tier": "Medium",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 57.1% before shrink, this book's no-vig 47.7%.",
+              "Projection 2.6 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 5/17, all 5/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Playable at -110 or better (current -104); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Donovan Mitchell",
+      "player_id": "3908809",
+      "team": "Cleveland Cavaliers",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 4.5,
+      "projection": 5.07,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "8/17",
+        "all": "8/17"
+      },
+      "recent": [
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        7.0,
+        6.0,
+        4.0,
+        4.0,
+        8.0,
+        6.0
+      ],
+      "ladder": [
+        {
+          "line": 2.5,
+          "p_over": 0.894,
+          "fair_over": -840,
+          "fair_under": 840,
+          "L10": "10/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.876,
+          "fair_over": -704,
+          "fair_under": 704,
+          "L10": "8/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.747,
+          "fair_over": -295,
+          "fair_under": 295,
+          "L10": "8/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.683,
+          "fair_over": -215,
+          "fair_under": 215,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.547,
+          "fair_over": -121,
+          "fair_under": 121,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.472,
+          "fair_over": 112,
+          "fair_under": -112,
+          "L10": "4/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.404,
+          "fair_over": 148,
+          "fair_under": -148,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.294,
+          "fair_over": 240,
+          "fair_under": -240,
+          "L10": "2/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.249,
+          "fair_over": 302,
+          "fair_under": -302,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Over 4.5 ast",
+            "side": "over",
+            "line": 4.5,
+            "odds": -106.0,
+            "model_raw": 0.5467,
+            "model_prob": 0.5207,
+            "market_prob": 0.4817,
+            "fair_odds": -109,
+            "edge": 0.039,
+            "edge_at_price": 0.0062,
+            "ev": 0.012,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 4.5: 54.7% before shrink, this book's no-vig 48.2%.",
+              "Projection 5.07 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -104 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Donovan Mitchell Under 4.5 ast",
+            "side": "under",
+            "line": 4.5,
+            "odds": -124.0,
+            "model_raw": 0.4533,
+            "model_prob": 0.4793,
+            "market_prob": 0.5183,
+            "fair_odds": 109,
+            "edge": -0.039,
+            "edge_at_price": -0.0743,
+            "ev": -0.1342,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 4.5: 45.3% before shrink, this book's no-vig 51.8%.",
+              "Projection 5.07 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jalen Brunson",
+      "player_id": "3934672",
+      "team": "New York Knicks",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 35.5,
+      "projection": 36.86,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "7/17",
+        "all": "7/17"
+      },
+      "recent": [
+        32.0,
+        42.0,
+        30.0,
+        41.0,
+        38.0,
+        45.0,
+        35.0,
+        29.0,
+        46.0,
+        39.0
+      ],
+      "ladder": [
+        {
+          "line": 31.5,
+          "p_over": 0.799,
+          "fair_over": -397,
+          "fair_under": 397,
+          "L10": "8/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.738,
+          "fair_over": -282,
+          "fair_under": 282,
+          "L10": "7/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.702,
+          "fair_over": -236,
+          "fair_under": 236,
+          "L10": "7/10"
+        },
+        {
+          "line": 34.5,
+          "p_over": 0.662,
+          "fair_over": -196,
+          "fair_under": 196,
+          "L10": "7/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.59,
+          "fair_over": -144,
+          "fair_under": 144,
+          "L10": "6/10"
+        },
+        {
+          "line": 36.5,
+          "p_over": 0.545,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "6/10"
+        },
+        {
+          "line": 37.5,
+          "p_over": 0.5,
+          "fair_over": -100,
+          "fair_under": 100,
+          "L10": "6/10"
+        },
+        {
+          "line": 38.5,
+          "p_over": 0.427,
+          "fair_over": 134,
+          "fair_under": -134,
+          "L10": "5/10"
+        },
+        {
+          "line": 39.5,
+          "p_over": 0.355,
+          "fair_over": 182,
+          "fair_under": -182,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 35.5 pra",
+            "side": "over",
+            "line": 35.5,
+            "odds": -116.0,
+            "model_raw": 0.59,
+            "model_prob": 0.5548,
+            "market_prob": 0.502,
+            "fair_odds": -125,
+            "edge": 0.0528,
+            "edge_at_price": 0.0178,
+            "ev": 0.0331,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 35.5: 59.0% before shrink, this book's no-vig 50.2%.",
+              "Projection 36.86 (Normal(sd 5.7)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -119 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 35.5 pra",
+            "side": "under",
+            "line": 35.5,
+            "odds": -114.0,
+            "model_raw": 0.41,
+            "model_prob": 0.4452,
+            "market_prob": 0.498,
+            "fair_odds": 125,
+            "edge": -0.0528,
+            "edge_at_price": -0.0875,
+            "ev": -0.1643,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 35.5: 41.0% before shrink, this book's no-vig 49.8%.",
+              "Projection 36.86 (Normal(sd 5.7)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland."
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +129 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jalen Brunson",
+      "player_id": "3934672",
+      "team": "New York Knicks",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 25.5,
+      "projection": 27.35,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "9/17",
+        "all": "9/17"
+      },
+      "recent": [
+        22.0,
+        30.0,
+        21.0,
+        31.0,
+        28.0,
+        33.0,
+        27.0,
+        23.0,
+        31.0,
+        33.0
+      ],
+      "ladder": [
+        {
+          "line": 21.5,
+          "p_over": 0.886,
+          "fair_over": -777,
+          "fair_under": 777,
+          "L10": "9/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.829,
+          "fair_over": -485,
+          "fair_under": 485,
+          "L10": "8/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.764,
+          "fair_over": -323,
+          "fair_under": 323,
+          "L10": "7/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.719,
+          "fair_over": -256,
+          "fair_under": 256,
+          "L10": "7/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.667,
+          "fair_over": -200,
+          "fair_under": 200,
+          "L10": "7/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.61,
+          "fair_over": -156,
+          "fair_under": 156,
+          "L10": "7/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.52,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "6/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.431,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "5/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.375,
+          "fair_over": 167,
+          "fair_under": -167,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 25.5 pts",
+            "side": "over",
+            "line": 25.5,
+            "odds": -123.0,
+            "model_raw": 0.6672,
+            "model_prob": 0.6082,
+            "market_prob": 0.5197,
+            "fair_odds": -155,
+            "edge": 0.0885,
+            "edge_at_price": 0.0566,
+            "ev": 0.1027,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 25.5: 66.7% before shrink, this book's no-vig 52.0%.",
+              "Projection 27.35 (Normal(sd 4.3)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 9/17, all 9/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+              "model far from market (67% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low",
+              "model far from market (67% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -148 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 25.5 pts",
+            "side": "under",
+            "line": 25.5,
+            "odds": -104.0,
+            "model_raw": 0.3328,
+            "model_prob": 0.3918,
+            "market_prob": 0.4803,
+            "fair_odds": 155,
+            "edge": -0.0885,
+            "edge_at_price": -0.118,
+            "ev": -0.2314,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 25.5: 33.3% before shrink, this book's no-vig 48.0%.",
+              "Projection 27.35 (Normal(sd 4.3)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 9/17, all 9/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+              "model far from market (33% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +160 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jalen Brunson",
+      "player_id": "3934672",
+      "team": "New York Knicks",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 2.5,
+      "projection": 3.29,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "9/17",
+        "all": "9/17"
+      },
+      "recent": [
+        3.0,
+        7.0,
+        2.0,
+        5.0,
+        1.0,
+        1.0,
+        3.0,
+        4.0,
+        6.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.947,
+          "fair_over": -1771,
+          "fair_under": 1771,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.937,
+          "fair_over": -1495,
+          "fair_under": 1495,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.808,
+          "fair_over": -422,
+          "fair_under": 422,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.765,
+          "fair_over": -325,
+          "fair_under": 325,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.619,
+          "fair_over": -162,
+          "fair_under": 162,
+          "L10": "6/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.523,
+          "fair_over": -110,
+          "fair_under": 110,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.417,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.314,
+          "fair_over": 218,
+          "fair_under": -218,
+          "L10": "3/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.269,
+          "fair_over": 271,
+          "fair_under": -271,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -165.0,
+            "model_raw": 0.6188,
+            "model_prob": 0.6047,
+            "market_prob": 0.5835,
+            "fair_odds": -153,
+            "edge": 0.0212,
+            "edge_at_price": -0.018,
+            "ev": -0.0288,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 61.9% before shrink, this book's no-vig 58.3%.",
+              "Projection 3.29 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/17, all 9/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland."
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -146 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": 125.0,
+            "model_raw": 0.3812,
+            "model_prob": 0.3953,
+            "market_prob": 0.4165,
+            "fair_odds": 153,
+            "edge": -0.0212,
+            "edge_at_price": -0.0491,
+            "ev": -0.1105,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 38.1% before shrink, this book's no-vig 41.7%.",
+              "Projection 3.29 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/17, all 9/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland."
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +158 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jalen Brunson",
+      "player_id": "3934672",
+      "team": "New York Knicks",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 3.24,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "11/17",
+        "all": "11/17"
+      },
+      "recent": [
+        1.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        1.0,
+        3.0,
+        5.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.945,
+          "fair_over": -1731,
+          "fair_under": 1731,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.936,
+          "fair_over": -1459,
+          "fair_under": 1459,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.805,
+          "fair_over": -412,
+          "fair_under": 412,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.777,
+          "fair_over": -348,
+          "fair_under": 348,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.671,
+          "fair_over": -204,
+          "fair_under": 204,
+          "L10": "8/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.573,
+          "fair_over": -134,
+          "fair_under": 134,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.439,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.296,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.235,
+          "fair_over": 326,
+          "fair_under": -326,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -126.0,
+            "model_raw": 0.6709,
+            "model_prob": 0.6115,
+            "market_prob": 0.5224,
+            "fair_odds": -157,
+            "edge": 0.0891,
+            "edge_at_price": 0.054,
+            "ev": 0.0968,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 67.1% before shrink, this book's no-vig 52.2%.",
+              "Projection 3.24 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 11/17, all 11/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+              "model far from market (67% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low",
+              "model far from market (67% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -150 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -104.0,
+            "model_raw": 0.3291,
+            "model_prob": 0.3885,
+            "market_prob": 0.4776,
+            "fair_odds": 157,
+            "edge": -0.0891,
+            "edge_at_price": -0.1213,
+            "ev": -0.2379,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 32.9% before shrink, this book's no-vig 47.8%.",
+              "Projection 3.24 (Poisson).",
+              "Hit rate over L5 4/5, L10 8/10, L20 11/17, all 11/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+              "model far from market (33% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +163 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jalen Brunson",
+      "player_id": "3934672",
+      "team": "New York Knicks",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 6.5,
+      "projection": 6.22,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/17",
+        "all": "7/17"
+      },
+      "recent": [
+        7.0,
+        5.0,
+        7.0,
+        5.0,
+        9.0,
+        11.0,
+        5.0,
+        2.0,
+        9.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 4.5,
+          "p_over": 0.745,
+          "fair_over": -293,
+          "fair_under": 293,
+          "L10": "8/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.686,
+          "fair_over": -218,
+          "fair_under": 218,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.557,
+          "fair_over": -126,
+          "fair_under": 126,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.507,
+          "fair_over": -103,
+          "fair_under": 103,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.453,
+          "fair_over": 121,
+          "fair_under": -121,
+          "L10": "5/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.357,
+          "fair_over": 180,
+          "fair_under": -180,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.303,
+          "fair_over": 230,
+          "fair_under": -230,
+          "L10": "3/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.245,
+          "fair_over": 308,
+          "fair_under": -308,
+          "L10": "3/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.231,
+          "fair_over": 333,
+          "fair_under": -333,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": 111.0,
+            "model_raw": 0.4535,
+            "model_prob": 0.4497,
+            "market_prob": 0.444,
+            "fair_odds": 122,
+            "edge": 0.0057,
+            "edge_at_price": -0.0242,
+            "ev": -0.0511,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 6.5: 45.4% before shrink, this book's no-vig 44.4%.",
+              "Projection 6.22 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland."
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +127 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": -146.0,
+            "model_raw": 0.5465,
+            "model_prob": 0.5503,
+            "market_prob": 0.556,
+            "fair_odds": -122,
+            "edge": -0.0057,
+            "edge_at_price": -0.0432,
+            "ev": -0.0728,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 6.5: 54.6% before shrink, this book's no-vig 55.6%.",
+              "Projection 6.22 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Brunson (illness) is probable for Wednesday's game against Cleveland."
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -117 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "James Harden",
+      "player_id": "3992",
+      "team": "Cleveland Cavaliers",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 28.5,
+      "projection": 30.56,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "6/10",
+        "L20": "8/17",
+        "all": "8/17"
+      },
+      "recent": [
+        32.0,
+        63.0,
+        29.0,
+        23.0,
+        34.0,
+        38.0,
+        19.0,
+        14.0,
+        26.0,
+        34.0
+      ],
+      "ladder": [
+        {
+          "line": 24.5,
+          "p_over": 0.677,
+          "fair_over": -210,
+          "fair_under": 210,
+          "L10": "7/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.659,
+          "fair_over": -193,
+          "fair_under": 193,
+          "L10": "7/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.61,
+          "fair_over": -157,
+          "fair_under": 157,
+          "L10": "6/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.591,
+          "fair_over": -144,
+          "fair_under": 144,
+          "L10": "6/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.571,
+          "fair_over": -133,
+          "fair_under": 133,
+          "L10": "6/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.521,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "5/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.501,
+          "fair_over": -100,
+          "fair_under": 100,
+          "L10": "5/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.481,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "5/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.431,
+          "fair_over": 132,
+          "fair_under": -132,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Over 28.5 pra",
+            "side": "over",
+            "line": 28.5,
+            "odds": -112.0,
+            "model_raw": 0.5709,
+            "model_prob": 0.5405,
+            "market_prob": 0.4949,
+            "fair_odds": -118,
+            "edge": 0.0456,
+            "edge_at_price": 0.0122,
+            "ev": 0.0231,
+            "tier": "Medium",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 28.5: 57.1% before shrink, this book's no-vig 49.5%.",
+              "Projection 30.56 (Normal(sd 12.7)).",
+              "Hit rate over L5 4/5, L10 6/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at -113 or better (current -112); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Under 28.5 pra",
+            "side": "under",
+            "line": 28.5,
+            "odds": -117.0,
+            "model_raw": 0.4291,
+            "model_prob": 0.4595,
+            "market_prob": 0.5051,
+            "fair_odds": 118,
+            "edge": -0.0456,
+            "edge_at_price": -0.0797,
+            "ev": -0.1478,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 28.5: 42.9% before shrink, this book's no-vig 50.5%.",
+              "Projection 30.56 (Normal(sd 12.7)).",
+              "Hit rate over L5 4/5, L10 6/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +122 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "James Harden",
+      "player_id": "3992",
+      "team": "Cleveland Cavaliers",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 17.5,
+      "projection": 19.47,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/17",
+        "all": "7/17"
+      },
+      "recent": [
+        21.0,
+        51.0,
+        14.0,
+        9.0,
+        20.0,
+        32.0,
+        11.0,
+        7.0,
+        17.0,
+        19.0
+      ],
+      "ladder": [
+        {
+          "line": 13.5,
+          "p_over": 0.679,
+          "fair_over": -212,
+          "fair_under": 212,
+          "L10": "7/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.631,
+          "fair_over": -171,
+          "fair_under": 171,
+          "L10": "6/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.611,
+          "fair_over": -157,
+          "fair_under": 157,
+          "L10": "6/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.591,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "6/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.541,
+          "fair_over": -118,
+          "fair_under": 118,
+          "L10": "5/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.52,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "5/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.47,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "4/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.42,
+          "fair_over": 138,
+          "fair_under": -138,
+          "L10": "3/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.37,
+          "fair_over": 170,
+          "fair_under": -170,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Over 17.5 pts",
+            "side": "over",
+            "line": 17.5,
+            "odds": -107.0,
+            "model_raw": 0.5413,
+            "model_prob": 0.5198,
+            "market_prob": 0.4875,
+            "fair_odds": -108,
+            "edge": 0.0323,
+            "edge_at_price": 0.0029,
+            "ev": 0.0056,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 17.5: 54.1% before shrink, this book's no-vig 48.8%.",
+              "Projection 19.47 (Normal(sd 12.3)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -104 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Under 17.5 pts",
+            "side": "under",
+            "line": 17.5,
+            "odds": -119.0,
+            "model_raw": 0.4587,
+            "model_prob": 0.4802,
+            "market_prob": 0.5125,
+            "fair_odds": 108,
+            "edge": -0.0323,
+            "edge_at_price": -0.0632,
+            "ev": -0.1162,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 17.5: 45.9% before shrink, this book's no-vig 51.2%.",
+              "Projection 19.47 (Normal(sd 12.3)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/17, all 7/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +112 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "James Harden",
+      "player_id": "3992",
+      "team": "Cleveland Cavaliers",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 4.5,
+      "projection": 4.95,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "6/10",
+        "L20": "10/17",
+        "all": "10/17"
+      },
+      "recent": [
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        6.0,
+        2.0,
+        3.0,
+        2.0,
+        6.0,
+        9.0
+      ],
+      "ladder": [
+        {
+          "line": 2.5,
+          "p_over": 0.829,
+          "fair_over": -484,
+          "fair_under": 484,
+          "L10": "8/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.807,
+          "fair_over": -418,
+          "fair_under": 418,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.707,
+          "fair_over": -241,
+          "fair_under": 241,
+          "L10": "7/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.658,
+          "fair_over": -193,
+          "fair_under": 193,
+          "L10": "6/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.562,
+          "fair_over": -129,
+          "fair_under": 129,
+          "L10": "6/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.5,
+          "fair_over": -100,
+          "fair_under": 100,
+          "L10": "6/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.448,
+          "fair_over": 123,
+          "fair_under": -123,
+          "L10": "6/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.276,
+          "fair_over": 263,
+          "fair_under": -263,
+          "L10": "1/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.208,
+          "fair_over": 380,
+          "fair_under": -380,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Over 4.5 reb",
+            "side": "over",
+            "line": 4.5,
+            "odds": -107.0,
+            "model_raw": 0.5625,
+            "model_prob": 0.531,
+            "market_prob": 0.4838,
+            "fair_odds": -113,
+            "edge": 0.0472,
+            "edge_at_price": 0.0141,
+            "ev": 0.0273,
+            "tier": "Medium",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 4.5: 56.2% before shrink, this book's no-vig 48.4%.",
+              "Projection 4.95 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at -109 or better (current -107); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Under 4.5 reb",
+            "side": "under",
+            "line": 4.5,
+            "odds": -123.0,
+            "model_raw": 0.4375,
+            "model_prob": 0.469,
+            "market_prob": 0.5162,
+            "fair_odds": 113,
+            "edge": -0.0472,
+            "edge_at_price": -0.0826,
+            "ev": -0.1497,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 4.5: 43.8% before shrink, this book's no-vig 51.6%.",
+              "Projection 4.95 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +117 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "James Harden",
+      "player_id": "3992",
+      "team": "Cleveland Cavaliers",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 3.01,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "11/17",
+        "all": "11/17"
+      },
+      "recent": [
+        3.0,
+        7.0,
+        3.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0,
+        1.0,
+        3.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.939,
+          "fair_over": -1536,
+          "fair_under": 1536,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.931,
+          "fair_over": -1343,
+          "fair_under": 1343,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.813,
+          "fair_over": -436,
+          "fair_under": 436,
+          "L10": "9/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.757,
+          "fair_over": -312,
+          "fair_under": 312,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.581,
+          "fair_over": -139,
+          "fair_under": 139,
+          "L10": "6/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.429,
+          "fair_over": 133,
+          "fair_under": -133,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.319,
+          "fair_over": 214,
+          "fair_under": -214,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.234,
+          "fair_over": 328,
+          "fair_under": -328,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.209,
+          "fair_over": 378,
+          "fair_under": -378,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": 116.0,
+            "model_raw": 0.581,
+            "model_prob": 0.522,
+            "market_prob": 0.4336,
+            "fair_odds": -109,
+            "edge": 0.0884,
+            "edge_at_price": 0.0591,
+            "ev": 0.1276,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 58.1% before shrink, this book's no-vig 43.4%.",
+              "Projection 3.01 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 11/17, all 11/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (58% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (58% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -105 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": -153.0,
+            "model_raw": 0.419,
+            "model_prob": 0.478,
+            "market_prob": 0.5664,
+            "fair_odds": 109,
+            "edge": -0.0884,
+            "edge_at_price": -0.1268,
+            "ev": -0.2097,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 41.9% before shrink, this book's no-vig 56.6%.",
+              "Projection 3.01 (Poisson).",
+              "Hit rate over L5 3/5, L10 6/10, L20 11/17, all 11/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (42% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (42% vs 57%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "James Harden",
+      "player_id": "3992",
+      "team": "Cleveland Cavaliers",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 6.5,
+      "projection": 6.13,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "3/10",
+        "L20": "6/17",
+        "all": "6/17"
+      },
+      "recent": [
+        5.0,
+        6.0,
+        9.0,
+        10.0,
+        8.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        6.0
+      ],
+      "ladder": [
+        {
+          "line": 4.5,
+          "p_over": 0.738,
+          "fair_over": -282,
+          "fair_under": 282,
+          "L10": "8/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.677,
+          "fair_over": -209,
+          "fair_under": 209,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.549,
+          "fair_over": -122,
+          "fair_under": 122,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.461,
+          "fair_over": 117,
+          "fair_under": -117,
+          "L10": "3/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.386,
+          "fair_over": 159,
+          "fair_under": -159,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.324,
+          "fair_over": 209,
+          "fair_under": -209,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.295,
+          "fair_over": 239,
+          "fair_under": -239,
+          "L10": "3/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.217,
+          "fair_over": 361,
+          "fair_under": -361,
+          "L10": "2/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.196,
+          "fair_over": 411,
+          "fair_under": -411,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Over 6.5 ast",
+            "side": "over",
+            "line": 6.5,
+            "odds": 101.0,
+            "model_raw": 0.3862,
+            "model_prob": 0.418,
+            "market_prob": 0.4657,
+            "fair_odds": 139,
+            "edge": -0.0477,
+            "edge_at_price": -0.0795,
+            "ev": -0.1598,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 6.5: 38.6% before shrink, this book's no-vig 46.6%.",
+              "Projection 6.13 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 6/17, all 6/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +144 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "James Harden Under 6.5 ast",
+            "side": "under",
+            "line": 6.5,
+            "odds": -133.0,
+            "model_raw": 0.6138,
+            "model_prob": 0.582,
+            "market_prob": 0.5343,
+            "fair_odds": -139,
+            "edge": 0.0477,
+            "edge_at_price": 0.0112,
+            "ev": 0.0196,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 6.5: 61.4% before shrink, this book's no-vig 53.4%.",
+              "Projection 6.13 (Poisson).",
+              "Hit rate over L5 3/5, L10 3/10, L20 6/17, all 6/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -133 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Josh Hart",
+      "player_id": "3062679",
+      "team": "New York Knicks",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 21.5,
+      "projection": 17.43,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/10",
+        "L20": "8/20",
+        "all": "14/29"
+      },
+      "recent": [
+        31.0,
+        14.0,
+        19.0,
+        11.0,
+        7.0,
+        9.0,
+        13.0,
+        21.0,
+        16.0,
+        13.0
+      ],
+      "ladder": [
+        {
+          "line": 17.5,
+          "p_over": 0.439,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "3/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.4,
+          "fair_over": 150,
+          "fair_under": -150,
+          "L10": "3/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.332,
+          "fair_over": 201,
+          "fair_under": -201,
+          "L10": "2/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.296,
+          "fair_over": 238,
+          "fair_under": -238,
+          "L10": "2/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.233,
+          "fair_over": 330,
+          "fair_under": -330,
+          "L10": "1/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.202,
+          "fair_over": 396,
+          "fair_under": -396,
+          "L10": "1/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.174,
+          "fair_over": 474,
+          "fair_under": -474,
+          "L10": "1/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.15,
+          "fair_over": 566,
+          "fair_under": -566,
+          "L10": "1/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.13,
+          "fair_over": 670,
+          "fair_under": -670,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 14 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": "Day-To-Day: Hart (shoulder) has been upgraded to probable for Wednesday's game against the Cavaliers.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Josh Hart Over 21.5 pra",
+            "side": "over",
+            "line": 21.5,
+            "odds": -121.0,
+            "model_raw": 0.2326,
+            "model_prob": 0.3729,
+            "market_prob": 0.5133,
+            "fair_odds": 168,
+            "edge": -0.1403,
+            "edge_at_price": -0.1746,
+            "ev": -0.3189,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 21.5: 23.3% before shrink, this book's no-vig 51.3%.",
+              "Projection 17.43 (Normal(sd 6.6)).",
+              "Hit rate over L5 1/5, L10 1/10, L20 8/20, all 14/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Hart (shoulder) has been upgraded to probable for Wednesday's game against the Cavaliers.",
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "model far from market (23% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (23% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +174 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Josh Hart Under 21.5 pra",
+            "side": "under",
+            "line": 21.5,
+            "odds": -108.0,
+            "model_raw": 0.7674,
+            "model_prob": 0.6271,
+            "market_prob": 0.4867,
+            "fair_odds": -168,
+            "edge": 0.1403,
+            "edge_at_price": 0.1078,
+            "ev": 0.2077,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 21.5: 76.7% before shrink, this book's no-vig 48.7%.",
+              "Projection 17.43 (Normal(sd 6.6)).",
+              "Hit rate over L5 1/5, L10 1/10, L20 8/20, all 14/29."
+            ],
+            "flags": [
+              "current season only 14 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "injury news: listed Day-To-Day: Hart (shoulder) has been upgraded to probable for Wednesday's game against the Cavaliers.",
+              "thin data: current season only 14 games; added 15 from prior season (role/team may differ)",
+              "model far from market (77% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (77% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -160 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }
