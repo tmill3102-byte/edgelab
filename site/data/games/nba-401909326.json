@@ -24,12 +24,21 @@
   },
   "score": null,
   "analyzed": true,
-  "odds_feed": "espn",
+  "odds_feed": "oddsapi",
   "books": [
-    "draftkings"
+    "betmgm",
+    "betonlineag",
+    "betrivers",
+    "bovada",
+    "draftkings",
+    "fanduel",
+    "lowvig"
   ],
   "event_urls": {
-    "draftkings": "https://sportsbook.draftkings.com/event/34515423"
+    "draftkings": "https://sportsbook.draftkings.com/event/34515423",
+    "fanduel": "https://sportsbook.fanduel.com/basketball/nba/miami-heat-%40-new-york-knicks-36358262",
+    "betrivers": "https://oh.betrivers.com/?page=sportsbook#event/1028744798",
+    "betmgm": "https://sports.oh.betmgm.com/en/sports/events/miami-heat-at-new-york-knicks-20099901"
   },
   "lines": {
     "draftkings": {
@@ -38,6 +47,68 @@
       "total": 223.5,
       "under_odds": -105.0,
       "over_odds": -115.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -105.0
+    },
+    "fanduel": {
+      "ml_home": -166.0,
+      "ml_away": 140.0,
+      "total": 223.5,
+      "under_odds": -110.0,
+      "over_odds": -110.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -120.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -102.0
+    },
+    "betrivers": {
+      "ml_home": -167.0,
+      "ml_away": 138.0,
+      "total": 223.5,
+      "under_odds": -108.0,
+      "over_odds": -114.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -113.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -109.0
+    },
+    "betmgm": {
+      "ml_home": -170.0,
+      "ml_away": 140.0,
+      "total": 224.5,
+      "under_odds": -118.0,
+      "over_odds": -110.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -105.0
+    },
+    "bovada": {
+      "ml_home": -170.0,
+      "ml_away": 145.0,
+      "total": 223.5,
+      "under_odds": -105.0,
+      "over_odds": -115.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -105.0
+    },
+    "lowvig": {
+      "total": 224.5,
+      "under_odds": -113.0,
+      "over_odds": -102.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -111.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -101.0
+    },
+    "betonlineag": {
+      "total": 224.5,
+      "under_odds": -115.0,
+      "over_odds": -105.0,
       "spread_home": -3.5,
       "spread_home_odds": -115.0,
       "spread_away": 3.5,
@@ -54,15 +125,15 @@
   "injuries": {
     "home": [
       {
-        "name": "Miles McBride",
-        "status": "Day-To-Day",
-        "pos": "G",
-        "key": false
-      },
-      {
         "name": "Andre Drummond",
         "status": "Day-To-Day",
         "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Miles McBride",
+        "status": "Day-To-Day",
+        "pos": "G",
         "key": false
       },
       {
@@ -78,7 +149,20 @@
         "key": false
       }
     ],
-    "away": []
+    "away": [
+      {
+        "name": "Giannis Antetokounmpo",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Andrew Wiggins",
+        "status": "Day-To-Day",
+        "pos": "F",
+        "key": false
+      }
+    ]
   },
   "form": {
     "home": "L5 WWWWW",
@@ -107,18 +191,118 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NY win 71.0% vs market no-vig 60.3%.",
-                "v2 projected margin NY +6.9 (ratings NY +6.1, MIA +0.7, home edge 1.5); raw model 71.0%.",
-                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
-                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+                "Raw model NY ML: 71.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
               ],
               "flags": [],
-              "caution": [
-                "line move: price drifted against this side (-198 -> -169)"
-              ],
-              "case_against": "Market makes NY 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -154 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "NY ML",
+              "side": "home",
+              "line": null,
+              "odds": -166.0,
+              "model_raw": 0.7096,
+              "model_prob": 0.616,
+              "market_prob": 0.5996,
+              "fair_odds": -160,
+              "edge": 0.0163,
+              "edge_at_price": -0.0081,
+              "ev": -0.013,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY ML: 71.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -152 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "NY ML",
+              "side": "home",
+              "line": null,
+              "odds": -167.0,
+              "model_raw": 0.7096,
+              "model_prob": 0.6147,
+              "market_prob": 0.5982,
+              "fair_odds": -160,
+              "edge": 0.0166,
+              "edge_at_price": -0.0107,
+              "ev": -0.0172,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY ML: 71.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -152 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "NY ML",
+              "side": "home",
+              "line": null,
+              "odds": -170.0,
+              "model_raw": 0.7096,
+              "model_prob": 0.6178,
+              "market_prob": 0.6018,
+              "fair_odds": -162,
+              "edge": 0.016,
+              "edge_at_price": -0.0119,
+              "ev": -0.0188,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY ML: 71.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -154 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "NY ML",
+              "side": "home",
+              "line": null,
+              "odds": -170.0,
+              "model_raw": 0.7096,
+              "model_prob": 0.622,
+              "market_prob": 0.6067,
+              "fair_odds": -165,
+              "edge": 0.0153,
+              "edge_at_price": -0.0077,
+              "ev": -0.0122,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY ML: 71.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -156 or better.",
               "proven": true
             }
           }
@@ -142,16 +326,118 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIA win 29.0% vs market no-vig 39.7%.",
-                "v2 projected margin NY +6.9 (ratings NY +6.1, MIA +0.7, home edge 1.5); raw model 29.0%.",
-                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
-                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+                "Raw model MIA ML: 29.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Market makes MIA 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +168 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "away",
+              "line": null,
+              "odds": 140.0,
+              "model_raw": 0.2904,
+              "model_prob": 0.384,
+              "market_prob": 0.4004,
+              "fair_odds": 160,
+              "edge": -0.0163,
+              "edge_at_price": -0.0326,
+              "ev": -0.0783,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA ML: 29.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +166 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "away",
+              "line": null,
+              "odds": 138.0,
+              "model_raw": 0.2904,
+              "model_prob": 0.3853,
+              "market_prob": 0.4018,
+              "fair_odds": 160,
+              "edge": -0.0166,
+              "edge_at_price": -0.0349,
+              "ev": -0.0831,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA ML: 29.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +165 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "away",
+              "line": null,
+              "odds": 140.0,
+              "model_raw": 0.2904,
+              "model_prob": 0.3822,
+              "market_prob": 0.3982,
+              "fair_odds": 162,
+              "edge": -0.016,
+              "edge_at_price": -0.0344,
+              "ev": -0.0827,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA ML: 29.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +167 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "away",
+              "line": null,
+              "odds": 145.0,
+              "model_raw": 0.2904,
+              "model_prob": 0.378,
+              "market_prob": 0.3933,
+              "fair_odds": 165,
+              "edge": -0.0153,
+              "edge_at_price": -0.0301,
+              "ev": -0.0738,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA ML: 29.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +170 or better.",
               "proven": true
             }
           }
@@ -180,17 +466,169 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model NY -3.5 covers 60.7% vs market 51.1%.",
-                "Projected margin NY +6.9 vs line NY -3.5.",
-                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
-                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
               ],
               "flags": [],
-              "caution": [
-                "line move: spread moved against this side (+5.5 -> -3.5)"
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -120.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5193,
+              "market_prob": 0.5193,
+              "fair_odds": -108,
+              "edge": 0.0,
+              "edge_at_price": -0.0262,
+              "ev": -0.048,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
               ],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -104 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -113.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.0262,
+              "ev": -0.0495,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -115.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -115.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -111.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5115,
+              "market_prob": 0.5115,
+              "fair_odds": -105,
+              "edge": 0.0,
+              "edge_at_price": -0.0146,
+              "ev": -0.0278,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -101 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -115.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model NY -3.5: 60.7%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -100 or better.",
               "proven": false
             }
@@ -215,15 +653,169 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model MIA +3.5 covers 39.3% vs market 48.9%.",
-                "Projected margin NY +6.9 vs line NY -3.5.",
-                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
-                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
-                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
               ],
               "flags": [],
               "caution": [],
-              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "fanduel": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -102.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4807,
+              "market_prob": 0.4807,
+              "fair_odds": 108,
+              "edge": 0.0,
+              "edge_at_price": -0.0242,
+              "ev": -0.048,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +112 or better.",
+              "proven": false
+            },
+            "betrivers": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -109.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0258,
+              "ev": -0.0495,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
+            },
+            "betmgm": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -105.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "bovada": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -105.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "lowvig": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -101.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4885,
+              "market_prob": 0.4885,
+              "fair_odds": 105,
+              "edge": 0.0,
+              "edge_at_price": -0.0139,
+              "ev": -0.0278,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            },
+            "betonlineag": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -105.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model MIA +3.5: 39.3%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +109 or better.",
               "proven": false
             }
@@ -253,17 +845,170 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model under 223.5: 50.6% vs market 48.9%.",
-                "Projected total 223.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 232.5 -> 223.5.",
-                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+                "Raw model Under 223.5: 50.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
               ],
               "flags": [],
-              "caution": [
-                "line move: total already moved toward under (232.5 -> 223.5); value may be gone"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -110.0,
+              "model_raw": 0.506,
+              "model_prob": 0.501,
+              "market_prob": 0.5,
+              "fair_odds": -100,
+              "edge": 0.001,
+              "edge_at_price": -0.0228,
+              "ev": -0.0435,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 223.5: 50.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -108.0,
+              "model_raw": 0.506,
+              "model_prob": 0.4957,
+              "market_prob": 0.4936,
+              "fair_odds": 102,
+              "edge": 0.0021,
+              "edge_at_price": -0.0235,
+              "ev": -0.0453,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 223.5: 50.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 224.5",
+              "side": "under",
+              "line": 224.5,
+              "odds": -118.0,
+              "model_raw": 0.5267,
+              "model_prob": 0.5113,
+              "market_prob": 0.5082,
+              "fair_odds": -105,
+              "edge": 0.0031,
+              "edge_at_price": -0.0299,
+              "ev": -0.0553,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 224.5: 52.7%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -101 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -105.0,
+              "model_raw": 0.506,
+              "model_prob": 0.492,
+              "market_prob": 0.4892,
+              "fair_odds": 103,
+              "edge": 0.0029,
+              "edge_at_price": -0.0202,
+              "ev": -0.0394,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 223.5: 50.6%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 224.5",
+              "side": "under",
+              "line": 224.5,
+              "odds": -113.0,
+              "model_raw": 0.5267,
+              "model_prob": 0.5148,
+              "market_prob": 0.5123,
+              "fair_odds": -106,
+              "edge": 0.0024,
+              "edge_at_price": -0.0157,
+              "ev": -0.0297,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 224.5: 52.7%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -102 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 224.5",
+              "side": "under",
+              "line": 224.5,
+              "odds": -115.0,
+              "model_raw": 0.5267,
+              "model_prob": 0.5135,
+              "market_prob": 0.5108,
+              "fair_odds": -106,
+              "edge": 0.0027,
+              "edge_at_price": -0.0214,
+              "ev": -0.0399,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 224.5: 52.7%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -101 or better.",
               "proven": true
             }
           }
@@ -287,17 +1032,170 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Model over 223.5: 49.4% vs market 51.1%.",
-                "Projected total 223.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 232.5 -> 223.5.",
-                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+                "Raw model Over 223.5: 49.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
               ],
               "flags": [],
-              "caution": [
-                "line move: market moved against the over (232.5 -> 223.5)"
-              ],
-              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -110.0,
+              "model_raw": 0.494,
+              "model_prob": 0.499,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": -0.001,
+              "edge_at_price": -0.0248,
+              "ev": -0.0474,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 223.5: 49.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -114.0,
+              "model_raw": 0.494,
+              "model_prob": 0.5043,
+              "market_prob": 0.5064,
+              "fair_odds": -102,
+              "edge": -0.0021,
+              "edge_at_price": -0.0284,
+              "ev": -0.0533,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 223.5: 49.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Over 224.5",
+              "side": "over",
+              "line": 224.5,
+              "odds": -110.0,
+              "model_raw": 0.4733,
+              "model_prob": 0.4887,
+              "market_prob": 0.4918,
+              "fair_odds": 105,
+              "edge": -0.0031,
+              "edge_at_price": -0.0352,
+              "ev": -0.0671,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 224.5: 47.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -115.0,
+              "model_raw": 0.494,
+              "model_prob": 0.508,
+              "market_prob": 0.5108,
+              "fair_odds": -103,
+              "edge": -0.0029,
+              "edge_at_price": -0.0269,
+              "ev": -0.0503,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 223.5: 49.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Over 224.5",
+              "side": "over",
+              "line": 224.5,
+              "odds": -102.0,
+              "model_raw": 0.4733,
+              "model_prob": 0.4852,
+              "market_prob": 0.4877,
+              "fair_odds": 106,
+              "edge": -0.0024,
+              "edge_at_price": -0.0197,
+              "ev": -0.0391,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 224.5: 47.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +110 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Over 224.5",
+              "side": "over",
+              "line": 224.5,
+              "odds": -105.0,
+              "model_raw": 0.4733,
+              "model_prob": 0.4865,
+              "market_prob": 0.4892,
+              "fair_odds": 106,
+              "edge": -0.0027,
+              "edge_at_price": -0.0257,
+              "ev": -0.0502,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 224.5: 47.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin NY +6.9, total 223.21."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +110 or better.",
               "proven": true
             }
           }
@@ -305,5 +1203,2493 @@
       ]
     }
   ],
-  "props": []
+  "props": [
+    {
+      "player": "Bam Adebayo",
+      "player_id": "4066261",
+      "team": "Miami Heat",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 0.85,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "3/17",
+        "all": "3/17"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        3.0,
+        0.0,
+        1.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.956,
+          "fair_over": -2186,
+          "fair_under": 2186,
+          "L10": "6/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.575,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.343,
+          "fair_over": 191,
+          "fair_under": -191,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.223,
+          "fair_over": 349,
+          "fair_under": -349,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.105,
+          "fair_over": 850,
+          "fair_under": -850,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.094,
+          "fair_over": 968,
+          "fair_under": -968,
+          "L10": "1/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.039,
+          "fair_over": 2447,
+          "fair_under": -2447,
+          "L10": "0/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.036,
+          "fair_over": 2656,
+          "fair_under": -2656,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": 163.0,
+            "model_raw": 0.2226,
+            "model_prob": 0.2763,
+            "market_prob": 0.3568,
+            "fair_odds": 262,
+            "edge": -0.0805,
+            "edge_at_price": -0.104,
+            "ev": -0.2734,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 22.3% before shrink, this book's no-vig 35.7%.",
+              "Projection 0.85 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 3/17, all 3/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (22% vs 36%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (22% vs 36%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +269 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": -218.0,
+            "model_raw": 0.7774,
+            "model_prob": 0.7237,
+            "market_prob": 0.6432,
+            "fair_odds": -262,
+            "edge": 0.0805,
+            "edge_at_price": 0.0382,
+            "ev": 0.0557,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 77.7% before shrink, this book's no-vig 64.3%.",
+              "Projection 0.85 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 3/17, all 3/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (78% vs 64%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (78% vs 64%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Monitor only; if anything, wait for -244 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bam Adebayo",
+      "player_id": "4066261",
+      "team": "Miami Heat",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 2.5,
+      "projection": 3.74,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "14/17",
+        "all": "14/17"
+      },
+      "recent": [
+        3.0,
+        12.0,
+        2.0,
+        2.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        0.0,
+        4.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.926,
+          "fair_over": -1255,
+          "fair_under": 1255,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.925,
+          "fair_over": -1228,
+          "fair_under": 1228,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.868,
+          "fair_over": -660,
+          "fair_under": 660,
+          "L10": "9/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.842,
+          "fair_over": -533,
+          "fair_under": 533,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.702,
+          "fair_over": -236,
+          "fair_under": 236,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.631,
+          "fair_over": -171,
+          "fair_under": 171,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.509,
+          "fair_over": -104,
+          "fair_under": 104,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.346,
+          "fair_over": 189,
+          "fair_under": -189,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.267,
+          "fair_over": 275,
+          "fair_under": -275,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Over 2.5 ast",
+            "side": "over",
+            "line": 2.5,
+            "odds": -178.0,
+            "model_raw": 0.702,
+            "model_prob": 0.6615,
+            "market_prob": 0.6007,
+            "fair_odds": -195,
+            "edge": 0.0608,
+            "edge_at_price": 0.0212,
+            "ev": 0.0331,
+            "tier": "Medium",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 70.2% before shrink, this book's no-vig 60.1%.",
+              "Projection 3.74 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/17, all 14/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at -185 or better (current -178); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Under 2.5 ast",
+            "side": "under",
+            "line": 2.5,
+            "odds": 135.0,
+            "model_raw": 0.298,
+            "model_prob": 0.3385,
+            "market_prob": 0.3993,
+            "fair_odds": 195,
+            "edge": -0.0608,
+            "edge_at_price": -0.087,
+            "ev": -0.2045,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 29.8% before shrink, this book's no-vig 39.9%.",
+              "Projection 3.74 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 14/17, all 14/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +201 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bam Adebayo",
+      "player_id": "4066261",
+      "team": "Miami Heat",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 29.5,
+      "projection": 32.46,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "9/17",
+        "all": "9/17"
+      },
+      "recent": [
+        31.0,
+        51.0,
+        32.0,
+        7.0,
+        29.0,
+        54.0,
+        23.0,
+        30.0,
+        28.0,
+        49.0
+      ],
+      "ladder": [
+        {
+          "line": 25.5,
+          "p_over": 0.715,
+          "fair_over": -250,
+          "fair_under": 250,
+          "L10": "8/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.698,
+          "fair_over": -231,
+          "fair_under": 231,
+          "L10": "8/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.68,
+          "fair_over": -213,
+          "fair_under": 213,
+          "L10": "8/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.633,
+          "fair_over": -172,
+          "fair_under": 172,
+          "L10": "7/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.585,
+          "fair_over": -141,
+          "fair_under": 141,
+          "L10": "6/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.537,
+          "fair_over": -116,
+          "fair_under": 116,
+          "L10": "5/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.489,
+          "fair_over": 104,
+          "fair_under": -104,
+          "L10": "4/10"
+        },
+        {
+          "line": 32.5,
+          "p_over": 0.441,
+          "fair_over": 127,
+          "fair_under": -127,
+          "L10": "3/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.422,
+          "fair_over": 137,
+          "fair_under": -137,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Over 29.5 pra",
+            "side": "over",
+            "line": 29.5,
+            "odds": -107.0,
+            "model_raw": 0.5852,
+            "model_prob": 0.5443,
+            "market_prob": 0.4829,
+            "fair_odds": -119,
+            "edge": 0.0614,
+            "edge_at_price": 0.0274,
+            "ev": 0.0529,
+            "tier": "High",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 29.5: 58.5% before shrink, this book's no-vig 48.3%.",
+              "Projection 32.46 (Normal(sd 13.6)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/17, all 9/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at -114 or better (current -107); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Under 29.5 pra",
+            "side": "under",
+            "line": 29.5,
+            "odds": -124.0,
+            "model_raw": 0.4148,
+            "model_prob": 0.4557,
+            "market_prob": 0.5171,
+            "fair_odds": 119,
+            "edge": -0.0614,
+            "edge_at_price": -0.0978,
+            "ev": -0.1767,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 29.5: 41.5% before shrink, this book's no-vig 51.7%.",
+              "Projection 32.46 (Normal(sd 13.6)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 9/17, all 9/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +124 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bam Adebayo",
+      "player_id": "4066261",
+      "team": "Miami Heat",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 17.5,
+      "projection": 20.22,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "10/17",
+        "all": "10/17"
+      },
+      "recent": [
+        17.0,
+        24.0,
+        26.0,
+        4.0,
+        20.0,
+        37.0,
+        11.0,
+        18.0,
+        18.0,
+        35.0
+      ],
+      "ladder": [
+        {
+          "line": 13.5,
+          "p_over": 0.756,
+          "fair_over": -310,
+          "fair_under": 310,
+          "L10": "8/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.734,
+          "fair_over": -276,
+          "fair_under": 276,
+          "L10": "8/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.711,
+          "fair_over": -246,
+          "fair_under": 246,
+          "L10": "8/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.686,
+          "fair_over": -219,
+          "fair_under": 219,
+          "L10": "8/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.631,
+          "fair_over": -171,
+          "fair_under": 171,
+          "L10": "7/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.547,
+          "fair_over": -121,
+          "fair_under": 121,
+          "L10": "5/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.52,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "5/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.463,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "4/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.436,
+          "fair_over": 129,
+          "fair_under": -129,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Over 17.5 pts",
+            "side": "over",
+            "line": 17.5,
+            "odds": -111.0,
+            "model_raw": 0.6314,
+            "model_prob": 0.5772,
+            "market_prob": 0.4958,
+            "fair_odds": -137,
+            "edge": 0.0813,
+            "edge_at_price": 0.0511,
+            "ev": 0.0972,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 17.5: 63.1% before shrink, this book's no-vig 49.6%.",
+              "Projection 20.22 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (63% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (63% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -130 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Under 17.5 pts",
+            "side": "under",
+            "line": 17.5,
+            "odds": -115.0,
+            "model_raw": 0.3686,
+            "model_prob": 0.4228,
+            "market_prob": 0.5042,
+            "fair_odds": 137,
+            "edge": -0.0813,
+            "edge_at_price": -0.1121,
+            "ev": -0.2095,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 17.5: 36.9% before shrink, this book's no-vig 50.4%.",
+              "Projection 20.22 (Normal(sd 9.5)).",
+              "Hit rate over L5 3/5, L10 7/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (37% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (37% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +141 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bam Adebayo",
+      "player_id": "4066261",
+      "team": "Miami Heat",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 8.5,
+      "projection": 8.5,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "5/10",
+        "L20": "8/17",
+        "all": "8/17"
+      },
+      "recent": [
+        11.0,
+        15.0,
+        4.0,
+        1.0,
+        5.0,
+        14.0,
+        8.0,
+        8.0,
+        10.0,
+        10.0
+      ],
+      "ladder": [
+        {
+          "line": 6.5,
+          "p_over": 0.679,
+          "fair_over": -211,
+          "fair_under": 211,
+          "L10": "7/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.658,
+          "fair_over": -193,
+          "fair_under": 193,
+          "L10": "7/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.62,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "7/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.569,
+          "fair_over": -132,
+          "fair_under": 132,
+          "L10": "5/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.5,
+          "fair_over": -100,
+          "fair_under": 100,
+          "L10": "5/10"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.466,
+          "fair_over": 115,
+          "fair_under": -115,
+          "L10": "5/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.438,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "5/10"
+        },
+        {
+          "line": 10.0,
+          "p_over": 0.365,
+          "fair_over": 174,
+          "fair_under": -174,
+          "L10": "3/10"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.321,
+          "fair_over": 211,
+          "fair_under": -211,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Over 8.5 reb",
+            "side": "over",
+            "line": 8.5,
+            "odds": 102.0,
+            "model_raw": 0.5001,
+            "model_prob": 0.4855,
+            "market_prob": 0.4637,
+            "fair_odds": 106,
+            "edge": 0.0219,
+            "edge_at_price": -0.0095,
+            "ev": -0.0192,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 8.5: 50.0% before shrink, this book's no-vig 46.4%.",
+              "Projection 8.5 (Normal(sd 4.2)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +110 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bam Adebayo Under 8.5 reb",
+            "side": "under",
+            "line": 8.5,
+            "odds": -134.0,
+            "model_raw": 0.4999,
+            "model_prob": 0.5145,
+            "market_prob": 0.5363,
+            "fair_odds": -106,
+            "edge": -0.0219,
+            "edge_at_price": -0.0582,
+            "ev": -0.1016,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 8.5: 50.0% before shrink, this book's no-vig 53.6%.",
+              "Projection 8.5 (Normal(sd 4.2)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Davion Mitchell",
+      "player_id": "4278053",
+      "team": "Miami Heat",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 1.5,
+      "projection": 2.55,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "12/17",
+        "all": "12/17"
+      },
+      "recent": [
+        3.0,
+        1.0,
+        6.0,
+        1.0,
+        3.0,
+        3.0,
+        3.0,
+        2.0,
+        4.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.891,
+          "fair_over": -816,
+          "fair_under": 816,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.867,
+          "fair_over": -649,
+          "fair_under": 649,
+          "L10": "7/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.703,
+          "fair_over": -237,
+          "fair_under": 237,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.631,
+          "fair_over": -171,
+          "fair_under": 171,
+          "L10": "6/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.509,
+          "fair_over": -104,
+          "fair_under": 104,
+          "L10": "6/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.341,
+          "fair_over": 193,
+          "fair_under": -193,
+          "L10": "2/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.252,
+          "fair_over": 297,
+          "fair_under": -297,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Over 1.5 threes",
+            "side": "over",
+            "line": 1.5,
+            "odds": -178.0,
+            "model_raw": 0.7029,
+            "model_prob": 0.6616,
+            "market_prob": 0.5997,
+            "fair_odds": -196,
+            "edge": 0.0619,
+            "edge_at_price": 0.0213,
+            "ev": 0.0333,
+            "tier": "Medium",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 1.5: 70.3% before shrink, this book's no-vig 60.0%.",
+              "Projection 2.55 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/17, all 12/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Playable at -185 or better (current -178); re-check injuries/line 60 min before start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Under 1.5 threes",
+            "side": "under",
+            "line": 1.5,
+            "odds": 134.0,
+            "model_raw": 0.2971,
+            "model_prob": 0.3384,
+            "market_prob": 0.4003,
+            "fair_odds": 196,
+            "edge": -0.0619,
+            "edge_at_price": -0.089,
+            "ev": -0.2082,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 1.5: 29.7% before shrink, this book's no-vig 40.0%.",
+              "Projection 2.55 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 12/17, all 12/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +201 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Davion Mitchell",
+      "player_id": "4278053",
+      "team": "Miami Heat",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 7.5,
+      "projection": 9.0,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "8/10",
+        "L20": "12/17",
+        "all": "12/17"
+      },
+      "recent": [
+        10.0,
+        3.0,
+        6.0,
+        10.0,
+        9.0,
+        17.0,
+        8.0,
+        11.0,
+        8.0,
+        10.0
+      ],
+      "ladder": [
+        {
+          "line": 5.5,
+          "p_over": 0.842,
+          "fair_over": -532,
+          "fair_under": 532,
+          "L10": "9/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.828,
+          "fair_over": -481,
+          "fair_under": 481,
+          "L10": "8/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.761,
+          "fair_over": -319,
+          "fair_under": 319,
+          "L10": "8/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.745,
+          "fair_over": -292,
+          "fair_under": 292,
+          "L10": "8/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.698,
+          "fair_over": -231,
+          "fair_under": 231,
+          "L10": "8/10"
+        },
+        {
+          "line": 8.0,
+          "p_over": 0.653,
+          "fair_over": -188,
+          "fair_under": 188,
+          "L10": "6/10"
+        },
+        {
+          "line": 8.5,
+          "p_over": 0.567,
+          "fair_over": -131,
+          "fair_under": 131,
+          "L10": "6/10"
+        },
+        {
+          "line": 9.0,
+          "p_over": 0.516,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "5/10"
+        },
+        {
+          "line": 9.5,
+          "p_over": 0.463,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Over 7.5 ast",
+            "side": "over",
+            "line": 7.5,
+            "odds": -125.0,
+            "model_raw": 0.6976,
+            "model_prob": 0.6267,
+            "market_prob": 0.5203,
+            "fair_odds": -168,
+            "edge": 0.1064,
+            "edge_at_price": 0.0711,
+            "ev": 0.128,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 7.5: 69.8% before shrink, this book's no-vig 52.0%.",
+              "Projection 9.0 (Normal(sd 3.4)).",
+              "Hit rate over L5 3/5, L10 8/10, L20 12/17, all 12/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (70% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (70% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -159 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Under 7.5 ast",
+            "side": "under",
+            "line": 7.5,
+            "odds": -105.0,
+            "model_raw": 0.3024,
+            "model_prob": 0.3733,
+            "market_prob": 0.4797,
+            "fair_odds": 168,
+            "edge": -0.1064,
+            "edge_at_price": -0.1389,
+            "ev": -0.2711,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 7.5: 30.2% before shrink, this book's no-vig 48.0%.",
+              "Projection 9.0 (Normal(sd 3.4)).",
+              "Hit rate over L5 3/5, L10 8/10, L20 12/17, all 12/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (30% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (30% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +173 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Davion Mitchell",
+      "player_id": "4278053",
+      "team": "Miami Heat",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 25.5,
+      "projection": 29.75,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "10/17",
+        "all": "10/17"
+      },
+      "recent": [
+        34.0,
+        21.0,
+        32.0,
+        29.0,
+        28.0,
+        44.0,
+        32.0,
+        31.0,
+        32.0,
+        23.0
+      ],
+      "ladder": [
+        {
+          "line": 21.5,
+          "p_over": 0.887,
+          "fair_over": -788,
+          "fair_under": 788,
+          "L10": "9/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.869,
+          "fair_over": -661,
+          "fair_under": 661,
+          "L10": "9/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.817,
+          "fair_over": -445,
+          "fair_under": 445,
+          "L10": "8/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.789,
+          "fair_over": -374,
+          "fair_under": 374,
+          "L10": "8/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.758,
+          "fair_over": -312,
+          "fair_under": 312,
+          "L10": "8/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.722,
+          "fair_over": -260,
+          "fair_under": 260,
+          "L10": "8/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.683,
+          "fair_over": -215,
+          "fair_under": 215,
+          "L10": "8/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.612,
+          "fair_over": -158,
+          "fair_under": 158,
+          "L10": "7/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.54,
+          "fair_over": -117,
+          "fair_under": 117,
+          "L10": "6/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Over 25.5 pra",
+            "side": "over",
+            "line": 25.5,
+            "odds": -105.0,
+            "model_raw": 0.7576,
+            "model_prob": 0.6464,
+            "market_prob": 0.4797,
+            "fair_odds": -183,
+            "edge": 0.1667,
+            "edge_at_price": 0.1342,
+            "ev": 0.2621,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 25.5: 75.8% before shrink, this book's no-vig 48.0%.",
+              "Projection 29.75 (Normal(sd 6.0)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (76% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (76% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -173 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Under 25.5 pra",
+            "side": "under",
+            "line": 25.5,
+            "odds": -125.0,
+            "model_raw": 0.2424,
+            "model_prob": 0.3536,
+            "market_prob": 0.5203,
+            "fair_odds": 183,
+            "edge": -0.1667,
+            "edge_at_price": -0.202,
+            "ev": -0.3636,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 25.5: 24.2% before shrink, this book's no-vig 52.0%.",
+              "Projection 29.75 (Normal(sd 6.0)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 10/17, all 10/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (24% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (24% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +188 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Davion Mitchell",
+      "player_id": "4278053",
+      "team": "Miami Heat",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 13.5,
+      "projection": 17.67,
+      "hit_rates": {
+        "L5": "5/5",
+        "L10": "9/10",
+        "L20": "14/17",
+        "all": "14/17"
+      },
+      "recent": [
+        20.0,
+        14.0,
+        24.0,
+        16.0,
+        15.0,
+        22.0,
+        19.0,
+        17.0,
+        22.0,
+        11.0
+      ],
+      "ladder": [
+        {
+          "line": 9.5,
+          "p_over": 0.959,
+          "fair_over": -2345,
+          "fair_under": 2345,
+          "L10": "10/10"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.949,
+          "fair_over": -1877,
+          "fair_under": 1877,
+          "L10": "10/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.905,
+          "fair_over": -950,
+          "fair_under": 950,
+          "L10": "9/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.882,
+          "fair_over": -745,
+          "fair_under": 745,
+          "L10": "9/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.849,
+          "fair_over": -563,
+          "fair_under": 563,
+          "L10": "9/10"
+        },
+        {
+          "line": 14.5,
+          "p_over": 0.777,
+          "fair_over": -349,
+          "fair_under": 349,
+          "L10": "8/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.696,
+          "fair_over": -228,
+          "fair_under": 228,
+          "L10": "7/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.606,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "6/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.511,
+          "fair_over": -105,
+          "fair_under": 105,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Over 13.5 pts",
+            "side": "over",
+            "line": 13.5,
+            "odds": -125.0,
+            "model_raw": 0.8491,
+            "model_prob": 0.719,
+            "market_prob": 0.5239,
+            "fair_odds": -256,
+            "edge": 0.1951,
+            "edge_at_price": 0.1634,
+            "ev": 0.2942,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 13.5: 84.9% before shrink, this book's no-vig 52.4%.",
+              "Projection 17.67 (Normal(sd 3.9)).",
+              "Hit rate over L5 5/5, L10 9/10, L20 14/17, all 14/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (85% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Medium",
+              "model far from market (85% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -239 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Under 13.5 pts",
+            "side": "under",
+            "line": 13.5,
+            "odds": -102.0,
+            "model_raw": 0.1509,
+            "model_prob": 0.281,
+            "market_prob": 0.4761,
+            "fair_odds": 256,
+            "edge": -0.1951,
+            "edge_at_price": -0.224,
+            "ev": -0.4435,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 13.5: 15.1% before shrink, this book's no-vig 47.6%.",
+              "Projection 17.67 (Normal(sd 3.9)).",
+              "Hit rate over L5 5/5, L10 9/10, L20 14/17, all 14/17."
+            ],
+            "flags": [],
+            "caution": [
+              "model far from market (15% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (15% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +263 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Davion Mitchell",
+      "player_id": "4278053",
+      "team": "Miami Heat",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 2.5,
+      "projection": 3.08,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "7/10",
+        "L20": "8/17",
+        "all": "8/17"
+      },
+      "recent": [
+        4.0,
+        4.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        2.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.941,
+          "fair_over": -1590,
+          "fair_under": 1590,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.936,
+          "fair_over": -1459,
+          "fair_under": 1459,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.849,
+          "fair_over": -560,
+          "fair_under": 560,
+          "L10": "10/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.805,
+          "fair_over": -412,
+          "fair_under": 412,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.619,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.52,
+          "fair_over": -108,
+          "fair_under": 108,
+          "L10": "5/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.415,
+          "fair_over": 141,
+          "fair_under": -141,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.272,
+          "fair_over": 268,
+          "fair_under": -268,
+          "L10": "2/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.216,
+          "fair_over": 363,
+          "fair_under": -363,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Over 2.5 reb",
+            "side": "over",
+            "line": 2.5,
+            "odds": -154.0,
+            "model_raw": 0.6191,
+            "model_prob": 0.5987,
+            "market_prob": 0.5682,
+            "fair_odds": -149,
+            "edge": 0.0306,
+            "edge_at_price": -0.0076,
+            "ev": -0.0125,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 61.9% before shrink, this book's no-vig 56.8%.",
+              "Projection 3.08 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -142 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Davion Mitchell Under 2.5 reb",
+            "side": "under",
+            "line": 2.5,
+            "odds": 117.0,
+            "model_raw": 0.3809,
+            "model_prob": 0.4013,
+            "market_prob": 0.4318,
+            "fair_odds": 149,
+            "edge": -0.0306,
+            "edge_at_price": -0.0596,
+            "ev": -0.1292,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 38.1% before shrink, this book's no-vig 43.2%.",
+              "Projection 3.08 (Poisson).",
+              "Hit rate over L5 4/5, L10 7/10, L20 8/17, all 8/17."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +154 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Giannis Antetokounmpo",
+      "player_id": "3032977",
+      "team": "Miami Heat",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 0.5,
+      "projection": 0.44,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "7/16",
+        "all": "7/16"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.377,
+          "fair_over": 165,
+          "fair_under": -165,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.11,
+          "fair_over": 812,
+          "fair_under": -812,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.076,
+          "fair_over": 1210,
+          "fair_under": -1210,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.036,
+          "fair_over": 2657,
+          "fair_under": -2657,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.036,
+          "fair_over": 2691,
+          "fair_under": -2691,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Over 0.5 threes",
+            "side": "over",
+            "line": 0.5,
+            "odds": 151.0,
+            "model_raw": 0.3772,
+            "model_prob": 0.3759,
+            "market_prob": 0.3741,
+            "fair_odds": 166,
+            "edge": 0.0019,
+            "edge_at_price": -0.0225,
+            "ev": -0.0564,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 0.5: 37.7% before shrink, this book's no-vig 37.4%.",
+              "Projection 0.44 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 7/16, all 7/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis."
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +171 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Under 0.5 threes",
+            "side": "under",
+            "line": 0.5,
+            "odds": -200.0,
+            "model_raw": 0.6228,
+            "model_prob": 0.6241,
+            "market_prob": 0.6259,
+            "fair_odds": -166,
+            "edge": -0.0019,
+            "edge_at_price": -0.0426,
+            "ev": -0.0639,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 0.5: 62.3% before shrink, this book's no-vig 62.6%.",
+              "Projection 0.44 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 7/16, all 7/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis."
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -158 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Giannis Antetokounmpo",
+      "player_id": "3032977",
+      "team": "Miami Heat",
+      "stat": "ast",
+      "stat_label": "Assists",
+      "line": 5.5,
+      "projection": 5.33,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/16",
+        "all": "7/16"
+      },
+      "recent": [
+        4.0,
+        9.0,
+        6.0,
+        8.0,
+        2.0,
+        4.0,
+        3.0,
+        4.0,
+        6.0,
+        7.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.768,
+          "fair_over": -332,
+          "fair_under": 332,
+          "L10": "8/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.711,
+          "fair_over": -246,
+          "fair_under": 246,
+          "L10": "5/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.575,
+          "fair_over": -135,
+          "fair_under": 135,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.522,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.462,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.361,
+          "fair_over": 177,
+          "fair_under": -177,
+          "L10": "3/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.304,
+          "fair_over": 229,
+          "fair_under": -229,
+          "L10": "3/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.221,
+          "fair_over": 353,
+          "fair_under": -353,
+          "L10": "2/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.198,
+          "fair_over": 405,
+          "fair_under": -405,
+          "L10": "2/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Over 5.5 ast",
+            "side": "over",
+            "line": 5.5,
+            "odds": 113.0,
+            "model_raw": 0.4621,
+            "model_prob": 0.4531,
+            "market_prob": 0.4396,
+            "fair_odds": 121,
+            "edge": 0.0135,
+            "edge_at_price": -0.0164,
+            "ev": -0.0349,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 5.5: 46.2% before shrink, this book's no-vig 44.0%.",
+              "Projection 5.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/16, all 7/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis."
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Under 5.5 ast",
+            "side": "under",
+            "line": 5.5,
+            "odds": -149.0,
+            "model_raw": 0.5379,
+            "model_prob": 0.5469,
+            "market_prob": 0.5604,
+            "fair_odds": -121,
+            "edge": -0.0135,
+            "edge_at_price": -0.0515,
+            "ev": -0.0861,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 5.5: 53.8% before shrink, this book's no-vig 56.0%.",
+              "Projection 5.33 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/16, all 7/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis."
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -116 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Giannis Antetokounmpo",
+      "player_id": "3032977",
+      "team": "Miami Heat",
+      "stat": "pra",
+      "stat_label": "PRA",
+      "line": 44.5,
+      "projection": 46.68,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "12/16",
+        "all": "12/16"
+      },
+      "recent": [
+        50.0,
+        50.0,
+        39.0,
+        56.0,
+        48.0,
+        45.0,
+        46.0,
+        38.0,
+        47.0,
+        49.0
+      ],
+      "ladder": [
+        {
+          "line": 36.5,
+          "p_over": 0.923,
+          "fair_over": -1205,
+          "fair_under": 1205,
+          "L10": "10/10"
+        },
+        {
+          "line": 38.5,
+          "p_over": 0.863,
+          "fair_over": -629,
+          "fair_under": 629,
+          "L10": "9/10"
+        },
+        {
+          "line": 40.5,
+          "p_over": 0.79,
+          "fair_over": -376,
+          "fair_under": 376,
+          "L10": "8/10"
+        },
+        {
+          "line": 42.5,
+          "p_over": 0.734,
+          "fair_over": -275,
+          "fair_under": 275,
+          "L10": "8/10"
+        },
+        {
+          "line": 44.5,
+          "p_over": 0.667,
+          "fair_over": -200,
+          "fair_under": 200,
+          "L10": "8/10"
+        },
+        {
+          "line": 46.5,
+          "p_over": 0.536,
+          "fair_over": -115,
+          "fair_under": 115,
+          "L10": "6/10"
+        },
+        {
+          "line": 48.5,
+          "p_over": 0.404,
+          "fair_over": 147,
+          "fair_under": -147,
+          "L10": "4/10"
+        },
+        {
+          "line": 50.5,
+          "p_over": 0.249,
+          "fair_over": 302,
+          "fair_under": -302,
+          "L10": "1/10"
+        },
+        {
+          "line": 52.5,
+          "p_over": 0.19,
+          "fair_over": 426,
+          "fair_under": -426,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Over 44.5 pra",
+            "side": "over",
+            "line": 44.5,
+            "odds": -109.0,
+            "model_raw": 0.6669,
+            "model_prob": 0.5953,
+            "market_prob": 0.4878,
+            "fair_odds": -147,
+            "edge": 0.1074,
+            "edge_at_price": 0.0737,
+            "ev": 0.1414,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 44.5: 66.7% before shrink, this book's no-vig 48.8%.",
+              "Projection 46.68 (Normal(sd 7.0)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 12/16, all 12/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+              "model far from market (67% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low",
+              "model far from market (67% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -140 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Under 44.5 pra",
+            "side": "under",
+            "line": 44.5,
+            "odds": -121.0,
+            "model_raw": 0.3331,
+            "model_prob": 0.4047,
+            "market_prob": 0.5122,
+            "fair_odds": 147,
+            "edge": -0.1074,
+            "edge_at_price": -0.1428,
+            "ev": -0.2608,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 44.5: 33.3% before shrink, this book's no-vig 51.2%.",
+              "Projection 46.68 (Normal(sd 7.0)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 12/16, all 12/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+              "model far from market (33% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (33% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +152 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Giannis Antetokounmpo",
+      "player_id": "3032977",
+      "team": "Miami Heat",
+      "stat": "pts",
+      "stat_label": "Points",
+      "line": 27.5,
+      "projection": 28.54,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "6/10",
+        "L20": "10/16",
+        "all": "10/16"
+      },
+      "recent": [
+        32.0,
+        27.0,
+        20.0,
+        34.0,
+        37.0,
+        30.0,
+        29.0,
+        20.0,
+        27.0,
+        30.0
+      ],
+      "ladder": [
+        {
+          "line": 23.5,
+          "p_over": 0.805,
+          "fair_over": -413,
+          "fair_under": 413,
+          "L10": "8/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.771,
+          "fair_over": -336,
+          "fair_under": 336,
+          "L10": "8/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.731,
+          "fair_over": -272,
+          "fair_under": 272,
+          "L10": "8/10"
+        },
+        {
+          "line": 26.5,
+          "p_over": 0.687,
+          "fair_over": -219,
+          "fair_under": 219,
+          "L10": "8/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.581,
+          "fair_over": -138,
+          "fair_under": 138,
+          "L10": "6/10"
+        },
+        {
+          "line": 28.5,
+          "p_over": 0.531,
+          "fair_over": -113,
+          "fair_under": 113,
+          "L10": "6/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.452,
+          "fair_over": 121,
+          "fair_under": -121,
+          "L10": "5/10"
+        },
+        {
+          "line": 30.5,
+          "p_over": 0.346,
+          "fair_over": 189,
+          "fair_under": -189,
+          "L10": "3/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.301,
+          "fair_over": 232,
+          "fair_under": -232,
+          "L10": "3/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Over 27.5 pts",
+            "side": "over",
+            "line": 27.5,
+            "odds": -104.0,
+            "model_raw": 0.5806,
+            "model_prob": 0.5409,
+            "market_prob": 0.4812,
+            "fair_odds": -118,
+            "edge": 0.0596,
+            "edge_at_price": 0.0311,
+            "ev": 0.0609,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 27.5: 58.1% before shrink, this book's no-vig 48.1%.",
+              "Projection 28.54 (Normal(sd 5.2)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/16, all 10/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+              "downgraded High -> Medium",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -113 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Under 27.5 pts",
+            "side": "under",
+            "line": 27.5,
+            "odds": -122.0,
+            "model_raw": 0.4194,
+            "model_prob": 0.4591,
+            "market_prob": 0.5188,
+            "fair_odds": 118,
+            "edge": -0.0596,
+            "edge_at_price": -0.0904,
+            "ev": -0.1645,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 27.5: 41.9% before shrink, this book's no-vig 51.9%.",
+              "Projection 28.54 (Normal(sd 5.2)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 10/16, all 10/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis."
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +122 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Giannis Antetokounmpo",
+      "player_id": "3032977",
+      "team": "Miami Heat",
+      "stat": "reb",
+      "stat_label": "Rebounds",
+      "line": 11.5,
+      "projection": 12.82,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "12/16",
+        "all": "12/16"
+      },
+      "recent": [
+        14.0,
+        14.0,
+        13.0,
+        14.0,
+        9.0,
+        11.0,
+        14.0,
+        14.0,
+        14.0,
+        12.0
+      ],
+      "ladder": [
+        {
+          "line": 9.5,
+          "p_over": 0.914,
+          "fair_over": -1065,
+          "fair_under": 1065,
+          "L10": "9/10"
+        },
+        {
+          "line": 10.0,
+          "p_over": 0.912,
+          "fair_over": -1037,
+          "fair_under": 1037,
+          "L10": "9/10"
+        },
+        {
+          "line": 10.5,
+          "p_over": 0.867,
+          "fair_over": -654,
+          "fair_under": 654,
+          "L10": "9/10"
+        },
+        {
+          "line": 11.0,
+          "p_over": 0.851,
+          "fair_over": -570,
+          "fair_under": 570,
+          "L10": "8/10"
+        },
+        {
+          "line": 11.5,
+          "p_over": 0.752,
+          "fair_over": -303,
+          "fair_under": 303,
+          "L10": "8/10"
+        },
+        {
+          "line": 12.0,
+          "p_over": 0.707,
+          "fair_over": -241,
+          "fair_under": 241,
+          "L10": "7/10"
+        },
+        {
+          "line": 12.5,
+          "p_over": 0.601,
+          "fair_over": -150,
+          "fair_under": 150,
+          "L10": "7/10"
+        },
+        {
+          "line": 13.0,
+          "p_over": 0.517,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "6/10"
+        },
+        {
+          "line": 13.5,
+          "p_over": 0.439,
+          "fair_over": 128,
+          "fair_under": -128,
+          "L10": "6/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": "Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Over 11.5 reb",
+            "side": "over",
+            "line": 11.5,
+            "odds": -111.0,
+            "model_raw": 0.752,
+            "model_prob": 0.6483,
+            "market_prob": 0.4929,
+            "fair_odds": -184,
+            "edge": 0.1555,
+            "edge_at_price": 0.1223,
+            "ev": 0.2324,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 11.5: 75.2% before shrink, this book's no-vig 49.3%.",
+              "Projection 12.82 (Normal(sd 1.9)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 12/16, all 12/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+              "model far from market (75% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low",
+              "model far from market (75% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded High -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -174 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Giannis Antetokounmpo Under 11.5 reb",
+            "side": "under",
+            "line": 11.5,
+            "odds": -118.0,
+            "model_raw": 0.248,
+            "model_prob": 0.3517,
+            "market_prob": 0.5071,
+            "fair_odds": 184,
+            "edge": -0.1555,
+            "edge_at_price": -0.1896,
+            "ev": -0.3503,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 11.5: 24.8% before shrink, this book's no-vig 50.7%.",
+              "Projection 12.82 (Normal(sd 1.9)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 12/16, all 12/16."
+            ],
+            "flags": [],
+            "caution": [
+              "injury news: listed Day-To-Day: Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+              "model far from market (25% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (25% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +190 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jalen Brunson",
+      "player_id": "3934672",
+      "team": "New York Knicks",
+      "stat": "threes",
+      "stat_label": "Threes",
+      "line": 2.5,
+      "projection": 3.04,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "11/18",
+        "all": "11/18"
+      },
+      "recent": [
+        2.0,
+        1.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        1.0,
+        3.0
+      ],
+      "ladder": [
+        {
+          "line": 0.5,
+          "p_over": 0.94,
+          "fair_over": -1558,
+          "fair_under": 1558,
+          "L10": "10/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.929,
+          "fair_over": -1299,
+          "fair_under": 1299,
+          "L10": "8/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.787,
+          "fair_over": -369,
+          "fair_under": 369,
+          "L10": "8/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.743,
+          "fair_over": -289,
+          "fair_under": 289,
+          "L10": "7/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.614,
+          "fair_over": -159,
+          "fair_under": 159,
+          "L10": "7/10"
+        },
+        {
+          "line": 3.0,
+          "p_over": 0.497,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "4/10"
+        },
+        {
+          "line": 3.5,
+          "p_over": 0.381,
+          "fair_over": 163,
+          "fair_under": -163,
+          "L10": "4/10"
+        },
+        {
+          "line": 4.0,
+          "p_over": 0.227,
+          "fair_over": 340,
+          "fair_under": -340,
+          "L10": "1/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.183,
+          "fair_over": 448,
+          "fair_under": -448,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Over 2.5 threes",
+            "side": "over",
+            "line": 2.5,
+            "odds": -160.0,
+            "model_raw": 0.6137,
+            "model_prob": 0.5987,
+            "market_prob": 0.5763,
+            "fair_odds": -149,
+            "edge": 0.0225,
+            "edge_at_price": -0.0167,
+            "ev": -0.0271,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model over 2.5: 61.4% before shrink, this book's no-vig 57.6%.",
+              "Projection 3.04 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/18, all 11/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -142 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jalen Brunson Under 2.5 threes",
+            "side": "under",
+            "line": 2.5,
+            "odds": 121.0,
+            "model_raw": 0.3863,
+            "model_prob": 0.4013,
+            "market_prob": 0.4237,
+            "fair_odds": 149,
+            "edge": -0.0225,
+            "edge_at_price": -0.0512,
+            "ev": -0.1132,
+            "tier": "Low",
+            "data_quality": "High",
+            "reasons": [
+              "Model under 2.5: 38.6% before shrink, this book's no-vig 42.4%.",
+              "Projection 3.04 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 11/18, all 11/18."
+            ],
+            "flags": [],
+            "caution": [],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +154 or better.",
+            "proven": false
+          }
+        }
+      }
+    }
+  ]
 }
