@@ -1,0 +1,320 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909330",
+  "name": "Atlanta Hawks at Boston Celtics",
+  "matchup": "ATL @ BOS",
+  "start": "2026-11-28T01:00Z",
+  "start_local": "Fri Nov 27 8:00 PM ET",
+  "date_et": "2026-11-27",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "11/27 - 8:00 PM EST",
+  "home": {
+    "abbr": "BOS",
+    "name": "Boston Celtics",
+    "record": "12-6",
+    "id": "2"
+  },
+  "away": {
+    "abbr": "ATL",
+    "name": "Atlanta Hawks",
+    "record": "11-6",
+    "id": "1"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35086688"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_away": 288.0,
+      "ml_home": -361.0,
+      "total": 221.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0,
+      "spread_home": -9.5,
+      "spread_home_odds": -110.0,
+      "spread_away": 9.5,
+      "spread_away_odds": -110.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin BOS +5.1 \u00b7 total 221.2",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: BOS 70.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin BOS +5.1, total 221.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Mitchell Robinson",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Jock Landale",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Asa Newell",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "CJ McCollum",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Mouhamed Gueye",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Henri Veesaar",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LLLLW",
+    "away": "L5 LWWWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "ATL ML",
+              "side": "away",
+              "line": null,
+              "odds": 288.0,
+              "model_raw": 0.3404,
+              "model_prob": 0.2595,
+              "market_prob": 0.2476,
+              "fair_odds": 285,
+              "edge": 0.0119,
+              "edge_at_price": 0.0018,
+              "ev": 0.007,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ATL win 34.0% vs market no-vig 24.8%.",
+                "v2 projected margin BOS +5.1 (ratings BOS +5.1, ATL +1.5, home edge 1.5); raw model 34.0%.",
+                "ATL L5 LWWWW (MOV 3.1), BOS L5 LLLLW (MOV 9.4)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes ATL 25%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Monitor only; if anything, wait for +293 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "BOS ML",
+              "side": "home",
+              "line": null,
+              "odds": -361.0,
+              "model_raw": 0.6596,
+              "model_prob": 0.7405,
+              "market_prob": 0.7524,
+              "fair_odds": -285,
+              "edge": -0.0119,
+              "edge_at_price": -0.0426,
+              "ev": -0.0544,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BOS win 66.0% vs market no-vig 75.2%.",
+                "v2 projected margin BOS +5.1 (ratings BOS +5.1, ATL +1.5, home edge 1.5); raw model 66.0%.",
+                "ATL L5 LWWWW (MOV 3.1), BOS L5 LLLLW (MOV 9.4)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes BOS 75%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -265 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "BOS -9.5",
+              "side": "home",
+              "line": -9.5,
+              "odds": -110.0,
+              "model_raw": 0.3637,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model BOS -9.5 covers 36.4% vs market 50.0%.",
+                "Projected margin BOS +5.1 vs line BOS -9.5.",
+                "ATL L5 LWWWW (MOV 3.1), BOS L5 LLLLW (MOV 9.4)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "ATL +9.5",
+              "side": "away",
+              "line": 9.5,
+              "odds": -110.0,
+              "model_raw": 0.6363,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model ATL +9.5 covers 63.6% vs market 50.0%.",
+                "Projected margin BOS +5.1 vs line BOS -9.5.",
+                "ATL L5 LWWWW (MOV 3.1), BOS L5 LLLLW (MOV 9.4)",
+                "pace: projected total +0.7 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 221.5",
+              "side": "over",
+              "line": 221.5,
+              "odds": -105.0,
+              "model_raw": 0.4934,
+              "model_prob": 0.4899,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0007,
+              "edge_at_price": -0.0223,
+              "ev": -0.0436,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 221.5: 49.3% vs market 48.9%.",
+                "Projected total 221.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 222.5 -> 221.5.",
+                "ATL L5 LWWWW (MOV 3.1), BOS L5 LLLLW (MOV 9.4)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the over (222.5 -> 221.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 221.5",
+              "side": "under",
+              "line": 221.5,
+              "odds": -115.0,
+              "model_raw": 0.5066,
+              "model_prob": 0.5101,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": -0.0007,
+              "edge_at_price": -0.0248,
+              "ev": -0.0463,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 221.5: 50.7% vs market 51.1%.",
+                "Projected total 221.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 222.5 -> 221.5.",
+                "ATL L5 LWWWW (MOV 3.1), BOS L5 LLLLW (MOV 9.4)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward under (222.5 -> 221.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

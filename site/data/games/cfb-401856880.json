@@ -23,7 +23,7 @@
     "id": "277"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -35,24 +35,32 @@
     "draftkings": {
       "ml_home": -2800.0,
       "ml_away": 1300.0,
-      "spread_home": -25.5,
-      "spread_home_odds": -112.0,
-      "spread_away": 25.5,
-      "spread_away_odds": -108.0,
+      "spread_home": -26.5,
+      "spread_home_odds": -108.0,
+      "spread_away": 26.5,
+      "spread_away_odds": -112.0,
       "total": 66.5,
       "over_odds": -110.0,
       "under_odds": -110.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin UTAH +26.6 \u00b7 total 62.2",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: UTAH 93.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin UTAH +26.6, total 62.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WWWWW",
+    "away": "L5 WWLLL"
+  },
   "markets": [
     {
       "market": "ML",
@@ -66,26 +74,28 @@
               "side": "home",
               "line": null,
               "odds": -2800.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.9569,
+              "model_prob": 0.9311,
+              "market_prob": 0.9311,
+              "fair_odds": -1352,
+              "edge": 0.0,
+              "edge_at_price": -0.0344,
+              "ev": -0.0356,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model UTAH win 95.7% vs market no-vig 93.1%.",
+                "v2 projected margin UTAH +26.6 (ratings UTAH +8.3, WVU -15.0, home edge 3.33); raw model 95.7%.",
+                "WVU L5 WWLLL (MOV -0.2), UTAH L5 WWWWW (MOV 19.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes UTAH 93%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -1047 or better.",
+              "proven": false
             }
           }
         },
@@ -98,26 +108,30 @@
               "side": "away",
               "line": null,
               "odds": 1300.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.0431,
+              "model_prob": 0.0689,
+              "market_prob": 0.0689,
+              "fair_odds": 1352,
+              "edge": -0.0,
+              "edge_at_price": -0.0025,
+              "ev": -0.0356,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model WVU win 4.3% vs market no-vig 6.9%.",
+                "v2 projected margin UTAH +26.6 (ratings UTAH +8.3, WVU -15.0, home edge 3.33); raw model 4.3%.",
+                "WVU L5 WWLLL (MOV -0.2), UTAH L5 WWWWW (MOV 19.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: price drifted against this side (+800 -> +1300)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Market makes WVU 7%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +1380 or better.",
+              "proven": false
             }
           }
         }
@@ -131,30 +145,34 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "UTAH -25.5",
+              "selection": "UTAH -26.5",
               "side": "home",
-              "line": -25.5,
-              "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": -26.5,
+              "odds": -108.0,
+              "model_raw": 0.5025,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model UTAH -26.5 covers 50.3% vs market 49.6%.",
+                "Projected margin UTAH +26.6 vs line UTAH -26.5.",
+                "WVU L5 WWLLL (MOV -0.2), UTAH L5 WWWWW (MOV 19.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-20.5 -> -26.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         },
@@ -163,30 +181,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "WVU +25.5",
+              "selection": "WVU +26.5",
               "side": "away",
-              "line": 25.5,
-              "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 26.5,
+              "odds": -112.0,
+              "model_raw": 0.4975,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model WVU +26.5 covers 49.7% vs market 50.4%.",
+                "Projected margin UTAH +26.6 vs line UTAH -26.5.",
+                "WVU L5 WWLLL (MOV -0.2), UTAH L5 WWWWW (MOV 19.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         }
@@ -204,26 +224,30 @@
               "side": "over",
               "line": 66.5,
               "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.396,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 66.5: 39.6% vs market 50.0%.",
+                "Projected total 62.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 68.5 -> 66.5.",
+                "WVU L5 WWLLL (MOV -0.2), UTAH L5 WWWWW (MOV 19.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (68.5 -> 66.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         },
@@ -236,26 +260,30 @@
               "side": "under",
               "line": 66.5,
               "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.604,
+              "model_prob": 0.5,
+              "market_prob": 0.5,
+              "fair_odds": 100,
+              "edge": 0.0,
+              "edge_at_price": -0.0238,
+              "ev": -0.0455,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 66.5: 60.4% vs market 50.0%.",
+                "Projected total 62.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 68.5 -> 66.5.",
+                "WVU L5 WWLLL (MOV -0.2), UTAH L5 WWWWW (MOV 19.5)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (68.5 -> 66.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": false
             }
           }
         }

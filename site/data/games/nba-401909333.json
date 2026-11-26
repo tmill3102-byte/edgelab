@@ -1,0 +1,316 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909333",
+  "name": "Los Angeles Lakers at San Antonio Spurs",
+  "matchup": "LAL @ SA",
+  "start": "2026-11-28T02:30Z",
+  "start_local": "Fri Nov 27 9:30 PM ET",
+  "date_et": "2026-11-27",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "11/27 - 9:30 PM EST",
+  "home": {
+    "abbr": "SA",
+    "name": "San Antonio Spurs",
+    "record": "15-4",
+    "id": "24"
+  },
+  "away": {
+    "abbr": "LAL",
+    "name": "Los Angeles Lakers",
+    "record": "15-3",
+    "id": "13"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/34515424"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_home": -205.0,
+      "ml_away": 171.0,
+      "total": 225.5,
+      "under_odds": -105.0,
+      "over_odds": -115.0,
+      "spread_home": -6.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 6.5,
+      "spread_away_odds": -115.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin SA +5.4 \u00b7 total 225.0",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: SA 72.0% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin SA +5.4, total 225.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "De'Aaron Fox",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Dylan Harper",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Tobias Harris",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Jayden Quaintance",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Austin Reaves",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LWWWL",
+    "away": "L5 WWLWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "SA ML",
+              "side": "home",
+              "line": null,
+              "odds": -205.0,
+              "model_raw": 0.668,
+              "model_prob": 0.6488,
+              "market_prob": 0.6456,
+              "fair_odds": -185,
+              "edge": 0.0032,
+              "edge_at_price": -0.0234,
+              "ev": -0.0348,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SA win 66.8% vs market no-vig 64.6%.",
+                "v2 projected margin SA +5.4 (ratings SA +7.6, LAL +3.7, home edge 1.5); raw model 66.8%.",
+                "LAL L5 WWLWW (MOV 6.7), SA L5 LWWWL (MOV 11.3)",
+                "pace: projected total +0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: price drifted against this side (-285 -> -205)"
+              ],
+              "case_against": "Market makes SA 65%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -175 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "LAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 171.0,
+              "model_raw": 0.332,
+              "model_prob": 0.3512,
+              "market_prob": 0.3544,
+              "fair_odds": 185,
+              "edge": -0.0032,
+              "edge_at_price": -0.0178,
+              "ev": -0.0481,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model LAL win 33.2% vs market no-vig 35.4%.",
+                "v2 projected margin SA +5.4 (ratings SA +7.6, LAL +3.7, home edge 1.5); raw model 33.2%.",
+                "LAL L5 WWLWW (MOV 6.7), SA L5 LWWWL (MOV 11.3)",
+                "pace: projected total +0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes LAL 35%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +190 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "SA -6.5",
+              "side": "home",
+              "line": -6.5,
+              "odds": -105.0,
+              "model_raw": 0.4659,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model SA -6.5 covers 46.6% vs market 48.9%.",
+                "Projected margin SA +5.4 vs line SA -6.5.",
+                "LAL L5 WWLWW (MOV 6.7), SA L5 LWWWL (MOV 11.3)",
+                "pace: projected total +0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (+7.5 -> -6.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "LAL +6.5",
+              "side": "away",
+              "line": 6.5,
+              "odds": -115.0,
+              "model_raw": 0.5341,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model LAL +6.5 covers 53.4% vs market 51.1%.",
+                "Projected margin SA +5.4 vs line SA -6.5.",
+                "LAL L5 WWLWW (MOV 6.7), SA L5 LWWWL (MOV 11.3)",
+                "pace: projected total +0.1 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 225.5",
+              "side": "under",
+              "line": 225.5,
+              "odds": -105.0,
+              "model_raw": 0.5099,
+              "model_prob": 0.4927,
+              "market_prob": 0.4892,
+              "fair_odds": 103,
+              "edge": 0.0035,
+              "edge_at_price": -0.0195,
+              "ev": -0.0381,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 225.5: 51.0% vs market 48.9%.",
+                "Projected total 225.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 232.5 -> 225.5.",
+                "LAL L5 WWLWW (MOV 6.7), SA L5 LWWWL (MOV 11.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward under (232.5 -> 225.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 225.5",
+              "side": "over",
+              "line": 225.5,
+              "odds": -115.0,
+              "model_raw": 0.4901,
+              "model_prob": 0.5073,
+              "market_prob": 0.5108,
+              "fair_odds": -103,
+              "edge": -0.0035,
+              "edge_at_price": -0.0276,
+              "ev": -0.0516,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 225.5: 49.0% vs market 51.1%.",
+                "Projected total 225.0 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 232.5 -> 225.5.",
+                "LAL L5 WWLWW (MOV 6.7), SA L5 LWWWL (MOV 11.3)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the over (232.5 -> 225.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

@@ -1,0 +1,309 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909326",
+  "name": "Miami Heat at New York Knicks",
+  "matchup": "MIA @ NY",
+  "start": "2026-11-28T00:00Z",
+  "start_local": "Fri Nov 27 7:00 PM ET",
+  "date_et": "2026-11-27",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "11/27 - 7:00 PM EST",
+  "home": {
+    "abbr": "NY",
+    "name": "New York Knicks",
+    "record": "12-6",
+    "id": "18"
+  },
+  "away": {
+    "abbr": "MIA",
+    "name": "Miami Heat",
+    "record": "10-7",
+    "id": "14"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/34515423"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_home": -169.0,
+      "ml_away": 142.0,
+      "total": 223.5,
+      "under_odds": -105.0,
+      "over_odds": -115.0,
+      "spread_home": -3.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 3.5,
+      "spread_away_odds": -105.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin NY +6.9 \u00b7 total 223.2",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: NY 69.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin NY +6.9, total 223.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Miles McBride",
+        "status": "Day-To-Day",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Andre Drummond",
+        "status": "Day-To-Day",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "OG Anunoby",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Jordan Clarkson",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      }
+    ],
+    "away": []
+  },
+  "form": {
+    "home": "L5 WWWWW",
+    "away": "L5 WWWWL"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "NY ML",
+              "side": "home",
+              "line": null,
+              "odds": -169.0,
+              "model_raw": 0.7096,
+              "model_prob": 0.619,
+              "market_prob": 0.6032,
+              "fair_odds": -162,
+              "edge": 0.0158,
+              "edge_at_price": -0.0092,
+              "ev": -0.0147,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model NY win 71.0% vs market no-vig 60.3%.",
+                "v2 projected margin NY +6.9 (ratings NY +6.1, MIA +0.7, home edge 1.5); raw model 71.0%.",
+                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
+                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: price drifted against this side (-198 -> -169)"
+              ],
+              "case_against": "Market makes NY 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -154 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "MIA ML",
+              "side": "away",
+              "line": null,
+              "odds": 142.0,
+              "model_raw": 0.2904,
+              "model_prob": 0.381,
+              "market_prob": 0.3968,
+              "fair_odds": 162,
+              "edge": -0.0158,
+              "edge_at_price": -0.0322,
+              "ev": -0.078,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIA win 29.0% vs market no-vig 39.7%.",
+                "v2 projected margin NY +6.9 (ratings NY +6.1, MIA +0.7, home edge 1.5); raw model 29.0%.",
+                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
+                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes MIA 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +168 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "NY -3.5",
+              "side": "home",
+              "line": -3.5,
+              "odds": -115.0,
+              "model_raw": 0.6072,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model NY -3.5 covers 60.7% vs market 51.1%.",
+                "Projected margin NY +6.9 vs line NY -3.5.",
+                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
+                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (+5.5 -> -3.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "MIA +3.5",
+              "side": "away",
+              "line": 3.5,
+              "odds": -105.0,
+              "model_raw": 0.3928,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model MIA +3.5 covers 39.3% vs market 48.9%.",
+                "Projected margin NY +6.9 vs line NY -3.5.",
+                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
+                "pace: projected total -0.3 vs these teams' rating-only total (recent shot volume)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 223.5",
+              "side": "under",
+              "line": 223.5,
+              "odds": -105.0,
+              "model_raw": 0.506,
+              "model_prob": 0.492,
+              "market_prob": 0.4892,
+              "fair_odds": 103,
+              "edge": 0.0029,
+              "edge_at_price": -0.0202,
+              "ev": -0.0394,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 223.5: 50.6% vs market 48.9%.",
+                "Projected total 223.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 232.5 -> 223.5.",
+                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: total already moved toward under (232.5 -> 223.5); value may be gone"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +107 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 223.5",
+              "side": "over",
+              "line": 223.5,
+              "odds": -115.0,
+              "model_raw": 0.494,
+              "model_prob": 0.508,
+              "market_prob": 0.5108,
+              "fair_odds": -103,
+              "edge": -0.0029,
+              "edge_at_price": -0.0269,
+              "ev": -0.0503,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 223.5: 49.4% vs market 51.1%.",
+                "Projected total 223.2 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 232.5 -> 223.5.",
+                "MIA L5 WWWWL (MOV 0.8), NY L5 WWWWW (MOV 6.4)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)"
+              ],
+              "flags": [],
+              "caution": [
+                "line move: market moved against the over (232.5 -> 223.5)"
+              ],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}
