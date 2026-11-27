@@ -153,6 +153,12 @@
   "injuries": {
     "home": [
       {
+        "name": "Brock Purdy",
+        "status": "Questionable",
+        "pos": "QB",
+        "key": true
+      },
+      {
         "name": "Jordan Watkins",
         "status": "Questionable",
         "pos": "WR",
@@ -163,12 +169,6 @@
         "status": "Questionable",
         "pos": "WR",
         "key": false
-      },
-      {
-        "name": "Brock Purdy",
-        "status": "Questionable",
-        "pos": "QB",
-        "key": true
       },
       {
         "name": "Austen Pleasants",
@@ -1775,18 +1775,18 @@
             "selection": "Christian McCaffrey Over 53.5 rush_yds",
             "side": "over",
             "line": 53.5,
-            "odds": -113.0,
+            "odds": -112.0,
             "model_raw": 0.6383,
-            "model_prob": 0.5702,
-            "market_prob": 0.5021,
-            "fair_odds": -133,
-            "edge": 0.0681,
-            "edge_at_price": 0.0397,
-            "ev": 0.0748,
+            "model_prob": 0.5692,
+            "market_prob": 0.5,
+            "fair_odds": -132,
+            "edge": 0.0692,
+            "edge_at_price": 0.0408,
+            "ev": 0.0773,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 53.5: 63.8% before shrink, this book's no-vig 50.2%.",
+              "Model over 53.5: 63.8% before shrink, this book's no-vig 50.0%.",
               "Projection 60.13 (Normal(sd 15.3)).",
               "Hit rate over L5 3/5, L10 6/10, L20 11/20, all 15/25."
             ],
@@ -1801,7 +1801,7 @@
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -126 or better and re-check injuries near start.",
             "proven": false
           }
         },
@@ -1811,18 +1811,18 @@
             "selection": "Christian McCaffrey Under 53.5 rush_yds",
             "side": "under",
             "line": 53.5,
-            "odds": -111.0,
+            "odds": -112.0,
             "model_raw": 0.3617,
-            "model_prob": 0.4298,
-            "market_prob": 0.4979,
-            "fair_odds": 133,
-            "edge": -0.0681,
-            "edge_at_price": -0.0963,
-            "ev": -0.183,
+            "model_prob": 0.4309,
+            "market_prob": 0.5,
+            "fair_odds": 132,
+            "edge": -0.0691,
+            "edge_at_price": -0.0975,
+            "ev": -0.1845,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 53.5: 36.2% before shrink, this book's no-vig 49.8%.",
+              "Model under 53.5: 36.2% before shrink, this book's no-vig 50.0%.",
               "Projection 60.13 (Normal(sd 15.3)).",
               "Hit rate over L5 3/5, L10 6/10, L20 11/20, all 15/25."
             ],
@@ -1836,6 +1836,171 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +137 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Christian McCaffrey",
+      "player_id": "3117251",
+      "team": "San Francisco 49ers",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 29.5,
+      "projection": 45.33,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "12/20",
+        "all": "17/25"
+      },
+      "recent": [
+        13.0,
+        161.0,
+        19.0,
+        61.0,
+        53.0,
+        15.0,
+        18.0,
+        41.0,
+        43.0,
+        20.0
+      ],
+      "ladder": [
+        {
+          "line": 21.5,
+          "p_over": 0.639,
+          "fair_over": -177,
+          "fair_under": 177,
+          "L10": "5/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.629,
+          "fair_over": -169,
+          "fair_under": 169,
+          "L10": "5/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.618,
+          "fair_over": -162,
+          "fair_under": 162,
+          "L10": "5/10"
+        },
+        {
+          "line": 27.5,
+          "p_over": 0.607,
+          "fair_over": -154,
+          "fair_under": 154,
+          "L10": "5/10"
+        },
+        {
+          "line": 29.5,
+          "p_over": 0.595,
+          "fair_over": -147,
+          "fair_under": 147,
+          "L10": "5/10"
+        },
+        {
+          "line": 31.5,
+          "p_over": 0.584,
+          "fair_over": -140,
+          "fair_under": 140,
+          "L10": "5/10"
+        },
+        {
+          "line": 33.5,
+          "p_over": 0.572,
+          "fair_over": -134,
+          "fair_under": 134,
+          "L10": "5/10"
+        },
+        {
+          "line": 35.5,
+          "p_over": 0.56,
+          "fair_over": -127,
+          "fair_under": 127,
+          "L10": "5/10"
+        },
+        {
+          "line": 37.5,
+          "p_over": 0.548,
+          "fair_over": -121,
+          "fair_under": 121,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Christian McCaffrey Over 29.5 rec_yds",
+            "side": "over",
+            "line": 29.5,
+            "odds": -109.0,
+            "model_raw": 0.5952,
+            "model_prob": 0.5444,
+            "market_prob": 0.4937,
+            "fair_odds": -120,
+            "edge": 0.0508,
+            "edge_at_price": 0.0229,
+            "ev": 0.0439,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 29.5: 59.5% before shrink, this book's no-vig 49.4%.",
+              "Projection 45.33 (Normal(sd 42.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 17/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -114 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Christian McCaffrey Under 29.5 rec_yds",
+            "side": "under",
+            "line": 29.5,
+            "odds": -115.0,
+            "model_raw": 0.4048,
+            "model_prob": 0.4556,
+            "market_prob": 0.5063,
+            "fair_odds": 120,
+            "edge": -0.0508,
+            "edge_at_price": -0.0793,
+            "ev": -0.1483,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 29.5: 40.5% before shrink, this book's no-vig 50.6%.",
+              "Projection 45.33 (Normal(sd 42.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 12/20, all 17/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +124 or better.",
             "proven": false
           }
         }
@@ -1924,18 +2089,18 @@
             "selection": "Christian McCaffrey Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": -150.0,
+            "odds": -140.0,
             "model_raw": 0.7708,
-            "model_prob": 0.6725,
-            "market_prob": 0.5742,
-            "fair_odds": -205,
-            "edge": 0.0983,
-            "edge_at_price": 0.0725,
-            "ev": 0.1208,
+            "model_prob": 0.6645,
+            "market_prob": 0.5582,
+            "fair_odds": -198,
+            "edge": 0.1063,
+            "edge_at_price": 0.0812,
+            "ev": 0.1391,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 77.1% before shrink, this book's no-vig 57.4%.",
+              "Model over 0.5: 77.1% before shrink, this book's no-vig 55.8%.",
               "Projection 1.34 (Poisson).",
               "Hit rate over L5 5/5, L10 9/10, L20 16/20, all 20/25."
             ],
@@ -1945,178 +2110,13 @@
             ],
             "caution": [
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (77% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (77% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (77% vs 57%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (77% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -194 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Christian McCaffrey",
-      "player_id": "3117251",
-      "team": "San Francisco 49ers",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 28.5,
-      "projection": 45.33,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "13/20",
-        "all": "18/25"
-      },
-      "recent": [
-        13.0,
-        161.0,
-        19.0,
-        61.0,
-        53.0,
-        15.0,
-        18.0,
-        41.0,
-        43.0,
-        20.0
-      ],
-      "ladder": [
-        {
-          "line": 20.5,
-          "p_over": 0.644,
-          "fair_over": -181,
-          "fair_under": 181,
-          "L10": "5/10"
-        },
-        {
-          "line": 22.5,
-          "p_over": 0.634,
-          "fair_over": -173,
-          "fair_under": 173,
-          "L10": "5/10"
-        },
-        {
-          "line": 24.5,
-          "p_over": 0.623,
-          "fair_over": -165,
-          "fair_under": 165,
-          "L10": "5/10"
-        },
-        {
-          "line": 26.5,
-          "p_over": 0.612,
-          "fair_over": -158,
-          "fair_under": 158,
-          "L10": "5/10"
-        },
-        {
-          "line": 28.5,
-          "p_over": 0.601,
-          "fair_over": -151,
-          "fair_under": 151,
-          "L10": "5/10"
-        },
-        {
-          "line": 30.5,
-          "p_over": 0.589,
-          "fair_over": -144,
-          "fair_under": 144,
-          "L10": "5/10"
-        },
-        {
-          "line": 32.5,
-          "p_over": 0.578,
-          "fair_over": -137,
-          "fair_under": 137,
-          "L10": "5/10"
-        },
-        {
-          "line": 34.5,
-          "p_over": 0.566,
-          "fair_over": -130,
-          "fair_under": 130,
-          "L10": "5/10"
-        },
-        {
-          "line": 36.5,
-          "p_over": 0.554,
-          "fair_over": -124,
-          "fair_under": 124,
-          "L10": "5/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Christian McCaffrey Over 28.5 rec_yds",
-            "side": "over",
-            "line": 28.5,
-            "odds": -110.0,
-            "model_raw": 0.6009,
-            "model_prob": 0.5483,
-            "market_prob": 0.4958,
-            "fair_odds": -121,
-            "edge": 0.0526,
-            "edge_at_price": 0.0245,
-            "ev": 0.0468,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 28.5: 60.1% before shrink, this book's no-vig 49.6%.",
-              "Projection 45.33 (Normal(sd 42.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 13/20, all 18/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -116 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Christian McCaffrey Under 28.5 rec_yds",
-            "side": "under",
-            "line": 28.5,
-            "odds": -114.0,
-            "model_raw": 0.3991,
-            "model_prob": 0.4517,
-            "market_prob": 0.5042,
-            "fair_odds": 121,
-            "edge": -0.0526,
-            "edge_at_price": -0.0811,
-            "ev": -0.1522,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 28.5: 39.9% before shrink, this book's no-vig 50.4%.",
-              "Projection 45.33 (Normal(sd 42.1)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 13/20, all 18/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +126 or better.",
+            "next_step": "Monitor only; if anything, wait for -187 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2128,7 +2128,7 @@
       "team": "San Francisco 49ers",
       "stat": "rush_yds",
       "stat_label": "Rush yds",
-      "line": 8.5,
+      "line": 7.5,
       "projection": 16.89,
       "hit_rates": {
         "L5": "4/5",
@@ -2149,6 +2149,13 @@
         0.0
       ],
       "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.729,
+          "fair_over": -269,
+          "fair_under": 269,
+          "L10": "8/10"
+        },
         {
           "line": 4.5,
           "p_over": 0.661,
@@ -2204,13 +2211,6 @@
           "fair_over": -143,
           "fair_under": 143,
           "L10": "6/10"
-        },
-        {
-          "line": 12.5,
-          "p_over": 0.549,
-          "fair_over": -122,
-          "fair_under": 122,
-          "L10": "5/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2222,21 +2222,21 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Deebo Samuel Sr. Over 8.5 rush_yds",
+            "selection": "Deebo Samuel Sr. Over 7.5 rush_yds",
             "side": "over",
-            "line": 8.5,
-            "odds": -105.0,
-            "model_raw": 0.6209,
-            "model_prob": 0.5531,
-            "market_prob": 0.4852,
-            "fair_odds": -124,
-            "edge": 0.0678,
-            "edge_at_price": 0.0409,
-            "ev": 0.0798,
+            "line": 7.5,
+            "odds": -120.0,
+            "model_raw": 0.6313,
+            "model_prob": 0.5735,
+            "market_prob": 0.5157,
+            "fair_odds": -134,
+            "edge": 0.0578,
+            "edge_at_price": 0.0281,
+            "ev": 0.0514,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 8.5: 62.1% before shrink, this book's no-vig 48.5%.",
+              "Model over 7.5: 63.1% before shrink, this book's no-vig 51.6%.",
               "Projection 16.89 (Normal(sd 23.2)).",
               "Hit rate over L5 4/5, L10 6/10, L20 7/20, all 8/22."
             ],
@@ -2245,34 +2245,32 @@
             ],
             "caution": [
               "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (62% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (62% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -118 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for -128 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Deebo Samuel Sr. Under 8.5 rush_yds",
+            "selection": "Deebo Samuel Sr. Under 7.5 rush_yds",
             "side": "under",
-            "line": 8.5,
-            "odds": -119.0,
-            "model_raw": 0.3791,
-            "model_prob": 0.4469,
-            "market_prob": 0.5148,
-            "fair_odds": 124,
-            "edge": -0.0678,
-            "edge_at_price": -0.0964,
-            "ev": -0.1775,
+            "line": 7.5,
+            "odds": -105.0,
+            "model_raw": 0.3687,
+            "model_prob": 0.4265,
+            "market_prob": 0.4843,
+            "fair_odds": 134,
+            "edge": -0.0578,
+            "edge_at_price": -0.0857,
+            "ev": -0.1673,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 8.5: 37.9% before shrink, this book's no-vig 51.5%.",
+              "Model under 7.5: 36.9% before shrink, this book's no-vig 48.4%.",
               "Projection 16.89 (Normal(sd 23.2)).",
               "Hit rate over L5 4/5, L10 6/10, L20 7/20, all 8/22."
             ],
@@ -2280,12 +2278,179 @@
               "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (38% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (38% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +128 or better.",
+            "next_step": "Pass. Only interesting at +139 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Deebo Samuel Sr.",
+      "player_id": "3126486",
+      "team": "San Francisco 49ers",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 20.5,
+      "projection": 39.29,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "8/10",
+        "L20": "16/20",
+        "all": "17/22"
+      },
+      "recent": [
+        20.0,
+        31.0,
+        21.0,
+        26.0,
+        80.0,
+        31.0,
+        48.0,
+        20.0,
+        68.0,
+        35.0
+      ],
+      "ladder": [
+        {
+          "line": 16.5,
+          "p_over": 0.889,
+          "fair_over": -801,
+          "fair_under": 801,
+          "L10": "10/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.882,
+          "fair_over": -748,
+          "fair_under": 748,
+          "L10": "10/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.875,
+          "fair_over": -698,
+          "fair_under": 698,
+          "L10": "10/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.867,
+          "fair_over": -652,
+          "fair_under": 652,
+          "L10": "10/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.801,
+          "fair_over": -401,
+          "fair_under": 401,
+          "L10": "8/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.763,
+          "fair_over": -322,
+          "fair_under": 322,
+          "L10": "7/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.754,
+          "fair_over": -306,
+          "fair_under": 306,
+          "L10": "7/10"
+        },
+        {
+          "line": 23.5,
+          "p_over": 0.745,
+          "fair_over": -291,
+          "fair_under": 291,
+          "L10": "7/10"
+        },
+        {
+          "line": 24.5,
+          "p_over": 0.735,
+          "fair_over": -277,
+          "fair_under": 277,
+          "L10": "7/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Deebo Samuel Sr. Over 20.5 rec_yds",
+            "side": "over",
+            "line": 20.5,
+            "odds": -116.0,
+            "model_raw": 0.8005,
+            "model_prob": 0.6539,
+            "market_prob": 0.5073,
+            "fair_odds": -189,
+            "edge": 0.1466,
+            "edge_at_price": 0.1169,
+            "ev": 0.2176,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 20.5: 80.0% before shrink, this book's no-vig 50.7%.",
+              "Projection 39.29 (Normal(sd 19.9)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 16/20, all 17/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
+              "model far from market (80% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (80% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -179 or better and re-check injuries near start.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Deebo Samuel Sr. Under 20.5 rec_yds",
+            "side": "under",
+            "line": 20.5,
+            "odds": -109.0,
+            "model_raw": 0.1995,
+            "model_prob": 0.3461,
+            "market_prob": 0.4927,
+            "fair_odds": 189,
+            "edge": -0.1466,
+            "edge_at_price": -0.1754,
+            "ev": -0.3364,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 20.5: 20.0% before shrink, this book's no-vig 49.3%.",
+              "Projection 39.29 (Normal(sd 19.9)).",
+              "Hit rate over L5 4/5, L10 8/10, L20 16/20, all 17/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
+              "model far from market (20% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (20% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +195 or better.",
             "proven": false
           }
         }
@@ -2408,175 +2573,6 @@
       }
     },
     {
-      "player": "Deebo Samuel Sr.",
-      "player_id": "3126486",
-      "team": "San Francisco 49ers",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 20.5,
-      "projection": 39.29,
-      "hit_rates": {
-        "L5": "4/5",
-        "L10": "8/10",
-        "L20": "16/20",
-        "all": "17/22"
-      },
-      "recent": [
-        20.0,
-        31.0,
-        21.0,
-        26.0,
-        80.0,
-        31.0,
-        48.0,
-        20.0,
-        68.0,
-        35.0
-      ],
-      "ladder": [
-        {
-          "line": 16.5,
-          "p_over": 0.889,
-          "fair_over": -801,
-          "fair_under": 801,
-          "L10": "10/10"
-        },
-        {
-          "line": 17.5,
-          "p_over": 0.882,
-          "fair_over": -748,
-          "fair_under": 748,
-          "L10": "10/10"
-        },
-        {
-          "line": 18.5,
-          "p_over": 0.875,
-          "fair_over": -698,
-          "fair_under": 698,
-          "L10": "10/10"
-        },
-        {
-          "line": 19.5,
-          "p_over": 0.867,
-          "fair_over": -652,
-          "fair_under": 652,
-          "L10": "10/10"
-        },
-        {
-          "line": 20.5,
-          "p_over": 0.801,
-          "fair_over": -401,
-          "fair_under": 401,
-          "L10": "8/10"
-        },
-        {
-          "line": 21.5,
-          "p_over": 0.763,
-          "fair_over": -322,
-          "fair_under": 322,
-          "L10": "7/10"
-        },
-        {
-          "line": 22.5,
-          "p_over": 0.754,
-          "fair_over": -306,
-          "fair_under": 306,
-          "L10": "7/10"
-        },
-        {
-          "line": 23.5,
-          "p_over": 0.745,
-          "fair_over": -291,
-          "fair_under": 291,
-          "L10": "7/10"
-        },
-        {
-          "line": 24.5,
-          "p_over": 0.735,
-          "fair_over": -277,
-          "fair_under": 277,
-          "L10": "7/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 7 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Deebo Samuel Sr. Over 20.5 rec_yds",
-            "side": "over",
-            "line": 20.5,
-            "odds": -108.0,
-            "model_raw": 0.8005,
-            "model_prob": 0.646,
-            "market_prob": 0.4916,
-            "fair_odds": -183,
-            "edge": 0.1545,
-            "edge_at_price": 0.1268,
-            "ev": 0.2442,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 20.5: 80.0% before shrink, this book's no-vig 49.2%.",
-              "Projection 39.29 (Normal(sd 19.9)).",
-              "Hit rate over L5 4/5, L10 8/10, L20 16/20, all 17/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (80% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (80% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -173 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Deebo Samuel Sr. Under 20.5 rec_yds",
-            "side": "under",
-            "line": 20.5,
-            "odds": -116.0,
-            "model_raw": 0.1995,
-            "model_prob": 0.354,
-            "market_prob": 0.5084,
-            "fair_odds": 183,
-            "edge": -0.1545,
-            "edge_at_price": -0.1831,
-            "ev": -0.3409,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 20.5: 20.0% before shrink, this book's no-vig 50.8%.",
-              "Projection 39.29 (Normal(sd 19.9)).",
-              "Hit rate over L5 4/5, L10 8/10, L20 16/20, all 17/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (20% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (20% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +188 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
       "player": "Jadarian Price",
       "player_id": "4685512",
       "team": "Seattle Seahawks",
@@ -2676,18 +2672,18 @@
             "selection": "Jadarian Price Over 25.5 rush_yds",
             "side": "over",
             "line": 25.5,
-            "odds": -110.0,
+            "odds": -111.0,
             "model_raw": 0.581,
-            "model_prob": 0.5384,
-            "market_prob": 0.4958,
+            "model_prob": 0.5394,
+            "market_prob": 0.4979,
             "fair_odds": -117,
-            "edge": 0.0426,
-            "edge_at_price": 0.0146,
-            "ev": 0.0278,
+            "edge": 0.0416,
+            "edge_at_price": 0.0134,
+            "ev": 0.0254,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 25.5: 58.1% before shrink, this book's no-vig 49.6%.",
+              "Model over 25.5: 58.1% before shrink, this book's no-vig 49.8%.",
               "Projection 29.71 (Normal(sd 17.6)).",
               "Hit rate over L5 2/5, L10 4/7, L20 4/7, all 4/7."
             ],
@@ -2710,18 +2706,18 @@
             "selection": "Jadarian Price Under 25.5 rush_yds",
             "side": "under",
             "line": 25.5,
-            "odds": -114.0,
+            "odds": -113.0,
             "model_raw": 0.419,
-            "model_prob": 0.4616,
-            "market_prob": 0.5042,
+            "model_prob": 0.4606,
+            "market_prob": 0.5021,
             "fair_odds": 117,
-            "edge": -0.0426,
-            "edge_at_price": -0.0711,
-            "ev": -0.1335,
+            "edge": -0.0416,
+            "edge_at_price": -0.07,
+            "ev": -0.1319,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 25.5: 41.9% before shrink, this book's no-vig 50.4%.",
+              "Model under 25.5: 41.9% before shrink, this book's no-vig 50.2%.",
               "Projection 29.71 (Normal(sd 17.6)).",
               "Hit rate over L5 2/5, L10 4/7, L20 4/7, all 4/7."
             ],
@@ -2733,115 +2729,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +121 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jadarian Price",
-      "player_id": "4685512",
-      "team": "Seattle Seahawks",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.14,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "1/7",
-        "L20": "1/7",
-        "all": "1/7"
-      },
-      "recent": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.883,
-          "fair_over": -757,
-          "fair_under": 757,
-          "L10": "1/7"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.164,
-          "fair_over": 509,
-          "fair_under": -509,
-          "L10": "1/7"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.051,
-          "fair_over": 1875,
-          "fair_under": -1875,
-          "L10": "0/7"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.045,
-          "fair_over": 2126,
-          "fair_under": -2126,
-          "L10": "0/7"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.039,
-          "fair_over": 2453,
-          "fair_under": -2453,
-          "L10": "0/7"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.039,
-          "fair_over": 2453,
-          "fair_under": -2453,
-          "L10": "0/7"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "thin sample (7 games)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jadarian Price Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 300.0,
-            "model_raw": 0.1643,
-            "model_prob": 0.2017,
-            "market_prob": 0.2392,
-            "fair_odds": 396,
-            "edge": -0.0375,
-            "edge_at_price": -0.0483,
-            "ev": -0.193,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 16.4% before shrink, this book's no-vig 23.9%.",
-              "Projection 0.14 (Poisson).",
-              "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
-            ],
-            "flags": [
-              "thin sample (7 games)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: thin sample (7 games)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +406 or better.",
             "proven": false
           }
         }
@@ -2947,18 +2834,18 @@
             "selection": "Jadarian Price Over 9.5 rec_yds",
             "side": "over",
             "line": 9.5,
-            "odds": -110.0,
+            "odds": -114.0,
             "model_raw": 0.456,
-            "model_prob": 0.4759,
-            "market_prob": 0.4958,
-            "fair_odds": 110,
-            "edge": -0.0199,
-            "edge_at_price": -0.0479,
-            "ev": -0.0915,
+            "model_prob": 0.4801,
+            "market_prob": 0.5042,
+            "fair_odds": 108,
+            "edge": -0.0241,
+            "edge_at_price": -0.0526,
+            "ev": -0.0987,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 9.5: 45.6% before shrink, this book's no-vig 49.6%.",
+              "Model over 9.5: 45.6% before shrink, this book's no-vig 50.4%.",
               "Projection 13.0 (Normal(sd 16.9)).",
               "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
             ],
@@ -2969,7 +2856,7 @@
               "thin data: thin sample (7 games)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +114 or better.",
+            "next_step": "Pass. Only interesting at +112 or better.",
             "proven": false
           }
         },
@@ -2979,18 +2866,18 @@
             "selection": "Jadarian Price Under 9.5 rec_yds",
             "side": "under",
             "line": 9.5,
-            "odds": -114.0,
+            "odds": -110.0,
             "model_raw": 0.544,
-            "model_prob": 0.5241,
-            "market_prob": 0.5042,
-            "fair_odds": -110,
-            "edge": 0.0199,
-            "edge_at_price": -0.0086,
-            "ev": -0.0162,
+            "model_prob": 0.5199,
+            "market_prob": 0.4958,
+            "fair_odds": -108,
+            "edge": 0.0241,
+            "edge_at_price": -0.0039,
+            "ev": -0.0075,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 9.5: 54.4% before shrink, this book's no-vig 50.4%.",
+              "Model under 9.5: 54.4% before shrink, this book's no-vig 49.6%.",
               "Projection 13.0 (Normal(sd 16.9)).",
               "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
             ],
@@ -3001,176 +2888,116 @@
               "thin data: thin sample (7 games)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -106 or better.",
+            "next_step": "Pass. Only interesting at -104 or better.",
             "proven": false
           }
         }
       }
     },
     {
-      "player": "Sam Darnold",
-      "player_id": "3912547",
+      "player": "Jadarian Price",
+      "player_id": "4685512",
       "team": "Seattle Seahawks",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 4.5,
-      "projection": 7.76,
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.14,
       "hit_rates": {
-        "L5": "5/5",
-        "L10": "8/10",
-        "L20": "13/20",
-        "all": "13/22"
+        "L5": "1/5",
+        "L10": "1/7",
+        "L20": "1/7",
+        "all": "1/7"
       },
       "recent": [
-        20.0,
-        17.0,
-        19.0,
-        5.0,
-        6.0,
-        5.0,
+        1.0,
         0.0,
-        5.0,
-        9.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
         0.0
       ],
       "ladder": [
         {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/7"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.164,
+          "fair_over": 509,
+          "fair_under": -509,
+          "L10": "1/7"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.051,
+          "fair_over": 1875,
+          "fair_under": -1875,
+          "L10": "0/7"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.045,
+          "fair_over": 2126,
+          "fair_under": -2126,
+          "L10": "0/7"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.039,
+          "fair_over": 2453,
+          "fair_under": -2453,
+          "L10": "0/7"
+        },
+        {
           "line": 2.5,
-          "p_over": 0.902,
-          "fair_over": -918,
-          "fair_under": 918,
-          "L10": "8/10"
-        },
-        {
-          "line": 3.0,
-          "p_over": 0.901,
-          "fair_over": -914,
-          "fair_under": 914,
-          "L10": "8/10"
-        },
-        {
-          "line": 3.5,
-          "p_over": 0.88,
-          "fair_over": -734,
-          "fair_under": 734,
-          "L10": "8/10"
-        },
-        {
-          "line": 4.0,
-          "p_over": 0.878,
-          "fair_over": -719,
-          "fair_under": 719,
-          "L10": "8/10"
-        },
-        {
-          "line": 4.5,
-          "p_over": 0.838,
-          "fair_over": -518,
-          "fair_under": 518,
-          "L10": "8/10"
-        },
-        {
-          "line": 5.0,
-          "p_over": 0.801,
-          "fair_over": -402,
-          "fair_under": 402,
-          "L10": "5/10"
-        },
-        {
-          "line": 5.5,
-          "p_over": 0.686,
-          "fair_over": -218,
-          "fair_under": 218,
-          "L10": "5/10"
-        },
-        {
-          "line": 6.0,
-          "p_over": 0.649,
-          "fair_over": -185,
-          "fair_under": 185,
-          "L10": "4/10"
-        },
-        {
-          "line": 6.5,
-          "p_over": 0.573,
-          "fair_over": -134,
-          "fair_under": 134,
-          "L10": "4/10"
+          "p_over": 0.039,
+          "fair_over": 2453,
+          "fair_under": -2453,
+          "L10": "0/7"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 7 games; added 15 from prior season (role/team may differ)"
+        "thin sample (7 games)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Sam Darnold Over 4.5 rush_yds",
+            "selection": "Jadarian Price Anytime TD",
             "side": "over",
-            "line": 4.5,
-            "odds": -121.0,
-            "model_raw": 0.8383,
-            "model_prob": 0.6781,
-            "market_prob": 0.5178,
-            "fair_odds": -211,
-            "edge": 0.1602,
-            "edge_at_price": 0.1306,
-            "ev": 0.2385,
+            "line": 0.5,
+            "odds": 295.0,
+            "model_raw": 0.1643,
+            "model_prob": 0.2033,
+            "market_prob": 0.2423,
+            "fair_odds": 392,
+            "edge": -0.039,
+            "edge_at_price": -0.0499,
+            "ev": -0.197,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 4.5: 83.8% before shrink, this book's no-vig 51.8%.",
-              "Projection 7.76 (Poisson).",
-              "Hit rate over L5 5/5, L10 8/10, L20 13/20, all 13/22."
+              "Model over 0.5: 16.4% before shrink, this book's no-vig 24.2%.",
+              "Projection 0.14 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
             ],
             "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
+              "thin sample (7 games)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (84% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (84% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "thin data: thin sample (7 games)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -198 or better and re-check injuries near start.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Sam Darnold Under 4.5 rush_yds",
-            "side": "under",
-            "line": 4.5,
-            "odds": -104.0,
-            "model_raw": 0.1617,
-            "model_prob": 0.3219,
-            "market_prob": 0.4822,
-            "fair_odds": 211,
-            "edge": -0.1602,
-            "edge_at_price": -0.1879,
-            "ev": -0.3685,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 4.5: 16.2% before shrink, this book's no-vig 48.2%.",
-              "Projection 7.76 (Poisson).",
-              "Hit rate over L5 5/5, L10 8/10, L20 13/20, all 13/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (16% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (16% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +217 or better.",
+            "next_step": "Pass. Only interesting at +402 or better.",
             "proven": false
           }
         }
@@ -3182,7 +3009,7 @@
       "team": "Seattle Seahawks",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 221.5,
+      "line": 219.5,
       "projection": 219.04,
       "hit_rates": {
         "L5": "2/5",
@@ -3203,6 +3030,13 @@
         124.0
       ],
       "ladder": [
+        {
+          "line": 211.5,
+          "p_over": 0.49,
+          "fair_over": 104,
+          "fair_under": -104,
+          "L10": "4/10"
+        },
         {
           "line": 213.5,
           "p_over": 0.485,
@@ -3258,12 +3092,168 @@
           "fair_over": 123,
           "fair_under": -123,
           "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Sam Darnold Over 219.5 pass_yds",
+            "side": "over",
+            "line": 219.5,
+            "odds": -113.0,
+            "model_raw": 0.4696,
+            "model_prob": 0.4859,
+            "market_prob": 0.5021,
+            "fair_odds": 106,
+            "edge": -0.0163,
+            "edge_at_price": -0.0447,
+            "ev": -0.0842,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 219.5: 47.0% before shrink, this book's no-vig 50.2%.",
+              "Projection 219.04 (Normal(sd 101.2)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 10/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +110 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Sam Darnold Under 219.5 pass_yds",
+            "side": "under",
+            "line": 219.5,
+            "odds": -111.0,
+            "model_raw": 0.5304,
+            "model_prob": 0.5141,
+            "market_prob": 0.4979,
+            "fair_odds": -106,
+            "edge": 0.0163,
+            "edge_at_price": -0.0119,
+            "ev": -0.0227,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 219.5: 53.0% before shrink, this book's no-vig 49.8%.",
+              "Projection 219.04 (Normal(sd 101.2)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 10/20, all 11/22."
+            ],
+            "flags": [
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Sam Darnold",
+      "player_id": "3912547",
+      "team": "Seattle Seahawks",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 5.5,
+      "projection": 7.76,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "5/10",
+        "L20": "9/20",
+        "all": "9/22"
+      },
+      "recent": [
+        20.0,
+        17.0,
+        19.0,
+        5.0,
+        6.0,
+        5.0,
+        0.0,
+        5.0,
+        9.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 3.5,
+          "p_over": 0.88,
+          "fair_over": -734,
+          "fair_under": 734,
+          "L10": "8/10"
         },
         {
-          "line": 229.5,
-          "p_over": 0.444,
-          "fair_over": 125,
-          "fair_under": -125,
+          "line": 4.0,
+          "p_over": 0.878,
+          "fair_over": -719,
+          "fair_under": 719,
+          "L10": "8/10"
+        },
+        {
+          "line": 4.5,
+          "p_over": 0.838,
+          "fair_over": -518,
+          "fair_under": 518,
+          "L10": "8/10"
+        },
+        {
+          "line": 5.0,
+          "p_over": 0.801,
+          "fair_over": -402,
+          "fair_under": 402,
+          "L10": "5/10"
+        },
+        {
+          "line": 5.5,
+          "p_over": 0.686,
+          "fair_over": -218,
+          "fair_under": 218,
+          "L10": "5/10"
+        },
+        {
+          "line": 6.0,
+          "p_over": 0.649,
+          "fair_over": -185,
+          "fair_under": 185,
+          "L10": "4/10"
+        },
+        {
+          "line": 6.5,
+          "p_over": 0.573,
+          "fair_over": -134,
+          "fair_under": 134,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.0,
+          "p_over": 0.535,
+          "fair_over": -115,
+          "fair_under": 115,
+          "L10": "4/10"
+        },
+        {
+          "line": 7.5,
+          "p_over": 0.479,
+          "fair_over": 109,
+          "fair_under": -109,
           "L10": "4/10"
         }
       ],
@@ -3276,64 +3266,70 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Sam Darnold Over 221.5 pass_yds",
+            "selection": "Sam Darnold Over 5.5 rush_yds",
             "side": "over",
-            "line": 221.5,
-            "odds": -111.0,
-            "model_raw": 0.4645,
-            "model_prob": 0.4812,
-            "market_prob": 0.4979,
-            "fair_odds": 108,
-            "edge": -0.0167,
-            "edge_at_price": -0.0449,
-            "ev": -0.0853,
+            "line": 5.5,
+            "odds": -101.0,
+            "model_raw": 0.6858,
+            "model_prob": 0.5808,
+            "market_prob": 0.4758,
+            "fair_odds": -139,
+            "edge": 0.105,
+            "edge_at_price": 0.0783,
+            "ev": 0.1559,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 221.5: 46.5% before shrink, this book's no-vig 49.8%.",
-              "Projection 219.04 (Normal(sd 101.2)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 10/20, all 11/22."
+              "Model over 5.5: 68.6% before shrink, this book's no-vig 47.6%.",
+              "Projection 7.76 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 9/20, all 9/22."
             ],
             "flags": [
               "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
+              "model far from market (69% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (69% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +112 or better.",
+            "next_step": "Monitor only; if anything, wait for -132 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Sam Darnold Under 221.5 pass_yds",
+            "selection": "Sam Darnold Under 5.5 rush_yds",
             "side": "under",
-            "line": 221.5,
-            "odds": -113.0,
-            "model_raw": 0.5355,
-            "model_prob": 0.5188,
-            "market_prob": 0.5021,
-            "fair_odds": -108,
-            "edge": 0.0167,
-            "edge_at_price": -0.0117,
-            "ev": -0.0221,
+            "line": 5.5,
+            "odds": -124.0,
+            "model_raw": 0.3142,
+            "model_prob": 0.4192,
+            "market_prob": 0.5242,
+            "fair_odds": 139,
+            "edge": -0.105,
+            "edge_at_price": -0.1344,
+            "ev": -0.2427,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 221.5: 53.5% before shrink, this book's no-vig 50.2%.",
-              "Projection 219.04 (Normal(sd 101.2)).",
-              "Hit rate over L5 2/5, L10 4/10, L20 10/20, all 11/22."
+              "Model under 5.5: 31.4% before shrink, this book's no-vig 52.4%.",
+              "Projection 7.76 (Poisson).",
+              "Hit rate over L5 4/5, L10 5/10, L20 9/20, all 9/22."
             ],
             "flags": [
               "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 52%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 52%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -104 or better.",
+            "next_step": "Pass. Only interesting at +143 or better.",
             "proven": false
           }
         }
