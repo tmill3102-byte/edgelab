@@ -42,64 +42,53 @@
   },
   "lines": {
     "draftkings": {
-      "ml_away": 120.0,
-      "ml_home": -142.0,
       "total": 227.5,
-      "under_odds": -110.0,
       "over_odds": -110.0,
+      "under_odds": -110.0,
+      "ml_home": -142.0,
+      "ml_away": 120.0,
       "spread_home": -1.5,
       "spread_home_odds": -117.0,
       "spread_away": 1.5,
       "spread_away_odds": -103.0
     },
     "fanduel": {
-      "ml_away": 112.0,
-      "ml_home": -132.0,
       "total": 228.5,
-      "under_odds": -115.0,
       "over_odds": -105.0,
+      "under_odds": -115.0,
+      "ml_home": -132.0,
+      "ml_away": 112.0,
       "spread_home": -2.5,
       "spread_home_odds": -105.0,
       "spread_away": 2.5,
       "spread_away_odds": -115.0
     },
     "betrivers": {
-      "ml_away": 114.0,
-      "ml_home": -139.0,
       "total": 228.5,
-      "under_odds": -117.0,
       "over_odds": -106.0,
+      "under_odds": -117.0,
+      "ml_home": -139.0,
+      "ml_away": 114.0,
       "spread_home": -2.5,
       "spread_home_odds": -109.0,
       "spread_away": 2.5,
       "spread_away_odds": -114.0
     },
     "bovada": {
-      "ml_away": 125.0,
-      "ml_home": -145.0,
       "total": 227.5,
-      "under_odds": -110.0,
       "over_odds": -110.0,
+      "under_odds": -110.0,
+      "ml_home": -145.0,
+      "ml_away": 125.0,
       "spread_home": -1.5,
       "spread_home_odds": -120.0,
       "spread_away": 1.5,
       "spread_away_odds": 100.0
     },
-    "betmgm": {
-      "ml_away": 118.0,
-      "ml_home": -145.0,
-      "total": 228.5,
-      "under_odds": -110.0,
-      "over_odds": -110.0,
-      "spread_home": -2.5,
-      "spread_home_odds": -105.0,
-      "spread_away": 2.5,
-      "spread_away_odds": -115.0
-    },
     "lowvig": {
       "total": 227.5,
-      "under_odds": -107.0,
       "over_odds": -107.0,
+      "under_odds": -107.0,
       "spread_home": -2.0,
       "spread_home_odds": -101.0,
       "spread_away": 2.0,
@@ -107,11 +96,22 @@
     },
     "betonlineag": {
       "total": 227.5,
-      "under_odds": -110.0,
       "over_odds": -110.0,
+      "under_odds": -110.0,
       "spread_home": -2.0,
       "spread_home_odds": -105.0,
       "spread_away": 2.0,
+      "spread_away_odds": -115.0
+    },
+    "betmgm": {
+      "total": 228.5,
+      "over_odds": -110.0,
+      "under_odds": -110.0,
+      "ml_home": -145.0,
+      "ml_away": 118.0,
+      "spread_home": -2.5,
+      "spread_home_odds": -105.0,
+      "spread_away": 2.5,
       "spread_away_odds": -115.0
     }
   },
@@ -119,7 +119,7 @@
   "model_summary": "Margin PHX +1.4 \u00b7 total 227.3",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: PHX 54.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: PHX 55.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin PHX +1.4, total 227.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -139,15 +139,15 @@
         "key": false
       },
       {
-        "name": "Dereck Lively II",
-        "status": "Out",
-        "pos": "C",
-        "key": false
-      },
-      {
         "name": "Sergio de Larrea",
         "status": "Out",
         "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Dereck Lively II",
+        "status": "Out",
+        "pos": "C",
         "key": false
       },
       {
@@ -166,141 +166,6 @@
     {
       "market": "ML",
       "sides": [
-        {
-          "side": "away",
-          "offers": {
-            "draftkings": {
-              "market": "ML",
-              "selection": "DAL ML",
-              "side": "away",
-              "line": null,
-              "odds": 120.0,
-              "model_raw": 0.454,
-              "model_prob": 0.4389,
-              "market_prob": 0.4365,
-              "fair_odds": 128,
-              "edge": 0.0024,
-              "edge_at_price": -0.0156,
-              "ev": -0.0343,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model DAL ML: 45.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +132 or better.",
-              "proven": true
-            },
-            "fanduel": {
-              "market": "ML",
-              "selection": "DAL ML",
-              "side": "away",
-              "line": null,
-              "odds": 112.0,
-              "model_raw": 0.454,
-              "model_prob": 0.4534,
-              "market_prob": 0.4533,
-              "fair_odds": 121,
-              "edge": 0.0001,
-              "edge_at_price": -0.0183,
-              "ev": -0.0389,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model DAL ML: 45.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +125 or better.",
-              "proven": true
-            },
-            "betrivers": {
-              "market": "ML",
-              "selection": "DAL ML",
-              "side": "away",
-              "line": null,
-              "odds": 114.0,
-              "model_raw": 0.454,
-              "model_prob": 0.4467,
-              "market_prob": 0.4455,
-              "fair_odds": 124,
-              "edge": 0.0012,
-              "edge_at_price": -0.0206,
-              "ev": -0.0441,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model DAL ML: 45.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +128 or better.",
-              "proven": true
-            },
-            "bovada": {
-              "market": "ML",
-              "selection": "DAL ML",
-              "side": "away",
-              "line": null,
-              "odds": 125.0,
-              "model_raw": 0.454,
-              "model_prob": 0.4324,
-              "market_prob": 0.4289,
-              "fair_odds": 131,
-              "edge": 0.0035,
-              "edge_at_price": -0.0121,
-              "ev": -0.0271,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model DAL ML: 45.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +136 or better.",
-              "proven": true
-            },
-            "betmgm": {
-              "market": "ML",
-              "selection": "DAL ML",
-              "side": "away",
-              "line": null,
-              "odds": 118.0,
-              "model_raw": 0.454,
-              "model_prob": 0.4391,
-              "market_prob": 0.4366,
-              "fair_odds": 128,
-              "edge": 0.0024,
-              "edge_at_price": -0.0197,
-              "ev": -0.0428,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model DAL ML: 45.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +132 or better.",
-              "proven": true
-            }
-          }
-        },
         {
           "side": "home",
           "offers": {
@@ -432,6 +297,141 @@
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at -122 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 120.0,
+              "model_raw": 0.454,
+              "model_prob": 0.4389,
+              "market_prob": 0.4365,
+              "fair_odds": 128,
+              "edge": 0.0024,
+              "edge_at_price": -0.0156,
+              "ev": -0.0343,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DAL ML: 45.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +132 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 112.0,
+              "model_raw": 0.454,
+              "model_prob": 0.4534,
+              "market_prob": 0.4533,
+              "fair_odds": 121,
+              "edge": 0.0001,
+              "edge_at_price": -0.0183,
+              "ev": -0.0389,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DAL ML: 45.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +125 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 114.0,
+              "model_raw": 0.454,
+              "model_prob": 0.4467,
+              "market_prob": 0.4455,
+              "fair_odds": 124,
+              "edge": 0.0012,
+              "edge_at_price": -0.0206,
+              "ev": -0.0441,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DAL ML: 45.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +128 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 125.0,
+              "model_raw": 0.454,
+              "model_prob": 0.4324,
+              "market_prob": 0.4289,
+              "fair_odds": 131,
+              "edge": 0.0035,
+              "edge_at_price": -0.0121,
+              "ev": -0.0271,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DAL ML: 45.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +136 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "ML",
+              "selection": "DAL ML",
+              "side": "away",
+              "line": null,
+              "odds": 118.0,
+              "model_raw": 0.454,
+              "model_prob": 0.4391,
+              "market_prob": 0.4366,
+              "fair_odds": 128,
+              "edge": 0.0024,
+              "edge_at_price": -0.0197,
+              "ev": -0.0428,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model DAL ML: 45.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +132 or better.",
               "proven": true
             }
           }
@@ -821,193 +821,6 @@
       "market": "Total",
       "sides": [
         {
-          "side": "under",
-          "offers": {
-            "draftkings": {
-              "market": "Total",
-              "selection": "Under 227.5",
-              "side": "under",
-              "line": 227.5,
-              "odds": -110.0,
-              "model_raw": 0.5032,
-              "model_prob": 0.5006,
-              "market_prob": 0.5,
-              "fair_odds": -100,
-              "edge": 0.0006,
-              "edge_at_price": -0.0233,
-              "ev": -0.0444,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 227.5: 50.3%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +104 or better.",
-              "proven": true
-            },
-            "fanduel": {
-              "market": "Total",
-              "selection": "Under 228.5",
-              "side": "under",
-              "line": 228.5,
-              "odds": -115.0,
-              "model_raw": 0.5239,
-              "model_prob": 0.5131,
-              "market_prob": 0.5108,
-              "fair_odds": -105,
-              "edge": 0.0022,
-              "edge_at_price": -0.0218,
-              "ev": -0.0408,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 228.5: 52.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -101 or better.",
-              "proven": true
-            },
-            "betrivers": {
-              "market": "Total",
-              "selection": "Under 228.5",
-              "side": "under",
-              "line": 228.5,
-              "odds": -117.0,
-              "model_raw": 0.5239,
-              "model_prob": 0.5138,
-              "market_prob": 0.5117,
-              "fair_odds": -106,
-              "edge": 0.0021,
-              "edge_at_price": -0.0254,
-              "ev": -0.0471,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 228.5: 52.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -102 or better.",
-              "proven": true
-            },
-            "bovada": {
-              "market": "Total",
-              "selection": "Under 227.5",
-              "side": "under",
-              "line": 227.5,
-              "odds": -110.0,
-              "model_raw": 0.5032,
-              "model_prob": 0.5006,
-              "market_prob": 0.5,
-              "fair_odds": -100,
-              "edge": 0.0006,
-              "edge_at_price": -0.0233,
-              "ev": -0.0444,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 227.5: 50.3%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +104 or better.",
-              "proven": true
-            },
-            "lowvig": {
-              "market": "Total",
-              "selection": "Under 227.5",
-              "side": "under",
-              "line": 227.5,
-              "odds": -107.0,
-              "model_raw": 0.5032,
-              "model_prob": 0.5006,
-              "market_prob": 0.5,
-              "fair_odds": -100,
-              "edge": 0.0006,
-              "edge_at_price": -0.0164,
-              "ev": -0.0316,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 227.5: 50.3%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +104 or better.",
-              "proven": true
-            },
-            "betonlineag": {
-              "market": "Total",
-              "selection": "Under 227.5",
-              "side": "under",
-              "line": 227.5,
-              "odds": -110.0,
-              "model_raw": 0.5032,
-              "model_prob": 0.5006,
-              "market_prob": 0.5,
-              "fair_odds": -100,
-              "edge": 0.0006,
-              "edge_at_price": -0.0233,
-              "ev": -0.0444,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 227.5: 50.3%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +104 or better.",
-              "proven": true
-            },
-            "betmgm": {
-              "market": "Total",
-              "selection": "Under 228.5",
-              "side": "under",
-              "line": 228.5,
-              "odds": -110.0,
-              "model_raw": 0.5239,
-              "model_prob": 0.5041,
-              "market_prob": 0.5,
-              "fair_odds": -102,
-              "edge": 0.0041,
-              "edge_at_price": -0.0197,
-              "ev": -0.0377,
-              "tier": "Low",
-              "data_quality": "High",
-              "reasons": [
-                "Raw model Under 228.5: 52.4%.",
-                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
-                "v2 margin PHX +1.4, total 227.34."
-              ],
-              "flags": [],
-              "caution": [],
-              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +102 or better.",
-              "proven": true
-            }
-          }
-        },
-        {
           "side": "over",
           "offers": {
             "draftkings": {
@@ -1190,6 +1003,193 @@
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
               "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 227.5",
+              "side": "under",
+              "line": 227.5,
+              "odds": -110.0,
+              "model_raw": 0.5032,
+              "model_prob": 0.5006,
+              "market_prob": 0.5,
+              "fair_odds": -100,
+              "edge": 0.0006,
+              "edge_at_price": -0.0233,
+              "ev": -0.0444,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 227.5: 50.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "fanduel": {
+              "market": "Total",
+              "selection": "Under 228.5",
+              "side": "under",
+              "line": 228.5,
+              "odds": -115.0,
+              "model_raw": 0.5239,
+              "model_prob": 0.5131,
+              "market_prob": 0.5108,
+              "fair_odds": -105,
+              "edge": 0.0022,
+              "edge_at_price": -0.0218,
+              "ev": -0.0408,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 228.5: 52.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -101 or better.",
+              "proven": true
+            },
+            "betrivers": {
+              "market": "Total",
+              "selection": "Under 228.5",
+              "side": "under",
+              "line": 228.5,
+              "odds": -117.0,
+              "model_raw": 0.5239,
+              "model_prob": 0.5138,
+              "market_prob": 0.5117,
+              "fair_odds": -106,
+              "edge": 0.0021,
+              "edge_at_price": -0.0254,
+              "ev": -0.0471,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 228.5: 52.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -102 or better.",
+              "proven": true
+            },
+            "bovada": {
+              "market": "Total",
+              "selection": "Under 227.5",
+              "side": "under",
+              "line": 227.5,
+              "odds": -110.0,
+              "model_raw": 0.5032,
+              "model_prob": 0.5006,
+              "market_prob": 0.5,
+              "fair_odds": -100,
+              "edge": 0.0006,
+              "edge_at_price": -0.0233,
+              "ev": -0.0444,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 227.5: 50.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "lowvig": {
+              "market": "Total",
+              "selection": "Under 227.5",
+              "side": "under",
+              "line": 227.5,
+              "odds": -107.0,
+              "model_raw": 0.5032,
+              "model_prob": 0.5006,
+              "market_prob": 0.5,
+              "fair_odds": -100,
+              "edge": 0.0006,
+              "edge_at_price": -0.0164,
+              "ev": -0.0316,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 227.5: 50.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "betonlineag": {
+              "market": "Total",
+              "selection": "Under 227.5",
+              "side": "under",
+              "line": 227.5,
+              "odds": -110.0,
+              "model_raw": 0.5032,
+              "model_prob": 0.5006,
+              "market_prob": 0.5,
+              "fair_odds": -100,
+              "edge": 0.0006,
+              "edge_at_price": -0.0233,
+              "ev": -0.0444,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 227.5: 50.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +104 or better.",
+              "proven": true
+            },
+            "betmgm": {
+              "market": "Total",
+              "selection": "Under 228.5",
+              "side": "under",
+              "line": 228.5,
+              "odds": -110.0,
+              "model_raw": 0.5239,
+              "model_prob": 0.5041,
+              "market_prob": 0.5,
+              "fair_odds": -102,
+              "edge": 0.0041,
+              "edge_at_price": -0.0197,
+              "ev": -0.0377,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 228.5: 52.4%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin PHX +1.4, total 227.34."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": true
             }
           }
