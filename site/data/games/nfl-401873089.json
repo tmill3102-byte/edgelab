@@ -147,7 +147,7 @@
   "model_summary": "Margin MIA +2.6 \u00b7 total 42.5",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: MIA 30.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: MIA 30.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin MIA +2.6, total 42.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -1712,6 +1712,120 @@
       "player": "Breece Hall",
       "player_id": "4427366",
       "team": "New York Jets",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.31,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "3/10",
+        "L20": "6/20",
+        "all": "6/21"
+      },
+      "recent": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.292,
+          "fair_over": 243,
+          "fair_under": -243,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.073,
+          "fair_over": 1278,
+          "fair_under": -1278,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.055,
+          "fair_over": 1714,
+          "fair_under": -1714,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.032,
+          "fair_over": 3034,
+          "fair_under": -3034,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.032,
+          "fair_over": 3044,
+          "fair_under": -3044,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 6 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Breece Hall Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 125.0,
+            "model_raw": 0.2915,
+            "model_prob": 0.3584,
+            "market_prob": 0.4253,
+            "fair_odds": 179,
+            "edge": -0.0669,
+            "edge_at_price": -0.086,
+            "ev": -0.1936,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 29.1% before shrink, this book's no-vig 42.5%.",
+              "Projection 0.31 (Poisson).",
+              "Hit rate over L5 1/5, L10 3/10, L20 6/20, all 6/21."
+            ],
+            "flags": [
+              "current season only 6 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)",
+              "model far from market (29% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (29% vs 43%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +185 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Breece Hall",
+      "player_id": "4427366",
+      "team": "New York Jets",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 20.5,
@@ -2029,120 +2143,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at -102 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Breece Hall",
-      "player_id": "4427366",
-      "team": "New York Jets",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.31,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "3/10",
-        "L20": "6/20",
-        "all": "6/21"
-      },
-      "recent": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.292,
-          "fair_over": 243,
-          "fair_under": -243,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.073,
-          "fair_over": 1278,
-          "fair_under": -1278,
-          "L10": "0/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.055,
-          "fair_over": 1714,
-          "fair_under": -1714,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.032,
-          "fair_over": 3034,
-          "fair_under": -3034,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.032,
-          "fair_over": 3044,
-          "fair_under": -3044,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 6 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Breece Hall Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 125.0,
-            "model_raw": 0.2915,
-            "model_prob": 0.3584,
-            "market_prob": 0.4253,
-            "fair_odds": 179,
-            "edge": -0.0669,
-            "edge_at_price": -0.086,
-            "ev": -0.1936,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 29.1% before shrink, this book's no-vig 42.5%.",
-              "Projection 0.31 (Poisson).",
-              "Hit rate over L5 1/5, L10 3/10, L20 6/20, all 6/21."
-            ],
-            "flags": [
-              "current season only 6 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)",
-              "model far from market (29% vs 43%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (29% vs 43%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +185 or better.",
             "proven": false
           }
         }
@@ -2794,6 +2794,118 @@
       "player": "Ollie Gordon II",
       "player_id": "4711533",
       "team": "Miami Dolphins",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.37,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "7/20",
+        "all": "8/25"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.346,
+          "fair_over": 189,
+          "fair_under": -189,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.09,
+          "fair_over": 1009,
+          "fair_under": -1009,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.064,
+          "fair_over": 1469,
+          "fair_under": -1469,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.033,
+          "fair_over": 2887,
+          "fair_under": -2887,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.033,
+          "fair_over": 2905,
+          "fair_under": -2905,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Ollie Gordon II Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 125.0,
+            "model_raw": 0.346,
+            "model_prob": 0.3856,
+            "market_prob": 0.4253,
+            "fair_odds": 159,
+            "edge": -0.0397,
+            "edge_at_price": -0.0588,
+            "ev": -0.1323,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 42.5%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 8/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +165 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Ollie Gordon II",
+      "player_id": "4711533",
+      "team": "Miami Dolphins",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 10.5,
@@ -3119,118 +3231,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for -116 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Ollie Gordon II",
-      "player_id": "4711533",
-      "team": "Miami Dolphins",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.37,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "4/10",
-        "L20": "7/20",
-        "all": "8/25"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.942,
-          "fair_over": -1614,
-          "fair_under": 1614,
-          "L10": "4/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.346,
-          "fair_over": 189,
-          "fair_under": -189,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.09,
-          "fair_over": 1009,
-          "fair_under": -1009,
-          "L10": "0/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.064,
-          "fair_over": 1469,
-          "fair_under": -1469,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.033,
-          "fair_over": 2887,
-          "fair_under": -2887,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.033,
-          "fair_over": 2905,
-          "fair_under": -2905,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Ollie Gordon II Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 125.0,
-            "model_raw": 0.346,
-            "model_prob": 0.3856,
-            "market_prob": 0.4253,
-            "fair_odds": 159,
-            "edge": -0.0397,
-            "edge_at_price": -0.0588,
-            "ev": -0.1323,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 34.6% before shrink, this book's no-vig 42.5%.",
-              "Projection 0.37 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 7/20, all 8/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +165 or better.",
             "proven": false
           }
         }

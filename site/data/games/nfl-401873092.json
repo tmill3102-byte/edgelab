@@ -147,7 +147,7 @@
   "model_summary": "Margin ARI -5.1 \u00b7 total 47.7",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: ARI 36.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: ARI 35.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin ARI -5.1, total 47.7; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -2358,6 +2358,120 @@
       "player": "Bam Knight",
       "player_id": "4427728",
       "team": "Arizona Cardinals",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.09,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "0/10",
+        "L20": "5/20",
+        "all": "5/22"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.825,
+          "fair_over": -471,
+          "fair_under": 471,
+          "L10": "0/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.086,
+          "fair_over": 1068,
+          "fair_under": -1068,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.032,
+          "fair_over": 3032,
+          "fair_under": -3032,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.032,
+          "fair_over": 3055,
+          "fair_under": -3055,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.029,
+          "fair_over": 3320,
+          "fair_under": -3320,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.029,
+          "fair_over": 3320,
+          "fair_under": -3320,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 12 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Zonovan Knight Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 270.0,
+            "model_raw": 0.0857,
+            "model_prob": 0.1721,
+            "market_prob": 0.2586,
+            "fair_odds": 481,
+            "edge": -0.0864,
+            "edge_at_price": -0.0981,
+            "ev": -0.363,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 8.6% before shrink, this book's no-vig 25.9%.",
+              "Projection 0.09 (Poisson).",
+              "Hit rate over L5 0/5, L10 0/10, L20 5/20, all 5/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "model far from market (9% vs 26%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (9% vs 26%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +493 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bam Knight",
+      "player_id": "4427728",
+      "team": "Arizona Cardinals",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 6.5,
@@ -2687,21 +2801,22 @@
       }
     },
     {
-      "player": "Bam Knight",
-      "player_id": "4427728",
-      "team": "Arizona Cardinals",
+      "player": "Antonio Williams",
+      "player_id": "5081432",
+      "team": "Washington Commanders",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.09,
+      "projection": 0.2,
       "hit_rates": {
-        "L5": "0/5",
-        "L10": "0/10",
-        "L20": "5/20",
-        "all": "5/22"
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "2/10",
+        "all": "2/10"
       },
       "recent": [
         0.0,
+        1.0,
         0.0,
         0.0,
         0.0,
@@ -2709,56 +2824,54 @@
         0.0,
         0.0,
         0.0,
-        0.0,
-        0.0
+        1.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.825,
-          "fair_over": -471,
-          "fair_under": 471,
-          "L10": "0/10"
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.086,
-          "fair_over": 1068,
-          "fair_under": -1068,
-          "L10": "0/10"
+          "p_over": 0.205,
+          "fair_over": 387,
+          "fair_under": -387,
+          "L10": "2/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.032,
-          "fair_over": 3032,
-          "fair_under": -3032,
+          "p_over": 0.049,
+          "fair_over": 1957,
+          "fair_under": -1957,
           "L10": "0/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.032,
-          "fair_over": 3055,
-          "fair_under": -3055,
+          "p_over": 0.041,
+          "fair_over": 2366,
+          "fair_under": -2366,
           "L10": "0/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.029,
-          "fair_over": 3320,
-          "fair_under": -3320,
+          "p_over": 0.03,
+          "fair_over": 3242,
+          "fair_under": -3242,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.029,
-          "fair_over": 3320,
-          "fair_under": -3320,
+          "p_over": 0.03,
+          "fair_over": 3243,
+          "fair_under": -3243,
           "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 12 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -2766,35 +2879,30 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Zonovan Knight Anytime TD",
+            "selection": "Antonio Williams Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": 270.0,
-            "model_raw": 0.0857,
-            "model_prob": 0.1721,
-            "market_prob": 0.2586,
-            "fair_odds": 481,
-            "edge": -0.0864,
-            "edge_at_price": -0.0981,
-            "ev": -0.363,
+            "odds": 255.0,
+            "model_raw": 0.2053,
+            "model_prob": 0.2374,
+            "market_prob": 0.2696,
+            "fair_odds": 321,
+            "edge": -0.0322,
+            "edge_at_price": -0.0442,
+            "ev": -0.1571,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 8.6% before shrink, this book's no-vig 25.9%.",
-              "Projection 0.09 (Poisson).",
-              "Hit rate over L5 0/5, L10 0/10, L20 5/20, all 5/22."
+              "Model over 0.5: 20.5% before shrink, this book's no-vig 27.0%.",
+              "Projection 0.2 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 2/10, all 2/10."
             ],
             "flags": [
-              "current season only 10 games; added 12 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
-            "caution": [
-              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
-              "model far from market (9% vs 26%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (9% vs 26%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
+            "caution": [],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +493 or better.",
+            "next_step": "Pass. Only interesting at +330 or better.",
             "proven": false
           }
         }
@@ -2948,114 +3056,6 @@
             "caution": [],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +111 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Antonio Williams",
-      "player_id": "5081432",
-      "team": "Washington Commanders",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.2,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "2/10",
-        "L20": "2/10",
-        "all": "2/10"
-      },
-      "recent": [
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.912,
-          "fair_over": -1043,
-          "fair_under": 1043,
-          "L10": "2/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.205,
-          "fair_over": 387,
-          "fair_under": -387,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.049,
-          "fair_over": 1957,
-          "fair_under": -1957,
-          "L10": "0/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.041,
-          "fair_over": 2366,
-          "fair_under": -2366,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.03,
-          "fair_over": 3242,
-          "fair_under": -3242,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.03,
-          "fair_over": 3243,
-          "fair_under": -3243,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Antonio Williams Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 255.0,
-            "model_raw": 0.2053,
-            "model_prob": 0.2374,
-            "market_prob": 0.2696,
-            "fair_odds": 321,
-            "edge": -0.0322,
-            "edge_at_price": -0.0442,
-            "ev": -0.1571,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 20.5% before shrink, this book's no-vig 27.0%.",
-              "Projection 0.2 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 2/10, all 2/10."
-            ],
-            "flags": [
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +330 or better.",
             "proven": false
           }
         }

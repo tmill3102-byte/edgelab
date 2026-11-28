@@ -147,7 +147,7 @@
   "model_summary": "Margin HOU +8.8 \u00b7 total 47.1",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: HOU 83.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: HOU 83.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin HOU +8.8, total 47.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -2004,6 +2004,120 @@
       "player": "David Montgomery",
       "player_id": "4035538",
       "team": "Houston Texans",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.43,
+      "hit_rates": {
+        "L5": "0/5",
+        "L10": "2/10",
+        "L20": "6/20",
+        "all": "7/21"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.315,
+          "fair_over": 218,
+          "fair_under": -218,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.127,
+          "fair_over": 689,
+          "fair_under": -689,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.104,
+          "fair_over": 864,
+          "fair_under": -864,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.065,
+          "fair_over": 1438,
+          "fair_under": -1438,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.065,
+          "fair_over": 1448,
+          "fair_under": -1448,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 6 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "David Montgomery Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 100.0,
+            "model_raw": 0.3149,
+            "model_prob": 0.3967,
+            "market_prob": 0.4785,
+            "fair_odds": 152,
+            "edge": -0.0818,
+            "edge_at_price": -0.1033,
+            "ev": -0.2066,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 31.5% before shrink, this book's no-vig 47.9%.",
+              "Projection 0.43 (Poisson).",
+              "Hit rate over L5 0/5, L10 2/10, L20 6/20, all 7/21."
+            ],
+            "flags": [
+              "current season only 6 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +157 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "David Montgomery",
+      "player_id": "4035538",
+      "team": "Houston Texans",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 8.5,
@@ -2339,78 +2453,78 @@
       }
     },
     {
-      "player": "David Montgomery",
-      "player_id": "4035538",
-      "team": "Houston Texans",
+      "player": "Derrick Henry",
+      "player_id": "3043078",
+      "team": "Baltimore Ravens",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.43,
+      "projection": 0.94,
       "hit_rates": {
-        "L5": "0/5",
-        "L10": "2/10",
-        "L20": "6/20",
-        "all": "7/21"
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "13/20",
+        "all": "16/26"
       },
       "recent": [
+        1.0,
+        2.0,
+        0.0,
+        1.0,
         0.0,
         0.0,
-        0.0,
-        0.0,
-        0.0,
-        3.0,
-        0.0,
-        0.0,
-        0.0,
+        1.0,
+        1.0,
+        2.0,
         1.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.912,
-          "fair_over": -1043,
-          "fair_under": 1043,
-          "L10": "2/10"
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.315,
-          "fair_over": 218,
-          "fair_under": -218,
-          "L10": "2/10"
+          "p_over": 0.629,
+          "fair_over": -170,
+          "fair_under": 170,
+          "L10": "7/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.127,
-          "fair_over": 689,
-          "fair_under": -689,
-          "L10": "1/10"
+          "p_over": 0.399,
+          "fair_over": 151,
+          "fair_under": -151,
+          "L10": "2/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.104,
-          "fair_over": 864,
-          "fair_under": -864,
-          "L10": "1/10"
+          "p_over": 0.245,
+          "fair_over": 308,
+          "fair_under": -308,
+          "L10": "2/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.065,
-          "fair_over": 1438,
-          "fair_under": -1438,
-          "L10": "1/10"
+          "p_over": 0.09,
+          "fair_over": 1015,
+          "fair_under": -1015,
+          "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.065,
-          "fair_over": 1448,
-          "fair_under": -1448,
-          "L10": "1/10"
+          "p_over": 0.074,
+          "fair_over": 1244,
+          "fair_under": -1244,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 6 games; added 15 from prior season (role/team may differ)",
+        "current season only 11 games; added 15 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -2418,35 +2532,33 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "David Montgomery Anytime TD",
+            "selection": "Derrick Henry Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": 100.0,
-            "model_raw": 0.3149,
-            "model_prob": 0.3967,
-            "market_prob": 0.4785,
-            "fair_odds": 152,
-            "edge": -0.0818,
-            "edge_at_price": -0.1033,
-            "ev": -0.2066,
+            "odds": -160.0,
+            "model_raw": 0.6294,
+            "model_prob": 0.6091,
+            "market_prob": 0.5889,
+            "fair_odds": -156,
+            "edge": 0.0202,
+            "edge_at_price": -0.0062,
+            "ev": -0.0101,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 31.5% before shrink, this book's no-vig 47.9%.",
-              "Projection 0.43 (Poisson).",
-              "Hit rate over L5 0/5, L10 2/10, L20 6/20, all 7/21."
+              "Model over 0.5: 62.9% before shrink, this book's no-vig 58.9%.",
+              "Projection 0.94 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 16/26."
             ],
             "flags": [
-              "current season only 6 games; added 15 from prior season (role/team may differ)",
+              "current season only 11 games; added 15 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 6 games; added 15 from prior season (role/team may differ)",
-              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (31% vs 48%): usually means the model is missing info (lineups, motivation, SOS)"
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +157 or better.",
+            "next_step": "Pass. Only interesting at -148 or better.",
             "proven": false
           }
         }
@@ -2779,118 +2891,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +162 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Derrick Henry",
-      "player_id": "3043078",
-      "team": "Baltimore Ravens",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.94,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "7/10",
-        "L20": "13/20",
-        "all": "16/26"
-      },
-      "recent": [
-        1.0,
-        2.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        2.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.629,
-          "fair_over": -170,
-          "fair_under": 170,
-          "L10": "7/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.399,
-          "fair_over": 151,
-          "fair_under": -151,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.245,
-          "fair_over": 308,
-          "fair_under": -308,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.09,
-          "fair_over": 1015,
-          "fair_under": -1015,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.074,
-          "fair_over": 1244,
-          "fair_under": -1244,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 11 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Derrick Henry Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": -160.0,
-            "model_raw": 0.6294,
-            "model_prob": 0.6091,
-            "market_prob": 0.5889,
-            "fair_odds": -156,
-            "edge": 0.0202,
-            "edge_at_price": -0.0062,
-            "ev": -0.0101,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 62.9% before shrink, this book's no-vig 58.9%.",
-              "Projection 0.94 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 13/20, all 16/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -148 or better.",
             "proven": false
           }
         }

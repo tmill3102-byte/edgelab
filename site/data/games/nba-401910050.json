@@ -1,0 +1,330 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401910050",
+  "name": "Philadelphia 76ers at Houston Rockets",
+  "matchup": "PHI @ HOU",
+  "start": "2026-11-29T01:30Z",
+  "start_local": "Sat Nov 28 8:30 PM ET",
+  "date_et": "2026-11-28",
+  "weekday": "saturday",
+  "state": "pre",
+  "status": "11/28 - 8:30 PM EST",
+  "home": {
+    "abbr": "HOU",
+    "name": "Houston Rockets",
+    "record": "14-5",
+    "id": "10"
+  },
+  "away": {
+    "abbr": "PHI",
+    "name": "Philadelphia 76ers",
+    "record": "16-4",
+    "id": "20"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "espn",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35097393"
+  },
+  "lines": {
+    "draftkings": {
+      "total": 220.5,
+      "over_odds": -105.0,
+      "under_odds": -115.0,
+      "ml_away": 378.0,
+      "ml_home": -494.0,
+      "spread_home": -12.5,
+      "spread_home_odds": -106.0,
+      "spread_away": 12.5,
+      "spread_away_odds": -114.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin HOU +8.7 \u00b7 total 227.1",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: HOU 77.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin HOU +8.7, total 227.1; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Steven Adams",
+        "status": "Day-To-Day",
+        "pos": "C",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Joel Embiid",
+        "status": "Out",
+        "pos": "C",
+        "key": true
+      },
+      {
+        "name": "LeBron James",
+        "status": "Out",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Dean Wade",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Jaylen Brown",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Ariel Hukporti",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 LWLWW",
+    "away": "L5 WWLWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "PHI ML",
+              "side": "away",
+              "line": null,
+              "odds": 378.0,
+              "model_raw": 0.243,
+              "model_prob": 0.2065,
+              "market_prob": 0.201,
+              "fair_odds": 384,
+              "edge": 0.0055,
+              "edge_at_price": -0.0027,
+              "ev": -0.0128,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model PHI win 24.3% vs market no-vig 20.1%.",
+                "v2 projected margin HOU +8.7 (ratings HOU +6.0, PHI +2.2, home edge 1.5); raw model 24.3%.",
+                "PHI L5 WWLWW (MOV 3.2), HOU L5 LWLWW (MOV 8.1)",
+                "pace: projected total +0.4 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to HOU's margin (away b2b)",
+                "PHI key player(s) out: Joel Embiid, LeBron James (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [
+                "injury: Joel Embiid, LeBron James out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Market makes PHI 20%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +394 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "HOU ML",
+              "side": "home",
+              "line": null,
+              "odds": -494.0,
+              "model_raw": 0.757,
+              "model_prob": 0.7935,
+              "market_prob": 0.799,
+              "fair_odds": -384,
+              "edge": -0.0055,
+              "edge_at_price": -0.0382,
+              "ev": -0.0459,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU win 75.7% vs market no-vig 79.9%.",
+                "v2 projected margin HOU +8.7 (ratings HOU +6.0, PHI +2.2, home edge 1.5); raw model 75.7%.",
+                "PHI L5 WWLWW (MOV 3.2), HOU L5 LWLWW (MOV 8.1)",
+                "pace: projected total +0.4 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to HOU's margin (away b2b)",
+                "PHI key player(s) out: Joel Embiid, LeBron James (not in the rating; the market has usually priced this)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)"
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Market makes HOU 80%; books see lineup/goalie/motivation info this model doesn't, and heavy favorites risk a lot to win a little; one upset erases several wins.",
+              "next_step": "Pass. Only interesting at -350 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "HOU -12.5",
+              "side": "home",
+              "line": -12.5,
+              "odds": -106.0,
+              "model_raw": 0.3809,
+              "model_prob": 0.4913,
+              "market_prob": 0.4913,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.0232,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model HOU -12.5 covers 38.1% vs market 49.1%.",
+                "Projected margin HOU +8.7 vs line HOU -12.5.",
+                "PHI L5 WWLWW (MOV 3.2), HOU L5 LWLWW (MOV 8.1)",
+                "pace: projected total +0.4 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to HOU's margin (away b2b)",
+                "PHI key player(s) out: Joel Embiid, LeBron James (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "line move: spread moved against this side (-11.5 -> -12.5)"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "PHI +12.5",
+              "side": "away",
+              "line": 12.5,
+              "odds": -114.0,
+              "model_raw": 0.6191,
+              "model_prob": 0.5087,
+              "market_prob": 0.5087,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model PHI +12.5 covers 61.9% vs market 50.9%.",
+                "Projected margin HOU +8.7 vs line HOU -12.5.",
+                "PHI L5 WWLWW (MOV 3.2), HOU L5 LWLWW (MOV 8.1)",
+                "pace: projected total +0.4 vs these teams' rating-only total (recent shot volume)",
+                "rest/back-to-back adjustment +3.50 to HOU's margin (away b2b)",
+                "PHI key player(s) out: Joel Embiid, LeBron James (not in the rating; the market has usually priced this)",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
+              ],
+              "flags": [],
+              "caution": [
+                "injury: Joel Embiid, LeBron James out for this side and the rating doesn't know it"
+              ],
+              "case_against": "Margin s.d. is ~12.5 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 220.5",
+              "side": "over",
+              "line": 220.5,
+              "odds": -105.0,
+              "model_raw": 0.6333,
+              "model_prob": 0.5142,
+              "market_prob": 0.4892,
+              "fair_odds": -106,
+              "edge": 0.0251,
+              "edge_at_price": 0.002,
+              "ev": 0.004,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model over 220.5: 63.3% vs market 48.9%.",
+                "Projected total 227.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "PHI L5 WWLWW (MOV 3.2), HOU L5 LWLWW (MOV 8.1)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "Note: model far from market (63% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Monitor only; if anything, wait for -102 or better and re-check injuries near start.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 220.5",
+              "side": "under",
+              "line": 220.5,
+              "odds": -115.0,
+              "model_raw": 0.3667,
+              "model_prob": 0.4858,
+              "market_prob": 0.5108,
+              "fair_odds": 106,
+              "edge": -0.0251,
+              "edge_at_price": -0.0491,
+              "ev": -0.0918,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Model under 220.5: 36.7% vs market 51.1%.",
+                "Projected total 227.1 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
+                "PHI L5 WWLWW (MOV 3.2), HOU L5 LWLWW (MOV 8.1)",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "Note: model far from market (37% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +110 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

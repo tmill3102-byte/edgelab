@@ -147,7 +147,7 @@
   "model_summary": "Margin MIN +8.1 \u00b7 total 35.0",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: MIN 79.9% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: MIN 80.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin MIN +8.1, total 35.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -1694,6 +1694,273 @@
       "player": "Aaron Jones Sr.",
       "player_id": "3042519",
       "team": "Minnesota Vikings",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.37,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "6/20",
+        "all": "7/22"
+      },
+      "recent": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.346,
+          "fair_over": 189,
+          "fair_under": -189,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.09,
+          "fair_over": 1012,
+          "fair_under": -1012,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.064,
+          "fair_over": 1472,
+          "fair_under": -1472,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.033,
+          "fair_over": 2889,
+          "fair_under": -2889,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.033,
+          "fair_over": 2907,
+          "fair_under": -2907,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 12 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Aaron Jones Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 150.0,
+            "model_raw": 0.3456,
+            "model_prob": 0.3642,
+            "market_prob": 0.3828,
+            "fair_odds": 175,
+            "edge": -0.0186,
+            "edge_at_price": -0.0358,
+            "ev": -0.0895,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +180 or better.",
+            "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Aaron Jones Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 160.0,
+            "model_raw": 0.3456,
+            "model_prob": 0.3642,
+            "market_prob": 0.3828,
+            "fair_odds": 175,
+            "edge": -0.0186,
+            "edge_at_price": -0.0204,
+            "ev": -0.0531,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +180 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Aaron Jones Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 163.0,
+            "model_raw": 0.3456,
+            "model_prob": 0.3642,
+            "market_prob": 0.3828,
+            "fair_odds": 175,
+            "edge": -0.0186,
+            "edge_at_price": -0.016,
+            "ev": -0.0422,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +180 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Aaron Jones Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 150.0,
+            "model_raw": 0.3456,
+            "model_prob": 0.3642,
+            "market_prob": 0.3828,
+            "fair_odds": 175,
+            "edge": -0.0186,
+            "edge_at_price": -0.0358,
+            "ev": -0.0895,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +180 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Aaron Jones Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 145.0,
+            "model_raw": 0.3456,
+            "model_prob": 0.3642,
+            "market_prob": 0.3828,
+            "fair_odds": 175,
+            "edge": -0.0186,
+            "edge_at_price": -0.044,
+            "ev": -0.1077,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +180 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Aaron Jones Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 155.0,
+            "model_raw": 0.3456,
+            "model_prob": 0.3642,
+            "market_prob": 0.3828,
+            "fair_odds": 175,
+            "edge": -0.0186,
+            "edge_at_price": -0.028,
+            "ev": -0.0713,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
+              "Projection 0.37 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +180 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Aaron Jones Sr.",
+      "player_id": "3042519",
+      "team": "Minnesota Vikings",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 7.5,
@@ -1819,6 +2086,134 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Monitor only; if anything, wait for -122 or better and re-check injuries near start.",
             "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Over 7.5 rec_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -114.0,
+            "model_raw": 0.6045,
+            "model_prob": 0.5523,
+            "market_prob": 0.5,
+            "fair_odds": -123,
+            "edge": 0.0523,
+            "edge_at_price": 0.0195,
+            "ev": 0.0367,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 60.5% before shrink, this book's no-vig 50.0%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -118 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Over 7.5 rec_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -112.0,
+            "model_raw": 0.6045,
+            "model_prob": 0.5507,
+            "market_prob": 0.4969,
+            "fair_odds": -123,
+            "edge": 0.0538,
+            "edge_at_price": 0.0224,
+            "ev": 0.0424,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 60.5% before shrink, this book's no-vig 49.7%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -117 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Over 7.5 rec_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -110.0,
+            "model_raw": 0.6045,
+            "model_prob": 0.5472,
+            "market_prob": 0.4899,
+            "fair_odds": -121,
+            "edge": 0.0573,
+            "edge_at_price": 0.0234,
+            "ev": 0.0446,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 60.5% before shrink, this book's no-vig 49.0%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -116 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Over 7.5 rec_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -115.0,
+            "model_raw": 0.6045,
+            "model_prob": 0.5523,
+            "market_prob": 0.5,
+            "fair_odds": -123,
+            "edge": 0.0523,
+            "edge_at_price": 0.0174,
+            "ev": 0.0325,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 60.5% before shrink, this book's no-vig 50.0%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -118 or better and re-check injuries near start.",
+            "proven": false
           }
         },
         "under": {
@@ -1850,6 +2245,126 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +132 or better.",
+            "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Under 7.5 rec_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -114.0,
+            "model_raw": 0.3955,
+            "model_prob": 0.4477,
+            "market_prob": 0.5,
+            "fair_odds": 123,
+            "edge": -0.0523,
+            "edge_at_price": -0.085,
+            "ev": -0.1595,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 39.6% before shrink, this book's no-vig 50.0%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +128 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Under 7.5 rec_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -115.0,
+            "model_raw": 0.3955,
+            "model_prob": 0.4493,
+            "market_prob": 0.5031,
+            "fair_odds": 123,
+            "edge": -0.0538,
+            "edge_at_price": -0.0856,
+            "ev": -0.16,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 39.6% before shrink, this book's no-vig 50.3%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +127 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Under 7.5 rec_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -120.0,
+            "model_raw": 0.3955,
+            "model_prob": 0.4528,
+            "market_prob": 0.5101,
+            "fair_odds": 121,
+            "edge": -0.0573,
+            "edge_at_price": -0.0926,
+            "ev": -0.1698,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 39.6% before shrink, this book's no-vig 51.0%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +125 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Under 7.5 rec_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -115.0,
+            "model_raw": 0.3955,
+            "model_prob": 0.4477,
+            "market_prob": 0.5,
+            "fair_odds": 123,
+            "edge": -0.0523,
+            "edge_at_price": -0.0871,
+            "ev": -0.1629,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 39.6% before shrink, this book's no-vig 50.0%.",
+              "Projection 12.69 (Normal(sd 12.5)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 14/20, all 15/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +128 or better.",
             "proven": false
           }
         }
@@ -1986,6 +2501,40 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Monitor only; if anything, wait for -126 or better and re-check injuries near start.",
             "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Over 37.5 rush_yds",
+            "side": "over",
+            "line": 37.5,
+            "odds": -114.0,
+            "model_raw": 0.6428,
+            "model_prob": 0.5714,
+            "market_prob": 0.5,
+            "fair_odds": -133,
+            "edge": 0.0714,
+            "edge_at_price": 0.0387,
+            "ev": 0.0726,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 37.5: 64.3% before shrink, this book's no-vig 50.0%.",
+              "Projection 53.04 (Normal(sd 34.3)).",
+              "Hit rate over L5 1/5, L10 6/10, L20 13/20, all 13/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "model far from market (64% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
           }
         },
         "under": {
@@ -2020,23 +2569,55 @@
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +136 or better.",
             "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Aaron Jones Sr. Under 37.5 rush_yds",
+            "side": "under",
+            "line": 37.5,
+            "odds": -114.0,
+            "model_raw": 0.3572,
+            "model_prob": 0.4286,
+            "market_prob": 0.5,
+            "fair_odds": 133,
+            "edge": -0.0714,
+            "edge_at_price": -0.1041,
+            "ev": -0.1954,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 37.5: 35.7% before shrink, this book's no-vig 50.0%.",
+              "Projection 53.04 (Normal(sd 34.3)).",
+              "Hit rate over L5 1/5, L10 6/10, L20 13/20, all 13/22."
+            ],
+            "flags": [
+              "current season only 10 games; added 12 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)",
+              "model far from market (36% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +138 or better.",
+            "proven": false
           }
         }
       }
     },
     {
-      "player": "Aaron Jones Sr.",
-      "player_id": "3042519",
-      "team": "Minnesota Vikings",
+      "player": "Bijan Robinson",
+      "player_id": "4430807",
+      "team": "Atlanta Falcons",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.37,
+      "projection": 0.69,
       "hit_rates": {
         "L5": "2/5",
-        "L10": "4/10",
-        "L20": "6/20",
-        "all": "7/22"
+        "L10": "5/10",
+        "L20": "10/20",
+        "all": "13/25"
       },
       "recent": [
         1.0,
@@ -2044,59 +2625,59 @@
         0.0,
         0.0,
         0.0,
-        1.0,
         0.0,
-        0.0,
+        2.0,
+        2.0,
         0.0,
         1.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.942,
-          "fair_over": -1614,
-          "fair_under": 1614,
-          "L10": "4/10"
+          "p_over": 0.95,
+          "fair_over": -1900,
+          "fair_under": 1900,
+          "L10": "5/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.346,
-          "fair_over": 189,
-          "fair_under": -189,
-          "L10": "4/10"
+          "p_over": 0.5,
+          "fair_over": 100,
+          "fair_under": -100,
+          "L10": "5/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.09,
-          "fair_over": 1012,
-          "fair_under": -1012,
-          "L10": "0/10"
+          "p_over": 0.269,
+          "fair_over": 272,
+          "fair_under": -272,
+          "L10": "2/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.064,
-          "fair_over": 1472,
-          "fair_under": -1472,
-          "L10": "0/10"
+          "p_over": 0.187,
+          "fair_over": 435,
+          "fair_under": -435,
+          "L10": "2/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.033,
-          "fair_over": 2889,
-          "fair_under": -2889,
+          "p_over": 0.06,
+          "fair_over": 1581,
+          "fair_under": -1581,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.033,
-          "fair_over": 2907,
-          "fair_under": -2907,
+          "p_over": 0.051,
+          "fair_over": 1871,
+          "fair_under": -1871,
           "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 12 from prior season (role/team may differ)",
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -2104,33 +2685,188 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Aaron Jones Anytime TD",
+            "selection": "Bijan Robinson Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": 150.0,
-            "model_raw": 0.3456,
-            "model_prob": 0.3642,
-            "market_prob": 0.3828,
-            "fair_odds": 175,
-            "edge": -0.0186,
-            "edge_at_price": -0.0358,
-            "ev": -0.0895,
+            "odds": -125.0,
+            "model_raw": 0.4996,
+            "model_prob": 0.5156,
+            "market_prob": 0.5316,
+            "fair_odds": -106,
+            "edge": -0.016,
+            "edge_at_price": -0.04,
+            "ev": -0.0719,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 34.6% before shrink, this book's no-vig 38.3%.",
-              "Projection 0.37 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 6/20, all 7/22."
+              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.69 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
             ],
             "flags": [
-              "current season only 10 games; added 12 from prior season (role/team may differ)",
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 12 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +180 or better.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -125.0,
+            "model_raw": 0.4996,
+            "model_prob": 0.5156,
+            "market_prob": 0.5316,
+            "fair_odds": -106,
+            "edge": -0.016,
+            "edge_at_price": -0.04,
+            "ev": -0.0719,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.69 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -137.0,
+            "model_raw": 0.4996,
+            "model_prob": 0.5156,
+            "market_prob": 0.5316,
+            "fair_odds": -106,
+            "edge": -0.016,
+            "edge_at_price": -0.0625,
+            "ev": -0.108,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.69 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -143.0,
+            "model_raw": 0.4996,
+            "model_prob": 0.5156,
+            "market_prob": 0.5316,
+            "fair_odds": -106,
+            "edge": -0.016,
+            "edge_at_price": -0.0729,
+            "ev": -0.1238,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.69 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -120.0,
+            "model_raw": 0.4996,
+            "model_prob": 0.5156,
+            "market_prob": 0.5316,
+            "fair_odds": -106,
+            "edge": -0.016,
+            "edge_at_price": -0.0299,
+            "ev": -0.0547,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.69 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -125.0,
+            "model_raw": 0.4996,
+            "model_prob": 0.5156,
+            "market_prob": 0.5316,
+            "fair_odds": -106,
+            "edge": -0.016,
+            "edge_at_price": -0.04,
+            "ev": -0.0719,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.69 (Poisson).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
             "proven": false
           }
         }
@@ -2142,7 +2878,7 @@
       "team": "Atlanta Falcons",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
-      "line": 20.5,
+      "line": 21.5,
       "projection": 30.58,
       "hit_rates": {
         "L5": "2/5",
@@ -2163,13 +2899,6 @@
         90.0
       ],
       "ladder": [
-        {
-          "line": 16.5,
-          "p_over": 0.619,
-          "fair_over": -162,
-          "fair_under": 162,
-          "L10": "5/10"
-        },
         {
           "line": 17.5,
           "p_over": 0.611,
@@ -2225,6 +2954,13 @@
           "fair_over": -110,
           "fair_under": 110,
           "L10": "4/10"
+        },
+        {
+          "line": 25.5,
+          "p_over": 0.515,
+          "fair_over": -106,
+          "fair_under": 106,
+          "L10": "4/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
@@ -2234,23 +2970,23 @@
       "status": null,
       "sides": {
         "over": {
-          "draftkings": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Bijan Robinson Over 20.5 rec_yds",
+            "selection": "Bijan Robinson Over 21.5 rec_yds",
             "side": "over",
-            "line": 20.5,
-            "odds": -117.0,
-            "model_raw": 0.5572,
-            "model_prob": 0.5333,
-            "market_prob": 0.5094,
-            "fair_odds": -114,
-            "edge": 0.0239,
-            "edge_at_price": -0.0059,
-            "ev": -0.0109,
+            "line": 21.5,
+            "odds": -114.0,
+            "model_raw": 0.5489,
+            "model_prob": 0.5245,
+            "market_prob": 0.5,
+            "fair_odds": -110,
+            "edge": 0.0245,
+            "edge_at_price": -0.0083,
+            "ev": -0.0155,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 20.5: 55.7% before shrink, this book's no-vig 50.9%.",
+              "Model over 21.5: 54.9% before shrink, this book's no-vig 50.0%.",
               "Projection 30.58 (Normal(sd 29.7)).",
               "Hit rate over L5 2/5, L10 4/10, L20 11/20, all 16/25."
             ],
@@ -2261,28 +2997,58 @@
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -110 or better.",
+            "next_step": "Pass. Only interesting at -106 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Over 21.5 rec_yds",
+            "side": "over",
+            "line": 21.5,
+            "odds": -114.0,
+            "model_raw": 0.5489,
+            "model_prob": 0.5229,
+            "market_prob": 0.497,
+            "fair_odds": -110,
+            "edge": 0.026,
+            "edge_at_price": -0.0098,
+            "ev": -0.0183,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 21.5: 54.9% before shrink, this book's no-vig 49.7%.",
+              "Projection 30.58 (Normal(sd 29.7)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 11/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -105 or better.",
             "proven": false
           }
         },
         "under": {
-          "draftkings": {
+          "fanduel": {
             "market": "Prop",
-            "selection": "Bijan Robinson Under 20.5 rec_yds",
+            "selection": "Bijan Robinson Under 21.5 rec_yds",
             "side": "under",
-            "line": 20.5,
-            "odds": -108.0,
-            "model_raw": 0.4428,
-            "model_prob": 0.4667,
-            "market_prob": 0.4906,
-            "fair_odds": 114,
-            "edge": -0.0239,
-            "edge_at_price": -0.0525,
-            "ev": -0.1012,
+            "line": 21.5,
+            "odds": -114.0,
+            "model_raw": 0.4511,
+            "model_prob": 0.4756,
+            "market_prob": 0.5,
+            "fair_odds": 110,
+            "edge": -0.0244,
+            "edge_at_price": -0.0572,
+            "ev": -0.1073,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 20.5: 44.3% before shrink, this book's no-vig 49.1%.",
+              "Model under 21.5: 45.1% before shrink, this book's no-vig 50.0%.",
               "Projection 30.58 (Normal(sd 29.7)).",
               "Hit rate over L5 2/5, L10 4/10, L20 11/20, all 16/25."
             ],
@@ -2293,7 +3059,37 @@
               "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +119 or better.",
+            "next_step": "Pass. Only interesting at +114 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Under 21.5 rec_yds",
+            "side": "under",
+            "line": 21.5,
+            "odds": -117.0,
+            "model_raw": 0.4511,
+            "model_prob": 0.4771,
+            "market_prob": 0.503,
+            "fair_odds": 110,
+            "edge": -0.026,
+            "edge_at_price": -0.0621,
+            "ev": -0.1152,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 21.5: 45.1% before shrink, this book's no-vig 50.3%.",
+              "Projection 30.58 (Normal(sd 29.7)).",
+              "Hit rate over L5 2/5, L10 4/10, L20 11/20, all 16/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +114 or better.",
             "proven": false
           }
         }
@@ -2430,6 +3226,108 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
             "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Over 75.5 rush_yds",
+            "side": "over",
+            "line": 75.5,
+            "odds": -114.0,
+            "model_raw": 0.6399,
+            "model_prob": 0.5699,
+            "market_prob": 0.5,
+            "fair_odds": -133,
+            "edge": 0.0699,
+            "edge_at_price": 0.0372,
+            "ev": 0.0699,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 75.5: 64.0% before shrink, this book's no-vig 50.0%.",
+              "Projection 93.25 (Normal(sd 40.2)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 13/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Over 75.5 rush_yds",
+            "side": "over",
+            "line": 75.5,
+            "odds": -114.0,
+            "model_raw": 0.6399,
+            "model_prob": 0.5699,
+            "market_prob": 0.5,
+            "fair_odds": -133,
+            "edge": 0.0699,
+            "edge_at_price": 0.0372,
+            "ev": 0.0699,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 75.5: 64.0% before shrink, this book's no-vig 50.0%.",
+              "Projection 93.25 (Normal(sd 40.2)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 13/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Over 75.5 rush_yds",
+            "side": "over",
+            "line": 75.5,
+            "odds": -115.0,
+            "model_raw": 0.6399,
+            "model_prob": 0.5699,
+            "market_prob": 0.5,
+            "fair_odds": -133,
+            "edge": 0.0699,
+            "edge_at_price": 0.0351,
+            "ev": 0.0656,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 75.5: 64.0% before shrink, this book's no-vig 50.0%.",
+              "Projection 93.25 (Normal(sd 40.2)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 13/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (64% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -127 or better and re-check injuries near start.",
+            "proven": false
           }
         },
         "under": {
@@ -2464,117 +3362,101 @@
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +138 or better.",
             "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Bijan Robinson",
-      "player_id": "4430807",
-      "team": "Atlanta Falcons",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.69,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "13/25"
-      },
-      "recent": [
-        1.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.0,
-        2.0,
-        0.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.95,
-          "fair_over": -1900,
-          "fair_under": 1900,
-          "L10": "5/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.5,
-          "fair_over": 100,
-          "fair_under": -100,
-          "L10": "5/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.269,
-          "fair_over": 272,
-          "fair_under": -272,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.187,
-          "fair_over": 435,
-          "fair_under": -435,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.06,
-          "fair_over": 1581,
-          "fair_under": -1581,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.051,
-          "fair_over": 1871,
-          "fair_under": -1871,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
+          },
+          "fanduel": {
             "market": "Prop",
-            "selection": "Bijan Robinson Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": -125.0,
-            "model_raw": 0.4996,
-            "model_prob": 0.5156,
-            "market_prob": 0.5316,
-            "fair_odds": -106,
-            "edge": -0.016,
-            "edge_at_price": -0.04,
-            "ev": -0.0719,
+            "selection": "Bijan Robinson Under 75.5 rush_yds",
+            "side": "under",
+            "line": 75.5,
+            "odds": -114.0,
+            "model_raw": 0.3601,
+            "model_prob": 0.43,
+            "market_prob": 0.5,
+            "fair_odds": 133,
+            "edge": -0.07,
+            "edge_at_price": -0.1027,
+            "ev": -0.1927,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 50.0% before shrink, this book's no-vig 53.2%.",
-              "Projection 0.69 (Poisson).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 13/25."
+              "Model under 75.5: 36.0% before shrink, this book's no-vig 50.0%.",
+              "Projection 93.25 (Normal(sd 40.2)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 13/20, all 14/25."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
             ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -102 or better.",
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +137 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Under 75.5 rush_yds",
+            "side": "under",
+            "line": 75.5,
+            "odds": -114.0,
+            "model_raw": 0.3601,
+            "model_prob": 0.43,
+            "market_prob": 0.5,
+            "fair_odds": 133,
+            "edge": -0.07,
+            "edge_at_price": -0.1027,
+            "ev": -0.1927,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 75.5: 36.0% before shrink, this book's no-vig 50.0%.",
+              "Projection 93.25 (Normal(sd 40.2)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 13/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +137 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Bijan Robinson Under 75.5 rush_yds",
+            "side": "under",
+            "line": 75.5,
+            "odds": -115.0,
+            "model_raw": 0.3601,
+            "model_prob": 0.43,
+            "market_prob": 0.5,
+            "fair_odds": 133,
+            "edge": -0.07,
+            "edge_at_price": -0.1048,
+            "ev": -0.196,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 75.5: 36.0% before shrink, this book's no-vig 50.0%.",
+              "Projection 93.25 (Normal(sd 40.2)).",
+              "Hit rate over L5 2/5, L10 6/10, L20 13/20, all 14/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (36% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +137 or better.",
             "proven": false
           }
         }
@@ -2690,6 +3572,74 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Monitor only; if anything, wait for -156 or better and re-check injuries near start.",
             "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Over 0.5 rush_yds",
+            "side": "over",
+            "line": 0.5,
+            "odds": -114.0,
+            "model_raw": 0.7293,
+            "model_prob": 0.6146,
+            "market_prob": 0.5,
+            "fair_odds": -160,
+            "edge": 0.1146,
+            "edge_at_price": 0.0819,
+            "ev": 0.1538,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 72.9% before shrink, this book's no-vig 50.0%.",
+              "Projection 1.92 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 9/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)",
+              "model far from market (73% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (73% vs 50%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -152 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Over 0.5 rush_yds",
+            "side": "over",
+            "line": 0.5,
+            "odds": -120.0,
+            "model_raw": 0.7293,
+            "model_prob": 0.6197,
+            "market_prob": 0.5101,
+            "fair_odds": -163,
+            "edge": 0.1096,
+            "edge_at_price": 0.0743,
+            "ev": 0.1361,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 72.9% before shrink, this book's no-vig 51.0%.",
+              "Projection 1.92 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 9/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)",
+              "model far from market (73% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (73% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -155 or better and re-check injuries near start.",
+            "proven": false
           }
         },
         "under": {
@@ -2723,6 +3673,70 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +169 or better.",
+            "proven": false
+          },
+          "fanduel": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Under 0.5 rush_yds",
+            "side": "under",
+            "line": 0.5,
+            "odds": -114.0,
+            "model_raw": 0.2707,
+            "model_prob": 0.3853,
+            "market_prob": 0.5,
+            "fair_odds": 160,
+            "edge": -0.1147,
+            "edge_at_price": -0.1474,
+            "ev": -0.2766,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 0.5: 27.1% before shrink, this book's no-vig 50.0%.",
+              "Projection 1.92 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 9/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)",
+              "model far from market (27% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (27% vs 50%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +165 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Under 0.5 rush_yds",
+            "side": "under",
+            "line": 0.5,
+            "odds": -110.0,
+            "model_raw": 0.2707,
+            "model_prob": 0.3803,
+            "market_prob": 0.4899,
+            "fair_odds": 163,
+            "edge": -0.1096,
+            "edge_at_price": -0.1435,
+            "ev": -0.274,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 0.5: 27.1% before shrink, this book's no-vig 49.0%.",
+              "Projection 1.92 (Poisson).",
+              "Hit rate over L5 3/5, L10 5/10, L20 9/20, all 9/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)",
+              "model far from market (27% vs 49%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (27% vs 49%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +168 or better.",
             "proven": false
           }
         }
@@ -2855,6 +3869,96 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Monitor only; if anything, wait for -109 or better and re-check injuries near start.",
             "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Over 242.5 pass_yds",
+            "side": "over",
+            "line": 242.5,
+            "odds": -118.0,
+            "model_raw": 0.5617,
+            "model_prob": 0.535,
+            "market_prob": 0.5082,
+            "fair_odds": -115,
+            "edge": 0.0267,
+            "edge_at_price": -0.0063,
+            "ev": -0.0117,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 242.5: 56.2% before shrink, this book's no-vig 50.8%.",
+              "Projection 243.09 (Normal(sd 45.9)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 8/20, all 8/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -110 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Over 242.5 pass_yds",
+            "side": "over",
+            "line": 242.5,
+            "odds": -125.0,
+            "model_raw": 0.5617,
+            "model_prob": 0.541,
+            "market_prob": 0.5203,
+            "fair_odds": -118,
+            "edge": 0.0207,
+            "edge_at_price": -0.0146,
+            "ev": -0.0262,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 242.5: 56.2% before shrink, this book's no-vig 52.0%.",
+              "Projection 243.09 (Normal(sd 45.9)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 8/20, all 8/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -113 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Over 242.5 pass_yds",
+            "side": "over",
+            "line": 242.5,
+            "odds": -115.0,
+            "model_raw": 0.5617,
+            "model_prob": 0.5309,
+            "market_prob": 0.5,
+            "fair_odds": -113,
+            "edge": 0.0309,
+            "edge_at_price": -0.004,
+            "ev": -0.0075,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 242.5: 56.2% before shrink, this book's no-vig 50.0%.",
+              "Projection 243.09 (Normal(sd 45.9)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 8/20, all 8/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -109 or better.",
+            "proven": false
           }
         },
         "under": {
@@ -2886,6 +3990,96 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +118 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Under 242.5 pass_yds",
+            "side": "under",
+            "line": 242.5,
+            "odds": -110.0,
+            "model_raw": 0.4383,
+            "model_prob": 0.465,
+            "market_prob": 0.4918,
+            "fair_odds": 115,
+            "edge": -0.0267,
+            "edge_at_price": -0.0588,
+            "ev": -0.1122,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 242.5: 43.8% before shrink, this book's no-vig 49.2%.",
+              "Projection 243.09 (Normal(sd 45.9)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 8/20, all 8/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +119 or better.",
+            "proven": false
+          },
+          "betmgm": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Under 242.5 pass_yds",
+            "side": "under",
+            "line": 242.5,
+            "odds": -105.0,
+            "model_raw": 0.4383,
+            "model_prob": 0.459,
+            "market_prob": 0.4797,
+            "fair_odds": 118,
+            "edge": -0.0207,
+            "edge_at_price": -0.0532,
+            "ev": -0.1039,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 242.5: 43.8% before shrink, this book's no-vig 48.0%.",
+              "Projection 243.09 (Normal(sd 45.9)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 8/20, all 8/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +122 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Kirk Cousins Under 242.5 pass_yds",
+            "side": "under",
+            "line": 242.5,
+            "odds": -115.0,
+            "model_raw": 0.4383,
+            "model_prob": 0.4692,
+            "market_prob": 0.5,
+            "fair_odds": 113,
+            "edge": -0.0308,
+            "edge_at_price": -0.0657,
+            "ev": -0.1229,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 242.5: 43.8% before shrink, this book's no-vig 50.0%.",
+              "Projection 243.09 (Normal(sd 45.9)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 8/20, all 8/21."
+            ],
+            "flags": [
+              "current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +117 or better.",
             "proven": false
           }
         }
@@ -3018,6 +4212,66 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Pass. Only interesting at -102 or better.",
             "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Over 7.5 rush_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -118.0,
+            "model_raw": 0.5399,
+            "model_prob": 0.523,
+            "market_prob": 0.5061,
+            "fair_odds": -110,
+            "edge": 0.0169,
+            "edge_at_price": -0.0183,
+            "ev": -0.0338,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 54.0% before shrink, this book's no-vig 50.6%.",
+              "Projection 9.98 (Normal(sd 16.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -105 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Over 7.5 rush_yds",
+            "side": "over",
+            "line": 7.5,
+            "odds": -110.0,
+            "model_raw": 0.5399,
+            "model_prob": 0.5149,
+            "market_prob": 0.4899,
+            "fair_odds": -106,
+            "edge": 0.025,
+            "edge_at_price": -0.0089,
+            "ev": -0.017,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 7.5: 54.0% before shrink, this book's no-vig 49.0%.",
+              "Projection 9.98 (Normal(sd 16.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -102 or better.",
+            "proven": false
           }
         },
         "under": {
@@ -3049,6 +4303,66 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +111 or better.",
+            "proven": false
+          },
+          "betrivers": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Under 7.5 rush_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -112.0,
+            "model_raw": 0.4601,
+            "model_prob": 0.477,
+            "market_prob": 0.4939,
+            "fair_odds": 110,
+            "edge": -0.0169,
+            "edge_at_price": -0.0513,
+            "ev": -0.0971,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 46.0% before shrink, this book's no-vig 49.4%.",
+              "Projection 9.98 (Normal(sd 16.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +114 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Under 7.5 rush_yds",
+            "side": "under",
+            "line": 7.5,
+            "odds": -120.0,
+            "model_raw": 0.4601,
+            "model_prob": 0.4851,
+            "market_prob": 0.5101,
+            "fair_odds": 106,
+            "edge": -0.025,
+            "edge_at_price": -0.0603,
+            "ev": -0.1106,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 7.5: 46.0% before shrink, this book's no-vig 51.0%.",
+              "Projection 9.98 (Normal(sd 16.1)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 8/17, all 8/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +110 or better.",
             "proven": false
           }
         }
@@ -3183,6 +4497,70 @@
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Monitor only; if anything, wait for -120 or better and re-check injuries near start.",
             "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Over 197.5 pass_yds",
+            "side": "over",
+            "line": 197.5,
+            "odds": -115.0,
+            "model_raw": 0.6113,
+            "model_prob": 0.5572,
+            "market_prob": 0.5031,
+            "fair_odds": -126,
+            "edge": 0.0541,
+            "edge_at_price": 0.0223,
+            "ev": 0.0417,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 197.5: 61.1% before shrink, this book's no-vig 50.3%.",
+              "Projection 212.26 (Normal(sd 45.8)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 11/17, all 11/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -120 or better and re-check injuries near start.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Over 197.5 pass_yds",
+            "side": "over",
+            "line": 197.5,
+            "odds": -115.0,
+            "model_raw": 0.6113,
+            "model_prob": 0.5556,
+            "market_prob": 0.5,
+            "fair_odds": -125,
+            "edge": 0.0556,
+            "edge_at_price": 0.0208,
+            "ev": 0.0388,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 197.5: 61.1% before shrink, this book's no-vig 50.0%.",
+              "Projection 212.26 (Normal(sd 45.8)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 11/17, all 11/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -120 or better and re-check injuries near start.",
+            "proven": false
           }
         },
         "under": {
@@ -3199,6 +4577,66 @@
             "edge": -0.0556,
             "edge_at_price": -0.084,
             "ev": -0.1589,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 197.5: 38.9% before shrink, this book's no-vig 50.0%.",
+              "Projection 212.26 (Normal(sd 45.8)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 11/17, all 11/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +130 or better.",
+            "proven": false
+          },
+          "betonlineag": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Under 197.5 pass_yds",
+            "side": "under",
+            "line": 197.5,
+            "odds": -112.0,
+            "model_raw": 0.3887,
+            "model_prob": 0.4428,
+            "market_prob": 0.4969,
+            "fair_odds": 126,
+            "edge": -0.0541,
+            "edge_at_price": -0.0855,
+            "ev": -0.1618,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 197.5: 38.9% before shrink, this book's no-vig 49.7%.",
+              "Projection 212.26 (Normal(sd 45.8)).",
+              "Hit rate over L5 3/5, L10 6/10, L20 11/17, all 11/17."
+            ],
+            "flags": [
+              "current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 8 games; added 9 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +130 or better.",
+            "proven": false
+          },
+          "bovada": {
+            "market": "Prop",
+            "selection": "Michael Penix Jr. Under 197.5 pass_yds",
+            "side": "under",
+            "line": 197.5,
+            "odds": -115.0,
+            "model_raw": 0.3887,
+            "model_prob": 0.4444,
+            "market_prob": 0.5,
+            "fair_odds": 125,
+            "edge": -0.0556,
+            "edge_at_price": -0.0905,
+            "ev": -0.1693,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [

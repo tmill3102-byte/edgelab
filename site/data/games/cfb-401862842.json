@@ -35,13 +35,13 @@
     "draftkings": {
       "ml_home": 550.0,
       "ml_away": -800.0,
-      "total": 54.5,
-      "over_odds": -105.0,
-      "under_odds": -115.0,
       "spread_home": 16.5,
       "spread_home_odds": -108.0,
       "spread_away": -16.5,
-      "spread_away_odds": -112.0
+      "spread_away_odds": -112.0,
+      "total": 53.5,
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
   "badge": null,
@@ -51,7 +51,7 @@
   ],
   "notes": [
     "ESPN matchup predictor: CLT 12.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin CLT -12.3, total 54.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "v2 ratings: margin CLT -12.3, total 54.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [],
@@ -216,33 +216,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Over 54.5",
+              "selection": "Over 53.5",
               "side": "over",
-              "line": 54.5,
-              "odds": -105.0,
-              "model_raw": 0.5013,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
+              "line": 53.5,
+              "odds": -112.0,
+              "model_raw": 0.5247,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 54.5: 50.1% vs market 48.9%.",
-                "Projected total 54.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 54.5.",
+                "Model over 53.5: 52.5% vs market 50.4%.",
+                "Projected total 54.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
                 "NAVY L5 LLLWW (MOV -0.7), CLT L5 WLLLL (MOV -17.9)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [
-                "line move: total already moved toward over (53.5 -> 54.5); value may be gone"
-              ],
+              "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +109 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -252,33 +250,31 @@
           "offers": {
             "draftkings": {
               "market": "Total",
-              "selection": "Under 54.5",
+              "selection": "Under 53.5",
               "side": "under",
-              "line": 54.5,
-              "odds": -115.0,
-              "model_raw": 0.4987,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
+              "line": 53.5,
+              "odds": -108.0,
+              "model_raw": 0.4753,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.045,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 54.5: 49.9% vs market 51.1%.",
-                "Projected total 54.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 53.5 -> 54.5.",
+                "Model under 53.5: 47.5% vs market 49.6%.",
+                "Projected total 54.5 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs).",
                 "NAVY L5 LLLWW (MOV -0.7), CLT L5 WLLLL (MOV -17.9)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
                 "injury report not available for this league"
               ],
-              "caution": [
-                "line move: market moved against the under (53.5 -> 54.5)"
-              ],
+              "caution": [],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -100 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }

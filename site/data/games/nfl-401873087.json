@@ -147,7 +147,7 @@
   "model_summary": "Margin CIN +10.8 \u00b7 total 51.4",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: CIN 80.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: CIN 80.7% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin CIN +10.8, total 51.3; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -1676,6 +1676,120 @@
       "player": "Chase Brown",
       "player_id": "4362238",
       "team": "Cincinnati Bengals",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.39,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "2/10",
+        "L20": "7/20",
+        "all": "7/25"
+      },
+      "recent": [
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.912,
+          "fair_over": -1043,
+          "fair_under": 1043,
+          "L10": "2/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.297,
+          "fair_over": 237,
+          "fair_under": -237,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.115,
+          "fair_over": 769,
+          "fair_under": -769,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.096,
+          "fair_over": 939,
+          "fair_under": -939,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.037,
+          "fair_over": 2616,
+          "fair_under": -2616,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.034,
+          "fair_over": 2849,
+          "fair_under": -2849,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Chase Brown Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -115.0,
+            "model_raw": 0.2965,
+            "model_prob": 0.4042,
+            "market_prob": 0.5119,
+            "fair_odds": 147,
+            "edge": -0.1077,
+            "edge_at_price": -0.1307,
+            "ev": -0.2443,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 29.6% before shrink, this book's no-vig 51.2%.",
+              "Projection 0.39 (Poisson).",
+              "Hit rate over L5 1/5, L10 2/10, L20 7/20, all 7/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (30% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (30% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +152 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Chase Brown",
+      "player_id": "4362238",
+      "team": "Cincinnati Bengals",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 25.5,
@@ -1995,120 +2109,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +126 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Chase Brown",
-      "player_id": "4362238",
-      "team": "Cincinnati Bengals",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.39,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "2/10",
-        "L20": "7/20",
-        "all": "7/25"
-      },
-      "recent": [
-        0.0,
-        2.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.912,
-          "fair_over": -1043,
-          "fair_under": 1043,
-          "L10": "2/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.297,
-          "fair_over": 237,
-          "fair_under": -237,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.115,
-          "fair_over": 769,
-          "fair_under": -769,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.096,
-          "fair_over": 939,
-          "fair_under": -939,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.037,
-          "fair_over": 2616,
-          "fair_under": -2616,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.034,
-          "fair_over": 2849,
-          "fair_under": -2849,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Chase Brown Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": -115.0,
-            "model_raw": 0.2965,
-            "model_prob": 0.4042,
-            "market_prob": 0.5119,
-            "fair_odds": 147,
-            "edge": -0.1077,
-            "edge_at_price": -0.1307,
-            "ev": -0.2443,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 29.6% before shrink, this book's no-vig 51.2%.",
-              "Projection 0.39 (Poisson).",
-              "Hit rate over L5 1/5, L10 2/10, L20 7/20, all 7/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (30% vs 51%): usually means the model is missing info (lineups, motivation, SOS)",
-              "model far from market (30% vs 51%): usually means the model is missing info (lineups, motivation, SOS)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +152 or better.",
             "proven": false
           }
         }
@@ -2450,6 +2450,118 @@
       "player": "Samaje Perine",
       "player_id": "3116389",
       "team": "Cincinnati Bengals",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.28,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "3/10",
+        "L20": "6/20",
+        "all": "6/25"
+      },
+      "recent": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.93,
+          "fair_over": -1329,
+          "fair_under": 1329,
+          "L10": "3/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.273,
+          "fair_over": 266,
+          "fair_under": -266,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.065,
+          "fair_over": 1439,
+          "fair_under": -1439,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.05,
+          "fair_over": 1908,
+          "fair_under": -1908,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.031,
+          "fair_over": 3118,
+          "fair_under": -3118,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.031,
+          "fair_over": 3124,
+          "fair_under": -3124,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Samaje Perine Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 165.0,
+            "model_raw": 0.2734,
+            "model_prob": 0.3172,
+            "market_prob": 0.3611,
+            "fair_odds": 215,
+            "edge": -0.0439,
+            "edge_at_price": -0.0601,
+            "ev": -0.1593,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 27.3% before shrink, this book's no-vig 36.1%.",
+              "Projection 0.28 (Poisson).",
+              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 6/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +222 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Samaje Perine",
+      "player_id": "3116389",
+      "team": "Cincinnati Bengals",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 9.5,
@@ -2779,30 +2891,30 @@
       }
     },
     {
-      "player": "Samaje Perine",
-      "player_id": "3116389",
-      "team": "Cincinnati Bengals",
+      "player": "Travis Etienne Jr.",
+      "player_id": "4239996",
+      "team": "New Orleans Saints",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.28,
+      "projection": 0.54,
       "hit_rates": {
-        "L5": "2/5",
+        "L5": "0/5",
         "L10": "3/10",
-        "L20": "6/20",
-        "all": "6/25"
+        "L20": "8/20",
+        "all": "8/20"
       },
       "recent": [
         0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
         1.0,
         0.0,
         0.0,
         1.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        3.0
       ],
       "ladder": [
         {
@@ -2814,43 +2926,43 @@
         },
         {
           "line": 0.5,
-          "p_over": 0.273,
-          "fair_over": 266,
-          "fair_under": -266,
+          "p_over": 0.388,
+          "fair_over": 158,
+          "fair_under": -158,
           "L10": "3/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.065,
-          "fair_over": 1439,
-          "fair_under": -1439,
-          "L10": "0/10"
+          "p_over": 0.167,
+          "fair_over": 498,
+          "fair_under": -498,
+          "L10": "1/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.05,
-          "fair_over": 1908,
-          "fair_under": -1908,
-          "L10": "0/10"
+          "p_over": 0.125,
+          "fair_over": 700,
+          "fair_under": -700,
+          "L10": "1/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.031,
-          "fair_over": 3118,
-          "fair_under": -3118,
-          "L10": "0/10"
+          "p_over": 0.071,
+          "fair_over": 1312,
+          "fair_under": -1312,
+          "L10": "1/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.031,
-          "fair_over": 3124,
-          "fair_under": -3124,
-          "L10": "0/10"
+          "p_over": 0.07,
+          "fair_over": 1333,
+          "fair_under": -1333,
+          "L10": "1/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "current season only 5 games; added 15 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -2858,33 +2970,33 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Samaje Perine Anytime TD",
+            "selection": "Travis Etienne Jr. Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": 165.0,
-            "model_raw": 0.2734,
-            "model_prob": 0.3172,
-            "market_prob": 0.3611,
-            "fair_odds": 215,
-            "edge": -0.0439,
-            "edge_at_price": -0.0601,
-            "ev": -0.1593,
+            "odds": 170.0,
+            "model_raw": 0.3879,
+            "model_prob": 0.3711,
+            "market_prob": 0.3544,
+            "fair_odds": 169,
+            "edge": 0.0167,
+            "edge_at_price": 0.0008,
+            "ev": 0.0021,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 27.3% before shrink, this book's no-vig 36.1%.",
-              "Projection 0.28 (Poisson).",
-              "Hit rate over L5 2/5, L10 3/10, L20 6/20, all 6/25."
+              "Model over 0.5: 38.8% before shrink, this book's no-vig 35.4%.",
+              "Projection 0.54 (Poisson).",
+              "Hit rate over L5 0/5, L10 3/10, L20 8/20, all 8/20."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "current season only 5 games; added 15 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +222 or better.",
+            "next_step": "Monitor only; if anything, wait for +175 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -3217,118 +3329,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +117 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Travis Etienne Jr.",
-      "player_id": "4239996",
-      "team": "New Orleans Saints",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.54,
-      "hit_rates": {
-        "L5": "0/5",
-        "L10": "3/10",
-        "L20": "8/20",
-        "all": "8/20"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        3.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.93,
-          "fair_over": -1329,
-          "fair_under": 1329,
-          "L10": "3/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.388,
-          "fair_over": 158,
-          "fair_under": -158,
-          "L10": "3/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.167,
-          "fair_over": 498,
-          "fair_under": -498,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.125,
-          "fair_over": 700,
-          "fair_under": -700,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.071,
-          "fair_over": 1312,
-          "fair_under": -1312,
-          "L10": "1/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.07,
-          "fair_over": 1333,
-          "fair_under": -1333,
-          "L10": "1/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 5 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Travis Etienne Jr. Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 170.0,
-            "model_raw": 0.3879,
-            "model_prob": 0.3711,
-            "market_prob": 0.3544,
-            "fair_odds": 169,
-            "edge": 0.0167,
-            "edge_at_price": 0.0008,
-            "ev": 0.0021,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 38.8% before shrink, this book's no-vig 35.4%.",
-              "Projection 0.54 (Poisson).",
-              "Hit rate over L5 0/5, L10 3/10, L20 8/20, all 8/20."
-            ],
-            "flags": [
-              "current season only 5 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 5 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +175 or better and re-check injuries near start.",
             "proven": false
           }
         }

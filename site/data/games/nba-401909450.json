@@ -1,0 +1,332 @@
+{
+  "league": "nba",
+  "league_name": "NBA",
+  "event_id": "401909450",
+  "name": "Philadelphia 76ers at Atlanta Hawks",
+  "matchup": "PHI @ ATL",
+  "start": "2026-12-05T00:00Z",
+  "start_local": "Fri Dec 4 7:00 PM ET",
+  "date_et": "2026-12-04",
+  "weekday": "friday",
+  "state": "pre",
+  "status": "12/4 - 7:00 PM EST",
+  "home": {
+    "abbr": "ATL",
+    "name": "Atlanta Hawks",
+    "record": "12-6",
+    "id": "1"
+  },
+  "away": {
+    "abbr": "PHI",
+    "name": "Philadelphia 76ers",
+    "record": "16-4",
+    "id": "20"
+  },
+  "score": null,
+  "analyzed": true,
+  "odds_feed": "oddsapi",
+  "books": [
+    "draftkings"
+  ],
+  "event_urls": {
+    "draftkings": "https://sportsbook.draftkings.com/event/35102241"
+  },
+  "lines": {
+    "draftkings": {
+      "ml_home": 133.0,
+      "ml_away": -158.0,
+      "total": 227.5,
+      "under_odds": -110.0,
+      "over_odds": -110.0,
+      "spread_home": 3.5,
+      "spread_home_odds": -106.0,
+      "spread_away": -3.5,
+      "spread_away_odds": -114.0
+    }
+  },
+  "badge": null,
+  "model_summary": "Margin ATL +1.0 \u00b7 total 227.0",
+  "flags": [],
+  "notes": [
+    "ESPN matchup predictor: ATL 54.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin ATL +1.0, total 227.0; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
+  "injuries": {
+    "home": [
+      {
+        "name": "Jock Landale",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      },
+      {
+        "name": "Asa Newell",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "CJ McCollum",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Mouhamed Gueye",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Henri Veesaar",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ],
+    "away": [
+      {
+        "name": "Joel Embiid",
+        "status": "Out",
+        "pos": "C",
+        "key": true
+      },
+      {
+        "name": "LeBron James",
+        "status": "Out",
+        "pos": "F",
+        "key": true
+      },
+      {
+        "name": "Dean Wade",
+        "status": "Out",
+        "pos": "F",
+        "key": false
+      },
+      {
+        "name": "Jaylen Brown",
+        "status": "Out",
+        "pos": "G",
+        "key": false
+      },
+      {
+        "name": "Ariel Hukporti",
+        "status": "Out",
+        "pos": "C",
+        "key": false
+      }
+    ]
+  },
+  "form": {
+    "home": "L5 WWWWW",
+    "away": "L5 WWLWW"
+  },
+  "markets": [
+    {
+      "market": "ML",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "ATL ML",
+              "side": "home",
+              "line": null,
+              "odds": 133.0,
+              "model_raw": 0.5329,
+              "model_prob": 0.4287,
+              "market_prob": 0.412,
+              "fair_odds": 133,
+              "edge": 0.0166,
+              "edge_at_price": -0.0005,
+              "ev": -0.0012,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model ATL ML: 53.3%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin ATL +1.0, total 227.04.",
+                "Note: model far from market (53% vs 41%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +138 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "ML",
+              "selection": "PHI ML",
+              "side": "away",
+              "line": null,
+              "odds": -158.0,
+              "model_raw": 0.4671,
+              "model_prob": 0.5713,
+              "market_prob": 0.588,
+              "fair_odds": -133,
+              "edge": -0.0166,
+              "edge_at_price": -0.0411,
+              "ev": -0.0671,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PHI ML: 46.7%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 14% weight vs the market in log-odds for NBA moneylines; walk-forward High+Medium picks beat the closing line by +1.9% on average (n=145)",
+                "v2 margin ATL +1.0, total 227.04.",
+                "Note: model far from market (47% vs 59%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at -127 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Spread",
+      "sides": [
+        {
+          "side": "home",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "ATL +3.5",
+              "side": "home",
+              "line": 3.5,
+              "odds": -106.0,
+              "model_raw": 0.6415,
+              "model_prob": 0.4913,
+              "market_prob": 0.4913,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.0232,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model ATL +3.5: 64.1%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin ATL +1.0, total 227.04.",
+                "Note: model far from market (64% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +108 or better.",
+              "proven": false
+            }
+          }
+        },
+        {
+          "side": "away",
+          "offers": {
+            "draftkings": {
+              "market": "Spread",
+              "selection": "PHI -3.5",
+              "side": "away",
+              "line": -3.5,
+              "odds": -114.0,
+              "model_raw": 0.3585,
+              "model_prob": 0.5087,
+              "market_prob": 0.5087,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0451,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model PHI -3.5: 35.9%.",
+                "Backtest: the model showed no out-of-sample edge over the market for NBA spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "v2 margin ATL +1.0, total 227.04.",
+                "Note: model far from market (36% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +101 or better.",
+              "proven": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "market": "Total",
+      "sides": [
+        {
+          "side": "under",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Under 227.5",
+              "side": "under",
+              "line": 227.5,
+              "odds": -110.0,
+              "model_raw": 0.5096,
+              "model_prob": 0.5016,
+              "market_prob": 0.5,
+              "fair_odds": -101,
+              "edge": 0.0016,
+              "edge_at_price": -0.0222,
+              "ev": -0.0423,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Under 227.5: 51.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin ATL +1.0, total 227.04."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +103 or better.",
+              "proven": true
+            }
+          }
+        },
+        {
+          "side": "over",
+          "offers": {
+            "draftkings": {
+              "market": "Total",
+              "selection": "Over 227.5",
+              "side": "over",
+              "line": 227.5,
+              "odds": -110.0,
+              "model_raw": 0.4904,
+              "model_prob": 0.4984,
+              "market_prob": 0.5,
+              "fair_odds": 101,
+              "edge": -0.0016,
+              "edge_at_price": -0.0254,
+              "ev": -0.0486,
+              "tier": "Low",
+              "data_quality": "High",
+              "reasons": [
+                "Raw model Over 227.5: 49.0%.",
+                "Backtest (fit on 2024-25, 2025-26, 2026-27 to Nov 9): model gets 17% weight vs the market in log-odds for NBA totals; walk-forward blend beat the opening line's log loss over 1469 test games (dLL -0.0009 \u00b1 0.0006)",
+                "v2 margin ATL +1.0, total 227.04."
+              ],
+              "flags": [],
+              "caution": [],
+              "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
+              "next_step": "Pass. Only interesting at +105 or better.",
+              "proven": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "props": []
+}

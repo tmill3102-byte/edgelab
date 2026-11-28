@@ -40,8 +40,8 @@
       "spread_away": -3.5,
       "spread_away_odds": -105.0,
       "total": 44.5,
-      "over_odds": -115.0,
-      "under_odds": -105.0
+      "over_odds": -112.0,
+      "under_odds": -108.0
     }
   },
   "badge": null,
@@ -50,7 +50,7 @@
     "injury report not available for this league"
   ],
   "notes": [
-    "ESPN matchup predictor: WYO 41.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: WYO 41.2% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin WYO -3.5, total 49.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -223,22 +223,22 @@
               "selection": "Over 44.5",
               "side": "over",
               "line": 44.5,
-              "odds": -115.0,
-              "model_raw": 0.6321,
-              "model_prob": 0.5108,
-              "market_prob": 0.5108,
-              "fair_odds": -104,
+              "odds": -112.0,
+              "model_raw": 0.6309,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
               "edge": 0.0,
               "edge_at_price": -0.024,
-              "ev": -0.045,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model over 44.5: 63.2% vs market 51.1%.",
+                "Model over 44.5: 63.1% vs market 50.4%.",
                 "Projected total 49.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 49.5 -> 44.5.",
                 "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (63% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (63% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -247,7 +247,7 @@
                 "line move: market moved against the over (49.5 -> 44.5)"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at -100 or better.",
+              "next_step": "Pass. Only interesting at +102 or better.",
               "proven": false
             }
           }
@@ -260,22 +260,22 @@
               "selection": "Under 44.5",
               "side": "under",
               "line": 44.5,
-              "odds": -105.0,
-              "model_raw": 0.3679,
-              "model_prob": 0.4892,
-              "market_prob": 0.4892,
-              "fair_odds": 104,
+              "odds": -108.0,
+              "model_raw": 0.3691,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
               "edge": 0.0,
-              "edge_at_price": -0.023,
-              "ev": -0.045,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
               "tier": "Low",
               "data_quality": "Medium",
               "reasons": [
-                "Model under 44.5: 36.8% vs market 48.9%.",
+                "Model under 44.5: 36.9% vs market 49.6%.",
                 "Projected total 49.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 49.5 -> 44.5.",
                 "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
                 "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "Note: model far from market (37% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "Note: model far from market (37% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
                 "injury report not available for this league"
@@ -284,7 +284,7 @@
                 "line move: total already moved toward under (49.5 -> 44.5); value may be gone"
               ],
               "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
-              "next_step": "Pass. Only interesting at +109 or better.",
+              "next_step": "Pass. Only interesting at +106 or better.",
               "proven": false
             }
           }

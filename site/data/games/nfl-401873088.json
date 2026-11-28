@@ -147,7 +147,7 @@
   "model_summary": "Margin IND -3.9 \u00b7 total 47.2",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: IND 52.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: IND 52.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin IND -3.8, total 47.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -2360,6 +2360,118 @@
       "player": "Jonathan Taylor",
       "player_id": "4242335",
       "team": "Indianapolis Colts",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.78,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "4/10",
+        "L20": "9/20",
+        "all": "14/26"
+      },
+      "recent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        2.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.496,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.289,
+          "fair_over": 246,
+          "fair_under": -246,
+          "L10": "2/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.206,
+          "fair_over": 385,
+          "fair_under": -385,
+          "L10": "2/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.068,
+          "fair_over": 1367,
+          "fair_under": -1367,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.058,
+          "fair_over": 1632,
+          "fair_under": -1632,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 11 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Jonathan Taylor Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 100.0,
+            "model_raw": 0.4965,
+            "model_prob": 0.4875,
+            "market_prob": 0.4785,
+            "fair_odds": 105,
+            "edge": 0.009,
+            "edge_at_price": -0.0125,
+            "ev": -0.025,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 49.6% before shrink, this book's no-vig 47.9%.",
+              "Projection 0.78 (Poisson).",
+              "Hit rate over L5 1/5, L10 4/10, L20 9/20, all 14/26."
+            ],
+            "flags": [
+              "current season only 11 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +109 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Jonathan Taylor",
+      "player_id": "4242335",
+      "team": "Indianapolis Colts",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 13.5,
@@ -2683,118 +2795,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +110 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jonathan Taylor",
-      "player_id": "4242335",
-      "team": "Indianapolis Colts",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.78,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "4/10",
-        "L20": "9/20",
-        "all": "14/26"
-      },
-      "recent": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        2.0,
-        0.0,
-        2.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.942,
-          "fair_over": -1614,
-          "fair_under": 1614,
-          "L10": "4/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.496,
-          "fair_over": 101,
-          "fair_under": -101,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.289,
-          "fair_over": 246,
-          "fair_under": -246,
-          "L10": "2/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.206,
-          "fair_over": 385,
-          "fair_under": -385,
-          "L10": "2/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.068,
-          "fair_over": 1367,
-          "fair_under": -1367,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.058,
-          "fair_over": 1632,
-          "fair_under": -1632,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 11 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jonathan Taylor Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 100.0,
-            "model_raw": 0.4965,
-            "model_prob": 0.4875,
-            "market_prob": 0.4785,
-            "fair_odds": 105,
-            "edge": 0.009,
-            "edge_at_price": -0.0125,
-            "ev": -0.025,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 49.6% before shrink, this book's no-vig 47.9%.",
-              "Projection 0.78 (Poisson).",
-              "Hit rate over L5 1/5, L10 4/10, L20 9/20, all 14/26."
-            ],
-            "flags": [
-              "current season only 11 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 11 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +109 or better.",
             "proven": false
           }
         }

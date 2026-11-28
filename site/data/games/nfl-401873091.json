@@ -135,7 +135,7 @@
   "model_summary": "Margin SF +3.7 \u00b7 total 46.6",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: SF 68.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: SF 45.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin SF +3.7, total 46.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -1538,6 +1538,122 @@
       "player": "Christian McCaffrey",
       "player_id": "3117251",
       "team": "San Francisco 49ers",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 1.34,
+      "hit_rates": {
+        "L5": "5/5",
+        "L10": "9/10",
+        "L20": "16/20",
+        "all": "20/25"
+      },
+      "recent": [
+        1.0,
+        3.0,
+        2.0,
+        1.0,
+        2.0,
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.968,
+          "fair_over": -3043,
+          "fair_under": 3043,
+          "L10": "9/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.771,
+          "fair_over": -336,
+          "fair_under": 336,
+          "L10": "9/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.637,
+          "fair_over": -175,
+          "fair_under": 175,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.397,
+          "fair_over": 152,
+          "fair_under": -152,
+          "L10": "4/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.206,
+          "fair_over": 385,
+          "fair_under": -385,
+          "L10": "1/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.157,
+          "fair_over": 538,
+          "fair_under": -538,
+          "L10": "1/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Christian McCaffrey Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -140.0,
+            "model_raw": 0.7708,
+            "model_prob": 0.6645,
+            "market_prob": 0.5582,
+            "fair_odds": -198,
+            "edge": 0.1063,
+            "edge_at_price": 0.0812,
+            "ev": 0.1391,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 77.1% before shrink, this book's no-vig 55.8%.",
+              "Projection 1.34 (Poisson).",
+              "Hit rate over L5 5/5, L10 9/10, L20 16/20, all 20/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (77% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (77% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Monitor only; if anything, wait for -187 or better and re-check injuries near start.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Christian McCaffrey",
+      "player_id": "3117251",
+      "team": "San Francisco 49ers",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 29.5,
@@ -1869,78 +1985,78 @@
       }
     },
     {
-      "player": "Christian McCaffrey",
-      "player_id": "3117251",
+      "player": "Deebo Samuel Sr.",
+      "player_id": "3126486",
       "team": "San Francisco 49ers",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 1.34,
+      "projection": 0.48,
       "hit_rates": {
-        "L5": "5/5",
-        "L10": "9/10",
-        "L20": "16/20",
-        "all": "20/25"
+        "L5": "3/5",
+        "L10": "4/10",
+        "L20": "8/20",
+        "all": "9/22"
       },
       "recent": [
-        1.0,
-        3.0,
+        0.0,
         2.0,
-        1.0,
-        2.0,
-        1.0,
+        0.0,
         1.0,
         1.0,
-        2.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
         0.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.968,
-          "fair_over": -3043,
-          "fair_under": 3043,
-          "L10": "9/10"
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.771,
-          "fair_over": -336,
-          "fair_under": 336,
-          "L10": "9/10"
+          "p_over": 0.394,
+          "fair_over": 154,
+          "fair_under": -154,
+          "L10": "4/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.637,
-          "fair_over": -175,
-          "fair_under": 175,
-          "L10": "4/10"
+          "p_over": 0.156,
+          "fair_over": 540,
+          "fair_under": -540,
+          "L10": "1/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.397,
-          "fair_over": 152,
-          "fair_under": -152,
-          "L10": "4/10"
+          "p_over": 0.113,
+          "fair_over": 782,
+          "fair_under": -782,
+          "L10": "1/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.206,
-          "fair_over": 385,
-          "fair_under": -385,
-          "L10": "1/10"
+          "p_over": 0.041,
+          "fair_over": 2342,
+          "fair_under": -2342,
+          "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.157,
-          "fair_over": 538,
-          "fair_under": -538,
-          "L10": "1/10"
+          "p_over": 0.038,
+          "fair_over": 2556,
+          "fair_under": -2556,
+          "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "current season only 7 games; added 15 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -1948,37 +2064,37 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Christian McCaffrey Anytime TD",
+            "selection": "Deebo Samuel Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": -140.0,
-            "model_raw": 0.7708,
-            "model_prob": 0.6645,
-            "market_prob": 0.5582,
-            "fair_odds": -198,
-            "edge": 0.1063,
-            "edge_at_price": 0.0812,
-            "ev": 0.1391,
+            "odds": 360.0,
+            "model_raw": 0.3944,
+            "model_prob": 0.3012,
+            "market_prob": 0.208,
+            "fair_odds": 232,
+            "edge": 0.0932,
+            "edge_at_price": 0.0838,
+            "ev": 0.3855,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 77.1% before shrink, this book's no-vig 55.8%.",
-              "Projection 1.34 (Poisson).",
-              "Hit rate over L5 5/5, L10 9/10, L20 16/20, all 20/25."
+              "Model over 0.5: 39.4% before shrink, this book's no-vig 20.8%.",
+              "Projection 0.48 (Poisson).",
+              "Hit rate over L5 3/5, L10 4/10, L20 8/20, all 9/22."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "current season only 7 games; added 15 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (77% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
+              "model far from market (39% vs 21%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low",
-              "model far from market (77% vs 56%): usually means the model is missing info (lineups, motivation, SOS)",
+              "model far from market (39% vs 21%): usually means the model is missing info (lineups, motivation, SOS)",
               "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -187 or better and re-check injuries near start.",
+            "next_step": "Monitor only; if anything, wait for +239 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -2319,27 +2435,24 @@
       }
     },
     {
-      "player": "Deebo Samuel Sr.",
-      "player_id": "3126486",
-      "team": "San Francisco 49ers",
+      "player": "Jadarian Price",
+      "player_id": "4685512",
+      "team": "Seattle Seahawks",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.48,
+      "projection": 0.14,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "4/10",
-        "L20": "8/20",
-        "all": "9/22"
+        "L5": "1/5",
+        "L10": "1/7",
+        "L20": "1/7",
+        "all": "1/7"
       },
       "recent": [
-        0.0,
-        2.0,
-        0.0,
-        1.0,
         1.0,
         0.0,
-        1.0,
+        0.0,
+        0.0,
         0.0,
         0.0,
         0.0
@@ -2347,50 +2460,50 @@
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.942,
-          "fair_over": -1614,
-          "fair_under": 1614,
-          "L10": "4/10"
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/7"
         },
         {
           "line": 0.5,
-          "p_over": 0.394,
-          "fair_over": 154,
-          "fair_under": -154,
-          "L10": "4/10"
+          "p_over": 0.164,
+          "fair_over": 509,
+          "fair_under": -509,
+          "L10": "1/7"
         },
         {
           "line": 1.0,
-          "p_over": 0.156,
-          "fair_over": 540,
-          "fair_under": -540,
-          "L10": "1/10"
+          "p_over": 0.051,
+          "fair_over": 1875,
+          "fair_under": -1875,
+          "L10": "0/7"
         },
         {
           "line": 1.5,
-          "p_over": 0.113,
-          "fair_over": 782,
-          "fair_under": -782,
-          "L10": "1/10"
+          "p_over": 0.045,
+          "fair_over": 2126,
+          "fair_under": -2126,
+          "L10": "0/7"
         },
         {
           "line": 2.0,
-          "p_over": 0.041,
-          "fair_over": 2342,
-          "fair_under": -2342,
-          "L10": "0/10"
+          "p_over": 0.039,
+          "fair_over": 2453,
+          "fair_under": -2453,
+          "L10": "0/7"
         },
         {
           "line": 2.5,
-          "p_over": 0.038,
-          "fair_over": 2556,
-          "fair_under": -2556,
-          "L10": "0/10"
+          "p_over": 0.039,
+          "fair_over": 2453,
+          "fair_under": -2453,
+          "L10": "0/7"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 7 games; added 15 from prior season (role/team may differ)",
+        "thin sample (7 games)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -2398,37 +2511,33 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Deebo Samuel Anytime TD",
+            "selection": "Jadarian Price Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": 360.0,
-            "model_raw": 0.3944,
-            "model_prob": 0.3012,
-            "market_prob": 0.208,
-            "fair_odds": 232,
-            "edge": 0.0932,
-            "edge_at_price": 0.0838,
-            "ev": 0.3855,
+            "odds": 295.0,
+            "model_raw": 0.1643,
+            "model_prob": 0.2033,
+            "market_prob": 0.2423,
+            "fair_odds": 392,
+            "edge": -0.039,
+            "edge_at_price": -0.0499,
+            "ev": -0.197,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 39.4% before shrink, this book's no-vig 20.8%.",
-              "Projection 0.48 (Poisson).",
-              "Hit rate over L5 3/5, L10 4/10, L20 8/20, all 9/22."
+              "Model over 0.5: 16.4% before shrink, this book's no-vig 24.2%.",
+              "Projection 0.14 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
             ],
             "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)",
+              "thin sample (7 games)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)",
-              "model far from market (39% vs 21%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (39% vs 21%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
+              "thin data: thin sample (7 games)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for +239 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +402 or better.",
             "proven": false
           }
         }
@@ -2751,115 +2860,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +121 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Jadarian Price",
-      "player_id": "4685512",
-      "team": "Seattle Seahawks",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.14,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "1/7",
-        "L20": "1/7",
-        "all": "1/7"
-      },
-      "recent": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.883,
-          "fair_over": -757,
-          "fair_under": 757,
-          "L10": "1/7"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.164,
-          "fair_over": 509,
-          "fair_under": -509,
-          "L10": "1/7"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.051,
-          "fair_over": 1875,
-          "fair_under": -1875,
-          "L10": "0/7"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.045,
-          "fair_over": 2126,
-          "fair_under": -2126,
-          "L10": "0/7"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.039,
-          "fair_over": 2453,
-          "fair_under": -2453,
-          "L10": "0/7"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.039,
-          "fair_over": 2453,
-          "fair_under": -2453,
-          "L10": "0/7"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "thin sample (7 games)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Jadarian Price Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 295.0,
-            "model_raw": 0.1643,
-            "model_prob": 0.2033,
-            "market_prob": 0.2423,
-            "fair_odds": 392,
-            "edge": -0.039,
-            "edge_at_price": -0.0499,
-            "ev": -0.197,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 16.4% before shrink, this book's no-vig 24.2%.",
-              "Projection 0.14 (Poisson).",
-              "Hit rate over L5 1/5, L10 1/7, L20 1/7, all 1/7."
-            ],
-            "flags": [
-              "thin sample (7 games)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: thin sample (7 games)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +402 or better.",
             "proven": false
           }
         }

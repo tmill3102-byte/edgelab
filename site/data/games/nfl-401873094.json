@@ -147,7 +147,7 @@
   "model_summary": "Margin TB +5.3 \u00b7 total 47.5",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: TB 67.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: TB 67.4% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin TB +5.3, total 47.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -2334,6 +2334,118 @@
       "player": "Bucky Irving",
       "player_id": "4596448",
       "team": "Tampa Bay Buccaneers",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.8,
+      "hit_rates": {
+        "L5": "4/5",
+        "L10": "6/10",
+        "L20": "10/20",
+        "all": "10/20"
+      },
+      "recent": [
+        1.0,
+        2.0,
+        1.0,
+        2.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.956,
+          "fair_over": -2186,
+          "fair_under": 2186,
+          "L10": "6/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.562,
+          "fair_over": -128,
+          "fair_under": 128,
+          "L10": "6/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.35,
+          "fair_over": 186,
+          "fair_under": -186,
+          "L10": "3/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.241,
+          "fair_over": 315,
+          "fair_under": -315,
+          "L10": "3/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.075,
+          "fair_over": 1235,
+          "fair_under": -1235,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.06,
+          "fair_over": 1567,
+          "fair_under": -1567,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 10 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bucky Irving Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": -125.0,
+            "model_raw": 0.5621,
+            "model_prob": 0.5469,
+            "market_prob": 0.5316,
+            "fair_odds": -121,
+            "edge": 0.0153,
+            "edge_at_price": -0.0087,
+            "ev": -0.0157,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 56.2% before shrink, this book's no-vig 53.2%.",
+              "Projection 0.8 (Poisson).",
+              "Hit rate over L5 4/5, L10 6/10, L20 10/20, all 10/20."
+            ],
+            "flags": [
+              "current season only 10 games; added 10 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -116 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bucky Irving",
+      "player_id": "4596448",
+      "team": "Tampa Bay Buccaneers",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 18.5,
@@ -2657,78 +2769,78 @@
       }
     },
     {
-      "player": "Bucky Irving",
-      "player_id": "4596448",
-      "team": "Tampa Bay Buccaneers",
+      "player": "Chuba Hubbard",
+      "player_id": "4241416",
+      "team": "Carolina Panthers",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
-      "projection": 0.8,
+      "projection": 0.92,
       "hit_rates": {
-        "L5": "4/5",
-        "L10": "6/10",
-        "L20": "10/20",
-        "all": "10/20"
+        "L5": "3/5",
+        "L10": "7/10",
+        "L20": "9/20",
+        "all": "11/25"
       },
       "recent": [
+        2.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
         1.0,
         2.0,
+        0.0,
         1.0,
-        2.0,
-        0.0,
-        2.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
+        2.0
       ],
       "ladder": [
         {
           "line": 0.0,
-          "p_over": 0.956,
-          "fair_over": -2186,
-          "fair_under": 2186,
-          "L10": "6/10"
+          "p_over": 0.961,
+          "fair_over": -2471,
+          "fair_under": 2471,
+          "L10": "7/10"
         },
         {
           "line": 0.5,
-          "p_over": 0.562,
-          "fair_over": -128,
-          "fair_under": 128,
-          "L10": "6/10"
+          "p_over": 0.623,
+          "fair_over": -165,
+          "fair_under": 165,
+          "L10": "7/10"
         },
         {
           "line": 1.0,
-          "p_over": 0.35,
-          "fair_over": 186,
-          "fair_under": -186,
-          "L10": "3/10"
+          "p_over": 0.434,
+          "fair_over": 130,
+          "fair_under": -130,
+          "L10": "4/10"
         },
         {
           "line": 1.5,
-          "p_over": 0.241,
-          "fair_over": 315,
-          "fair_under": -315,
-          "L10": "3/10"
+          "p_over": 0.298,
+          "fair_over": 236,
+          "fair_under": -236,
+          "L10": "4/10"
         },
         {
           "line": 2.0,
-          "p_over": 0.075,
-          "fair_over": 1235,
-          "fair_under": -1235,
+          "p_over": 0.095,
+          "fair_over": 953,
+          "fair_under": -953,
           "L10": "0/10"
         },
         {
           "line": 2.5,
-          "p_over": 0.06,
-          "fair_over": 1567,
-          "fair_under": -1567,
+          "p_over": 0.072,
+          "fair_over": 1294,
+          "fair_under": -1294,
           "L10": "0/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 10 from prior season (role/team may differ)",
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
         "only one side's price given; market no-vig assumes a standard ~4.5% hold"
       ],
       "status": null,
@@ -2736,33 +2848,37 @@
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bucky Irving Anytime TD",
+            "selection": "Chuba Hubbard Anytime TD",
             "side": "over",
             "line": 0.5,
-            "odds": -125.0,
-            "model_raw": 0.5621,
-            "model_prob": 0.5469,
-            "market_prob": 0.5316,
-            "fair_odds": -121,
-            "edge": 0.0153,
-            "edge_at_price": -0.0087,
-            "ev": -0.0157,
+            "odds": 100.0,
+            "model_raw": 0.6233,
+            "model_prob": 0.5509,
+            "market_prob": 0.4785,
+            "fair_odds": -123,
+            "edge": 0.0724,
+            "edge_at_price": 0.0509,
+            "ev": 0.1018,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 0.5: 56.2% before shrink, this book's no-vig 53.2%.",
-              "Projection 0.8 (Poisson).",
-              "Hit rate over L5 4/5, L10 6/10, L20 10/20, all 10/20."
+              "Model over 0.5: 62.3% before shrink, this book's no-vig 47.9%.",
+              "Projection 0.92 (Poisson).",
+              "Hit rate over L5 3/5, L10 7/10, L20 9/20, all 11/25."
             ],
             "flags": [
-              "current season only 10 games; added 10 from prior season (role/team may differ)",
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
               "only one side's price given; market no-vig assumes a standard ~4.5% hold"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 10 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "model far from market (62% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low",
+              "model far from market (62% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -116 or better.",
+            "next_step": "Monitor only; if anything, wait for -117 or better and re-check injuries near start.",
             "proven": false
           }
         }
@@ -3095,122 +3211,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +133 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Chuba Hubbard",
-      "player_id": "4241416",
-      "team": "Carolina Panthers",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.92,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "7/10",
-        "L20": "9/20",
-        "all": "11/25"
-      },
-      "recent": [
-        2.0,
-        2.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        2.0,
-        0.0,
-        1.0,
-        2.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.961,
-          "fair_over": -2471,
-          "fair_under": 2471,
-          "L10": "7/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.623,
-          "fair_over": -165,
-          "fair_under": 165,
-          "L10": "7/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.434,
-          "fair_over": 130,
-          "fair_under": -130,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.298,
-          "fair_over": 236,
-          "fair_under": -236,
-          "L10": "4/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.095,
-          "fair_over": 953,
-          "fair_under": -953,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.072,
-          "fair_over": 1294,
-          "fair_under": -1294,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Chuba Hubbard Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 100.0,
-            "model_raw": 0.6233,
-            "model_prob": 0.5509,
-            "market_prob": 0.4785,
-            "fair_odds": -123,
-            "edge": 0.0724,
-            "edge_at_price": 0.0509,
-            "ev": 0.1018,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 62.3% before shrink, this book's no-vig 47.9%.",
-              "Projection 0.92 (Poisson).",
-              "Hit rate over L5 3/5, L10 7/10, L20 9/20, all 11/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "model far from market (62% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low",
-              "model far from market (62% vs 48%): usually means the model is missing info (lineups, motivation, SOS)",
-              "downgraded Medium -> Low"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -117 or better and re-check injuries near start.",
             "proven": false
           }
         }

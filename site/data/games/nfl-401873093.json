@@ -135,7 +135,7 @@
   "model_summary": "Margin LAC -5.1 \u00b7 total 42.2",
   "flags": [],
   "notes": [
-    "ESPN matchup predictor: LAC 59.8% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "ESPN matchup predictor: LAC 56.5% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
     "v2 ratings: margin LAC -5.1, total 42.2; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
@@ -1524,6 +1524,118 @@
       "player": "Rhamondre Stevenson",
       "player_id": "4569173",
       "team": "New England Patriots",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.46,
+      "hit_rates": {
+        "L5": "2/5",
+        "L10": "4/10",
+        "L20": "8/20",
+        "all": "10/25"
+      },
+      "recent": [
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.942,
+          "fair_over": -1614,
+          "fair_under": 1614,
+          "L10": "4/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.387,
+          "fair_over": 158,
+          "fair_under": -158,
+          "L10": "4/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.117,
+          "fair_over": 757,
+          "fair_under": -757,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.081,
+          "fair_over": 1137,
+          "fair_under": -1137,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.037,
+          "fair_over": 2574,
+          "fair_under": -2574,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.037,
+          "fair_over": 2614,
+          "fair_under": -2614,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Rhamondre Stevenson Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 125.0,
+            "model_raw": 0.3871,
+            "model_prob": 0.4062,
+            "market_prob": 0.4253,
+            "fair_odds": 146,
+            "edge": -0.0191,
+            "edge_at_price": -0.0382,
+            "ev": -0.086,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 38.7% before shrink, this book's no-vig 42.5%.",
+              "Projection 0.46 (Poisson).",
+              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +151 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Rhamondre Stevenson",
+      "player_id": "4569173",
+      "team": "New England Patriots",
       "stat": "rec_yds",
       "stat_label": "Rec yds",
       "line": 14.5,
@@ -1855,118 +1967,6 @@
       }
     },
     {
-      "player": "Rhamondre Stevenson",
-      "player_id": "4569173",
-      "team": "New England Patriots",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.46,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "4/10",
-        "L20": "8/20",
-        "all": "10/25"
-      },
-      "recent": [
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.942,
-          "fair_over": -1614,
-          "fair_under": 1614,
-          "L10": "4/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.387,
-          "fair_over": 158,
-          "fair_under": -158,
-          "L10": "4/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.117,
-          "fair_over": 757,
-          "fair_under": -757,
-          "L10": "0/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.081,
-          "fair_over": 1137,
-          "fair_under": -1137,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.037,
-          "fair_over": 2574,
-          "fair_under": -2574,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.037,
-          "fair_over": 2614,
-          "fair_under": -2614,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Rhamondre Stevenson Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 125.0,
-            "model_raw": 0.3871,
-            "model_prob": 0.4062,
-            "market_prob": 0.4253,
-            "fair_odds": 146,
-            "edge": -0.0191,
-            "edge_at_price": -0.0382,
-            "ev": -0.086,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 38.7% before shrink, this book's no-vig 42.5%.",
-              "Projection 0.46 (Poisson).",
-              "Hit rate over L5 2/5, L10 4/10, L20 8/20, all 10/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +151 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
       "player": "Tommy DeVito",
       "player_id": "4240391",
       "team": "New England Patriots",
@@ -2292,6 +2292,118 @@
       "player": "Corey Kiner",
       "player_id": "4431431",
       "team": "New England Patriots",
+      "stat": "anytime_td",
+      "stat_label": "Anytime TD",
+      "line": 0.5,
+      "projection": 0.09,
+      "hit_rates": {
+        "L5": "1/5",
+        "L10": "1/10",
+        "L20": "1/14",
+        "all": "1/14"
+      },
+      "recent": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ladder": [
+        {
+          "line": 0.0,
+          "p_over": 0.883,
+          "fair_over": -757,
+          "fair_under": 757,
+          "L10": "1/10"
+        },
+        {
+          "line": 0.5,
+          "p_over": 0.113,
+          "fair_over": 782,
+          "fair_under": -782,
+          "L10": "1/10"
+        },
+        {
+          "line": 1.0,
+          "p_over": 0.034,
+          "fair_over": 2804,
+          "fair_under": -2804,
+          "L10": "0/10"
+        },
+        {
+          "line": 1.5,
+          "p_over": 0.032,
+          "fair_over": 3068,
+          "fair_under": -3068,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.0,
+          "p_over": 0.029,
+          "fair_over": 3320,
+          "fair_under": -3320,
+          "L10": "0/10"
+        },
+        {
+          "line": 2.5,
+          "p_over": 0.029,
+          "fair_over": 3320,
+          "fair_under": -3320,
+          "L10": "0/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 4 from prior season (role/team may differ)",
+        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Corey Kiner Anytime TD",
+            "side": "over",
+            "line": 0.5,
+            "odds": 350.0,
+            "model_raw": 0.1134,
+            "model_prob": 0.1631,
+            "market_prob": 0.2127,
+            "fair_odds": 513,
+            "edge": -0.0496,
+            "edge_at_price": -0.0592,
+            "ev": -0.2663,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 0.5: 11.3% before shrink, this book's no-vig 21.3%.",
+              "Projection 0.09 (Poisson).",
+              "Hit rate over L5 1/5, L10 1/10, L20 1/14, all 1/14."
+            ],
+            "flags": [
+              "current season only 10 games; added 4 from prior season (role/team may differ)",
+              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 4 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +525 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Corey Kiner",
+      "player_id": "4431431",
+      "team": "New England Patriots",
       "stat": "rush_yds",
       "stat_label": "Rush yds",
       "line": 31.5,
@@ -2448,118 +2560,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Monitor only; if anything, wait for -118 or better and re-check injuries near start.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Corey Kiner",
-      "player_id": "4431431",
-      "team": "New England Patriots",
-      "stat": "anytime_td",
-      "stat_label": "Anytime TD",
-      "line": 0.5,
-      "projection": 0.09,
-      "hit_rates": {
-        "L5": "1/5",
-        "L10": "1/10",
-        "L20": "1/14",
-        "all": "1/14"
-      },
-      "recent": [
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "ladder": [
-        {
-          "line": 0.0,
-          "p_over": 0.883,
-          "fair_over": -757,
-          "fair_under": 757,
-          "L10": "1/10"
-        },
-        {
-          "line": 0.5,
-          "p_over": 0.113,
-          "fair_over": 782,
-          "fair_under": -782,
-          "L10": "1/10"
-        },
-        {
-          "line": 1.0,
-          "p_over": 0.034,
-          "fair_over": 2804,
-          "fair_under": -2804,
-          "L10": "0/10"
-        },
-        {
-          "line": 1.5,
-          "p_over": 0.032,
-          "fair_over": 3068,
-          "fair_under": -3068,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.0,
-          "p_over": 0.029,
-          "fair_over": 3320,
-          "fair_under": -3320,
-          "L10": "0/10"
-        },
-        {
-          "line": 2.5,
-          "p_over": 0.029,
-          "fair_over": 3320,
-          "fair_under": -3320,
-          "L10": "0/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 4 from prior season (role/team may differ)",
-        "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Corey Kiner Anytime TD",
-            "side": "over",
-            "line": 0.5,
-            "odds": 350.0,
-            "model_raw": 0.1134,
-            "model_prob": 0.1631,
-            "market_prob": 0.2127,
-            "fair_odds": 513,
-            "edge": -0.0496,
-            "edge_at_price": -0.0592,
-            "ev": -0.2663,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 0.5: 11.3% before shrink, this book's no-vig 21.3%.",
-              "Projection 0.09 (Poisson).",
-              "Hit rate over L5 1/5, L10 1/10, L20 1/14, all 1/14."
-            ],
-            "flags": [
-              "current season only 10 games; added 4 from prior season (role/team may differ)",
-              "only one side's price given; market no-vig assumes a standard ~4.5% hold"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 4 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +525 or better.",
             "proven": false
           }
         }
