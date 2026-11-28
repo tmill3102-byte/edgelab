@@ -44,8 +44,8 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -157.0,
-      "ml_away": 132.0,
+      "ml_home": -159.0,
+      "ml_away": 134.0,
       "spread_home": -3.0,
       "spread_home_odds": -107.0,
       "spread_away": 3.0,
@@ -66,8 +66,8 @@
       "under_odds": -110.0
     },
     "fanduel": {
-      "ml_home": -162.0,
-      "ml_away": 136.0,
+      "ml_home": -158.0,
+      "ml_away": 134.0,
       "spread_home": -3.0,
       "spread_home_odds": -104.0,
       "spread_away": 3.0,
@@ -91,9 +91,9 @@
       "ml_home": -161.0,
       "ml_away": 141.0,
       "spread_home": -3.0,
-      "spread_home_odds": -103.0,
+      "spread_home_odds": -108.0,
       "spread_away": 3.0,
-      "spread_away_odds": -107.0,
+      "spread_away_odds": -102.0,
       "total": 43.5,
       "over_odds": -105.0,
       "under_odds": -109.0
@@ -102,9 +102,9 @@
       "ml_home": -161.0,
       "ml_away": 141.0,
       "spread_home": -3.0,
-      "spread_home_odds": -108.0,
+      "spread_home_odds": -113.0,
       "spread_away": 3.0,
-      "spread_away_odds": -112.0,
+      "spread_away_odds": -107.0,
       "total": 43.5,
       "over_odds": -108.0,
       "under_odds": -112.0
@@ -121,8 +121,8 @@
       "under_odds": -108.0
     },
     "bovada": {
-      "ml_home": -165.0,
-      "ml_away": 140.0,
+      "ml_home": -168.0,
+      "ml_away": 143.0,
       "spread_home": -3.0,
       "spread_home_odds": -108.0,
       "spread_away": 3.0,
@@ -144,30 +144,18 @@
     }
   },
   "badge": null,
-  "model_summary": "Margin TB +5.3 \u00b7 total 47.6",
+  "model_summary": "Margin TB +5.3 \u00b7 total 47.5",
   "flags": [],
   "notes": [
     "ESPN matchup predictor: TB 67.1% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
-    "v2 ratings: margin TB +5.3, total 47.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+    "v2 ratings: margin TB +5.3, total 47.5; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
   ],
   "injuries": {
     "home": [
       {
-        "name": "Jalen McMillan",
-        "status": "Injured Reserve",
-        "pos": "WR",
-        "key": false
-      },
-      {
-        "name": "Tez Johnson",
+        "name": "Benjamin Morrison",
         "status": "Questionable",
-        "pos": "WR",
-        "key": false
-      },
-      {
-        "name": "SirVocea Dennis",
-        "status": "Questionable",
-        "pos": "LB",
+        "pos": "CB",
         "key": false
       },
       {
@@ -177,13 +165,37 @@
         "key": false
       },
       {
-        "name": "Josiah Trotter",
+        "name": "Tez Johnson",
+        "status": "Questionable",
+        "pos": "WR",
+        "key": false
+      },
+      {
+        "name": "Jalen McMillan",
+        "status": "Injured Reserve",
+        "pos": "WR",
+        "key": false
+      },
+      {
+        "name": "SirVocea Dennis",
         "status": "Questionable",
         "pos": "LB",
-        "key": true
+        "key": false
       }
     ],
     "away": [
+      {
+        "name": "Feleipe Franks",
+        "status": "Questionable",
+        "pos": "TE",
+        "key": false
+      },
+      {
+        "name": "Bobby Okereke",
+        "status": "Questionable",
+        "pos": "LB",
+        "key": false
+      },
       {
         "name": "Mitchell Evans",
         "status": "Questionable",
@@ -201,18 +213,6 @@
         "status": "Injured Reserve",
         "pos": "RB",
         "key": false
-      },
-      {
-        "name": "Darren Waller",
-        "status": "Questionable",
-        "pos": "TE",
-        "key": false
-      },
-      {
-        "name": "Tetairoa McMillan",
-        "status": "Questionable",
-        "pos": "WR",
-        "key": true
       }
     ]
   },
@@ -232,25 +232,25 @@
               "selection": "TB ML",
               "side": "home",
               "line": null,
-              "odds": -157.0,
+              "odds": -159.0,
               "model_raw": 0.6521,
-              "model_prob": 0.5863,
-              "market_prob": 0.5863,
-              "fair_odds": -142,
+              "model_prob": 0.5896,
+              "market_prob": 0.5896,
+              "fair_odds": -144,
               "edge": 0.0,
-              "edge_at_price": -0.0246,
-              "ev": -0.0402,
+              "edge_at_price": -0.0243,
+              "ev": -0.0396,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -135 or better.",
+              "next_step": "Pass. Only interesting at -137 or better.",
               "proven": false
             },
             "betus": {
@@ -271,7 +271,7 @@
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -284,25 +284,25 @@
               "selection": "TB ML",
               "side": "home",
               "line": null,
-              "odds": -162.0,
+              "odds": -158.0,
               "model_raw": 0.6521,
-              "model_prob": 0.5934,
-              "market_prob": 0.5934,
-              "fair_odds": -146,
+              "model_prob": 0.589,
+              "market_prob": 0.589,
+              "fair_odds": -143,
               "edge": 0.0,
-              "edge_at_price": -0.025,
-              "ev": -0.0404,
+              "edge_at_price": -0.0234,
+              "ev": -0.0382,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -139 or better.",
+              "next_step": "Pass. Only interesting at -137 or better.",
               "proven": false
             },
             "betrivers": {
@@ -323,7 +323,7 @@
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -349,7 +349,7 @@
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -375,7 +375,7 @@
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -401,7 +401,7 @@
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -414,25 +414,25 @@
               "selection": "TB ML",
               "side": "home",
               "line": null,
-              "odds": -165.0,
+              "odds": -168.0,
               "model_raw": 0.6521,
-              "model_prob": 0.5991,
-              "market_prob": 0.5991,
-              "fair_odds": -149,
+              "model_prob": 0.6037,
+              "market_prob": 0.6037,
+              "fair_odds": -152,
               "edge": 0.0,
-              "edge_at_price": -0.0235,
-              "ev": -0.0378,
+              "edge_at_price": -0.0232,
+              "ev": -0.037,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at -142 or better.",
+              "next_step": "Pass. Only interesting at -145 or better.",
               "proven": false
             },
             "mybookieag": {
@@ -453,7 +453,7 @@
               "reasons": [
                 "Raw model TB ML: 65.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -471,25 +471,25 @@
               "selection": "CAR ML",
               "side": "away",
               "line": null,
-              "odds": 132.0,
+              "odds": 134.0,
               "model_raw": 0.3479,
-              "model_prob": 0.4137,
-              "market_prob": 0.4137,
-              "fair_odds": 142,
+              "model_prob": 0.4104,
+              "market_prob": 0.4104,
+              "fair_odds": 144,
               "edge": 0.0,
-              "edge_at_price": -0.0173,
-              "ev": -0.0402,
+              "edge_at_price": -0.0169,
+              "ev": -0.0396,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +147 or better.",
+              "next_step": "Pass. Only interesting at +149 or better.",
               "proven": false
             },
             "betus": {
@@ -510,7 +510,7 @@
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -523,25 +523,25 @@
               "selection": "CAR ML",
               "side": "away",
               "line": null,
-              "odds": 136.0,
+              "odds": 134.0,
               "model_raw": 0.3479,
-              "model_prob": 0.4066,
-              "market_prob": 0.4066,
-              "fair_odds": 146,
+              "model_prob": 0.411,
+              "market_prob": 0.411,
+              "fair_odds": 143,
               "edge": 0.0,
-              "edge_at_price": -0.0171,
-              "ev": -0.0404,
+              "edge_at_price": -0.0163,
+              "ev": -0.0382,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +151 or better.",
+              "next_step": "Pass. Only interesting at +148 or better.",
               "proven": false
             },
             "betrivers": {
@@ -562,7 +562,7 @@
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -588,7 +588,7 @@
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -614,7 +614,7 @@
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -640,7 +640,7 @@
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -653,25 +653,25 @@
               "selection": "CAR ML",
               "side": "away",
               "line": null,
-              "odds": 140.0,
+              "odds": 143.0,
               "model_raw": 0.3479,
-              "model_prob": 0.4009,
-              "market_prob": 0.4009,
-              "fair_odds": 149,
+              "model_prob": 0.3963,
+              "market_prob": 0.3963,
+              "fair_odds": 152,
               "edge": 0.0,
-              "edge_at_price": -0.0158,
-              "ev": -0.0378,
+              "edge_at_price": -0.0152,
+              "ev": -0.037,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +154 or better.",
+              "next_step": "Pass. Only interesting at +157 or better.",
               "proven": false
             },
             "mybookieag": {
@@ -692,7 +692,7 @@
               "reasons": [
                 "Raw model CAR ML: 34.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -728,7 +728,7 @@
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -754,7 +754,7 @@
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -780,7 +780,7 @@
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -806,7 +806,7 @@
               "reasons": [
                 "Raw model TB -2.5: 58.2%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -819,25 +819,25 @@
               "selection": "TB -3",
               "side": "home",
               "line": -3.0,
-              "odds": -103.0,
+              "odds": -108.0,
               "model_raw": 0.567,
-              "model_prob": 0.4954,
-              "market_prob": 0.4954,
-              "fair_odds": 102,
+              "model_prob": 0.507,
+              "market_prob": 0.507,
+              "fair_odds": -103,
               "edge": 0.0,
-              "edge_at_price": -0.012,
-              "ev": -0.0237,
+              "edge_at_price": -0.0123,
+              "ev": -0.0236,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +106 or better.",
+              "next_step": "Pass. Only interesting at +101 or better.",
               "proven": false
             },
             "betonlineag": {
@@ -845,25 +845,25 @@
               "selection": "TB -3",
               "side": "home",
               "line": -3.0,
-              "odds": -108.0,
+              "odds": -113.0,
               "model_raw": 0.567,
-              "model_prob": 0.4957,
-              "market_prob": 0.4957,
-              "fair_odds": 102,
+              "model_prob": 0.5065,
+              "market_prob": 0.5065,
+              "fair_odds": -103,
               "edge": 0.0,
-              "edge_at_price": -0.0236,
-              "ev": -0.0454,
+              "edge_at_price": -0.024,
+              "ev": -0.0453,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +106 or better.",
+              "next_step": "Pass. Only interesting at +101 or better.",
               "proven": false
             },
             "betmgm": {
@@ -884,7 +884,7 @@
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -910,7 +910,7 @@
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -936,7 +936,7 @@
               "reasons": [
                 "Raw model TB -3: 56.7%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -967,7 +967,7 @@
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -993,7 +993,7 @@
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1019,7 +1019,7 @@
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1045,7 +1045,7 @@
               "reasons": [
                 "Raw model CAR +2.5: 41.8%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1058,25 +1058,25 @@
               "selection": "CAR +3",
               "side": "away",
               "line": 3.0,
-              "odds": -107.0,
+              "odds": -102.0,
               "model_raw": 0.433,
-              "model_prob": 0.5046,
-              "market_prob": 0.5046,
-              "fair_odds": -102,
+              "model_prob": 0.493,
+              "market_prob": 0.493,
+              "fair_odds": 103,
               "edge": 0.0,
-              "edge_at_price": -0.0123,
-              "ev": -0.0237,
+              "edge_at_price": -0.0119,
+              "ev": -0.0236,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +102 or better.",
+              "next_step": "Pass. Only interesting at +107 or better.",
               "proven": false
             },
             "betonlineag": {
@@ -1084,25 +1084,25 @@
               "selection": "CAR +3",
               "side": "away",
               "line": 3.0,
-              "odds": -112.0,
+              "odds": -107.0,
               "model_raw": 0.433,
-              "model_prob": 0.5043,
-              "market_prob": 0.5043,
-              "fair_odds": -102,
+              "model_prob": 0.4935,
+              "market_prob": 0.4935,
+              "fair_odds": 103,
               "edge": 0.0,
-              "edge_at_price": -0.024,
-              "ev": -0.0454,
+              "edge_at_price": -0.0234,
+              "ev": -0.0453,
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
               "case_against": "Where the backtest did not earn the model any weight, the final number is the market's.",
-              "next_step": "Pass. Only interesting at +102 or better.",
+              "next_step": "Pass. Only interesting at +107 or better.",
               "proven": false
             },
             "betmgm": {
@@ -1123,7 +1123,7 @@
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1149,7 +1149,7 @@
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1175,7 +1175,7 @@
               "reasons": [
                 "Raw model CAR +3: 43.3%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1199,7 +1199,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -110.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.5011,
               "market_prob": 0.5011,
               "fair_odds": -100,
@@ -1209,9 +1209,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1225,7 +1225,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -110.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -1235,9 +1235,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1251,7 +1251,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -115.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.5108,
               "market_prob": 0.5108,
               "fair_odds": -104,
@@ -1261,9 +1261,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1277,7 +1277,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -113.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.5054,
               "market_prob": 0.5054,
               "fair_odds": -102,
@@ -1287,9 +1287,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1303,7 +1303,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -105.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.4955,
               "market_prob": 0.4955,
               "fair_odds": 102,
@@ -1313,10 +1313,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62.",
-                "Note: model far from market (62% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1330,7 +1329,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -108.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.4957,
               "market_prob": 0.4957,
               "fair_odds": 102,
@@ -1340,10 +1339,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62.",
-                "Note: model far from market (62% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1357,7 +1355,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -110.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.5022,
               "market_prob": 0.5022,
               "fair_odds": -101,
@@ -1367,9 +1365,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1383,7 +1381,7 @@
               "side": "over",
               "line": 44.0,
               "odds": -108.0,
-              "model_raw": 0.6034,
+              "model_raw": 0.6003,
               "model_prob": 0.4957,
               "market_prob": 0.4957,
               "fair_odds": 102,
@@ -1393,9 +1391,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 44: 60.3%.",
+                "Raw model Over 44: 60.0%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1409,7 +1407,7 @@
               "side": "over",
               "line": 43.5,
               "odds": -110.0,
-              "model_raw": 0.6173,
+              "model_raw": 0.6142,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -1419,9 +1417,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Over 43.5: 61.7%.",
+                "Raw model Over 43.5: 61.4%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1440,7 +1438,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -109.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.4989,
               "market_prob": 0.4989,
               "fair_odds": 100,
@@ -1450,9 +1448,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1466,7 +1464,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -110.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -1476,9 +1474,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1492,7 +1490,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -105.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.4892,
               "market_prob": 0.4892,
               "fair_odds": 104,
@@ -1502,9 +1500,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1518,7 +1516,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -108.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.4946,
               "market_prob": 0.4946,
               "fair_odds": 102,
@@ -1528,9 +1526,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1544,7 +1542,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -109.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.5045,
               "market_prob": 0.5045,
               "fair_odds": -102,
@@ -1554,10 +1552,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62.",
-                "Note: model far from market (38% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1571,7 +1568,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -112.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.5043,
               "market_prob": 0.5043,
               "fair_odds": -102,
@@ -1581,10 +1578,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62.",
-                "Note: model far from market (38% vs 50%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1598,7 +1594,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -108.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.4978,
               "market_prob": 0.4978,
               "fair_odds": 101,
@@ -1608,9 +1604,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1624,7 +1620,7 @@
               "side": "under",
               "line": 44.0,
               "odds": -112.0,
-              "model_raw": 0.3966,
+              "model_raw": 0.3997,
               "model_prob": 0.5043,
               "market_prob": 0.5043,
               "fair_odds": -102,
@@ -1634,9 +1630,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 44: 39.7%.",
+                "Raw model Under 44: 40.0%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1650,7 +1646,7 @@
               "side": "under",
               "line": 43.5,
               "odds": -110.0,
-              "model_raw": 0.3827,
+              "model_raw": 0.3858,
               "model_prob": 0.5,
               "market_prob": 0.5,
               "fair_odds": 100,
@@ -1660,9 +1656,9 @@
               "tier": "Low",
               "data_quality": "High",
               "reasons": [
-                "Raw model Under 43.5: 38.3%.",
+                "Raw model Under 43.5: 38.6%.",
                 "Backtest: the model showed no out-of-sample edge over the market for NFL totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
-                "v2 margin TB +5.3, total 47.62."
+                "v2 margin TB +5.3, total 47.51."
               ],
               "flags": [],
               "caution": [],
@@ -1676,169 +1672,6 @@
     }
   ],
   "props": [
-    {
-      "player": "Baker Mayfield",
-      "player_id": "3052587",
-      "team": "Tampa Bay Buccaneers",
-      "stat": "pass_yds",
-      "stat_label": "Pass yds",
-      "line": 201.5,
-      "projection": 188.54,
-      "hit_rates": {
-        "L5": "2/5",
-        "L10": "5/10",
-        "L20": "10/20",
-        "all": "12/22"
-      },
-      "recent": [
-        187.0,
-        243.0,
-        0.0,
-        64.0,
-        217.0,
-        182.0,
-        216.0,
-        203.0,
-        346.0,
-        145.0
-      ],
-      "ladder": [
-        {
-          "line": 193.5,
-          "p_over": 0.486,
-          "fair_over": 106,
-          "fair_under": -106,
-          "L10": "5/10"
-        },
-        {
-          "line": 195.5,
-          "p_over": 0.48,
-          "fair_over": 108,
-          "fair_under": -108,
-          "L10": "5/10"
-        },
-        {
-          "line": 197.5,
-          "p_over": 0.474,
-          "fair_over": 111,
-          "fair_under": -111,
-          "L10": "5/10"
-        },
-        {
-          "line": 199.5,
-          "p_over": 0.469,
-          "fair_over": 113,
-          "fair_under": -113,
-          "L10": "5/10"
-        },
-        {
-          "line": 201.5,
-          "p_over": 0.463,
-          "fair_over": 116,
-          "fair_under": -116,
-          "L10": "5/10"
-        },
-        {
-          "line": 203.5,
-          "p_over": 0.428,
-          "fair_over": 134,
-          "fair_under": -134,
-          "L10": "4/10"
-        },
-        {
-          "line": 205.5,
-          "p_over": 0.423,
-          "fair_over": 137,
-          "fair_under": -137,
-          "L10": "4/10"
-        },
-        {
-          "line": 207.5,
-          "p_over": 0.417,
-          "fair_over": 140,
-          "fair_under": -140,
-          "L10": "4/10"
-        },
-        {
-          "line": 209.5,
-          "p_over": 0.411,
-          "fair_over": 143,
-          "fair_under": -143,
-          "L10": "4/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 7 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Baker Mayfield Over 201.5 pass_yds",
-            "side": "over",
-            "line": 201.5,
-            "odds": -111.0,
-            "model_raw": 0.463,
-            "model_prob": 0.4804,
-            "market_prob": 0.4979,
-            "fair_odds": 108,
-            "edge": -0.0174,
-            "edge_at_price": -0.0456,
-            "ev": -0.0867,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 201.5: 46.3% before shrink, this book's no-vig 49.8%.",
-              "Projection 188.54 (Normal(sd 90.5)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +112 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Baker Mayfield Under 201.5 pass_yds",
-            "side": "under",
-            "line": 201.5,
-            "odds": -113.0,
-            "model_raw": 0.537,
-            "model_prob": 0.5196,
-            "market_prob": 0.5021,
-            "fair_odds": -108,
-            "edge": 0.0174,
-            "edge_at_price": -0.011,
-            "ev": -0.0207,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 201.5: 53.7% before shrink, this book's no-vig 50.2%.",
-              "Projection 188.54 (Normal(sd 90.5)).",
-              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/22."
-            ],
-            "flags": [
-              "current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at -104 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
     {
       "player": "Baker Mayfield",
       "player_id": "3052587",
@@ -2005,165 +1838,163 @@
       }
     },
     {
-      "player": "Bryce Young",
-      "player_id": "4685720",
-      "team": "Carolina Panthers",
+      "player": "Baker Mayfield",
+      "player_id": "3052587",
+      "team": "Tampa Bay Buccaneers",
       "stat": "pass_yds",
       "stat_label": "Pass yds",
-      "line": 232.5,
-      "projection": 246.16,
+      "line": 201.5,
+      "projection": 188.54,
       "hit_rates": {
         "L5": "2/5",
-        "L10": "7/10",
+        "L10": "5/10",
         "L20": "10/20",
-        "all": "10/25"
+        "all": "12/22"
       },
       "recent": [
-        254.0,
-        200.0,
-        276.0,
-        209.0,
-        163.0,
-        281.0,
-        329.0,
-        291.0,
-        287.0,
-        361.0
+        187.0,
+        243.0,
+        0.0,
+        64.0,
+        217.0,
+        182.0,
+        216.0,
+        203.0,
+        346.0,
+        145.0
       ],
       "ladder": [
         {
-          "line": 224.5,
-          "p_over": 0.654,
-          "fair_over": -189,
-          "fair_under": 189,
-          "L10": "7/10"
+          "line": 193.5,
+          "p_over": 0.486,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "5/10"
         },
         {
-          "line": 226.5,
-          "p_over": 0.646,
-          "fair_over": -182,
-          "fair_under": 182,
-          "L10": "7/10"
+          "line": 195.5,
+          "p_over": 0.48,
+          "fair_over": 108,
+          "fair_under": -108,
+          "L10": "5/10"
         },
         {
-          "line": 228.5,
-          "p_over": 0.637,
-          "fair_over": -176,
-          "fair_under": 176,
-          "L10": "7/10"
+          "line": 197.5,
+          "p_over": 0.474,
+          "fair_over": 111,
+          "fair_under": -111,
+          "L10": "5/10"
         },
         {
-          "line": 230.5,
-          "p_over": 0.628,
-          "fair_over": -169,
-          "fair_under": 169,
-          "L10": "7/10"
+          "line": 199.5,
+          "p_over": 0.469,
+          "fair_over": 113,
+          "fair_under": -113,
+          "L10": "5/10"
         },
         {
-          "line": 232.5,
-          "p_over": 0.62,
-          "fair_over": -163,
-          "fair_under": 163,
-          "L10": "7/10"
+          "line": 201.5,
+          "p_over": 0.463,
+          "fair_over": 116,
+          "fair_under": -116,
+          "L10": "5/10"
         },
         {
-          "line": 234.5,
-          "p_over": 0.611,
-          "fair_over": -157,
-          "fair_under": 157,
-          "L10": "7/10"
+          "line": 203.5,
+          "p_over": 0.428,
+          "fair_over": 134,
+          "fair_under": -134,
+          "L10": "4/10"
         },
         {
-          "line": 236.5,
-          "p_over": 0.602,
-          "fair_over": -151,
-          "fair_under": 151,
-          "L10": "7/10"
+          "line": 205.5,
+          "p_over": 0.423,
+          "fair_over": 137,
+          "fair_under": -137,
+          "L10": "4/10"
         },
         {
-          "line": 238.5,
-          "p_over": 0.593,
-          "fair_over": -146,
-          "fair_under": 146,
-          "L10": "7/10"
+          "line": 207.5,
+          "p_over": 0.417,
+          "fair_over": 140,
+          "fair_under": -140,
+          "L10": "4/10"
         },
         {
-          "line": 240.5,
-          "p_over": 0.584,
-          "fair_over": -140,
-          "fair_under": 140,
-          "L10": "7/10"
+          "line": 209.5,
+          "p_over": 0.411,
+          "fair_over": 143,
+          "fair_under": -143,
+          "L10": "4/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)"
+        "current season only 7 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bryce Young Over 232.5 pass_yds",
+            "selection": "Baker Mayfield Over 201.5 pass_yds",
             "side": "over",
-            "line": 232.5,
-            "odds": -113.0,
-            "model_raw": 0.6197,
-            "model_prob": 0.5609,
-            "market_prob": 0.5021,
-            "fair_odds": -128,
-            "edge": 0.0588,
-            "edge_at_price": 0.0304,
-            "ev": 0.0573,
+            "line": 201.5,
+            "odds": -111.0,
+            "model_raw": 0.463,
+            "model_prob": 0.4804,
+            "market_prob": 0.4979,
+            "fair_odds": 108,
+            "edge": -0.0174,
+            "edge_at_price": -0.0456,
+            "ev": -0.0867,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 232.5: 62.0% before shrink, this book's no-vig 50.2%.",
-              "Projection 246.16 (Normal(sd 57.2)).",
-              "Hit rate over L5 2/5, L10 7/10, L20 10/20, all 10/25."
+              "Model over 201.5: 46.3% before shrink, this book's no-vig 49.8%.",
+              "Projection 188.54 (Normal(sd 90.5)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/22."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
-              "downgraded Medium -> Low",
-              "downgraded Medium -> Low"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Monitor only; if anything, wait for -122 or better and re-check injuries near start.",
+            "next_step": "Pass. Only interesting at +112 or better.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bryce Young Under 232.5 pass_yds",
+            "selection": "Baker Mayfield Under 201.5 pass_yds",
             "side": "under",
-            "line": 232.5,
-            "odds": -111.0,
-            "model_raw": 0.3803,
-            "model_prob": 0.4391,
-            "market_prob": 0.4979,
-            "fair_odds": 128,
-            "edge": -0.0588,
-            "edge_at_price": -0.087,
-            "ev": -0.1653,
+            "line": 201.5,
+            "odds": -113.0,
+            "model_raw": 0.537,
+            "model_prob": 0.5196,
+            "market_prob": 0.5021,
+            "fair_odds": -108,
+            "edge": 0.0174,
+            "edge_at_price": -0.011,
+            "ev": -0.0207,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 232.5: 38.0% before shrink, this book's no-vig 49.8%.",
-              "Projection 246.16 (Normal(sd 57.2)).",
-              "Hit rate over L5 2/5, L10 7/10, L20 10/20, all 10/25."
+              "Model under 201.5: 53.7% before shrink, this book's no-vig 50.2%.",
+              "Projection 188.54 (Normal(sd 90.5)).",
+              "Hit rate over L5 2/5, L10 5/10, L20 10/20, all 12/22."
             ],
             "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
+              "current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+              "thin data: current season only 7 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +132 or better.",
+            "next_step": "Pass. Only interesting at -104 or better.",
             "proven": false
           }
         }
@@ -2335,163 +2166,165 @@
       }
     },
     {
-      "player": "Bucky Irving",
-      "player_id": "4596448",
-      "team": "Tampa Bay Buccaneers",
-      "stat": "rush_yds",
-      "stat_label": "Rush yds",
-      "line": 81.5,
-      "projection": 83.2,
+      "player": "Bryce Young",
+      "player_id": "4685720",
+      "team": "Carolina Panthers",
+      "stat": "pass_yds",
+      "stat_label": "Pass yds",
+      "line": 232.5,
+      "projection": 246.16,
       "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "6/20",
-        "all": "6/20"
+        "L5": "2/5",
+        "L10": "7/10",
+        "L20": "10/20",
+        "all": "10/25"
       },
       "recent": [
-        68.0,
-        97.0,
-        170.0,
-        106.0,
-        46.0,
-        165.0,
-        61.0,
-        46.0,
-        89.0,
-        45.0
+        254.0,
+        200.0,
+        276.0,
+        209.0,
+        163.0,
+        281.0,
+        329.0,
+        291.0,
+        287.0,
+        361.0
       ],
       "ladder": [
         {
-          "line": 73.5,
-          "p_over": 0.556,
-          "fair_over": -125,
-          "fair_under": 125,
-          "L10": "5/10"
+          "line": 224.5,
+          "p_over": 0.654,
+          "fair_over": -189,
+          "fair_under": 189,
+          "L10": "7/10"
         },
         {
-          "line": 75.5,
-          "p_over": 0.545,
-          "fair_over": -120,
-          "fair_under": 120,
-          "L10": "5/10"
+          "line": 226.5,
+          "p_over": 0.646,
+          "fair_over": -182,
+          "fair_under": 182,
+          "L10": "7/10"
         },
         {
-          "line": 77.5,
-          "p_over": 0.533,
-          "fair_over": -114,
-          "fair_under": 114,
-          "L10": "5/10"
+          "line": 228.5,
+          "p_over": 0.637,
+          "fair_over": -176,
+          "fair_under": 176,
+          "L10": "7/10"
         },
         {
-          "line": 79.5,
-          "p_over": 0.522,
-          "fair_over": -109,
-          "fair_under": 109,
-          "L10": "5/10"
+          "line": 230.5,
+          "p_over": 0.628,
+          "fair_over": -169,
+          "fair_under": 169,
+          "L10": "7/10"
         },
         {
-          "line": 81.5,
-          "p_over": 0.51,
-          "fair_over": -104,
-          "fair_under": 104,
-          "L10": "5/10"
+          "line": 232.5,
+          "p_over": 0.62,
+          "fair_over": -163,
+          "fair_under": 163,
+          "L10": "7/10"
         },
         {
-          "line": 83.5,
-          "p_over": 0.498,
-          "fair_over": 101,
-          "fair_under": -101,
-          "L10": "5/10"
+          "line": 234.5,
+          "p_over": 0.611,
+          "fair_over": -157,
+          "fair_under": 157,
+          "L10": "7/10"
         },
         {
-          "line": 85.5,
-          "p_over": 0.487,
-          "fair_over": 106,
-          "fair_under": -106,
-          "L10": "5/10"
+          "line": 236.5,
+          "p_over": 0.602,
+          "fair_over": -151,
+          "fair_under": 151,
+          "L10": "7/10"
         },
         {
-          "line": 87.5,
-          "p_over": 0.475,
-          "fair_over": 111,
-          "fair_under": -111,
-          "L10": "5/10"
+          "line": 238.5,
+          "p_over": 0.593,
+          "fair_over": -146,
+          "fair_under": 146,
+          "L10": "7/10"
         },
         {
-          "line": 89.5,
-          "p_over": 0.434,
-          "fair_over": 130,
-          "fair_under": -130,
-          "L10": "4/10"
+          "line": 240.5,
+          "p_over": 0.584,
+          "fair_over": -140,
+          "fair_under": 140,
+          "L10": "7/10"
         }
       ],
       "ladder_note": "Model fair prices from the game log. Not book prices.",
       "flags": [
-        "current season only 10 games; added 10 from prior season (role/team may differ)"
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
       ],
       "status": null,
       "sides": {
         "over": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bucky Irving Over 81.5 rush_yds",
+            "selection": "Bryce Young Over 232.5 pass_yds",
             "side": "over",
-            "line": 81.5,
+            "line": 232.5,
             "odds": -113.0,
-            "model_raw": 0.51,
-            "model_prob": 0.5061,
+            "model_raw": 0.6197,
+            "model_prob": 0.5609,
             "market_prob": 0.5021,
-            "fair_odds": -102,
-            "edge": 0.0039,
-            "edge_at_price": -0.0245,
-            "ev": -0.0461,
+            "fair_odds": -128,
+            "edge": 0.0588,
+            "edge_at_price": 0.0304,
+            "ev": 0.0573,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model over 81.5: 51.0% before shrink, this book's no-vig 50.2%.",
-              "Projection 83.2 (Normal(sd 44.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 6/20, all 6/20."
+              "Model over 232.5: 62.0% before shrink, this book's no-vig 50.2%.",
+              "Projection 246.16 (Normal(sd 57.2)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 10/20, all 10/25."
             ],
             "flags": [
-              "current season only 10 games; added 10 from prior season (role/team may differ)"
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 10 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)",
+              "downgraded Medium -> Low",
+              "downgraded Medium -> Low"
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at +102 or better.",
+            "next_step": "Monitor only; if anything, wait for -122 or better and re-check injuries near start.",
             "proven": false
           }
         },
         "under": {
           "draftkings": {
             "market": "Prop",
-            "selection": "Bucky Irving Under 81.5 rush_yds",
+            "selection": "Bryce Young Under 232.5 pass_yds",
             "side": "under",
-            "line": 81.5,
+            "line": 232.5,
             "odds": -111.0,
-            "model_raw": 0.49,
-            "model_prob": 0.4939,
+            "model_raw": 0.3803,
+            "model_prob": 0.4391,
             "market_prob": 0.4979,
-            "fair_odds": 102,
-            "edge": -0.0039,
-            "edge_at_price": -0.0321,
-            "ev": -0.0611,
+            "fair_odds": 128,
+            "edge": -0.0588,
+            "edge_at_price": -0.087,
+            "ev": -0.1653,
             "tier": "Low",
             "data_quality": "Medium",
             "reasons": [
-              "Model under 81.5: 49.0% before shrink, this book's no-vig 49.8%.",
-              "Projection 83.2 (Normal(sd 44.2)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 6/20, all 6/20."
+              "Model under 232.5: 38.0% before shrink, this book's no-vig 49.8%.",
+              "Projection 246.16 (Normal(sd 57.2)).",
+              "Hit rate over L5 2/5, L10 7/10, L20 10/20, all 10/25."
             ],
             "flags": [
-              "current season only 10 games; added 10 from prior season (role/team may differ)"
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "caution": [
-              "thin data: current season only 10 games; added 10 from prior season (role/team may differ)"
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +107 or better.",
+            "next_step": "Pass. Only interesting at +132 or better.",
             "proven": false
           }
         }
@@ -2664,6 +2497,169 @@
       "player": "Bucky Irving",
       "player_id": "4596448",
       "team": "Tampa Bay Buccaneers",
+      "stat": "rush_yds",
+      "stat_label": "Rush yds",
+      "line": 81.5,
+      "projection": 83.2,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "6/20",
+        "all": "6/20"
+      },
+      "recent": [
+        68.0,
+        97.0,
+        170.0,
+        106.0,
+        46.0,
+        165.0,
+        61.0,
+        46.0,
+        89.0,
+        45.0
+      ],
+      "ladder": [
+        {
+          "line": 73.5,
+          "p_over": 0.556,
+          "fair_over": -125,
+          "fair_under": 125,
+          "L10": "5/10"
+        },
+        {
+          "line": 75.5,
+          "p_over": 0.545,
+          "fair_over": -120,
+          "fair_under": 120,
+          "L10": "5/10"
+        },
+        {
+          "line": 77.5,
+          "p_over": 0.533,
+          "fair_over": -114,
+          "fair_under": 114,
+          "L10": "5/10"
+        },
+        {
+          "line": 79.5,
+          "p_over": 0.522,
+          "fair_over": -109,
+          "fair_under": 109,
+          "L10": "5/10"
+        },
+        {
+          "line": 81.5,
+          "p_over": 0.51,
+          "fair_over": -104,
+          "fair_under": 104,
+          "L10": "5/10"
+        },
+        {
+          "line": 83.5,
+          "p_over": 0.498,
+          "fair_over": 101,
+          "fair_under": -101,
+          "L10": "5/10"
+        },
+        {
+          "line": 85.5,
+          "p_over": 0.487,
+          "fair_over": 106,
+          "fair_under": -106,
+          "L10": "5/10"
+        },
+        {
+          "line": 87.5,
+          "p_over": 0.475,
+          "fair_over": 111,
+          "fair_under": -111,
+          "L10": "5/10"
+        },
+        {
+          "line": 89.5,
+          "p_over": 0.434,
+          "fair_over": 130,
+          "fair_under": -130,
+          "L10": "4/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 10 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bucky Irving Over 81.5 rush_yds",
+            "side": "over",
+            "line": 81.5,
+            "odds": -113.0,
+            "model_raw": 0.51,
+            "model_prob": 0.5061,
+            "market_prob": 0.5021,
+            "fair_odds": -102,
+            "edge": 0.0039,
+            "edge_at_price": -0.0245,
+            "ev": -0.0461,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 81.5: 51.0% before shrink, this book's no-vig 50.2%.",
+              "Projection 83.2 (Normal(sd 44.2)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 6/20, all 6/20."
+            ],
+            "flags": [
+              "current season only 10 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at +102 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Bucky Irving Under 81.5 rush_yds",
+            "side": "under",
+            "line": 81.5,
+            "odds": -111.0,
+            "model_raw": 0.49,
+            "model_prob": 0.4939,
+            "market_prob": 0.4979,
+            "fair_odds": 102,
+            "edge": -0.0039,
+            "edge_at_price": -0.0321,
+            "ev": -0.0611,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 81.5: 49.0% before shrink, this book's no-vig 49.8%.",
+              "Projection 83.2 (Normal(sd 44.2)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 6/20, all 6/20."
+            ],
+            "flags": [
+              "current season only 10 games; added 10 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 10 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +107 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Bucky Irving",
+      "player_id": "4596448",
+      "team": "Tampa Bay Buccaneers",
       "stat": "anytime_td",
       "stat_label": "Anytime TD",
       "line": 0.5,
@@ -2767,6 +2763,169 @@
             ],
             "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
             "next_step": "Pass. Only interesting at -116 or better.",
+            "proven": false
+          }
+        }
+      }
+    },
+    {
+      "player": "Chuba Hubbard",
+      "player_id": "4241416",
+      "team": "Carolina Panthers",
+      "stat": "rec_yds",
+      "stat_label": "Rec yds",
+      "line": 18.5,
+      "projection": 22.04,
+      "hit_rates": {
+        "L5": "3/5",
+        "L10": "5/10",
+        "L20": "7/20",
+        "all": "10/25"
+      },
+      "recent": [
+        0.0,
+        80.0,
+        17.0,
+        38.0,
+        27.0,
+        1.0,
+        7.0,
+        28.0,
+        11.0,
+        38.0
+      ],
+      "ladder": [
+        {
+          "line": 14.5,
+          "p_over": 0.614,
+          "fair_over": -159,
+          "fair_under": 159,
+          "L10": "6/10"
+        },
+        {
+          "line": 15.5,
+          "p_over": 0.603,
+          "fair_over": -152,
+          "fair_under": 152,
+          "L10": "6/10"
+        },
+        {
+          "line": 16.5,
+          "p_over": 0.592,
+          "fair_over": -145,
+          "fair_under": 145,
+          "L10": "6/10"
+        },
+        {
+          "line": 17.5,
+          "p_over": 0.551,
+          "fair_over": -123,
+          "fair_under": 123,
+          "L10": "5/10"
+        },
+        {
+          "line": 18.5,
+          "p_over": 0.54,
+          "fair_over": -117,
+          "fair_under": 117,
+          "L10": "5/10"
+        },
+        {
+          "line": 19.5,
+          "p_over": 0.529,
+          "fair_over": -112,
+          "fair_under": 112,
+          "L10": "5/10"
+        },
+        {
+          "line": 20.5,
+          "p_over": 0.518,
+          "fair_over": -107,
+          "fair_under": 107,
+          "L10": "5/10"
+        },
+        {
+          "line": 21.5,
+          "p_over": 0.506,
+          "fair_over": -102,
+          "fair_under": 102,
+          "L10": "5/10"
+        },
+        {
+          "line": 22.5,
+          "p_over": 0.495,
+          "fair_over": 102,
+          "fair_under": -102,
+          "L10": "5/10"
+        }
+      ],
+      "ladder_note": "Model fair prices from the game log. Not book prices.",
+      "flags": [
+        "current season only 10 games; added 15 from prior season (role/team may differ)"
+      ],
+      "status": null,
+      "sides": {
+        "over": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Chuba Hubbard Over 18.5 rec_yds",
+            "side": "over",
+            "line": 18.5,
+            "odds": -114.0,
+            "model_raw": 0.5402,
+            "model_prob": 0.5222,
+            "market_prob": 0.5042,
+            "fair_odds": -109,
+            "edge": 0.018,
+            "edge_at_price": -0.0105,
+            "ev": -0.0197,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model over 18.5: 54.0% before shrink, this book's no-vig 50.4%.",
+              "Projection 22.04 (Normal(sd 22.7)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
+            "next_step": "Pass. Only interesting at -105 or better.",
+            "proven": false
+          }
+        },
+        "under": {
+          "draftkings": {
+            "market": "Prop",
+            "selection": "Chuba Hubbard Under 18.5 rec_yds",
+            "side": "under",
+            "line": 18.5,
+            "odds": -110.0,
+            "model_raw": 0.4598,
+            "model_prob": 0.4778,
+            "market_prob": 0.4958,
+            "fair_odds": 109,
+            "edge": -0.018,
+            "edge_at_price": -0.046,
+            "ev": -0.0878,
+            "tier": "Low",
+            "data_quality": "Medium",
+            "reasons": [
+              "Model under 18.5: 46.0% before shrink, this book's no-vig 49.6%.",
+              "Projection 22.04 (Normal(sd 22.7)).",
+              "Hit rate over L5 3/5, L10 5/10, L20 7/20, all 10/25."
+            ],
+            "flags": [
+              "current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "caution": [
+              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
+            ],
+            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
+            "next_step": "Pass. Only interesting at +113 or better.",
             "proven": false
           }
         }
@@ -2936,169 +3095,6 @@
             ],
             "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
             "next_step": "Pass. Only interesting at +133 or better.",
-            "proven": false
-          }
-        }
-      }
-    },
-    {
-      "player": "Chuba Hubbard",
-      "player_id": "4241416",
-      "team": "Carolina Panthers",
-      "stat": "rec_yds",
-      "stat_label": "Rec yds",
-      "line": 18.5,
-      "projection": 22.04,
-      "hit_rates": {
-        "L5": "3/5",
-        "L10": "5/10",
-        "L20": "7/20",
-        "all": "10/25"
-      },
-      "recent": [
-        0.0,
-        80.0,
-        17.0,
-        38.0,
-        27.0,
-        1.0,
-        7.0,
-        28.0,
-        11.0,
-        38.0
-      ],
-      "ladder": [
-        {
-          "line": 14.5,
-          "p_over": 0.614,
-          "fair_over": -159,
-          "fair_under": 159,
-          "L10": "6/10"
-        },
-        {
-          "line": 15.5,
-          "p_over": 0.603,
-          "fair_over": -152,
-          "fair_under": 152,
-          "L10": "6/10"
-        },
-        {
-          "line": 16.5,
-          "p_over": 0.592,
-          "fair_over": -145,
-          "fair_under": 145,
-          "L10": "6/10"
-        },
-        {
-          "line": 17.5,
-          "p_over": 0.551,
-          "fair_over": -123,
-          "fair_under": 123,
-          "L10": "5/10"
-        },
-        {
-          "line": 18.5,
-          "p_over": 0.54,
-          "fair_over": -117,
-          "fair_under": 117,
-          "L10": "5/10"
-        },
-        {
-          "line": 19.5,
-          "p_over": 0.529,
-          "fair_over": -112,
-          "fair_under": 112,
-          "L10": "5/10"
-        },
-        {
-          "line": 20.5,
-          "p_over": 0.518,
-          "fair_over": -107,
-          "fair_under": 107,
-          "L10": "5/10"
-        },
-        {
-          "line": 21.5,
-          "p_over": 0.506,
-          "fair_over": -102,
-          "fair_under": 102,
-          "L10": "5/10"
-        },
-        {
-          "line": 22.5,
-          "p_over": 0.495,
-          "fair_over": 102,
-          "fair_under": -102,
-          "L10": "5/10"
-        }
-      ],
-      "ladder_note": "Model fair prices from the game log. Not book prices.",
-      "flags": [
-        "current season only 10 games; added 15 from prior season (role/team may differ)"
-      ],
-      "status": null,
-      "sides": {
-        "over": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Chuba Hubbard Over 18.5 rec_yds",
-            "side": "over",
-            "line": 18.5,
-            "odds": -114.0,
-            "model_raw": 0.5402,
-            "model_prob": 0.5222,
-            "market_prob": 0.5042,
-            "fair_odds": -109,
-            "edge": 0.018,
-            "edge_at_price": -0.0105,
-            "ev": -0.0197,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model over 18.5: 54.0% before shrink, this book's no-vig 50.4%.",
-              "Projection 22.04 (Normal(sd 22.7)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/20, all 10/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Game logs ignore tonight's minutes, role, matchup and blowout risk; small samples overstate streaks.",
-            "next_step": "Pass. Only interesting at -105 or better.",
-            "proven": false
-          }
-        },
-        "under": {
-          "draftkings": {
-            "market": "Prop",
-            "selection": "Chuba Hubbard Under 18.5 rec_yds",
-            "side": "under",
-            "line": 18.5,
-            "odds": -110.0,
-            "model_raw": 0.4598,
-            "model_prob": 0.4778,
-            "market_prob": 0.4958,
-            "fair_odds": 109,
-            "edge": -0.018,
-            "edge_at_price": -0.046,
-            "ev": -0.0878,
-            "tier": "Low",
-            "data_quality": "Medium",
-            "reasons": [
-              "Model under 18.5: 46.0% before shrink, this book's no-vig 49.6%.",
-              "Projection 22.04 (Normal(sd 22.7)).",
-              "Hit rate over L5 3/5, L10 5/10, L20 7/20, all 10/25."
-            ],
-            "flags": [
-              "current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "caution": [
-              "thin data: current season only 10 games; added 15 from prior season (role/team may differ)"
-            ],
-            "case_against": "Unders lose to one hot night or overtime; a role/minutes bump isn't in the logs.",
-            "next_step": "Pass. Only interesting at +113 or better.",
             "proven": false
           }
         }

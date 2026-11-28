@@ -23,7 +23,7 @@
     "id": "41"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -45,14 +45,22 @@
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin WYO -3.5 \u00b7 total 49.9",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: WYO 41.3% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin WYO -3.5, total 49.9; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WWWWL",
+    "away": "L5 WLLWW"
+  },
   "markets": [
     {
       "market": "ML",
@@ -66,26 +74,30 @@
               "side": "home",
               "line": null,
               "odds": 142.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4102,
+              "model_prob": 0.3962,
+              "market_prob": 0.3962,
+              "fair_odds": 152,
+              "edge": 0.0,
+              "edge_at_price": -0.017,
+              "ev": -0.0411,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model WYO win 41.0% vs market no-vig 39.6%.",
+                "v2 projected margin WYO -3.5 (ratings WYO -21.1, CONN -14.2, home edge 3.33); raw model 41.0%.",
+                "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: price drifted against this side (+120 -> +142)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Market makes WYO 40%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +157 or better.",
+              "proven": false
             }
           }
         },
@@ -98,26 +110,28 @@
               "side": "away",
               "line": null,
               "odds": -170.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5898,
+              "model_prob": 0.6038,
+              "market_prob": 0.6038,
+              "fair_odds": -152,
+              "edge": 0.0,
+              "edge_at_price": -0.0259,
+              "ev": -0.0411,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model CONN win 59.0% vs market no-vig 60.4%.",
+                "v2 projected margin WYO -3.5 (ratings WYO -21.1, CONN -14.2, home edge 3.33); raw model 59.0%.",
+                "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes CONN 60%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -145 or better.",
+              "proven": false
             }
           }
         }
@@ -135,26 +149,28 @@
               "side": "home",
               "line": 3.5,
               "odds": -115.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4995,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model WYO +3.5 covers 49.9% vs market 51.1%.",
+                "Projected margin WYO -3.5 vs line WYO +3.5.",
+                "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -167,26 +183,30 @@
               "side": "away",
               "line": -3.5,
               "odds": -105.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5005,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model CONN -3.5 covers 50.1% vs market 48.9%.",
+                "Projected margin WYO -3.5 vs line WYO +3.5.",
+                "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: spread moved against this side (-2.5 -> -3.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }
@@ -204,26 +224,31 @@
               "side": "over",
               "line": 44.5,
               "odds": -115.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.6321,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 44.5: 63.2% vs market 51.1%.",
+                "Projected total 49.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 49.5 -> 44.5.",
+                "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (63% vs 51%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the over (49.5 -> 44.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -236,26 +261,31 @@
               "side": "under",
               "line": 44.5,
               "odds": -105.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.3679,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 44.5: 36.8% vs market 48.9%.",
+                "Projected total 49.9 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 49.5 -> 44.5.",
+                "CONN L5 WLLWW (MOV 8.0), WYO L5 WWWWL (MOV 0.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only.",
+                "Note: model far from market (37% vs 49%): usually means the model is missing info (lineups, motivation, SOS) (no tier downgrade in v2: backtested picks like this did not do worse against the closing line)."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward under (49.5 -> 44.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }

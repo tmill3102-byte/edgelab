@@ -23,7 +23,7 @@
     "id": "2348"
   },
   "score": null,
-  "analyzed": false,
+  "analyzed": true,
   "odds_feed": "espn",
   "books": [
     "draftkings"
@@ -33,26 +33,34 @@
   },
   "lines": {
     "draftkings": {
-      "ml_home": -135.0,
-      "ml_away": 114.0,
-      "spread_home": -2.5,
-      "spread_home_odds": -110.0,
-      "spread_away": 2.5,
-      "spread_away_odds": -110.0,
+      "ml_home": -125.0,
+      "ml_away": 105.0,
+      "spread_home": -1.5,
+      "spread_home_odds": -115.0,
+      "spread_away": 1.5,
+      "spread_away_odds": -105.0,
       "total": 53.5,
       "over_odds": -112.0,
       "under_odds": -108.0
     }
   },
   "badge": null,
-  "model_summary": null,
-  "flags": [],
-  "notes": [],
+  "model_summary": "Margin GASO +2.9 \u00b7 total 51.6",
+  "flags": [
+    "injury report not available for this league"
+  ],
+  "notes": [
+    "ESPN matchup predictor: GASO 51.6% (shown for reference only; it can't be backtested, so v2 doesn't use it).",
+    "v2 ratings: margin GASO +2.9, total 51.6; probabilities are then blended with the market using backtested weights (BACKTEST.md)."
+  ],
   "injuries": {
     "home": [],
     "away": []
   },
-  "form": {},
+  "form": {
+    "home": "L5 WWWWW",
+    "away": "L5 WWWWW"
+  },
   "markets": [
     {
       "market": "ML",
@@ -65,27 +73,29 @@
               "selection": "GASO ML",
               "side": "home",
               "line": null,
-              "odds": -135.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": -125.0,
+              "model_raw": 0.5733,
+              "model_prob": 0.5325,
+              "market_prob": 0.5325,
+              "fair_odds": -114,
+              "edge": 0.0,
+              "edge_at_price": -0.0231,
+              "ev": -0.0416,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model GASO win 57.3% vs market no-vig 53.2%.",
+                "v2 projected margin GASO +2.9 (ratings GASO -5.1, LT -4.6, home edge 3.33); raw model 57.3%.",
+                "LT L5 WWWWW (MOV 17.7), GASO L5 WWWWW (MOV 10.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes GASO 53%; books see lineup/goalie/motivation info this model doesn't, and favorites in this range still lose often, and public money tends to inflate them.",
+              "next_step": "Pass. Only interesting at -109 or better.",
+              "proven": false
             }
           }
         },
@@ -97,27 +107,29 @@
               "selection": "LT ML",
               "side": "away",
               "line": null,
-              "odds": 114.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "odds": 105.0,
+              "model_raw": 0.4267,
+              "model_prob": 0.4675,
+              "market_prob": 0.4675,
+              "fair_odds": 114,
+              "edge": -0.0,
+              "edge_at_price": -0.0203,
+              "ev": -0.0416,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model LT win 42.7% vs market no-vig 46.8%.",
+                "v2 projected margin GASO +2.9 (ratings GASO -5.1, LT -4.6, home edge 3.33); raw model 42.7%.",
+                "LT L5 WWWWW (MOV 17.7), GASO L5 WWWWW (MOV 10.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB moneylines, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Market makes LT 47%; books see lineup/goalie/motivation info this model doesn't, and an underdog price means it loses more often than not.",
+              "next_step": "Pass. Only interesting at +118 or better.",
+              "proven": false
             }
           }
         }
@@ -131,30 +143,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "GASO -2.5",
+              "selection": "GASO -1.5",
               "side": "home",
-              "line": -2.5,
-              "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": -1.5,
+              "odds": -115.0,
+              "model_raw": 0.5351,
+              "model_prob": 0.5108,
+              "market_prob": 0.5108,
+              "fair_odds": -104,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model GASO -1.5 covers 53.5% vs market 51.1%.",
+                "Projected margin GASO +2.9 vs line GASO -1.5.",
+                "LT L5 WWWWW (MOV 17.7), GASO L5 WWWWW (MOV 10.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at -100 or better.",
+              "proven": false
             }
           }
         },
@@ -163,30 +177,32 @@
           "offers": {
             "draftkings": {
               "market": "Spread",
-              "selection": "LT +2.5",
+              "selection": "LT +1.5",
               "side": "away",
-              "line": 2.5,
-              "odds": -110.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "line": 1.5,
+              "odds": -105.0,
+              "model_raw": 0.4649,
+              "model_prob": 0.4892,
+              "market_prob": 0.4892,
+              "fair_odds": 104,
+              "edge": 0.0,
+              "edge_at_price": -0.023,
+              "ev": -0.045,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model LT +1.5 covers 46.5% vs market 48.9%.",
+                "Projected margin GASO +2.9 vs line GASO -1.5.",
+                "LT L5 WWWWW (MOV 17.7), GASO L5 WWWWW (MOV 10.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB spreads, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
-              "caution": [
-                "no model on this refresh"
-              ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "caution": [],
+              "case_against": "Margin s.d. is ~16.0 pts; one garbage-time/late score flips it, and the closing number is usually sharper than this model.",
+              "next_step": "Pass. Only interesting at +109 or better.",
+              "proven": false
             }
           }
         }
@@ -204,26 +220,30 @@
               "side": "over",
               "line": 53.5,
               "odds": -112.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.4526,
+              "model_prob": 0.5043,
+              "market_prob": 0.5043,
+              "fair_odds": -102,
+              "edge": 0.0,
+              "edge_at_price": -0.024,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model over 53.5: 45.3% vs market 50.4%.",
+                "Projected total 51.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 50.5 -> 53.5.",
+                "LT L5 WWWWW (MOV 17.7), GASO L5 WWWWW (MOV 10.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: total already moved toward over (50.5 -> 53.5); value may be gone"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +102 or better.",
+              "proven": false
             }
           }
         },
@@ -236,26 +256,30 @@
               "side": "under",
               "line": 53.5,
               "odds": -108.0,
-              "model_raw": null,
-              "model_prob": null,
-              "market_prob": null,
-              "fair_odds": null,
-              "edge": null,
-              "edge_at_price": null,
-              "ev": null,
-              "tier": null,
-              "data_quality": null,
+              "model_raw": 0.5474,
+              "model_prob": 0.4957,
+              "market_prob": 0.4957,
+              "fair_odds": 102,
+              "edge": 0.0,
+              "edge_at_price": -0.0236,
+              "ev": -0.0454,
+              "tier": "Low",
+              "data_quality": "Medium",
               "reasons": [
-                "Line from the ESPN/DraftKings scoreboard. This game was not modeled in the latest refresh."
+                "Model under 53.5: 54.7% vs market 49.6%.",
+                "Projected total 51.6 from v2 team-total ratings (carry-over + this season; no weather/lineup inputs). Line moved 50.5 -> 53.5.",
+                "LT L5 WWWWW (MOV 17.7), GASO L5 WWWWW (MOV 10.6)",
+                "Backtest: the model showed no out-of-sample edge over the market for CFB totals, so the final % = market no-vig and this can't rate above Low. Raw model lean shown for context only."
               ],
               "flags": [
-                "!not modeled this refresh"
+                "injury report not available for this league"
               ],
               "caution": [
-                "no model on this refresh"
+                "line move: market moved against the under (50.5 -> 53.5)"
               ],
-              "case_against": "No model was run, so there is no edge to show.",
-              "next_step": "Open a modeled game for a full pick, or wait for the next refresh."
+              "case_against": "Averages ignore pace changes, weather, rest-day lineups and opponent-adjusted defense; totals markets are among the sharpest.",
+              "next_step": "Pass. Only interesting at +106 or better.",
+              "proven": false
             }
           }
         }
